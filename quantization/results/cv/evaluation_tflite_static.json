@@ -1,0 +1,42 @@
+{
+  "status": "ok",
+  "output_sha256": "9c6721ce95ac48174042fb758dff542f21b6dbb0af39a584bf34c1ad1f3a4c25",
+  "model_sha256": "17ca3c4a13621fb25de62035725dca57ee2a51564895d770df50430904b888bc",
+  "model_size_bytes": 26287168,
+  "input_sha256": "8a9a7b1f7a49ec8e223e21175b39819f9a24b22a9b0a396a43a60453b14e95d8",
+  "runtime": {
+    "version": "2.15.1",
+    "mode": "tf.lite.Interpreter CPU; default delegates, see log",
+    "inputs": [
+      {
+        "name": "serving_default_image:0",
+        "shape": [
+          1,
+          224,
+          224,
+          3
+        ],
+        "dtype": "int8",
+        "scale": 1.0774157047271729,
+        "zero_point": -13
+      }
+    ],
+    "output": {
+      "name": "StatefulPartitionedCall:0",
+      "shape": [
+        1,
+        1000
+      ],
+      "dtype": "int8",
+      "scale": 0.00390625,
+      "zero_point": -128
+    }
+  },
+  "classification": {
+    "accuracy": 0.74,
+    "top1_ties": 3,
+    "top5_accuracy": 0.9,
+    "probability_sum_min": 0.8359375,
+    "probability_sum_max": 1.00390625
+  }
+}

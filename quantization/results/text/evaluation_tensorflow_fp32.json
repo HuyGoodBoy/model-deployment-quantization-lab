@@ -1,0 +1,20 @@
+{
+  "status": "ok",
+  "output_sha256": "56b1ccea368892cd4c66e729b47934b5b380701b07d9e57e874ba6dc4ef36d51",
+  "model_sha256": "b44df675bb34ccd8e57c14292c811ac7358b7c8e37c7f212745f640cd6019ac8",
+  "model_size_bytes": 267949840,
+  "input_sha256": "14690c920a532c01b9826b99c22f5b2062e798cdcf37c49158e8f0b9ea61f411",
+  "runtime": {
+    "version": "2.15.1",
+    "mode": "tf.function CPU",
+    "inputs": [
+      "input_ids",
+      "attention_mask"
+    ]
+  },
+  "classification": {
+    "accuracy": 0.91,
+    "top1_ties": 0,
+    "f1_positive": 0.9108910891089109
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "status": "ok",
+  "source_sha256": "0ef6e7208d8e44f8fc2bb4e1b3945a7b6654c79442a49b717055047eed6b9b4a",
+  "sha256": "9c7e62a3684657dfa92a43971c83bcf5ac6cab4bcbed81abd5ff32f2821112af",
+  "size_bytes": 51102955,
+  "audit": {
+    "initializer_types": {
+      "FLOAT16": 108,
+      "INT64": 2
+    },
+    "operator_counts": {
+      "Cast": 2,
+      "Transpose": 1,
+      "Conv": 53,
+      "Relu": 49,
+      "Pad": 1,
+      "MaxPool": 1,
+      "Add": 16,
+      "GlobalAveragePool": 1,
+      "Squeeze": 1,
+      "Gemm": 1,
+      "Softmax": 1
+    },
+    "io": [
+      {
+        "name": "image",
+        "type": "FLOAT"
+      },
+      {
+        "name": "Identity:0",
+        "type": "FLOAT"
+      }
+    ]
+  },
+  "settings": {
+    "keep_io_types": true,
+    "min_positive_val": 1e-07,
+    "max_finite_val": 10000.0,
+    "default_op_block_list": true,
+    "topological_sort_after_conversion": true
+  },
+  "note": "Floating-point precision conversion, not integer PTQ. Unsupported ops may stay FP32. Constants outside finite bounds are clipped; attention mask sentinel may change."
+}

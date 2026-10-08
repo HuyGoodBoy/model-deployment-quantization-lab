@@ -1,0 +1,1617 @@
+{
+  "task": "cv",
+  "dataset": "Imagenette 160px",
+  "seed": 20261008,
+  "preprocess": "EXIF -> RGB -> bilinear resize 224x224 -> BGR -> subtract [103.939,116.779,123.68]",
+  "label_mapping": "Imagenette synset -> original ImageNet 1000-class index",
+  "records": {
+    "calibration": [
+      {
+        "source_path": "imagenette2-160/train/n01440764/n01440764_11626.JPEG",
+        "image_path": "data\\cv\\images\\train\\n01440764\\n01440764_11626.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "aaf13928f8b1f7f81159a63204ae2e833a4da79e413fa3a904c84787630160eb",
+        "tensor_sha256": "b3c77b13124606550f6a4915474adbc535158190edfbd96a28686e7574347560"
+      },
+      {
+        "source_path": "imagenette2-160/train/n01440764/n01440764_6936.JPEG",
+        "image_path": "data\\cv\\images\\train\\n01440764\\n01440764_6936.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "13022fc328fe4c2eef3138abb7cce1d640948314653f1e85fb888537a953fe34",
+        "tensor_sha256": "49e1056a5c3c09c5cb459335631e794efa7f18d4e8b8e601a54484cf583be7b5"
+      },
+      {
+        "source_path": "imagenette2-160/train/n01440764/n01440764_8398.JPEG",
+        "image_path": "data\\cv\\images\\train\\n01440764\\n01440764_8398.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "54328724f4a7f4d8fce00cdb98d30d66d6b929b790d5b85ff5569188e5a477ae",
+        "tensor_sha256": "5ec5609d0843bdbca6cc3125b884b26fef3b881993451c1343e0738ba3cd947a"
+      },
+      {
+        "source_path": "imagenette2-160/train/n01440764/n01440764_9609.JPEG",
+        "image_path": "data\\cv\\images\\train\\n01440764\\n01440764_9609.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "b36926195f10472f805e2cbbc01ea4e54aa2916cdea69bbb72e37278f107ff19",
+        "tensor_sha256": "ac7c8dfa7d2cece920d2a03f90d1b2fd0b0ee4fe636cc71a5dfa7c256d38b4ae"
+      },
+      {
+        "source_path": "imagenette2-160/train/n01440764/n01440764_8063.JPEG",
+        "image_path": "data\\cv\\images\\train\\n01440764\\n01440764_8063.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "53f3002ebfe36f353fa8af42b1e7d96b8bba592817bda28e5370f73ee93bcfe8",
+        "tensor_sha256": "d94cc2cae81db4be352b0c1545868af69e582d9d8a26c212a315c8be8c5d0b60"
+      },
+      {
+        "source_path": "imagenette2-160/train/n01440764/n01440764_9859.JPEG",
+        "image_path": "data\\cv\\images\\train\\n01440764\\n01440764_9859.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "06e356218a20fb77ddf247e1501eeb72ff3e14fbd257dbb964ef896c1995fff4",
+        "tensor_sha256": "331cb17a90175d4ff49314544923985281a18b4dd5f22eb6a6c4b5d7ff54a926"
+      },
+      {
+        "source_path": "imagenette2-160/train/n01440764/n01440764_12586.JPEG",
+        "image_path": "data\\cv\\images\\train\\n01440764\\n01440764_12586.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "9543313a6087f20757f4f1cb7404e8b5fa7fe3ffa64a38bfa5c648dd35f46760",
+        "tensor_sha256": "f3cf7767fe43e6e01a2e9d558446d356920af440ee2cc9962f130f4f49019cb3"
+      },
+      {
+        "source_path": "imagenette2-160/train/n01440764/n01440764_1145.JPEG",
+        "image_path": "data\\cv\\images\\train\\n01440764\\n01440764_1145.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "8776e1fb6e052365ea018546b2ab1f587aec139740ca7514b5ac93317584018d",
+        "tensor_sha256": "91aa0cb7e3202a92a320e1ab71ecbde3241e8394570e4acfbd86e40e4246c50a"
+      },
+      {
+        "source_path": "imagenette2-160/train/n01440764/n01440764_105.JPEG",
+        "image_path": "data\\cv\\images\\train\\n01440764\\n01440764_105.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "cfa4bb35cbb43f828568aaaed0999da1af8ddb1ed14da565f9b8a845fc94bf18",
+        "tensor_sha256": "a4d138ba5fa4e74fc05894e4f1974659f2a3b7c0b910eb840cce1aa877846ebf"
+      },
+      {
+        "source_path": "imagenette2-160/train/n01440764/n01440764_20523.JPEG",
+        "image_path": "data\\cv\\images\\train\\n01440764\\n01440764_20523.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "7e8f67f953e3e94a31a02ca2c00c5e23e848107291e2effcd1f419522aec1570",
+        "tensor_sha256": "f58715d75040f02f4fc06f87421291df8712fd4a7ddf986e460e896fdab1754d"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02102040/n02102040_1187.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02102040\\n02102040_1187.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "d86954d06f679ca044b49d14a4f3d8e95898124e271afc90ac35473caee66b69",
+        "tensor_sha256": "730c5e9d857d00318c3233ffc71ca1658501dd70d971af114034e2969bdcca0e"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02102040/n02102040_3159.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02102040\\n02102040_3159.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "55c2d7c5e3ae96e8f4c62fc2cccabe38b8fc3fe384ebc7213353ee1cca44a0cf",
+        "tensor_sha256": "a7992f62ef54cb74b11363f5533209f85bb1f0ef6ddad1fbb3b5d911051003b3"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02102040/n02102040_4263.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02102040\\n02102040_4263.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "37249644301b9c4808e319ae37f86ed483b3b627870cc068285bf0bcb73d1dfa",
+        "tensor_sha256": "705c229d56094723c865880c7240947415bf0737d39690d8e53fbbf0122940e4"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02102040/n02102040_665.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02102040\\n02102040_665.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "88a4aed8412ed7341604abdaa47d4bf6d3f14d20e6f8ed6c9b55b221f749e077",
+        "tensor_sha256": "a7f59c1c51eee76694e0ce781268aaea38dbceba72176c18acfe812ed48b8283"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02102040/n02102040_1269.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02102040\\n02102040_1269.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "c3b30b350bc4b7b021620619bc02d630d3111c8745aa518ade85d04b2f37e5a6",
+        "tensor_sha256": "35ca9dc2db4e6e38231332dd176b299a3651e34f7864a56df901a6f2bc3c3133"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02102040/n02102040_8306.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02102040\\n02102040_8306.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "9ed6b37f3da6ecc1c741c233c116fcbb42a244cf1b58b9626f5c2ec51cc8e4a3",
+        "tensor_sha256": "4ed4d886d631cb1a5ed42f8c7d7d4da08b2940e7b0db3f272ba19c64fd898d52"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02102040/n02102040_6196.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02102040\\n02102040_6196.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "c5f0fac611a64257f11c50115a98ac2a2b3ccb9f616effd638a8e75f50438602",
+        "tensor_sha256": "6cb3dd2bee7b3644e0ebb2f15bfbcdb5bb8ca4d08ec3b650b913320ad35396fb"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02102040/n02102040_594.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02102040\\n02102040_594.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "2f6bc4db0d1d69a837dbd05bde2fbf7be43c4df57e2181bee6ef241294e80154",
+        "tensor_sha256": "0363b2bceee54cd36acc78ad88948d8a3aea75cf33cfc7fad3b3504427220955"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02102040/n02102040_3816.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02102040\\n02102040_3816.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "46ec9b1befedb8a4db32ca3a86d4e8aa69819f8918cb797a6a3ad85f96cc8d50",
+        "tensor_sha256": "28e200567c29b92e574d648e7d110472204cf902652fdf8087659d32b2bcffc5"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02102040/n02102040_1153.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02102040\\n02102040_1153.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "72f8f972f6cb3b05960568e1ccd420339b5f0fc4e2c5b31600733cff54595c37",
+        "tensor_sha256": "0fe7302eaf6b292b133b4e121f79732dee7695e435b4e0eccde9c40799cd662f"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02979186/n02979186_15824.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02979186\\n02979186_15824.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "91cf737e7d8c421c37a296233d84218712fda95dd87dd1179b5513e8e14030f6",
+        "tensor_sha256": "26a9a63c377ec169cbe2249c43f566d35735cfda857a72614f026e479728b823"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02979186/n02979186_5994.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02979186\\n02979186_5994.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "a7aa5e2f366c22098bc85b96f1d33401afd5590f4eae1bd34d4fd7bc99584b10",
+        "tensor_sha256": "62ca9681f4b022b658bb3920b256bbbf5ef49713fbdfab05215f8454d5256e6e"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02979186/n02979186_19683.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02979186\\n02979186_19683.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "41faf1c2c18fc65739711fa1d88710fab2a21c9a56092798d472b5df97302295",
+        "tensor_sha256": "4af1a011ca4d1a1e20e38fc8a2c0774e0a85d8fb62df35b192e0a80a51c47d05"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02979186/n02979186_20224.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02979186\\n02979186_20224.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "b9c42a03c064b55ea753bb3d4e7dea3393d520a40c0685566d61f18854cd61c5",
+        "tensor_sha256": "3e2f6e69f4b57ac1707a4cd3c27386f5f836ba58e7d7c96f39d06c8db28f513c"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02979186/n02979186_24754.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02979186\\n02979186_24754.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "a2f01c4bd08f9f486e6d39bfde858184ec4561f77bf5107621147633c92ad91e",
+        "tensor_sha256": "57565dd7d79dc821ebf312a895474dd2c3846078e76b8eb439463a7069d4eb40"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02979186/n02979186_14403.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02979186\\n02979186_14403.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "6ac543a6b79c0d17f49a989356eda9301f8facf7ed1b6aa406718b74b017740f",
+        "tensor_sha256": "6ac4f39d0f102db74ed1bafce12df7626309b1488cfda695bebc870dd9524bf1"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02979186/n02979186_12274.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02979186\\n02979186_12274.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "bb31081c4a3d1fc97b8a8afb5870738c6f11731b5441aa57fa9dba16de669db2",
+        "tensor_sha256": "7d2dd4f818b538d293015bb4ea1e7d79cc16cc7bba8c90054a3ea314fed0aedb"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02979186/n02979186_10975.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02979186\\n02979186_10975.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "340f6ceba8991d2e782eb932ff741a0bc7334de7e71545d10bcf74ca1c3cef8b",
+        "tensor_sha256": "6881da3103bf83d0efb9c334709f3913a86f8f4f14a2416fb9cb938de10abf33"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02979186/n02979186_14047.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02979186\\n02979186_14047.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "448310d3923e8d56c46f9929d6108f9dd28b53fb1a5e9a026d4cdec0ef8270e0",
+        "tensor_sha256": "9dbb873d4ec560a16c56920a2935085d80ed0850eebf4dae9381f2ec676bb1a0"
+      },
+      {
+        "source_path": "imagenette2-160/train/n02979186/n02979186_947.JPEG",
+        "image_path": "data\\cv\\images\\train\\n02979186\\n02979186_947.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "9faff5fef072ed32aba5b3885c686d937f1b683b2af53ad934c8c3dc934fe224",
+        "tensor_sha256": "d49077accfb421ec73e5ce8c8f8d02e6b2bd3b215b8f5f765dc2f6513143df30"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03000684/n03000684_3398.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03000684\\n03000684_3398.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "1f227923709592f0c901cc320a93a927e00346b0555dc2df3917e089fa7062ab",
+        "tensor_sha256": "627b989a482353cb7aaf51d5d4dc4409dafb2b330513f13e793be2bf02436aaf"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03000684/n03000684_35403.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03000684\\n03000684_35403.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "6f8d4616ece69b679b2613c03b00f7c74579ffe6a3c33c262407613236567862",
+        "tensor_sha256": "07b3ce562e93f87d1f551edf0d19b9b528cae412087bff34bc33031c50fc86e9"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03000684/n03000684_948.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03000684\\n03000684_948.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "652d61931f85896eb006e154787c1bb12be15a6c3d0d53273ed9f0e862b1a4a9",
+        "tensor_sha256": "94188826acdd0012a6143b08492d5a793996ba0354043559d0cb0e3ea8a22aba"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03000684/ILSVRC2012_val_00006043.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03000684\\ILSVRC2012_val_00006043.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "f6786173e6f61b3b26ff2cde657a802d5adc5c20f25717270789347047fb0661",
+        "tensor_sha256": "85182b461b21eaa69b8cf7619ce1d771447afb81b8b5ca999b9677517d6203d1"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03000684/n03000684_31155.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03000684\\n03000684_31155.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "0e6d2f44c97d3e7f828bedd56b6d528f4d07aa5ea858332f32f9dd9fa0619f03",
+        "tensor_sha256": "af845fea63bbbdb8d31ec976beaf46a6d49dacd90d685d0ca164eefa4f11199b"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03000684/n03000684_9309.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03000684\\n03000684_9309.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "14060830b62cbd86e81f6dbc1b063495a04806f0453dd0d9489145e9c55ceecf",
+        "tensor_sha256": "651a4540f1c018e8a3095e3c28278bce2d885c9ff8ceed0a7b3a84a6bc40c043"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03000684/n03000684_876.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03000684\\n03000684_876.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "2bbe66b607de820c7a0c85a119c978047e08efb30b36ec54b5c3ff114afcbfeb",
+        "tensor_sha256": "37bbd1c692776ab130d65e8b2dbc9c00073a16d7e7e61adc6ea97db5c61efba8"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03000684/n03000684_1323.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03000684\\n03000684_1323.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "08d99bf7bb24957bebbf7273cc41678b140d05fd9f327b401774bdd44788388f",
+        "tensor_sha256": "b7daf726058d1ee703478d6cae3697a29303e25b69bf39fb5742bcf051ddc350"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03000684/n03000684_27786.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03000684\\n03000684_27786.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "3e03beed0d64735580e35337eacaa9880a61be5e2e456947e92bc66095f681cb",
+        "tensor_sha256": "aea261a96706dbf6f7198f94267cf5107c2ef308e4d6e6d2644f78c57148204b"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03000684/n03000684_17335.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03000684\\n03000684_17335.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "227e04bf96bdd23506feca6571947cf153cf022aa1f35e7cff56658bd4489ff8",
+        "tensor_sha256": "40ab4b6b55916bd927b97116becdac8c88a26d59444f8e318d8362693ead9a0d"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03028079/n03028079_14664.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03028079\\n03028079_14664.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "119ef21a156d0986c575eb109c1007f985c52cfe11e4d312793dc9909da411db",
+        "tensor_sha256": "0d1277d1f1ff09c8eb5d425f9d727e11d14b6f51909dde4eeb866a7fc05a39e0"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03028079/n03028079_53005.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03028079\\n03028079_53005.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "fd630e85c32528d00618516c7968f93297f20b543a82f3978bf93c8ad58bc2ac",
+        "tensor_sha256": "522910ab8a79e27bf03fa615e07c56ed532cdeafaaeccb27238312447ed226e7"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03028079/n03028079_16945.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03028079\\n03028079_16945.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "ec24dfe8bd9b662b8da65652fee3dbbfc0854c219f8a3ab7db6da4f69ca36f91",
+        "tensor_sha256": "f414bce2c3ba780bb867a764bc78eede99085c6ca2131b246f8be7bdd6329a87"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03028079/n03028079_40617.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03028079\\n03028079_40617.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "d87c38825fbac0fb7b778e6627e5ddddb2f8a5c16bd3b7f55e08a34244d0099d",
+        "tensor_sha256": "d506dbe5776c99ad32b6839edbaa12ab9ab9dd52ddbae99760ef9384ea94e85a"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03028079/n03028079_29416.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03028079\\n03028079_29416.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "06799c16453666d8574c1936af384e4d43436e76c02bc99c2ad59ed1c6a9be30",
+        "tensor_sha256": "e83470e6fc65402e7f31fda112e489da67d521511c0a48dd1c630953bb0492a3"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03028079/n03028079_4665.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03028079\\n03028079_4665.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "8159355821ba9899ac93e63f453dbcd1342178c6fa619a4c72fd72bc69b660cf",
+        "tensor_sha256": "c4a18eac39be6e3c34fb649de9661e6c1d34c689dca8cf813c83b14be8c10502"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03028079/n03028079_30858.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03028079\\n03028079_30858.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "8656a3cb899eee5a10700f51556d3cbc837cb609e1ff7a370e18b1bc1942158a",
+        "tensor_sha256": "d366c171f2b4a341572d906e09cb0819fdd227ac3b5d914fc92bc69d66febde8"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03028079/n03028079_31015.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03028079\\n03028079_31015.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "a58efea560913094d81a544b7ea8c3026318961046b31d73960101d1494c1c4d",
+        "tensor_sha256": "9a5df30cedef38ed49f9ab7955b0d996ff137fc4c91142d24a4728ead990354d"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03028079/n03028079_4363.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03028079\\n03028079_4363.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "bc618fce916f8005f0988b3439219def9cc8ac20becd43a1f30e370f3f48ad40",
+        "tensor_sha256": "c9ee8422236ddeb789914c41e72beb621bea61a9f93024aac4938ca5627decee"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03028079/n03028079_10014.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03028079\\n03028079_10014.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "ea79c1ea4249e9d874756a23e9abbfe62bfcf6f480c141e6d3dd76413a226d5f",
+        "tensor_sha256": "a183afa82a0e54f1c261e63397e5442f2198854aebf6a1bd8df98b2429138fe3"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03394916/n03394916_30019.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03394916\\n03394916_30019.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "ab879e4ae51b4993c307fda3ad49efbfe98b2bb2c6565b704f4ca524c11882f0",
+        "tensor_sha256": "c7fc9ae82be29686971480fac6947ce8413f6639269e762cdcc43711b175b320"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03394916/n03394916_41133.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03394916\\n03394916_41133.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "996dc543b50ec9dad28568d569a8fcd74cd83ab8f922293514bc19d8557f5f81",
+        "tensor_sha256": "6bdd4d92df8b2a9e0545b47c001114786c9faf792be477851a52a1b895232706"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03394916/n03394916_1633.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03394916\\n03394916_1633.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "e694d87bde4fe06c3dd0ec72f66975ef610c7dfdb9eeabc2de021e1f558a5ee7",
+        "tensor_sha256": "2b30c476d604fd5e0c8ae55b24080b597a979ce9d969edea588cd0462b7efe57"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03394916/n03394916_30277.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03394916\\n03394916_30277.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "43c39bda41abad005371863947b0bd3d2d3bed8b5357dce7faa7c7dabf2843a2",
+        "tensor_sha256": "d9fe8a3c3cfd89298322c92b0492a9ff85531b665a69ce1f6ccd4343b99de3c5"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03394916/n03394916_8323.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03394916\\n03394916_8323.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "aaf97537a37b45a2117fd746104213f208ca1be8ee5d2a7c644f622ff2c3af2d",
+        "tensor_sha256": "32c20f2ef9cde29378f97e00e11995ad66b1cb4bc8d1dcf6b7c88e4475cbca10"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03394916/n03394916_38828.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03394916\\n03394916_38828.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "32a7d2a07641557b53e28a5e881811c3e1a08a42820bfd5f65f27db0c5be565f",
+        "tensor_sha256": "69722c5d38779534fdeb2168fff5ebba9b3f15180d185d452bbd4c33842983d1"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03394916/n03394916_33456.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03394916\\n03394916_33456.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "df73066ea475623675ce8b107255210b76a738dfabb5e3c01da993a25a1c5472",
+        "tensor_sha256": "d6523f38ac34ab6f82ad72122aea611ee9fb03381a538f85dd11489521d209f7"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03394916/n03394916_35604.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03394916\\n03394916_35604.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "abf3a72a68f5aaea7890a388b65234480afa8d39b2a801b924ae95a30ccd36bb",
+        "tensor_sha256": "e954d0a6c984b8780093f9c56d0355d533ffeeb659d9976645e5754605d85a6c"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03394916/n03394916_30959.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03394916\\n03394916_30959.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "d334a70a8886dd1c553ab34cae7598d54b685c1b5370094d2b3a3d6a50f4dcc0",
+        "tensor_sha256": "8fe10fc1284a750af7f1bbc73edceeba291af2c4e6e7bf76e5c47629f79ea334"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03394916/n03394916_39959.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03394916\\n03394916_39959.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "84dce17295a80cfa041467ceda1479c5e27386d3f89c7677ba180e7b24582d30",
+        "tensor_sha256": "8d7b47284e55ff7001e5755eee7a3c4e52523d76d198e092da99fcc51a2cd3cc"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03417042/n03417042_27776.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03417042\\n03417042_27776.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "9f3fa089801f0362ca88ea4cbb1f4f8456bcc79d14d15ec56b4efafd9c1420f7",
+        "tensor_sha256": "31f94b04f6fd8da49adff25154902ed170621bc3360c185d7352c722c5bfab9a"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03417042/n03417042_9238.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03417042\\n03417042_9238.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "3c458610679d1aaa68fb71b24c1be464a24561001e89e7ea1e310647f1fbf546",
+        "tensor_sha256": "cf79633054e55955a490864618296300416a138ad37061f470065bb04d8b0524"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03417042/n03417042_19076.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03417042\\n03417042_19076.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "1a193cc820f67f0c963ac1d7c9a51e83074694c8da178cd373d26f7ed74f4903",
+        "tensor_sha256": "29fffe54e199d7ac6bed8ddbd995b25db9753ebf1753ac2021a739e2255da976"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03417042/n03417042_10597.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03417042\\n03417042_10597.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "1b9c6381d9788851815eadf42d2a17d086ec4d01b911b0c811fe446daa5f3bc2",
+        "tensor_sha256": "2faa7887a99b4ca6aace1dd2133525fe8b849a9305c4234e07a09ff904d89b7c"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03417042/n03417042_6623.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03417042\\n03417042_6623.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "3da92492342815e468e9d781bce346ab55e2b10d392b6c9562e45d39ba52bd66",
+        "tensor_sha256": "679aa0b4dec3b2154b622be68a7fcad35de00d747555d149586806aa1141deb2"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03417042/ILSVRC2012_val_00047374.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03417042\\ILSVRC2012_val_00047374.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "a16533afa95b1164351ccac185a398c592e56fe773df79d48e2d30809d05a54c",
+        "tensor_sha256": "5253e51b568832858f53abd24791fefa11036ff8c24c1be6a9725d62e10359d4"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03417042/n03417042_684.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03417042\\n03417042_684.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "d479f1c3f923936c32e0185719fe93b1402e131a082f65bd07f3cf6cbc3fe7ce",
+        "tensor_sha256": "10faeddfa380ec580478c31e3ec8b441a236ed032b77ebcb3a9ac47a7b2a8670"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03417042/n03417042_11048.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03417042\\n03417042_11048.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "10c465d852ebc2d8dd358551f71aa0a780859e432205f4d18dd60c985c440189",
+        "tensor_sha256": "39ed5c42bfe88bc7c98aac3193f22625fa5ddd9ae3c3415bad9050baa29790be"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03417042/n03417042_3236.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03417042\\n03417042_3236.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "fa5c2585895378f08c899e28857e60f5d2a764752758e91040defcff8a5dfceb",
+        "tensor_sha256": "a9baec7db0aaa00913fd7a8e67ea839ba0147bc13dab5a8a49c87fe459728912"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03417042/n03417042_12235.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03417042\\n03417042_12235.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "4bbc2d3ec67315fca055708ed19e8fe6718be519e3d1643572f624f2d88ec5c0",
+        "tensor_sha256": "3fa50cc3a1b3715988f68a17bbbd64ea15bda870aef9c97ae817c42ceb45f37a"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03425413/n03425413_20747.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03425413\\n03425413_20747.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "a6ccf9d177dabf4f4197eed6561943f3e46182072fa68ba3939b81554c57f60f",
+        "tensor_sha256": "c269384c6fa3e227998f31857172c88c9ee7382e9a40585d85aaa570e24e979c"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03425413/n03425413_17098.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03425413\\n03425413_17098.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "36d6890243205547c4bbbc52f2febba8f7654ab66aafd7f96f47baebf48e8bab",
+        "tensor_sha256": "980fd6fb9a985a56e9ab80cfb672a78ae0c5ddc05baa0449a5076477866701a4"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03425413/n03425413_28327.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03425413\\n03425413_28327.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "5f81fe5ca62b22a74d4fe9ab7ec227e67d90120d7c3427e9cb6d255dac5af4fd",
+        "tensor_sha256": "e2a02897db688e4c4b8d0569a74bb5976ce46b08c70860b0624add63abdd4fe1"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03425413/n03425413_26258.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03425413\\n03425413_26258.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "0ab1cc58efdcbd65ca1db68a0160b9213e659d2e76fe67375cdddb0e9ea48485",
+        "tensor_sha256": "7b11f0b13826b0987b54c171d12d10f59e8a99069b724fa183a4bbbde3477287"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03425413/n03425413_13004.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03425413\\n03425413_13004.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "86cf424e235e8d308459f8b6d6a99f9f89ead599ade89dffe9d23baf1038f992",
+        "tensor_sha256": "42b702e289c62b9aad12d18e5bcbb77c7c8d5edfa6debeb0fa71b639558e13ef"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03425413/n03425413_9377.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03425413\\n03425413_9377.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "2018989d7c14b5458a984f721a1ddb9abb0e4ead02328c304c06abed5a210b2e",
+        "tensor_sha256": "43fa9a5e361df82f0877a05bf60499650c1763260264f8fc6ac0a5b3f3a8221a"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03425413/n03425413_14813.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03425413\\n03425413_14813.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "b6e10e434486e0e73caba968fe3dfa0a08b7e628573cab8a36c3921bdd78c738",
+        "tensor_sha256": "f7d61c13444eba2dfda0f2fc9f786ca6e389ea7da1b2c9319864a28fe93ee628"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03425413/n03425413_20327.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03425413\\n03425413_20327.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "1c52a79615fb8428947ed3c8c972f4b7c0a1e3a82a4c931e170c016cf8aa0da2",
+        "tensor_sha256": "f146da72b47c75e0161b4ae6a45ed569ddfa94d7b7eefb13f0ee9cae231cc3c7"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03425413/n03425413_19747.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03425413\\n03425413_19747.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "36f6baa7b4365ac8e8748fbc7ebf6d63bdf950524419a1d81c861b03ed505e5d",
+        "tensor_sha256": "ac698e5e585d23964dd646610e479852548d1dca8a635968db36d016da03b2b3"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03425413/n03425413_15525.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03425413\\n03425413_15525.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "3f6f620885799a42d8a23789fa5fe98297f8a25f31d1316a10977880828c5d58",
+        "tensor_sha256": "065fc8149aa86b54a4fa1052e9a5834efca4a83662da3580c1a4260d06629830"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03445777/n03445777_17833.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03445777\\n03445777_17833.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "4717e0948c00cc0b55c357f70a80d339e21cdd0401bc24327d009e32993d1450",
+        "tensor_sha256": "381a41f7a8e35b6c95066db11a5b872d5b843bb1c0f331acaf3bf3b3eb8e8eab"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03445777/n03445777_9787.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03445777\\n03445777_9787.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "57b046366a5b1280fc8aa9c2c1d56f5917e8b142c7bb5e516cf628e6167974d4",
+        "tensor_sha256": "637baaadb35b27cb5006e032e11059f6ac0d15b004447bce8366326925a43109"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03445777/n03445777_10788.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03445777\\n03445777_10788.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "75ffa438362c50d11a709408931424ca7321772ef534e78879730c365fa3e3a5",
+        "tensor_sha256": "284f0e9f1eacfc9255f295af20c61d76871d1ecf5287b3197acfac288f43cdd6"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03445777/n03445777_959.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03445777\\n03445777_959.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "05172e3358d4875e8672564168f3a3db975750b517965c226cbc81732d2a3c95",
+        "tensor_sha256": "1052274eee0213869c20e7f0c10823bc3f3928d5ef440584a1ed794490b1912b"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03445777/n03445777_8056.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03445777\\n03445777_8056.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "6f7ff23b07bb93989fa48c51eaa871cbd30088e44b4876225f1de52158ef6cec",
+        "tensor_sha256": "1757ace9a49137b6dae57008ffac95a33a2233ed148f49352a01d9dc8edd539d"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03445777/ILSVRC2012_val_00046468.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03445777\\ILSVRC2012_val_00046468.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "20ca4436528c2c1e4ea9aae55be7d5273229dab2474bfda1dce0b6520cd3b112",
+        "tensor_sha256": "b78e8349d55ce11d8007889be97538e78f0f8acf2ef15482cad8298af290d0c0"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03445777/n03445777_3429.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03445777\\n03445777_3429.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "a08337690fc84438fb0d8588780a547ba5bf53791c7ddbd566f24fe54836f8c0",
+        "tensor_sha256": "1bd08e92bf51ed2fea466efe98885d92083f9aab5ce07eb8790def85382019d4"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03445777/n03445777_3833.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03445777\\n03445777_3833.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "2a46e59dc1f8e4a8241e7a0da138b8333e1e3979a87780e39223d6ec10d41491",
+        "tensor_sha256": "f181998928d9e62711f41b95e07c60d77f42eebceebae7b9635a18165daa4507"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03445777/n03445777_7744.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03445777\\n03445777_7744.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "fadd9d3282e85871818ce48e3414fce3930073f6f1b58007774e1aa178f0b31c",
+        "tensor_sha256": "ee917e6cf55c7fa1aab5b99215fe41245727faf0330114674105dea8ade0469a"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03445777/n03445777_8225.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03445777\\n03445777_8225.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "89591723ff95be0c95c5ed0502963f7aa83ae3006619e059a5a401e834bede01",
+        "tensor_sha256": "3468b00dd61c56dc265a3fb4f7d19a7dc991953f1497d704a9b5a4c942ece8df"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03888257/n03888257_5327.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03888257\\n03888257_5327.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "bdb7ecf7cc21a9bad4700817a98d174fcb73623bfb674d2da823c110f36c1fb0",
+        "tensor_sha256": "53d19f3c3d28132bf9e3c7074bcb995b774377701576c318217506d46f4ce533"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03888257/ILSVRC2012_val_00018509.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03888257\\ILSVRC2012_val_00018509.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "47e4b99216acc2259125e72432dde5b43c4baac0725075247ec8f92209b8b999",
+        "tensor_sha256": "89d66c5d1da6e9366dc5e5bbf617b831198df2eaa48ce5b90ba300511d261212"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03888257/n03888257_9524.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03888257\\n03888257_9524.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "46f764ce20c2edee7d7176ba0cc987d9793585ba5a441688db2c904a6425f7de",
+        "tensor_sha256": "318d292847629f1ce985094f5c1de21ffd3876765260e196c0ff59c1508a816a"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03888257/n03888257_13769.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03888257\\n03888257_13769.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "d15dffe906f988d22eb42b51e0b039d49d467ed4b846264bb73ee51f6825f264",
+        "tensor_sha256": "e4fe76a46bbbf8c52d9cc94ee7193750e905c683fe5bd5dd45b41cef1611dde5"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03888257/n03888257_34023.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03888257\\n03888257_34023.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "e81325c715af145ce5dc26f61212dd6349a7389dad6248700603a4fd6dd8824a",
+        "tensor_sha256": "05b1df185f3b8eba8215e6fc48a5e17524c14be0b40860803ebb4872eaf3e4bb"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03888257/n03888257_23437.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03888257\\n03888257_23437.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "fd9dd75536db1b9d9672441f8c21cce078d421ad04476f9d22c2739103895fa3",
+        "tensor_sha256": "802e4791ca8f1219772c0bad5d0a0cde81207a91146d50edad5693fb0c17c308"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03888257/n03888257_46884.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03888257\\n03888257_46884.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "04b5b8406227f2747805ce3637fa3a6168f30da22d3a7f19ffea7ebf9cf55977",
+        "tensor_sha256": "d5f9aa8afc448040ff0ab8511f538175e88231de81bab9ef4291b56732de037d"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03888257/n03888257_817.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03888257\\n03888257_817.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "1f421fe04ae00a3315938b30699335a8c8ac53b1da5d0108b0f583ccb49c6b0e",
+        "tensor_sha256": "8512495c77b778a7737f6491bed50352dc3206f226d97d9976b12d2f71908dd3"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03888257/n03888257_19484.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03888257\\n03888257_19484.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "cbcad1c2ce98703168fca7d500fd923ed6a1fbe741dacac36109eabb9cadd6ae",
+        "tensor_sha256": "fa98dcb6477fdae92fa016660e2e7389fbb4fecf92b75d99d2f8226bf44c74d6"
+      },
+      {
+        "source_path": "imagenette2-160/train/n03888257/n03888257_1074.JPEG",
+        "image_path": "data\\cv\\images\\train\\n03888257\\n03888257_1074.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "edf07f73b454349d587237afee147963fe30ffa9f6fb292a5aca77b83b4ac2c7",
+        "tensor_sha256": "7bb3019d094bdc9e64ecde873f421df633248ef1d1aba7cd839ece33121adbd5"
+      }
+    ],
+    "evaluation": [
+      {
+        "source_path": "imagenette2-160/val/n01440764/n01440764_11570.JPEG",
+        "image_path": "data\\cv\\images\\val\\n01440764\\n01440764_11570.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "e3082c5a782850e46279cf922c1fbc631c5a617594190f65065abdef71bb8d20",
+        "tensor_sha256": "0d0840c5fa90f5afcec1739616d9bcefd8909fa04ee6869787291201d4a9797e"
+      },
+      {
+        "source_path": "imagenette2-160/val/n01440764/n01440764_710.JPEG",
+        "image_path": "data\\cv\\images\\val\\n01440764\\n01440764_710.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "bd15d36ef7a822acd72cd97ebbba096e985fdc07f585c2122350a1609127baa6",
+        "tensor_sha256": "0fd3081ac29f35a0521a03a222980766a45988b5e98d9571aef0935a79628512"
+      },
+      {
+        "source_path": "imagenette2-160/val/n01440764/n01440764_8260.JPEG",
+        "image_path": "data\\cv\\images\\val\\n01440764\\n01440764_8260.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "a552c1db40ec87d75f70cee41b73baa41e0b4cf4d68ada03c2f814f3c6f20fd4",
+        "tensor_sha256": "5dc624188768f9b35d4d98fdf9aeec68cf1cc5cde20d71e743de5aa26ab69f80"
+      },
+      {
+        "source_path": "imagenette2-160/val/n01440764/n01440764_9292.JPEG",
+        "image_path": "data\\cv\\images\\val\\n01440764\\n01440764_9292.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "d7a0106d279ec8f6b60740c169663280cd95f633523d13f72e8a9324dc5dff33",
+        "tensor_sha256": "c7849708e36f5782e9f5443a30c2033c3937913d2ac90024daf112c723c98540"
+      },
+      {
+        "source_path": "imagenette2-160/val/n01440764/n01440764_8112.JPEG",
+        "image_path": "data\\cv\\images\\val\\n01440764\\n01440764_8112.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "f863aa8aecea7597ccf4115ec2b300ad1994e717f0734019020a46ebdf4ca92b",
+        "tensor_sha256": "2cfae3bbe9e5b58ded92b5989f5d257a2db25d962cf7e3dc515b30fe17acb1fd"
+      },
+      {
+        "source_path": "imagenette2-160/val/n01440764/n01440764_9780.JPEG",
+        "image_path": "data\\cv\\images\\val\\n01440764\\n01440764_9780.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "e984a49308caef09f9af7af323442458441733277d8ba0424199dd02509002e7",
+        "tensor_sha256": "6743498c555931f62583bb2c56ef36e4ff26358d3120527a8eb8ce40fb74d149"
+      },
+      {
+        "source_path": "imagenette2-160/val/n01440764/n01440764_12502.JPEG",
+        "image_path": "data\\cv\\images\\val\\n01440764\\n01440764_12502.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "ea79209d63580fb0bbbc3b4a3c38ded43f309abfc56ca160669a385964cc9306",
+        "tensor_sha256": "75685f1274596ecf2b93bdeef307474c6dadd817a8bd4866951340effe1147d8"
+      },
+      {
+        "source_path": "imagenette2-160/val/n01440764/n01440764_11281.JPEG",
+        "image_path": "data\\cv\\images\\val\\n01440764\\n01440764_11281.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "30937ffb54c66e3df07d0ff070308d11d2a80bcfc6c16068c1a3533096935b48",
+        "tensor_sha256": "331fd69acfd6ad6641a30d5bce998039a597415a17961ceec13880928402ce74"
+      },
+      {
+        "source_path": "imagenette2-160/val/n01440764/n01440764_10462.JPEG",
+        "image_path": "data\\cv\\images\\val\\n01440764\\n01440764_10462.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "3b48b3103052689357d998963ce2f6e9b296849c9a496ea40bec1c65e8d396c0",
+        "tensor_sha256": "2f936b1b4bee0cee38254bdd442791b9a5db5bb4bc99bb7c8e2d498490834218"
+      },
+      {
+        "source_path": "imagenette2-160/val/n01440764/n01440764_19661.JPEG",
+        "image_path": "data\\cv\\images\\val\\n01440764\\n01440764_19661.JPEG",
+        "label": 0,
+        "class_name": "tench",
+        "source_sha256": "4eb47630879e50bb2be050c54ad4e3f5693b74c42de7a71cf81cc832d18fa5bc",
+        "tensor_sha256": "1bb66037e711367246f003bfc1a93908763265043f910f4ba4bf16d7cbaa2d15"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02102040/n02102040_1222.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02102040\\n02102040_1222.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "3a5643052aeae4161aa5e00e0656665345c6a9bdac1c68155c5be94c455f2534",
+        "tensor_sha256": "c8f695c76ebb4028e52b28ef835c4c848b15f922b3a5329254b8b8b93a6c7c85"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02102040/n02102040_3260.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02102040\\n02102040_3260.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "07b14d53a4cdd78dcae63f27a87a6703e3edd06f1e848f8e6fde560d8e651854",
+        "tensor_sha256": "315b237120c6c611f30cf26fac056fc3e437723f7ca10fdf07dc0f49e01142c1"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02102040/n02102040_4410.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02102040\\n02102040_4410.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "6623f13cfe35c3f484d5efcb7094b5871369ae8974dbb6f1776a7c02216145bb",
+        "tensor_sha256": "a1a5b6572fb0266927e4f88c9b1c6856a911359f813279fb89389e2c88bfbabb"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02102040/n02102040_6682.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02102040\\n02102040_6682.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "24a593ba39b76071e10c7de2a39a7d1a64c7b2a84385c879a72e32a6214bfaa9",
+        "tensor_sha256": "d1f0fc8a179d7706d9e05518a4c7fcdfa0c5da432f617684d1d6ea6ad8d845cd"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02102040/n02102040_1301.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02102040\\n02102040_1301.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "3d233a985a158fc33dfc41b84b6aaab88d63249a38e81e9054a6b5b10f84543f",
+        "tensor_sha256": "46ced0b46e492a645d4cc4e0536445532baf2cbb78df9b7ce8cf7fd77b1d135e"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02102040/n02102040_811.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02102040\\n02102040_811.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "4e0fcae2028e8e54de1e006c11339e8c4d96f74eba220855ccbe2c21465f003d",
+        "tensor_sha256": "505ff7e7267f701fa40d065e3ab6228678c6c6f3ba6d9e4bf0dfa0bbc2e337c0"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02102040/n02102040_6340.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02102040\\n02102040_6340.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "82e24211de80b376671603b0a2573222591767fb39ec3b2f5e6706e579d2a524",
+        "tensor_sha256": "81a7fc6f05a2c3176a0885f16ca88fd53d4a230cd3eb954492ccb34333e46f34"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02102040/n02102040_6152.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02102040\\n02102040_6152.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "dfeca334e680ed0e96a15f23f58f10a7006ac57a30e6ee01418ad75c9446876e",
+        "tensor_sha256": "42b089a9f4796249caf402c2c9de76ad2b0e4f5011cfb298590e6edf39e15702"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02102040/n02102040_390.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02102040\\n02102040_390.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "3ae61f882b0592803a96be05fd4a8f2c0b7fd46522606a8161a168db5442fbd6",
+        "tensor_sha256": "6b99bd7ba304a5967966ce34fa90edf1995d83b6bb8f6d9dfe456961b894819b"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02102040/n02102040_1181.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02102040\\n02102040_1181.JPEG",
+        "label": 217,
+        "class_name": "English_springer",
+        "source_sha256": "2e50505f23b21086129dfc6e65bbb301dd0d7d867d7bf014f4f1031cb2ff8fd5",
+        "tensor_sha256": "8169ccc6f8a94f41522a25f57aa0cbbfb5f25dd2ee6de6ec3bff6212b1f6f22d"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02979186/n02979186_16382.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02979186\\n02979186_16382.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "fdcbc79ac86dd69712aa9e5e54afdd48f8f9100de9d9f2e585beac6ac8b97206",
+        "tensor_sha256": "12a1c17ccc0b5bb56c5050a0f306ae60d3d0da638d1458fa466ea31609ce388b"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02979186/n02979186_5932.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02979186\\n02979186_5932.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "2c831d24386d82203bd5391be6cb06d983ca8bcce669cce4dafd63803c5ca8b3",
+        "tensor_sha256": "0df4493794cfa23782a24095f0c6cd8bdbb7da38411a33198a523095016b82c2"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02979186/n02979186_19412.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02979186\\n02979186_19412.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "c5f399adeed50d363a6a619454c8d8f73a69928d9fe4c8729b6df73e20d605a7",
+        "tensor_sha256": "7ec4605348bc0edf05a793dc489441e518d2030b56a7b002862b0eb33cc5554c"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02979186/n02979186_19690.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02979186\\n02979186_19690.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "03c807de2e28d6173c2c1e2d0f0882110dcf0edf6f84d7a3d98d4b0351efb1f1",
+        "tensor_sha256": "994b1c0fcac22066907a31dec7c10cb0eb21640e573c0fc61a88455f1e34b20c"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02979186/n02979186_24140.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02979186\\n02979186_24140.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "7e19dfaad5121acf0222fdcf4c284cc6ae8d964e2fa5aaa69f128b215828e7be",
+        "tensor_sha256": "20257e2196f44209b5b483d267151f1a5b398283cecd9b8d52a59572d51a5952"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02979186/n02979186_15350.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02979186\\n02979186_15350.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "85dd362c03bd074ce6dbbdde5b5bf9e0846e9d00d08c022808fd9f8b2724d226",
+        "tensor_sha256": "520e484dcdf3a792a71f947c595048cda6c4c0994f9f951e0e241d507548aaaf"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02979186/n02979186_13250.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02979186\\n02979186_13250.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "ea4498b79ee4a06d409d199d2a7ae35db69d5128db553b8d36270946e50f2128",
+        "tensor_sha256": "65e64f482c8b26f24575d097315d1f652b00839f7d0dfe7ea397f6c809059865"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02979186/n02979186_11122.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02979186\\n02979186_11122.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "93881fb0885978e1977a5376eb0a3abbb53a8843c5ead89bb86ddc6c11ec1f9e",
+        "tensor_sha256": "664d451a90ab05b5d0235507dd8db47cfc607178b2373ec0fe9dff420d5a3cfb"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02979186/n02979186_14471.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02979186\\n02979186_14471.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "2f40625c9488f505a5272f62a691152b11c234d2285231fd773874d564cd99ea",
+        "tensor_sha256": "d2bbcdd51cbc1a719b1822bfacaff18d5964a10efd6d0b800594b5f35524317b"
+      },
+      {
+        "source_path": "imagenette2-160/val/n02979186/n02979186_9232.JPEG",
+        "image_path": "data\\cv\\images\\val\\n02979186\\n02979186_9232.JPEG",
+        "label": 482,
+        "class_name": "cassette_player",
+        "source_sha256": "a688538ef238d6b4c2232f8dbdea1779c6d4114b5492048142c55f0a132cdda0",
+        "tensor_sha256": "a91da6183056fdb614c451f4ad154bff80acd597b3e2e89676b6572f8d18f3e6"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03000684/n03000684_34440.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03000684\\n03000684_34440.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "63d848986c904b842a3b60cbb1004227c64ac414251ac6d0a6766d37da48237e",
+        "tensor_sha256": "f21baa0544c3e8b8807a605d5286786c9b8f31bdb4c8999e6e2eca4de7c85c94"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03000684/n03000684_36420.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03000684\\n03000684_36420.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "22d604ee2dca50618e0c01d314c578f31b516f1b95355cbc9c73c35c2b23d3e6",
+        "tensor_sha256": "35c1ff382c4cf8c49567e0073a193003dea7f9a4d81985fa8324ae4854cc8cde"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03000684/n03000684_9260.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03000684\\n03000684_9260.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "1f9bc470c2fb774e63bd685e3ea7c562238027b936535d8f33ca1a7f013c0784",
+        "tensor_sha256": "fe7db70d51900863822b299244912f29b108dd335bfae121798b782287265251"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03000684/ILSVRC2012_val_00007460.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03000684\\ILSVRC2012_val_00007460.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "20d3be8d40eb5be52638b2a2ae7d95dcfa69c7c2a17741a4035c8db09957d9e7",
+        "tensor_sha256": "c5210e8cc258ba23dcbd92e1527fc752205bc28f114a9df777fcc968400ce43f"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03000684/n03000684_31982.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03000684\\n03000684_31982.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "53e7c58173733f4f54e3588a6f41f793423230a68637ec04b54b58bd6b228cbc",
+        "tensor_sha256": "eacbf5215db60c3dddd80c200853be4f2baa5f0fb0a2595127e826c05aa2e396"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03000684/n03000684_9612.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03000684\\n03000684_9612.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "3bf778f1e7848a48f81c937d9c76f031eebfa7e0a863b8cc934b5c427e520310",
+        "tensor_sha256": "0086899cec4672347fbe08a3107ac9577fd96951cca6a5aa739adfbfe1cce308"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03000684/n03000684_8522.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03000684\\n03000684_8522.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "8393c6a53ae1dd4356afebc1c78f2a23a802dc9c05c40330993f1cc63cd559ec",
+        "tensor_sha256": "1d1f8a01bb84c6f260b949b4d01949aad0a37daf663c952bbb03493ccfc0f620"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03000684/n03000684_13511.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03000684\\n03000684_13511.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "1d35bfed90f3ba8f80da71b0843a181d4e06c66fe9c66a05dabfc6b356c06e06",
+        "tensor_sha256": "a6a83bc0e5828060600470a3b5eb9c3b1fa94113b74b8c124bde7f3af06dc931"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03000684/n03000684_2960.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03000684\\n03000684_2960.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "5901527648a2e6bcacf1d7fb53d91adc7502dc822702bccc03608cf6ba2ac65e",
+        "tensor_sha256": "f0ae20d7a02ae369063151ad5c338885cd8d4821bd39eed0cc691f4b2000e5cc"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03000684/n03000684_17862.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03000684\\n03000684_17862.JPEG",
+        "label": 491,
+        "class_name": "chain_saw",
+        "source_sha256": "edec717d87fa5bf1978a4715b271ed3171294807854de2cb72201acafb4a5f8f",
+        "tensor_sha256": "e94fee670e2e0171752b252a4806b0f2922ccef3778f258272b5e17e169a9a0c"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03028079/n03028079_14310.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03028079\\n03028079_14310.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "cbbd75f3c42ba0cce75dce81e7630a9e972cfee2d6fb0209dcffc5726c15cd38",
+        "tensor_sha256": "f4716ecf1c8d3769c9b8eae4a5826d37c43ccf35047361e2a3e6029b30a1e7dd"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03028079/n03028079_4821.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03028079\\n03028079_4821.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "e65390f3f994ceebd09de418c6d485832392fa40fa41adf2d99c29b400489f69",
+        "tensor_sha256": "b9a854b89d56eb40a634f8e3823598a416487d860cb273bd1eb21ad79a33fe70"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03028079/n03028079_16361.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03028079\\n03028079_16361.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "2432875444c018a476c7d8e157ba8349e77cb87dba8b091280cbce4df4f43b4e",
+        "tensor_sha256": "1117ea2f173893dc8411f3b6c729146a36dc14b0944fd1e1d2db693b7973e6fe"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03028079/n03028079_38351.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03028079\\n03028079_38351.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "7a574976b0ade61e61a64ff33520dfc6020f886ede6f37d968615ef0a8c80605",
+        "tensor_sha256": "2e7dc4fe60fd9d44483bbd65a98d978020d8056445c662268ffb80786a1745fd"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03028079/n03028079_2942.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03028079\\n03028079_2942.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "4a4ceba559f7d9612c2a3bd22b0eb56e421b27e32bb45e202857ae10b38a1fa3",
+        "tensor_sha256": "d485d8cb4e79e76e33e879cc42a3af63a0a5ba230e6a7d1a7854dbc0ca624670"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03028079/n03028079_41101.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03028079\\n03028079_41101.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "9cb1ed9a43c67e096dfd40c9214d3a758711e0c1d45a30a1e21595bb3783947c",
+        "tensor_sha256": "cb0d91fbbba31d075a3cf18e742c5e3d7a467d96f99cd5a11f06d009fb86daa1"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03028079/n03028079_3042.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03028079\\n03028079_3042.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "eeaf71e9e64a298527e05e02d70232b4d9d2970c63b4dae2dd59cce6a9fbb970",
+        "tensor_sha256": "8fe4cadd198c9f929a9b4c90d4a98726d2d54ace078c1904e55830408e7598b9"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03028079/n03028079_30460.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03028079\\n03028079_30460.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "045976d3f50c53c2c5572e86be2991727e1c20ed9c414d363b1b687be018fecb",
+        "tensor_sha256": "40813b23da3f2546a796771152a203372050173531bd6600bbad4b668b3cdf18"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03028079/n03028079_4022.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03028079\\n03028079_4022.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "0c0788ab15abcbd3e6e26acfae08cd8ccd0c0475d7e4602a60a3ee5240217618",
+        "tensor_sha256": "ddd94eb2c7c4de82d6fec06c4da1dfd108126de6f0574815265b7b726c807cde"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03028079/ILSVRC2012_val_00034021.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03028079\\ILSVRC2012_val_00034021.JPEG",
+        "label": 497,
+        "class_name": "church",
+        "source_sha256": "cbe9107c8ff032b4ef676f8daddb732aaf86daeb675b9f67d860d0c032a985a8",
+        "tensor_sha256": "247656f894ea3cad9e139a7eac9a9dedd942d59160c50cf33c4c07dd38908e9e"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03394916/n03394916_30432.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03394916\\n03394916_30432.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "74c32a9710fe5764fe3da1f16366a1cf7ee82f187cc6bfb2a5b03e71568c8bd2",
+        "tensor_sha256": "1e2ff005bd3e92850221b33f60187136a942a85e5993a67168eafeae6f00b3d9"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03394916/n03394916_42671.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03394916\\n03394916_42671.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "0182c92c4a26a0e94909a88d3bdc0f12216d7ef842d2f2b6788798dd9edc3f6b",
+        "tensor_sha256": "6c442916c8e5c09efba005262476891a73d4d1b225a6d9f6e67b73a5c80d6a9a"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03394916/n03394916_18901.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03394916\\n03394916_18901.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "d610628c716308b2a36c98cd9d1c404e318958f5fc3f9353ee1a2231f5389867",
+        "tensor_sha256": "10c52cbdb461ff28525cc44db1cb62ac547f6c627d68ce6161490f6903add97a"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03394916/n03394916_30631.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03394916\\n03394916_30631.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "c8885c88eaf3d9d95f1ba4202f7f8a1726943db4c5bcdf0f942a2b90c764adab",
+        "tensor_sha256": "94ee771a2b085134b524ac65a9f5b245cdee3af8720208c09bf3057d064a13dd"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03394916/n03394916_7620.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03394916\\n03394916_7620.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "503462bc9240dcea9070591c484ae830c8d7b92a7b3401e0a063dde25cbf3bf5",
+        "tensor_sha256": "a695a506d29d57d9649987db114623f9d0f50eb5dc5a04edfe3c472b7583685f"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03394916/n03394916_38841.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03394916\\n03394916_38841.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "eb0b38dbe698f002b46309f6d88e5d73c419385552b3fea924a8475cc651b7db",
+        "tensor_sha256": "50fdd54bbe2b21734ce6432db3b9674d15933f999889f3855e6608ac5fd97ec0"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03394916/n03394916_34012.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03394916\\n03394916_34012.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "621ed9e6a9e3b058bafd451a78bbae7dd11f3cdd3e73bdc6045ef0ee83d28ba6",
+        "tensor_sha256": "c8995e3674ced2a590ff9840e19da5f1731c8f1f99b71873d204ab0e217d580d"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03394916/n03394916_35812.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03394916\\n03394916_35812.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "3d93c3932906017858c9faf112da53be3029ebf08530d91c0ebae3ca6c448835",
+        "tensor_sha256": "3bbf69eadf032641253b955d4b1f9fe32e350ce23b64a4accee7718f547d1f8f"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03394916/n03394916_32520.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03394916\\n03394916_32520.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "0593c3c2db26412231fed259149c87ec5c109fd7c16a09e8cc9da712e8e5e096",
+        "tensor_sha256": "3206250e4fbfbb097a75443616f00d7e2a7342042fd1a67b0379dd262cf7bc79"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03394916/n03394916_40301.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03394916\\n03394916_40301.JPEG",
+        "label": 566,
+        "class_name": "French_horn",
+        "source_sha256": "eed569a73d9063a6a9a80749acc51ccf5a1271f398572db015ddb9a996cf2834",
+        "tensor_sha256": "e02720a0397152597329c5a7635f33830318fcd60f573385b22157fdac096ae2"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03417042/n03417042_28700.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03417042\\n03417042_28700.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "dd2281babb258b75c1b91cc16861a0f1a9815f4fc62f5c5319d2348931faa7c0",
+        "tensor_sha256": "9f6b38ae47efe5faa38f40d99ac698137b2d2275998bb5dfe225f70867f15907"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03417042/n03417042_9152.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03417042\\n03417042_9152.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "a20f8cb7eec10a8d23b95b22fc2c4ee23b8e1f4d8d8e9bc7b876525ae6f29538",
+        "tensor_sha256": "b0c595e7b65c32c0a7a6950d9a6482016ca03e3131bad8cc2b6559ddce747be0"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03417042/n03417042_20382.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03417042\\n03417042_20382.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "333d434a4d629021d61a3ebeb362ad7097d9acded11fb27c8cffa5c260e5993c",
+        "tensor_sha256": "850870b072be4a1806f138cb05dec87669512d7b034e95b773229f2a96cdf565"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03417042/n03417042_10642.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03417042\\n03417042_10642.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "b0f3747e4f8a882f06a53c75b474199501576a3764df253fbde8d287179a1ba6",
+        "tensor_sha256": "b487e3e7f6bb41dd7de0248e5ccd4c043c6cb16c6acb2323b8c16ae28bf4e14f"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03417042/n03417042_6602.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03417042\\n03417042_6602.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "1596aa1e20087d603659f960cda27786dc10b6192484e8a3d6301bdd1777bfca",
+        "tensor_sha256": "c2a6633e5412f67a4713d3cb79a2d9050b325af5b60213ce2c4193ac0b16a95c"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03417042/n03417042_10150.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03417042\\n03417042_10150.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "d314100725956b8854044d3bba6ab52d6b72749090e6b28e095598d096b2b0c6",
+        "tensor_sha256": "66d948b7fa0bd8bd40629ec66ac6db6585d6b2a4fa610adc85a1196c8c2b9826"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03417042/n03417042_690.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03417042\\n03417042_690.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "5717662566806715df423c9ee6aaa2a69703047ba09b8af41bf2535318421cc7",
+        "tensor_sha256": "559d3d63df9dc3bf395728cee78da75ccffa746bdc744d879640f4ccf68f5aeb"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03417042/n03417042_11441.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03417042\\n03417042_11441.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "d5f43171566d211373a2fe35670505871f75652782734f4b5f2330753389ab1b",
+        "tensor_sha256": "081611e2556584a325c4ff40fc2acd197c95304a2f8ff22e581915f163d2c8dc"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03417042/n03417042_3300.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03417042\\n03417042_3300.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "a373d560b78ffea82dcd213d77fd432f310b918eed38f74c1ba90a94acd9e7d5",
+        "tensor_sha256": "c370cb7a90c2d8b9088c3edf5564048185608d159d09b9b0817a22c0488a8439"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03417042/n03417042_12560.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03417042\\n03417042_12560.JPEG",
+        "label": 569,
+        "class_name": "garbage_truck",
+        "source_sha256": "d72d4ed024e7bd55cfbe955a1aabda55967af8ec4667e41076e965a6d5155aab",
+        "tensor_sha256": "2cdc6ba71623069f1fde470fa3c7c51162ddb56866a1c4d1da983398cae3cec6"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03425413/n03425413_20121.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03425413\\n03425413_20121.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "e9080c6319f09376d2d7e21d8a1bdfd7428bebfc24bb5523384932d075d5aee2",
+        "tensor_sha256": "41d76205361ed5928291181c4251c656cb0a3ece061646e4460ad7f2c8649c4e"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03425413/n03425413_17000.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03425413\\n03425413_17000.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "8d0145d2cea9025ce57d71664f1c7c79396c5bbd0a8f3458154ba8ac2b5a60ec",
+        "tensor_sha256": "74fe90ef78f23cdb4c98b3f3dfdc0c0e00fa2d34f99c10129310a2420da26fbe"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03425413/n03425413_27000.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03425413\\n03425413_27000.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "970e487a642952611cd639d043bb75a675264f0bad0849dc20a846c833b983a6",
+        "tensor_sha256": "9ad72bbeac16c26d141fe97eaa649d813c3bcc68ff078d597ef659723b13534b"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03425413/n03425413_251.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03425413\\n03425413_251.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "8d806dae3f3ecc4822ee05fc66ec8408892bfb16791c586d61f4c260b7bddf21",
+        "tensor_sha256": "3c98e73d1edab690be675816b1ad98b4a7f077ae011fda936f6cc3f7115f891a"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03425413/n03425413_12982.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03425413\\n03425413_12982.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "353d8518505fc0c4d15df50ee702baf7a9a4e5152a96b5b645717507ed03a5e7",
+        "tensor_sha256": "7d67db4c2fdcd7c8d5922db94380b435e2bdeba1e16d0276071eeb2ca3c24f61"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03425413/n03425413_8761.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03425413\\n03425413_8761.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "21122bacb5de9fd006093df48ce3151cec16cb96c621c7651cf6cf0eaca720f1",
+        "tensor_sha256": "ecb122d551ceb340bf1c225a82ab0d4cdb90f12544c8b0aefa2cc442fe7e0978"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03425413/n03425413_14792.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03425413\\n03425413_14792.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "be9cb5b077e9e9bbe5ca5703a896a904c04229621f7d3b43540b7b65bc95f7d1",
+        "tensor_sha256": "d57a660b1efee7b1d816ad441737553a55db172b7aa2cc800434a4b42aaa6cb9"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03425413/n03425413_19350.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03425413\\n03425413_19350.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "d3db30078a5982cb6fd67d5e87465f8c044fb413dabe5029e70b34742eabf052",
+        "tensor_sha256": "41468d0c74ac643e15ae4d91e064cb1ac8a4869c99847f49780863e2fbaa28ab"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03425413/n03425413_19060.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03425413\\n03425413_19060.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "c9d464af4048458757ddb48456eb4d06b588ed0a70569ca07a94b2933a13f032",
+        "tensor_sha256": "e4730327eb5ca168e278bd9a1d07c4b6c2ed8bac74b9b556cf029a8baf67cb4d"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03425413/n03425413_15671.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03425413\\n03425413_15671.JPEG",
+        "label": 571,
+        "class_name": "gas_pump",
+        "source_sha256": "3c9d96fbca1f6dcf931dfd6c8b8f3f1729f1fa7ea1ccc31033d462a37313d5d5",
+        "tensor_sha256": "638fd84c180af21a5f56878db5f62d6e5fbb6629d91b3f9c7248828a006c466a"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03445777/n03445777_15820.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03445777\\n03445777_15820.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "755bee5b60b0829f5b59bd74e6a7c9db4f413791d2e5e6fcd9ffb12f82567388",
+        "tensor_sha256": "4d4eb763d5f2640708e788f187c593d0986044f02b91bf7375badd6f7011c7f2"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03445777/n03445777_9572.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03445777\\n03445777_9572.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "645cd4885071b37a71fa9c8ee4e209dcc3edad5d750b5a98cb0883c2ee75baee",
+        "tensor_sha256": "ff4b41985d5092f920100e6aa95baec8233dd146cf4aa7a267d43a248de85346"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03445777/n03445777_10782.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03445777\\n03445777_10782.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "a65f463ce03f00612b7f2cd7ffa5f31c4b42413cc354b77d0d861db4e72e3b10",
+        "tensor_sha256": "576d33cd38adee21fec101ab1083367f1774c881606cf14f3fb55b95bd2f86a9"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03445777/n03445777_9892.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03445777\\n03445777_9892.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "5448c1fd9ccb667b5b50108c4a7cda9993287c438bc2c5bd6cac14d1b60df3cf",
+        "tensor_sha256": "2393dfe5cae2251c4f2efd45d9fc03684daafa17022fabfd80de622180a664fe"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03445777/n03445777_7902.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03445777\\n03445777_7902.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "7744e3e89e3c73807aabde17f81053fecb4f22cb0fde1205baf08a49f4132bea",
+        "tensor_sha256": "9deded2d8a2141ed6b467132615e5c83d41166ed1d917196ed9d8cdcef4b4b08"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03445777/n03445777_10030.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03445777\\n03445777_10030.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "3d671780646503777bec54158d1a8a7680c26fda03edb003a464b6de6a98dd91",
+        "tensor_sha256": "b1e27dfce11f23037a25e945de7f5039c01f48acc59c2321045fb736a6c59889"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03445777/n03445777_3252.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03445777\\n03445777_3252.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "a2f34c345560039ebd0829a49538368b175551a2c4fd3639e3723c415f78c2d5",
+        "tensor_sha256": "abaea4e4ee6023fb7d901e9254e9d1c8de262444225913bc57c76003038b1d4d"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03445777/n03445777_3530.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03445777\\n03445777_3530.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "c025dd1fad801f6abbb812a250282e60621dd6693bc19791396184498ba30575",
+        "tensor_sha256": "c6a2d8764a4a223c56b717f65a94a3ae9c925e15c7c8d6ab179ecf7ef8792cbf"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03445777/n03445777_7601.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03445777\\n03445777_7601.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "ae7178a47ccc7902b5ce2f2869d21f36e032eb4fcfe2c977c1b61ff75294cf6b",
+        "tensor_sha256": "75dd47471baa5a366567899cf03f493a3e4526eac6f901fe1ab1f2202c84bf84"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03445777/n03445777_8192.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03445777\\n03445777_8192.JPEG",
+        "label": 574,
+        "class_name": "golf_ball",
+        "source_sha256": "9b8f5b2729a8054dc934039ec2da4f1b2567a9e019df7045f8f357d458ea2005",
+        "tensor_sha256": "6320b232e26a0689e472b15f81ee162faf1f459a94d53653d575025144e3d186"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03888257/n03888257_51522.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03888257\\n03888257_51522.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "92ffc7beb6cfbb9784b313d1a9cf682f3ae0c769816013a0529fc34e3282e3e6",
+        "tensor_sha256": "3c2a7802f0d3a236704e42fe47a7e4c0e599e8a0fec404d794237f34e51e03aa"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03888257/ILSVRC2012_val_00024340.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03888257\\ILSVRC2012_val_00024340.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "e0406b75a13bd212fa3973707eb71953cae035201d602c594da70e1770a9b136",
+        "tensor_sha256": "70659fa4db3379f1da248d4549d1a656ce365c5fd1a5cf92d7cfd086af06ad5a"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03888257/n03888257_9371.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03888257\\n03888257_9371.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "c21880612c92044d32d900381df40d7ce6f0c1a5d978a21bf695077ea81df4b3",
+        "tensor_sha256": "6fdf3fb2227ac98b88cdd6591dd42a777e0a963d357630bb018f017669a86242"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03888257/n03888257_13600.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03888257\\n03888257_13600.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "03e302de3e1f8879b8981e36ef7668001986a1bc36bd1382c6d8f7f741c2549c",
+        "tensor_sha256": "f1783f68d8bf02d5ea3b9b168dfda020744044a1da324e57466c0f97d3fe8787"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03888257/n03888257_33801.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03888257\\n03888257_33801.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "83c5e3f9941d844e61a0449c1fa71ff2df0e87c623347e92220e9578fd9f9489",
+        "tensor_sha256": "4d2416ee17b7bf31570ecdbc47b50822ab306f1c8af56ef1be1e39cc1a35805c"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03888257/n03888257_26672.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03888257\\n03888257_26672.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "68f85aca40240a490ed23a2d9d73b55c5c493e420bb1b54ef0ee0c4a914d44b2",
+        "tensor_sha256": "8da10dcfa4ca10e8036e495be4c6d2ece289bc9260904a97eae603a18c064741"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03888257/n03888257_46870.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03888257\\n03888257_46870.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "f172a04495f8036d3700e9b40193a6ca2bbf4627c918f7ac5b41fa5682217728",
+        "tensor_sha256": "49a914e994e402d744ffe810ad111af072f280333dd084f3b08e063d5b3c2323"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03888257/n03888257_76721.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03888257\\n03888257_76721.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "1e19a8881a60c1f44ab8b1c698a2bea86a8fe1e633edf1fbca0485b46676f366",
+        "tensor_sha256": "4f3a691d485fb87aaa84aeb7a9ec27093d2323d2ce08ae99d19904a2a1403652"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03888257/n03888257_19960.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03888257\\n03888257_19960.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "76acdc78610b6fa7747a06c8373351fd761dba6bc2adebb97a820e626ed9a47c",
+        "tensor_sha256": "4246b5f2a488ae7bc210bf8acfdaabf23225628c8f890309f9dca84357cff7e7"
+      },
+      {
+        "source_path": "imagenette2-160/val/n03888257/n03888257_10892.JPEG",
+        "image_path": "data\\cv\\images\\val\\n03888257\\n03888257_10892.JPEG",
+        "label": 701,
+        "class_name": "parachute",
+        "source_sha256": "36313e51a3631a152d6f85fb7d19d8de553e7187f136098c9b16baf663311464",
+        "tensor_sha256": "e54551b9a2ea9d886a6f50d2cc0069fbe180b338f3734c65c06a729b24ccef1d"
+      }
+    ]
+  },
+  "tensor_hashes": {
+    "calibration": "4eda9c0e8c7558583ced7f5275be37ce46427ebf2c2c946636ea98f28ad76636",
+    "evaluation": "8a9a7b1f7a49ec8e223e21175b39819f9a24b22a9b0a396a43a60453b14e95d8"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "task": "cv",
+  "variant": "onnx_fp32",
+  "converted_at_utc": "2026-10-08T03:31:03.209676+00:00",
+  "status": "ok",
+  "sha256": "0ef6e7208d8e44f8fc2bb4e1b3945a7b6654c79442a49b717055047eed6b9b4a",
+  "size_bytes": 102155393,
+  "parameters": {
+    "opset": 13,
+    "preprocessed": "onnx_preprocessed.onnx"
+  },
+  "audit": {
+    "operator_counts": {
+      "Transpose": 1,
+      "Conv": 53,
+      "Relu": 49,
+      "Pad": 1,
+      "MaxPool": 1,
+      "Add": 16,
+      "GlobalAveragePool": 1,
+      "Squeeze": 1,
+      "Gemm": 1,
+      "Softmax": 1
+    },
+    "initializer_elements_by_dtype": {
+      "FLOAT": 25530472,
+      "INT64": 10
+    },
+    "qdq_nodes": 0,
+    "integer_matmul_nodes": 0,
+    "note": "QDQ storage graph retains float operator definitions; execution fusion depends on ORT/provider."
+  },
+  "original_model_sha256": "4d80a1ff5e1b1d18a6e12ac816a3cdf2b5ea22d70286de9ff363f7cf6e2ed82a",
+  "conversion_seconds": 107.02125529999921
+}

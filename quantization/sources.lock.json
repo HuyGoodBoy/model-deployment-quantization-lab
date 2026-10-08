@@ -1,0 +1,67 @@
+{
+  "resnet50": {
+    "url": "https://storage.googleapis.com/tensorflow/keras-applications/resnet/resnet50_weights_tf_dim_ordering_tf_kernels.h5",
+    "md5": "2cb95161c43110f7111970584f804107"
+  },
+  "imagenette": {
+    "url": "https://s3.amazonaws.com/fast-ai-imageclas/imagenette2-160.tgz",
+    "md5": "e793b78cc4c9e9a4ccc0c1155377a412"
+  },
+  "text_model": {
+    "repo": "distilbert/distilbert-base-uncased-finetuned-sst-2-english",
+    "revision": "714eb0fa89d2f80546fda750413ed43d93601a13",
+    "files": [
+      {
+        "rfilename": "config.json",
+        "blobId": "b57fe5dfcb8ec3f9bab35ed427c3434e3c7dd1ba",
+        "size": 629
+      },
+      {
+        "rfilename": "tf_model.h5",
+        "blobId": "7012660fde3d8ff31c75037fcdf4a702f61e8973",
+        "size": 267949840,
+        "lfs": {
+          "sha256": "b44df675bb34ccd8e57c14292c811ac7358b7c8e37c7f212745f640cd6019ac8",
+          "size": 267949840,
+          "pointerSize": 134
+        }
+      },
+      {
+        "rfilename": "tokenizer_config.json",
+        "blobId": "3ed34255a7cb8e6706a8bb21993836e99e7b959f",
+        "size": 48
+      },
+      {
+        "rfilename": "vocab.txt",
+        "blobId": "fb140275c155a9c7c5a3b3e0e77a9e839594a938",
+        "size": 231508
+      }
+    ]
+  },
+  "sst2": {
+    "repo": "stanfordnlp/sst2",
+    "revision": "8d51e7e4887a4caaa95b3fbebbf53c0490b58bbb",
+    "files": [
+      {
+        "rfilename": "data/train-00000-of-00001.parquet",
+        "blobId": "fc5186b58c9cee6bfb58f28c3a7feffa05a76e10",
+        "size": 3110458,
+        "lfs": {
+          "sha256": "c7921283b75a42e685f50edecb96798607ea0fcbfd0739ee8975f22c12d55f09",
+          "size": 3110458,
+          "pointerSize": 132
+        }
+      },
+      {
+        "rfilename": "data/validation-00000-of-00001.parquet",
+        "blobId": "97daa2c9805cc8be03c467db57aae1333ff8d2af",
+        "size": 72813,
+        "lfs": {
+          "sha256": "fb00fe008f6828f86ba2beda8415a4cf5da0c884f21c5f238c87131b5aa19529",
+          "size": 72813,
+          "pointerSize": 130
+        }
+      }
+    ]
+  }
+}

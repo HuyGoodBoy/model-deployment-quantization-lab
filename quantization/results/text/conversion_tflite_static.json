@@ -1,0 +1,83 @@
+{
+  "task": "text",
+  "variant": "tflite_static",
+  "converted_at_utc": "2026-10-08T03:44:12.111454+00:00",
+  "status": "ok",
+  "sha256": "d03e426c46ea650a1a1591a73c4688adaa2b611d35a08c87bee2708debb5a961",
+  "size_bytes": 66844704,
+  "parameters": {
+    "strategy": "calibrated mixed INT8",
+    "calibration_sha256": "5a26f2d81e9130ed30feec4190c88d06c9307e4afaf706c75f09ea857fcd708d",
+    "select_tf_ops_allowed": false
+  },
+  "audit": {
+    "operator_counts": {
+      "CAST": 1,
+      "QUANTIZE": 1,
+      "RESHAPE": 25,
+      "SUB": 20,
+      "MUL": 46,
+      "GATHER": 1,
+      "ADD": 45,
+      "MEAN": 26,
+      "SQUARED_DIFFERENCE": 13,
+      "RSQRT": 13,
+      "FULLY_CONNECTED": 38,
+      "TRANSPOSE": 24,
+      "BATCH_MATMUL": 12,
+      "SOFTMAX": 6,
+      "GELU": 6,
+      "STRIDED_SLICE": 1,
+      "DELEGATE": 33
+    },
+    "tensor_counts_by_dtype": {
+      "int32": 126,
+      "int8": 372,
+      "float32": 1
+    },
+    "inputs": [
+      {
+        "name": "serving_default_attention_mask:0",
+        "dtype": "int32",
+        "shape": [
+          1,
+          64
+        ],
+        "scales": [],
+        "zero_points": []
+      },
+      {
+        "name": "serving_default_input_ids:0",
+        "dtype": "int32",
+        "shape": [
+          1,
+          64
+        ],
+        "scales": [],
+        "zero_points": []
+      }
+    ],
+    "outputs": [
+      {
+        "name": "StatefulPartitionedCall:0",
+        "dtype": "int8",
+        "shape": [
+          1,
+          2
+        ],
+        "scales": [
+          0.03578399866819382
+        ],
+        "zero_points": [
+          -6
+        ]
+      }
+    ],
+    "float32_tensors": 1,
+    "int8_tensors": 372,
+    "int32_tensors": 126,
+    "uses_select_tf_ops": false
+  },
+  "original_model_sha256": "b44df675bb34ccd8e57c14292c811ac7358b7c8e37c7f212745f640cd6019ac8",
+  "conversion_seconds": 93.63743569999951
+}

@@ -1,0 +1,53 @@
+{
+  "status": "ok",
+  "source_sha256": "78020e6d852ad1b7be89523fd5f32bfa3e336f93d1217ddae6a307411c9bffc0",
+  "sha256": "2f8c167e10b88a23d50d642b5493461c4812a2c54a3fe4fa24ae30807d845b1f",
+  "size_bytes": 133450952,
+  "audit": {
+    "initializer_types": {
+      "FLOAT16": 111,
+      "INT64": 10
+    },
+    "operator_counts": {
+      "Cast": 2,
+      "Gather": 1,
+      "Add": 87,
+      "Reshape": 79,
+      "Sub": 28,
+      "GlobalAveragePool": 26,
+      "Mul": 77,
+      "Sqrt": 13,
+      "Reciprocal": 13,
+      "MatMul": 48,
+      "Transpose": 24,
+      "Softmax": 6,
+      "Erf": 6,
+      "Slice": 1,
+      "Squeeze": 1,
+      "Gemm": 2,
+      "Relu": 1
+    },
+    "io": [
+      {
+        "name": "input_ids",
+        "type": "INT32"
+      },
+      {
+        "name": "attention_mask",
+        "type": "INT32"
+      },
+      {
+        "name": "Identity:0",
+        "type": "FLOAT"
+      }
+    ]
+  },
+  "settings": {
+    "keep_io_types": true,
+    "min_positive_val": 1e-07,
+    "max_finite_val": 10000.0,
+    "default_op_block_list": true,
+    "topological_sort_after_conversion": true
+  },
+  "note": "Floating-point precision conversion, not integer PTQ. Unsupported ops may stay FP32. Constants outside finite bounds are clipped; attention mask sentinel may change."
+}

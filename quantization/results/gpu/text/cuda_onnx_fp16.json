@@ -1,0 +1,573 @@
+{
+  "task": "text",
+  "variant": "onnx_fp16",
+  "device": "cuda",
+  "measured_at_utc": "2026-10-08T10:32:01.079846+00:00",
+  "status": "ok",
+  "warmup": 30,
+  "runs": 200,
+  "runtime_version": "1.20.2",
+  "package_versions": {
+    "onnxruntime-gpu": "1.20.2",
+    "onnx": "1.16.2",
+    "numpy": "1.26.4",
+    "nvidia-cuda-runtime-cu12": "12.6.77",
+    "nvidia-cublas-cu12": "12.6.4.1",
+    "nvidia-cudnn-cu12": "9.5.1.17",
+    "nvidia-cufft-cu12": "11.3.0.4",
+    "nvidia-nvjitlink-cu12": "12.6.85"
+  },
+  "session_providers": [
+    "CUDAExecutionProvider",
+    "CPUExecutionProvider"
+  ],
+  "provider_options": {
+    "CUDAExecutionProvider": {
+      "device_id": "0",
+      "has_user_compute_stream": "0",
+      "cudnn_conv1d_pad_to_nc1d": "0",
+      "user_compute_stream": "0",
+      "gpu_external_alloc": "0",
+      "gpu_mem_limit": "18446744073709551615",
+      "enable_cuda_graph": "0",
+      "gpu_external_free": "0",
+      "gpu_external_empty_cache": "0",
+      "arena_extend_strategy": "kNextPowerOfTwo",
+      "cudnn_conv_algo_search": "EXHAUSTIVE",
+      "do_copy_in_default_stream": "1",
+      "cudnn_conv_use_max_workspace": "1",
+      "tunable_op_enable": "0",
+      "tunable_op_tuning_enable": "0",
+      "tunable_op_max_tuning_duration_ms": "0",
+      "enable_skip_layer_norm_strict_mode": "0",
+      "prefer_nhwc": "0",
+      "use_ep_level_unified_stream": "0",
+      "use_tf32": "0",
+      "sdpa_kernel": "0",
+      "fuse_conv_bias": "0"
+    },
+    "CPUExecutionProvider": {}
+  },
+  "preloaded_dlls": [
+    "nvJitLink_120_0.dll",
+    "cudart64_12.dll",
+    "cublasLt64_12.dll",
+    "cublas64_12.dll",
+    "cufft64_11.dll",
+    "cudnn64_9.dll"
+  ],
+  "threads": 1,
+  "inter_op_threads": 1,
+  "batch_size": 1,
+  "system": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "cpu_name": "12th Gen Intel(R) Core(TM) i7-12700H",
+    "logical_processors": 20,
+    "machine": "AMD64",
+    "python": "3.11.9"
+  },
+  "canonical_input_sha256": "14690c920a532c01b9826b99c22f5b2062e798cdcf37c49158e8f0b9ea61f411",
+  "model_sha256": "2f8c167e10b88a23d50d642b5493461c4812a2c54a3fe4fa24ae30807d845b1f",
+  "model_size_bytes": 133450952,
+  "input_record": {
+    "idx": 681,
+    "sentence": "( a ) shapeless blob of desperate entertainment . ",
+    "label": 0,
+    "source_split": "validation",
+    "untruncated_tokens": 14,
+    "tensor_sha256": "d7c4fbdb4bb51a1897538b0582bc86618be6f796897dcc8b7b06ce631c3cc02c"
+  },
+  "benchmark": {
+    "latency_samples_ms": [
+      11.0334,
+      12.916,
+      9.5055,
+      10.273,
+      12.7072,
+      9.9981,
+      10.2112,
+      9.2422,
+      8.1292,
+      11.8476,
+      21.1469,
+      19.7652,
+      17.8295,
+      10.7755,
+      15.1464,
+      9.225,
+      12.9023,
+      9.6138,
+      19.2046,
+      11.5359,
+      10.3829,
+      8.648,
+      19.5088,
+      21.4947,
+      12.8166,
+      21.633,
+      21.0097,
+      9.308,
+      9.4245,
+      8.9157,
+      8.2577,
+      7.7577,
+      9.1622,
+      8.8791,
+      8.5711,
+      8.1701,
+      9.6979,
+      9.7427,
+      12.6155,
+      16.0703,
+      12.0287,
+      9.8551,
+      10.1479,
+      9.0018,
+      7.9179,
+      8.2855,
+      11.3155,
+      8.2855,
+      13.2382,
+      14.2303,
+      9.4082,
+      10.7158,
+      22.0962,
+      21.0615,
+      18.4272,
+      14.0749,
+      22.1234,
+      17.9772,
+      15.6625,
+      8.426,
+      11.3342,
+      16.1335,
+      28.5938,
+      14.2865,
+      13.879,
+      13.5922,
+      12.1818,
+      12.5854,
+      9.8098,
+      13.3036,
+      10.9733,
+      8.3057,
+      8.5153,
+      8.7631,
+      11.0154,
+      8.5308,
+      10.4215,
+      8.5483,
+      7.8886,
+      7.3505,
+      10.2838,
+      9.2371,
+      8.2728,
+      6.8751,
+      4.1954,
+      4.5225,
+      4.0455,
+      4.2472,
+      31.5685,
+      16.3773,
+      13.2607,
+      10.3232,
+      9.537,
+      27.7505,
+      38.9551,
+      20.5476,
+      9.9658,
+      12.6172,
+      8.3233,
+      10.2275,
+      9.0241,
+      21.7801,
+      26.2758,
+      22.7805,
+      26.4681,
+      38.5485,
+      24.752,
+      20.3454,
+      19.5549,
+      13.3672,
+      8.5602,
+      8.1884,
+      8.9675,
+      8.8197,
+      8.0404,
+      12.6365,
+      21.5412,
+      19.6311,
+      10.7396,
+      13.1575,
+      10.5205,
+      9.6027,
+      18.1435,
+      16.2203,
+      20.1058,
+      14.473,
+      10.9605,
+      8.2378,
+      9.4636,
+      10.4193,
+      8.7691,
+      8.1971,
+      11.1091,
+      8.459,
+      11.5586,
+      18.4185,
+      11.7257,
+      9.4447,
+      12.121,
+      11.0543,
+      10.341,
+      10.6877,
+      12.0945,
+      16.6504,
+      16.406,
+      20.2291,
+      31.8699,
+      17.5024,
+      14.7637,
+      13.3074,
+      17.8272,
+      10.3469,
+      10.2769,
+      10.2182,
+      10.546,
+      9.8072,
+      8.3406,
+      29.8468,
+      27.7349,
+      9.0674,
+      12.4378,
+      20.2967,
+      11.6848,
+      12.1045,
+      12.721,
+      11.576,
+      11.2838,
+      18.4246,
+      11.8977,
+      27.1181,
+      11.0887,
+      11.5364,
+      10.4402,
+      10.6443,
+      13.3393,
+      30.6306,
+      20.0551,
+      11.8636,
+      10.5462,
+      11.6275,
+      30.1905,
+      11.2047,
+      15.9117,
+      11.5313,
+      11.1319,
+      9.6453,
+      9.3166,
+      8.9232,
+      11.0597,
+      8.259,
+      8.3185,
+      11.0523,
+      19.1955,
+      12.6643,
+      9.8692,
+      8.3236,
+      9.5942,
+      11.3088,
+      17.109,
+      9.8703
+    ],
+    "mean_ms": 13.4117145,
+    "median_ms": 11.1683,
+    "p95_ms": 27.14893999999999,
+    "std_ms": 6.148891279372221,
+    "timing_scope": "Synchronous session.run with CPU NumPy input/output, including H2D/D2H and Python/API overhead; excludes model load, preprocessing/tokenization; profiling disabled while timing"
+  },
+  "output_sha256": "ef0e6ead5c1b83d2c71dcb0832ce1cee38e474bde092a8bbad4942947eda0022",
+  "metrics_vs_original": {
+    "mae": 0.21682814493775368,
+    "rmse": 0.35085826034486994,
+    "max_abs_error": 1.6492589116096497,
+    "relative_l2": 0.09597091472405049,
+    "cosine_similarity": 0.9953879557592078,
+    "snr_db": 20.35720731602956,
+    "accuracy": 0.89,
+    "top1_ties": 0,
+    "f1_positive": 0.8910891089108911,
+    "top1_agreement": 0.98,
+    "allclose_fp32_tolerance": false
+  },
+  "profile": {
+    "unique_nodes_by_provider": {
+      "CUDAExecutionProvider": 409
+    },
+    "operator_counts_by_provider": {
+      "CUDAExecutionProvider": {
+        "Gather": 1,
+        "Add": 81,
+        "GlobalAveragePool": 26,
+        "Sub": 28,
+        "Mul": 77,
+        "Sqrt": 13,
+        "Reciprocal": 13,
+        "Reshape": 79,
+        "MatMul": 48,
+        "Transpose": 24,
+        "Cast": 2,
+        "BiasSoftmax": 6,
+        "Erf": 6,
+        "Slice": 1,
+        "Squeeze": 1,
+        "Gemm": 2,
+        "Relu": 1
+      }
+    },
+    "kernel_events_by_provider": {
+      "CUDAExecutionProvider": 818
+    },
+    "cuda_compute_nodes": 409,
+    "cpu_nodes": [],
+    "cuda_compute_operators": [
+      "Add",
+      "BiasSoftmax",
+      "Cast",
+      "Erf",
+      "Gather",
+      "Gemm",
+      "GlobalAveragePool",
+      "MatMul",
+      "Mul",
+      "Reciprocal",
+      "Relu",
+      "Reshape",
+      "Slice",
+      "Sqrt",
+      "Squeeze",
+      "Sub",
+      "Transpose"
+    ],
+    "cuda_compute_examples": [
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/Gather_kernel_time",
+        "op": "Gather",
+        "input_type_shape": [
+          {
+            "float16": [
+              30522,
+              768
+            ]
+          },
+          {
+            "int32": [
+              1,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float16": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/moments/mean_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/moments/SquaredDifference_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float16": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/moments/SquaredDifference__8_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float16": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/moments/variance_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float16": []
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/Rsqrt_kernel_time",
+        "op": "Sqrt",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/Rsqrt__9_kernel_time",
+        "op": "Reciprocal",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float16": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/mul_2_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float16": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/sub_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float16": [
+              768
+            ]
+          },
+          {
+            "float16": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      }
+    ],
+    "note": "Separate profiling session after timing; counts show provider assignment, not kernel-only latency or INT8 arithmetic coverage",
+    "file": "results/gpu/text/profile_cuda_onnx_fp16_2026-10-08_17-32-10.json",
+    "sha256": "6bda1bccb7f582154624c63994a81dd7f3e7f7d42df137c2480c61d9a6973866"
+  }
+}

@@ -1,0 +1,8 @@
+# Bo phien ban co dinh cho bai thuc hanh Python 3.11 / Windows x64.
+tensorflow==2.15.1
+tf2onnx==1.16.1
+onnx==1.16.2
+onnxruntime==1.20.1
+numpy==1.26.4
+protobuf==3.20.3
+Pillow==10.4.0

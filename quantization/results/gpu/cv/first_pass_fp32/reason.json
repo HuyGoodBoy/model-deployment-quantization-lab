@@ -1,0 +1,4 @@
+{
+  "reason": "Initial ResNet CPU FP32 median ~320 ms differed substantially from earlier CPU ~81 ms and the new dynamic graph ~84 ms. Repeat CPU+CUDA once, preserve both passes, do not select the minimum latency.",
+  "policy": "Primary tables use the final repeat pair; first pair remains reported separately; same protocol 30 warm-up/200 runs."
+}

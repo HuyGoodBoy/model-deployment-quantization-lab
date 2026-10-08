@@ -1,0 +1,52 @@
+{
+  "task": "text",
+  "variant": "onnx_static",
+  "converted_at_utc": "2026-10-08T03:41:05.311339+00:00",
+  "status": "ok",
+  "sha256": "3fe241dd3024563b3a6920f4a37a403ecd03162f8cac1f5407fcb0a0082a723a",
+  "size_bytes": 137902028,
+  "parameters": {
+    "strategy": "static QDQ S8S8",
+    "calibration_method": "MinMax",
+    "per_channel": true,
+    "op_types": [
+      "MatMul",
+      "Gemm"
+    ],
+    "calibration_sha256": "5a26f2d81e9130ed30feec4190c88d06c9307e4afaf706c75f09ea857fcd708d"
+  },
+  "audit": {
+    "operator_counts": {
+      "Cast": 1,
+      "DequantizeLinear": 140,
+      "Gather": 1,
+      "Reshape": 79,
+      "Add": 87,
+      "Sub": 28,
+      "GlobalAveragePool": 26,
+      "Mul": 77,
+      "Sqrt": 13,
+      "Reciprocal": 13,
+      "QuantizeLinear": 100,
+      "MatMul": 48,
+      "Transpose": 24,
+      "Softmax": 6,
+      "Erf": 6,
+      "Slice": 1,
+      "Squeeze": 1,
+      "Gemm": 2,
+      "Relu": 1
+    },
+    "initializer_elements_by_dtype": {
+      "FLOAT": 23594607,
+      "INT64": 25,
+      "INT8": 43101030,
+      "INT32": 1540
+    },
+    "qdq_nodes": 240,
+    "integer_matmul_nodes": 0,
+    "note": "QDQ storage graph retains float operator definitions; execution fusion depends on ORT/provider."
+  },
+  "original_model_sha256": "b44df675bb34ccd8e57c14292c811ac7358b7c8e37c7f212745f640cd6019ac8",
+  "conversion_seconds": 15.649158900000657
+}

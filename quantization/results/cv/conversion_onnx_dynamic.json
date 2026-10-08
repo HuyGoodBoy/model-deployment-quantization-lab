@@ -1,0 +1,43 @@
+{
+  "task": "cv",
+  "variant": "onnx_dynamic",
+  "converted_at_utc": "2026-10-08T03:32:52.542546+00:00",
+  "status": "ok",
+  "sha256": "8b7108cb5a661f6aff57382db7c5031a4e0ad1dc08406b0b5139532342fa95a3",
+  "size_bytes": 96027678,
+  "parameters": {
+    "strategy": "dynamic",
+    "weight_type": "QInt8",
+    "per_channel": true,
+    "op_types": [
+      "MatMul",
+      "Gemm"
+    ]
+  },
+  "audit": {
+    "operator_counts": {
+      "Transpose": 1,
+      "Conv": 53,
+      "Relu": 49,
+      "MaxPool": 1,
+      "Add": 17,
+      "GlobalAveragePool": 1,
+      "Squeeze": 1,
+      "DynamicQuantizeLinear": 1,
+      "Mul": 2,
+      "MatMulInteger": 1,
+      "Cast": 1,
+      "Softmax": 1
+    },
+    "initializer_elements_by_dtype": {
+      "FLOAT": 23483472,
+      "INT64": 2,
+      "INT8": 2049000
+    },
+    "qdq_nodes": 0,
+    "integer_matmul_nodes": 1,
+    "note": "QDQ storage graph retains float operator definitions; execution fusion depends on ORT/provider."
+  },
+  "original_model_sha256": "4d80a1ff5e1b1d18a6e12ac816a3cdf2b5ea22d70286de9ff363f7cf6e2ed82a",
+  "conversion_seconds": 14.726023700000042
+}

@@ -1,0 +1,338 @@
+{
+  "task": "cv",
+  "num_examples": 100,
+  "domain": "softmax probabilities",
+  "results": {
+    "tensorflow_fp32": {
+      "status": "ok",
+      "metrics": {
+        "mae": 0.0,
+        "rmse": 0.0,
+        "max_abs_error": 0.0,
+        "relative_l2": 0.0,
+        "cosine_similarity": 1.0,
+        "snr_db": "inf",
+        "accuracy": 0.73,
+        "top1_ties": 0,
+        "top5_accuracy": 0.9,
+        "probability_sum_min": 0.9999993443489075,
+        "probability_sum_max": 1.0000009536743164,
+        "top1_agreement": 1.0,
+        "allclose_fp32_tolerance": true,
+        "top5_overlap": 1.0
+      },
+      "runtime": {
+        "version": "2.15.1",
+        "mode": "tf.function CPU",
+        "inputs": [
+          "image"
+        ]
+      },
+      "model_sha256": "4d80a1ff5e1b1d18a6e12ac816a3cdf2b5ea22d70286de9ff363f7cf6e2ed82a",
+      "output_sha256": "769ff5bbcb74d2027cb97782e2cdb92b87a61fdd5fd8f97774121ac6e4a5b129"
+    },
+    "onnx_fp32": {
+      "status": "ok",
+      "metrics": {
+        "mae": 2.5758731533612438e-09,
+        "rmse": 5.9503956701848695e-08,
+        "max_abs_error": 5.125999450683594e-06,
+        "relative_l2": 2.39949852647797e-06,
+        "cosine_similarity": 0.9999999999971212,
+        "snr_db": 112.39759024859814,
+        "accuracy": 0.73,
+        "top1_ties": 0,
+        "top5_accuracy": 0.9,
+        "probability_sum_min": 0.999999463558197,
+        "probability_sum_max": 1.000001072883606,
+        "top1_agreement": 1.0,
+        "allclose_fp32_tolerance": true,
+        "top5_overlap": 1.0
+      },
+      "runtime": {
+        "version": "1.20.1",
+        "providers": [
+          "CPUExecutionProvider"
+        ],
+        "inputs": [
+          {
+            "name": "image",
+            "type": "tensor(float)",
+            "shape": [
+              1,
+              224,
+              224,
+              3
+            ]
+          }
+        ]
+      },
+      "model_sha256": "0ef6e7208d8e44f8fc2bb4e1b3945a7b6654c79442a49b717055047eed6b9b4a",
+      "output_sha256": "a17da8bd4c95db7cf622828acdbc7832da6e129972e4d14f953badc042b2809d"
+    },
+    "onnx_dynamic": {
+      "status": "ok",
+      "metrics": {
+        "mae": 1.1266467948624552e-05,
+        "rmse": 0.00023849075501578684,
+        "max_abs_error": 0.019276559352874756,
+        "relative_l2": 0.009617145597667796,
+        "cosine_similarity": 0.9999537544319866,
+        "snr_db": 40.33907617905706,
+        "accuracy": 0.73,
+        "top1_ties": 0,
+        "top5_accuracy": 0.9,
+        "probability_sum_min": 0.9999995231628418,
+        "probability_sum_max": 1.0000009536743164,
+        "top1_agreement": 1.0,
+        "allclose_fp32_tolerance": false,
+        "top5_overlap": 0.9940000000000001
+      },
+      "runtime": {
+        "version": "1.20.1",
+        "providers": [
+          "CPUExecutionProvider"
+        ],
+        "inputs": [
+          {
+            "name": "image",
+            "type": "tensor(float)",
+            "shape": [
+              1,
+              224,
+              224,
+              3
+            ]
+          }
+        ]
+      },
+      "model_sha256": "8b7108cb5a661f6aff57382db7c5031a4e0ad1dc08406b0b5139532342fa95a3",
+      "output_sha256": "2abf13d019b703c9c4d6ae0d9b72b6803af35f0d6933f33487e39d9e79220388"
+    },
+    "onnx_static": {
+      "status": "ok",
+      "metrics": {
+        "mae": 0.0001215620680070067,
+        "rmse": 0.0028166225832288497,
+        "max_abs_error": 0.32144787907600403,
+        "relative_l2": 0.11358037536842021,
+        "cosine_similarity": 0.993549818483492,
+        "snr_db": 18.893934007264225,
+        "accuracy": 0.7,
+        "top1_ties": 6,
+        "top5_accuracy": 0.93,
+        "probability_sum_min": 0.9999997019767761,
+        "probability_sum_max": 1.0000008344650269,
+        "top1_agreement": 0.92,
+        "allclose_fp32_tolerance": false,
+        "top5_overlap": 0.892
+      },
+      "runtime": {
+        "version": "1.20.1",
+        "providers": [
+          "CPUExecutionProvider"
+        ],
+        "inputs": [
+          {
+            "name": "image",
+            "type": "tensor(float)",
+            "shape": [
+              1,
+              224,
+              224,
+              3
+            ]
+          }
+        ]
+      },
+      "model_sha256": "692968070737d4260486949e3a6ec19478462084d72ec899dea29b928883b8c0",
+      "output_sha256": "c7b5611b9d88322dc0f2afafb071a7f69e649870ab1daa3735884aa810988f8e"
+    },
+    "tflite_fp32": {
+      "status": "ok",
+      "metrics": {
+        "mae": 2.287590761194313e-09,
+        "rmse": 5.048090096712188e-08,
+        "max_abs_error": 5.751848220825195e-06,
+        "relative_l2": 2.0356435806919376e-06,
+        "cosine_similarity": 0.9999999999979508,
+        "snr_db": 113.82596519948612,
+        "accuracy": 0.73,
+        "top1_ties": 0,
+        "top5_accuracy": 0.9,
+        "probability_sum_min": 0.9999993443489075,
+        "probability_sum_max": 1.0000017881393433,
+        "top1_agreement": 1.0,
+        "allclose_fp32_tolerance": true,
+        "top5_overlap": 1.0
+      },
+      "runtime": {
+        "version": "2.15.1",
+        "mode": "tf.lite.Interpreter CPU; default delegates, see log",
+        "inputs": [
+          {
+            "name": "serving_default_image:0",
+            "shape": [
+              1,
+              224,
+              224,
+              3
+            ],
+            "dtype": "float32"
+          }
+        ],
+        "output": {
+          "name": "StatefulPartitionedCall:0",
+          "shape": [
+            1,
+            1000
+          ],
+          "dtype": "float32"
+        }
+      },
+      "model_sha256": "123cb51313f4f291db41505498ac5144ae2a47338450e914835b385a0a90fd0f",
+      "output_sha256": "0b250cd0c5abe292e24f85398bac7602b038a2c56660e9a9c132925fcd2b84ee"
+    },
+    "tflite_dynamic": {
+      "status": "ok",
+      "metrics": {
+        "mae": 4.8636171357557795e-05,
+        "rmse": 0.0010666908106789481,
+        "max_abs_error": 0.11115849018096924,
+        "relative_l2": 0.04301433333679821,
+        "cosine_similarity": 0.9990798917387581,
+        "snr_db": 27.3277360736048,
+        "accuracy": 0.73,
+        "top1_ties": 0,
+        "top5_accuracy": 0.9,
+        "probability_sum_min": 0.9999996423721313,
+        "probability_sum_max": 1.0000016689300537,
+        "top1_agreement": 0.97,
+        "allclose_fp32_tolerance": false,
+        "top5_overlap": 0.9519999999999998
+      },
+      "runtime": {
+        "version": "2.15.1",
+        "mode": "tf.lite.Interpreter CPU; default delegates, see log",
+        "inputs": [
+          {
+            "name": "serving_default_image:0",
+            "shape": [
+              1,
+              224,
+              224,
+              3
+            ],
+            "dtype": "float32"
+          }
+        ],
+        "output": {
+          "name": "StatefulPartitionedCall:0",
+          "shape": [
+            1,
+            1000
+          ],
+          "dtype": "float32"
+        }
+      },
+      "model_sha256": "1c331a8bcee8de7bc5cc3b84e643a632162586c5bc58562ab209a779556b04bb",
+      "output_sha256": "71d90e1f0a3e28134c869bb09eb30bafc02dcb39b691d12add5977cb6375ea19"
+    },
+    "tflite_fp16": {
+      "status": "ok",
+      "metrics": {
+        "mae": 1.4547456075247913e-06,
+        "rmse": 3.1838531709082304e-05,
+        "max_abs_error": 0.00391620397567749,
+        "relative_l2": 0.0012838895790402388,
+        "cosine_similarity": 0.9999991758324112,
+        "snr_db": 57.82944652340633,
+        "accuracy": 0.73,
+        "top1_ties": 0,
+        "top5_accuracy": 0.9,
+        "probability_sum_min": 0.9999991655349731,
+        "probability_sum_max": 1.0000019073486328,
+        "top1_agreement": 1.0,
+        "allclose_fp32_tolerance": false,
+        "top5_overlap": 1.0
+      },
+      "runtime": {
+        "version": "2.15.1",
+        "mode": "tf.lite.Interpreter CPU; default delegates, see log",
+        "inputs": [
+          {
+            "name": "serving_default_image:0",
+            "shape": [
+              1,
+              224,
+              224,
+              3
+            ],
+            "dtype": "float32"
+          }
+        ],
+        "output": {
+          "name": "StatefulPartitionedCall:0",
+          "shape": [
+            1,
+            1000
+          ],
+          "dtype": "float32"
+        }
+      },
+      "model_sha256": "695d22d4a679a44089e33b0d6682bdce0e149aa3fc6f371c79b6e690005d876d",
+      "output_sha256": "0621589bcbd9899363f839eb52963db9c7f4b73d84091616646f52f7037a68c2"
+    },
+    "tflite_static": {
+      "status": "ok",
+      "metrics": {
+        "mae": 0.0001273020657517377,
+        "rmse": 0.0023184550486958543,
+        "max_abs_error": 0.33258387446403503,
+        "relative_l2": 0.09349175721079868,
+        "cosine_similarity": 0.9956848303822814,
+        "snr_db": 20.584533548468173,
+        "accuracy": 0.74,
+        "top1_ties": 3,
+        "top5_accuracy": 0.9,
+        "probability_sum_min": 0.8359375,
+        "probability_sum_max": 1.00390625,
+        "top1_agreement": 0.91,
+        "allclose_fp32_tolerance": false,
+        "top5_overlap": 0.652
+      },
+      "runtime": {
+        "version": "2.15.1",
+        "mode": "tf.lite.Interpreter CPU; default delegates, see log",
+        "inputs": [
+          {
+            "name": "serving_default_image:0",
+            "shape": [
+              1,
+              224,
+              224,
+              3
+            ],
+            "dtype": "int8",
+            "scale": 1.0774157047271729,
+            "zero_point": -13
+          }
+        ],
+        "output": {
+          "name": "StatefulPartitionedCall:0",
+          "shape": [
+            1,
+            1000
+          ],
+          "dtype": "int8",
+          "scale": 0.00390625,
+          "zero_point": -128
+        }
+      },
+      "model_sha256": "17ca3c4a13621fb25de62035725dca57ee2a51564895d770df50430904b888bc",
+      "output_sha256": "9c6721ce95ac48174042fb758dff542f21b6dbb0af39a584bf34c1ad1f3a4c25"
+    }
+  },
+  "atol_fp32": 1e-05,
+  "rtol_fp32": 0.0001
+}

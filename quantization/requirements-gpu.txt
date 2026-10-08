@@ -1,0 +1,11 @@
+# Isolated Windows x64/Python 3.11 environment. Do not install alongside onnxruntime CPU.
+numpy==1.26.4
+onnx==1.16.2
+onnxruntime-gpu==1.20.2
+protobuf==3.20.3
+Pillow==10.4.0
+nvidia-cuda-runtime-cu12==12.6.77
+nvidia-cublas-cu12==12.6.4.1
+nvidia-cudnn-cu12==9.5.1.17
+nvidia-cufft-cu12==11.3.0.4
+nvidia-nvjitlink-cu12==12.6.85

@@ -1,0 +1,142 @@
+{
+  "model_sha256": "d03e426c46ea650a1a1591a73c4688adaa2b611d35a08c87bee2708debb5a961",
+  "largest_scales": [
+    {
+      "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/mul_1/x",
+      "index": 117,
+      "max_scale": 3.9215688253537837e+27,
+      "tensor_type_enum": 9,
+      "zero_points": [
+        -128
+      ]
+    },
+    {
+      "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/sub",
+      "index": 122,
+      "max_scale": 3.9215688253537837e+27,
+      "tensor_type_enum": 9,
+      "zero_points": [
+        -128
+      ]
+    },
+    {
+      "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/mul_1",
+      "index": 123,
+      "max_scale": 3.9215688253537837e+27,
+      "tensor_type_enum": 9,
+      "zero_points": [
+        -128
+      ]
+    },
+    {
+      "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/MatMul",
+      "index": 143,
+      "max_scale": 3.9215688253537837e+27,
+      "tensor_type_enum": 9,
+      "zero_points": [
+        127
+      ]
+    },
+    {
+      "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/sub_1",
+      "index": 144,
+      "max_scale": 3.9215688253537837e+27,
+      "tensor_type_enum": 9,
+      "zero_points": [
+        127
+      ]
+    },
+    {
+      "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/add",
+      "index": 145,
+      "max_scale": 3.9215688253537837e+27,
+      "tensor_type_enum": 9,
+      "zero_points": [
+        127
+      ]
+    },
+    {
+      "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/MatMul",
+      "index": 186,
+      "max_scale": 3.9215688253537837e+27,
+      "tensor_type_enum": 9,
+      "zero_points": [
+        127
+      ]
+    },
+    {
+      "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/sub_1",
+      "index": 187,
+      "max_scale": 3.9215688253537837e+27,
+      "tensor_type_enum": 9,
+      "zero_points": [
+        127
+      ]
+    },
+    {
+      "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/add",
+      "index": 188,
+      "max_scale": 3.9215688253537837e+27,
+      "tensor_type_enum": 9,
+      "zero_points": [
+        127
+      ]
+    },
+    {
+      "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/MatMul",
+      "index": 229,
+      "max_scale": 3.9215688253537837e+27,
+      "tensor_type_enum": 9,
+      "zero_points": [
+        127
+      ]
+    },
+    {
+      "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/sub_1",
+      "index": 230,
+      "max_scale": 3.9215688253537837e+27,
+      "tensor_type_enum": 9,
+      "zero_points": [
+        127
+      ]
+    },
+    {
+      "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/add",
+      "index": 231,
+      "max_scale": 3.9215688253537837e+27,
+      "tensor_type_enum": 9,
+      "zero_points": [
+        127
+      ]
+    },
+    {
+      "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/MatMul",
+      "index": 272,
+      "max_scale": 3.9215688253537837e+27,
+      "tensor_type_enum": 9,
+      "zero_points": [
+        127
+      ]
+    },
+    {
+      "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/sub_1",
+      "index": 273,
+      "max_scale": 3.9215688253537837e+27,
+      "tensor_type_enum": 9,
+      "zero_points": [
+        127
+      ]
+    },
+    {
+      "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/add",
+      "index": 274,
+      "max_scale": 3.9215688253537837e+27,
+      "tensor_type_enum": 9,
+      "zero_points": [
+        127
+      ]
+    }
+  ],
+  "scales_above_one_million": 21,
+  "scope": "FlatBuffer metadata inspection; does not prove a sole causal explanation"
+}

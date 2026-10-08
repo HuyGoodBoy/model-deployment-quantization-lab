@@ -1,0 +1,21 @@
+{
+  "status": "ok",
+  "output_sha256": "769ff5bbcb74d2027cb97782e2cdb92b87a61fdd5fd8f97774121ac6e4a5b129",
+  "model_sha256": "4d80a1ff5e1b1d18a6e12ac816a3cdf2b5ea22d70286de9ff363f7cf6e2ed82a",
+  "model_size_bytes": 103119475,
+  "input_sha256": "8a9a7b1f7a49ec8e223e21175b39819f9a24b22a9b0a396a43a60453b14e95d8",
+  "runtime": {
+    "version": "2.15.1",
+    "mode": "tf.function CPU",
+    "inputs": [
+      "image"
+    ]
+  },
+  "classification": {
+    "accuracy": 0.73,
+    "top1_ties": 0,
+    "top5_accuracy": 0.9,
+    "probability_sum_min": 0.9999993443489075,
+    "probability_sum_max": 1.0000009536743164
+  }
+}

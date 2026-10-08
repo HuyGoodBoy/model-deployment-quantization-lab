@@ -1,0 +1,16 @@
+{
+  "model": "DistilBERT SST-2",
+  "parameters": 66955010,
+  "original_sha256": "b44df675bb34ccd8e57c14292c811ac7358b7c8e37c7f212745f640cd6019ac8",
+  "output_kind": "logits",
+  "output_shape": [
+    1,
+    2
+  ],
+  "sequence_length": 64,
+  "id2label": {
+    "0": "NEGATIVE",
+    "1": "POSITIVE"
+  },
+  "revision": "714eb0fa89d2f80546fda750413ed43d93601a13"
+}

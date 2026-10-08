@@ -1,0 +1,61 @@
+{
+  "task": "cv",
+  "variant": "tflite_fp16",
+  "converted_at_utc": "2026-10-08T03:36:17.558082+00:00",
+  "status": "ok",
+  "sha256": "695d22d4a679a44089e33b0d6682bdce0e149aa3fc6f371c79b6e690005d876d",
+  "size_bytes": 51107396,
+  "parameters": {
+    "strategy": "FP16 weights; CPU may dequantize to FP32"
+  },
+  "audit": {
+    "operator_counts": {
+      "DEQUANTIZE": 108,
+      "PAD": 2,
+      "CONV_2D": 53,
+      "MAX_POOL_2D": 1,
+      "ADD": 16,
+      "MEAN": 1,
+      "FULLY_CONNECTED": 1,
+      "SOFTMAX": 1,
+      "DELEGATE": 1
+    },
+    "tensor_counts_by_dtype": {
+      "float32": 208,
+      "int32": 5,
+      "float16": 108
+    },
+    "inputs": [
+      {
+        "name": "serving_default_image:0",
+        "dtype": "float32",
+        "shape": [
+          1,
+          224,
+          224,
+          3
+        ],
+        "scales": [],
+        "zero_points": []
+      }
+    ],
+    "outputs": [
+      {
+        "name": "StatefulPartitionedCall:0",
+        "dtype": "float32",
+        "shape": [
+          1,
+          1000
+        ],
+        "scales": [],
+        "zero_points": []
+      }
+    ],
+    "float32_tensors": 208,
+    "int8_tensors": 0,
+    "int32_tensors": 5,
+    "uses_select_tf_ops": false
+  },
+  "original_model_sha256": "4d80a1ff5e1b1d18a6e12ac816a3cdf2b5ea22d70286de9ff363f7cf6e2ed82a",
+  "conversion_seconds": 57.00077330000022
+}

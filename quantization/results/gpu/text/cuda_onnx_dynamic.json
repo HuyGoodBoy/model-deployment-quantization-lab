@@ -1,0 +1,1716 @@
+{
+  "task": "text",
+  "variant": "onnx_dynamic",
+  "device": "cuda",
+  "measured_at_utc": "2026-10-08T10:30:46.059074+00:00",
+  "status": "ok",
+  "warmup": 30,
+  "runs": 200,
+  "runtime_version": "1.20.2",
+  "package_versions": {
+    "onnxruntime-gpu": "1.20.2",
+    "onnx": "1.16.2",
+    "numpy": "1.26.4",
+    "nvidia-cuda-runtime-cu12": "12.6.77",
+    "nvidia-cublas-cu12": "12.6.4.1",
+    "nvidia-cudnn-cu12": "9.5.1.17",
+    "nvidia-cufft-cu12": "11.3.0.4",
+    "nvidia-nvjitlink-cu12": "12.6.85"
+  },
+  "session_providers": [
+    "CUDAExecutionProvider",
+    "CPUExecutionProvider"
+  ],
+  "provider_options": {
+    "CUDAExecutionProvider": {
+      "device_id": "0",
+      "has_user_compute_stream": "0",
+      "cudnn_conv1d_pad_to_nc1d": "0",
+      "user_compute_stream": "0",
+      "gpu_external_alloc": "0",
+      "gpu_mem_limit": "18446744073709551615",
+      "enable_cuda_graph": "0",
+      "gpu_external_free": "0",
+      "gpu_external_empty_cache": "0",
+      "arena_extend_strategy": "kNextPowerOfTwo",
+      "cudnn_conv_algo_search": "EXHAUSTIVE",
+      "do_copy_in_default_stream": "1",
+      "cudnn_conv_use_max_workspace": "1",
+      "tunable_op_enable": "0",
+      "tunable_op_tuning_enable": "0",
+      "tunable_op_max_tuning_duration_ms": "0",
+      "enable_skip_layer_norm_strict_mode": "0",
+      "prefer_nhwc": "0",
+      "use_ep_level_unified_stream": "0",
+      "use_tf32": "0",
+      "sdpa_kernel": "0",
+      "fuse_conv_bias": "0"
+    },
+    "CPUExecutionProvider": {}
+  },
+  "preloaded_dlls": [
+    "nvJitLink_120_0.dll",
+    "cudart64_12.dll",
+    "cublasLt64_12.dll",
+    "cublas64_12.dll",
+    "cufft64_11.dll",
+    "cudnn64_9.dll"
+  ],
+  "threads": 1,
+  "inter_op_threads": 1,
+  "batch_size": 1,
+  "system": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "cpu_name": "12th Gen Intel(R) Core(TM) i7-12700H",
+    "logical_processors": 20,
+    "machine": "AMD64",
+    "python": "3.11.9"
+  },
+  "canonical_input_sha256": "14690c920a532c01b9826b99c22f5b2062e798cdcf37c49158e8f0b9ea61f411",
+  "model_sha256": "8a809f2e819ce13737ee69477297b51709af1b38f25af660060f3d857e39ec29",
+  "model_size_bytes": 137800058,
+  "input_record": {
+    "idx": 681,
+    "sentence": "( a ) shapeless blob of desperate entertainment . ",
+    "label": 0,
+    "source_split": "validation",
+    "untruncated_tokens": 14,
+    "tensor_sha256": "d7c4fbdb4bb51a1897538b0582bc86618be6f796897dcc8b7b06ce631c3cc02c"
+  },
+  "benchmark": {
+    "latency_samples_ms": [
+      27.754,
+      27.411,
+      28.7961,
+      27.9279,
+      28.8271,
+      28.3552,
+      27.5437,
+      27.3623,
+      27.1717,
+      27.093,
+      26.06,
+      26.3663,
+      27.7551,
+      26.6632,
+      27.8502,
+      27.4914,
+      26.7011,
+      27.2539,
+      27.3767,
+      26.8121,
+      26.4828,
+      27.5222,
+      27.351,
+      26.3876,
+      27.7832,
+      26.6591,
+      27.7313,
+      28.2414,
+      28.1483,
+      27.8365,
+      26.773,
+      26.5463,
+      26.2583,
+      27.2755,
+      27.0464,
+      27.5365,
+      27.4,
+      27.9125,
+      27.5696,
+      26.7214,
+      28.2959,
+      27.5241,
+      26.6163,
+      26.6511,
+      28.4503,
+      26.9856,
+      25.9389,
+      28.1237,
+      29.506,
+      27.181,
+      26.0751,
+      26.1926,
+      26.9817,
+      26.8691,
+      25.9456,
+      26.2758,
+      26.412,
+      26.9252,
+      26.9603,
+      28.2923,
+      27.7306,
+      27.6227,
+      27.6514,
+      27.7488,
+      26.1495,
+      26.1104,
+      27.5307,
+      26.6652,
+      26.1251,
+      26.5529,
+      26.1685,
+      26.6347,
+      26.8493,
+      27.2177,
+      27.0703,
+      28.1024,
+      25.7124,
+      26.5679,
+      26.5084,
+      27.5222,
+      26.8829,
+      27.882,
+      26.3982,
+      26.4887,
+      27.7809,
+      27.0589,
+      26.7084,
+      27.4987,
+      27.9046,
+      27.9206,
+      25.8375,
+      25.9528,
+      26.4461,
+      29.2678,
+      26.4909,
+      26.8145,
+      28.0906,
+      26.7276,
+      27.258,
+      27.8078,
+      27.514,
+      26.2843,
+      26.2496,
+      26.786,
+      26.8445,
+      27.1388,
+      26.9725,
+      27.6001,
+      27.3948,
+      27.2725,
+      26.3767,
+      26.5608,
+      26.0963,
+      25.808,
+      26.8136,
+      26.1408,
+      29.113,
+      26.9677,
+      27.2504,
+      26.3083,
+      26.5002,
+      26.3196,
+      26.2368,
+      26.8451,
+      27.4554,
+      28.1418,
+      26.5401,
+      27.102,
+      27.5357,
+      27.2571,
+      27.6998,
+      28.3274,
+      27.076,
+      26.7424,
+      26.3659,
+      26.9037,
+      26.5925,
+      26.832,
+      28.7816,
+      26.3337,
+      26.1239,
+      26.7219,
+      26.6186,
+      27.0373,
+      26.6394,
+      27.3301,
+      26.8552,
+      26.1351,
+      26.0973,
+      26.0917,
+      27.6807,
+      26.3824,
+      26.5505,
+      27.4527,
+      27.1662,
+      26.7682,
+      28.3846,
+      26.8775,
+      26.5808,
+      26.2218,
+      26.4905,
+      27.7004,
+      27.6817,
+      27.4878,
+      27.3278,
+      26.4961,
+      26.2414,
+      27.0169,
+      26.446,
+      26.219,
+      26.8225,
+      28.4473,
+      29.205,
+      26.8827,
+      26.8257,
+      26.6573,
+      26.4926,
+      26.34,
+      26.5139,
+      27.626,
+      27.998,
+      26.3003,
+      26.4945,
+      27.7709,
+      26.1036,
+      25.6384,
+      25.5674,
+      26.0096,
+      27.6317,
+      28.3086,
+      28.1309,
+      27.1168,
+      27.384,
+      27.8459,
+      27.807,
+      25.9536,
+      26.3266,
+      25.7412,
+      28.422,
+      26.3893
+    ],
+    "mean_ms": 27.060371999999997,
+    "median_ms": 26.914450000000002,
+    "p95_ms": 28.38647,
+    "std_ms": 0.779763956281643,
+    "timing_scope": "Synchronous session.run with CPU NumPy input/output, including H2D/D2H and Python/API overhead; excludes model load, preprocessing/tokenization; profiling disabled while timing"
+  },
+  "output_sha256": "83419accbd9c30dd3710ce9b9a22af9438c07f029d6e06112e074c95d5642fae",
+  "metrics_vs_original": {
+    "mae": 0.10836959847481921,
+    "rmse": 0.1859355654413848,
+    "max_abs_error": 0.9072370924986899,
+    "relative_l2": 0.05085930220825756,
+    "cosine_similarity": 0.9987065364196244,
+    "snr_db": 25.872592053155927,
+    "accuracy": 0.9,
+    "top1_ties": 0,
+    "f1_positive": 0.9,
+    "top1_agreement": 0.99,
+    "allclose_fp32_tolerance": false
+  },
+  "profile": {
+    "unique_nodes_by_provider": {
+      "CUDAExecutionProvider": 576,
+      "CPUExecutionProvider": 64
+    },
+    "operator_counts_by_provider": {
+      "CUDAExecutionProvider": {
+        "Gather": 1,
+        "Add": 83,
+        "GlobalAveragePool": 26,
+        "Sub": 28,
+        "Mul": 153,
+        "Sqrt": 13,
+        "Reciprocal": 13,
+        "Reshape": 79,
+        "MemcpyToHost": 26,
+        "MemcpyFromHost": 64,
+        "Cast": 39,
+        "Transpose": 24,
+        "MatMul": 12,
+        "BiasSoftmax": 6,
+        "Erf": 6,
+        "Slice": 1,
+        "Squeeze": 1,
+        "Relu": 1
+      },
+      "CPUExecutionProvider": {
+        "DynamicQuantizeLinear": 26,
+        "MatMulInteger": 38
+      }
+    },
+    "kernel_events_by_provider": {
+      "CUDAExecutionProvider": 1152,
+      "CPUExecutionProvider": 128
+    },
+    "cuda_compute_nodes": 486,
+    "cpu_nodes": [
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/k_lin/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/q_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/k_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/v_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/out_lin/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/out_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/ffn/lin1/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/ffn/lin1/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/ffn/lin2/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/ffn/lin2/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              3072
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/q_lin/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/q_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/k_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/v_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/out_lin/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/out_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/ffn/lin1/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/ffn/lin1/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/ffn/lin2/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/ffn/lin2/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              3072
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/q_lin/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/q_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/k_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/v_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/out_lin/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/out_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/ffn/lin1/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/ffn/lin1/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/ffn/lin2/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/ffn/lin2/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              3072
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/v_lin/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/q_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/k_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/v_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/out_lin/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/out_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/ffn/lin1/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/ffn/lin1/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/ffn/lin2/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/ffn/lin2/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              3072
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/k_lin/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/q_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/k_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/v_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/out_lin/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/out_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/ffn/lin1/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/ffn/lin1/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/ffn/lin2/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/ffn/lin2/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              3072
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/k_lin/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/q_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/k_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/v_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/out_lin/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/out_lin/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/ffn/lin1/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/ffn/lin1/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/ffn/lin2/Tensordot/Reshape:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/ffn/lin2/Tensordot/MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              64,
+              3072
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/strided_slice__145:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/pre_classifier/MatMul_Gemm__6_MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/pre_classifier/Relu:0_QuantizeLinear_kernel_time",
+        "op": "DynamicQuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/classifier/MatMul_Gemm__7_MatMul_quant_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "int8": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "cuda_compute_operators": [
+      "Add",
+      "BiasSoftmax",
+      "Cast",
+      "Erf",
+      "Gather",
+      "GlobalAveragePool",
+      "MatMul",
+      "Mul",
+      "Reciprocal",
+      "Relu",
+      "Reshape",
+      "Slice",
+      "Sqrt",
+      "Squeeze",
+      "Sub",
+      "Transpose"
+    ],
+    "cuda_compute_examples": [
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/Gather_kernel_time",
+        "op": "Gather",
+        "input_type_shape": [
+          {
+            "float": [
+              30522,
+              768
+            ]
+          },
+          {
+            "int32": [
+              1,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/moments/mean_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/moments/SquaredDifference_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/moments/SquaredDifference__8_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/moments/variance_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/Rsqrt_kernel_time",
+        "op": "Sqrt",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/Rsqrt__9_kernel_time",
+        "op": "Reciprocal",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/mul_2_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/sub_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      }
+    ],
+    "note": "Separate profiling session after timing; counts show provider assignment, not kernel-only latency or INT8 arithmetic coverage",
+    "file": "results/gpu/text/profile_cuda_onnx_dynamic_2026-10-08_17-30-57.json",
+    "sha256": "9da3c78d4137a5cfba67d97419ce3dab2fc6ce3d753151d29ea33d34d24fab1f"
+  }
+}

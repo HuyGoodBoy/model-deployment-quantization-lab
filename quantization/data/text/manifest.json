@@ -1,0 +1,1622 @@
+{
+  "task": "text",
+  "dataset": "SST-2",
+  "seed": 20261008,
+  "sequence_length": 64,
+  "preprocess": "original uncased WordPiece tokenizer; right padding/truncation to 64 tokens",
+  "label_mapping": {
+    "0": "NEGATIVE",
+    "1": "POSITIVE"
+  },
+  "truncated_evaluation": 0,
+  "records": {
+    "calibration": [
+      {
+        "idx": 57483,
+        "sentence": "low-tech magic realism and , at times , ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 12,
+        "tensor_sha256": "f45ad26f786fc101086b97285e4cf7a07457d71574ad9d5cf64a57c42deb7967"
+      },
+      {
+        "idx": 7712,
+        "sentence": "the story is -- forgive me -- a little thin ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 14,
+        "tensor_sha256": "0894cc4f864faf8920a2a31084032561f113b07f63fba42e81b7e31872f8dcd7"
+      },
+      {
+        "idx": 9368,
+        "sentence": "do we have that same option to slap her creators because they 're clueless and inept ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 21,
+        "tensor_sha256": "2984e06057953a59b5804efdf69fcae3a8c4e367c9333bec2c21633592834329"
+      },
+      {
+        "idx": 65804,
+        "sentence": "be bored by as your abc 's ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 10,
+        "tensor_sha256": "045e0bf967a0593c9dc61098736b442de78c4e0009ed0719e0857dcde707b850"
+      },
+      {
+        "idx": 49180,
+        "sentence": "a bad sign when directors abandon their scripts and go where the moment takes them ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 17,
+        "tensor_sha256": "06f52621e59d1880ba02c6d40263e7d0e9364e621e861087c32f471c4399ae13"
+      },
+      {
+        "idx": 33400,
+        "sentence": "by the movie 's presentation , which is way too stagy ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 16,
+        "tensor_sha256": "4fa03af7a2030c482e751a38fcbd246d8991d3d399ab6e03e39439148425a158"
+      },
+      {
+        "idx": 20735,
+        "sentence": "is a little tired ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 6,
+        "tensor_sha256": "1bfe3853d26c8f432c5e8d77334a6bae853c9800353dd8644fff5ff995cb20d5"
+      },
+      {
+        "idx": 54874,
+        "sentence": "such a bad movie ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 6,
+        "tensor_sha256": "d14f74be95f70e414b6771a5accc6cb398f86849e77bd3b9b3e74fe2ba0ce539"
+      },
+      {
+        "idx": 48314,
+        "sentence": "creatively stillborn ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 6,
+        "tensor_sha256": "524507fe69a69c891e285e46c278a0bafc737cd0802aa41e8cce14f07b0e18e7"
+      },
+      {
+        "idx": 12635,
+        "sentence": "of self-congratulation between actor and director ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 12,
+        "tensor_sha256": "3370d4e6d139dbf238d3eaa2f54ff51ecfded6fc0277768cdf833da9b9b1cc36"
+      },
+      {
+        "idx": 23922,
+        "sentence": "predicament ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 5,
+        "tensor_sha256": "f470d0f9ab9a094ea328d9c62c0124bf82bcd53eeb716fc47e662e5f126d84a8"
+      },
+      {
+        "idx": 22548,
+        "sentence": "sit in neutral , hoping for a stiff wind to blow it ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 14,
+        "tensor_sha256": "49efd086c1b174f81ce42ba8f600ba7a3d63e0855c40f6af265d3110058f2f03"
+      },
+      {
+        "idx": 26520,
+        "sentence": "explode obnoxiously into 2,500 screens ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 12,
+        "tensor_sha256": "c6be8b9f65907b6cd631379e65b2c894ca36965c341f9d39c2da8b9419aade6d"
+      },
+      {
+        "idx": 5588,
+        "sentence": "does n't come close to justifying the hype that surrounded its debut at the sundance film festival two years ago ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 26,
+        "tensor_sha256": "4a9ec52b28de0a96fc8eab467d3007bcb044cba888dc121d2fd56508a6a461ff"
+      },
+      {
+        "idx": 36841,
+        "sentence": "ruined by amateurish writing and acting , while the third feels limited by its short running time ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 20,
+        "tensor_sha256": "7087367df3bec7674354fe3929bdf6e2d2b505a8a42db1262ffe9ea261851d9f"
+      },
+      {
+        "idx": 40209,
+        "sentence": "it progresses in such a low-key manner that it risks monotony ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 17,
+        "tensor_sha256": "4b3c6711491dbb1cd8ed659518686f7eb3524fbcc3b4679040632ca314ce17ff"
+      },
+      {
+        "idx": 51336,
+        "sentence": "followers of the whole dead-undead genre , who deserve more from a vampire pic than a few shrieky special effects ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 25,
+        "tensor_sha256": "b6097a4a65640d7fcd24e53c9ef508407496432796cb8322604dd41be3e8e21b"
+      },
+      {
+        "idx": 53135,
+        "sentence": "cheap-looking version of candid camera staged for the marquis de sade set ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 18,
+        "tensor_sha256": "bffacc1895c6b8acd225c4f9416059b9df8590d2f927e6efd4a939540c9c308e"
+      },
+      {
+        "idx": 15758,
+        "sentence": "it is very difficult to care about the character , and that is the central flaw of the film ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 21,
+        "tensor_sha256": "20e88205995ca2cda50174c06babf375052684325f9320d6c0135cc9f3be9356"
+      },
+      {
+        "idx": 7242,
+        "sentence": "muy loco ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 5,
+        "tensor_sha256": "e9538a8c8d97e7bf8fd8ac591ee10124ec45465381d294fb0a51aba4fa09cd68"
+      },
+      {
+        "idx": 23682,
+        "sentence": "make it sting ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 5,
+        "tensor_sha256": "1027c5102fce0b43e5bcc2331f85c3f7c84373e200f6f899c6cd6cd8879da940"
+      },
+      {
+        "idx": 11979,
+        "sentence": "is little else to recommend `` never again ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 11,
+        "tensor_sha256": "3f1379cb135dc2b7dbd315fd32553a31085113636a3463e3101755a339e01f22"
+      },
+      {
+        "idx": 63036,
+        "sentence": "mass drug-induced bowel evacuations , and none-too-funny commentary on the cultural distinctions between americans and brits . ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 28,
+        "tensor_sha256": "10dac552a2e2252b3d81e66b02f21e6a71d392469c63e206366f1758dfd5d12d"
+      },
+      {
+        "idx": 34592,
+        "sentence": "stiflingly unfunny and unoriginal mess ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 15,
+        "tensor_sha256": "6c90ceafb6b2c4ad917c2d15e4025f918a875c07cae29c58db14a8ecba09112d"
+      },
+      {
+        "idx": 30606,
+        "sentence": "wazoo and sets ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 6,
+        "tensor_sha256": "12bc381ec1620cad99cf310a8e103159d88d558ec2003275e15d92f98e6ff2ae"
+      },
+      {
+        "idx": 8376,
+        "sentence": "director david fincher and writer david koepp ca n't sustain it . ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 19,
+        "tensor_sha256": "4556d480d181cf53505d7d634b03146dbec9f09db5f12b5e062a776520d350b4"
+      },
+      {
+        "idx": 4024,
+        "sentence": "is its reliance on formula , though ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 9,
+        "tensor_sha256": "8b3e35039461c6ae78e7c3b5cf479ee1a1cfafd925537a0a1da9c0a637a0e628"
+      },
+      {
+        "idx": 66352,
+        "sentence": "old movies , when you could just rent those movies instead , let alone seek out a respectable new one ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 22,
+        "tensor_sha256": "3e6686259a2cc48eb53dc3163b2d4a40624ad95bdd3f318bf8d5ecd927c1ffa2"
+      },
+      {
+        "idx": 6889,
+        "sentence": "because of its music or comic antics , but through the perverse pleasure of watching disney scrape the bottom of its own cracker barrel ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 28,
+        "tensor_sha256": "f07f534fafd63e4911fe0833133bfe0383f6b410b629fc2909470b9f95611397"
+      },
+      {
+        "idx": 31598,
+        "sentence": "'s not very well shot or composed or edited ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 12,
+        "tensor_sha256": "b007d0a2e77a125f58a6852c053c254b9bd0d3d39cf9c0109f026b7acdbd379c"
+      },
+      {
+        "idx": 35149,
+        "sentence": "but blatantly biased . ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 8,
+        "tensor_sha256": "8b81b1555f46f811f5935c575e10aef240d5ee44fc39a5f5fb7dfba114890f36"
+      },
+      {
+        "idx": 16374,
+        "sentence": "treats his audience the same way that jim brown treats his women -- as dumb , credulous , unassuming , subordinate subjects ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 29,
+        "tensor_sha256": "d5242a5d3517906a8183db3a274daacbec83ab263b29d76feb38d87319885374"
+      },
+      {
+        "idx": 66678,
+        "sentence": "( davis ) wants to cause his audience an epiphany , yet he refuses to give us real situations and characters ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 26,
+        "tensor_sha256": "b7be5526055273ac09229189793be405994b31e3c7b67015addbdc02cb2e18b7"
+      },
+      {
+        "idx": 49664,
+        "sentence": "referred to in the title , many can aspire but none can equal ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 16,
+        "tensor_sha256": "593000d3b0de81e33a887565fc1116cf6bcebfd0a8f204714aa69f6756f22253"
+      },
+      {
+        "idx": 63917,
+        "sentence": "the film rehashes several old themes and is capped with pointless extremes -- ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 18,
+        "tensor_sha256": "53e4b1f260eb0706da633f2d010c1a4e6dae4303a78d4578d2dcd0b8c4973bc9"
+      },
+      {
+        "idx": 18842,
+        "sentence": "no palpable chemistry between lopez and male lead ralph fiennes ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 16,
+        "tensor_sha256": "7bd270849e5f61c3e15e5898ff19130b95bb510f1f57b6db7336c3e2df764da1"
+      },
+      {
+        "idx": 59176,
+        "sentence": "full of the kind of obnoxious ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 10,
+        "tensor_sha256": "b412c406a173d3fed428d4f2647663b7f2b228428461dcade6e7a7dfade9e426"
+      },
+      {
+        "idx": 44890,
+        "sentence": "undemanding armchair tourists ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 7,
+        "tensor_sha256": "a57ac3b675c1d08409a8c3c3e9bdf5d986b17cc0f1a4f4ebbcbef175f6e6d1d1"
+      },
+      {
+        "idx": 25447,
+        "sentence": "ends up being neither ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 6,
+        "tensor_sha256": "525a5af9da378c32e395271f47e65a7238d1c042d7fb35c3fec0b8078b153a59"
+      },
+      {
+        "idx": 57356,
+        "sentence": "its screenplay serves as auto-critique , and its clumsiness as its own most damning censure . ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 25,
+        "tensor_sha256": "cbab45e002cb772d60bc03dda1a4c55aaf92f5b57623a419913be8b9775c8053"
+      },
+      {
+        "idx": 31000,
+        "sentence": "again ransacks its archives for a quick-buck sequel . ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 15,
+        "tensor_sha256": "0b42cdae631444b3d7b3d2b19fe5b9b6feffbb5c1a1aaf6f4a7c80d04b694ebd"
+      },
+      {
+        "idx": 53733,
+        "sentence": "is n't much fun . ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 9,
+        "tensor_sha256": "7ee60724b51d11d80871d36ad3771ad826ec9144112a372c4a6a2763cbfe3bd5"
+      },
+      {
+        "idx": 17565,
+        "sentence": "too little excitement and ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 6,
+        "tensor_sha256": "d5967c29af849cc2158104ac57addcd0090e24ef9232f35e1bcf39c85239f600"
+      },
+      {
+        "idx": 4868,
+        "sentence": "like a fish that 's lived too long ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 11,
+        "tensor_sha256": "50354255866a8cbd524854571875f024cafe753229b2296e444c9fa832356eeb"
+      },
+      {
+        "idx": 23338,
+        "sentence": "the triviality ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 5,
+        "tensor_sha256": "921491b773e98769966875688c65356835e3e962e15ec6cd8b27cddc887e91a7"
+      },
+      {
+        "idx": 6217,
+        "sentence": "unfortunately , we 'd prefer a simple misfire . ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 13,
+        "tensor_sha256": "17d2b546e1072ca895d50321d5fd21bf27db01d125d87c80a95e99b72bde1c48"
+      },
+      {
+        "idx": 48542,
+        "sentence": "on the high seas that works better the less the brain is engaged ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 15,
+        "tensor_sha256": "a8260b53981bb34cb3d408e5242991c86e2b476c6b6c1adef84420d3e42887b5"
+      },
+      {
+        "idx": 65233,
+        "sentence": "less the product of loving , well integrated homage and more like a mere excuse for the wan , thinly sketched story ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 26,
+        "tensor_sha256": "ec0c24f9faabf17aaeba0a7ef3f2df27a9c1260166b5305b9e7d4e58253c047c"
+      },
+      {
+        "idx": 14087,
+        "sentence": "it 's a loathsome movie , it really is ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 14,
+        "tensor_sha256": "600189d5046d1be1dac8c0883483109bf0a18bca1b1c898573cdaef3b64cb468"
+      },
+      {
+        "idx": 903,
+        "sentence": "the satire is just too easy to be genuinely satisfying . ",
+        "label": 0,
+        "source_split": "train",
+        "untruncated_tokens": 13,
+        "tensor_sha256": "d28d45e1b206c4f761dccdc6919c9b3326b80d350cd7e64fd81d7530a032dd48"
+      },
+      {
+        "idx": 55728,
+        "sentence": "going for that pg-13 rating ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 9,
+        "tensor_sha256": "8107cb251af650dee0c86e04a9ca020475d02abcc20814d33bdd19009201485d"
+      },
+      {
+        "idx": 20618,
+        "sentence": "talk to her is not the perfect movie many have made it out to be , but it 's still quite worth seeing . ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 27,
+        "tensor_sha256": "6902f9bf05828db9ff5e24623037ee1f834bcc30dcd7c532b4def4eadae21492"
+      },
+      {
+        "idx": 5375,
+        "sentence": "with an admirably dark first script by brent hanley , paxton , making his directorial feature debut , does strong , measured work . ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 29,
+        "tensor_sha256": "ce5c4e4b233ad51435b266b3d3182d5a642d1b16d891ded7d418ac88f90faa89"
+      },
+      {
+        "idx": 38634,
+        "sentence": "chance to see three splendid actors ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 8,
+        "tensor_sha256": "b393b4d7c670e50ef8a2368106fbed546626946d3899d8a3b3e9a3d7db6e167e"
+      },
+      {
+        "idx": 54113,
+        "sentence": "refreshingly clear ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 5,
+        "tensor_sha256": "8c79c350bc6a9363324b4a8d2ad0e6024207978f38362bf9aa88f73ab546396a"
+      },
+      {
+        "idx": 44771,
+        "sentence": "a solid , unassuming drama ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 9,
+        "tensor_sha256": "8a3d7a04f931c5b45dddaf899f7686b175d1365db69bf7949835c2a21bf25221"
+      },
+      {
+        "idx": 66469,
+        "sentence": "the film just might turn on many people to opera , in general , an art form at once visceral and spiritual , wonderfully vulgar and sublimely lofty -- and as emotionally grand as life . ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 44,
+        "tensor_sha256": "5c489418dcf4e1e3075d85bbd407f3e3919af764ef001dd69d6f1232414b0397"
+      },
+      {
+        "idx": 30578,
+        "sentence": "manages to keep you at the edge of your seat with its shape-shifting perils , political intrigue and brushes with calamity . ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 30,
+        "tensor_sha256": "8d3a97e9336c0ac842e40690626c4cf4136d703835e65be06686fa51d7e28445"
+      },
+      {
+        "idx": 37384,
+        "sentence": "fascinating curiosity piece ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 5,
+        "tensor_sha256": "1d6dc6c604582ebe2d9af0e5059a54834d9391e5bcb154fa4bb923d820692e13"
+      },
+      {
+        "idx": 38744,
+        "sentence": "perfectly pleasant if ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 5,
+        "tensor_sha256": "e57d2e9f30212d1b655f01b34f0a58a323f3c8ca446c25e4584e4d62ef279524"
+      },
+      {
+        "idx": 8937,
+        "sentence": "is almost in a class with that of wilde himself . ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 13,
+        "tensor_sha256": "d9379b493089ab65877865da26d933cbb973eeb6a31a116d5c3518f9cda2f591"
+      },
+      {
+        "idx": 4337,
+        "sentence": "be smarter and more diabolical ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 9,
+        "tensor_sha256": "75c2a22f839cd9af968006857c79384ad16bdc3048c4ddbc45ccd5a425be65eb"
+      },
+      {
+        "idx": 16561,
+        "sentence": "this film , which may be why it works as well as it does ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 16,
+        "tensor_sha256": "98875da57e1fe9e1fb762101e4b1eb75a8d3768e4352c8facd717a686868560c"
+      },
+      {
+        "idx": 7051,
+        "sentence": "riveted with every painful nuance , unexpected flashes of dark comedy and the character 's gripping humanity ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 23,
+        "tensor_sha256": "3d5b5d5b24bb05c31641b41afe18c8dd328d696aaf90c712a238826677a9b700"
+      },
+      {
+        "idx": 4327,
+        "sentence": "an intelligent movie ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 5,
+        "tensor_sha256": "edfc971fb69958bacc03974ff88db0c5f8882c120acfd170cc67b889cd4c547e"
+      },
+      {
+        "idx": 43968,
+        "sentence": "us right into the center of that world ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 10,
+        "tensor_sha256": "2881e58067b69d1cf8fcb21d8f3252cabe6ff82626196cf91aeb0a65d421cba5"
+      },
+      {
+        "idx": 39994,
+        "sentence": "all right , so it 's not a brilliant piece of filmmaking , but it is a funny ( sometimes hilarious ) comedy with a deft sense of humor about itself , a playful spirit and a game cast . ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 44,
+        "tensor_sha256": "47d719603d9faee9a3a30356620265d289710412d09121ae9367dd288b229ea3"
+      },
+      {
+        "idx": 58819,
+        "sentence": "to stand tall with pryor , carlin and murphy ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 13,
+        "tensor_sha256": "bbdbab43e18393ee5794738f43e712994d5792eb60dbfa9fa818ebe7f1d5f482"
+      },
+      {
+        "idx": 66821,
+        "sentence": "both heartbreaking and ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 6,
+        "tensor_sha256": "ef52c43a40f28dfa68e62a8eb60fe028d81ef5cd3e08767f75743dd250fae9ed"
+      },
+      {
+        "idx": 35316,
+        "sentence": "all the complexity and ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 6,
+        "tensor_sha256": "ef885f034b570d4d5e244f8ac514907566be96f5846518e40578ec1f66755c35"
+      },
+      {
+        "idx": 2730,
+        "sentence": "provide an enjoyable 100 minutes in a movie theater ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 11,
+        "tensor_sha256": "649c4b62f22330558b49760a9e0bde68c1758f6e67ebeca59d66baa94d00fe2b"
+      },
+      {
+        "idx": 19951,
+        "sentence": "is a fun and funky look into an artificial creation in a world that thrives on artificiality ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 21,
+        "tensor_sha256": "cfca44d39acd72804d3ea7da3ec25ac775d5faab120c2fd65da2f3bb598f18c5"
+      },
+      {
+        "idx": 26909,
+        "sentence": "is a compelling piece that demonstrates just how well children can be trained to live out and carry on their parents ' anguish ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 25,
+        "tensor_sha256": "62db0f9a1c72bdd8ebb201198c1b06c45027f847f39a87268ff8926b5dc97055"
+      },
+      {
+        "idx": 6702,
+        "sentence": "seems timely and important ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 6,
+        "tensor_sha256": "cfa6e53943e11dfc0f2d13de83a9d45ef3a739756569577fd55471e0f26a10b1"
+      },
+      {
+        "idx": 21196,
+        "sentence": "she never lets her character become a caricature -- not even with that radioactive hair ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 20,
+        "tensor_sha256": "223dbf0104456e64c8a127a62d428990bf8e7ed25a728cc6dc46ba5316daff23"
+      },
+      {
+        "idx": 25398,
+        "sentence": "beautifully reclaiming the story of carmen and recreating it an in an african idiom . ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 21,
+        "tensor_sha256": "c76b25db438ba3a764541842d398fb37a25737a0698e3b04b535687ecf195315"
+      },
+      {
+        "idx": 7449,
+        "sentence": "have made it an exhilarating ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 9,
+        "tensor_sha256": "fd41462446fb13ad10205996e424cf73e444af5e92f5013f47fe7219a285e200"
+      },
+      {
+        "idx": 50633,
+        "sentence": "rouge is less about a superficial midlife crisis than it is about the need to stay in touch with your own skin , at 18 or 80 . ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 31,
+        "tensor_sha256": "b54e85e1a59bff01d4dfaeb7effa96383039b26512a3cb81f84f6aeeede6a344"
+      },
+      {
+        "idx": 1480,
+        "sentence": "insanely hilarious ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 5,
+        "tensor_sha256": "591bba0740082b73c83605035c9597dd98c0c2e65db8edce2713dc5358dcf47a"
+      },
+      {
+        "idx": 41511,
+        "sentence": "in a light-hearted way the romantic problems ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 11,
+        "tensor_sha256": "16fe7d489a9bc4126741ff775e61808cc9af75bd1eab361320456f140d21292d"
+      },
+      {
+        "idx": 48830,
+        "sentence": "of the great minds of our times ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 9,
+        "tensor_sha256": "d78dbcab05d347d4ac57595c4da430dc263b5d0c614a506a2cf81971f96504b1"
+      },
+      {
+        "idx": 23283,
+        "sentence": "a crisp psychological drama ( and ) a fascinating little thriller that would have been perfect for an old `` twilight zone '' episode ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 28,
+        "tensor_sha256": "793b50b49bf5001ab8505010fe1b7e8d5c0d8897d591a537ffc082a97313455f"
+      },
+      {
+        "idx": 65672,
+        "sentence": "it seems impossible that an epic four-hour indian musical about a cricket game could be this good , ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 22,
+        "tensor_sha256": "95836394c23e895c77297d88f3b39a0c7071a50d08bd784ec1d3438df4136c02"
+      },
+      {
+        "idx": 27581,
+        "sentence": "of the world 's most fascinating stories ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 10,
+        "tensor_sha256": "a06ffc6912f6ecaa7d8d00663497f069d477747ac6ef198491f8f28f30d2b147"
+      },
+      {
+        "idx": 29029,
+        "sentence": "equals the original ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 5,
+        "tensor_sha256": "7614f50aadeac8a20e244463a8b0a28018e74027895dc1736b4650036d7eb7f6"
+      },
+      {
+        "idx": 60912,
+        "sentence": "overwhelmingly positive portrayal ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 5,
+        "tensor_sha256": "51563f24e3fb5c5e5e0bbdf9591137ba8ed2f24fee875ec1eb0a144d7a7debf7"
+      },
+      {
+        "idx": 19494,
+        "sentence": "tian 's meticulous talent ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 9,
+        "tensor_sha256": "f3a33aa774664edd5bd8254a96c376246d1883fe866000aa43cdba2641df3354"
+      },
+      {
+        "idx": 20518,
+        "sentence": "neatly ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 3,
+        "tensor_sha256": "21aab846181d70bae8b4009dd64eaae3c1a7988f7eaf6152817197c890ad3002"
+      },
+      {
+        "idx": 56593,
+        "sentence": "the actors involved in the enterprise ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 8,
+        "tensor_sha256": "7cc801e986ef1d3fe55fe875f8bc0a5e8fd49a104bcb3b12796b8a17ecf6ecad"
+      },
+      {
+        "idx": 33657,
+        "sentence": "singing long after the credits roll ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 8,
+        "tensor_sha256": "fec387410b3282647cba63b3c28b9eafc082c9f9f406b933f86db8942017fcf6"
+      },
+      {
+        "idx": 40467,
+        "sentence": "some nice twists ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 5,
+        "tensor_sha256": "7bf9c35bd51d8110f491f72d6204b02932c24a892ac22b494fc8b97179ea98e4"
+      },
+      {
+        "idx": 20945,
+        "sentence": "good noir ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 4,
+        "tensor_sha256": "f260166d2d0d4e33a9064a8d621cf20e159b01b8288d7a9ebb89e4cd3d82570d"
+      },
+      {
+        "idx": 27951,
+        "sentence": "this nicely wound clock not just ticking , but humming ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 12,
+        "tensor_sha256": "290af4735f1878317f144f1cab9209a7d15204d5b6198e8e5a93384ab8e6506e"
+      },
+      {
+        "idx": 22429,
+        "sentence": "most flamboyant female comics ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 9,
+        "tensor_sha256": "3b9bcdf044fc359e22ae5d25f0b1b05fa325521acfce725ab7b3111ca679a0e6"
+      },
+      {
+        "idx": 53177,
+        "sentence": "confidently orchestrated , aesthetically and sexually ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 9,
+        "tensor_sha256": "c5a3ee9ed40de0fa25194c1f01d7cca722f1d9bb916ecdb9a8269bdf969bc12f"
+      },
+      {
+        "idx": 10625,
+        "sentence": "of what made old-time b movies good-bad that makes eight legged freaks a perfectly entertaining summer diversion ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 23,
+        "tensor_sha256": "5de6a9c66846c076a81d196e8a02012dd671ea3a3d6b891527611d8183acd5bd"
+      },
+      {
+        "idx": 18126,
+        "sentence": "pretty ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 3,
+        "tensor_sha256": "ceb23ea3c8bd36c85ea1c0120cd4277e1234138f5934b82cd387e808a6211ede"
+      },
+      {
+        "idx": 28324,
+        "sentence": "uneven but a lot of fun . ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 9,
+        "tensor_sha256": "f9cbc8630d7286479a84fd56076a9ad9293c8ed742af3f4d35cb8d3c06415d59"
+      },
+      {
+        "idx": 52446,
+        "sentence": "while general audiences might not come away with a greater knowledge of the facts of cuban music , they 'll be treated to an impressive and highly entertaining celebration of its sounds . ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 36,
+        "tensor_sha256": "525482384d5856219ddb59be590fd5209602ad1780f4dc8c0ae65e8b64fad136"
+      },
+      {
+        "idx": 39000,
+        "sentence": "does a solid job of slowly ",
+        "label": 1,
+        "source_split": "train",
+        "untruncated_tokens": 8,
+        "tensor_sha256": "5769669ab96545b12e30fe881c3c86a95adfafeaf7d9f145250f79a71b392766"
+      }
+    ],
+    "evaluation": [
+      {
+        "idx": 681,
+        "sentence": "( a ) shapeless blob of desperate entertainment . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 14,
+        "tensor_sha256": "d7c4fbdb4bb51a1897538b0582bc86618be6f796897dcc8b7b06ce631c3cc02c"
+      },
+      {
+        "idx": 824,
+        "sentence": "late marriage 's stiffness is unlikely to demonstrate the emotional clout to sweep u.s. viewers off their feet . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 27,
+        "tensor_sha256": "54765ab8866478270a679c04848d67745fc4618cce5a22e5515a30f619a00024"
+      },
+      {
+        "idx": 111,
+        "sentence": "there is n't nearly enough fun here , despite the presence of some appealing ingredients . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 20,
+        "tensor_sha256": "1c982544bf6b0085f696e78ef78ec7480c8970c8a714be7d785fed768aaa15c4"
+      },
+      {
+        "idx": 781,
+        "sentence": "at once half-baked and overheated . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 12,
+        "tensor_sha256": "a480cf9c5a0cb76190399a257a70160f6fed80f19f52705270c4157e00973ea0"
+      },
+      {
+        "idx": 615,
+        "sentence": "as the latest bid in the tv-to-movie franchise game , i spy makes its big-screen entry with little of the nervy originality of its groundbreaking small-screen progenitor . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 43,
+        "tensor_sha256": "2b79321b7305a54f92a284be14182a7c38d5c172237db0d1b71d203a9c3a3a90"
+      },
+      {
+        "idx": 429,
+        "sentence": "the film 's hackneyed message is not helped by the thin characterizations , nonexistent plot and pretentious visual style . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 30,
+        "tensor_sha256": "8cf7ccab62118869bd34fe86e49d5ee66aed4ff60c1670aea00bc3f432ec594b"
+      },
+      {
+        "idx": 257,
+        "sentence": "taylor appears to have blown his entire budget on soundtrack rights and had nothing left over for jokes . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 21,
+        "tensor_sha256": "8c05e5291c4e985876f4d1c979614836b6f84ba1249f21a7d04aa14f127c6cb9"
+      },
+      {
+        "idx": 659,
+        "sentence": "chabrol has taken promising material for a black comedy and turned it instead into a somber chamber drama . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 23,
+        "tensor_sha256": "b4394577bdfeec57a5857baede27e7fd26b28b5d8e3a73e193fc70e9d7abf775"
+      },
+      {
+        "idx": 587,
+        "sentence": "director uwe boll and the actors provide scant reason to care in this crude '70s throwback . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 24,
+        "tensor_sha256": "cbf80d2885e056f8d91dc805438b9458f486823e8a0e6b37a6a52307e3e40010"
+      },
+      {
+        "idx": 867,
+        "sentence": "has all the depth of a wading pool . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 12,
+        "tensor_sha256": "5968f47850f599666673f75d16032d6cc187e6cbb7ccbec3e035e3dfd42df80b"
+      },
+      {
+        "idx": 305,
+        "sentence": "what was once original has been co-opted so frequently that it now seems pedestrian . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 19,
+        "tensor_sha256": "14cb8bb59d6338154a9c354b8929c0cc466fc321f727ddf5b1d6b268e074157e"
+      },
+      {
+        "idx": 265,
+        "sentence": "paid in full is so stale , in fact , that its most vibrant scene is one that uses clips from brian de palma 's scarface . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 31,
+        "tensor_sha256": "89e726e0fdec796baeef5e94bfada01df6be7ba8534f93c6006db2ca76a2d008"
+      },
+      {
+        "idx": 328,
+        "sentence": "an unwise amalgam of broadcast news and vibes . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 15,
+        "tensor_sha256": "3f5c999aa13987f0a1b7e074f0e6f0fd78040aa76aad8d914344e604bee46c72"
+      },
+      {
+        "idx": 64,
+        "sentence": "the script kicks in , and mr. hartley 's distended pace and foot-dragging rhythms follow . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 24,
+        "tensor_sha256": "c18222db3655d1608d256eff8e61a78f347d5c696b183a7334ffa4b15e22e45a"
+      },
+      {
+        "idx": 494,
+        "sentence": "it showcases carvey 's talent for voices , but not nearly enough and not without taxing every drop of one 's patience to get to the good stuff . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 35,
+        "tensor_sha256": "1098b9418dcfbcb4202a83e1668593e1262ec49a03cfc3a324457a1d131212d5"
+      },
+      {
+        "idx": 536,
+        "sentence": "a disappointment for those who love alternate versions of the bard , particularly ones that involve deep fryers and hamburgers . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 25,
+        "tensor_sha256": "a84dcf53ac62671992b27ae313b55058df496308417c9e5940b1a9f5f24ff095"
+      },
+      {
+        "idx": 601,
+        "sentence": "fancy a real downer ? ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 8,
+        "tensor_sha256": "b7a7cb05d5884a9daffcf36ea56a0b178e97b93ddfa09272d143e239b1806c05"
+      },
+      {
+        "idx": 645,
+        "sentence": "the words , ` frankly , my dear , i do n't give a damn , ' have never been more appropriate . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 27,
+        "tensor_sha256": "953277f96d68815f03a359f2446ef200e71c96a6bebe6c639cf3f277138dde93"
+      },
+      {
+        "idx": 181,
+        "sentence": "it 's a bad thing when a movie has about as much substance as its end credits blooper reel . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 25,
+        "tensor_sha256": "bdd24c7c3889ef47a92f3cfa6a6482230d5e691b902b5e4ae265c3ecab261219"
+      },
+      {
+        "idx": 86,
+        "sentence": "the film flat lines when it should peak and is more missed opportunity and trifle than dark , decadent truffle . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 27,
+        "tensor_sha256": "5ad43cdab1ed2e9b12901cea392c9ff2d4c176b07054bea6e747ea828d13d1b8"
+      },
+      {
+        "idx": 319,
+        "sentence": "too much of it feels unfocused and underdeveloped . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 17,
+        "tensor_sha256": "fa1fdaad744e00d1a3a72933a01bc27ec1911b6e893e99d658657af59eb6fb44"
+      },
+      {
+        "idx": 141,
+        "sentence": "the character of zigzag is not sufficiently developed to support a film constructed around him . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 21,
+        "tensor_sha256": "a0184f422b5445cc1ceea4e2bd0db2b483049ff3e23cc0e762e7fbdd66a78e24"
+      },
+      {
+        "idx": 752,
+        "sentence": "like watching a dress rehearsal the week before the show goes up : everything 's in place but something 's just a little off-kilter . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 32,
+        "tensor_sha256": "a12288e7f32d8ead19ba0351572ecc546b755dfbe7edd52627e7ba02c1bddcc2"
+      },
+      {
+        "idx": 449,
+        "sentence": "oh come on . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 6,
+        "tensor_sha256": "40458bfbf42afdd4df12ae41dac65f4fee60e1246811bcc2c753530f371036c0"
+      },
+      {
+        "idx": 399,
+        "sentence": "if director michael dowse only superficially understands his characters , he does n't hold them in contempt . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 24,
+        "tensor_sha256": "c22c80ccce10afd04d0a33d21bd37322e94821b839f902d1a5f17c05ba168173"
+      },
+      {
+        "idx": 99,
+        "sentence": "why make a documentary about these marginal historical figures ? ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 12,
+        "tensor_sha256": "7f74566b6ef291fea5d01b0eb4c1dee1823ff39d9f5e92ab96ce7e11ae30fa54"
+      },
+      {
+        "idx": 49,
+        "sentence": "it 's hampered by a lifetime-channel kind of plot and a lead actress who is out of her depth . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 25,
+        "tensor_sha256": "c78786b95603e82d20c93406bdcdb332b5f12f5dfd7badb144c52740d4a508d7"
+      },
+      {
+        "idx": 838,
+        "sentence": "sometimes seems less like storytelling than something the otherwise compelling director needed to get off his chest . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 20,
+        "tensor_sha256": "6f194d1c16b3e25439ddc64d618554c55b0f7d659f74a46eca9f33e4c363898d"
+      },
+      {
+        "idx": 92,
+        "sentence": "you wo n't like roger , but you will quickly recognize him . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 17,
+        "tensor_sha256": "fa1e9d7b8d8033621b7f92397f7d01595e80bee38ce5d50cdbc9a483675c9136"
+      },
+      {
+        "idx": 409,
+        "sentence": "it 's another stale , kill-by-numbers flick , complete with blade-thin characters and terrible , pun-laden dialogue . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 29,
+        "tensor_sha256": "fa296777a2f569ab0b2a363b0e36990744db06e252587d17b78ecae54e5593da"
+      },
+      {
+        "idx": 442,
+        "sentence": "the notion that bombing buildings is the funniest thing in the world goes entirely unexamined in this startlingly unfunny comedy . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 31,
+        "tensor_sha256": "dbc8705219996af971d1e20c1e652d368ee5c982a4a9ba3b728cd4b97fa7ec15"
+      },
+      {
+        "idx": 199,
+        "sentence": "at the very least , if you do n't know anything about derrida when you walk into the theater , you wo n't know much more when you leave . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 38,
+        "tensor_sha256": "8fcddfbb6c238d9ed2191ee06cd65ddabd7d2379ae1bef044d80e85639bc93b9"
+      },
+      {
+        "idx": 774,
+        "sentence": "when the film ended , i felt tired and drained and wanted to lie on my own deathbed for a while . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 25,
+        "tensor_sha256": "f9710743688ae9f1ec7c8c6a3c66305c196b84b361e682b239c5ab23256e9eb6"
+      },
+      {
+        "idx": 606,
+        "sentence": "makes for a pretty unpleasant viewing experience . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 10,
+        "tensor_sha256": "48c07dfd2110067ace8273ae959a009745e28d8f579839d05ee20e03d8ae6a6b"
+      },
+      {
+        "idx": 813,
+        "sentence": "i can take infantile humor ... but this is the sort of infantile that makes you wonder about changing the director and writer 's diapers . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 34,
+        "tensor_sha256": "6178630c6bc61e98de1acde8f29a3f2bf672f16601f1153fb0a45ec685010d9c"
+      },
+      {
+        "idx": 242,
+        "sentence": "it all feels like a monty python sketch gone horribly wrong . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 14,
+        "tensor_sha256": "46600654f65f5c5a531109444a98663f49c74eb439a5b143aa077a2a142ec58c"
+      },
+      {
+        "idx": 694,
+        "sentence": "no aspirations to social import inform the movie version . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 12,
+        "tensor_sha256": "85fde9e30b20a5e66d8e97fee22e109371bd051f7e29c5d6564fb2cfce4d11e5"
+      },
+      {
+        "idx": 578,
+        "sentence": "just not campy enough ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 7,
+        "tensor_sha256": "be6accb777a69169fc74d4ae29cad29107fb19e57096519cf95fd4ad174d8643"
+      },
+      {
+        "idx": 822,
+        "sentence": "it 's a buggy drag . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 10,
+        "tensor_sha256": "5370363f794c66369d3b21589e56fae2d5b61126102980ec83233f74640d03de"
+      },
+      {
+        "idx": 730,
+        "sentence": "suffocated by its fussy script and uptight characters , this musty adaptation is all the more annoying since it 's been packaged and sold back to us by hollywood . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 39,
+        "tensor_sha256": "8db49e537e07946b138a46c9c0f5a854479876595c59e4abaa5ef7f2e1a504cc"
+      },
+      {
+        "idx": 390,
+        "sentence": "mattei is tiresomely grave and long-winded , as if circularity itself indicated profundity . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 25,
+        "tensor_sha256": "659c1d5963f004a6f198ddb914af081b762f710e30c5788cce85d4bd344f4985"
+      },
+      {
+        "idx": 647,
+        "sentence": "too much of the humor falls flat . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 10,
+        "tensor_sha256": "55278e7a79de1f0ddc7ca674de8bd917bc5a6eca76b9bc584ceb7d8ebb9aaa54"
+      },
+      {
+        "idx": 221,
+        "sentence": "my reaction in a word : disappointment . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 10,
+        "tensor_sha256": "d2b7bb57bc93b7e5b4c2199ae072245ae77c7dea04fa9339f71684b52c13cf2c"
+      },
+      {
+        "idx": 54,
+        "sentence": "so devoid of any kind of intelligible story that it makes films like xxx and collateral damage seem like thoughtful treatises ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 27,
+        "tensor_sha256": "115953ac10481212188e3d7c00f145bcc4cf0fe2590db7c07534d19507da4215"
+      },
+      {
+        "idx": 296,
+        "sentence": "its well of thorn and vinegar ( and simple humanity ) has long been plundered by similar works featuring the insight and punch this picture so conspicuously lacks . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 34,
+        "tensor_sha256": "7da4ffede9682beb57953345c2348db3ac2f441cbeaa53f90b9cd11d76caecb1"
+      },
+      {
+        "idx": 76,
+        "sentence": "the movie fails to live up to the sum of its parts . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 15,
+        "tensor_sha256": "c7b3abf7640c2da24a7ca67c6d5f5474a3e812912ec524b283ac9cb8b78e89fa"
+      },
+      {
+        "idx": 582,
+        "sentence": "despite all evidence to the contrary , this clunker has somehow managed to pose as an actual feature movie , the kind that charges full admission and gets hyped on tv and purports to amuse small children and ostensible adults . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 53,
+        "tensor_sha256": "b01b2f7f420b21395aa04b6307469a1f5f235fc36adc957b3b752f9b8c97028e"
+      },
+      {
+        "idx": 751,
+        "sentence": "one long string of cliches . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 10,
+        "tensor_sha256": "e5c3f1b6cd6673fd74b0c52dfe5c490f9b9d80f59b6b7460c1e7987a181dd270"
+      },
+      {
+        "idx": 161,
+        "sentence": "not exactly the bees knees ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 7,
+        "tensor_sha256": "49e623b51a43c35091a38b3747da16a316bffa152baccfe047688b2464276d76"
+      },
+      {
+        "idx": 11,
+        "sentence": "it takes a strange kind of laziness to waste the talents of robert forster , anne meara , eugene levy , and reginald veljohnson all in the same movie . ",
+        "label": 0,
+        "source_split": "validation",
+        "untruncated_tokens": 39,
+        "tensor_sha256": "6ff0ff0e16505e1b5e268c47e6104e9b4fdd870d10efad27ad97c182d3ad82a9"
+      },
+      {
+        "idx": 665,
+        "sentence": "and if you 're not nearly moved to tears by a couple of scenes , you 've got ice water in your veins . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 28,
+        "tensor_sha256": "87e2d433bf9a1bf630ce6081bc73d539be1e953473de1a3faf142f071f7c61a8"
+      },
+      {
+        "idx": 249,
+        "sentence": "huston nails both the glad-handing and the choking sense of hollow despair . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 18,
+        "tensor_sha256": "1447f21ad5c1624a271daab5a29885f4ea484fbaea5efd8c00794c92032d97b4"
+      },
+      {
+        "idx": 67,
+        "sentence": "a fast , funny , highly enjoyable movie . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 11,
+        "tensor_sha256": "b4c99d0a4dd7f5afefe37859e5042bb072662dabdb70cd228c9cfb93fb33c14d"
+      },
+      {
+        "idx": 475,
+        "sentence": "belongs to daniel day-lewis as much as it belongs to martin scorsese ; it 's a memorable performance in a big , brassy , disturbing , unusual and highly successful film . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 40,
+        "tensor_sha256": "63ed7e9ba08f14367729a1ad740feadf78ecdc862f898a79b26c381096599a19"
+      },
+      {
+        "idx": 638,
+        "sentence": "my wife is an actress is an utterly charming french comedy that feels so american in sensibility and style it 's virtually its own hollywood remake . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 31,
+        "tensor_sha256": "d6d8e78fd559b331ce160d63e09c63cc780df86d3b93b410ed616dd56420d6a1"
+      },
+      {
+        "idx": 509,
+        "sentence": "a movie that successfully crushes a best selling novel into a timeframe that mandates that you avoid the godzilla sized soda . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 26,
+        "tensor_sha256": "4a87bc91650fc4873c2342d0ae90c61d63921dcb5a91e86fcca54f8c10c45e69"
+      },
+      {
+        "idx": 841,
+        "sentence": "there 's a wickedly subversive bent to the best parts of birthday girl . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 20,
+        "tensor_sha256": "9fa41d74a431cc295307c96671a8bc6a897916fc7f0d78a6c6230669c24522a0"
+      },
+      {
+        "idx": 371,
+        "sentence": "for the most part , it 's a work of incendiary genius , steering clear of knee-jerk reactions and quick solutions . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 29,
+        "tensor_sha256": "b545fd7a50856a125f89820a655416665a25d693100a44e53011da4104f9ce06"
+      },
+      {
+        "idx": 455,
+        "sentence": "( chaiken 's ) talent lies in an evocative , accurate observation of a distinctive milieu and in the lively , convincing dialogue she creates for her characters . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 37,
+        "tensor_sha256": "b82c063fe49bf3e8877aa71033dde8e8569e148f07fba383aee375b464ba5420"
+      },
+      {
+        "idx": 482,
+        "sentence": "cq 's reflection of artists and the love of cinema-and-self suggests nothing less than a new voice that deserves to be considered as a possible successor to the best european directors . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 40,
+        "tensor_sha256": "63dd6a8013a92bb8fde11cb31eea5fcc276966e302fba2cad12d53f501af1ce0"
+      },
+      {
+        "idx": 109,
+        "sentence": "it 's great escapist fun that recreates a place and time that will never happen again . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 24,
+        "tensor_sha256": "a0a57f5e06dfffa5e11bb96b0332c79ac7a849097b5e7ee2adbf44ffe608bee0"
+      },
+      {
+        "idx": 52,
+        "sentence": "mr. tsai is a very original artist in his medium , and what time is it there ? ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 22,
+        "tensor_sha256": "0a87ec83789eb8e982cb94400b06b274fe941ef84a2ccd74e5fa88abd64a8b12"
+      },
+      {
+        "idx": 200,
+        "sentence": "the format gets used best ... to capture the dizzying heights achieved by motocross and bmx riders , whose balletic hotdogging occasionally ends in bone-crushing screwups . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 41,
+        "tensor_sha256": "6bf374f2d956f78155a3176170ca64e510acaf8c8778f511228965524ba473d1"
+      },
+      {
+        "idx": 85,
+        "sentence": "the movie achieves as great an impact by keeping these thoughts hidden as ... ( quills ) did by showing them . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 28,
+        "tensor_sha256": "dbe991d9f6e2d22b85624ffdbbc68ff8350f571cd131e6d27c66030458597c83"
+      },
+      {
+        "idx": 55,
+        "sentence": "a tender , heartfelt family drama . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 10,
+        "tensor_sha256": "fab281ab3498ada23c44bf2afc6fe979f973472302caab77c0e49f103a3ad6ce"
+      },
+      {
+        "idx": 488,
+        "sentence": "a cartoon that 's truly cinematic in scope , and a story that 's compelling and heartfelt -- even if the heart belongs to a big , four-legged herbivore . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 40,
+        "tensor_sha256": "6dcf0703e6585aba991b8528ca6f200b48e55531a3b3da4df6e72b85bef9e926"
+      },
+      {
+        "idx": 470,
+        "sentence": "reggio 's continual visual barrage is absorbing as well as thought-provoking . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 19,
+        "tensor_sha256": "59c518368d59539b143117bab99c8e535bd6d1bd3b9ebceb3d8e6326e2848063"
+      },
+      {
+        "idx": 726,
+        "sentence": "it gets onto the screen just about as much of the novella as one could reasonably expect , and is engrossing and moving in its own right . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 32,
+        "tensor_sha256": "089269bfb80799c8763714b5dc0d91fe58175a5aae22bbb945119c43f90654d8"
+      },
+      {
+        "idx": 820,
+        "sentence": "it has the charm of the original american road movies , feasting on the gorgeous , ramshackle landscape of the filmmaker 's motherland . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 31,
+        "tensor_sha256": "2abcaa46cd3f184884c44953e87ec6faa669adef4002966dc687d73970c2847b"
+      },
+      {
+        "idx": 422,
+        "sentence": "it moves quickly , adroitly , and without fuss ; it does n't give you time to reflect on the inanity -- and the cold war datedness -- of its premise . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 42,
+        "tensor_sha256": "2f6983811305efc0e57c84f012fc5207103530b9702ca6f5f9d94a03f1a0f211"
+      },
+      {
+        "idx": 38,
+        "sentence": "as surreal as a dream and as detailed as a photograph , as visually dexterous as it is at times imaginatively overwhelming . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 27,
+        "tensor_sha256": "e1b572e76ac97ec25417bc85a6188fddeafeaea75af27ba490478bf02719064a"
+      },
+      {
+        "idx": 230,
+        "sentence": "reign of fire looks as if it was made without much thought -- and is best watched that way . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 23,
+        "tensor_sha256": "680de522f679f97f1f7f7c39eb89ab69cff70a10e0d494ddd6139f391472a72f"
+      },
+      {
+        "idx": 320,
+        "sentence": "a deep and meaningful film . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 8,
+        "tensor_sha256": "f9651ccda14d0991db6e68a75568e7c428ed820064bd8f53a2dd900ad6c270a7"
+      },
+      {
+        "idx": 78,
+        "sentence": "there is nothing outstanding about this film , but it is good enough and will likely be appreciated most by sailors and folks who know their way around a submarine . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 33,
+        "tensor_sha256": "bfbaf7d43d6f5479dca5bfa0e235b1818ce473cd8e7aa0c1c889de66692e2388"
+      },
+      {
+        "idx": 275,
+        "sentence": "an entertaining , colorful , action-filled crime story with an intimate heart . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 17,
+        "tensor_sha256": "7c1ea35692256976566125e026b76f3096dc9d2beb12309555ca3b912209f5d1"
+      },
+      {
+        "idx": 308,
+        "sentence": "an intriguing cinematic omnibus and round-robin that occasionally is more interesting in concept than in execution . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 21,
+        "tensor_sha256": "f4283218a375d2967429e498a1537f019e0d865dbe6706d0c223aa70efcb3f48"
+      },
+      {
+        "idx": 89,
+        "sentence": "we know the plot 's a little crazy , but it held my interest from start to finish . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 22,
+        "tensor_sha256": "1f6cee665868cdb9c9ed3db442f8e3b514844392c697bf3943dba101f9b39146"
+      },
+      {
+        "idx": 641,
+        "sentence": "the magic of the film lies not in the mysterious spring but in the richness of its performances . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 22,
+        "tensor_sha256": "98e79d97adc8d351bf9c7d819897f726540eac6fdd10cba102141563d49782bb"
+      },
+      {
+        "idx": 16,
+        "sentence": "the emotions are raw and will strike a nerve with anyone who 's ever had family trauma . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 21,
+        "tensor_sha256": "f706359289a9e7417a9fdb4fec2426003cdea11fae27c2d70e9df276ccd9b109"
+      },
+      {
+        "idx": 498,
+        "sentence": "anchored by friel and williams 's exceptional performances , the film 's power lies in its complexity . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 23,
+        "tensor_sha256": "3e4b9e888c059741cde4fe96b48742bea133e5b6c890f3a103a0c6727fe0b01f"
+      },
+      {
+        "idx": 594,
+        "sentence": "building slowly and subtly , the film , sporting a breezy spontaneity and realistically drawn characterizations , develops into a significant character study that is both moving and wise . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 38,
+        "tensor_sha256": "8b53ae7dc7a31acab25c25cf2582bc6456d2d00ed55db9e68a598c980eefb9b8"
+      },
+      {
+        "idx": 280,
+        "sentence": "it 's so good that its relentless , polished wit can withstand not only inept school productions , but even oliver parker 's movie adaptation . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 31,
+        "tensor_sha256": "0a03a68f08dfaebb2fccab1b90635c8ed085c4151f78da78034dab7da59cd1f9"
+      },
+      {
+        "idx": 793,
+        "sentence": "... an otherwise intense , twist-and-turn thriller that certainly should n't hurt talented young gaghan 's resume . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 30,
+        "tensor_sha256": "5fe78b43a216edc81a8b44306100380daa6118695febb1de99a5c68bf1fcf168"
+      },
+      {
+        "idx": 310,
+        "sentence": "if you can stomach the rough content , it 's worth checking out for the performances alone . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 21,
+        "tensor_sha256": "b7d6bec2703fedb597e7c6d4c3522af1896bbc8f53408ebdef9bc1ca3c78d32e"
+      },
+      {
+        "idx": 326,
+        "sentence": "a beguiling splash of pastel colors and prankish comedy from disney . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 18,
+        "tensor_sha256": "182517e5613457abcad91bf25c6990433e4c8e1589d4192dfb5e7f6211b947f4"
+      },
+      {
+        "idx": 755,
+        "sentence": "... a fun little timewaster , helped especially by the cool presence of jean reno . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 22,
+        "tensor_sha256": "af3360698cd9e4bd98486b3e889853d7aa1d738d18f3316baa1c592016ee805b"
+      },
+      {
+        "idx": 246,
+        "sentence": "it 's the chemistry between the women and the droll scene-stealing wit and wolfish pessimism of anna chancellor that makes this `` two weddings and a funeral '' fun . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 41,
+        "tensor_sha256": "2d0163ffa58ec4d91fdc5b7768f053228d390f91a347946c95a2a32ce47d3871"
+      },
+      {
+        "idx": 236,
+        "sentence": "not since japanese filmmaker akira kurosawa 's ran have the savagery of combat and the specter of death been visualized with such operatic grandeur . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 34,
+        "tensor_sha256": "cdff1b2fce8b87792a51ad9a5b03ce7f2b34e2441f9588e865c733e2a67154af"
+      },
+      {
+        "idx": 675,
+        "sentence": "slick piece of cross-promotion . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 9,
+        "tensor_sha256": "08daf4f7cf15ee7f19359b313aa58e5aab974f5453006768c0e07a7c2274dd83"
+      },
+      {
+        "idx": 414,
+        "sentence": "it has charm to spare , and unlike many romantic comedies , it does not alienate either gender in the audience . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 25,
+        "tensor_sha256": "bb5cc3e859cc1f11030b614970430d700e710a3059c603faeb538d55117e81d2"
+      },
+      {
+        "idx": 485,
+        "sentence": "a literate presentation that wonderfully weaves a murderous event in 1873 with murderous rage in 2002 . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 22,
+        "tensor_sha256": "07a68c01bba0ebca1ff051f57fcf6ac7373e0b09c621240b1fc2f0de10e0c1cd"
+      },
+      {
+        "idx": 266,
+        "sentence": "a coda in every sense , the pinochet case splits time between a minute-by-minute account of the british court 's extradition chess game and the regime 's talking-head survivors . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 44,
+        "tensor_sha256": "28ec07464dc990262169879bf663007ae945a9f20f5eae35bb7c9df80afbbe80"
+      },
+      {
+        "idx": 317,
+        "sentence": "all-in-all , the film is an enjoyable and frankly told tale of a people who live among us , but not necessarily with us . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 31,
+        "tensor_sha256": "d484114bbd1906109a00e616064f82a4946d1c36618628a2c5eb4f46d4634c3b"
+      },
+      {
+        "idx": 259,
+        "sentence": "a rarity among recent iranian films : it 's a comedy full of gentle humor that chides the absurdity of its protagonist 's plight . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 32,
+        "tensor_sha256": "55ca037035fb5a991a4ff11bb6620b525660a0b776c75c9dd5028d1206bcdd5e"
+      },
+      {
+        "idx": 680,
+        "sentence": "the vitality of the actors keeps the intensity of the film high , even as the strafings blend together . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 25,
+        "tensor_sha256": "80933e8d8f7ae6bc37d8cf7a968a18d957658913c439e1234c5d3e198d25e872"
+      },
+      {
+        "idx": 123,
+        "sentence": "turns potentially forgettable formula into something strangely diverting . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 13,
+        "tensor_sha256": "1eb6045778ce5737f0e9c2fdf3cb3325382bbbc9d4dd7085c32c5388c4959303"
+      },
+      {
+        "idx": 231,
+        "sentence": "martin and barbara are complex characters -- sometimes tender , sometimes angry -- and the delicate performances by sven wollter and viveka seldahl make their hopes and frustrations vivid . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 41,
+        "tensor_sha256": "5abf797b6db8c87ae457784826efd8c3d5d9301f1c15bc529e708827a08be2cb"
+      },
+      {
+        "idx": 324,
+        "sentence": "you 'll gasp appalled and laugh outraged and possibly , watching the spectacle of a promising young lad treading desperately in a nasty sea , shed an errant tear . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 35,
+        "tensor_sha256": "7f67eefb48592b6d7290cc3c6887a91bccb727bbf8e02d3ff66e90c8464ce683"
+      },
+      {
+        "idx": 664,
+        "sentence": "the film is beautifully mounted , but , more to the point , the issues are subtly presented , managing to walk a fine line with regard to the question of joan 's madness . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 38,
+        "tensor_sha256": "e28faabab6f8570fc5cd79a9ffd22e7554a89ea352d4f4b4a5e885a34e159372"
+      },
+      {
+        "idx": 445,
+        "sentence": "even in its most tedious scenes , russian ark is mesmerizing . ",
+        "label": 1,
+        "source_split": "validation",
+        "untruncated_tokens": 18,
+        "tensor_sha256": "e1785fa750d58b7ebcbdfb897e0c0277c2b9a043d598faa4324ad422ae5990d9"
+      }
+    ]
+  },
+  "tensor_hashes": {
+    "calibration": "5a26f2d81e9130ed30feec4190c88d06c9307e4afaf706c75f09ea857fcd708d",
+    "evaluation": "14690c920a532c01b9826b99c22f5b2062e798cdcf37c49158e8f0b9ea61f411"
+  }
+}

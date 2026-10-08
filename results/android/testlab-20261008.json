@@ -1,0 +1,28 @@
+{
+  "project_id": "gggg-a7df3",
+  "matrix_id": "matrix-5mhbmvu8ifjga",
+  "console_url": "https://console.firebase.google.com/project/gggg-a7df3/testlab/histories/bh.78eb0635a2d11da0/matrices/5956474525617947943",
+  "status": "passed",
+  "test_cases_passed": 1,
+  "test_execution_seconds_cli": 14,
+  "raw_directory": "results/android/raw/matrix-5mhbmvu8ifjga",
+  "validated_summary": "results/android/ac619fe4f102/summary.json",
+  "validated_report": "results/android/ac619fe4f102/report.md",
+  "results_uri": "gs://test-lab-fjh2546trt62u-mpn3ffwdb8ums/deploy-lab-20261008-094627/",
+  "requested_device": {
+    "model_id": "akita",
+    "catalog_name": "Pixel 8a",
+    "form": "PHYSICAL",
+    "android_api": "34"
+  },
+  "configuration": {
+    "threads": 1,
+    "warmup": 30,
+    "runs": 200,
+    "timeout_minutes": 5,
+    "flaky_test_attempts": 0
+  },
+  "billing_enabled_at_check": false,
+  "billing_changed": false,
+  "apk_upload_checksums_verified": true
+}

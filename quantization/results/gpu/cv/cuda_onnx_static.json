@@ -1,0 +1,1796 @@
+{
+  "task": "cv",
+  "variant": "onnx_static",
+  "device": "cuda",
+  "measured_at_utc": "2026-10-08T10:29:44.426222+00:00",
+  "status": "ok",
+  "warmup": 30,
+  "runs": 200,
+  "runtime_version": "1.20.2",
+  "package_versions": {
+    "onnxruntime-gpu": "1.20.2",
+    "onnx": "1.16.2",
+    "numpy": "1.26.4",
+    "nvidia-cuda-runtime-cu12": "12.6.77",
+    "nvidia-cublas-cu12": "12.6.4.1",
+    "nvidia-cudnn-cu12": "9.5.1.17",
+    "nvidia-cufft-cu12": "11.3.0.4",
+    "nvidia-nvjitlink-cu12": "12.6.85"
+  },
+  "session_providers": [
+    "CUDAExecutionProvider",
+    "CPUExecutionProvider"
+  ],
+  "provider_options": {
+    "CUDAExecutionProvider": {
+      "device_id": "0",
+      "has_user_compute_stream": "0",
+      "cudnn_conv1d_pad_to_nc1d": "0",
+      "user_compute_stream": "0",
+      "gpu_external_alloc": "0",
+      "gpu_mem_limit": "18446744073709551615",
+      "enable_cuda_graph": "0",
+      "gpu_external_free": "0",
+      "gpu_external_empty_cache": "0",
+      "arena_extend_strategy": "kNextPowerOfTwo",
+      "cudnn_conv_algo_search": "EXHAUSTIVE",
+      "do_copy_in_default_stream": "1",
+      "cudnn_conv_use_max_workspace": "1",
+      "tunable_op_enable": "0",
+      "tunable_op_tuning_enable": "0",
+      "tunable_op_max_tuning_duration_ms": "0",
+      "enable_skip_layer_norm_strict_mode": "0",
+      "prefer_nhwc": "0",
+      "use_ep_level_unified_stream": "0",
+      "use_tf32": "0",
+      "sdpa_kernel": "0",
+      "fuse_conv_bias": "0"
+    },
+    "CPUExecutionProvider": {}
+  },
+  "preloaded_dlls": [
+    "nvJitLink_120_0.dll",
+    "cudart64_12.dll",
+    "cublasLt64_12.dll",
+    "cublas64_12.dll",
+    "cufft64_11.dll",
+    "cudnn64_9.dll"
+  ],
+  "threads": 1,
+  "inter_op_threads": 1,
+  "batch_size": 1,
+  "system": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "cpu_name": "12th Gen Intel(R) Core(TM) i7-12700H",
+    "logical_processors": 20,
+    "machine": "AMD64",
+    "python": "3.11.9"
+  },
+  "canonical_input_sha256": "8a9a7b1f7a49ec8e223e21175b39819f9a24b22a9b0a396a43a60453b14e95d8",
+  "model_sha256": "692968070737d4260486949e3a6ec19478462084d72ec899dea29b928883b8c0",
+  "model_size_bytes": 26149363,
+  "input_record": {
+    "source_path": "imagenette2-160/val/n01440764/n01440764_11570.JPEG",
+    "image_path": "data\\cv\\images\\val\\n01440764\\n01440764_11570.JPEG",
+    "label": 0,
+    "class_name": "tench",
+    "source_sha256": "e3082c5a782850e46279cf922c1fbc631c5a617594190f65065abdef71bb8d20",
+    "tensor_sha256": "0d0840c5fa90f5afcec1739616d9bcefd8909fa04ee6869787291201d4a9797e"
+  },
+  "benchmark": {
+    "latency_samples_ms": [
+      9.3458,
+      9.1945,
+      9.336,
+      9.2522,
+      9.6074,
+      9.5155,
+      9.5008,
+      9.4359,
+      9.6517,
+      9.5568,
+      9.1954,
+      9.1463,
+      9.0961,
+      9.0599,
+      9.118,
+      9.4314,
+      9.6418,
+      9.3259,
+      9.1628,
+      9.1766,
+      9.0936,
+      9.3974,
+      9.4254,
+      9.7335,
+      9.3959,
+      9.0586,
+      9.2966,
+      9.3418,
+      9.1858,
+      9.3885,
+      9.1206,
+      9.162,
+      9.1243,
+      9.0729,
+      9.0923,
+      9.0526,
+      9.2484,
+      9.1679,
+      9.3295,
+      9.2523,
+      9.0876,
+      9.18,
+      9.1078,
+      9.1556,
+      9.2148,
+      9.078,
+      9.0414,
+      9.081,
+      9.5294,
+      9.6161,
+      9.0403,
+      9.1454,
+      9.1997,
+      9.4494,
+      9.1309,
+      9.571,
+      9.3587,
+      9.1971,
+      9.3257,
+      9.4051,
+      9.0823,
+      9.643,
+      9.147,
+      9.3892,
+      9.0185,
+      9.1057,
+      9.1312,
+      9.4432,
+      9.1641,
+      9.2037,
+      9.31,
+      9.3365,
+      9.3947,
+      9.2102,
+      9.7034,
+      8.9485,
+      9.1414,
+      9.1996,
+      9.4333,
+      9.1337,
+      9.1208,
+      9.7291,
+      9.157,
+      9.263,
+      9.305,
+      9.246,
+      9.0998,
+      9.1138,
+      9.7375,
+      8.9795,
+      9.0157,
+      9.174,
+      10.2922,
+      9.2667,
+      9.0807,
+      9.0656,
+      9.051,
+      9.0387,
+      9.0224,
+      9.175,
+      9.1188,
+      8.9692,
+      9.1574,
+      9.1441,
+      9.5933,
+      9.5808,
+      9.224,
+      9.1308,
+      9.1131,
+      9.3445,
+      9.4423,
+      9.2742,
+      9.4966,
+      9.5824,
+      9.5753,
+      9.4262,
+      9.2065,
+      9.8853,
+      9.4983,
+      9.0635,
+      9.6187,
+      9.3966,
+      9.0771,
+      9.1776,
+      9.6169,
+      9.1618,
+      9.5166,
+      9.1534,
+      9.0817,
+      9.251,
+      9.4201,
+      9.4715,
+      9.3906,
+      9.7266,
+      9.4637,
+      9.17,
+      9.0661,
+      9.0244,
+      9.0608,
+      9.0603,
+      9.0708,
+      9.2065,
+      9.4747,
+      9.1388,
+      9.0693,
+      9.171,
+      9.2609,
+      9.0957,
+      9.0729,
+      9.0243,
+      9.0627,
+      9.1453,
+      9.2817,
+      9.3422,
+      9.2988,
+      9.0659,
+      9.6926,
+      9.1527,
+      9.1304,
+      9.1819,
+      9.0844,
+      9.1206,
+      9.0106,
+      9.1101,
+      9.2144,
+      9.1075,
+      9.1434,
+      9.1119,
+      9.2918,
+      9.5318,
+      9.063,
+      9.3585,
+      9.0898,
+      9.0382,
+      9.2333,
+      9.2818,
+      9.0695,
+      9.1259,
+      9.3883,
+      9.0614,
+      9.2353,
+      9.6968,
+      9.1709,
+      9.3736,
+      9.1749,
+      9.1341,
+      9.2352,
+      9.1609,
+      9.2385,
+      9.2493,
+      9.238,
+      9.0502,
+      9.3765,
+      9.45,
+      9.2049,
+      9.2434,
+      9.4863,
+      9.5564,
+      9.2915,
+      9.0747
+    ],
+    "mean_ms": 9.262136,
+    "median_ms": 9.198350000000001,
+    "p95_ms": 9.643435,
+    "std_ms": 0.20611870367339302,
+    "timing_scope": "Synchronous session.run with CPU NumPy input/output, including H2D/D2H and Python/API overhead; excludes model load, preprocessing/tokenization; profiling disabled while timing"
+  },
+  "output_sha256": "370beeb694b5ec260d5ec578f6ef144366c0c56d72970ce3639796d666c8fb0d",
+  "metrics_vs_original": {
+    "mae": 0.00012024853225523958,
+    "rmse": 0.002818651280341365,
+    "max_abs_error": 0.40893682837486267,
+    "relative_l2": 0.11366218262968424,
+    "cosine_similarity": 0.9935493696547313,
+    "snr_db": 18.887680171012,
+    "accuracy": 0.73,
+    "top1_ties": 4,
+    "top5_accuracy": 0.91,
+    "probability_sum_min": 0.9999996423721313,
+    "probability_sum_max": 1.0000003576278687,
+    "top1_agreement": 0.93,
+    "allclose_fp32_tolerance": false,
+    "top5_overlap": 0.8959999999999999
+  },
+  "profile": {
+    "unique_nodes_by_provider": {
+      "CPUExecutionProvider": 54,
+      "CUDAExecutionProvider": 462
+    },
+    "operator_counts_by_provider": {
+      "CPUExecutionProvider": {
+        "DequantizeLinear": 54
+      },
+      "CUDAExecutionProvider": {
+        "MemcpyFromHost": 54,
+        "QuantizeLinear": 107,
+        "DequantizeLinear": 177,
+        "Transpose": 1,
+        "Conv": 53,
+        "Relu": 49,
+        "MaxPool": 1,
+        "Add": 16,
+        "GlobalAveragePool": 1,
+        "Squeeze": 1,
+        "Gemm": 1,
+        "Softmax": 1
+      }
+    },
+    "kernel_events_by_provider": {
+      "CPUExecutionProvider": 108,
+      "CUDAExecutionProvider": 924
+    },
+    "cuda_compute_nodes": 408,
+    "cpu_nodes": [
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/predictions/BiasAdd/ReadVariableOp:0_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              1000
+            ]
+          },
+          {
+            "float": [
+              1000
+            ]
+          },
+          {
+            "int32": [
+              1000
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block1_3_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              2048
+            ]
+          },
+          {
+            "float": [
+              2048
+            ]
+          },
+          {
+            "int32": [
+              2048
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block1_2_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              512
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          },
+          {
+            "int32": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block1_1_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              512
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          },
+          {
+            "int32": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block1_3_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              1024
+            ]
+          },
+          {
+            "float": [
+              1024
+            ]
+          },
+          {
+            "int32": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block1_2_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              256
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          },
+          {
+            "int32": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block1_1_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              256
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          },
+          {
+            "int32": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block1_3_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              512
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          },
+          {
+            "int32": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block1_2_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              128
+            ]
+          },
+          {
+            "float": [
+              128
+            ]
+          },
+          {
+            "int32": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block1_1_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              128
+            ]
+          },
+          {
+            "float": [
+              128
+            ]
+          },
+          {
+            "int32": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block1_3_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              256
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          },
+          {
+            "int32": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block1_2_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              64
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          },
+          {
+            "int32": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block1_1_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              64
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          },
+          {
+            "int32": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "Conv__222_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              64
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          },
+          {
+            "int32": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block1_0_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              256
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          },
+          {
+            "int32": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block2_3_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              256
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          },
+          {
+            "int32": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block2_2_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              64
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          },
+          {
+            "int32": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block2_1_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              64
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          },
+          {
+            "int32": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block3_3_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              256
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          },
+          {
+            "int32": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block3_2_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              64
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          },
+          {
+            "int32": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block3_1_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              64
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          },
+          {
+            "int32": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block1_0_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              512
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          },
+          {
+            "int32": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block2_3_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              512
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          },
+          {
+            "int32": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block2_2_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              128
+            ]
+          },
+          {
+            "float": [
+              128
+            ]
+          },
+          {
+            "int32": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block2_1_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              128
+            ]
+          },
+          {
+            "float": [
+              128
+            ]
+          },
+          {
+            "int32": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block3_3_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              512
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          },
+          {
+            "int32": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block3_2_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              128
+            ]
+          },
+          {
+            "float": [
+              128
+            ]
+          },
+          {
+            "int32": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block3_1_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              128
+            ]
+          },
+          {
+            "float": [
+              128
+            ]
+          },
+          {
+            "int32": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block4_3_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              512
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          },
+          {
+            "int32": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block4_2_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              128
+            ]
+          },
+          {
+            "float": [
+              128
+            ]
+          },
+          {
+            "int32": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block4_1_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              128
+            ]
+          },
+          {
+            "float": [
+              128
+            ]
+          },
+          {
+            "int32": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block1_0_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              1024
+            ]
+          },
+          {
+            "float": [
+              1024
+            ]
+          },
+          {
+            "int32": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block2_3_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              1024
+            ]
+          },
+          {
+            "float": [
+              1024
+            ]
+          },
+          {
+            "int32": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block2_2_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              256
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          },
+          {
+            "int32": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block2_1_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              256
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          },
+          {
+            "int32": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block3_3_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              1024
+            ]
+          },
+          {
+            "float": [
+              1024
+            ]
+          },
+          {
+            "int32": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block3_2_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              256
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          },
+          {
+            "int32": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block3_1_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              256
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          },
+          {
+            "int32": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block4_3_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              1024
+            ]
+          },
+          {
+            "float": [
+              1024
+            ]
+          },
+          {
+            "int32": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block4_2_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              256
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          },
+          {
+            "int32": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block4_1_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              256
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          },
+          {
+            "int32": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block5_3_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              1024
+            ]
+          },
+          {
+            "float": [
+              1024
+            ]
+          },
+          {
+            "int32": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block5_2_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              256
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          },
+          {
+            "int32": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block5_1_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              256
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          },
+          {
+            "int32": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block6_3_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              1024
+            ]
+          },
+          {
+            "float": [
+              1024
+            ]
+          },
+          {
+            "int32": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block6_2_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              256
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          },
+          {
+            "int32": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block6_1_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              256
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          },
+          {
+            "int32": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block1_0_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              2048
+            ]
+          },
+          {
+            "float": [
+              2048
+            ]
+          },
+          {
+            "int32": [
+              2048
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block2_3_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              2048
+            ]
+          },
+          {
+            "float": [
+              2048
+            ]
+          },
+          {
+            "int32": [
+              2048
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block2_2_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              512
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          },
+          {
+            "int32": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block2_1_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              512
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          },
+          {
+            "int32": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block3_3_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              2048
+            ]
+          },
+          {
+            "float": [
+              2048
+            ]
+          },
+          {
+            "int32": [
+              2048
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block3_2_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              512
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          },
+          {
+            "int32": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block3_1_conv/Conv2D_bias_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int32": [
+              512
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          },
+          {
+            "int32": [
+              512
+            ]
+          }
+        ]
+      }
+    ],
+    "cuda_compute_operators": [
+      "Add",
+      "Conv",
+      "DequantizeLinear",
+      "Gemm",
+      "GlobalAveragePool",
+      "MaxPool",
+      "QuantizeLinear",
+      "Relu",
+      "Softmax",
+      "Squeeze",
+      "Transpose"
+    ],
+    "cuda_compute_examples": [
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "image_q_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              224,
+              224,
+              3
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "int8": []
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "image_dq_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int8": [
+              1,
+              224,
+              224,
+              3
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "int8": []
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "resnet50/conv1_conv/Conv2D__6_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              224,
+              224,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "resnet50/conv1_conv/Conv2D__6:0_QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              3,
+              224,
+              224
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "int8": []
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "resnet50/conv1_conv/Conv2D__6:0_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int8": [
+              1,
+              3,
+              224,
+              224
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "int8": []
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "Conv__222_weights_fused_bn_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int8": [
+              64,
+              3,
+              7,
+              7
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          },
+          {
+            "int8": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "Conv__222_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              3,
+              224,
+              224
+            ]
+          },
+          {
+            "float": [
+              64,
+              3,
+              7,
+              7
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "resnet50/conv1_bn/FusedBatchNormV3:0_QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              112,
+              112
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "int8": []
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "resnet50/conv1_bn/FusedBatchNormV3:0_DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int8": [
+              1,
+              64,
+              112,
+              112
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "int8": []
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "resnet50/conv1_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              112,
+              112
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "resnet50/conv1_relu/Relu:0_q_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              112,
+              112
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "int8": []
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "resnet50/conv1_relu/Relu:0_dq_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "int8": [
+              1,
+              64,
+              112,
+              112
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "int8": []
+          }
+        ]
+      }
+    ],
+    "note": "Separate profiling session after timing; counts show provider assignment, not kernel-only latency or INT8 arithmetic coverage",
+    "file": "results/gpu/cv/profile_cuda_onnx_static_2026-10-08_17-29-52.json",
+    "sha256": "f6c67a8d8df4927f247797b90b18cfdd4b7be01c361818eff07f55a1db7332e9"
+  }
+}

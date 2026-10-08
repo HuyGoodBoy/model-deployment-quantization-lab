@@ -1,0 +1,355 @@
+{
+  "task": "text",
+  "num_examples": 100,
+  "domain": "logits",
+  "results": {
+    "tensorflow_fp32": {
+      "status": "ok",
+      "metrics": {
+        "mae": 0.0,
+        "rmse": 0.0,
+        "max_abs_error": 0.0,
+        "relative_l2": 0.0,
+        "cosine_similarity": 0.9999999999999998,
+        "snr_db": "inf",
+        "accuracy": 0.91,
+        "top1_ties": 0,
+        "f1_positive": 0.9108910891089109,
+        "top1_agreement": 1.0,
+        "allclose_fp32_tolerance": true
+      },
+      "runtime": {
+        "version": "2.15.1",
+        "mode": "tf.function CPU",
+        "inputs": [
+          "input_ids",
+          "attention_mask"
+        ]
+      },
+      "model_sha256": "b44df675bb34ccd8e57c14292c811ac7358b7c8e37c7f212745f640cd6019ac8",
+      "output_sha256": "56b1ccea368892cd4c66e729b47934b5b380701b07d9e57e874ba6dc4ef36d51"
+    },
+    "onnx_fp32": {
+      "status": "ok",
+      "metrics": {
+        "mae": 1.3822317123413087e-06,
+        "rmse": 2.1338592902178687e-06,
+        "max_abs_error": 1.3023614883422852e-05,
+        "relative_l2": 5.836785138629166e-07,
+        "cosine_similarity": 0.9999999999998304,
+        "snr_db": 124.67652586936373,
+        "accuracy": 0.91,
+        "top1_ties": 0,
+        "f1_positive": 0.9108910891089109,
+        "top1_agreement": 1.0,
+        "allclose_fp32_tolerance": true
+      },
+      "runtime": {
+        "version": "1.20.1",
+        "providers": [
+          "CPUExecutionProvider"
+        ],
+        "inputs": [
+          {
+            "name": "input_ids",
+            "type": "tensor(int32)",
+            "shape": [
+              1,
+              64
+            ]
+          },
+          {
+            "name": "attention_mask",
+            "type": "tensor(int32)",
+            "shape": [
+              1,
+              64
+            ]
+          }
+        ]
+      },
+      "model_sha256": "78020e6d852ad1b7be89523fd5f32bfa3e336f93d1217ddae6a307411c9bffc0",
+      "output_sha256": "a3ba25cc67a80fa94ca4471b0622f636b9b4813ab27da6b8f961e5afde2c6672"
+    },
+    "onnx_dynamic": {
+      "status": "ok",
+      "metrics": {
+        "mae": 0.1204315672069788,
+        "rmse": 0.2225799864509759,
+        "max_abs_error": 1.110569417476654,
+        "relative_l2": 0.06088271907285382,
+        "cosine_similarity": 0.9981473116630203,
+        "snr_db": 24.31011919703403,
+        "accuracy": 0.9,
+        "top1_ties": 0,
+        "f1_positive": 0.9,
+        "top1_agreement": 0.99,
+        "allclose_fp32_tolerance": false
+      },
+      "runtime": {
+        "version": "1.20.1",
+        "providers": [
+          "CPUExecutionProvider"
+        ],
+        "inputs": [
+          {
+            "name": "input_ids",
+            "type": "tensor(int32)",
+            "shape": [
+              1,
+              64
+            ]
+          },
+          {
+            "name": "attention_mask",
+            "type": "tensor(int32)",
+            "shape": [
+              1,
+              64
+            ]
+          }
+        ]
+      },
+      "model_sha256": "8a809f2e819ce13737ee69477297b51709af1b38f25af660060f3d857e39ec29",
+      "output_sha256": "cbd795abe143ddcd299c1c618e38b9837d7b7808c61d18f1e6eff22b17e7b809"
+    },
+    "onnx_static": {
+      "status": "ok",
+      "metrics": {
+        "mae": 1.0549836644344033,
+        "rmse": 1.1339956456867837,
+        "max_abs_error": 2.813804879784584,
+        "relative_l2": 0.31018394522813225,
+        "cosine_similarity": 0.9850659473024928,
+        "snr_db": 10.167613690685002,
+        "accuracy": 0.92,
+        "top1_ties": 0,
+        "f1_positive": 0.92,
+        "top1_agreement": 0.97,
+        "allclose_fp32_tolerance": false
+      },
+      "runtime": {
+        "version": "1.20.1",
+        "providers": [
+          "CPUExecutionProvider"
+        ],
+        "inputs": [
+          {
+            "name": "input_ids",
+            "type": "tensor(int32)",
+            "shape": [
+              1,
+              64
+            ]
+          },
+          {
+            "name": "attention_mask",
+            "type": "tensor(int32)",
+            "shape": [
+              1,
+              64
+            ]
+          }
+        ]
+      },
+      "model_sha256": "3fe241dd3024563b3a6920f4a37a403ecd03162f8cac1f5407fcb0a0082a723a",
+      "output_sha256": "abb3af06865c89899acfb1f6c20ff3572c426b26a1501f8d3dad599741ae75f2"
+    },
+    "tflite_fp32": {
+      "status": "ok",
+      "metrics": {
+        "mae": 1.5658140182495117e-06,
+        "rmse": 2.5922817394643677e-06,
+        "max_abs_error": 1.621246337890625e-05,
+        "relative_l2": 7.090716619135905e-07,
+        "cosine_similarity": 0.9999999999997491,
+        "snr_db": 122.98619741761088,
+        "accuracy": 0.91,
+        "top1_ties": 0,
+        "f1_positive": 0.9108910891089109,
+        "top1_agreement": 1.0,
+        "allclose_fp32_tolerance": true
+      },
+      "runtime": {
+        "version": "2.15.1",
+        "mode": "tf.lite.Interpreter CPU; default delegates, see log",
+        "inputs": [
+          {
+            "name": "serving_default_attention_mask:0",
+            "shape": [
+              1,
+              64
+            ],
+            "dtype": "int32"
+          },
+          {
+            "name": "serving_default_input_ids:0",
+            "shape": [
+              1,
+              64
+            ],
+            "dtype": "int32"
+          }
+        ],
+        "output": {
+          "name": "StatefulPartitionedCall:0",
+          "shape": [
+            1,
+            2
+          ],
+          "dtype": "float32"
+        }
+      },
+      "model_sha256": "9ae5f8ee5d5b6f85f2e172bb71925cdb74698d4b191471d63476e3ea4e33c6c0",
+      "output_sha256": "78bc3657a9b56cd968b0fef87faa6e0201ac591496c0b0fdb001f175d5b36954"
+    },
+    "tflite_dynamic": {
+      "status": "ok",
+      "metrics": {
+        "mae": 0.18720456194132568,
+        "rmse": 0.3214031047486528,
+        "max_abs_error": 1.5926426649093628,
+        "relative_l2": 0.0879139910445863,
+        "cosine_similarity": 0.9963417736467933,
+        "snr_db": 21.118840075331363,
+        "accuracy": 0.9,
+        "top1_ties": 0,
+        "f1_positive": 0.9019607843137255,
+        "top1_agreement": 0.97,
+        "allclose_fp32_tolerance": false
+      },
+      "runtime": {
+        "version": "2.15.1",
+        "mode": "tf.lite.Interpreter CPU; default delegates, see log",
+        "inputs": [
+          {
+            "name": "serving_default_attention_mask:0",
+            "shape": [
+              1,
+              64
+            ],
+            "dtype": "int32"
+          },
+          {
+            "name": "serving_default_input_ids:0",
+            "shape": [
+              1,
+              64
+            ],
+            "dtype": "int32"
+          }
+        ],
+        "output": {
+          "name": "StatefulPartitionedCall:0",
+          "shape": [
+            1,
+            2
+          ],
+          "dtype": "float32"
+        }
+      },
+      "model_sha256": "9ff3d95c30fd3257b35a77f980654179b40e5cd88dc8da54f35ba9ad34e1d227",
+      "output_sha256": "337689601314ecfc39c31ddd58d67d2e71dcea7a503e37917ea5e5f5385334cd"
+    },
+    "tflite_fp16": {
+      "status": "ok",
+      "metrics": {
+        "mae": 0.0005106624960899354,
+        "rmse": 0.0012366758722847145,
+        "max_abs_error": 0.008939623832702637,
+        "relative_l2": 0.00033827025923137123,
+        "cosine_similarity": 0.9999999436924087,
+        "snr_db": 69.41472367530665,
+        "accuracy": 0.91,
+        "top1_ties": 0,
+        "f1_positive": 0.9108910891089109,
+        "top1_agreement": 1.0,
+        "allclose_fp32_tolerance": false
+      },
+      "runtime": {
+        "version": "2.15.1",
+        "mode": "tf.lite.Interpreter CPU; default delegates, see log",
+        "inputs": [
+          {
+            "name": "serving_default_attention_mask:0",
+            "shape": [
+              1,
+              64
+            ],
+            "dtype": "int32"
+          },
+          {
+            "name": "serving_default_input_ids:0",
+            "shape": [
+              1,
+              64
+            ],
+            "dtype": "int32"
+          }
+        ],
+        "output": {
+          "name": "StatefulPartitionedCall:0",
+          "shape": [
+            1,
+            2
+          ],
+          "dtype": "float32"
+        }
+      },
+      "model_sha256": "5fd984884ae49114f451a13d4b18d42e1d1de06a584d9a93372e5878b731c225",
+      "output_sha256": "0be11e55a5f81aaf94cd878407e0c1deaa940e1112fc437f9ad61734944c2101"
+    },
+    "tflite_static": {
+      "status": "ok",
+      "metrics": {
+        "mae": 3.463463917002082,
+        "rmse": 3.6407821037261283,
+        "max_abs_error": 4.846396893262863,
+        "relative_l2": 0.9958699232621853,
+        "cosine_similarity": 0.10107762492005612,
+        "snr_db": 0.035947675274132576,
+        "accuracy": 0.52,
+        "top1_ties": 4,
+        "f1_positive": 0.6666666666666666,
+        "top1_agreement": 0.55,
+        "allclose_fp32_tolerance": false
+      },
+      "runtime": {
+        "version": "2.15.1",
+        "mode": "tf.lite.Interpreter CPU; default delegates, see log",
+        "inputs": [
+          {
+            "name": "serving_default_attention_mask:0",
+            "shape": [
+              1,
+              64
+            ],
+            "dtype": "int32"
+          },
+          {
+            "name": "serving_default_input_ids:0",
+            "shape": [
+              1,
+              64
+            ],
+            "dtype": "int32"
+          }
+        ],
+        "output": {
+          "name": "StatefulPartitionedCall:0",
+          "shape": [
+            1,
+            2
+          ],
+          "dtype": "int8",
+          "scale": 0.03578399866819382,
+          "zero_point": -6
+        }
+      },
+      "model_sha256": "d03e426c46ea650a1a1591a73c4688adaa2b611d35a08c87bee2708debb5a961",
+      "output_sha256": "1df8c29ed1c9edee0365db54774dacef261ee8d1f8ce8360c0337a137ac363b3"
+    }
+  },
+  "atol_fp32": 0.0001,
+  "rtol_fp32": 0.0001
+}

@@ -1,0 +1,12 @@
+{
+  "model": "Keras ResNet50",
+  "parameters": 25636712,
+  "original_sha256": "4d80a1ff5e1b1d18a6e12ac816a3cdf2b5ea22d70286de9ff363f7cf6e2ed82a",
+  "weights_sha256": "7011d39ea4f61f4ddb8da99c4addf3fae4209bfda7828adb4698b16283258fbe",
+  "output_kind": "softmax probabilities",
+  "input_layout": "NHWC",
+  "output_shape": [
+    1,
+    1000
+  ]
+}

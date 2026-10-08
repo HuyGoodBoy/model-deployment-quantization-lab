@@ -1,0 +1,7677 @@
+{
+  "task": "text",
+  "variant": "onnx_fp32",
+  "device": "cpu",
+  "measured_at_utc": "2026-10-08T10:30:02.030999+00:00",
+  "status": "ok",
+  "warmup": 30,
+  "runs": 200,
+  "runtime_version": "1.20.2",
+  "package_versions": {
+    "onnxruntime-gpu": "1.20.2",
+    "onnx": "1.16.2",
+    "numpy": "1.26.4",
+    "nvidia-cuda-runtime-cu12": "12.6.77",
+    "nvidia-cublas-cu12": "12.6.4.1",
+    "nvidia-cudnn-cu12": "9.5.1.17",
+    "nvidia-cufft-cu12": "11.3.0.4",
+    "nvidia-nvjitlink-cu12": "12.6.85"
+  },
+  "session_providers": [
+    "CPUExecutionProvider"
+  ],
+  "provider_options": {
+    "CPUExecutionProvider": {}
+  },
+  "preloaded_dlls": [
+    "nvJitLink_120_0.dll",
+    "cudart64_12.dll",
+    "cublasLt64_12.dll",
+    "cublas64_12.dll",
+    "cufft64_11.dll",
+    "cudnn64_9.dll"
+  ],
+  "threads": 1,
+  "inter_op_threads": 1,
+  "batch_size": 1,
+  "system": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "cpu_name": "12th Gen Intel(R) Core(TM) i7-12700H",
+    "logical_processors": 20,
+    "machine": "AMD64",
+    "python": "3.11.9"
+  },
+  "canonical_input_sha256": "14690c920a532c01b9826b99c22f5b2062e798cdcf37c49158e8f0b9ea61f411",
+  "model_sha256": "78020e6d852ad1b7be89523fd5f32bfa3e336f93d1217ddae6a307411c9bffc0",
+  "model_size_bytes": 266620184,
+  "input_record": {
+    "idx": 681,
+    "sentence": "( a ) shapeless blob of desperate entertainment . ",
+    "label": 0,
+    "source_split": "validation",
+    "untruncated_tokens": 14,
+    "tensor_sha256": "d7c4fbdb4bb51a1897538b0582bc86618be6f796897dcc8b7b06ce631c3cc02c"
+  },
+  "benchmark": {
+    "latency_samples_ms": [
+      68.2068,
+      68.9191,
+      71.1751,
+      69.9983,
+      69.1629,
+      70.6495,
+      71.3938,
+      70.7694,
+      70.999,
+      72.661,
+      70.2925,
+      71.7751,
+      69.8368,
+      70.3693,
+      70.9579,
+      70.2827,
+      69.2612,
+      69.8462,
+      69.4373,
+      71.7146,
+      69.7552,
+      71.3181,
+      70.0359,
+      70.1466,
+      69.9744,
+      70.2797,
+      70.137,
+      69.1794,
+      69.7125,
+      69.0794,
+      69.4867,
+      69.3952,
+      70.1537,
+      70.5697,
+      68.9053,
+      69.8135,
+      70.5166,
+      69.7054,
+      69.6204,
+      69.4103,
+      70.9044,
+      69.7503,
+      70.7286,
+      70.4997,
+      69.5523,
+      70.9644,
+      68.4623,
+      68.3995,
+      67.6672,
+      70.9357,
+      69.9157,
+      71.1373,
+      70.1603,
+      68.9648,
+      68.338,
+      67.8804,
+      69.2221,
+      69.4333,
+      74.6056,
+      68.0028,
+      70.9113,
+      71.4783,
+      72.8749,
+      72.6039,
+      72.2334,
+      71.5708,
+      70.5577,
+      71.019,
+      70.7987,
+      70.1643,
+      69.1833,
+      72.5596,
+      69.6241,
+      70.8864,
+      69.7981,
+      70.8305,
+      70.6462,
+      69.6681,
+      70.0465,
+      71.6177,
+      68.5183,
+      72.0503,
+      69.8075,
+      70.2087,
+      69.7815,
+      69.0926,
+      70.122,
+      70.6896,
+      68.7222,
+      68.193,
+      68.744,
+      70.4553,
+      70.6782,
+      69.3693,
+      68.5337,
+      69.3946,
+      70.9944,
+      70.9055,
+      70.4064,
+      71.227,
+      69.688,
+      73.2465,
+      68.9809,
+      70.3213,
+      68.9073,
+      71.7447,
+      72.4075,
+      70.2605,
+      69.3907,
+      68.4149,
+      70.7944,
+      71.7815,
+      69.1212,
+      72.506,
+      70.8248,
+      69.7083,
+      70.7916,
+      71.2034,
+      69.8679,
+      70.457,
+      70.0255,
+      72.3833,
+      70.024,
+      69.7112,
+      69.8643,
+      69.8296,
+      73.3361,
+      70.9168,
+      70.4281,
+      70.4858,
+      68.6504,
+      68.8127,
+      70.6143,
+      70.7082,
+      70.4455,
+      70.9664,
+      72.0998,
+      70.4239,
+      69.5163,
+      69.9052,
+      70.6414,
+      69.662,
+      70.4923,
+      69.6647,
+      69.935,
+      70.3037,
+      69.5381,
+      70.9339,
+      72.6394,
+      74.6212,
+      72.748,
+      71.024,
+      74.1743,
+      70.0184,
+      69.4934,
+      70.3523,
+      70.4255,
+      69.9427,
+      69.2417,
+      70.9018,
+      69.9759,
+      69.9597,
+      70.3511,
+      70.0262,
+      71.883,
+      71.394,
+      72.4472,
+      71.3025,
+      69.0263,
+      70.991,
+      69.8856,
+      70.4517,
+      68.6424,
+      69.853,
+      70.3221,
+      69.4187,
+      72.2846,
+      71.1242,
+      71.0176,
+      69.5089,
+      71.1735,
+      70.2841,
+      71.0493,
+      69.5975,
+      69.9397,
+      69.6182,
+      70.7614,
+      71.5151,
+      70.2746,
+      70.3301,
+      70.0982,
+      72.3966,
+      69.404,
+      73.2791,
+      69.7711,
+      69.1024,
+      71.2207,
+      70.8456,
+      71.9319,
+      69.3936
+    ],
+    "mean_ms": 70.3778355,
+    "median_ms": 70.28120000000001,
+    "p95_ms": 72.60567499999999,
+    "std_ms": 1.2150937289319494,
+    "timing_scope": "Synchronous session.run with CPU NumPy input/output, including H2D/D2H and Python/API overhead; excludes model load, preprocessing/tokenization; profiling disabled while timing"
+  },
+  "output_sha256": "a3ba25cc67a80fa94ca4471b0622f636b9b4813ab27da6b8f961e5afde2c6672",
+  "metrics_vs_original": {
+    "mae": 1.3822317123413087e-06,
+    "rmse": 2.1338592902178687e-06,
+    "max_abs_error": 1.3023614883422852e-05,
+    "relative_l2": 5.836785138629166e-07,
+    "cosine_similarity": 0.9999999999998304,
+    "snr_db": 124.67652586936373,
+    "accuracy": 0.91,
+    "top1_ties": 0,
+    "f1_positive": 0.9108910891089109,
+    "top1_agreement": 1.0,
+    "allclose_fp32_tolerance": true
+  },
+  "profile": {
+    "unique_nodes_by_provider": {
+      "CPUExecutionProvider": 413
+    },
+    "operator_counts_by_provider": {
+      "CPUExecutionProvider": {
+        "Cast": 1,
+        "Reshape": 79,
+        "Sub": 28,
+        "Mul": 77,
+        "Gather": 1,
+        "Add": 87,
+        "GlobalAveragePool": 26,
+        "Sqrt": 13,
+        "Reciprocal": 13,
+        "MatMul": 48,
+        "Transpose": 24,
+        "Softmax": 6,
+        "Erf": 6,
+        "Slice": 1,
+        "Squeeze": 1,
+        "FusedGemm": 1,
+        "Gemm": 1
+      }
+    },
+    "kernel_events_by_provider": {
+      "CPUExecutionProvider": 826
+    },
+    "cuda_compute_nodes": 0,
+    "cpu_nodes": [
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/Reshape_3_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/sub_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              1,
+              1,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              1,
+              1,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/sub_1_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              1,
+              1,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/Gather_kernel_time",
+        "op": "Gather",
+        "input_type_shape": [
+          {
+            "float": [
+              30522,
+              768
+            ]
+          },
+          {
+            "int32": [
+              1,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/moments/mean_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/moments/SquaredDifference_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/moments/SquaredDifference__8_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/moments/variance_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/Rsqrt_kernel_time",
+        "op": "Sqrt",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/Rsqrt__9_kernel_time",
+        "op": "Reciprocal",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/mul_2_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/sub_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/embeddings/LayerNorm/batchnorm/add_1_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/k_lin/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/k_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/k_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/k_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/Reshape_1_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/MatMul__19_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/q_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/q_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/q_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/transpose_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              1,
+              1,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/Softmax_kernel_time",
+        "op": "Softmax",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/v_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/v_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/v_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/Reshape_2_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/transpose_2_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/MatMul_1_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/transpose_3_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/out_lin/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/out_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/out_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/attention/out_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/sa_layer_norm/moments/mean_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/sa_layer_norm/moments/SquaredDifference_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/sa_layer_norm/moments/SquaredDifference__29_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/sa_layer_norm/moments/variance_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/sa_layer_norm/batchnorm/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/sa_layer_norm/batchnorm/Rsqrt_kernel_time",
+        "op": "Sqrt",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/sa_layer_norm/batchnorm/Rsqrt__30_kernel_time",
+        "op": "Reciprocal",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/sa_layer_norm/batchnorm/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/sa_layer_norm/batchnorm/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/sa_layer_norm/batchnorm/mul_2_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/sa_layer_norm/batchnorm/sub_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/sa_layer_norm/batchnorm/add_1_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/ffn/lin1/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/ffn/lin1/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/ffn/lin1/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              3072
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/ffn/lin1/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/ffn/Gelu/truediv_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/ffn/Gelu/Erf_kernel_time",
+        "op": "Erf",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/ffn/Gelu/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/ffn/Gelu/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/ffn/Gelu/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/ffn/lin2/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/ffn/lin2/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/ffn/lin2/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/ffn/lin2/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/add_1_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/output_layer_norm/moments/mean_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/output_layer_norm/moments/SquaredDifference_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/output_layer_norm/moments/SquaredDifference__35_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/output_layer_norm/moments/variance_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/output_layer_norm/batchnorm/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/output_layer_norm/batchnorm/Rsqrt_kernel_time",
+        "op": "Sqrt",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/output_layer_norm/batchnorm/Rsqrt__36_kernel_time",
+        "op": "Reciprocal",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/output_layer_norm/batchnorm/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/output_layer_norm/batchnorm/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/output_layer_norm/batchnorm/mul_2_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/output_layer_norm/batchnorm/sub_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._0/output_layer_norm/batchnorm/add_1_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/q_lin/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/k_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/k_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/k_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/Reshape_1_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/MatMul__46_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/q_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/q_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/q_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/transpose_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              1,
+              1,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/Softmax_kernel_time",
+        "op": "Softmax",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/v_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/v_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/v_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/Reshape_2_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/transpose_2_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/MatMul_1_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/transpose_3_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/out_lin/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/out_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/out_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/attention/out_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/sa_layer_norm/moments/mean_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/sa_layer_norm/moments/SquaredDifference_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/sa_layer_norm/moments/SquaredDifference__50_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/sa_layer_norm/moments/variance_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/sa_layer_norm/batchnorm/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/sa_layer_norm/batchnorm/Rsqrt_kernel_time",
+        "op": "Sqrt",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/sa_layer_norm/batchnorm/Rsqrt__51_kernel_time",
+        "op": "Reciprocal",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/sa_layer_norm/batchnorm/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/sa_layer_norm/batchnorm/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/sa_layer_norm/batchnorm/mul_2_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/sa_layer_norm/batchnorm/sub_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/sa_layer_norm/batchnorm/add_1_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/ffn/lin1/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/ffn/lin1/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/ffn/lin1/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              3072
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/ffn/lin1/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/ffn/Gelu/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/ffn/Gelu/truediv_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/ffn/Gelu/Erf_kernel_time",
+        "op": "Erf",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/ffn/Gelu/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/ffn/Gelu/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/ffn/lin2/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/ffn/lin2/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/ffn/lin2/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/ffn/lin2/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/add_1_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/output_layer_norm/moments/mean_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/output_layer_norm/moments/SquaredDifference_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/output_layer_norm/moments/SquaredDifference__56_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/output_layer_norm/moments/variance_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/output_layer_norm/batchnorm/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/output_layer_norm/batchnorm/Rsqrt_kernel_time",
+        "op": "Sqrt",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/output_layer_norm/batchnorm/Rsqrt__57_kernel_time",
+        "op": "Reciprocal",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/output_layer_norm/batchnorm/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/output_layer_norm/batchnorm/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/output_layer_norm/batchnorm/mul_2_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/output_layer_norm/batchnorm/sub_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._1/output_layer_norm/batchnorm/add_1_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/q_lin/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/k_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/k_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/k_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/Reshape_1_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/MatMul__67_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/q_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/q_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/q_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/transpose_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              1,
+              1,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/Softmax_kernel_time",
+        "op": "Softmax",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/v_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/v_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/v_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/Reshape_2_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/transpose_2_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/MatMul_1_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/transpose_3_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/out_lin/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/out_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/out_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/attention/out_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/sa_layer_norm/moments/mean_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/sa_layer_norm/moments/SquaredDifference_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/sa_layer_norm/moments/SquaredDifference__71_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/sa_layer_norm/moments/variance_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/sa_layer_norm/batchnorm/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/sa_layer_norm/batchnorm/Rsqrt_kernel_time",
+        "op": "Sqrt",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/sa_layer_norm/batchnorm/Rsqrt__72_kernel_time",
+        "op": "Reciprocal",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/sa_layer_norm/batchnorm/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/sa_layer_norm/batchnorm/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/sa_layer_norm/batchnorm/mul_2_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/sa_layer_norm/batchnorm/sub_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/sa_layer_norm/batchnorm/add_1_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/ffn/lin1/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/ffn/lin1/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/ffn/lin1/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              3072
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/ffn/lin1/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/ffn/Gelu/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/ffn/Gelu/truediv_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/ffn/Gelu/Erf_kernel_time",
+        "op": "Erf",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/ffn/Gelu/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/ffn/Gelu/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/ffn/lin2/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/ffn/lin2/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/ffn/lin2/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/ffn/lin2/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/add_1_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/output_layer_norm/moments/mean_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/output_layer_norm/moments/SquaredDifference_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/output_layer_norm/moments/SquaredDifference__77_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/output_layer_norm/moments/variance_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/output_layer_norm/batchnorm/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/output_layer_norm/batchnorm/Rsqrt_kernel_time",
+        "op": "Sqrt",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/output_layer_norm/batchnorm/Rsqrt__78_kernel_time",
+        "op": "Reciprocal",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/output_layer_norm/batchnorm/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/output_layer_norm/batchnorm/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/output_layer_norm/batchnorm/mul_2_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/output_layer_norm/batchnorm/sub_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._2/output_layer_norm/batchnorm/add_1_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/v_lin/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/k_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/k_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/k_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/Reshape_1_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/MatMul__88_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/q_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/q_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/q_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/transpose_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              1,
+              1,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/Softmax_kernel_time",
+        "op": "Softmax",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/v_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/v_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/v_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/Reshape_2_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/transpose_2_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/MatMul_1_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/transpose_3_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/out_lin/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/out_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/out_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/attention/out_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/sa_layer_norm/moments/mean_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/sa_layer_norm/moments/SquaredDifference_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/sa_layer_norm/moments/SquaredDifference__92_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/sa_layer_norm/moments/variance_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/sa_layer_norm/batchnorm/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/sa_layer_norm/batchnorm/Rsqrt_kernel_time",
+        "op": "Sqrt",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/sa_layer_norm/batchnorm/Rsqrt__93_kernel_time",
+        "op": "Reciprocal",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/sa_layer_norm/batchnorm/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/sa_layer_norm/batchnorm/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/sa_layer_norm/batchnorm/mul_2_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/sa_layer_norm/batchnorm/sub_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/sa_layer_norm/batchnorm/add_1_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/ffn/lin1/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/ffn/lin1/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/ffn/lin1/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              3072
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/ffn/lin1/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/ffn/Gelu/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/ffn/Gelu/truediv_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/ffn/Gelu/Erf_kernel_time",
+        "op": "Erf",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/ffn/Gelu/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/ffn/Gelu/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/ffn/lin2/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/ffn/lin2/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/ffn/lin2/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/ffn/lin2/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/add_1_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/output_layer_norm/moments/mean_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/output_layer_norm/moments/SquaredDifference_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/output_layer_norm/moments/SquaredDifference__98_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/output_layer_norm/moments/variance_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/output_layer_norm/batchnorm/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/output_layer_norm/batchnorm/Rsqrt_kernel_time",
+        "op": "Sqrt",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/output_layer_norm/batchnorm/Rsqrt__99_kernel_time",
+        "op": "Reciprocal",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/output_layer_norm/batchnorm/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/output_layer_norm/batchnorm/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/output_layer_norm/batchnorm/mul_2_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/output_layer_norm/batchnorm/sub_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._3/output_layer_norm/batchnorm/add_1_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/k_lin/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/k_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/k_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/k_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/Reshape_1_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/MatMul__109_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/q_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/q_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/q_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/transpose_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              1,
+              1,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/Softmax_kernel_time",
+        "op": "Softmax",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/v_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/v_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/v_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/Reshape_2_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/transpose_2_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/MatMul_1_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/transpose_3_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/out_lin/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/out_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/out_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/attention/out_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/sa_layer_norm/moments/mean_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/sa_layer_norm/moments/SquaredDifference_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/sa_layer_norm/moments/SquaredDifference__113_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/sa_layer_norm/moments/variance_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/sa_layer_norm/batchnorm/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/sa_layer_norm/batchnorm/Rsqrt_kernel_time",
+        "op": "Sqrt",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/sa_layer_norm/batchnorm/Rsqrt__114_kernel_time",
+        "op": "Reciprocal",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/sa_layer_norm/batchnorm/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/sa_layer_norm/batchnorm/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/sa_layer_norm/batchnorm/mul_2_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/sa_layer_norm/batchnorm/sub_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/sa_layer_norm/batchnorm/add_1_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/ffn/lin1/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/ffn/lin1/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/ffn/lin1/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              3072
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/ffn/lin1/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/ffn/Gelu/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/ffn/Gelu/truediv_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/ffn/Gelu/Erf_kernel_time",
+        "op": "Erf",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/ffn/Gelu/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/ffn/Gelu/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/ffn/lin2/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/ffn/lin2/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/ffn/lin2/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/ffn/lin2/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/add_1_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/output_layer_norm/moments/mean_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/output_layer_norm/moments/SquaredDifference_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/output_layer_norm/moments/SquaredDifference__119_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/output_layer_norm/moments/variance_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/output_layer_norm/batchnorm/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/output_layer_norm/batchnorm/Rsqrt_kernel_time",
+        "op": "Sqrt",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/output_layer_norm/batchnorm/Rsqrt__120_kernel_time",
+        "op": "Reciprocal",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/output_layer_norm/batchnorm/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/output_layer_norm/batchnorm/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/output_layer_norm/batchnorm/mul_2_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/output_layer_norm/batchnorm/sub_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._4/output_layer_norm/batchnorm/add_1_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/k_lin/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/k_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/k_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/k_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/Reshape_1_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/MatMul__130_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/q_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/q_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/q_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/transpose_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              1,
+              1,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/Softmax_kernel_time",
+        "op": "Softmax",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/v_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/v_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/v_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/Reshape_2_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/transpose_2_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/MatMul_1_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/transpose_3_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/out_lin/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/out_lin/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/out_lin/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/attention/out_lin/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/sa_layer_norm/moments/mean_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/sa_layer_norm/moments/SquaredDifference_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/sa_layer_norm/moments/SquaredDifference__134_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/sa_layer_norm/moments/variance_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/sa_layer_norm/batchnorm/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/sa_layer_norm/batchnorm/Rsqrt_kernel_time",
+        "op": "Sqrt",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/sa_layer_norm/batchnorm/Rsqrt__135_kernel_time",
+        "op": "Reciprocal",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/sa_layer_norm/batchnorm/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/sa_layer_norm/batchnorm/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/sa_layer_norm/batchnorm/mul_2_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/sa_layer_norm/batchnorm/sub_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/sa_layer_norm/batchnorm/add_1_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/ffn/lin1/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/ffn/lin1/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/ffn/lin1/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              3072
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/ffn/lin1/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/ffn/Gelu/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/ffn/Gelu/truediv_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/ffn/Gelu/Erf_kernel_time",
+        "op": "Erf",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/ffn/Gelu/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/ffn/Gelu/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/ffn/lin2/Tensordot/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/ffn/lin2/Tensordot/MatMul_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/ffn/lin2/Tensordot_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/ffn/lin2/BiasAdd_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/add_1_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/output_layer_norm/moments/mean_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/output_layer_norm/moments/SquaredDifference_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/output_layer_norm/moments/SquaredDifference__140_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/output_layer_norm/moments/variance_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/output_layer_norm/batchnorm/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/output_layer_norm/batchnorm/Rsqrt_kernel_time",
+        "op": "Sqrt",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/output_layer_norm/batchnorm/Rsqrt__141_kernel_time",
+        "op": "Reciprocal",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/output_layer_norm/batchnorm/mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/output_layer_norm/batchnorm/mul_1_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/output_layer_norm/batchnorm/mul_2_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              1
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/output_layer_norm/batchnorm/sub_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/distilbert/transformer/layer_._5/output_layer_norm/batchnorm/add_1_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/strided_slice_kernel_time",
+        "op": "Slice",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/strided_slice__145_kernel_time",
+        "op": "Squeeze",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1,
+              768
+            ]
+          },
+          {
+            "int64": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "fused tf_distil_bert_for_sequence_classification/pre_classifier/MatMul_Gemm__6_kernel_time",
+        "op": "FusedGemm",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "tf_distil_bert_for_sequence_classification/classifier/MatMul_Gemm__7_kernel_time",
+        "op": "Gemm",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              768
+            ]
+          },
+          {
+            "float": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "cuda_compute_operators": [],
+    "cuda_compute_examples": [],
+    "note": "Separate profiling session after timing; counts show provider assignment, not kernel-only latency or INT8 arithmetic coverage",
+    "file": "results/gpu/text/profile_cpu_onnx_fp32_2026-10-08_17-30-28.json",
+    "sha256": "47b340e99b9842ca517d8ba6fb7742eea0b00b2861a133019110f22e8b703f35"
+  }
+}

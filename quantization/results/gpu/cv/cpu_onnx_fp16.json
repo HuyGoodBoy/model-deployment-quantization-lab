@@ -1,0 +1,4573 @@
+{
+  "task": "cv",
+  "variant": "onnx_fp16",
+  "device": "cpu",
+  "measured_at_utc": "2026-10-08T10:33:41.335527+00:00",
+  "status": "ok",
+  "warmup": 30,
+  "runs": 200,
+  "runtime_version": "1.20.2",
+  "package_versions": {
+    "onnxruntime-gpu": "1.20.2",
+    "onnx": "1.16.2",
+    "numpy": "1.26.4",
+    "nvidia-cuda-runtime-cu12": "12.6.77",
+    "nvidia-cublas-cu12": "12.6.4.1",
+    "nvidia-cudnn-cu12": "9.5.1.17",
+    "nvidia-cufft-cu12": "11.3.0.4",
+    "nvidia-nvjitlink-cu12": "12.6.85"
+  },
+  "session_providers": [
+    "CPUExecutionProvider"
+  ],
+  "provider_options": {
+    "CPUExecutionProvider": {}
+  },
+  "preloaded_dlls": [
+    "nvJitLink_120_0.dll",
+    "cudart64_12.dll",
+    "cublasLt64_12.dll",
+    "cublas64_12.dll",
+    "cufft64_11.dll",
+    "cudnn64_9.dll"
+  ],
+  "threads": 1,
+  "inter_op_threads": 1,
+  "batch_size": 1,
+  "system": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "cpu_name": "12th Gen Intel(R) Core(TM) i7-12700H",
+    "logical_processors": 20,
+    "machine": "AMD64",
+    "python": "3.11.9"
+  },
+  "canonical_input_sha256": "8a9a7b1f7a49ec8e223e21175b39819f9a24b22a9b0a396a43a60453b14e95d8",
+  "model_sha256": "9c7e62a3684657dfa92a43971c83bcf5ac6cab4bcbed81abd5ff32f2821112af",
+  "model_size_bytes": 51102955,
+  "input_record": {
+    "source_path": "imagenette2-160/val/n01440764/n01440764_11570.JPEG",
+    "image_path": "data\\cv\\images\\val\\n01440764\\n01440764_11570.JPEG",
+    "label": 0,
+    "class_name": "tench",
+    "source_sha256": "e3082c5a782850e46279cf922c1fbc631c5a617594190f65065abdef71bb8d20",
+    "tensor_sha256": "0d0840c5fa90f5afcec1739616d9bcefd8909fa04ee6869787291201d4a9797e"
+  },
+  "benchmark": {
+    "latency_samples_ms": [
+      493.0545,
+      513.5998,
+      451.0863,
+      398.7549,
+      568.0258,
+      532.0019,
+      503.4452,
+      513.6316,
+      369.1663,
+      532.0772,
+      442.3932,
+      573.8296,
+      558.8057,
+      503.3919,
+      604.2972,
+      518.2597,
+      401.6446,
+      482.1424,
+      202.761,
+      117.1012,
+      115.7844,
+      118.7268,
+      120.5461,
+      117.0302,
+      113.8209,
+      114.0014,
+      114.5607,
+      113.2445,
+      111.9576,
+      114.1311,
+      112.53,
+      112.9475,
+      114.8592,
+      114.35,
+      112.0932,
+      114.5495,
+      115.7176,
+      113.8819,
+      115.5837,
+      117.3154,
+      116.0582,
+      115.6529,
+      117.0044,
+      114.6407,
+      115.4403,
+      115.0165,
+      114.0981,
+      113.5436,
+      114.9457,
+      121.2009,
+      114.6911,
+      113.341,
+      117.0208,
+      118.7665,
+      115.6178,
+      115.2407,
+      112.9599,
+      113.9884,
+      113.413,
+      117.7593,
+      114.2648,
+      112.4325,
+      115.269,
+      114.0691,
+      113.004,
+      118.2404,
+      117.4778,
+      113.4783,
+      113.2637,
+      114.5469,
+      115.9636,
+      115.5189,
+      113.7622,
+      115.3249,
+      114.8304,
+      109.8359,
+      112.1361,
+      113.1547,
+      111.4687,
+      110.1483,
+      110.5438,
+      113.42,
+      111.1609,
+      117.1801,
+      115.1628,
+      112.8283,
+      113.6376,
+      112.7271,
+      111.7263,
+      111.7344,
+      112.738,
+      137.4357,
+      115.2321,
+      116.5648,
+      114.9328,
+      114.4094,
+      112.0806,
+      114.9207,
+      123.8757,
+      113.88,
+      116.4647,
+      115.5687,
+      115.611,
+      115.226,
+      113.6596,
+      115.2176,
+      114.352,
+      121.5559,
+      117.0435,
+      117.7452,
+      121.967,
+      127.8614,
+      112.9679,
+      112.3357,
+      115.8339,
+      111.7068,
+      112.3641,
+      116.6545,
+      116.8869,
+      121.6344,
+      118.4082,
+      115.4551,
+      116.5178,
+      113.8615,
+      114.8334,
+      112.2297,
+      111.385,
+      115.443,
+      114.2242,
+      120.0693,
+      115.7899,
+      116.002,
+      113.4191,
+      112.324,
+      112.838,
+      112.6734,
+      110.3186,
+      110.8841,
+      112.7541,
+      113.9466,
+      112.6111,
+      110.9593,
+      112.5195,
+      114.9877,
+      114.6241,
+      113.0694,
+      115.5812,
+      115.638,
+      113.2334,
+      112.8064,
+      112.5233,
+      114.5648,
+      115.0716,
+      110.5621,
+      111.9085,
+      112.6613,
+      113.8035,
+      112.1284,
+      111.1403,
+      113.0534,
+      112.2848,
+      112.9099,
+      113.2266,
+      113.4374,
+      113.3126,
+      114.1474,
+      111.4563,
+      116.6038,
+      115.442,
+      114.0043,
+      114.2126,
+      114.1161,
+      115.2158,
+      114.6827,
+      112.3889,
+      116.592,
+      117.2665,
+      114.6598,
+      113.8057,
+      115.1783,
+      113.976,
+      113.7331,
+      115.7184,
+      113.9883,
+      113.6798,
+      113.4929,
+      111.6444,
+      110.6643,
+      109.5733,
+      117.6352,
+      115.8506,
+      112.0964,
+      115.8956,
+      114.7963,
+      113.7422,
+      114.1405,
+      112.0434,
+      111.2946,
+      116.2847,
+      113.6697
+    ],
+    "mean_ms": 149.5511355,
+    "median_ms": 114.5551,
+    "p95_ms": 503.394565,
+    "std_ms": 111.30894700352388,
+    "timing_scope": "Synchronous session.run with CPU NumPy input/output, including H2D/D2H and Python/API overhead; excludes model load, preprocessing/tokenization; profiling disabled while timing"
+  },
+  "output_sha256": "bc37fbd7719338c7d3afaf0d9dd9919f295cb4006685a2aeae2a0061080f50ee",
+  "metrics_vs_original": {
+    "mae": 1.6822899387488463e-06,
+    "rmse": 3.71395843893318e-05,
+    "max_abs_error": 0.004124253988265991,
+    "relative_l2": 0.0014976546595503485,
+    "cosine_similarity": 0.9999988791372173,
+    "snr_db": 56.49176635946037,
+    "accuracy": 0.73,
+    "top1_ties": 0,
+    "top5_accuracy": 0.9,
+    "probability_sum_min": 0.9999995231628418,
+    "probability_sum_max": 1.0000009536743164,
+    "top1_agreement": 1.0,
+    "allclose_fp32_tolerance": false,
+    "top5_overlap": 0.998
+  },
+  "profile": {
+    "unique_nodes_by_provider": {
+      "CPUExecutionProvider": 239
+    },
+    "operator_counts_by_provider": {
+      "CPUExecutionProvider": {
+        "Cast": 111,
+        "Transpose": 1,
+        "Conv": 53,
+        "Relu": 49,
+        "MaxPool": 1,
+        "Add": 16,
+        "GlobalAveragePool": 1,
+        "Squeeze": 1,
+        "Gemm": 1,
+        "ReduceMax": 1,
+        "Sub": 1,
+        "Exp": 1,
+        "ReduceSum": 1,
+        "Div": 1
+      }
+    },
+    "kernel_events_by_provider": {
+      "CPUExecutionProvider": 478
+    },
+    "cuda_compute_nodes": 0,
+    "cpu_nodes": [
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/predictions/BiasAdd/ReadVariableOp:0_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              1000
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/predictions/MatMul/ReadVariableOp:0_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              2048,
+              1000
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block3_3_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              2048
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block3_3_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              2048,
+              512,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block3_2_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block3_2_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512,
+              512,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block3_1_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block3_1_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512,
+              2048,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block2_3_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              2048
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block2_3_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              2048,
+              512,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block2_2_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block2_2_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512,
+              512,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block2_1_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block2_1_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512,
+              2048,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block1_3_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              2048
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block1_3_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              2048,
+              512,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block1_2_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block1_2_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512,
+              512,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block1_1_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block1_1_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512,
+              1024,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block6_3_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block6_3_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              1024,
+              256,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block6_2_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block6_2_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256,
+              256,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block6_1_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block6_1_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256,
+              1024,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block5_3_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block5_3_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              1024,
+              256,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block5_2_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block5_2_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256,
+              256,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block5_1_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block5_1_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256,
+              1024,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block4_3_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block4_3_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              1024,
+              256,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block4_2_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block4_2_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256,
+              256,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block4_1_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block4_1_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256,
+              1024,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block3_3_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block3_3_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              1024,
+              256,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block3_2_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block3_2_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256,
+              256,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block3_1_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block3_1_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256,
+              1024,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block2_3_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block2_3_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              1024,
+              256,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block2_2_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block2_2_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256,
+              256,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block2_1_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block2_1_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256,
+              1024,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block1_3_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block1_3_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              1024,
+              256,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block1_2_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block1_2_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256,
+              256,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block1_1_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block1_1_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256,
+              512,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block4_3_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block4_3_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512,
+              128,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block4_2_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block4_2_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              128,
+              128,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block4_1_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block4_1_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              128,
+              512,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block3_3_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block3_3_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512,
+              128,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block3_2_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block3_2_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              128,
+              128,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block3_1_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block3_1_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              128,
+              512,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block2_3_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block2_3_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512,
+              128,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block2_2_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block2_2_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              128,
+              128,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block2_1_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block2_1_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              128,
+              512,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block1_3_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block1_3_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512,
+              128,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block1_2_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block1_2_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              128,
+              128,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block1_1_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block1_1_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              128,
+              256,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block3_3_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block3_3_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256,
+              64,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block3_2_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block3_2_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64,
+              64,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block3_1_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block3_1_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64,
+              256,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block2_3_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block2_3_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256,
+              64,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block2_2_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block2_2_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64,
+              64,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block2_1_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block2_1_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64,
+              256,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block1_3_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block1_3_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256,
+              64,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block1_2_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block1_2_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64,
+              64,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block1_1_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block1_1_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64,
+              64,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_Conv__222_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_Conv__222_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64,
+              3,
+              7,
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "graph_input_cast0_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              224,
+              224,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv1_conv/Conv2D__6_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              224,
+              224,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv1_conv/Conv2D__6:0_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              3,
+              224,
+              224
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "Conv__222_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              3,
+              224,
+              224
+            ]
+          },
+          {
+            "float": [
+              64,
+              3,
+              7,
+              7
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv1_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              112,
+              112
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/pool1_pool/MaxPool_kernel_time",
+        "op": "MaxPool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              112,
+              112
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block1_1_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              56,
+              56
+            ]
+          },
+          {
+            "float": [
+              64,
+              64,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block1_1_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              56,
+              56
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block1_2_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              56,
+              56
+            ]
+          },
+          {
+            "float": [
+              64,
+              64,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block1_2_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              56,
+              56
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block1_3_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              56,
+              56
+            ]
+          },
+          {
+            "float": [
+              256,
+              64,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block1_0_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv2_block1_0_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              256,
+              64,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block1_0_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              56,
+              56
+            ]
+          },
+          {
+            "float": [
+              256,
+              64,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block1_add/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              56,
+              56
+            ]
+          },
+          {
+            "float": [
+              1,
+              256,
+              56,
+              56
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block1_out/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              56,
+              56
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block2_1_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              56,
+              56
+            ]
+          },
+          {
+            "float": [
+              64,
+              256,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block2_1_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              56,
+              56
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block2_2_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              56,
+              56
+            ]
+          },
+          {
+            "float": [
+              64,
+              64,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block2_2_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              56,
+              56
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block2_3_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              56,
+              56
+            ]
+          },
+          {
+            "float": [
+              256,
+              64,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block2_add/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              56,
+              56
+            ]
+          },
+          {
+            "float": [
+              1,
+              256,
+              56,
+              56
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block2_out/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              56,
+              56
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block3_1_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              56,
+              56
+            ]
+          },
+          {
+            "float": [
+              64,
+              256,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block3_1_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              56,
+              56
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block3_2_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              56,
+              56
+            ]
+          },
+          {
+            "float": [
+              64,
+              64,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block3_2_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              56,
+              56
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block3_3_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              56,
+              56
+            ]
+          },
+          {
+            "float": [
+              256,
+              64,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block3_add/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              56,
+              56
+            ]
+          },
+          {
+            "float": [
+              1,
+              256,
+              56,
+              56
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv2_block3_out/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              56,
+              56
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block1_1_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              56,
+              56
+            ]
+          },
+          {
+            "float": [
+              128,
+              256,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block1_1_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              28,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block1_2_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              28,
+              28
+            ]
+          },
+          {
+            "float": [
+              128,
+              128,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block1_2_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              28,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block1_3_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              28,
+              28
+            ]
+          },
+          {
+            "float": [
+              512,
+              128,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block1_0_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv3_block1_0_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              512,
+              256,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block1_0_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              56,
+              56
+            ]
+          },
+          {
+            "float": [
+              512,
+              256,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block1_add/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              28,
+              28
+            ]
+          },
+          {
+            "float": [
+              1,
+              512,
+              28,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block1_out/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              28,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block2_1_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              28,
+              28
+            ]
+          },
+          {
+            "float": [
+              128,
+              512,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block2_1_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              28,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block2_2_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              28,
+              28
+            ]
+          },
+          {
+            "float": [
+              128,
+              128,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block2_2_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              28,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block2_3_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              28,
+              28
+            ]
+          },
+          {
+            "float": [
+              512,
+              128,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block2_add/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              28,
+              28
+            ]
+          },
+          {
+            "float": [
+              1,
+              512,
+              28,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block2_out/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              28,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block3_1_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              28,
+              28
+            ]
+          },
+          {
+            "float": [
+              128,
+              512,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block3_1_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              28,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block3_2_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              28,
+              28
+            ]
+          },
+          {
+            "float": [
+              128,
+              128,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block3_2_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              28,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block3_3_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              28,
+              28
+            ]
+          },
+          {
+            "float": [
+              512,
+              128,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block3_add/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              28,
+              28
+            ]
+          },
+          {
+            "float": [
+              1,
+              512,
+              28,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block3_out/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              28,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block4_1_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              28,
+              28
+            ]
+          },
+          {
+            "float": [
+              128,
+              512,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block4_1_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              28,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block4_2_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              28,
+              28
+            ]
+          },
+          {
+            "float": [
+              128,
+              128,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block4_2_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              28,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block4_3_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              28,
+              28
+            ]
+          },
+          {
+            "float": [
+              512,
+              128,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block4_add/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              28,
+              28
+            ]
+          },
+          {
+            "float": [
+              1,
+              512,
+              28,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv3_block4_out/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              28,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block1_1_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              28,
+              28
+            ]
+          },
+          {
+            "float": [
+              256,
+              512,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block1_1_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block1_2_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              256,
+              256,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block1_2_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block1_3_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              1024,
+              256,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block1_0_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv4_block1_0_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              1024,
+              512,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block1_0_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              28,
+              28
+            ]
+          },
+          {
+            "float": [
+              1024,
+              512,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block1_add/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block1_out/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block2_1_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              256,
+              1024,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block2_1_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block2_2_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              256,
+              256,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block2_2_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block2_3_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              1024,
+              256,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block2_add/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block2_out/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block3_1_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              256,
+              1024,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block3_1_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block3_2_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              256,
+              256,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block3_2_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block3_3_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              1024,
+              256,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block3_add/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block3_out/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block4_1_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              256,
+              1024,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block4_1_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block4_2_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              256,
+              256,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block4_2_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block4_3_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              1024,
+              256,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block4_add/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block4_out/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block5_1_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              256,
+              1024,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block5_1_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block5_2_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              256,
+              256,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block5_2_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block5_3_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              1024,
+              256,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block5_add/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block5_out/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block6_1_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              256,
+              1024,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block6_1_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block6_2_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              256,
+              256,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block6_2_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block6_3_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              256,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              1024,
+              256,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              1024
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block6_add/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv4_block6_out/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block1_1_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              512,
+              1024,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block1_1_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              7,
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block1_2_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              7,
+              7
+            ]
+          },
+          {
+            "float": [
+              512,
+              512,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block1_2_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              7,
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block1_3_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              7,
+              7
+            ]
+          },
+          {
+            "float": [
+              2048,
+              512,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              2048
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block1_0_conv/Conv2D_bias_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              2048
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_resnet50/conv5_block1_0_conv/Conv2D_weights_fused_bn_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              2048,
+              1024,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block1_0_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1024,
+              14,
+              14
+            ]
+          },
+          {
+            "float": [
+              2048,
+              1024,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              2048
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block1_add/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              2048,
+              7,
+              7
+            ]
+          },
+          {
+            "float": [
+              1,
+              2048,
+              7,
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block1_out/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              2048,
+              7,
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block2_1_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              2048,
+              7,
+              7
+            ]
+          },
+          {
+            "float": [
+              512,
+              2048,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block2_1_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              7,
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block2_2_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              7,
+              7
+            ]
+          },
+          {
+            "float": [
+              512,
+              512,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block2_2_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              7,
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block2_3_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              7,
+              7
+            ]
+          },
+          {
+            "float": [
+              2048,
+              512,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              2048
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block2_add/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              2048,
+              7,
+              7
+            ]
+          },
+          {
+            "float": [
+              1,
+              2048,
+              7,
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block2_out/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              2048,
+              7,
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block3_1_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              2048,
+              7,
+              7
+            ]
+          },
+          {
+            "float": [
+              512,
+              2048,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block3_1_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              7,
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block3_2_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              7,
+              7
+            ]
+          },
+          {
+            "float": [
+              512,
+              512,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block3_2_relu/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              7,
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block3_3_conv/Conv2D_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              512,
+              7,
+              7
+            ]
+          },
+          {
+            "float": [
+              2048,
+              512,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              2048
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block3_add/add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              2048,
+              7,
+              7
+            ]
+          },
+          {
+            "float": [
+              1,
+              2048,
+              7,
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/conv5_block3_out/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              2048,
+              7,
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/avg_pool/Mean_kernel_time",
+        "op": "GlobalAveragePool",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              2048,
+              7,
+              7
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/avg_pool/Mean_Squeeze__312_kernel_time",
+        "op": "Squeeze",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              2048,
+              1,
+              1
+            ]
+          },
+          {
+            "int64": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "resnet50/predictions/MatMul_Gemm__8_kernel_time",
+        "op": "Gemm",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              2048
+            ]
+          },
+          {
+            "float": [
+              2048,
+              1000
+            ]
+          },
+          {
+            "float": [
+              1000
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "ReduceMax_127_kernel_time",
+        "op": "ReduceMax",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1000
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "Sub_128_kernel_time",
+        "op": "Sub",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1000
+            ]
+          },
+          {
+            "float": [
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "Exp_129_kernel_time",
+        "op": "Exp",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1000
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "ReduceSum_130_kernel_time",
+        "op": "ReduceSum",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1000
+            ]
+          },
+          {
+            "int64": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "Div_131_kernel_time",
+        "op": "Div",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1000
+            ]
+          },
+          {
+            "float": [
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "graph_output_cast0_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              1000
+            ]
+          }
+        ]
+      }
+    ],
+    "cuda_compute_operators": [],
+    "cuda_compute_examples": [],
+    "note": "Separate profiling session after timing; counts show provider assignment, not kernel-only latency or INT8 arithmetic coverage",
+    "file": "results/gpu/cv/profile_cpu_onnx_fp16_2026-10-08_17-34-37.json",
+    "sha256": "da5fc3178499e432190645f0c5423673af489535a585cfef972975f7d19ec88e"
+  }
+}

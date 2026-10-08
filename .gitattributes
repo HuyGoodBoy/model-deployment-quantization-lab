@@ -1,0 +1,5 @@
+# Preserve evidence bytes and recorded SHA256 on every operating system.
+*.npy -text
+*.npz -text
+/results/** -text
+/quantization/results/** -text

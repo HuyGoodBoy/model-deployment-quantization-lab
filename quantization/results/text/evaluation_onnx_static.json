@@ -1,0 +1,36 @@
+{
+  "status": "ok",
+  "output_sha256": "abb3af06865c89899acfb1f6c20ff3572c426b26a1501f8d3dad599741ae75f2",
+  "model_sha256": "3fe241dd3024563b3a6920f4a37a403ecd03162f8cac1f5407fcb0a0082a723a",
+  "model_size_bytes": 137902028,
+  "input_sha256": "14690c920a532c01b9826b99c22f5b2062e798cdcf37c49158e8f0b9ea61f411",
+  "runtime": {
+    "version": "1.20.1",
+    "providers": [
+      "CPUExecutionProvider"
+    ],
+    "inputs": [
+      {
+        "name": "input_ids",
+        "type": "tensor(int32)",
+        "shape": [
+          1,
+          64
+        ]
+      },
+      {
+        "name": "attention_mask",
+        "type": "tensor(int32)",
+        "shape": [
+          1,
+          64
+        ]
+      }
+    ]
+  },
+  "classification": {
+    "accuracy": 0.92,
+    "top1_ties": 0,
+    "f1_positive": 0.92
+  }
+}

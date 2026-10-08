@@ -1,0 +1,170 @@
+{
+  "num_images": 2,
+  "dataset_kind": "two_demo_images_not_representative",
+  "model_sha256": "55e17dc4b1701ca5a6d79d466cec132064fe211d0f1e8b57b7239c9828914a37",
+  "inputs": {
+    "grace_hopper.jpg": "22b31636d34bbcdbbc1d0163608047f16a0fb0c0c34599d24bbac812b7ecf289",
+    "sunflower.jpg": "74f3292fb053893b75aa90eb45910db42e768d34a5b88deeebf0eb5f10eca1da"
+  },
+  "atol": 1e-05,
+  "rtol": 0.0001,
+  "threads": 1,
+  "comparisons": {
+    "onnx": {
+      "mae": 1.1837676652248775e-09,
+      "rmse": 1.6909356406121633e-08,
+      "max_abs_error": 6.556510925292969e-07,
+      "relative_l2": 6.173173492840148e-07,
+      "cosine_similarity": 0.9999999999998396,
+      "snr_db": 124.18983034620996,
+      "top1_agreement": 1.0,
+      "top5_overlap": 1.0,
+      "allclose": true
+    },
+    "tflite": {
+      "mae": 1.2570103535836098e-09,
+      "rmse": 2.272836725606086e-08,
+      "max_abs_error": 9.5367431640625e-07,
+      "relative_l2": 8.297545507400646e-07,
+      "cosine_similarity": 0.9999999999997479,
+      "snr_db": 121.62100714100534,
+      "top1_agreement": 1.0,
+      "top5_overlap": 1.0,
+      "allclose": true
+    }
+  },
+  "per_image": [
+    {
+      "mae": 1.1860561244247947e-09,
+      "rmse": 1.155858809395807e-08,
+      "max_abs_error": 2.980232238769531e-07,
+      "relative_l2": 4.541449274164434e-07,
+      "cosine_similarity": 0.9999999999999641,
+      "snr_db": 126.85611064623997,
+      "filename": "grace_hopper.jpg",
+      "runtime": "onnx",
+      "reference_top1": 652,
+      "candidate_top1": 652,
+      "reference_top5": [
+        652,
+        439,
+        667,
+        981,
+        715
+      ],
+      "candidate_top5": [
+        652,
+        439,
+        667,
+        981,
+        715
+      ],
+      "top1_agreement": true,
+      "allclose": true
+    },
+    {
+      "mae": 1.1814792060249601e-09,
+      "rmse": 2.093446224321762e-08,
+      "max_abs_error": 6.556510925292969e-07,
+      "relative_l2": 7.16850392930394e-07,
+      "cosine_similarity": 0.9999999999999944,
+      "snr_db": 122.89142944743388,
+      "filename": "sunflower.jpg",
+      "runtime": "onnx",
+      "reference_top1": 985,
+      "candidate_top1": 985,
+      "reference_top5": [
+        985,
+        309,
+        883,
+        328,
+        950
+      ],
+      "candidate_top5": [
+        985,
+        309,
+        883,
+        328,
+        950
+      ],
+      "top1_agreement": true,
+      "allclose": true
+    },
+    {
+      "mae": 2.165415025956463e-09,
+      "rmse": 3.1885296536785755e-08,
+      "max_abs_error": 9.5367431640625e-07,
+      "relative_l2": 1.2527953728984983e-06,
+      "cosine_similarity": 0.999999999999892,
+      "snr_db": 118.04239718631587,
+      "filename": "grace_hopper.jpg",
+      "runtime": "tflite",
+      "reference_top1": 652,
+      "candidate_top1": 652,
+      "reference_top5": [
+        652,
+        439,
+        667,
+        981,
+        715
+      ],
+      "candidate_top5": [
+        652,
+        439,
+        667,
+        981,
+        715
+      ],
+      "top1_agreement": true,
+      "allclose": true
+    },
+    {
+      "mae": 3.486056812107563e-10,
+      "rmse": 4.060199627357909e-09,
+      "max_abs_error": 1.1920928955078125e-07,
+      "relative_l2": 1.3903178712843809e-07,
+      "cosine_similarity": 0.9999999999999988,
+      "snr_db": 137.13771789474174,
+      "filename": "sunflower.jpg",
+      "runtime": "tflite",
+      "reference_top1": 985,
+      "candidate_top1": 985,
+      "reference_top5": [
+        985,
+        309,
+        883,
+        328,
+        950
+      ],
+      "candidate_top5": [
+        985,
+        309,
+        883,
+        328,
+        950
+      ],
+      "top1_agreement": true,
+      "allclose": true
+    }
+  ],
+  "accuracy": null,
+  "labels_path": null,
+  "runtime_info": {
+    "tensorflow": {
+      "version": "2.15.1",
+      "mode": "tf.function, CPU"
+    },
+    "onnx": {
+      "version": "1.20.1",
+      "providers": [
+        "CPUExecutionProvider"
+      ],
+      "graph_optimization": "ORT_ENABLE_ALL"
+    },
+    "tflite": {
+      "version": "2.15.1",
+      "mode": "tf.lite.Interpreter",
+      "delegates": "default runtime delegates (see stderr, e.g. XNNPACK)"
+    }
+  }
+}

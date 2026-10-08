@@ -1,0 +1,11 @@
+{
+  ".cache\\imagenette2-160.tgz": "64d0c4859f35a461889e0147755a999a48b49bf38a7e0f9bd27003f10db02fe5",
+  ".cache\\resnet50.h5": "7011d39ea4f61f4ddb8da99c4addf3fae4209bfda7828adb4698b16283258fbe",
+  ".cache\\keras\\keras.json": "c97b3b904eb5b209c949c8a5bafc25fac71c48829eaf4e410e72f8329c9e4a90",
+  ".cache\\sst2\\data\\train-00000-of-00001.parquet": "c7921283b75a42e685f50edecb96798607ea0fcbfd0739ee8975f22c12d55f09",
+  ".cache\\sst2\\data\\validation-00000-of-00001.parquet": "fb00fe008f6828f86ba2beda8415a4cf5da0c884f21c5f238c87131b5aa19529",
+  ".cache\\text_model\\config.json": "582122c8f414793d131e10022ce9ba04e3811a9da6389137ee2f18665b4f4d15",
+  ".cache\\text_model\\tf_model.h5": "b44df675bb34ccd8e57c14292c811ac7358b7c8e37c7f212745f640cd6019ac8",
+  ".cache\\text_model\\tokenizer_config.json": "5ab9097b4149371c5fd52b2d6e26cb6f9c07c0d19fcfdda895b1adad6b57c3e0",
+  ".cache\\text_model\\vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+}
