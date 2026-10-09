@@ -1,0 +1,9 @@
+{
+  "variant": "fp32",
+  "route": "same PyTorch state -> checked Keras bridge -> TFLite",
+  "status": "ok",
+  "seconds": 84.14817140000014,
+  "size_bytes": 2486880,
+  "sha256": "508d8fd21f1b2c14ecedf3835ac4e6146c6b8353e3d5a6ed6b7299d50cc96310",
+  "tensorflow": "2.15.1"
+}

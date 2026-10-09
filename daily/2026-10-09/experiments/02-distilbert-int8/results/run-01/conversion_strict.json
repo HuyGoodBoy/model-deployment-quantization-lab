@@ -1,0 +1,13 @@
+{
+  "variant": "strict",
+  "strict_ops": true,
+  "mask_bound": null,
+  "scope": "static calibration; INT32 token IDs/mask are preserved",
+  "status": "ok",
+  "conversion_seconds": 225.6156137999999,
+  "model_sha256": "802249d0a14eac866f91469fc0a497e75fb57ab32272f600f18912ace52ae9c5",
+  "size_bytes": 66844704,
+  "calibration_sha256": "5a26f2d81e9130ed30feec4190c88d06c9307e4afaf706c75f09ea857fcd708d",
+  "tensorflow_version": "2.15.1",
+  "source_model_sha256": "b44df675bb34ccd8e57c14292c811ac7358b7c8e37c7f212745f640cd6019ac8"
+}

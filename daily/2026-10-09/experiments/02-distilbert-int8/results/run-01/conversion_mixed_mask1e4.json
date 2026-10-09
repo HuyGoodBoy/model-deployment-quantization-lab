@@ -1,0 +1,27 @@
+{
+  "variant": "mixed_mask1e4",
+  "strict_ops": false,
+  "mask_bound": 10000.0,
+  "scope": "static calibration; INT32 token IDs/mask are preserved",
+  "fp32_mask_change_check": {
+    "mae": 0.0,
+    "rmse": 0.0,
+    "max_abs_error": 0.0,
+    "relative_l2": 0.0,
+    "cosine_similarity": 0.9999999999999998,
+    "snr_db": "inf",
+    "allclose": true,
+    "classification": {
+      "accuracy": 0.91,
+      "top1_ties": 0,
+      "f1_positive": 0.9108910891089109
+    }
+  },
+  "status": "ok",
+  "conversion_seconds": 193.1374647,
+  "model_sha256": "98b19bb0d6fa9f4d293d1fbf7abdcb3ea8c65f356780ea810e6b5fe2d59f1992",
+  "size_bytes": 66844704,
+  "calibration_sha256": "5a26f2d81e9130ed30feec4190c88d06c9307e4afaf706c75f09ea857fcd708d",
+  "tensorflow_version": "2.15.1",
+  "source_model_sha256": "b44df675bb34ccd8e57c14292c811ac7358b7c8e37c7f212745f640cd6019ac8"
+}

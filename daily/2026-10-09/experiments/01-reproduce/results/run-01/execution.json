@@ -1,0 +1,554 @@
+[
+  {
+    "name": "01_port_keras_variant_fp16",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\03-mlsd\\src\\port_keras.py",
+      "--variant",
+      "fp16"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 93.90562224388123
+  },
+  {
+    "name": "02_port_keras_variant_dynamic",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\03-mlsd\\src\\port_keras.py",
+      "--variant",
+      "dynamic"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 101.1840090751648
+  },
+  {
+    "name": "03_port_keras_variant_static",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\03-mlsd\\src\\port_keras.py",
+      "--variant",
+      "static"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 180.37937569618225
+  },
+  {
+    "name": "04_port_keras_variant_decoded_fp32",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\03-mlsd\\src\\port_keras.py",
+      "--variant",
+      "decoded_fp32"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 78.76909804344177
+  },
+  {
+    "name": "05_run_measure_variant_baseline_threads_4",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\02-distilbert-int8\\src\\run.py",
+      "measure",
+      "--variant",
+      "baseline",
+      "--threads",
+      "4"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 19.083529472351074
+  },
+  {
+    "name": "06_run_measure_variant_strict_threads_4",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\02-distilbert-int8\\src\\run.py",
+      "measure",
+      "--variant",
+      "strict",
+      "--threads",
+      "4"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 21.209247827529907
+  },
+  {
+    "name": "07_run_measure_variant_mixed_mask1e4_threads_4",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\02-distilbert-int8\\src\\run.py",
+      "measure",
+      "--variant",
+      "mixed_mask1e4",
+      "--threads",
+      "4"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 19.183869123458862
+  },
+  {
+    "name": "08_run_measure_variant_mixed_mask1e2_threads_4",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\02-distilbert-int8\\src\\run.py",
+      "measure",
+      "--variant",
+      "mixed_mask1e2",
+      "--threads",
+      "4"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 27.070720434188843
+  },
+  {
+    "name": "09_runtime_compare_task_cv_variant_onnx_fp32_runtime_old",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "cv",
+      "--variant",
+      "onnx_fp32",
+      "--runtime",
+      "old"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 11.915501832962036
+  },
+  {
+    "name": "10_runtime_compare_task_cv_variant_onnx_fp32_runtime_new",
+    "command": [
+      ".venv-day09\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "cv",
+      "--variant",
+      "onnx_fp32",
+      "--runtime",
+      "new"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 10.331230401992798
+  },
+  {
+    "name": "11_runtime_compare_task_cv_variant_onnx_dynamic_runtime_old",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "cv",
+      "--variant",
+      "onnx_dynamic",
+      "--runtime",
+      "old"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 10.686044692993164
+  },
+  {
+    "name": "12_runtime_compare_task_cv_variant_onnx_dynamic_runtime_new",
+    "command": [
+      ".venv-day09\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "cv",
+      "--variant",
+      "onnx_dynamic",
+      "--runtime",
+      "new"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 9.522518873214722
+  },
+  {
+    "name": "13_runtime_compare_task_cv_variant_onnx_static_runtime_old",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "cv",
+      "--variant",
+      "onnx_static",
+      "--runtime",
+      "old"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 10.584963083267212
+  },
+  {
+    "name": "14_runtime_compare_task_cv_variant_onnx_static_runtime_new",
+    "command": [
+      ".venv-day09\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "cv",
+      "--variant",
+      "onnx_static",
+      "--runtime",
+      "new"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 11.452025413513184
+  },
+  {
+    "name": "15_runtime_compare_task_cv_variant_tflite_fp32_runtime_old",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "cv",
+      "--variant",
+      "tflite_fp32",
+      "--runtime",
+      "old"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 25.1741726398468
+  },
+  {
+    "name": "16_runtime_compare_task_cv_variant_tflite_fp32_runtime_new",
+    "command": [
+      ".venv-day09\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "cv",
+      "--variant",
+      "tflite_fp32",
+      "--runtime",
+      "new"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 28.72929072380066
+  },
+  {
+    "name": "17_runtime_compare_task_cv_variant_tflite_dynamic_runtime_old",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "cv",
+      "--variant",
+      "tflite_dynamic",
+      "--runtime",
+      "old"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 102.07655477523804
+  },
+  {
+    "name": "18_runtime_compare_task_cv_variant_tflite_dynamic_runtime_new",
+    "command": [
+      ".venv-day09\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "cv",
+      "--variant",
+      "tflite_dynamic",
+      "--runtime",
+      "new"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 6.059507846832275
+  },
+  {
+    "name": "19_runtime_compare_task_cv_variant_tflite_static_runtime_old",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "cv",
+      "--variant",
+      "tflite_static",
+      "--runtime",
+      "old"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 13.579378128051758
+  },
+  {
+    "name": "20_runtime_compare_task_cv_variant_tflite_static_runtime_new",
+    "command": [
+      ".venv-day09\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "cv",
+      "--variant",
+      "tflite_static",
+      "--runtime",
+      "new"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 5.745270729064941
+  },
+  {
+    "name": "21_runtime_compare_task_text_variant_onnx_fp32_runtime_old",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "text",
+      "--variant",
+      "onnx_fp32",
+      "--runtime",
+      "old"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 13.798285961151123
+  },
+  {
+    "name": "22_runtime_compare_task_text_variant_onnx_fp32_runtime_new",
+    "command": [
+      ".venv-day09\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "text",
+      "--variant",
+      "onnx_fp32",
+      "--runtime",
+      "new"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 11.070780277252197
+  },
+  {
+    "name": "23_runtime_compare_task_text_variant_onnx_dynamic_runtime_old",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "text",
+      "--variant",
+      "onnx_dynamic",
+      "--runtime",
+      "old"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 5.836002349853516
+  },
+  {
+    "name": "24_runtime_compare_task_text_variant_onnx_dynamic_runtime_new",
+    "command": [
+      ".venv-day09\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "text",
+      "--variant",
+      "onnx_dynamic",
+      "--runtime",
+      "new"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 6.689242362976074
+  },
+  {
+    "name": "25_runtime_compare_task_text_variant_onnx_static_runtime_old",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "text",
+      "--variant",
+      "onnx_static",
+      "--runtime",
+      "old"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 29.364705801010132
+  },
+  {
+    "name": "26_runtime_compare_task_text_variant_onnx_static_runtime_new",
+    "command": [
+      ".venv-day09\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "text",
+      "--variant",
+      "onnx_static",
+      "--runtime",
+      "new"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 26.26637864112854
+  },
+  {
+    "name": "27_runtime_compare_task_text_variant_tflite_fp32_runtime_old",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "text",
+      "--variant",
+      "tflite_fp32",
+      "--runtime",
+      "old"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 51.60554647445679
+  },
+  {
+    "name": "28_runtime_compare_task_text_variant_tflite_fp32_runtime_new",
+    "command": [
+      ".venv-day09\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "text",
+      "--variant",
+      "tflite_fp32",
+      "--runtime",
+      "new"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 20.050359964370728
+  },
+  {
+    "name": "29_runtime_compare_task_text_variant_tflite_dynamic_runtime_old",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "text",
+      "--variant",
+      "tflite_dynamic",
+      "--runtime",
+      "old"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 321.5480899810791
+  },
+  {
+    "name": "30_runtime_compare_task_text_variant_tflite_dynamic_runtime_new",
+    "command": [
+      ".venv-day09\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "text",
+      "--variant",
+      "tflite_dynamic",
+      "--runtime",
+      "new"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 10.137313842773438
+  },
+  {
+    "name": "31_runtime_compare_task_text_variant_tflite_static_runtime_old",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "text",
+      "--variant",
+      "tflite_static",
+      "--runtime",
+      "old"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 49.38669514656067
+  },
+  {
+    "name": "32_runtime_compare_task_text_variant_tflite_static_runtime_new",
+    "command": [
+      ".venv-day09\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\01-reproduce\\src\\runtime_compare.py",
+      "--task",
+      "text",
+      "--variant",
+      "tflite_static",
+      "--runtime",
+      "new"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 26.520811319351196
+  },
+  {
+    "name": "33_measure_variant_fp32",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\03-mlsd\\src\\measure.py",
+      "--variant",
+      "fp32"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 37.312538862228394
+  },
+  {
+    "name": "34_measure_variant_fp16",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\03-mlsd\\src\\measure.py",
+      "--variant",
+      "fp16"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 36.38557028770447
+  },
+  {
+    "name": "35_measure_variant_dynamic",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\03-mlsd\\src\\measure.py",
+      "--variant",
+      "dynamic"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 173.55426263809204
+  },
+  {
+    "name": "36_measure_variant_static",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\03-mlsd\\src\\measure.py",
+      "--variant",
+      "static"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 40.88721060752869
+  },
+  {
+    "name": "37_measure_variant_decoded_fp32",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\03-mlsd\\src\\measure.py",
+      "--variant",
+      "decoded_fp32"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 22.711802005767822
+  },
+  {
+    "name": "38_measure_variant_official",
+    "command": [
+      ".venv\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\03-mlsd\\src\\measure.py",
+      "--variant",
+      "official"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 28.700381994247437
+  },
+  {
+    "name": "39_measure_variant_decoded_fp32_runtime_new",
+    "command": [
+      ".venv-day09\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\03-mlsd\\src\\measure.py",
+      "--variant",
+      "decoded_fp32",
+      "--runtime",
+      "new"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 22.97132921218872
+  },
+  {
+    "name": "40_measure_variant_official_runtime_new",
+    "command": [
+      ".venv-day09\\Scripts\\python.exe",
+      "daily\\2026-10-09\\experiments\\03-mlsd\\src\\measure.py",
+      "--variant",
+      "official",
+      "--runtime",
+      "new"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 23.923205375671387
+  }
+]

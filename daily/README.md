@@ -6,7 +6,7 @@
 |---|---|---|---|
 | [07/10/2026](2026-10-07/README.md) | Framework deploy, MobileNetV2 ONNX/TFLite FP32 trên PC | [Danh sách](2026-10-07/TASKS.md) | [Báo cáo](2026-10-07/REPORT.md) |
 | [08/10/2026](2026-10-08/README.md) | Quantization ResNet50/DistilBERT, GPU và MobileNetV2 Android | [Danh sách](2026-10-08/TASKS.md) | [Báo cáo](2026-10-08/REPORT.md) |
-| [09/10/2026](2026-10-09/README.md) | Reproduce, DistilBERT INT8, M-LSD và post-processing Android | [Danh sách](2026-10-09/TASKS.md) | [Tiến độ](2026-10-09/REPORT.md) |
+| [09/10/2026](2026-10-09/README.md) | Runtime cũ/mới, DistilBERT INT8, M-LSD và prototype detect box | [Danh sách](2026-10-09/TASKS.md) | [Báo cáo](2026-10-09/REPORT.md) |
 
 ## Cấu trúc một ngày
 

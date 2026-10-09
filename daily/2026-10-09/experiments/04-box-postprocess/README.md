@@ -1,6 +1,6 @@
 # Detect box và hướng port Android
 
-**Ngày:** 09/10/2026. **Trạng thái:** có hướng nghiên cứu, chưa port hoặc đo Android.
+**Ngày:** 09/10/2026. **Trạng thái:** có prototype Java phần hình học, qua 5 ca kiểm tra; chưa port đầy đủ hoặc đo Android.
 
 Nguồn đọc: [utils.py chính thức](https://github.com/navervision/mlsd/blob/master/utils.py). Phần giải thích cần Huy tự đọc, ghi lại theo ý hiểu và giải thích được các điều kiện hình học.
 
@@ -18,7 +18,9 @@ Tách hàm hình học nhận đoạn thẳng/điểm số và trả bốn đỉ
 
 Ca kiểm chứng cần có: không có đoạn, đường song song, đoạn độ dài 0, giao điểm ngoài đoạn, hình chữ nhật đã biết, nhiễu và tọa độ ảnh không vuông. Nếu cải tiến điều kiện/thuật toán so với upstream, ghi riêng là thay đổi, không gọi tương đương trước khi đối chiếu.
 
-`src/` và `results/` được tạo khi triển khai. Chưa có code Android M-LSD; module `android/` hiện tại phục vụ MobileNetV2 FP32.
+[`src/BoxPostProcessor.java`](src/BoxPostProcessor.java) nhận line đã merge, xử lý giao điểm/góc/chu trình và score đơn giản. Chưa port Hough merge và score NAVER; CSV model demo chưa merge chỉ dùng smoke check pipeline. [`ALGORITHM.md`](ALGORITHM.md) mô tả source, giới hạn và contract. [Cách chạy Java](../../RUNNING.md).
+
+Chưa có APK Android M-LSD; module `android/` hiện tại phục vụ MobileNetV2 FP32. Tài liệu/code có hỗ trợ AI; Huy vẫn cần tự đọc và diễn giải theo yêu cầu mentor.
 
 - [Task/tiêu chí](../../TASKS.md)
 - [Báo cáo](../../REPORT.md)

@@ -8,7 +8,7 @@
 |---|---|---|---|
 | [07/10/2026](daily/2026-10-07/README.md) | MobileNetV2 ONNX/TFLite FP32 trên PC | Có kết quả PC | [Báo cáo](daily/2026-10-07/REPORT.md) |
 | [08/10/2026](daily/2026-10-08/README.md) | Quantization ảnh/text, GPU và Android FP32 | Có số đo; verifier GPU chưa xác nhận | [Báo cáo](daily/2026-10-08/REPORT.md) |
-| [09/10/2026](daily/2026-10-09/README.md) | Reproduce, DistilBERT INT8, M-LSD, detect box | Khảo sát; chưa chạy thực nghiệm mới | [Tiến độ](daily/2026-10-09/REPORT.md) |
+| [09/10/2026](daily/2026-10-09/README.md) | Runtime cũ/mới, DistilBERT INT8, M-LSD, detect box | Có thực nghiệm CPU/prototype; chưa reproduce đầy đủ Đức/Android | [Báo cáo](daily/2026-10-09/REPORT.md) |
 
 Quy tắc tổ chức: [daily/README.md](daily/README.md). Mẫu ngày mới: [_template](_template/README.md).
 
@@ -20,6 +20,8 @@ Dự án đánh giá ảnh hưởng của chuyển đổi định dạng và pos
 
 | Tài liệu | Nội dung |
 |---|---|
+| [Báo cáo ngày 09/10](daily/2026-10-09/REPORT.md) | Đối chứng runtime, strict/mixed INT8, mask ablation, M-LSD và Java geometry |
+| [Tái lập ngày 09/10](daily/2026-10-09/RUNNING.md) | Hai venv riêng, pipeline tuần tự, kiểm chứng và ZIP |
 | [Báo cáo quantization CPU/GPU](quantization/bao-cao-ngay-2026-10-08-cpu-gpu.md) | Phương pháp, kết quả, phân tích provider và giới hạn |
 | [Báo cáo chi tiết CPU](quantization/bao-cao-quantization-2026-10-08.md) | Metric đầy đủ của ONNX Runtime và TFLite |
 | [Hướng dẫn tái lập CPU](quantization/README.md) | Môi trường, pipeline và mã nguồn |

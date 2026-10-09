@@ -1,0 +1,206 @@
+{
+  "timezone": "Asia/Saigon",
+  "scope": "Windows log-file creation/modification times, approximate subprocess boundaries",
+  "jobs": [
+    {
+      "log": "01_port_keras_variant_fp16.log",
+      "file_created_at": "2026-10-09T09:39:21.744429+07:00",
+      "file_modified_at": "2026-10-09T09:40:53.932193+07:00"
+    },
+    {
+      "log": "02_port_keras_variant_dynamic.log",
+      "file_created_at": "2026-10-09T09:40:55.650069+07:00",
+      "file_modified_at": "2026-10-09T09:42:35.150155+07:00"
+    },
+    {
+      "log": "03_port_keras_variant_static.log",
+      "file_created_at": "2026-10-09T09:42:36.836076+07:00",
+      "file_modified_at": "2026-10-09T09:45:35.267649+07:00"
+    },
+    {
+      "log": "04_port_keras_variant_decoded_fp32.log",
+      "file_created_at": "2026-10-09T09:45:37.218457+07:00",
+      "file_modified_at": "2026-10-09T09:46:55.059465+07:00"
+    },
+    {
+      "log": "05_run_measure_variant_baseline_threads_4.log",
+      "file_created_at": "2026-10-09T09:46:55.986552+07:00",
+      "file_modified_at": "2026-10-09T09:47:14.589295+07:00"
+    },
+    {
+      "log": "06_run_measure_variant_strict_threads_4.log",
+      "file_created_at": "2026-10-09T09:47:15.069082+07:00",
+      "file_modified_at": "2026-10-09T09:47:35.841539+07:00"
+    },
+    {
+      "log": "07_run_measure_variant_mixed_mask1e4_threads_4.log",
+      "file_created_at": "2026-10-09T09:47:36.279329+07:00",
+      "file_modified_at": "2026-10-09T09:47:54.901951+07:00"
+    },
+    {
+      "log": "08_run_measure_variant_mixed_mask1e2_threads_4.log",
+      "file_created_at": "2026-10-09T09:47:55.464200+07:00",
+      "file_modified_at": "2026-10-09T09:48:22.065737+07:00"
+    },
+    {
+      "log": "09_runtime_compare_task_cv_variant_onnx_fp32_runtime_old.log",
+      "file_created_at": "2026-10-09T09:48:22.535913+07:00",
+      "file_modified_at": "2026-10-09T09:48:34.412672+07:00"
+    },
+    {
+      "log": "10_runtime_compare_task_cv_variant_onnx_fp32_runtime_new.log",
+      "file_created_at": "2026-10-09T09:48:34.452404+07:00",
+      "file_modified_at": "2026-10-09T09:48:44.731101+07:00"
+    },
+    {
+      "log": "11_runtime_compare_task_cv_variant_onnx_dynamic_runtime_old.log",
+      "file_created_at": "2026-10-09T09:48:44.783634+07:00",
+      "file_modified_at": "2026-10-09T09:48:55.430201+07:00"
+    },
+    {
+      "log": "12_runtime_compare_task_cv_variant_onnx_dynamic_runtime_new.log",
+      "file_created_at": "2026-10-09T09:48:55.470680+07:00",
+      "file_modified_at": "2026-10-09T09:49:04.953197+07:00"
+    },
+    {
+      "log": "13_runtime_compare_task_cv_variant_onnx_static_runtime_old.log",
+      "file_created_at": "2026-10-09T09:49:04.993199+07:00",
+      "file_modified_at": "2026-10-09T09:49:15.529681+07:00"
+    },
+    {
+      "log": "14_runtime_compare_task_cv_variant_onnx_static_runtime_new.log",
+      "file_created_at": "2026-10-09T09:49:15.579163+07:00",
+      "file_modified_at": "2026-10-09T09:49:26.979435+07:00"
+    },
+    {
+      "log": "15_runtime_compare_task_cv_variant_tflite_fp32_runtime_old.log",
+      "file_created_at": "2026-10-09T09:49:27.032188+07:00",
+      "file_modified_at": "2026-10-09T09:49:51.422388+07:00"
+    },
+    {
+      "log": "16_runtime_compare_task_cv_variant_tflite_fp32_runtime_new.log",
+      "file_created_at": "2026-10-09T09:49:52.208345+07:00",
+      "file_modified_at": "2026-10-09T09:50:20.827083+07:00"
+    },
+    {
+      "log": "17_runtime_compare_task_cv_variant_tflite_dynamic_runtime_old.log",
+      "file_created_at": "2026-10-09T09:50:20.938652+07:00",
+      "file_modified_at": "2026-10-09T09:52:02.562696+07:00"
+    },
+    {
+      "log": "18_runtime_compare_task_cv_variant_tflite_dynamic_runtime_new.log",
+      "file_created_at": "2026-10-09T09:52:03.015202+07:00",
+      "file_modified_at": "2026-10-09T09:52:09.042798+07:00"
+    },
+    {
+      "log": "19_runtime_compare_task_cv_variant_tflite_static_runtime_old.log",
+      "file_created_at": "2026-10-09T09:52:09.076712+07:00",
+      "file_modified_at": "2026-10-09T09:52:22.172048+07:00"
+    },
+    {
+      "log": "20_runtime_compare_task_cv_variant_tflite_static_runtime_new.log",
+      "file_created_at": "2026-10-09T09:52:22.655087+07:00",
+      "file_modified_at": "2026-10-09T09:52:28.358660+07:00"
+    },
+    {
+      "log": "21_runtime_compare_task_text_variant_onnx_fp32_runtime_old.log",
+      "file_created_at": "2026-10-09T09:52:28.401358+07:00",
+      "file_modified_at": "2026-10-09T09:52:42.142167+07:00"
+    },
+    {
+      "log": "22_runtime_compare_task_text_variant_onnx_fp32_runtime_new.log",
+      "file_created_at": "2026-10-09T09:52:42.200642+07:00",
+      "file_modified_at": "2026-10-09T09:52:53.179032+07:00"
+    },
+    {
+      "log": "23_runtime_compare_task_text_variant_onnx_dynamic_runtime_old.log",
+      "file_created_at": "2026-10-09T09:52:53.271422+07:00",
+      "file_modified_at": "2026-10-09T09:52:58.996993+07:00"
+    },
+    {
+      "log": "24_runtime_compare_task_text_variant_onnx_dynamic_runtime_new.log",
+      "file_created_at": "2026-10-09T09:52:59.108450+07:00",
+      "file_modified_at": "2026-10-09T09:53:05.721500+07:00"
+    },
+    {
+      "log": "25_runtime_compare_task_text_variant_onnx_static_runtime_old.log",
+      "file_created_at": "2026-10-09T09:53:05.799686+07:00",
+      "file_modified_at": "2026-10-09T09:53:35.050691+07:00"
+    },
+    {
+      "log": "26_runtime_compare_task_text_variant_onnx_static_runtime_new.log",
+      "file_created_at": "2026-10-09T09:53:35.169075+07:00",
+      "file_modified_at": "2026-10-09T09:54:01.388777+07:00"
+    },
+    {
+      "log": "27_runtime_compare_task_text_variant_tflite_fp32_runtime_old.log",
+      "file_created_at": "2026-10-09T09:54:01.437450+07:00",
+      "file_modified_at": "2026-10-09T09:54:52.571968+07:00"
+    },
+    {
+      "log": "28_runtime_compare_task_text_variant_tflite_fp32_runtime_new.log",
+      "file_created_at": "2026-10-09T09:54:53.042997+07:00",
+      "file_modified_at": "2026-10-09T09:55:12.986985+07:00"
+    },
+    {
+      "log": "29_runtime_compare_task_text_variant_tflite_dynamic_runtime_old.log",
+      "file_created_at": "2026-10-09T09:55:13.095359+07:00",
+      "file_modified_at": "2026-10-09T10:00:33.753221+07:00"
+    },
+    {
+      "log": "30_runtime_compare_task_text_variant_tflite_dynamic_runtime_new.log",
+      "file_created_at": "2026-10-09T10:00:34.643449+07:00",
+      "file_modified_at": "2026-10-09T10:00:44.681153+07:00"
+    },
+    {
+      "log": "31_runtime_compare_task_text_variant_tflite_static_runtime_old.log",
+      "file_created_at": "2026-10-09T10:00:44.780762+07:00",
+      "file_modified_at": "2026-10-09T10:01:33.441318+07:00"
+    },
+    {
+      "log": "32_runtime_compare_task_text_variant_tflite_static_runtime_new.log",
+      "file_created_at": "2026-10-09T10:01:34.169456+07:00",
+      "file_modified_at": "2026-10-09T10:02:00.624109+07:00"
+    },
+    {
+      "log": "33_measure_variant_fp32.log",
+      "file_created_at": "2026-10-09T10:02:00.691816+07:00",
+      "file_modified_at": "2026-10-09T10:02:37.080735+07:00"
+    },
+    {
+      "log": "34_measure_variant_fp16.log",
+      "file_created_at": "2026-10-09T10:02:38.008960+07:00",
+      "file_modified_at": "2026-10-09T10:03:13.473589+07:00"
+    },
+    {
+      "log": "35_measure_variant_dynamic.log",
+      "file_created_at": "2026-10-09T10:03:14.395743+07:00",
+      "file_modified_at": "2026-10-09T10:06:07.126195+07:00"
+    },
+    {
+      "log": "36_measure_variant_static.log",
+      "file_created_at": "2026-10-09T10:06:07.949301+07:00",
+      "file_modified_at": "2026-10-09T10:06:47.928004+07:00"
+    },
+    {
+      "log": "37_measure_variant_decoded_fp32.log",
+      "file_created_at": "2026-10-09T10:06:48.837440+07:00",
+      "file_modified_at": "2026-10-09T10:07:11.038033+07:00"
+    },
+    {
+      "log": "38_measure_variant_official.log",
+      "file_created_at": "2026-10-09T10:07:11.550292+07:00",
+      "file_modified_at": "2026-10-09T10:07:39.530238+07:00"
+    },
+    {
+      "log": "39_measure_variant_decoded_fp32_runtime_new.log",
+      "file_created_at": "2026-10-09T10:07:40.253219+07:00",
+      "file_modified_at": "2026-10-09T10:08:03.153464+07:00"
+    },
+    {
+      "log": "40_measure_variant_official_runtime_new.log",
+      "file_created_at": "2026-10-09T10:08:03.227705+07:00",
+      "file_modified_at": "2026-10-09T10:08:27.082995+07:00"
+    }
+  ]
+}

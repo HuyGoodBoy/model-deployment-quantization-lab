@@ -1,0 +1,9 @@
+{
+  "variant": "dynamic",
+  "route": "same PyTorch state -> checked Keras bridge -> TFLite",
+  "status": "ok",
+  "seconds": 89.95549400000027,
+  "size_bytes": 730784,
+  "sha256": "2e9b48709ad692c1dde03db3c2b177ea7ae1009ee58377de7d48768cd87d47eb",
+  "tensorflow": "2.15.1"
+}

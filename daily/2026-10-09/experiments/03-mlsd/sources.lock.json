@@ -1,0 +1,22 @@
+{
+  "mbv2_mlsd_tiny.py": {
+    "url": "https://raw.githubusercontent.com/lhwcv/mlsd_pytorch/2312205254e66911703decf775f626995d260f17/models/mbv2_mlsd_tiny.py",
+    "sha256": "c20bd6a7e869a44c0e63d78491fb12ca2c866a4f6ce77f8dfdd21eaee099a4eb",
+    "bytes": 9180
+  },
+  "mlsd_tiny_512_fp32.pth": {
+    "url": "https://raw.githubusercontent.com/lhwcv/mlsd_pytorch/2312205254e66911703decf775f626995d260f17/models/mlsd_tiny_512_fp32.pth",
+    "sha256": "3f2323cfb9faec5a0ef2454c4f68998da21a9f1b7918ce89b85886628b750b94",
+    "bytes": 2613835
+  },
+  "frame_1.jpg": {
+    "url": "https://raw.githubusercontent.com/lhwcv/mlsd_pytorch/2312205254e66911703decf775f626995d260f17/data/frame_1.jpg",
+    "sha256": "a8667db17ed642d18d686fc3af460e576db46511497a95b8c7d6df2a812c4679",
+    "bytes": 535439
+  },
+  "official_tiny_fp32.tflite": {
+    "url": "https://raw.githubusercontent.com/navervision/mlsd/453cafa09467d0272760578d35c1fda38e8895a5/tflite_models/M-LSD_512_tiny_fp32.tflite",
+    "sha256": "9eea1c32aa599a74d60b74fa62a17993da2ee5eb7666aad27e9795fe8bd08293",
+    "bytes": 2491732
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "checks": {
+    "runtime": 24,
+    "distilbert": 4,
+    "mlsd": 8,
+    "hashes": 36,
+    "thread_controls": 2,
+    "box_candidates": 4
+  },
+  "execution_jobs": 40,
+  "scope": "offline hashes, labels/metrics and 200-sample timing recomputation; not a new benchmark"
+}

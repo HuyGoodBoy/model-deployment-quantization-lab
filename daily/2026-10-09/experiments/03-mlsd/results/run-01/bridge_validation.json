@@ -1,0 +1,24 @@
+{
+  "mae": 7.24283725111201e-05,
+  "rmse": 0.0003470715715018151,
+  "max_abs_error": 0.02960205078125,
+  "relative_l2": 1.4238603914902063e-05,
+  "cosine_similarity": 0.9999999998987181,
+  "snr_db": 96.93065181760343,
+  "allclose_1e4": false,
+  "channel_max_abs": [
+    0.0009403228759765625,
+    0.01593017578125,
+    0.02960205078125,
+    0.0155487060546875,
+    0.028993606567382812,
+    0.0009508132934570312,
+    0.0012102127075195312,
+    0.0002875328063964844,
+    0.0012294650077819824
+  ],
+  "gate_relative_l2_limit": 0.0001,
+  "gate_max_abs_limit": 0.1,
+  "gate_rationale": "FP32 accumulation differs across kernels. 0.1 map units limits displacement drift to 0.2 input pixels; not bit equivalence.",
+  "gate_passed": true
+}

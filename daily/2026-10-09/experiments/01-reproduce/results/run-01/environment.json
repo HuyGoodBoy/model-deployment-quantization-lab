@@ -1,0 +1,19 @@
+{
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.9",
+  "packages": {
+    "torch": "2.13.0",
+    "torchvision": "0.28.0",
+    "numpy": "2.4.6",
+    "Pillow": "12.3.0",
+    "onnx": "1.23.2",
+    "onnxruntime": "1.30.0",
+    "ai-edge-litert": "2.2.0",
+    "litert-torch": null,
+    "ai-edge-quantizer": null
+  },
+  "peer_revision": "536b9ae1f9e1b3829ac4776a98fb05677df9b6aa",
+  "exact_peer_environment": "not_reproduced",
+  "installation_failure": "litert-torch 0.9.4 requires litert-converter==0.4.*; pip has no matching Windows distribution",
+  "scope": "Windows software/runtime comparison, not Mac M1 Pro hardware reproduction; peer source remains read-only"
+}

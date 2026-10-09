@@ -1,0 +1,22 @@
+﻿ai-edge-litert @ file:///D:/vin/710/.cache/day09-wheels/ai_edge_litert-2.2.0-cp311-cp311-win_amd64.whl#sha256=c36ccb82a89f10f9e6c947f67f06dd00699caf5fe3bcb2be0eddcb213f70220d
+backports.strenum==1.2.8
+colorama==0.4.6
+filelock==4.0.12
+flatbuffers==25.12.19
+fsspec==2026.9.0
+Jinja2==3.1.6
+MarkupSafe==3.0.4
+ml_dtypes==0.6.0
+mpmath==1.3.0
+networkx==3.6.1
+numpy @ file:///D:/vin/710/.cache/day09-wheels/numpy-2.4.6-cp311-cp311-win_amd64.whl#sha256=1e254a00cdf42b1e4d5b3d68d33af63268d41340d8885df2ab6470f2e1500147
+onnx @ file:///D:/vin/710/.cache/day09-wheels/onnx-1.23.2-cp311-cp311-win_amd64.whl#sha256=a40265d62b7a614041593e11370d316880f9628eb5a0d49d9028c9c0e7f1cc08
+onnxruntime @ file:///D:/vin/710/.cache/day09-wheels/onnxruntime-1.30.0-cp311-cp311-win_amd64.whl#sha256=0edd0145a6e3fce8a1276491dc784d615e3c58bcb952c9b4e5c876d5c6a12ad7
+packaging==26.3
+pillow @ file:///D:/vin/710/.cache/day09-wheels/pillow-12.3.0-cp311-cp311-win_amd64.whl#sha256=8e95e1385e4998ae9694eeaa4730ba5457ff61185b3a55e2e7bea0880aef452a
+protobuf==7.36.2
+sympy==1.14.0
+torch @ file:///D:/vin/710/.cache/day09-wheels/torch-2.13.0-cp311-cp311-win_amd64.whl#sha256=a0d8b11f16a48d60e2015d8213aa0390744cbebb98e58b62b3514dddc656e330
+torchvision @ file:///D:/vin/710/.cache/day09-wheels/torchvision-0.28.0-cp311-cp311-win_amd64.whl#sha256=9a45ea67235d965ef52187130d20002a4de20c54ea3d927a24286961d268dc37
+tqdm==4.70.1
+typing_extensions==4.16.0

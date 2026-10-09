@@ -1,0 +1,393 @@
+{
+  "status": "ok",
+  "torch_version": "2.13.0+cpu",
+  "threads": 1,
+  "batch": 1,
+  "input_contract": "raw RGB+alpha=1, Pillow bilinear 512; Torch receives NCHW normalized [-1,1]",
+  "output_contract": "NHWC [N,256,256,9], channel 0 center logits, 1:5 displacement",
+  "records": {
+    "calibration": [
+      {
+        "path": "data\\cv\\images\\train\\n03417042\\n03417042_684.JPEG",
+        "sha256": "d479f1c3f923936c32e0185719fe93b1402e131a082f65bd07f3cf6cbc3fe7ce"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03417042\\n03417042_19076.JPEG",
+        "sha256": "1a193cc820f67f0c963ac1d7c9a51e83074694c8da178cd373d26f7ed74f4903"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03394916\\n03394916_38828.JPEG",
+        "sha256": "32a7d2a07641557b53e28a5e881811c3e1a08a42820bfd5f65f27db0c5be565f"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03394916\\n03394916_1633.JPEG",
+        "sha256": "e694d87bde4fe06c3dd0ec72f66975ef610c7dfdb9eeabc2de021e1f558a5ee7"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03445777\\ILSVRC2012_val_00046468.JPEG",
+        "sha256": "20ca4436528c2c1e4ea9aae55be7d5273229dab2474bfda1dce0b6520cd3b112"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03000684\\n03000684_17335.JPEG",
+        "sha256": "227e04bf96bdd23506feca6571947cf153cf022aa1f35e7cff56658bd4489ff8"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03425413\\n03425413_28327.JPEG",
+        "sha256": "5f81fe5ca62b22a74d4fe9ab7ec227e67d90120d7c3427e9cb6d255dac5af4fd"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n02102040\\n02102040_665.JPEG",
+        "sha256": "88a4aed8412ed7341604abdaa47d4bf6d3f14d20e6f8ed6c9b55b221f749e077"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03445777\\n03445777_10788.JPEG",
+        "sha256": "75ffa438362c50d11a709408931424ca7321772ef534e78879730c365fa3e3a5"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03028079\\n03028079_4363.JPEG",
+        "sha256": "bc618fce916f8005f0988b3439219def9cc8ac20becd43a1f30e370f3f48ad40"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n02979186\\n02979186_947.JPEG",
+        "sha256": "9faff5fef072ed32aba5b3885c686d937f1b683b2af53ad934c8c3dc934fe224"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03000684\\n03000684_948.JPEG",
+        "sha256": "652d61931f85896eb006e154787c1bb12be15a6c3d0d53273ed9f0e862b1a4a9"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n02979186\\n02979186_5994.JPEG",
+        "sha256": "a7aa5e2f366c22098bc85b96f1d33401afd5590f4eae1bd34d4fd7bc99584b10"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n02102040\\n02102040_8306.JPEG",
+        "sha256": "9ed6b37f3da6ecc1c741c233c116fcbb42a244cf1b58b9626f5c2ec51cc8e4a3"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03888257\\n03888257_817.JPEG",
+        "sha256": "1f421fe04ae00a3315938b30699335a8c8ac53b1da5d0108b0f583ccb49c6b0e"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03445777\\n03445777_9787.JPEG",
+        "sha256": "57b046366a5b1280fc8aa9c2c1d56f5917e8b142c7bb5e516cf628e6167974d4"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03445777\\n03445777_3833.JPEG",
+        "sha256": "2a46e59dc1f8e4a8241e7a0da138b8333e1e3979a87780e39223d6ec10d41491"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03028079\\n03028079_29416.JPEG",
+        "sha256": "06799c16453666d8574c1936af384e4d43436e76c02bc99c2ad59ed1c6a9be30"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03417042\\n03417042_11048.JPEG",
+        "sha256": "10c465d852ebc2d8dd358551f71aa0a780859e432205f4d18dd60c985c440189"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03417042\\n03417042_6623.JPEG",
+        "sha256": "3da92492342815e468e9d781bce346ab55e2b10d392b6c9562e45d39ba52bd66"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03445777\\n03445777_7744.JPEG",
+        "sha256": "fadd9d3282e85871818ce48e3414fce3930073f6f1b58007774e1aa178f0b31c"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03425413\\n03425413_13004.JPEG",
+        "sha256": "86cf424e235e8d308459f8b6d6a99f9f89ead599ade89dffe9d23baf1038f992"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03445777\\n03445777_959.JPEG",
+        "sha256": "05172e3358d4875e8672564168f3a3db975750b517965c226cbc81732d2a3c95"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n02102040\\n02102040_3816.JPEG",
+        "sha256": "46ec9b1befedb8a4db32ca3a86d4e8aa69819f8918cb797a6a3ad85f96cc8d50"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03425413\\n03425413_14813.JPEG",
+        "sha256": "b6e10e434486e0e73caba968fe3dfa0a08b7e628573cab8a36c3921bdd78c738"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03000684\\ILSVRC2012_val_00006043.JPEG",
+        "sha256": "f6786173e6f61b3b26ff2cde657a802d5adc5c20f25717270789347047fb0661"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03445777\\n03445777_8056.JPEG",
+        "sha256": "6f7ff23b07bb93989fa48c51eaa871cbd30088e44b4876225f1de52158ef6cec"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n02979186\\n02979186_20224.JPEG",
+        "sha256": "b9c42a03c064b55ea753bb3d4e7dea3393d520a40c0685566d61f18854cd61c5"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03028079\\n03028079_4665.JPEG",
+        "sha256": "8159355821ba9899ac93e63f453dbcd1342178c6fa619a4c72fd72bc69b660cf"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03888257\\n03888257_46884.JPEG",
+        "sha256": "04b5b8406227f2747805ce3637fa3a6168f30da22d3a7f19ffea7ebf9cf55977"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n03888257\\n03888257_1074.JPEG",
+        "sha256": "edf07f73b454349d587237afee147963fe30ffa9f6fb292a5aca77b83b4ac2c7"
+      },
+      {
+        "path": "data\\cv\\images\\train\\n02102040\\n02102040_1187.JPEG",
+        "sha256": "d86954d06f679ca044b49d14a4f3d8e95898124e271afc90ac35473caee66b69"
+      }
+    ],
+    "evaluation": [
+      {
+        "path": "data\\cv\\images\\val\\n02102040\\n02102040_1181.JPEG",
+        "sha256": "2e50505f23b21086129dfc6e65bbb301dd0d7d867d7bf014f4f1031cb2ff8fd5"
+      },
+      {
+        "path": "data\\cv\\images\\val\\n03445777\\n03445777_3252.JPEG",
+        "sha256": "a2f34c345560039ebd0829a49538368b175551a2c4fd3639e3723c415f78c2d5"
+      },
+      {
+        "path": "data\\cv\\images\\val\\n03394916\\n03394916_32520.JPEG",
+        "sha256": "0593c3c2db26412231fed259149c87ec5c109fd7c16a09e8cc9da712e8e5e096"
+      },
+      {
+        "path": "data\\cv\\images\\val\\n02979186\\n02979186_16382.JPEG",
+        "sha256": "fdcbc79ac86dd69712aa9e5e54afdd48f8f9100de9d9f2e585beac6ac8b97206"
+      },
+      {
+        "path": "data\\cv\\images\\val\\n03028079\\n03028079_38351.JPEG",
+        "sha256": "7a574976b0ade61e61a64ff33520dfc6020f886ede6f37d968615ef0a8c80605"
+      },
+      {
+        "path": "data\\cv\\images\\val\\n03394916\\n03394916_40301.JPEG",
+        "sha256": "eed569a73d9063a6a9a80749acc51ccf5a1271f398572db015ddb9a996cf2834"
+      },
+      {
+        "path": "data\\cv\\images\\val\\n03888257\\n03888257_26672.JPEG",
+        "sha256": "68f85aca40240a490ed23a2d9d73b55c5c493e420bb1b54ef0ee0c4a914d44b2"
+      },
+      {
+        "path": "data\\cv\\images\\val\\n02979186\\n02979186_11122.JPEG",
+        "sha256": "93881fb0885978e1977a5376eb0a3abbb53a8843c5ead89bb86ddc6c11ec1f9e"
+      },
+      {
+        "path": "data\\cv\\images\\val\\n03000684\\n03000684_2960.JPEG",
+        "sha256": "5901527648a2e6bcacf1d7fb53d91adc7502dc822702bccc03608cf6ba2ac65e"
+      },
+      {
+        "path": "data\\cv\\images\\val\\n03394916\\n03394916_42671.JPEG",
+        "sha256": "0182c92c4a26a0e94909a88d3bdc0f12216d7ef842d2f2b6788798dd9edc3f6b"
+      }
+    ]
+  },
+  "checkpoint_sha256": "3f2323cfb9faec5a0ef2454c4f68998da21a9f1b7918ce89b85886628b750b94",
+  "canonical_inputs_sha256": "6d6032f4b8fb8c19f11ab6bdbd04a6cee8bc9079c4c22a36d5cc21574c61bb4f",
+  "reference_sha256": "d9d055d763c96bab2d8c5d6affa378756d6d79ee414486b2d6a9c4d9ddd1f1d6",
+  "warmup": 30,
+  "runs": 200,
+  "median_ms": 148.84975,
+  "p95_ms": 156.39317,
+  "samples_ms": [
+    150.2836,
+    151.4586,
+    152.7793,
+    157.4806,
+    148.744,
+    145.0346,
+    144.2361,
+    146.6486,
+    145.7826,
+    151.2958,
+    146.0268,
+    149.7963,
+    143.9354,
+    143.7196,
+    145.625,
+    144.5194,
+    145.3354,
+    145.9164,
+    145.5585,
+    148.4399,
+    144.0194,
+    144.6878,
+    142.9584,
+    144.1911,
+    144.1409,
+    146.8823,
+    146.3152,
+    143.9898,
+    145.6285,
+    145.3261,
+    144.2534,
+    145.555,
+    148.8914,
+    145.9927,
+    145.152,
+    145.3321,
+    146.3419,
+    145.4982,
+    151.9005,
+    147.5562,
+    146.7563,
+    149.7918,
+    148.9516,
+    148.6,
+    145.0774,
+    148.2974,
+    148.9293,
+    149.3746,
+    149.756,
+    151.2779,
+    147.6736,
+    151.213,
+    147.3917,
+    147.7797,
+    149.4772,
+    143.0885,
+    144.8875,
+    145.8463,
+    144.3924,
+    152.8073,
+    144.7583,
+    151.1589,
+    146.7086,
+    147.2976,
+    146.8545,
+    144.0672,
+    149.0536,
+    145.5583,
+    144.7742,
+    143.4052,
+    148.1122,
+    148.8521,
+    146.5208,
+    148.4839,
+    151.8278,
+    155.7036,
+    148.8411,
+    148.5726,
+    148.3897,
+    147.0482,
+    145.4552,
+    151.2644,
+    151.3189,
+    148.0634,
+    152.745,
+    145.6083,
+    149.9131,
+    151.7795,
+    153.6136,
+    148.9162,
+    149.0973,
+    153.3166,
+    154.8133,
+    170.5715,
+    167.7026,
+    153.3966,
+    156.461,
+    154.1645,
+    155.2129,
+    152.0977,
+    156.0262,
+    151.558,
+    152.1868,
+    152.1625,
+    150.1493,
+    150.946,
+    150.0408,
+    151.6466,
+    152.5964,
+    151.9061,
+    149.3815,
+    151.5591,
+    148.6172,
+    150.1949,
+    151.8668,
+    146.2437,
+    151.485,
+    147.3471,
+    144.9539,
+    148.4063,
+    146.8836,
+    148.2726,
+    148.607,
+    152.5348,
+    148.1065,
+    147.8398,
+    149.0672,
+    144.7224,
+    147.3065,
+    150.8279,
+    153.5105,
+    147.4169,
+    151.1823,
+    144.6104,
+    142.8159,
+    146.4229,
+    150.825,
+    147.9623,
+    145.2081,
+    144.2907,
+    143.4828,
+    148.257,
+    148.8474,
+    149.0,
+    156.0828,
+    145.1971,
+    148.7626,
+    154.6201,
+    158.9687,
+    145.0486,
+    150.5905,
+    147.0583,
+    147.3807,
+    144.494,
+    154.7789,
+    159.7368,
+    145.5102,
+    149.9062,
+    148.9569,
+    148.234,
+    149.1104,
+    147.1195,
+    146.5419,
+    149.8692,
+    144.9451,
+    152.2206,
+    149.6249,
+    145.8817,
+    148.8317,
+    143.1695,
+    156.3896,
+    152.1366,
+    151.8988,
+    150.7156,
+    150.3019,
+    150.8894,
+    150.3624,
+    157.0517,
+    151.5359,
+    149.3479,
+    149.7628,
+    150.902,
+    150.7175,
+    148.4563,
+    150.2335,
+    150.8531,
+    154.4539,
+    153.5567,
+    154.217,
+    156.1502,
+    154.3896,
+    156.7705,
+    158.6226,
+    153.0087,
+    152.9174,
+    158.93,
+    154.3468,
+    151.187,
+    146.3992,
+    147.4976
+  ],
+  "scope": "Torch raw graph API, normalized input already in RAM, output NumPy; excludes preprocess/load",
+  "alpha_stem_max_abs_weight": 0.0
+}

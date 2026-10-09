@@ -1,0 +1,590 @@
+{
+  "runtime": "2.2.0",
+  "model_sha256": "1c331a8bcee8de7bc5cc3b84e643a632162586c5bc58562ab209a779556b04bb",
+  "threads": 4,
+  "operator_counts": {
+    "PAD": 2,
+    "CONV_2D": 53,
+    "MAX_POOL_2D": 1,
+    "ADD": 16,
+    "MEAN": 1,
+    "FULLY_CONNECTED": 1,
+    "SOFTMAX": 1,
+    "DELEGATE": 1
+  },
+  "delegate_boundaries": [
+    {
+      "index": 75,
+      "inputs": [
+        {
+          "index": 0,
+          "name": "serving_default_image:0",
+          "dtype": "float32"
+        },
+        {
+          "index": 1,
+          "name": "resnet50/conv1_pad/Pad/paddings",
+          "dtype": "int32"
+        },
+        {
+          "index": 2,
+          "name": "resnet50/avg_pool/Mean/reduction_indices",
+          "dtype": "int32"
+        },
+        {
+          "index": 3,
+          "name": "resnet50/pool1_pad/Pad/paddings",
+          "dtype": "int32"
+        },
+        {
+          "index": 4,
+          "name": "resnet50/predictions/BiasAdd/ReadVariableOp",
+          "dtype": "float32"
+        },
+        {
+          "index": 5,
+          "name": "resnet50/conv1_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 6,
+          "name": "resnet50/conv2_block1_1_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 7,
+          "name": "resnet50/conv2_block1_2_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 8,
+          "name": "resnet50/conv2_block2_1_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 9,
+          "name": "resnet50/conv2_block2_2_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 10,
+          "name": "resnet50/conv2_block2_3_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 11,
+          "name": "resnet50/conv2_block3_1_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 12,
+          "name": "resnet50/conv2_block3_2_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 13,
+          "name": "resnet50/conv2_block3_3_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 14,
+          "name": "resnet50/conv3_block1_1_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 15,
+          "name": "resnet50/conv3_block1_2_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 16,
+          "name": "resnet50/conv3_block1_3_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 17,
+          "name": "resnet50/conv3_block2_1_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 18,
+          "name": "resnet50/conv3_block2_2_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 19,
+          "name": "resnet50/conv3_block2_3_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 20,
+          "name": "resnet50/conv3_block3_1_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 21,
+          "name": "resnet50/conv3_block3_2_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 22,
+          "name": "resnet50/conv3_block3_3_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 23,
+          "name": "resnet50/conv3_block4_1_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 24,
+          "name": "resnet50/conv3_block4_2_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 25,
+          "name": "resnet50/conv3_block4_3_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 26,
+          "name": "resnet50/conv4_block1_1_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 27,
+          "name": "resnet50/conv4_block1_2_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 28,
+          "name": "resnet50/conv4_block2_1_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 29,
+          "name": "resnet50/conv4_block2_2_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 30,
+          "name": "resnet50/conv4_block3_1_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 31,
+          "name": "resnet50/conv4_block3_2_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 32,
+          "name": "resnet50/conv4_block4_1_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 33,
+          "name": "resnet50/conv4_block4_2_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 34,
+          "name": "resnet50/conv4_block4_3_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 35,
+          "name": "resnet50/conv4_block5_1_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 36,
+          "name": "resnet50/conv4_block5_2_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 37,
+          "name": "resnet50/conv4_block5_3_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 38,
+          "name": "resnet50/conv4_block6_1_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 39,
+          "name": "resnet50/conv4_block6_2_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 40,
+          "name": "resnet50/conv5_block1_1_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 41,
+          "name": "resnet50/conv5_block1_2_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 42,
+          "name": "resnet50/conv5_block2_1_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 43,
+          "name": "resnet50/conv5_block2_2_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 44,
+          "name": "resnet50/conv5_block3_1_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 45,
+          "name": "resnet50/conv5_block3_2_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 46,
+          "name": "resnet50/conv2_block1_0_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 47,
+          "name": "resnet50/conv2_block1_3_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 48,
+          "name": "resnet50/conv3_block1_0_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 49,
+          "name": "resnet50/conv4_block1_0_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 50,
+          "name": "resnet50/conv4_block1_3_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 51,
+          "name": "resnet50/conv4_block2_3_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 52,
+          "name": "resnet50/conv4_block3_3_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 53,
+          "name": "resnet50/conv4_block6_3_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 54,
+          "name": "resnet50/conv5_block1_0_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 55,
+          "name": "resnet50/conv5_block1_3_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 56,
+          "name": "resnet50/conv5_block2_3_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 57,
+          "name": "resnet50/conv5_block3_3_bn/FusedBatchNormV3",
+          "dtype": "float32"
+        },
+        {
+          "index": 58,
+          "name": "resnet50/conv1_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 59,
+          "name": "resnet50/conv2_block1_0_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 60,
+          "name": "resnet50/conv2_block1_1_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 61,
+          "name": "resnet50/conv2_block1_2_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 62,
+          "name": "resnet50/conv2_block1_3_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 63,
+          "name": "resnet50/conv2_block2_1_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 64,
+          "name": "resnet50/conv2_block2_2_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 65,
+          "name": "resnet50/conv2_block2_3_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 66,
+          "name": "resnet50/conv2_block3_1_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 67,
+          "name": "resnet50/conv2_block3_2_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 68,
+          "name": "resnet50/conv2_block3_3_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 69,
+          "name": "resnet50/conv3_block1_0_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 70,
+          "name": "resnet50/conv3_block1_1_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 71,
+          "name": "resnet50/conv3_block1_2_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 72,
+          "name": "resnet50/conv3_block1_3_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 73,
+          "name": "resnet50/conv3_block2_1_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 74,
+          "name": "resnet50/conv3_block2_2_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 75,
+          "name": "resnet50/conv3_block2_3_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 76,
+          "name": "resnet50/conv3_block3_1_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 77,
+          "name": "resnet50/conv3_block3_2_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 78,
+          "name": "resnet50/conv3_block3_3_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 79,
+          "name": "resnet50/conv3_block4_1_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 80,
+          "name": "resnet50/conv3_block4_2_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 81,
+          "name": "resnet50/conv3_block4_3_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 82,
+          "name": "resnet50/conv4_block1_0_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 83,
+          "name": "resnet50/conv4_block1_1_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 84,
+          "name": "resnet50/conv4_block1_2_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 85,
+          "name": "resnet50/conv4_block1_3_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 86,
+          "name": "resnet50/conv4_block2_1_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 87,
+          "name": "resnet50/conv4_block2_2_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 88,
+          "name": "resnet50/conv4_block2_3_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 89,
+          "name": "resnet50/conv4_block3_1_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 90,
+          "name": "resnet50/conv4_block3_2_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 91,
+          "name": "resnet50/conv4_block3_3_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 92,
+          "name": "resnet50/conv4_block4_1_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 93,
+          "name": "resnet50/conv4_block4_2_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 94,
+          "name": "resnet50/conv4_block4_3_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 95,
+          "name": "resnet50/conv4_block5_1_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 96,
+          "name": "resnet50/conv4_block5_2_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 97,
+          "name": "resnet50/conv4_block5_3_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 98,
+          "name": "resnet50/conv4_block6_1_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 99,
+          "name": "resnet50/conv4_block6_2_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 100,
+          "name": "resnet50/conv4_block6_3_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 101,
+          "name": "resnet50/conv5_block1_0_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 102,
+          "name": "resnet50/conv5_block1_1_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 103,
+          "name": "resnet50/conv5_block1_2_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 104,
+          "name": "resnet50/conv5_block1_3_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 105,
+          "name": "resnet50/conv5_block2_1_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 106,
+          "name": "resnet50/conv5_block2_2_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 107,
+          "name": "resnet50/conv5_block2_3_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 108,
+          "name": "resnet50/conv5_block3_1_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 109,
+          "name": "resnet50/conv5_block3_2_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 110,
+          "name": "resnet50/conv5_block3_3_conv/Conv2D",
+          "dtype": "int8"
+        },
+        {
+          "index": 111,
+          "name": "resnet50/predictions/MatMul",
+          "dtype": "int8"
+        }
+      ],
+      "outputs": [
+        {
+          "index": 186,
+          "name": "StatefulPartitionedCall:0",
+          "dtype": "float32"
+        }
+      ]
+    }
+  ],
+  "scope": "private Interpreter introspection, original nodes plus delegate nodes; not kernel timing or verified execution-plan coverage"
+}

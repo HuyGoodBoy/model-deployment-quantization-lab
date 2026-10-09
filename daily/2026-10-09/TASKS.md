@@ -24,9 +24,9 @@ Khảo sát vì sao TFLite calibration có range không bao phủ tốt dữ li�
 
 - [x] Đọc đủ 7 file trong repo Đức và cố định revision đối chiếu.
 - [x] Ghi khác biệt model, preprocessing, runtime, quantizer và giao thức đo.
-- [ ] Chạy reproduce trong bản làm việc/môi trường riêng sau khi có phạm vi thực thi được xác nhận.
-- [ ] Chạy model Huy với cấu hình công cụ đối chiếu, lưu môi trường và evidence.
-- [ ] Phân biệt tác động phần cứng với software/runtime/thread bằng các đối chứng phù hợp.
+- [ ] Reproduce đầy đủ ResNet18/pipeline Đức; còn thiếu converter tương thích Windows hoặc môi trường Linux/artifact từ Đức.
+- [x] Chạy model Huy với runtime đối chiếu trên Windows, lưu môi trường và evidence.
+- [x] Đối chứng cùng model/input/thread, ghi rõ chưa tái tạo Mac hoặc cô lập mọi dependency/kernel.
 
 **Tiêu chí:** có output và latency thực đo, model/input hash, dependency thực cài; không coi đọc code là reproduce thành công.
 
@@ -35,27 +35,34 @@ Khảo sát vì sao TFLite calibration có range không bao phủ tốt dữ li�
 - [x] Phân biệt thời điểm calibration với phạm vi dtype mixed/full integer.
 - [x] Đọc cấu hình converter và audit graph DistilBERT đã tạo ngày 08/10.
 - [x] Xác định tensor FP32 còn lại là cast attention mask `[1,64]`.
-- [ ] Thử chế độ chỉ cho phép operator INT8 với token IDs/mask giữ INT32.
-- [ ] Ghi lỗi converter nếu thất bại; nếu thành công, audit graph, đánh giá output/chất lượng và latency.
-- [ ] Khảo sát vùng attention mask bằng thay đổi có kiểm soát; xác minh FP32 trước khi quy nguyên nhân cho quantization.
+- [x] Thử chế độ chỉ cho phép operator INT8 với token IDs/mask giữ INT32; conversion thành công.
+- [x] Audit graph strict, đánh giá output/chất lượng và latency; float còn ở CAST→QUANTIZE.
+- [x] Thử mask sentinel 1e4/1e2, xác minh FP32 trên 100 mẫu rồi quantize; chưa khắc phục hết giảm chất lượng INT8.
 
 **Tiêu chí:** giải thích theo code và graph thực tế; không khẳng định strict INT8 không hỗ trợ khi chưa thử.
 
 ### M-LSD
 
 - [x] Khảo sát repo PyTorch và repo TensorFlow/TFLite chính thức.
-- [ ] Cố định checkpoint/revision, input, preprocessing và output contract.
-- [ ] Chạy PyTorch reference, convert Tiny 512×512 sang TFLite FP32.
-- [ ] Đánh giá sai khác so chính checkpoint PyTorch.
-- [ ] Thử FP16 weights, dynamic range và static INT8 với calibration ảnh thật.
-- [ ] So với TFLite chính thức, ghi khác biệt weights, RGBA và phần decoding nằm trong graph.
+- [x] Cố định checkpoint/revision/hash, input, preprocessing và output contract.
+- [x] Chạy PyTorch reference, convert cùng weights qua bridge Keras sang TFLite FP32.
+- [x] Đánh giá bridge FP32 so chính checkpoint; ngưỡng allclose chặt không đạt, lưu riêng gate theo sai số tọa độ.
+- [x] Convert FP16 weights, dynamic range và static INT8 với 32 ảnh calibration thật, tách 10 evaluation.
+- [x] So decoded_fp32 với TFLite chính thức trên hai runtime, ghi khác biệt weights, RGBA và decoding.
 
 **Tiêu chí:** so cùng phạm vi inference/decoding, lưu số đo riêng cho graph và pipeline; không dùng output checkpoint khác làm chuẩn sai số conversion.
 
 ### Detect box và báo cáo
 
 - [ ] Huy tự đọc, diễn giải các bước đoạn thẳng → gộp đường → giao điểm → góc → bốn cạnh → chấm điểm.
-- [ ] Đề xuất contract và lựa chọn Kotlin hoặc C++/JNI cho Android.
-- [ ] Đối chiếu thuật toán port với các ca hình học đã biết và input thực tế.
-- [ ] Tổng hợp kết quả thực đo, giới hạn, code và bằng chứng vào `REPORT.md`.
-- [ ] Tạo bản chat cục bộ và gói code/kết quả cần bàn giao khi thực nghiệm hoàn tất.
+- [x] Đề xuất contract Android, Java/Kotlin trước, C++/JNI sau profiling.
+- [x] Prototype qua 5 ca hình học và CSV demo (4 box ứng viên); chưa chứng minh tương đương NAVER.
+- [x] Tổng hợp số đo, giới hạn, code và bằng chứng vào REPORT; verifier offline đã pass 40 job chính + 2 thread controls.
+- [x] Tạo báo cáo chat cục bộ và script ZIP có allowlist/inventory SHA256; chat/model/cache/docs không commit.
+
+## 5. Những phần chưa hoàn tất
+
+- Reproduce đầy đủ ResNet18/pipeline converter Đức trên môi trường tương thích và đối chiếu Mac M1 Pro.
+- Huy tự đọc/viết lại thuật toán theo yêu cầu mentor; tài liệu có hỗ trợ AI chưa thay phần này.
+- Port Hough merge/scoring tương đương NAVER, kiểm bằng fixtures và benchmark M-LSD/box trên Android thật.
+- Đánh giá line/box có nhãn; kiểm soát power/nhiệt độ và lặp nhiều session trước kết luận latency ổn định.

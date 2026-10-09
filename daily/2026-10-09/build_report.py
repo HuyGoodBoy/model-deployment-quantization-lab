@@ -1,4 +1,87 @@
-# Báo cáo thực nghiệm ngày 09/10/2026
+"""Build mentor Markdown and local chat report from measured JSON, never invented rows."""
+import csv
+import datetime
+import json
+from pathlib import Path
+
+DAY=Path(__file__).resolve().parent
+
+
+def read(path): return json.loads(path.read_text(encoding='utf-8-sig'))
+def records(task,pattern):
+    return [read(p) for p in sorted((DAY/'experiments'/task/'results/run-01').glob(pattern))]
+def fmt(value,digits=3):
+    return f'{value:.{digits}f}' if isinstance(value,(int,float)) else str(value)
+def table(headers,rows):
+    return '\n'.join(['| '+' | '.join(headers)+' |','| '+' | '.join('---' for _ in headers)+' |',
+                      *['| '+' | '.join(str(x) for x in row)+' |' for row in rows]])
+
+
+def main():
+    runtime=[r for r in records('01-reproduce','*.json') if isinstance(r,dict) and 'metrics' in r]
+    distil=records('02-distilbert-int8','measure_*.json')
+    mlsd=records('03-mlsd','measure_*.json')
+    runtime_table=table(['Model / variant','ORT/LiteRT cũ ms','ORT/LiteRT mới ms','Mới/cũ','Accuracy cũ→mới','SNR cũ→mới dB'],[
+        [f"{task}/{variant}",fmt(a['benchmark']['median_ms']),fmt(b['benchmark']['median_ms']),
+         fmt(b['benchmark']['median_ms']/a['benchmark']['median_ms']),
+         f"{a['metrics']['accuracy']:.0%} → {b['metrics']['accuracy']:.0%}",
+         f"{fmt(a['metrics']['snr_db'])} → {fmt(b['metrics']['snr_db'])}"]
+        for task,variant in sorted({(r['task'],r['variant']) for r in runtime})
+        for a in runtime if a['task']==task and a['variant']==variant and '_old_' in a['name']
+        for b in runtime if b['task']==task and b['variant']==variant and '_new_' in b['name']])
+    distil_table=table(['Biến thể','Accuracy','F1','SNR dB','MAE','Max error','Median ms','Scale lớn nhất'],[
+        [r['variant'],f"{r['metrics']['accuracy']:.0%}",fmt(r['metrics']['f1_positive']),
+         fmt(r['metrics']['snr_db']),fmt(r['metrics']['mae'],5),fmt(r['metrics']['max_abs_error'],5),
+         fmt(r['benchmark']['median_ms']),f"{r['audit']['max_quant_scale']:.3g}"] for r in distil])
+    mlsd_table=table(['Biến thể / runtime','MiB','Median ms','p95 ms','SNR vs Torch','Max raw error','Line demo'],[
+        [f"{r['variant']} / {r['runtime']}",fmt(r['size_bytes']/2**20),
+         fmt(r['benchmark']['median_ms']),fmt(r['benchmark']['p95_ms']),
+         fmt(r.get('metrics_vs_torch',{}).get('snr_db','khác output contract')),
+         fmt(r.get('metrics_vs_torch',{}).get('max_abs_error','—'),5),r['demo_line_count']] for r in mlsd])
+    channel_table=table(['Raw variant','Center SNR dB','Displacement SNR dB','Scale output'],[
+        [r['variant'],fmt(r['center_logit_metrics']['snr_db']),fmt(r['displacement_metrics']['snr_db']),
+         fmt(r['output_contract'][0]['quantization'][0],6)] for r in mlsd if 'center_logit_metrics' in r])
+    strict=next((r for r in distil if r['variant']=='strict'),None)
+    mask100=next((r for r in distil if r['variant']=='mixed_mask1e2'),None)
+    baseline=next((r for r in distil if r['variant']=='baseline'),None)
+    candidates=[]
+    for task,threshold in [('cv',.73),('text',.91)]:
+        eligible=[r for r in runtime if r['task']==task and '_new_' in r['name'] and r['metrics']['accuracy']>=threshold]
+        if eligible:
+            best=min(eligible,key=lambda r:r['benchmark']['median_ms'])
+            candidates.append(f"{task}: `{best['variant']}` mới, {fmt(best['benchmark']['median_ms'])} ms, accuracy {best['metrics']['accuracy']:.0%}; ứng viên để đánh giá thêm, chưa kết luận deployment.")
+    strict_text=(f"Bản strict convert thành công; audit {strict['audit']['tensor_counts']}. Float còn ở CAST→QUANTIZE của mask, không phải toàn attention/LayerNorm FP32. "
+                 f"Accuracy {strict['metrics']['accuracy']:.0%}, chưa chứng minh strict tốt hơn mixed."
+                 if strict else 'Chưa có phép đo strict thành công; xem conversion JSON.')
+    ablation_text=(f"Mask 1e30 → 1e2: accuracy {baseline['metrics']['accuracy']:.0%} → {mask100['metrics']['accuracy']:.0%}, "
+                   f"SNR {fmt(baseline['metrics']['snr_db'])} → {fmt(mask100['metrics']['snr_db'])} dB."
+                   if mask100 and baseline else 'Đối chứng mask chưa có đầy đủ số đo.')
+    bridge_path=DAY/'experiments/03-mlsd/results/run-01/bridge_validation.json'
+    bridge=read(bridge_path) if bridge_path.exists() else {}
+    execution_path=DAY/'experiments/01-reproduce/results/run-01/execution.json'
+    execution=read(execution_path) if execution_path.exists() else []
+    failed=[r['name'] for r in execution if r['exit_code']]
+    controls=[read(p) for p in sorted((DAY/'experiments/01-reproduce/results/run-02-threadcheck').glob('text_*.json'))]
+    controls_text=table(['TF global thread setting','Median ms','Accuracy','SNR dB'],[
+        ['set API' if r['benchmark'].get('initialize_tf_threads') else 'environment only',
+         fmt(r['benchmark']['median_ms']),f"{r['metrics']['accuracy']:.0%}",fmt(r['metrics']['snr_db'])] for r in controls])
+    boundaries=[]
+    for runtime_name in ('old','new'):
+        p=DAY/f'experiments/01-reproduce/results/run-01/delegate_audit_{runtime_name}.json'
+        if p.exists():
+            r=read(p);boundaries.append(f"{runtime_name}: {len(r['delegate_boundaries'])} DELEGATE nodes")
+    box_path=DAY/'experiments/04-box-postprocess/results/run-01/demo_boxes.json'
+    box=read(box_path) if box_path.exists() else None
+    box_text=(f"Smoke test desktop từ {box['input_segments']} line chưa merge: {len(box['boxes'])} box ứng viên, median {fmt(box['median_ms'])} ms. "
+              'Đây là kết quả prototype, không phải chất lượng NAVER hoặc tốc độ Android.' if box else 'Chưa có smoke test input thực tế.')
+    run_times=[]
+    for p in sorted((DAY/'experiments/01-reproduce/results/run-01').glob('*.log')):
+        run_times.append({'log':p.name,
+                          'file_created_at':datetime.datetime.fromtimestamp(p.stat().st_ctime,datetime.timezone(datetime.timedelta(hours=7))).isoformat(),
+                          'file_modified_at':datetime.datetime.fromtimestamp(p.stat().st_mtime,datetime.timezone(datetime.timedelta(hours=7))).isoformat()})
+    (DAY/'experiments/01-reproduce/results/run-01/run_times.json').write_text(json.dumps(
+        {'timezone':'Asia/Saigon','scope':'Windows log-file creation/modification times, approximate subprocess boundaries','jobs':run_times},indent=2),encoding='utf-8')
+    content=f'''# Báo cáo thực nghiệm ngày 09/10/2026
 
 **Người thực hiện:** Huy. **Máy:** Windows x64, i7-12700H, RAM 16 GB. **Phạm vi:** CPU; chưa chạy M-LSD hoặc post-processing trên Android. Code và tài liệu thuật toán có hỗ trợ AI, Huy cần tự đọc lại trước khi trình bày.
 
@@ -29,33 +112,17 @@ Nguồn Đức: [prepare](https://github.com/TruongDuke/Quantization/blob/536b9a
 
 ## 3. Cùng model Huy, thay runtime
 
-| Model / variant | ORT/LiteRT cũ ms | ORT/LiteRT mới ms | Mới/cũ | Accuracy cũ→mới | SNR cũ→mới dB |
-| --- | --- | --- | --- | --- | --- |
-| cv/onnx_dynamic | 30.608 | 25.465 | 0.832 | 73% → 73% | 40.339 → 40.339 |
-| cv/onnx_fp32 | 32.768 | 27.234 | 0.831 | 73% → 73% | 112.398 → 112.398 |
-| cv/onnx_static | 29.831 | 32.544 | 1.091 | 71% → 71% | 19.115 → 19.115 |
-| cv/tflite_dynamic | 163.850 | 15.669 | 0.096 | 73% → 73% | 27.328 → 26.576 |
-| cv/tflite_fp32 | 57.345 | 93.937 | 1.638 | 73% → 73% | 113.826 → 114.099 |
-| cv/tflite_static | 24.907 | 14.906 | 0.598 | 74% → 74% | 20.585 → 20.585 |
-| text/onnx_dynamic | 11.658 | 11.753 | 1.008 | 90% → 91% | 24.310 → 25.011 |
-| text/onnx_fp32 | 24.567 | 21.528 | 0.876 | 91% → 91% | 124.677 → 128.327 |
-| text/onnx_static | 95.143 | 94.119 | 0.989 | 92% → 92% | 10.142 → 10.142 |
-| text/tflite_dynamic | 1054.815 | 39.582 | 0.038 | 90% → 90% | 21.119 → 21.270 |
-| text/tflite_fp32 | 163.676 | 36.111 | 0.221 | 91% → 91% | 122.986 → 124.530 |
-| text/tflite_static | 114.788 | 86.863 | 0.757 | 52% → 48% | 0.036 → 0.030 |
+{runtime_table}
 
 Tỷ lệ mới/cũ <1 nghĩa là nhanh hơn. Đây là thay **bộ software/runtime**: hai môi trường còn khác NumPy và dependency native, vì vậy chưa quy toàn bộ thay đổi cho một kernel hay một phiên bản ORT. Không đem trực tiếp latency ResNet18 Mac so với ResNet50 Windows để kết luận framework nhanh hơn. Cùng 4 thread cũng khác kiến trúc ARM/x86, SIMD, bộ nhớ, scheduling, fusion và khả năng delegate xử lý operator.
 
 Một khác biệt phần mềm có cơ sở: TensorFlow công bố XNNPACK hỗ trợ dynamic-range Fully Connected/Conv2D và bật mặc định trong prebuilt binaries từ TF 2.17; baseline TF 2.15 nằm trước thay đổi này. Đây là **giả thuyết góp phần** giải thích dynamic chênh lệch, chưa phải kết quả profiling xác định từng kernel trong hai wheel đang dùng. [Thông báo TensorFlow](https://blog.tensorflow.org/2024/04/faster-dynamically-quantized-inference-with-xnnpack.html). FP32 chậm hơn ở runtime mới vẫn cần profile/thread-power đối chứng riêng.
 
-Audit ResNet50 dynamic sau phép đo: old: 19 DELEGATE nodes; new: 1 DELEGATE nodes. [Audit cũ](experiments/01-reproduce/results/run-01/delegate_audit_old.json), [audit mới](experiments/01-reproduce/results/run-01/delegate_audit_new.json) lưu ranh giới tensor. Introspection dùng API private, có cả original nodes và delegate nodes, chưa xác nhận coverage hoặc timing từng kernel.
+Audit ResNet50 dynamic sau phép đo: {'; '.join(boundaries)}. [Audit cũ](experiments/01-reproduce/results/run-01/delegate_audit_old.json), [audit mới](experiments/01-reproduce/results/run-01/delegate_audit_new.json) lưu ranh giới tensor. Introspection dùng API private, có cả original nodes và delegate nodes, chưa xác nhận coverage hoặc timing từng kernel.
 
 **Đối chứng do latency biến động:** DistilBERT static cùng file có số đo khác giữa nhóm ablation và runtime matrix. Chạy tiếp hai process liền nhau với cùng script/model/input, chỉ đổi cách đặt TF global threads; Interpreter vẫn 4 thread trong cả hai:
 
-| TF global thread setting | Median ms | Accuracy | SNR dB |
-| --- | --- | --- | --- |
-| environment only | 123.401 | 52% | 0.036 |
-| set API | 128.310 | 52% | 0.036 |
+{controls_text}
 
 Source/JSON: [run-02-threadcheck](experiments/01-reproduce/results/run-02-threadcheck/). Matrix đặt TF thread qua environment; ablation đặt thêm API. Khác biệt protocol này và trạng thái máy là giới hạn khi so hai nhóm; không coi mọi thay đổi latency là do phiên bản thư viện. Chưa profile nhiệt độ/power hoặc lặp nhiều session.
 
@@ -63,7 +130,7 @@ Cặp kiểm tra liền nhau không tái hiện lợi thế latency 43 ms của 
 
 Accuracy được tính trên 100 mẫu có nhãn thật. Sai số output không đồng nghĩa với đổi nhãn; JSON từng biến thể còn lưu agreement, MAE, max error, relative L2, cosine và SNR so với TensorFlow gốc. Các tỷ lệ này chỉ mô tả tập nhỏ đã chọn.
 
-Ứng viên nhanh nhất trong các row runtime mới có accuracy không thấp hơn reference trên tập này: cv: `tflite_static` mới, 14.906 ms, accuracy 74%; ứng viên để đánh giá thêm, chưa kết luận deployment. text: `onnx_dynamic` mới, 11.753 ms, accuracy 91%; ứng viên để đánh giá thêm, chưa kết luận deployment. Không dùng chênh lệch 1–2 mẫu để kết luận accuracy cải thiện có ý nghĩa thống kê.
+Ứng viên nhanh nhất trong các row runtime mới có accuracy không thấp hơn reference trên tập này: {' '.join(candidates)} Không dùng chênh lệch 1–2 mẫu để kết luận accuracy cải thiện có ý nghĩa thống kê.
 
 ## 4. Dynamic/static ONNX Runtime và TFLite/LiteRT
 
@@ -81,18 +148,13 @@ Cùng tên phương pháp vẫn khác: operator được chọn, MinMax/histogra
 
 Cấu hình ngày trước dùng representative dataset, cho phép `TFLITE_BUILTINS_INT8` + `TFLITE_BUILTINS`, output INT8, IDs/mask INT32. Tensor float còn lại xác định là `distilbert/Cast [1,64]`; không có bằng chứng đã chủ động giữ LayerNorm hoặc toàn attention FP32.
 
-Bản strict convert thành công; audit {'float32': 1, 'int8': 372, 'int32': 126}. Float còn ở CAST→QUANTIZE của mask, không phải toàn attention/LayerNorm FP32. Accuracy 52%, chưa chứng minh strict tốt hơn mixed. Vì vậy lý do chọn mixed trước đây là cho phép fallback để converter dễ chạy, **chưa phải lý do thực nghiệm chứng minh mixed cần thiết hoặc giữ chất lượng tốt hơn**. Cho phép mixed cũng không tự bảo vệ phần nhạy cảm khỏi bị quantize.
+{strict_text} Vì vậy lý do chọn mixed trước đây là cho phép fallback để converter dễ chạy, **chưa phải lý do thực nghiệm chứng minh mixed cần thiết hoặc giữ chất lượng tốt hơn**. Cho phép mixed cũng không tự bảo vệ phần nhạy cảm khỏi bị quantize.
 
-| Biến thể | Accuracy | F1 | SNR dB | MAE | Max error | Median ms | Scale lớn nhất |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| baseline | 52% | 0.667 | 0.036 | 3.46346 | 4.84640 | 42.871 | 3.92e+27 |
-| mixed_mask1e2 | 67% | 0.748 | 0.835 | 3.12495 | 4.92559 | 64.266 | 2.67e+03 |
-| mixed_mask1e4 | 56% | 0.694 | 0.013 | 3.47366 | 5.04505 | 42.415 | 2.67e+03 |
-| strict | 52% | 0.667 | 0.036 | 3.46346 | 4.84640 | 43.276 | 3.92e+27 |
+{distil_table}
 
 Hướng thử mới: chỉ thay sentinel attention mask `1e30` bằng `1e4` hoặc `1e2`, giữ weights/input/calibration. Trên 100 evaluation, hai bản FP32 đã so với reference và cho output giống hệt (max error=0, accuracy 91%). Đây là kiểm tra trên tập đã dùng, chưa bảo đảm cho mọi sequence/input.
 
-Mask 1e30 → 1e2: accuracy 52% → 67%, SNR 0.036 → 0.835 dB. Bản mask 1e2 vẫn thấp hơn FP32 91%, chưa đạt chất lượng để khuyến nghị deployment. Audit scale đi cùng output giúp đánh giá giả thuyết sentinel quá lớn làm resolution INT8 quanh attention quá thô. Các giá trị ablation được chọn trước phép đo; chưa tune trên tập test độc lập. Không gọi mọi chênh lệch là lỗi calibration của thư viện, hoặc kết luận đây là nguyên nhân duy nhất.
+{ablation_text} Bản mask 1e2 vẫn thấp hơn FP32 91%, chưa đạt chất lượng để khuyến nghị deployment. Audit scale đi cùng output giúp đánh giá giả thuyết sentinel quá lớn làm resolution INT8 quanh attention quá thô. Các giá trị ablation được chọn trước phép đo; chưa tune trên tập test độc lập. Không gọi mọi chênh lệch là lỗi calibration của thư viện, hoặc kết luận đây là nguyên nhân duy nhất.
 
 Evidence/code: [run.py](experiments/02-distilbert-int8/src/run.py), [kết quả](experiments/02-distilbert-int8/results/run-01/).
 
@@ -102,25 +164,11 @@ PyTorch revision `2312205254e66911703decf775f626995d260f17`; NAVER revision `453
 
 Input raw RGBA 512×512, alpha=1; model bridge normalize `x/127.5−1`. PyTorch nhận NCHW đã normalize. Reference raw là NHWC `[N,256,256,9]`. Bản TFLite chính thức trả `points [1,200,2]`, `scores [1,200]`, `vmap [1,256,256,4]`.
 
-**Kiểm tra bridge:** SNR 96.931 dB, relative L2 0.00001424, max raw error 0.029602. `allclose(atol=rtol=1e-4)` ban đầu không đạt. Sau đọc mapping/architecture và đối chứng kernel, dùng gate công khai relative L2<1e-4 và max error<0,1 map unit; với displacement tương ứng <0,2 pixel ảnh 512. Đây là ngưỡng chất lượng số, không phải bit-equivalence và chưa chứng minh accuracy detect box. File validation giữ cả kết quả ngưỡng chặt và ngưỡng hình học.
+**Kiểm tra bridge:** SNR {fmt(bridge.get('snr_db'))} dB, relative L2 {fmt(bridge.get('relative_l2'),8)}, max raw error {fmt(bridge.get('max_abs_error'),6)}. `allclose(atol=rtol=1e-4)` ban đầu không đạt. Sau đọc mapping/architecture và đối chứng kernel, dùng gate công khai relative L2<1e-4 và max error<0,1 map unit; với displacement tương ứng <0,2 pixel ảnh 512. Đây là ngưỡng chất lượng số, không phải bit-equivalence và chưa chứng minh accuracy detect box. File validation giữ cả kết quả ngưỡng chặt và ngưỡng hình học.
 
-| Biến thể / runtime | MiB | Median ms | p95 ms | SNR vs Torch | Max raw error | Line demo |
-| --- | --- | --- | --- | --- | --- | --- |
-| decoded_fp32 / 2.2.0 | 2.619 | 107.193 | 118.146 | khác output contract | — | 18 |
-| decoded_fp32 / 2.15.1 | 2.619 | 51.183 | 103.511 | khác output contract | — | 18 |
-| dynamic / 2.15.1 | 0.697 | 668.929 | 813.869 | 12.171 | 181.86096 | 20 |
-| fp16 / 2.15.1 | 1.214 | 105.074 | 116.248 | 20.937 | 142.63797 | 18 |
-| fp32 / 2.15.1 | 2.372 | 102.851 | 125.822 | 88.307 | 0.08914 | 18 |
-| official / 2.2.0 | 2.376 | 110.938 | 122.798 | khác output contract | — | 24 |
-| official / 2.15.1 | 2.376 | 105.265 | 111.809 | khác output contract | — | 24 |
-| static / 2.15.1 | 0.756 | 125.828 | 157.894 | 3.158 | 507.82515 | 126 |
+{mlsd_table}
 
-| Raw variant | Center SNR dB | Displacement SNR dB | Scale output |
-| --- | --- | --- | --- |
-| dynamic | 24.787 | 12.117 | 0.000000 |
-| fp16 | 33.009 | 20.885 | 0.000000 |
-| fp32 | 100.420 | 88.255 | 0.000000 |
-| static | 11.052 | 3.121 | 5.646046 |
+{channel_table}
 
 Scale 0 ở output float nghĩa là không có quantization I/O. Raw head có center logit và displacement khác miền giá trị trong cùng tensor; INT8 per-tensor output dùng chung scale, có thể làm center mất resolution. Đây là giả thuyết cần đối chứng tách head/quantization chọn lọc, không phải nguyên nhân duy nhất đã xác định. FP16 weights làm nhỏ file nhưng số liệu hiện tại cho thấy sai số tăng; chưa có cơ sở bảo đảm chất lượng detection tương đương FP32.
 
@@ -136,7 +184,7 @@ Luồng source NAVER: decode line → Hough merge → giao điểm → kiểm tr
 
 [Tài liệu đọc thuật toán và contract Android](experiments/04-box-postprocess/ALGORITHM.md). [Prototype Java](experiments/04-box-postprocess/src/BoxPostProcessor.java) xử lý giao điểm/chu trình, giới hạn 64 line, qua 5 ca hình học. Chưa port Hough merge và scoring tương đương NAVER. Thử CSV demo chỉ kiểm tra nối pipeline vì CSV chưa merge; latency JVM Windows không phải latency Android.
 
-Smoke test desktop từ 18 line chưa merge: 4 box ứng viên, median 0.056 ms. Đây là kết quả prototype, không phải chất lượng NAVER hoặc tốc độ Android. [Evidence Java](experiments/04-box-postprocess/results/run-01/demo_boxes.json).
+{box_text} [Evidence Java](experiments/04-box-postprocess/results/run-01/demo_boxes.json).
 
 Đề xuất triển khai Kotlin/Java với primitive arrays và buffer tái sử dụng trước; chỉ chuyển C++/JNI khi profiler máy thật chứng minh bottleneck. Cần fixtures đối chiếu góc/box, kiểm tra song song/đoạn bằng 0/NaN và biến đổi ngược crop/letterbox.
 
@@ -150,6 +198,32 @@ Smoke test desktop từ 18 line chưa merge: 4 box ứng viên, median 0.056 ms.
 
 ## 9. Tái lập và kiểm chứng
 
-[Hướng dẫn chạy](RUNNING.md), [dependency/environment](ENVIRONMENT.md), [matrix](run_matrix.py). Runner chạy tuần tự và ghi exit code từng job. Số job đã có trạng thái: 40; thất bại: 0 (không có trong các job đã ghi). Không coi “chưa đo” là 0 ms.
+[Hướng dẫn chạy](RUNNING.md), [dependency/environment](ENVIRONMENT.md), [matrix](run_matrix.py). Runner chạy tuần tự và ghi exit code từng job. Số job đã có trạng thái: {len(execution)}; thất bại: {len(failed)} ({', '.join(failed) if failed else 'không có trong các job đã ghi'}). Không coi “chưa đo” là 0 ms.
 
 Metric dùng float64: `SNR=10·log10(sum(ref²)/sum((ref−test)²))`; MAE/max đo trên output dequantized, cosine và relative L2 toàn tensor. Median/p95 tính lại từ raw latency samples. ZIP chứa code, báo cáo và bằng chứng; model/venv/cache/credentials không đưa vào Git. Bản chat cục bộ được ignore theo cấu hình repo.
+'''
+    (DAY/'REPORT.md').write_text(content,encoding='utf-8')
+    paired={}
+    for version in ('2.15.1','2.2.0'):
+        own=next((r for r in mlsd if r['variant']=='decoded_fp32' and r['runtime']==version),None)
+        official=next((r for r in mlsd if r['variant']=='official' and r['runtime']==version),None)
+        if own and official:paired[version]=f"{own['benchmark']['median_ms']:.1f} vs {official['benchmark']['median_ms']:.1f} ms"
+    static_mlsd=next((r for r in mlsd if r['variant']=='static'),None)
+    static_note=(f"Static INT8 còn {static_mlsd['size_bytes']/2**20:.2f} MiB nhưng SNR {static_mlsd['metrics_vs_torch']['snr_db']:.2f} dB, chưa đạt chất lượng."
+                 if static_mlsd else 'Chưa có phép đo static M-LSD.')
+    chat=f'''Anh ơi em báo cáo ngày 09/10 ạ.
+- Em đọc repo Đức, đối chiếu pipeline; đã chạy ResNet50/DistilBERT của em với ORT 1.20.1→1.30.0 và TF Lite 2.15.1→LiteRT 2.2.0 trên cùng máy Windows, cùng input và 4 thread. Chưa reproduce đầy đủ converter/ResNet18 Mac vì thiếu dependency converter phù hợp trên Windows.
+- Calibrated mixed INT8 là static quantization cho phép float fallback. {strict_text}
+- Em thử đổi attention mask sentinel, kiểm tra FP32 vẫn giống reference trên 100 mẫu. {ablation_text}
+- M-LSD Tiny cùng checkpoint PyTorch→TFLite, đã thử FP16/dynamic/static. So graph có decoder với official: TF Lite {paired.get('2.15.1','chưa đo')}; LiteRT {paired.get('2.2.0','chưa đo')} (CPU 4 thread, 30 warm-up/200 lượt). Latency là snapshot, chưa kiểm soát nhiệt độ/power. {static_note} Chưa có metric line/box trên dataset có nhãn.
+- Prototype Java qua 5 ca hình học, demo được 4 box ứng viên; chưa port đầy đủ Hough merge/scoring hoặc benchmark Android. Em cần tự đọc lại thuật toán trước khi trình bày.
+- Bàn giao code, JSON/CSV kết quả, báo cáo MD và ZIP. Hướng tiếp: calibration đúng miền M-LSD, dataset có nhãn và test sentinel trên tập độc lập.
+'''
+    (DAY/'REPORT-CHAT.md').write_text(chat,encoding='utf-8')
+    with (DAY/'experiments/01-reproduce/results/run-01/runtime_summary.csv').open('w',newline='',encoding='utf-8') as f:
+        writer=csv.writer(f);writer.writerow(['name','runtime','accuracy','snr_db','median_ms','p95_ms'])
+        for r in runtime:writer.writerow([r['name'],r['runtime']['version'],r['metrics']['accuracy'],r['metrics']['snr_db'],r['benchmark']['median_ms'],r['benchmark']['p95_ms']])
+    print(f'Report built: {len(runtime)} runtime rows, {len(distil)} DistilBERT rows, {len(mlsd)} M-LSD rows')
+
+
+if __name__=='__main__':main()
