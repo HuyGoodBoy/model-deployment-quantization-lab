@@ -3,3 +3,4 @@
 *.npz -text
 /results/** -text
 /quantization/results/** -text
+/daily/**/results/** -text

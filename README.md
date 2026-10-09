@@ -1,8 +1,18 @@
-# Báo cáo triển khai và lượng tử hóa mô hình
+# Thực nghiệm triển khai và lượng tử hóa mô hình
 
-**Ngày báo cáo:** 08/10/2026
+**Người thực hiện:** Huy. **Phạm vi:** ONNX Runtime, TensorFlow Lite, CPU, GPU NVIDIA và Android.
 
-**Phạm vi:** ONNX Runtime, TensorFlow Lite, CPU, GPU NVIDIA và Android.
+## Báo cáo theo ngày
+
+| Ngày | Task | Trạng thái | Báo cáo |
+|---|---|---|---|
+| [07/10/2026](daily/2026-10-07/README.md) | MobileNetV2 ONNX/TFLite FP32 trên PC | Có kết quả PC | [Báo cáo](daily/2026-10-07/REPORT.md) |
+| [08/10/2026](daily/2026-10-08/README.md) | Quantization ảnh/text, GPU và Android FP32 | Có số đo; verifier GPU chưa xác nhận | [Báo cáo](daily/2026-10-08/REPORT.md) |
+| [09/10/2026](daily/2026-10-09/README.md) | Reproduce, DistilBERT INT8, M-LSD, detect box | Khảo sát; chưa chạy thực nghiệm mới | [Tiến độ](daily/2026-10-09/REPORT.md) |
+
+Quy tắc tổ chức: [daily/README.md](daily/README.md). Mẫu ngày mới: [_template](_template/README.md).
+
+## Tổng quan kết quả đến ngày 08/10/2026
 
 Dự án đánh giá ảnh hưởng của chuyển đổi định dạng và post-training quantization đến sai khác output, độ chính xác, dung lượng và thời gian suy luận. Hai mô hình chính là **ResNet50 pretrained ImageNet** và **DistilBERT fine-tune SST-2 tiếng Anh**. Trọng số pretrained được giữ nguyên, không huấn luyện lại.
 

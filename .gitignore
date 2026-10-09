@@ -24,6 +24,7 @@ android/app/src/main/assets/lab/
 android/gradle/wrapper/gradle-wrapper.jar
 /docs/
 bao-cao-chat-*.md
+REPORT-CHAT.md
 
 # Models/datasets are downloaded by code, not stored in Git.
 artifacts/
@@ -80,6 +81,14 @@ quantization/artifacts/cv/*
 quantization/artifacts/text/*
 !quantization/artifacts/cv/model_info.json
 !quantization/artifacts/text/model_info.json
+
+# New daily experiments keep only small, reviewable result summaries in Git.
+!daily/**/results/
+daily/**/results/**
+!daily/**/results/**/
+!daily/**/results/**/*.md
+!daily/**/results/**/*.json
+!daily/**/results/**/*.csv
 
 # Credentials always stay local.
 .env
