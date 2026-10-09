@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "peer_variants": 6,
+  "huy_linux_variants": 12,
+  "source_images_verified": 400,
+  "latency_samples_verified": 3000,
+  "distinct_peer_output_files": 6,
+  "scope": "offline hashes, output metrics/classification/ties, sample statistics and model/input identity; no new inference"
+}

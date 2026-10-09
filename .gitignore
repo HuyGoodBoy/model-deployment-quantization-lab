@@ -5,6 +5,7 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .mypy_cache/
+.ruff_cache/
 *.egg-info/
 .idea/
 .vscode/
@@ -109,3 +110,17 @@ service-account*.json
 credentials*.json
 token*.json
 google-services.json
+
+# Git submissions keep summaries; raw tensors and profiler traces stay local.
+*.npy
+*.npz
+**/results/**/profile_*.json
+**/results/**/peer_reproduction_initial.json
+daily/2026-10-09/experiments/01-reproduce/results/run-03-peer-windows/
+
+# Compact Android evidence is reviewable without APKs or raw float tensors.
+!results/android/ac619fe4f102/
+results/android/ac619fe4f102/*
+!results/android/ac619fe4f102/report.md
+!results/android/ac619fe4f102/summary.json
+!results/android/ac619fe4f102/run-metadata.json

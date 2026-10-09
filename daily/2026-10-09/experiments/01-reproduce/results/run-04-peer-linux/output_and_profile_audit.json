@@ -1,0 +1,226 @@
+{
+  "scope": "post-benchmark audit; profiling durations are not benchmark latency",
+  "ties": {
+    "ONNX FP32": {
+      "total": 0,
+      "correct_argmax": 0,
+      "wrong_argmax": 0
+    },
+    "ONNX dynamic": {
+      "total": 0,
+      "correct_argmax": 0,
+      "wrong_argmax": 0
+    },
+    "ONNX static": {
+      "total": 10,
+      "correct_argmax": 7,
+      "wrong_argmax": 3
+    },
+    "TFLite FP32": {
+      "total": 0,
+      "correct_argmax": 0,
+      "wrong_argmax": 0
+    },
+    "TFLite dynamic": {
+      "total": 0,
+      "correct_argmax": 0,
+      "wrong_argmax": 0
+    },
+    "TFLite static": {
+      "total": 62,
+      "correct_argmax": 32,
+      "wrong_argmax": 30
+    }
+  },
+  "profiles": {
+    "fp32": {
+      "runs": 5,
+      "provider": "CPUExecutionProvider",
+      "threads": 4,
+      "node_event_total_us": 51798,
+      "ops": {
+        "Conv": {
+          "duration_us": 51035,
+          "events": 100,
+          "fraction_of_node_event_time": 0.9852697015328777
+        },
+        "Gemm": {
+          "duration_us": 266,
+          "events": 5,
+          "fraction_of_node_event_time": 0.0051353334105563924
+        },
+        "MaxPool": {
+          "duration_us": 236,
+          "events": 5,
+          "fraction_of_node_event_time": 0.004556160469516198
+        },
+        "ReduceMean": {
+          "duration_us": 84,
+          "events": 5,
+          "fraction_of_node_event_time": 0.001621684234912545
+        },
+        "ReorderOutput": {
+          "duration_us": 67,
+          "events": 5,
+          "fraction_of_node_event_time": 0.001293486234989768
+        },
+        "Reshape": {
+          "duration_us": 64,
+          "events": 10,
+          "fraction_of_node_event_time": 0.0012355689408857485
+        },
+        "Gather": {
+          "duration_us": 46,
+          "events": 5,
+          "fraction_of_node_event_time": 0.0008880651762616318
+        }
+      }
+    },
+    "dynamic": {
+      "runs": 5,
+      "provider": "CPUExecutionProvider",
+      "threads": 4,
+      "node_event_total_us": 209441,
+      "ops": {
+        "ConvInteger": {
+          "duration_us": 195405,
+          "events": 100,
+          "fraction_of_node_event_time": 0.9329835132567167
+        },
+        "Mul": {
+          "duration_us": 3278,
+          "events": 200,
+          "fraction_of_node_event_time": 0.015651185775468986
+        },
+        "Cast": {
+          "duration_us": 3217,
+          "events": 100,
+          "fraction_of_node_event_time": 0.015359934301306812
+        },
+        "DynamicQuantizeLinear": {
+          "duration_us": 2708,
+          "events": 85,
+          "fraction_of_node_event_time": 0.012929655607068338
+        },
+        "Add": {
+          "duration_us": 2684,
+          "events": 140,
+          "fraction_of_node_event_time": 0.01281506486313568
+        },
+        "Relu": {
+          "duration_us": 1124,
+          "events": 85,
+          "fraction_of_node_event_time": 0.0053666665075128555
+        },
+        "ReorderInput": {
+          "duration_us": 308,
+          "events": 5,
+          "fraction_of_node_event_time": 0.001470581213802455
+        },
+        "MaxPool": {
+          "duration_us": 207,
+          "events": 5,
+          "fraction_of_node_event_time": 0.0009883451664191825
+        },
+        "DynamicQuantizeMatMul": {
+          "duration_us": 170,
+          "events": 5,
+          "fraction_of_node_event_time": 0.0008116844361896668
+        },
+        "ReorderOutput": {
+          "duration_us": 121,
+          "events": 5,
+          "fraction_of_node_event_time": 0.0005777283339938216
+        },
+        "ReduceMean": {
+          "duration_us": 89,
+          "events": 5,
+          "fraction_of_node_event_time": 0.0004249406754169432
+        },
+        "Reshape": {
+          "duration_us": 77,
+          "events": 10,
+          "fraction_of_node_event_time": 0.00036764530345061375
+        },
+        "Gather": {
+          "duration_us": 53,
+          "events": 5,
+          "fraction_of_node_event_time": 0.0002530545595179549
+        }
+      }
+    },
+    "static": {
+      "runs": 5,
+      "provider": "CPUExecutionProvider",
+      "threads": 4,
+      "node_event_total_us": 57546,
+      "ops": {
+        "Conv": {
+          "duration_us": 30567,
+          "events": 55,
+          "fraction_of_node_event_time": 0.5311750599520384
+        },
+        "QLinearConv": {
+          "duration_us": 11491,
+          "events": 45,
+          "fraction_of_node_event_time": 0.19968373127584887
+        },
+        "DequantizeLinear": {
+          "duration_us": 9430,
+          "events": 260,
+          "fraction_of_node_event_time": 0.16386890487609912
+        },
+        "QuantizeLinear": {
+          "duration_us": 2163,
+          "events": 110,
+          "fraction_of_node_event_time": 0.03758732144719008
+        },
+        "Transpose": {
+          "duration_us": 1923,
+          "events": 90,
+          "fraction_of_node_event_time": 0.03341674486497758
+        },
+        "Add": {
+          "duration_us": 967,
+          "events": 40,
+          "fraction_of_node_event_time": 0.016803948145831162
+        },
+        "ReorderInput": {
+          "duration_us": 363,
+          "events": 5,
+          "fraction_of_node_event_time": 0.0063079970805963925
+        },
+        "QGemm": {
+          "duration_us": 180,
+          "events": 5,
+          "fraction_of_node_event_time": 0.0031279324366593683
+        },
+        "MaxPool": {
+          "duration_us": 176,
+          "events": 5,
+          "fraction_of_node_event_time": 0.0030584228269558266
+        },
+        "ReorderOutput": {
+          "duration_us": 100,
+          "events": 5,
+          "fraction_of_node_event_time": 0.0017377402425885378
+        },
+        "ReduceMean": {
+          "duration_us": 76,
+          "events": 5,
+          "fraction_of_node_event_time": 0.0013206825843672888
+        },
+        "Reshape": {
+          "duration_us": 61,
+          "events": 10,
+          "fraction_of_node_event_time": 0.001060021547979008
+        },
+        "Gather": {
+          "duration_us": 49,
+          "events": 5,
+          "fraction_of_node_event_time": 0.0008514927188683836
+        }
+      }
+    }
+  }
+}

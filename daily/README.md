@@ -16,6 +16,7 @@ daily/YYYY-MM-DD/
   TASKS.md                  Task mentor giao, checklist, tiêu chí hoàn thành
   REPORT.md                 Phương pháp, kết quả, nhận xét, giới hạn, hướng tiếp theo
   ENVIRONMENT.md            Cấu hình và nguồn thông tin môi trường
+  tools/                    Script điều phối, kiểm chứng và tạo báo cáo
   experiments/
     01-ten-task/
       README.md             Phạm vi, cách chạy, vị trí code và bằng chứng

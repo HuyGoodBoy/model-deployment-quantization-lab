@@ -1,6 +1,6 @@
 # Báo cáo thực nghiệm ngày 09/10/2026
 
-**Người thực hiện:** Huy. **Máy:** Windows x64, i7-12700H, RAM 16 GB. **Phạm vi:** CPU; chưa chạy M-LSD hoặc post-processing trên Android. Code và tài liệu thuật toán có hỗ trợ AI, Huy cần tự đọc lại trước khi trình bày.
+**Người thực hiện:** Huy. **Máy:** Windows x64, i7-12700H, RAM 16 GB; Linux Docker/WSL2 cho reproduce bổ sung. **Phạm vi:** CPU; chưa chạy M-LSD hoặc post-processing trên Android. Code và tài liệu thuật toán có hỗ trợ AI, Huy cần tự đọc lại trước khi trình bày.
 
 ## 1. Mục tiêu và kết quả bàn giao
 
@@ -9,7 +9,9 @@
 - Chuyển **trọng số PyTorch M-LSD Tiny 512** sang Keras tương đương rồi TFLite; thử FP16 weights, dynamic range, static INT8 và graph chứa decoder.
 - Prototype hình học Java có 5 ca kiểm tra; đề xuất contract Android và những phần cần port tiếp.
 
-**Giới hạn reproduce:** chưa chạy lại đầy đủ ResNet18/pipeline converter của Đức và chưa reproduce phần cứng Mac M1 Pro. Pip cài `litert-torch==0.9.4` thất bại vì dependency `litert-converter==0.4.*` không có distribution phù hợp trên Windows. Không coi đọc code hoặc cài một phần dependency là reproduce toàn bộ. Bảng bên dưới là đối chứng runtime trên cùng Windows, cùng model Huy.
+**Reproduce bổ sung:** Đã chạy source ResNet18 Đức trong Linux Docker/WSL2, đúng 10 release dependencies khai báo; 6/6 biến thể có output/latency. q1/q2/q3 nguyên script, q4 giữ nguyên hàm và tách từng variant để lưu lỗi/raw timing; source mount read-only và kiểm SHA256. Không cần cùng Mac để reproduce: phần cứng/OS/backend phải ghi riêng khi so tốc độ. [Bảng Mac Đức báo cáo ↔ Linux Huy thực đo và model Huy trên Linux](PEER-REPRODUCTION.md).
+
+Matrix 24 phép đo ghép thành 12 cặp ở phần 3 vẫn là đối chứng model Huy trên hai runtime Windows đã đo trước đó. Bảng ResNet18 và model Huy trên Linux được tách riêng, không trộn protocol 10/100 của Đức với 30/200 của Huy.
 
 ## 2. Đối chiếu môi trường và giao thức
 
@@ -143,13 +145,13 @@ Smoke test desktop từ 18 line chưa merge: 4 box ứng viên, median 0.056 ms.
 ## 8. Hướng tiếp và phần còn thiếu
 
 1. Đối chứng sentinel đã chạy là hướng thử nghiệm bổ sung hôm nay. Tiếp theo dùng test set độc lập/sequence length khác để kiểm tra khả năng tổng quát; thử quantize chọn lọc attention hoặc QAT nếu PTQ vẫn giảm chất lượng.
-2. Để hoàn tất reproduce Đức: cần Linux tương thích converter hoặc artifact đã export cùng version/hash từ Đức. Đối chiếu ResNet18 cùng data/preprocess trước khi so với model khác. Chưa có phép đo Mac M1 Pro độc lập.
+2. Phân tích chênh lệch ResNet18 giữa Mac Đức báo cáo và Linux Huy; giữ raw timing, profile kernel riêng và lặp nhiều phiên. Không cần tái tạo phần cứng Mac để chạy code.
 3. M-LSD: dùng calibration cùng miền ảnh đường thẳng và dataset có nhãn; đánh giá sAP/IoU sau decoding, thử nhiều subset mà không chọn theo test score.
 4. Port Hough merge/scoring, đối chiếu fixtures với source, rồi APK benchmark trên Android thật; đo model/decoder/box/end-to-end riêng.
 5. Huy tự đọc và viết lại phần thuật toán theo ý hiểu để đáp ứng yêu cầu mentor; tài liệu hỗ trợ không thay việc này.
 
 ## 9. Tái lập và kiểm chứng
 
-[Hướng dẫn chạy](RUNNING.md), [dependency/environment](ENVIRONMENT.md), [matrix](run_matrix.py). Runner chạy tuần tự và ghi exit code từng job. Số job đã có trạng thái: 40; thất bại: 0 (không có trong các job đã ghi). Không coi “chưa đo” là 0 ms.
+[Hướng dẫn chạy](RUNNING.md), [dependency/environment](ENVIRONMENT.md), [matrix](tools/run_matrix.py). Runner chạy tuần tự và ghi exit code từng job. Số job đã có trạng thái: 40; thất bại: 0 (không có trong các job đã ghi). Không coi “chưa đo” là 0 ms.
 
-Metric dùng float64: `SNR=10·log10(sum(ref²)/sum((ref−test)²))`; MAE/max đo trên output dequantized, cosine và relative L2 toàn tensor. Median/p95 tính lại từ raw latency samples. ZIP chứa code, báo cáo và bằng chứng; model/venv/cache/credentials không đưa vào Git. Bản chat cục bộ được ignore theo cấu hình repo.
+Metric matrix Huy dùng float64: `SNR=10·log10(sum(ref²)/sum((ref−test)²))`; MAE/max đo trên output dequantized, cosine và relative L2 toàn tensor. Reproduce q4 Đức giữ thêm SNR float32 đúng source để đối chiếu, đồng thời ghi SNR float64. Median/p95 tính lại từ raw latency samples. Model/venv/cache/credentials không đưa vào Git. Bản chat cục bộ được ignore theo cấu hình repo. Bàn giao qua Git: code, báo cáo, source/dependency lock và JSON/CSV kết quả. Raw tensor, model/dataset, profiler trace, cache, credentials, docs HTML và báo cáo chat giữ cục bộ; clone mới tạo lại artifact trước khi chạy verifier đầy đủ.

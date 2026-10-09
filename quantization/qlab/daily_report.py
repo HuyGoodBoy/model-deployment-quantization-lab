@@ -247,7 +247,7 @@ def main():
               '## 9. Code, bằng chứng và cách chạy lại', '',
               '- [README GPU](README-gpu.md): môi trường riêng và các lệnh chạy.',
               '- `run_gpu.py`, `qlab/gpu_runtime.py`, `gpu_experiment.py`, `gpu_verify.py`, `daily_report.py`: runner, kiểm CUDA/provider, phép đo, verifier và báo cáo.',
-              '- `requirements-gpu.txt` và `requirements-gpu-lock.txt`: package GPU, CUDA/cuDNN thực tế.',
+              '- `../environments/gpu/requirements.txt` và `../environments/gpu/requirements-lock.txt`: package GPU, CUDA/cuDNN thực tế.',
               '- `results/gpu/<task>/output_*.npy`: đủ 100 output/variant/provider; `cpu_*.json`, `cuda_*.json`: đủ latency samples, metric, hash, provider options.',
               '- `results/gpu/<task>/profile_*.json`: raw profiling; `results/gpu/summary.json`, `summary.csv`: bảng tổng hợp.',
               '- `results/<task>/outputs.npz`, manifest và conversion audit CPU được giữ nguyên làm chuẩn.',

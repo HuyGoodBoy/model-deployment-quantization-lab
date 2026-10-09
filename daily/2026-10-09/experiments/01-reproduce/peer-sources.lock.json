@@ -1,0 +1,23 @@
+{
+  "repo": "https://github.com/TruongDuke/Quantization",
+  "revision": "536b9ae1f9e1b3829ac4776a98fb05677df9b6aa",
+  "hash_note": "files records Windows checkout bytes; files_lf also accepts identical source with LF line endings. Raw hashes are checked again after execution.",
+  "files_lf": {
+    "BAO_CAO.md": "1d7bdbc8e84df0d5d600179b283700c08340fe1971c690fec1e1323783d360ed",
+    "q1_prepare.py": "8901dfab0194484cfef701ac054fbc215fb651e7e1714a9f3b30319c65142d16",
+    "q2_quant_onnx.py": "19d6d2851878698c1966370075de70acfd9c7d26a0407d1b58e065cda6e8d836",
+    "q3_quant_tflite.py": "adae5b53f07b0687e485e89a103839d9ecca13eefe989ca69a6e3023ee63dc5a",
+    "q4_evaluate.py": "4fa8d8b07b0a5873d4bd48cc4cde8f2ffde191975d825c0ac22a7319568443d5",
+    "README.md": "f4e52d0a54c5859784cb7f07dd4af7151e221b587ac0c8fa2295ad2634955e42",
+    "requirements.txt": "ff0739c040f07d3712d973ce511367ca814301d26c09ba6802199d0ed07b4b79"
+  },
+  "files": {
+    "BAO_CAO.md": "b5fb59b751d06c854c3f0e05231a52ff6141dfc3a9f839c854ced9c2ad779206",
+    "q1_prepare.py": "fe61939c9a41cc042e51bdfae37673bf29a3e4d85dea0db5f97ae47d82d08165",
+    "q2_quant_onnx.py": "0f7a0e9f8bf74ed54d478dac26067138df980dbacebbda327ead94232fa17a06",
+    "q3_quant_tflite.py": "e369c8314ea534099c677f06c274740b8cfd6f24e8a107117a7327d8e9ec7499",
+    "q4_evaluate.py": "f6aec561ec270b761a6cfc3d33e1be12677117fdc530348b3c13be4d0b67dd24",
+    "README.md": "b187580bc67d444bdcbdcc6dc6ccc94b73dce149b5e463ffb856c13b547a13b4",
+    "requirements.txt": "8cff2189013a585f36c287500bc896b4de419cb8c5f1de1864872ede5ab34d8b"
+  }
+}

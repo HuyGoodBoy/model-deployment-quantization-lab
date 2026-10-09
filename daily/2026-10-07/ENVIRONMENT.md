@@ -9,4 +9,4 @@
 | Input | Batch 1, NHWC FP32 `[1,224,224,3]` |
 | Benchmark | CPU intra-op 1 thread, warm-up 30, runs 200 |
 
-Dependency: [requirements](../../requirements.txt), [lock file](../../requirements-lock.txt). Phiên bản và giao thức chi tiết: [báo cáo PC](../../results/report.md). Thông tin CPU được đối chiếu với inventory phần cứng ngày 08/10 trên cùng máy; không phải phép đo phần cứng mới.
+Dependency: [requirements](../../environments/mobilenet/requirements.txt), [lock file](../../environments/mobilenet/requirements-lock.txt). Phiên bản và giao thức chi tiết: [báo cáo PC](../../results/report.md). Thông tin CPU được đối chiếu với inventory phần cứng ngày 08/10 trên cùng máy; không phải phép đo phần cứng mới.

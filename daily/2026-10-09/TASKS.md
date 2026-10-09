@@ -24,8 +24,9 @@ Khảo sát vì sao TFLite calibration có range không bao phủ tốt dữ li�
 
 - [x] Đọc đủ 7 file trong repo Đức và cố định revision đối chiếu.
 - [x] Ghi khác biệt model, preprocessing, runtime, quantizer và giao thức đo.
-- [ ] Reproduce đầy đủ ResNet18/pipeline Đức; còn thiếu converter tương thích Windows hoặc môi trường Linux/artifact từ Đức.
+- [x] Chạy source ResNet18/pipeline Đức trên Linux tương thích, đo đủ 6/6 biến thể; source gốc giữ nguyên, wrapper q4 ghi rõ adaptation thu evidence.
 - [x] Chạy model Huy với runtime đối chiếu trên Windows, lưu môi trường và evidence.
+- [x] Chạy thêm 12 cấu hình model Huy trên Linux cùng bộ release dependencies Đức khai báo; giữ input/model hash và protocol 4/30/200.
 - [x] Đối chứng cùng model/input/thread, ghi rõ chưa tái tạo Mac hoặc cô lập mọi dependency/kernel.
 
 **Tiêu chí:** có output và latency thực đo, model/input hash, dependency thực cài; không coi đọc code là reproduce thành công.
@@ -58,11 +59,11 @@ Khảo sát vì sao TFLite calibration có range không bao phủ tốt dữ li�
 - [x] Đề xuất contract Android, Java/Kotlin trước, C++/JNI sau profiling.
 - [x] Prototype qua 5 ca hình học và CSV demo (4 box ứng viên); chưa chứng minh tương đương NAVER.
 - [x] Tổng hợp số đo, giới hạn, code và bằng chứng vào REPORT; verifier offline đã pass 40 job chính + 2 thread controls.
-- [x] Tạo báo cáo chat cục bộ và script ZIP có allowlist/inventory SHA256; chat/model/cache/docs không commit.
+- [x] Chuẩn bị code/báo cáo/JSON/CSV nộp qua Git; dependency quản lý bằng uv; chat/model/raw tensor/cache/docs không commit.
 
 ## 5. Những phần chưa hoàn tất
 
-- Reproduce đầy đủ ResNet18/pipeline converter Đức trên môi trường tương thích và đối chiếu Mac M1 Pro.
+- Đối chiếu phần cứng dựa trên số Mac Đức báo cáo và Linux Huy thực đo đã có; còn cần full transitive lock/raw artifact của Đức và nhiều phiên kiểm soát nhiệt/power để giải thích chênh lệch chặt hơn, không yêu cầu cùng Mac để reproduce.
 - Huy tự đọc/viết lại thuật toán theo yêu cầu mentor; tài liệu có hỗ trợ AI chưa thay phần này.
 - Port Hough merge/scoring tương đương NAVER, kiểm bằng fixtures và benchmark M-LSD/box trên Android thật.
 - Đánh giá line/box có nhãn; kiểm soát power/nhiệt độ và lặp nhiều session trước kết luận latency ổn định.

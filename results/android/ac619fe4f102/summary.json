@@ -1,0 +1,119 @@
+{
+  "source": "D:\\vin\\710\\results\\android\\raw\\matrix-5mhbmvu8ifjga\\benchmark\\android_run.json",
+  "system": {
+    "manufacturer": "Google",
+    "model": "Pixel 8a",
+    "device": "akita",
+    "hardware": "akita",
+    "android_release": "14",
+    "android_api": 34,
+    "abis": [
+      "arm64-v8a"
+    ],
+    "fingerprint": "google/akita/akita:14/UD2A.231203.057.A1/11555838:user/release-keys",
+    "battery_temperature_c": 32.7,
+    "thermal_status": 0
+  },
+  "num_images": 2,
+  "threads": 1,
+  "warmup": 30,
+  "runs": 200,
+  "timing_scope": "Java inference API including input/output copies and tensor creation; excludes model/file load, preprocessing, file write and metric calculation",
+  "runtime_order": [
+    "onnx",
+    "tflite"
+  ],
+  "comparisons": {
+    "onnx": {
+      "mae": 1.6421847135461575e-09,
+      "rmse": 3.0108208710253505e-08,
+      "max_abs_error": 1.2516975402832031e-06,
+      "relative_l2": 1.099173685047814e-06,
+      "cosine_similarity": 0.9999999999994801,
+      "snr_db": 119.17867354920082,
+      "top1_agreement": 1.0,
+      "top5_overlap": 1.0,
+      "allclose": true
+    },
+    "tflite": {
+      "mae": 9.964601304091048e-10,
+      "rmse": 1.603684044058274e-08,
+      "max_abs_error": 6.556510925292969e-07,
+      "relative_l2": 5.854640232248718e-07,
+      "cosine_similarity": 0.9999999999999329,
+      "snr_db": 124.6499957435136,
+      "top1_agreement": 1.0,
+      "top5_overlap": 1.0,
+      "allclose": true
+    }
+  },
+  "benchmarks": {
+    "onnx": {
+      "mean_ms": 36.003529195,
+      "median_ms": 35.2837115,
+      "p95_ms": 40.40627489999998,
+      "images_per_second": 27.77505490042002
+    },
+    "tflite": {
+      "mean_ms": 22.39120787,
+      "median_ms": 22.0918785,
+      "p95_ms": 24.63957105,
+      "images_per_second": 44.66038660378888
+    }
+  },
+  "per_image": [
+    {
+      "filename": "grace_hopper.jpg",
+      "runtime": "onnx",
+      "mae": 2.395651563347201e-09,
+      "rmse": 4.041815164827169e-08,
+      "max_abs_error": 1.2516975402832031e-06,
+      "relative_l2": 1.5880571569295802e-06,
+      "cosine_similarity": 0.9999999999999278,
+      "snr_db": 115.98267741232954,
+      "reference_top1": 652,
+      "candidate_top1": 652
+    },
+    {
+      "filename": "sunflower.jpg",
+      "runtime": "onnx",
+      "mae": 8.887178637451143e-10,
+      "rmse": 1.3393337180019133e-08,
+      "max_abs_error": 4.172325134277344e-07,
+      "relative_l2": 4.586226724432114e-07,
+      "cosine_similarity": 0.9999999999999963,
+      "snr_db": 126.77088958638292,
+      "reference_top1": 985,
+      "candidate_top1": 985
+    },
+    {
+      "filename": "grace_hopper.jpg",
+      "runtime": "tflite",
+      "mae": 1.61300772560935e-09,
+      "rmse": 2.1949024296560804e-08,
+      "max_abs_error": 6.556510925292969e-07,
+      "relative_l2": 8.62392358391409e-07,
+      "cosine_similarity": 0.9999999999999489,
+      "snr_db": 121.28590200796924,
+      "reference_top1": 652,
+      "candidate_top1": 652
+    },
+    {
+      "filename": "sunflower.jpg",
+      "runtime": "tflite",
+      "mae": 3.799125352088595e-10,
+      "rmse": 5.709714096380265e-09,
+      "max_abs_error": 1.7881393432617188e-07,
+      "relative_l2": 1.955154494038395e-07,
+      "cosine_similarity": 0.9999999999999996,
+      "snr_db": 134.1763783893278,
+      "reference_top1": 985,
+      "candidate_top1": 985
+    }
+  ],
+  "accuracy": null,
+  "reference": "TensorFlow FP32 on PC",
+  "atol": 1e-05,
+  "rtol": 0.0001,
+  "measured_at_utc7": "2026-10-08T09:47:55.692000+07:00"
+}

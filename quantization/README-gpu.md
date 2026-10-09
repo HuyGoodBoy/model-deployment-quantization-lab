@@ -17,13 +17,12 @@ thử trên RTX 3050 Laptop 4 GB. Không cài `onnxruntime` CPU và
 `onnxruntime-gpu` vào cùng venv vì chúng cùng cung cấp module `onnxruntime`.
 
 ```powershell
-python -m venv .venv-gpu
-.\.venv-gpu\Scripts\python.exe -m pip install -r requirements-gpu-lock.txt
-.\.venv-gpu\Scripts\python.exe -m pip check
+python ../scripts/setup.py --profile gpu
+python ../scripts/setup.py --profile gpu --check
 .\.venv-gpu\Scripts\python.exe -m qlab.gpu_experiment --action inventory
 ```
 
-`requirements-gpu.txt` là các dependency chính; lock file ghi toàn bộ
+`../environments/gpu/requirements.txt` là các dependency chính; lock file ghi toàn bộ
 phiên bản đã cài. CUDA runtime/cuBLAS/cuDNN/cuFFT là wheel NVIDIA cài trong
 venv, không phải đổi driver hoặc cài global CUDA Toolkit. ORT 1.20.2 chưa
 có `preload_dlls()`, `gpu_runtime.py` thêm DLL directories và preload các
@@ -42,7 +41,7 @@ Trên workspace đã có model/canonical inputs/reference của bài CPU:
 .\.venv-gpu\Scripts\python.exe -m qlab.daily_report
 ```
 
-Từ ZIP mới giải nén, model/dataset lớn không nằm trong ZIP. Muốn đo lại,
+Từ clone Git mới, model/dataset và raw tensor không có trong repository. Muốn đo lại,
 chạy toàn bộ bài CPU theo `README.md` bằng **venv CPU riêng**, để tải
 weights/dataset và tạo lại input/reference/kết quả có hash khớp nhau, rồi
 chạy GPU như trên. Không giữ số đo cũ khi thay model/input/version.
@@ -70,7 +69,6 @@ khác trong lúc benchmark nếu muốn giảm biến động.
 | `qlab/gpu_experiment.py` | Tạo FP16, warm-up/đo, evaluate 100 mẫu, profile ngoài timer |
 | `qlab/gpu_verify.py` | Tính lại metric, timing, checksum và provider từ raw evidence offline |
 | `qlab/daily_report.py` | Tạo hai bản báo cáo và JSON/CSV từ kết quả đã đo |
-| `qlab/daily_package.py` | ZIP allowlist và kiểm tra một bản giải nén mới |
 
 Timer `session.run` trả NumPy output ở CPU, nên bao gồm H2D/D2H và đã đồng
 bộ khi trả kết quả. Không đặt `disable_synchronize_execution_providers`,

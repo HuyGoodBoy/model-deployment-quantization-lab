@@ -39,15 +39,14 @@ TFLite không bật SELECT_TF_OPS. Wrapper dùng scale/zero-point thực tế t�
 
 Môi trường CPU đã đo: Windows x64, Python 3.11.9, TensorFlow 2.15.1/Keras 2.15, ONNX Runtime 1.20.1, Transformers 4.38.2. Lock file ghi dependency thực tế trên Windows.
 
-Các lệnh chạy trong thư mục `quantization/`:
+Các lệnh sau chạy trong thư mục `quantization/`; setup tự xác định root repo:
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
-.\.venv\Scripts\python.exe run_lab.py
+python ../scripts/setup.py --profile baseline
+..\.venv\Scripts\python.exe run_lab.py
 ```
 
-Lần đầu cần Internet. `sources.lock.json` cố định revision/checksum; downloader kiểm checksum trước khi dùng cache. Trọng số, dataset đầy đủ và canonical input lớn không được lưu trong Git. Linux/macOS dùng `.venv/bin/python` và `requirements.txt`; môi trường đó chưa được đo trong báo cáo này.
+Lần đầu cần Internet. `sources.lock.json` cố định revision/checksum; downloader kiểm checksum trước khi dùng cache. Trọng số, dataset đầy đủ và canonical input lớn không được lưu trong Git. Lock nằm ở `../environments/baseline/`, được capture trên Windows. Linux reproduce dùng profile riêng `peer-linux`; không coi lock Windows là đa nền tảng.
 
 ## 4. Pipeline thực nghiệm
 
@@ -79,7 +78,6 @@ Metric output gồm MAE, RMSE, max error, relative L2, cosine và SNR gộp theo
 | `qlab/report.py` | Tổng hợp JSON, CSV, Markdown và HTML |
 | `qlab/verify.py` | Tính lại metric/latency và kiểm checksum offline |
 | `qlab/diagnose.py` | Phân tích scale trong TFLite FlatBuffer |
-| `qlab/package.py` | Đóng gói ZIP CPU với inventory SHA256 |
 
 ## 6. Kết quả và kiểm chứng
 
@@ -124,3 +122,5 @@ Evaluation chỉ gồm 100 mẫu/model; thay đổi 1 điểm phần trăm tươ
 - [TFLite quantization](https://ai.google.dev/edge/litert/conversion/tensorflow/quantization/post_training_quantization)
 
 Revision/checksum nằm trong `sources.lock.json` và `results/source_checksums.json`. Điều kiện sử dụng model/dataset theo từng nguồn.
+
+Bàn giao bằng Git: JSON/CSV/MD và source manifest được lưu; raw NPY/NPZ, model/dataset/cache giữ cục bộ. Tạo lại raw output trước khi chạy verifier từ clone mới.

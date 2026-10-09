@@ -1,0 +1,7 @@
+{
+  "ServerVersion": "28.3.0",
+  "NCPU": 20,
+  "MemTotal": 8127164416,
+  "Architecture": "x86_64",
+  "KernelVersion": "6.18.33.2-microsoft-standard-WSL2"
+}

@@ -18,7 +18,7 @@ Hai ảnh RGB, resize bilinear 224×224, chuẩn hóa [-1,1], NHWC FP32 batch 1.
 | ONNX FP32 | 9,112 | 11,690 | 6,55651e-7 | 124,190 | 100% |
 | TFLite FP32 | 53,418 | 62,264 | 9,53674e-7 | 121,621 | 100% |
 
-Các số liệu lấy từ [báo cáo chi tiết PC](../../results/report.md); [summary JSON](../../results/summary.json) và [raw output](../../results/outputs.npz) lưu dữ liệu đối chiếu.
+Các số liệu lấy từ [báo cáo chi tiết PC](../../results/report.md); [summary JSON](../../results/summary.json) và raw output (`results/outputs.npz`, cục bộ, tạo lại bằng pipeline) lưu dữ liệu đối chiếu.
 
 ## 4. Nhận xét và giới hạn
 

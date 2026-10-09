@@ -1,0 +1,42 @@
+{
+  "note": "FP32 evidence filename collision repaired after all benchmarks; ONNX FP32 raw outputs recovered with original runner and checked against all measured quality metrics. Primary timings and numeric metrics unchanged.",
+  "primary_metrics_and_timings_unchanged": true,
+  "variants": [
+    {
+      "name": "ONNX FP32",
+      "output_file": "onnx_fp32_outputs.npy",
+      "matches_measured_metrics": true,
+      "recovered_after_timing": true
+    },
+    {
+      "name": "ONNX dynamic",
+      "output_file": "onnx_dynamic_outputs.npy",
+      "matches_measured_metrics": true,
+      "recovered_after_timing": false
+    },
+    {
+      "name": "ONNX static",
+      "output_file": "onnx_static_outputs.npy",
+      "matches_measured_metrics": true,
+      "recovered_after_timing": false
+    },
+    {
+      "name": "TFLite FP32",
+      "output_file": "tflite_fp32_outputs.npy",
+      "matches_measured_metrics": true,
+      "recovered_after_timing": false
+    },
+    {
+      "name": "TFLite dynamic",
+      "output_file": "tflite_dynamic_outputs.npy",
+      "matches_measured_metrics": true,
+      "recovered_after_timing": false
+    },
+    {
+      "name": "TFLite static",
+      "output_file": "tflite_static_outputs.npy",
+      "matches_measured_metrics": true,
+      "recovered_after_timing": false
+    }
+  ]
+}

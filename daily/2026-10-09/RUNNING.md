@@ -1,21 +1,27 @@
 # Chạy lại thực nghiệm 09/10/2026
 
+**Bổ sung reproduce source Đức:** xem [PEER-RUNNING.md](experiments/01-reproduce/PEER-RUNNING.md) để chạy ResNet18 trong Linux Docker, [bảng kết quả](PEER-REPRODUCTION.md) gồm 6/6 variant source Đức và 12 cấu hình model Huy. Các mục dưới đây mô tả matrix Windows và M-LSD ban đầu; không dùng chúng thay cho chạy source Đức.
+
 Các lệnh chạy từ **root repo**, PowerShell, Python 3.11 x64. Chạy benchmark tuần tự, đóng ứng dụng nặng, giữ cùng power mode. Không chạy conversion và benchmark đồng thời.
 
-## 1. Hai môi trường độc lập
+## 1. Cài môi trường bằng uv
 
 ```powershell
-py -3.11 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r quantization/requirements-lock.txt
-py -3.11 -m venv .venv-day09
-.\.venv-day09\Scripts\python.exe -m pip install -r daily/2026-10-09/requirements-runtime-lock.txt
-.\.venv-day09\Scripts\python.exe -m pip check
-.\.venv-day09\Scripts\python.exe daily/2026-10-09/environment_probe.py
+python scripts/setup.py --profile baseline
+python scripts/setup.py --profile runtime
+python scripts/setup.py --profile baseline --check
+python scripts/setup.py --profile runtime --check
+.\.venv-day09\Scripts\python.exe daily/2026-10-09/tools/environment_probe.py
 ```
 
-`requirements-peer.txt` ghi nguyên phiên bản Đức khai báo để đối chiếu, **không phải bộ đã cài thành công trên Windows**. `requirements-runtime-lock.txt` là bộ thực cài và đã kiểm dependency. Không gộp TensorFlow 2.15 và NumPy 2.4 vào cùng venv.
+Dependency và lock tập trung ở [environments](../../environments/README.md).
+`baseline` giữ TensorFlow 2.15/NumPy 1.26 trong `.venv`; `runtime` giữ ORT/LiteRT
+mới và NumPy 2.4 trong `.venv-day09`. Lock runtime dùng pin phiên bản, không có
+đường dẫn wheel tuyệt đối của máy Huy. Không cài hai profile vào cùng venv.
 
-Nếu tải wheel chậm, helper `fetch_wheel.py PACKAGE VERSION` tải wheel Windows Python 3.11 theo URL PyPI và kiểm SHA256. Không dùng helper cho platform khác. Lần chạy đầu cần Internet; trọng số, dataset và wheel không lưu trong Git.
+Reproduce source Đức dùng [peer-linux](../../environments/peer-linux/requirements.txt)
+và Docker; runtime Windows không có đủ converter. Các helper cài đặt/bảo trì cũ
+không thuộc code nộp Git.
 
 ## 2. Chuẩn bị baseline Huy
 
@@ -37,7 +43,7 @@ Ngày 09/10 giữ nguyên artifact/input của baseline, không convert lại đ
 .\.venv\Scripts\python.exe daily/2026-10-09/experiments/03-mlsd/src/port_keras.py --variant fp32
 ```
 
-Downloader khóa revision và SHA trong `sources.lock.json`. Source Tiny PyTorch được import từ cache riêng; checkpoint load với `weights_only=True`. Repo Đức chỉ được đọc, không được import/thực thi hoặc sửa trong pipeline này.
+Downloader khóa revision và SHA trong `sources.lock.json`. Source Tiny PyTorch được import từ cache riêng; checkpoint load với `weights_only=True`. Bước M-LSD này không dùng repo Đức. Reproduce ResNet18 là pipeline riêng theo PEER-RUNNING.md, thực thi source ghim revision và không chỉnh source gốc.
 
 Gate FP32 lưu cả `allclose_1e4`, relative L2 và max error từng channel. Điều kiện chấp nhận bridge được ghi công khai trong JSON; không thay reference bằng output của model official. Nếu fail gate, dừng quantization và đọc mapping/architecture.
 
@@ -54,7 +60,7 @@ Không sửa source Transformers đã cài; sentinel được đổi trong proce
 ## 5. Matrix conversion/benchmark
 
 ```powershell
-.\.venv\Scripts\python.exe daily/2026-10-09/run_matrix.py
+.\.venv\Scripts\python.exe daily/2026-10-09/tools/run_matrix.py
 ```
 
 Runner convert M-LSD FP16/dynamic/static/decoded trước, rồi lần lượt đo DistilBERT, runtime cũ/mới và M-LSD. Ghi log/exit code từng job, tiếp tục các job độc lập nếu có lỗi. Nếu rerun cùng `run-01`, file kết quả bị thay; để lưu nhiều phiên, gọi từng CLI với `--run-id run-02`. Runner mặc định là một phiên cố định.
@@ -77,15 +83,33 @@ java -cp daily/2026-10-09/experiments/04-box-postprocess/artifacts/classes BoxPo
 
 Đây là phép đo JVM desktop, không phải Android. Prototype giả định input đã merge; CSV demo chưa qua bước này nên không chứng minh tương đương NAVER. Đọc [ALGORITHM.md](experiments/04-box-postprocess/ALGORITHM.md).
 
-## 7. Báo cáo, kiểm chứng và ZIP
+## 7. Báo cáo và kiểm chứng
+
+Tạo báo cáo từ kết quả đã lưu, không chạy lại benchmark:
 
 ```powershell
-.\.venv\Scripts\python.exe daily/2026-10-09/post_checks.py
-.\.venv\Scripts\python.exe daily/2026-10-09/build_report.py
-.\.venv\Scripts\python.exe daily/2026-10-09/verify_results.py
-.\.venv\Scripts\python.exe daily/2026-10-09/package_submission.py
+python daily/2026-10-09/tools/build_report.py
+python daily/2026-10-09/tools/build_peer_report.py
 ```
 
-Sau matrix, `post_checks.py` chạy hai đối chứng thread, hai audit delegate và Java smoke test. Cần compile Java ở bước 6 trước khi gọi script này. Chạy tuần tự trước verifier.
+Kiểm chứng đầy đủ khi đã có raw output, model và dữ liệu cục bộ:
 
-MD/JSON/CSV được commit; chat report, model, dataset, venv, log và cache được ignore. ZIP cục bộ chứa code và raw evidence đã tạo, không chứa model/credential; model/data tải lại bằng source lock. Phần tự đọc thuật toán của Huy và reproduce đầy đủ pipeline Đức vẫn phải được hoàn thành riêng, không được đánh dấu thay bằng tài liệu AI.
+```powershell
+.\.venv\Scripts\python.exe daily/2026-10-09/tools/verify_results.py
+```
+
+`post_checks.py` là runner đo bổ sung thread/delegate/Java, chỉ chạy khi cần làm
+lại các đối chứng sau matrix; không chạy để chuẩn bị Git. Cần compile Java ở
+bước 6 trước khi chạy runner này. Không chạy benchmark song song.
+
+## 8. Bàn giao qua Git
+
+Giữ code, README/RUNNING/ENVIRONMENT, báo cáo, lock, source manifest và JSON/CSV
+kết quả trong repository. `.gitignore` loại model, dataset, tensor NPY/NPZ,
+profiler trace, venv/cache, credentials, docs HTML và báo cáo chat. File bị bỏ
+khỏi Git vẫn giữ trên máy; clone mới phải tải/tạo lại theo pipeline trước khi
+chạy verifier có yêu cầu raw artifact. Không chỉnh hash/command trong evidence
+lịch sử chỉ để khớp tên thư mục mới.
+
+Source Đức đã chạy đủ 6/6 biến thể trên Linux. Phần tự đọc/viết lại thuật toán
+của Huy vẫn cần hoàn thành; tài liệu giải thích không thay thế phần này.
