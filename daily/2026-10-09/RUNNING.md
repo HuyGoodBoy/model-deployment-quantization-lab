@@ -14,7 +14,7 @@ python scripts/setup.py --profile runtime --check
 .\.venv-day09\Scripts\python.exe daily/2026-10-09/tools/environment_probe.py
 ```
 
-Dependency và lock tập trung ở [environments](../../environments/README.md).
+Dependency và lock tập trung ở [environments](../../environments/).
 `baseline` giữ TensorFlow 2.15/NumPy 1.26 trong `.venv`; `runtime` giữ ORT/LiteRT
 mới và NumPy 2.4 trong `.venv-day09`. Lock runtime dùng pin phiên bản, không có
 đường dẫn wheel tuyệt đối của máy Huy. Không cài hai profile vào cùng venv.

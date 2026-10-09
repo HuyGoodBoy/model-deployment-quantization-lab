@@ -31,10 +31,10 @@ Giảm dung lượng không bảo đảm tăng tốc. INT8 CUDA có CPU fallback
 
 ## 5. Hướng tiếp theo
 
-Reproduce môi trường của Đức, đối chiếu dynamic/static giữa các công cụ, làm rõ DistilBERT mixed INT8 và mở rộng M-LSD. Nội dung được theo dõi tại ngày [09/10/2026](../2026-10-09/README.md).
+Reproduce môi trường của Đức, đối chiếu dynamic/static giữa các công cụ, làm rõ DistilBERT mixed INT8 và mở rộng M-LSD. Nội dung được theo dõi tại ngày [09/10/2026](../2026-10-09/REPORT.md).
 
 ## 6. Mã nguồn và bằng chứng
 
-- [Quantization CPU/GPU](experiments/01-quantization-cpu-gpu/README.md)
-- [Android FP32](experiments/02-android-fp32/README.md)
+- [Quantization CPU/GPU](../../quantization/)
+- [Android FP32](../../android/)
 - [Môi trường](ENVIRONMENT.md)

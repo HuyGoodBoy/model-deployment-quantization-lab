@@ -124,3 +124,10 @@ results/android/ac619fe4f102/*
 !results/android/ac619fe4f102/report.md
 !results/android/ac619fe4f102/summary.json
 !results/android/ac619fe4f102/run-metadata.json
+
+# Internal templates, duplicate indexes and task checklists stay out of submissions.
+/_template/
+/daily/**/README.md
+/daily/**/TASKS.md
+/scripts/README.md
+/environments/README.md

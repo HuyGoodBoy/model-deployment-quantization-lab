@@ -26,10 +26,10 @@ ONNX và TFLite đạt tolerance output trên hai ảnh đã dùng. ONNX có lat
 
 ## 5. Hướng tiếp theo
 
-Chạy cùng model/input trên Android thật, thu output và latency riêng. Công việc đã triển khai ở ngày [08/10/2026](../2026-10-08/README.md).
+Chạy cùng model/input trên Android thật, thu output và latency riêng. Công việc đã triển khai ở ngày [08/10/2026](../2026-10-08/REPORT.md).
 
 ## 6. Mã nguồn và bằng chứng
 
-- [Pipeline](experiments/01-mobilenetv2-fp32/README.md)
+- [Pipeline](../../lab/)
 - [Môi trường](ENVIRONMENT.md)
 - [Báo cáo chi tiết](../../results/report.md)
