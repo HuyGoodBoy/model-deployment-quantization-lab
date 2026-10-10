@@ -90,12 +90,12 @@
 </div>
 
 <section class="workbook-save" aria-labelledby="workbook-title">
-  <span class="pill">Yêu cầu mentor · 15 câu hỏi trọng tâm</span>
-  <h3 id="workbook-title">Hiểu tới đâu, viết lại tới đó.</h3>
-  <p class="small">Các ô tự diễn giải tập trung vào reproduce, quantization, thử nghiệm DistilBERT, chuyển M-LSD và thuật toán detect box/Android. Phần toán cơ bản giữ lại để tra cứu, không có ô bài tập riêng. Bấm <b>Save vào HTML</b> để lưu tất cả câu trả lời, ghi chú và tiến độ vào chính file này.</p>
+  <span class="pill">Yêu cầu mentor · 4 phần cốt lõi</span>
+  <h3 id="workbook-title">Tự giải thích phương pháp và thuật toán.</h3>
+  <p class="small">Chỉ viết lại 4 phần có phương pháp hoặc thuật toán theo yêu cầu mentor. Bấm <b>Save vào HTML</b> để lưu tất cả câu trả lời, ghi chú và tiến độ vào chính file này.</p>
   <p class="small muted">Lần Save đầu trong mỗi lần mở trang: chọn đúng file HTML đang mở và cho phép ghi. Những lần Save tiếp dùng lại file đã chọn. Dùng Chrome/Edge; nếu trình duyệt không hỗ trợ ghi trực tiếp, tải bản HTML đã điền bằng nút bên cạnh.</p>
   <div class="workbook-actions no-print"><button type="button" class="primary" data-save-html>Save vào HTML</button><button type="button" id="downloadWorkbook">Tải bản HTML đã điền ↓</button></div>
-  <b class="small" id="reflectionCount">0 / 15 câu đã viết</b>
+  <b class="small" id="reflectionCount">0 / 4 phần đã viết</b>
   <p class="small file-status" id="fileSaveStatus" role="status" aria-live="polite">Chưa ghi thay đổi vào file HTML.</p>
 </section>
 
@@ -149,22 +149,14 @@
     <details><summary>FP16 weights có phải CPU tính FP16 không?</summary><p>Không thể kết luận chỉ từ tên file. Runtime có thể đọc weights FP16 rồi chuyển sang float32 để tính. Do đó giảm dung lượng không đảm bảo giảm latency trên CPU.</p></details>
   </div>
 
-  <div class="card reflection-card" aria-label="Yêu cầu mentor · Giải thích quantization">
-    <div class="label-line"><h3>Yêu cầu mentor · Giải thích quantization</h3><span class="pill amber">Tôi tự diễn giải</span></div>
-    <p class="small muted">Trả lời theo cách hiểu và việc bạn đã làm; nêu ví dụ hoặc bằng chứng khi cần. Không điền sẵn đáp án. Mỗi nút Save lưu tất cả câu trả lời vào cùng file HTML.</p>
-    <div class="reflection-item">
-      <label for="reflect-quant-methods"><b>01 · Dynamic và static khác nhau thế nào?</b></label>
-      <p class="small reflection-prompt" id="prompt-quant-methods">Em hiểu weights và activation được lượng tử hóa ra sao? Dynamic/static khác nhau ở thời điểm lấy range activation nào? Hãy diễn giải quy trình ONNX Runtime và TFLite/LiteRT, rồi chỉ rõ cấu hình em đã dùng.</p>
-      <textarea class="note-input reflection-input" id="reflect-quant-methods" data-math-note="quant-methods" aria-describedby="prompt-quant-methods" placeholder="Theo tôi, bước này dùng để… Cách làm của tôi… Bằng chứng đã kiểm tra… Phần còn chưa chắc…" spellcheck="false"></textarea>
-      <div class="reflection-actions no-print"><span class="small muted" data-note-status="quant-methods">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
-      <div class="answer-print print-only" data-print-note="quant-methods"></div>
-    </div><div class="reflection-item">
-      <label for="reflect-quant-runtime"><b>02 · Vì sao cùng dynamic/static lại khác kết quả?</b></label>
-      <p class="small reflection-prompt" id="prompt-quant-runtime">Trong bài của em và Đức, phạm vi operator, cách calibration, fusion và kernel/delegate khác nhau ở đâu? Chọn một kết quả để giải thích vì sao file nhỏ hơn chưa chắc nhanh hơn hoặc giữ chất lượng tốt hơn. Điều nào có audit/profile chứng minh, điều nào còn là giả thuyết?</p>
-      <textarea class="note-input reflection-input" id="reflect-quant-runtime" data-math-note="quant-runtime" aria-describedby="prompt-quant-runtime" placeholder="Theo tôi, bước này dùng để… Cách làm của tôi… Bằng chứng đã kiểm tra… Phần còn chưa chắc…" spellcheck="false"></textarea>
-      <div class="reflection-actions no-print"><span class="small muted" data-note-status="quant-runtime">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
-      <div class="answer-print print-only" data-print-note="quant-runtime"></div>
-    </div>
+
+  <div class="card reflection-card">
+    <h3>01 · Dynamic/static ONNX và TFLite</h3>
+    <p class="small reflection-prompt" id="prompt-quant-core">Range activation được lấy lúc nào trong dynamic và static? Vì sao cùng tên phương pháp nhưng ONNX và TFLite khác sai số/tốc độ? Giải thích bằng phạm vi operator, calibration và kernel thực thi.</p>
+    <label for="reflect-quant-core" class="small muted">Viết theo ý hiểu của tôi</label>
+    <textarea class="note-input reflection-input" id="reflect-quant-core" data-math-note="quant-core" aria-describedby="prompt-quant-core" placeholder="Tôi hiểu phương pháp này… Ví dụ hoặc bằng chứng tôi đã kiểm tra…" spellcheck="false"></textarea>
+    <div class="reflection-actions no-print"><span class="small muted" data-note-status="quant-core">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+    <div class="answer-print print-only" data-print-note="quant-core"></div>
   </div>
   <div class="chapter-end"><span class="muted">Tự nói lại: “dynamic/static” và “mixed/full” khác nhau ở trục nào?</span><button class="complete" data-section="quant">✓ Đánh dấu đã hiểu</button></div>
 </section>
@@ -220,23 +212,7 @@
     <h4>Checklist cho một phép so sánh công bằng</h4><p class="small">Cùng hash model/input · cùng batch và thread · cùng provider/delegate · cùng output contract · cùng phạm vi timer · warm-up · không chạy benchmark song song · lưu raw latency · lặp phiên với điều kiện nguồn điện/nhiệt được kiểm soát.</p>
   </div>
 
-  <div class="card reflection-card" aria-label="Yêu cầu mentor · Reproduce và so sánh môi trường">
-    <div class="label-line"><h3>Yêu cầu mentor · Reproduce và so sánh môi trường</h3><span class="pill amber">Tôi tự diễn giải</span></div>
-    <p class="small muted">Trả lời theo cách hiểu và việc bạn đã làm; nêu ví dụ hoặc bằng chứng khi cần. Không điền sẵn đáp án. Mỗi nút Save lưu tất cả câu trả lời vào cùng file HTML.</p>
-    <div class="reflection-item">
-      <label for="reflect-reproduce"><b>03 · Em đã reproduce code Đức như thế nào?</b></label>
-      <p class="small reflection-prompt" id="prompt-reproduce">Nêu source/revision, các bước thực sự đã chạy, model/weights, preprocessing, cách chọn calibration/evaluation và dependency. Em giữ nguyên gì, điều chỉnh gì để chạy trên Linux? Vì sao chỉ chạy model của em bằng runtime mới chưa đủ gọi là reproduce code Đức?</p>
-      <textarea class="note-input reflection-input" id="reflect-reproduce" data-math-note="reproduce" aria-describedby="prompt-reproduce" placeholder="Theo tôi, bước này dùng để… Cách làm của tôi… Bằng chứng đã kiểm tra… Phần còn chưa chắc…" spellcheck="false"></textarea>
-      <div class="reflection-actions no-print"><span class="small muted" data-note-status="reproduce">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
-      <div class="answer-print print-only" data-print-note="reproduce"></div>
-    </div><div class="reflection-item">
-      <label for="reflect-environment-performance"><b>04 · Model của em thay đổi thế nào trên môi trường reproduce?</b></label>
-      <p class="small reflection-prompt" id="prompt-environment-performance">Em giữ cố định artifact/input và protocol đo như thế nào? Chọn một model của em, nêu latency cùng chất lượng output ở Windows và Linux. Dùng bằng chứng đã có để giải thích khác biệt; phân biệt tác động có thể có của OS, CPU/ISA, dependency, kernel và delegate, tránh kết luận chỉ từ hai con số tốc độ.</p>
-      <textarea class="note-input reflection-input" id="reflect-environment-performance" data-math-note="environment-performance" aria-describedby="prompt-environment-performance" placeholder="Theo tôi, bước này dùng để… Cách làm của tôi… Bằng chứng đã kiểm tra… Phần còn chưa chắc…" spellcheck="false"></textarea>
-      <div class="reflection-actions no-print"><span class="small muted" data-note-status="environment-performance">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
-      <div class="answer-print print-only" data-print-note="environment-performance"></div>
-    </div>
-  </div>
+
   <div class="chapter-end"><span class="muted">Tự nói lại: runtime mới có luôn nhanh hơn không? Bằng chứng nào?</span><button class="complete" data-section="runtime">✓ Đánh dấu đã hiểu</button></div>
 </section>
 
@@ -289,28 +265,14 @@ converter.target_spec.supported_ops = [
     <h4>Hướng tiếp theo đáng thử</h4><p class="small">Giữ các op nhạy cảm ở float qua selective quantization · thử QAT nếu PTQ không đủ · calibration đại diện padding/độ dài · xác nhận mask FP32 trên tập độc lập trước khi đo INT8 · giữ nguyên evaluation khi chọn cấu hình.</p>
   </div>
 
-  <div class="card reflection-card" aria-label="Phần Huy · DistilBERT và thử nghiệm tự đề xuất">
-    <div class="label-line"><h3>Phần Huy · DistilBERT và thử nghiệm tự đề xuất</h3><span class="pill amber">Tôi tự diễn giải</span></div>
-    <p class="small muted">Trả lời theo cách hiểu và việc bạn đã làm; nêu ví dụ hoặc bằng chứng khi cần. Không điền sẵn đáp án. Mỗi nút Save lưu tất cả câu trả lời vào cùng file HTML.</p>
-    <div class="reflection-item">
-      <label for="reflect-mixed-int8"><b>05 · Calibrated mixed INT8 thực chất là gì?</b></label>
-      <p class="small reflection-prompt" id="prompt-mixed-int8">Vì sao mixed INT8 có calibration vẫn thuộc static? Mixed khác yêu cầu strict INT8 ở cấu hình và graph thực tế thế nào? Ban đầu em chọn mixed vì lý do gì? Kết quả strict convert được nhưng không cải thiện accuracy cho phép em kết luận điều gì, và chưa cho phép kết luận điều gì?</p>
-      <textarea class="note-input reflection-input" id="reflect-mixed-int8" data-math-note="mixed-int8" aria-describedby="prompt-mixed-int8" placeholder="Theo tôi, bước này dùng để… Cách làm của tôi… Bằng chứng đã kiểm tra… Phần còn chưa chắc…" spellcheck="false"></textarea>
-      <div class="reflection-actions no-print"><span class="small muted" data-note-status="mixed-int8">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
-      <div class="answer-print print-only" data-print-note="mixed-int8"></div>
-    </div><div class="reflection-item">
-      <label for="reflect-mask"><b>06 · Attention mask liên quan gì đến sai số INT8?</b></label>
-      <p class="small reflection-prompt" id="prompt-mask">Theo em, sentinel rất lớn có thể kéo range calibration và làm mất độ phân giải của score thông thường như thế nào? Vì sao em thử đổi sentinel? Nêu kết quả FP32 gate và accuracy/SNR sau quantization; vì sao cải thiện một phần chưa chứng minh mask là nguyên nhân duy nhất?</p>
-      <textarea class="note-input reflection-input" id="reflect-mask" data-math-note="mask" aria-describedby="prompt-mask" placeholder="Theo tôi, bước này dùng để… Cách làm của tôi… Bằng chứng đã kiểm tra… Phần còn chưa chắc…" spellcheck="false"></textarea>
-      <div class="reflection-actions no-print"><span class="small muted" data-note-status="mask">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
-      <div class="answer-print print-only" data-print-note="mask"></div>
-    </div><div class="reflection-item">
-      <label for="reflect-experiment-design"><b>07 · Hướng thử tiếp do em đề xuất</b></label>
-      <p class="small reflection-prompt" id="prompt-experiment-design">Từ kết quả đã đo, em chọn giả thuyết tiếp theo nào và vì sao? Nêu yếu tố sẽ thay đổi, các yếu tố giữ nguyên, reference, dữ liệu đánh giá độc lập và metric/tiêu chí chấp nhận. Em sẽ làm gì nếu chất lượng hoặc latency không cải thiện?</p>
-      <textarea class="note-input reflection-input" id="reflect-experiment-design" data-math-note="experiment-design" aria-describedby="prompt-experiment-design" placeholder="Theo tôi, bước này dùng để… Cách làm của tôi… Bằng chứng đã kiểm tra… Phần còn chưa chắc…" spellcheck="false"></textarea>
-      <div class="reflection-actions no-print"><span class="small muted" data-note-status="experiment-design">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
-      <div class="answer-print print-only" data-print-note="experiment-design"></div>
-    </div>
+
+  <div class="card reflection-card">
+    <h3>02 · DistilBERT calibrated mixed INT8</h3>
+    <p class="small reflection-prompt" id="prompt-bert-core">Vì sao mixed INT8 vẫn thuộc static? Khác gì strict INT8 và vì sao ban đầu chọn mixed? Attention mask quá lớn ảnh hưởng scale thế nào, và kết quả thử giảm sentinel cho thấy gì?</p>
+    <label for="reflect-bert-core" class="small muted">Viết theo ý hiểu của tôi</label>
+    <textarea class="note-input reflection-input" id="reflect-bert-core" data-math-note="bert-core" aria-describedby="prompt-bert-core" placeholder="Tôi hiểu phương pháp này… Ví dụ hoặc bằng chứng tôi đã kiểm tra…" spellcheck="false"></textarea>
+    <div class="reflection-actions no-print"><span class="small muted" data-note-status="bert-core">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+    <div class="answer-print print-only" data-print-note="bert-core"></div>
   </div>
   <div class="chapter-end"><span class="muted">Tự nói lại: vì sao bỏ float fallback vẫn không cứu được accuracy?</span><button class="complete" data-section="bert">✓ Đánh dấu đã hiểu</button></div>
 </section>
@@ -361,22 +323,14 @@ converter.target_spec.supported_ops = [
     <p class="small muted">PyTorch raw có phép đo CPU 1 thread và normalization ngoài timer; không so trực tiếp với TFLite 4 threads như một phép đo ngang điều kiện.</p>
   </div>
 
-  <div class="card reflection-card" aria-label="Yêu cầu mentor · Convert, đối chứng và quantize M-LSD">
-    <div class="label-line"><h3>Yêu cầu mentor · Convert, đối chứng và quantize M-LSD</h3><span class="pill amber">Tôi tự diễn giải</span></div>
-    <p class="small muted">Trả lời theo cách hiểu và việc bạn đã làm; nêu ví dụ hoặc bằng chứng khi cần. Không điền sẵn đáp án. Mỗi nút Save lưu tất cả câu trả lời vào cùng file HTML.</p>
-    <div class="reflection-item">
-      <label for="reflect-convert"><b>08 · Em đã chuyển M-LSD sang TFLite thế nào?</b></label>
-      <p class="small reflection-prompt" id="prompt-convert">Mô tả input/output và đường PyTorch → Keras bridge → TFLite theo ý hiểu. Vì sao phải giữ đúng weights, thứ tự trục, normalization, padding và resize? Em kiểm chứng conversion với checkpoint nào, bằng gate nào và gate đó còn giới hạn gì?</p>
-      <textarea class="note-input reflection-input" id="reflect-convert" data-math-note="convert" aria-describedby="prompt-convert" placeholder="Theo tôi, bước này dùng để… Cách làm của tôi… Bằng chứng đã kiểm tra… Phần còn chưa chắc…" spellcheck="false"></textarea>
-      <div class="reflection-actions no-print"><span class="small muted" data-note-status="convert">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
-      <div class="answer-print print-only" data-print-note="convert"></div>
-    </div><div class="reflection-item">
-      <label for="reflect-compare-quantization"><b>09 · So với official và đánh giá quantization</b></label>
-      <p class="small reflection-prompt" id="prompt-compare-quantization">Vì sao khi so tốc độ với TFLite official phải cùng output contract/decoder và runtime/thread? Vì sao official khác checkpoint không làm reference cho sai số conversion? Từ FP32/FP16/dynamic/static, em thấy đánh đổi dung lượng, latency và output thế nào? Giải thích rủi ro scale chung center/displacement; vì sao số line chưa phải chất lượng detection?</p>
-      <textarea class="note-input reflection-input" id="reflect-compare-quantization" data-math-note="compare-quantization" aria-describedby="prompt-compare-quantization" placeholder="Theo tôi, bước này dùng để… Cách làm của tôi… Bằng chứng đã kiểm tra… Phần còn chưa chắc…" spellcheck="false"></textarea>
-      <div class="reflection-actions no-print"><span class="small muted" data-note-status="compare-quantization">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
-      <div class="answer-print print-only" data-print-note="compare-quantization"></div>
-    </div>
+
+  <div class="card reflection-card">
+    <h3>03 · Phương pháp convert và quantize M-LSD</h3>
+    <p class="small reflection-prompt" id="prompt-mlsd-core">Em chuyển weights/graph PyTorch sang TFLite và kiểm tra tương đương bằng cách nào? Vì sao quantize có thể làm sai center/displacement? Khi so với official, vì sao phải cùng output contract nhưng không lấy khác checkpoint làm chuẩn sai số?</p>
+    <label for="reflect-mlsd-core" class="small muted">Viết theo ý hiểu của tôi</label>
+    <textarea class="note-input reflection-input" id="reflect-mlsd-core" data-math-note="mlsd-core" aria-describedby="prompt-mlsd-core" placeholder="Tôi hiểu phương pháp này… Ví dụ hoặc bằng chứng tôi đã kiểm tra…" spellcheck="false"></textarea>
+    <div class="reflection-actions no-print"><span class="small muted" data-note-status="mlsd-core">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+    <div class="answer-print print-only" data-print-note="mlsd-core"></div>
   </div>
   <div class="chapter-end"><span class="muted">Tự nói lại: tại sao quantize đúng graph vẫn có thể ra nhiều line lạ?</span><button class="complete" data-section="mlsd">✓ Đánh dấu đã hiểu</button></div>
 </section>
@@ -415,47 +369,15 @@ converter.target_spec.supported_ops = [
     <div class="card"><span class="pill blue">Hướng triển khai tiếp</span><h3 style="margin-top:16px">Android: contract rõ trước</h3><ol class="steps"><li><b>Preprocess camera</b><p>RGBA / orientation / resize-crop / transform matrix thống nhất với model.</p></li><li><b>Interpreter → buffers</b><p>Dùng đúng shape/dtype; đọc scale và zero-point nếu I/O INT8; tái sử dụng buffer để giảm allocation.</p></li><li><b>Java/Kotlin geometry core</b><p>Decode → merge → intersections → quadrilateral → scoring. Giữ UI thread nhẹ.</p></li><li><b>Đo trên thiết bị thật</b><p>Tách inference/postprocess/end-to-end, báo thread/delegate, warm-up, median/p95 và điều kiện nhiệt.</p></li></ol><p class="small muted">Chỉ cân nhắc C++/JNI khi profiling thiết bị cho thấy geometry là bottleneck. Hôm nay chưa build APK hoặc đo M-LSD/box trên Android. Emulator/VPS không đại diện latency điện thoại.</p></div>
   </div>
 
-  <div class="card"><h3>Bài tập để Huy tự giải thích thuật toán</h3><p class="small">Mở source, chọn một hình chữ nhật và tự trả lời: (1) tại sao merge trước intersection? (2) line ID chung đảm bảo điều gì? (3) D gần 0 có nguy hiểm gì? (4) vì sao remap cần inverse transform? Viết khoảng 5–10 dòng theo cách hiểu của bạn.</p><label for="algorithmNotes" class="small muted">Tổng hợp thuật toán bằng lời của tôi — bấm Save để ghi vào HTML</label><textarea class="note-input" id="algorithmNotes" placeholder="Tôi hiểu bước merge là... Một cặp line song song cần... Khi đưa box về camera..." spellcheck="false"></textarea><div class="small muted" id="notesStatus" aria-live="polite">Chưa có ghi chú.</div><button type="button" class="primary no-print" data-save-html style="margin-top:13px">Save vào HTML</button> <button id="downloadNotes" class="no-print" style="margin-top:13px">Tải ghi chú .txt ↓</button></div>
-  <div class="card reflection-card" aria-label="Trọng tâm mentor · Tự giải thích detect box và hướng Android">
-    <div class="label-line"><h3>Trọng tâm mentor · Tự giải thích detect box và hướng Android</h3><span class="pill amber">Tôi tự diễn giải</span></div>
-    <p class="small muted">Trả lời theo cách hiểu và việc bạn đã làm; nêu ví dụ hoặc bằng chứng khi cần. Không điền sẵn đáp án. Mỗi nút Save lưu tất cả câu trả lời vào cùng file HTML.</p>
-    <div class="reflection-item">
-      <label for="reflect-center"><b>10 · Từ output M-LSD thành đoạn thẳng</b></label>
-      <p class="small reflection-prompt" id="prompt-center">Hãy diễn giải center, displacement và luồng sigmoid → NMS → top-k → lọc → dựng hai đầu mút. Tại sao cần từng bước? Em xử lý thứ tự tọa độ và hệ tọa độ output/input thế nào? Tự vẽ một center và hai vector đến hai đầu đoạn để minh họa.</p>
-      <textarea class="note-input reflection-input" id="reflect-center" data-math-note="center" aria-describedby="prompt-center" placeholder="Theo tôi, bước này dùng để… Cách làm của tôi… Bằng chứng đã kiểm tra… Phần còn chưa chắc…" spellcheck="false"></textarea>
-      <div class="reflection-actions no-print"><span class="small muted" data-note-status="center">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
-      <div class="answer-print print-only" data-print-note="center"></div>
-    </div><div class="reflection-item">
-      <label for="reflect-hough"><b>11 · Vì sao gộp line bằng Hough?</b></label>
-      <p class="small reflection-prompt" id="prompt-hough">Vì sao model có thể trả nhiều đoạn cho cùng một cạnh và tại sao nên gộp trước khi tìm box? Em hiểu cách biểu diễn đường bằng khoảng cách/góc, gom bin và chọn cụm trong Hough thế nào? Phân biệt suppression Hough với NMS center; cách tạo đoạn đại diện của source có giới hạn gì?</p>
-      <textarea class="note-input reflection-input" id="reflect-hough" data-math-note="hough" aria-describedby="prompt-hough" placeholder="Theo tôi, bước này dùng để… Cách làm của tôi… Bằng chứng đã kiểm tra… Phần còn chưa chắc…" spellcheck="false"></textarea>
-      <div class="reflection-actions no-print"><span class="small muted" data-note-status="hough">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
-      <div class="answer-print print-only" data-print-note="hough"></div>
-    </div><div class="reflection-item">
-      <label for="reflect-intersection"><b>12 · Từ hai đoạn thẳng thành một góc hợp lệ</b></label>
-      <p class="small reflection-prompt" id="prompt-intersection">Giải thích cách tìm giao điểm và vì sao phải xử lý gần song song. Hai đường kéo dài cắt nhau có chắc hai đoạn tạo góc box không? Điều kiện góc, khoảng cách và inside/outside giúp loại trường hợp nào? Tự vẽ một góc hợp lệ và một giao điểm cần loại.</p>
-      <textarea class="note-input reflection-input" id="reflect-intersection" data-math-note="intersection" aria-describedby="prompt-intersection" placeholder="Theo tôi, bước này dùng để… Cách làm của tôi… Bằng chứng đã kiểm tra… Phần còn chưa chắc…" spellcheck="false"></textarea>
-      <div class="reflection-actions no-print"><span class="small muted" data-note-status="intersection">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
-      <div class="answer-print print-only" data-print-note="intersection"></div>
-    </div><div class="reflection-item">
-      <label for="reflect-cycle"><b>13 · Ghép các góc thành box</b></label>
-      <p class="small reflection-prompt" id="prompt-cycle">Theo em, line ID chung giữa hai góc liền kề bảo đảm điều gì? Thuật toán tìm chu trình bốn cạnh như thế nào? Vì sao cần tránh lặp cạnh, kiểm tra hình học và không chỉ lấy min/max x,y? Tự vẽ một box xoay và mô tả thứ tự bốn góc.</p>
-      <textarea class="note-input reflection-input" id="reflect-cycle" data-math-note="cycle" aria-describedby="prompt-cycle" placeholder="Theo tôi, bước này dùng để… Cách làm của tôi… Bằng chứng đã kiểm tra… Phần còn chưa chắc…" spellcheck="false"></textarea>
-      <div class="reflection-actions no-print"><span class="small muted" data-note-status="cycle">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
-      <div class="answer-print print-only" data-print-note="cycle"></div>
-    </div><div class="reflection-item">
-      <label for="reflect-score"><b>14 · Chấm điểm và giới hạn prototype</b></label>
-      <p class="small reflection-prompt" id="prompt-score">Vì sao tìm được tứ giác chưa đủ để chọn box tốt? Giải thích vai trò của độ phủ cạnh, góc/cạnh đối, diện tích và khoảng cách tâm trong official. Bản Java đã thực hiện phần nào, còn thiếu gì và 5 ca hình học chưa chứng minh được điều gì?</p>
-      <textarea class="note-input reflection-input" id="reflect-score" data-math-note="score" aria-describedby="prompt-score" placeholder="Theo tôi, bước này dùng để… Cách làm của tôi… Bằng chứng đã kiểm tra… Phần còn chưa chắc…" spellcheck="false"></textarea>
-      <div class="reflection-actions no-print"><span class="small muted" data-note-status="score">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
-      <div class="answer-print print-only" data-print-note="score"></div>
-    </div><div class="reflection-item">
-      <label for="reflect-remap"><b>15 · Em sẽ port post-processing lên Android ra sao?</b></label>
-      <p class="small reflection-prompt" id="prompt-remap">Mô tả đường đi camera → preprocess → LiteRT outputs → decode/merge/geometry/scoring → corners. Phần nào viết Java/Kotlin, dùng lại buffer thế nào và khi nào mới cân nhắc JNI? Em biến đổi tọa độ ngược về camera, đối chiếu Python/Java bằng fixture và đo model/postprocess/end-to-end trên thiết bị thật thế nào?</p>
-      <textarea class="note-input reflection-input" id="reflect-remap" data-math-note="remap" aria-describedby="prompt-remap" placeholder="Theo tôi, bước này dùng để… Cách làm của tôi… Bằng chứng đã kiểm tra… Phần còn chưa chắc…" spellcheck="false"></textarea>
-      <div class="reflection-actions no-print"><span class="small muted" data-note-status="remap">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
-      <div class="answer-print print-only" data-print-note="remap"></div>
-    </div>
+
+
+  <div class="card reflection-card">
+    <h3>04 · Thuật toán detect box và hướng port Android</h3>
+    <p class="small reflection-prompt" id="prompt-box-core">Giải thích decode line → Hough merge → giao điểm/lọc góc → chu trình bốn cạnh → scoring. Mỗi bước dùng toán gì và để làm gì? Khi port Android, phần nào đã làm, phần nào còn thiếu?</p>
+    <label for="reflect-box-core" class="small muted">Viết theo ý hiểu của tôi</label>
+    <textarea class="note-input reflection-input" id="reflect-box-core" data-math-note="box-core" aria-describedby="prompt-box-core" placeholder="Tôi hiểu phương pháp này… Ví dụ hoặc bằng chứng tôi đã kiểm tra…" spellcheck="false"></textarea>
+    <div class="reflection-actions no-print"><span class="small muted" data-note-status="box-core">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+    <div class="answer-print print-only" data-print-note="box-core"></div>
   </div>
   <div class="chapter-end"><span class="muted">Tự nói lại: prototype của mình đang thiếu bước nào so với official?</span><button class="complete" data-section="box">✓ Đánh dấu đã hiểu</button></div>
 </section>
@@ -571,10 +493,6 @@ document.querySelectorAll('[data-sentinel]').forEach(btn=>btn.addEventListener('
 // Các bước hình học minh họa; không phải thực thi thuật toán NAVER.
 const boxExplanations=['<b>1. Line candidates:</b> nhiều đoạn cùng nằm trên một cạnh, cần gộp trước khi tìm box.','<b>2. Merge:</b> gộp line gần cùng khoảng cách/góc trong Hough space thành cạnh đại diện. Hình này chỉ ẩn các đoạn trùng để minh họa.','<b>3. Intersections:</b> tính giao điểm, bỏ cặp gần song song và giao điểm quá xa endpoint. Bốn góc lý tưởng được đánh dấu.','<b>4. Quadrilateral:</b> nối góc dùng chung line thành chu trình; kiểm tra hình học, chấm điểm rồi remap về ảnh gốc.'];
 $('boxStep').addEventListener('input',()=>{const step=Number($('boxStep').value);$('boxStepValue').value=(step+1)+' / 4';$('boxDuplicates').style.display=step===0?'':'none';$('boxIntersections').style.display=step>=2?'':'none';$('boxPolygon').style.display=step===3?'':'none';$('boxCenterLabel').textContent=['Line candidates','Bốn cạnh đại diện','Góc chia sẻ line ID','Box candidate'][step];$('boxStepExplanation').innerHTML=boxExplanations[step];});
-$('algorithmNotes').value=state.notes;
-function notesStatus(){ $('notesStatus').textContent=state.notes?(fileDirty?(canSave?'Đã giữ bản nháp; bấm Save để ghi vào HTML.':'Bấm Save vào HTML hoặc tải ghi chú để giữ lại.'):'Ghi chú đã nằm trong file HTML.'):'Chưa có ghi chú.'; }
-$('algorithmNotes').addEventListener('input',()=>{state.notes=$('algorithmNotes').value;save();notesStatus();});notesStatus();
-$('downloadNotes').addEventListener('click',()=>{const blob=new Blob(['Huy — ghi chú học ngày 09/10/2026\n\n'+$('algorithmNotes').value],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='huy-ghi-chu-2026-10-09.txt';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);});
 document.querySelectorAll('[data-check]').forEach(input=>{input.checked=state.checks[input.dataset.check]===true;input.addEventListener('change',()=>{state.checks[input.dataset.check]=input.checked;save();});});
 const questions=[
   {q:'Dynamic và static khác nhau chủ yếu ở đâu?',options:['Số bit của weights','Thời điểm xác định range activation','Loại CPU được sử dụng'],correct:1,why:'Dynamic xác định activation range lúc inference ở op hỗ trợ; static dùng calibration trước inference. Hai bên có thể cùng dùng INT8.'},
@@ -597,14 +515,25 @@ const mathInputs = [...document.querySelectorAll('[data-math-note]')];
 function updateWorkbookStatus(){
   const inputs = [...document.querySelectorAll('[data-math-note]')];
   const count = inputs.filter(input=>input.value.trim()).length;
-  $('reflectionCount').textContent=count+' / '+inputs.length+' câu đã viết';
+  $('reflectionCount').textContent=count+' / '+inputs.length+' phần đã viết';
   inputs.forEach(input=>{
     const message=document.querySelector('[data-note-status="'+input.dataset.mathNote+'"]');
     message.textContent=input.value.trim() ? (fileDirty?'Có nội dung · chưa Save vào HTML.':'Có nội dung · đã nằm trong HTML.') : 'Chưa viết.';
     document.querySelector('[data-print-note="'+input.dataset.mathNote+'"]').textContent=input.value || '(Chưa viết)';
   });
-  notesStatus();
 }
+const previousFields={
+  'quant-core':['quant-methods','quant-runtime'],
+  'bert-core':['mixed-int8','mask'],
+  'mlsd-core':['convert','compare-quantization'],
+  'box-core':['center','hough','intersection','cycle','score','remap']
+};
+Object.entries(previousFields).forEach(([key,oldKeys])=>{
+  if(Object.prototype.hasOwnProperty.call(state.mathNotes,key))return;
+  const parts=oldKeys.map(old=>state.mathNotes[old]).filter(value=>typeof value==='string' && value.trim());
+  if(key==='box-core' && state.notes.trim() && !parts.includes(state.notes))parts.push(state.notes);
+  state.mathNotes[key]=parts.join(String.fromCharCode(10,10));
+});
 mathInputs.forEach(input=>{
   const stored=state.mathNotes[input.dataset.mathNote];
   input.value=typeof stored==='string'?stored:'';
@@ -617,7 +546,7 @@ function fileStatus(message,kind='info'){
 }
 function collectWorkbook(){
   mathInputs.forEach(input=>state.mathNotes[input.dataset.mathNote]=input.value);
-  state.notes=$('algorithmNotes').value;
+  state.notes=state.mathNotes['box-core'] || '';
   return JSON.parse(JSON.stringify(state));
 }
 function serializeWorkbook(snapshot){
