@@ -1,6 +1,6 @@
 # M-LSD: từ output model đến bốn góc
 
-Tài liệu hỗ trợ đọc source, có dùng trợ lý AI. Huy cần tự đọc lại, vẽ một ví dụ và diễn giải bằng lời của mình trước khi trình bày với mentor. Chưa xác nhận Huy đã tự đọc hoặc tự viết phần này.
+Tài liệu mô tả thuật toán post-processing M-LSD để phát hiện box và hướng port sang Android.
 
 Nguồn đối chiếu: [`pred_lines` và `pred_squares`](https://github.com/navervision/mlsd/blob/453cafa09467d0272760578d35c1fda38e8895a5/utils.py). Revision được cố định; không coi prototype Java là bản port tương đương source này.
 

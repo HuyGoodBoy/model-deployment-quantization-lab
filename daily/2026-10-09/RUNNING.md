@@ -111,5 +111,4 @@ khỏi Git vẫn giữ trên máy; clone mới phải tải/tạo lại theo pip
 chạy verifier có yêu cầu raw artifact. Không chỉnh hash/command trong evidence
 lịch sử chỉ để khớp tên thư mục mới.
 
-Source Đức đã chạy đủ 6/6 biến thể trên Linux. Phần tự đọc/viết lại thuật toán
-của Huy vẫn cần hoàn thành; tài liệu giải thích không thay thế phần này.
+Source Đức đã chạy đủ 6/6 biến thể trên Linux.

@@ -9,6 +9,7 @@
 | 07/10/2026 | MobileNetV2 ONNX/TFLite FP32 | [Báo cáo](daily/2026-10-07/REPORT.md) | [lab](lab/) |
 | 08/10/2026 | Quantization ResNet50/DistilBERT, GPU và Android FP32 | [Báo cáo](daily/2026-10-08/REPORT.md) | [quantization](quantization/) · [android](android/) |
 | 09/10/2026 | Reproduce Đức, DistilBERT INT8, M-LSD và detect box | [Báo cáo](daily/2026-10-09/REPORT.md) · [Đối chiếu reproduce](daily/2026-10-09/PEER-REPRODUCTION.md) | [experiments](daily/2026-10-09/experiments/) |
+| 10/10/2026 | Đọc source, nghiên cứu thuật toán M-LSD và quantization | [Báo cáo nháp](daily/2026-10-10/REPORT.md) | [Ghi chép nghiên cứu](daily/2026-10-10/RESEARCH.md) |
 
 Ngày 09 đã reproduce 6 biến thể ResNet18 từ source Đức và đo 12 cấu hình model Huy
 trên Linux. M-LSD đã convert/quantize; detect box mới có prototype Java desktop,

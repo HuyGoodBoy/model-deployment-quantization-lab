@@ -21,6 +21,8 @@
 .reflection-card{border-color:#c4d8bb;background:#fcfdf9}.reflection-item{border-top:1px solid var(--line);padding-top:22px;margin-top:24px}.reflection-item label{display:block;line-height:1.55}.reflection-prompt{color:#456259;margin:10px 0 13px}.reflection-input{background:white;min-height:150px}.reflection-actions{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-top:10px}.workbook-save{background:#e8f1e3;border:1px solid #c4d8bb;border-radius:var(--radius);padding:25px 28px;margin:0 0 40px}.workbook-save h3{margin:8px 0 12px}.workbook-actions{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 12px}.file-status{overflow-wrap:anywhere;margin-bottom:0;min-height:24px}.file-status[data-kind=error]{color:var(--red)}.answer-print{white-space:pre-wrap;overflow-wrap:anywhere;border-left:3px solid var(--line);padding-left:12px;margin-top:10px}
 @media(max-width:580px){.workbook-save{padding:21px 18px}.reflection-actions button{width:100%}.workbook-actions>button{flex:1 1 140px}}
 @media print{.reflection-input{display:none}.reflection-card,.reflection-item{break-inside:auto}.reflection-item label{break-after:avoid}.answer-print{display:block}.workbook-save{display:none}}
+
+.reference-explanation{margin:18px 0 20px;padding:0;border:1px solid #e3d6b5;border-radius:12px;background:#fff9eb;overflow:hidden}.reference-explanation summary{padding:15px 18px;color:#76571d;font-size:14px;line-height:1.55}.reference-body{padding:0 18px 16px}.reference-body p{font-size:14px;line-height:1.8;margin:12px 0}.reference-steps{padding-left:21px;font-size:14px;line-height:1.8}.reference-steps li{margin:10px 0}.reference-body .reference-sources{font-size:12px;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -153,6 +155,16 @@
   <div class="card reflection-card">
     <h3>01 · Dynamic/static ONNX và TFLite</h3>
     <p class="small reflection-prompt" id="prompt-quant-core">Range activation được lấy lúc nào trong dynamic và static? Vì sao cùng tên phương pháp nhưng ONNX và TFLite khác sai số/tốc độ? Giải thích bằng phạm vi operator, calibration và kernel thực thi.</p>
+    <details class="reference-explanation" data-reference-explanation="quant-core" open>
+      <summary>Giải thích tham khảo</summary>
+      <div class="reference-body">
+        <p><b>Dynamic:</b> weights được quantize trước; activation ở operator hỗ trợ được lấy range và tính scale/zero-point trong lúc inference. TFLite dynamic-range có thể dùng kernel hybrid, với một số tensor hoặc output vẫn float.</p>
+<p><b>Static:</b> chạy dữ liệu calibration trước để ước lượng range activation, ghi scale/zero-point vào model và dùng cố định khi inference. Range thiếu đại diện có thể gây clipping hoặc bước lượng tử quá thô.</p>
+<p><b>Cùng tên không có nghĩa cùng phép tính:</b> ONNX và TFLite có thể chọn operator, scale per-channel/per-tensor, kiểu signedness và cách fusion khác nhau. Graph INT8 cũng chưa đảm bảo kernel/delegate xử lý nhanh; quantize/dequantize tạo thêm chi phí.</p>
+<p><b>Bằng chứng của bài này:</b> profile ResNet18 ONNX dynamic trên Linux cho thấy <code>ConvInteger</code> chiếm 93,3% thời gian node-kernel events. Đây là bằng chứng cho phiên đo này; chưa giải thích toàn bộ chênh lệch với Mac.</p>
+<p class="reference-sources">Đối chiếu: <a href="https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html" target="_blank" rel="noopener noreferrer">ONNX Runtime</a> · <a href="https://developers.google.com/edge/litert/conversion/tensorflow/quantization/post_training_quantization" target="_blank" rel="noopener noreferrer">LiteRT PTQ</a> · <a href="../../daily/2026-10-09/PEER-REPRODUCTION.md">profile thực đo</a>.</p>
+      </div>
+    </details>
     <label for="reflect-quant-core" class="small muted">Viết theo ý hiểu của tôi</label>
     <textarea class="note-input reflection-input" id="reflect-quant-core" data-math-note="quant-core" aria-describedby="prompt-quant-core" placeholder="Tôi hiểu phương pháp này… Ví dụ hoặc bằng chứng tôi đã kiểm tra…" spellcheck="false"></textarea>
     <div class="reflection-actions no-print"><span class="small muted" data-note-status="quant-core">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
@@ -269,6 +281,16 @@ converter.target_spec.supported_ops = [
   <div class="card reflection-card">
     <h3>02 · DistilBERT calibrated mixed INT8</h3>
     <p class="small reflection-prompt" id="prompt-bert-core">Vì sao mixed INT8 vẫn thuộc static? Khác gì strict INT8 và vì sao ban đầu chọn mixed? Attention mask quá lớn ảnh hưởng scale thế nào, và kết quả thử giảm sentinel cho thấy gì?</p>
+    <details class="reference-explanation" data-reference-explanation="bert-core" open>
+      <summary>Giải thích tham khảo</summary>
+      <div class="reference-body">
+        <p><b>Static/dynamic nói lúc lấy scale; mixed/strict nói phạm vi dtype/operator.</b> Bản mixed có representative dataset để calibrate offline nên vẫn là static, dù cho phép operator float fallback. Nó không phải một phương pháp thứ ba.</p>
+<p>Ban đầu mixed được chọn để converter có thể giữ op float khi cần. Strict chỉ yêu cầu bộ op INT8. Thực nghiệm strict convert thành công, còn một float tensor tại ranh giới <code>CAST → QUANTIZE</code> của mask; accuracy mixed và strict đều 52%. Vì vậy chưa chứng minh mixed tốt hơn hoặc bắt buộc phải dùng. Cho phép fallback cũng chưa có nghĩa chủ động giữ toàn attention/LayerNorm ở float.</p>
+<p><b>Mask:</b> <code>score′ = score − sentinel × (1 − mask)</code>. Padding được đưa về score rất âm để Softmax gần 0. Sentinel 10³⁰ có thể kéo range quá rộng: chỉ 256 mã INT8 phải bao phủ khoảng lớn, nên score thông thường mất độ phân giải.</p>
+<p>Giảm sentinel xuống 10² giữ output FP32 giống reference trên 100 mẫu đã kiểm tra; accuracy INT8 tăng 52% → 67%, còn thấp hơn FP32 91%. Kết quả hỗ trợ giả thuyết mask ảnh hưởng quantization, chưa chứng minh đó là nguyên nhân duy nhất.</p>
+<p class="reference-sources">Đối chiếu: <a href="../../daily/2026-10-09/REPORT.md">báo cáo, audit và ablation</a> · <a href="../../daily/2026-10-09/experiments/02-distilbert-int8/src/run.py">cấu hình converter thực dùng</a> · <a href="https://developers.google.com/edge/litert/conversion/tensorflow/quantization/post_training_quantization#integer_with_float_fallback_using_default_float_inputoutput" target="_blank" rel="noopener noreferrer">LiteRT float fallback</a>.</p>
+      </div>
+    </details>
     <label for="reflect-bert-core" class="small muted">Viết theo ý hiểu của tôi</label>
     <textarea class="note-input reflection-input" id="reflect-bert-core" data-math-note="bert-core" aria-describedby="prompt-bert-core" placeholder="Tôi hiểu phương pháp này… Ví dụ hoặc bằng chứng tôi đã kiểm tra…" spellcheck="false"></textarea>
     <div class="reflection-actions no-print"><span class="small muted" data-note-status="bert-core">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
@@ -327,6 +349,16 @@ converter.target_spec.supported_ops = [
   <div class="card reflection-card">
     <h3>03 · Phương pháp convert và quantize M-LSD</h3>
     <p class="small reflection-prompt" id="prompt-mlsd-core">Em chuyển weights/graph PyTorch sang TFLite và kiểm tra tương đương bằng cách nào? Vì sao quantize có thể làm sai center/displacement? Khi so với official, vì sao phải cùng output contract nhưng không lấy khác checkpoint làm chuẩn sai số?</p>
+    <details class="reference-explanation" data-reference-explanation="mlsd-core" open>
+      <summary>Giải thích tham khảo</summary>
+      <div class="reference-body">
+        <p><b>Đường chuyển:</b> dựng Keras graph tương ứng rồi chép cùng weights PyTorch, sau đó convert sang TFLite. Đổi trục conv weights OIHW → HWIO, xử lý depthwise riêng và giữ BatchNorm, padding, bilinear resize, normalization. Nhầm những phần này có thể khiến model vẫn chạy nhưng feature hoặc tọa độ line bị lệch.</p>
+<p><b>Kiểm chứng:</b> dùng cùng input và checkpoint để so raw output với PyTorch trước khi quantize. Bridge đạt relative L2 ≈ 1,424×10⁻⁵ và max error ≈ 0,0296 đơn vị map. Kiểm tra <code>allclose</code> chặt ban đầu không đạt; gate công bố sau đó đạt. Đây là tương đương trong ngưỡng đã chọn, chưa phải bit-identical hoặc bằng chứng chất lượng detect box.</p>
+<p><b>Vì sao INT8 dễ làm lệch line:</b> center logit và displacement có miền giá trị khác nhau nhưng static output dùng chung scale ≈ 5,646. Bước đó có thể quá thô cho center; thay đổi confidence làm tâm vượt hoặc tụt threshold. Displacement sai cũng làm lệch đầu mút. Đây là giả thuyết cần đối chứng tách head/giữ head float, chưa phải nguyên nhân duy nhất.</p>
+<p><b>So official:</b> cùng decoder/output contract, runtime và thread để đo cùng phạm vi việc. Khác checkpoint có thể cho output khác dù conversion đúng, nên official dùng đối chứng tốc độ; sai số conversion phải so cùng checkpoint PyTorch. Chưa có nhãn line/box để kết luận accuracy tác vụ.</p>
+<p class="reference-sources">Đối chiếu: <a href="../../daily/2026-10-09/experiments/03-mlsd/src/port_keras.py">bridge và conversion</a> · <a href="../../daily/2026-10-09/REPORT.md">gate, kết quả và giới hạn</a>.</p>
+      </div>
+    </details>
     <label for="reflect-mlsd-core" class="small muted">Viết theo ý hiểu của tôi</label>
     <textarea class="note-input reflection-input" id="reflect-mlsd-core" data-math-note="mlsd-core" aria-describedby="prompt-mlsd-core" placeholder="Tôi hiểu phương pháp này… Ví dụ hoặc bằng chứng tôi đã kiểm tra…" spellcheck="false"></textarea>
     <div class="reflection-actions no-print"><span class="small muted" data-note-status="mlsd-core">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
@@ -362,7 +394,7 @@ converter.target_spec.supported_ops = [
       <li><b>Chấm điểm, xếp hạng và remap</b><p>Kết hợp overlap/perimeter, góc đối, diện tích, khoảng cách tâm và độ dài cạnh đối. Term khoảng cách tâm mang dấu âm. Đưa corners về ảnh gốc bằng inverse preprocessing.</p></li>
     </ol>
     <div class="callout warn"><strong>Hai NMS, hai không gian</strong><p><b>3×3</b>: tìm local maxima tâm trên output image map.<br><b>5×5</b>: suppression trong Hough accumulator để gộp line.<br>Hai bước này không thay thế nhau.</p></div>
-    <p class="small">Đọc trực tiếp <a href="https://github.com/navervision/mlsd/blob/453cafa09467d0272760578d35c1fda38e8895a5/utils.py" target="_blank" rel="noopener noreferrer">utils.py đúng revision NAVER</a>, rồi tự vẽ luồng và giải thích lại. Mentor yêu cầu hạn chế AI ở phần đọc/giải thích thuật toán; bài này là tài liệu hỗ trợ, không thay phần tự đọc của Huy.</p>
+    <p class="small">Source đối chiếu: <a href="https://github.com/navervision/mlsd/blob/453cafa09467d0272760578d35c1fda38e8895a5/utils.py" target="_blank" rel="noopener noreferrer">utils.py đúng revision NAVER</a>.</p>
   </div>
   <div class="grid2">
     <div class="card"><span class="pill">Đã có trên desktop</span><h3 style="margin-top:16px">Prototype Java</h3><p class="small">Nhận line đã merge, giới hạn 64 line; intersection có kiểm tra góc/finite/endpoint; tìm chu trình bốn line riêng biệt, convexity/area; score đơn giản bằng area + mean confidence.</p><div class="big-number">5 <span style="font-size:20px">ca hình học đạt</span></div><p class="small muted">Rectangle chuẩn · song song · zero-length · empty · giao điểm quá xa.<br>Demo chưa merge: 4 candidate boxes, median JVM desktop ~0.056 ms.</p><div class="callout warn" style="margin-bottom:0"><strong>Chưa tương đương NAVER</strong><p>Chưa có Hough merge và scoring đầy đủ. 5 ca kiểm tra hình học không chứng minh độ đúng trên ảnh thật. JVM desktop không phải benchmark Android.</p></div></div>
@@ -374,6 +406,20 @@ converter.target_spec.supported_ops = [
   <div class="card reflection-card">
     <h3>04 · Thuật toán detect box và hướng port Android</h3>
     <p class="small reflection-prompt" id="prompt-box-core">Giải thích decode line → Hough merge → giao điểm/lọc góc → chu trình bốn cạnh → scoring. Mỗi bước dùng toán gì và để làm gì? Khi port Android, phần nào đã làm, phần nào còn thiếu?</p>
+    <details class="reference-explanation" data-reference-explanation="box-core" open>
+      <summary>Giải thích tham khảo</summary>
+      <div class="reference-body">
+        <ol class="reference-steps">
+<li><b>Decode:</b> sigmoid/NMS/top-k chọn tâm. Với tâm (x,y), cộng displacement để có hai đầu: <code>(x+dx₁,y+dy₁)</code>, <code>(x+dx₂,y+dy₂)</code>.</li>
+<li><b>Hough merge:</b> một cạnh có thể có nhiều đoạn dự đoán. Biểu diễn <code>ax+by=c</code>, nhóm theo góc và khoảng cách <code>d=|c|/√(a²+b²)</code> để gộp các đoạn gần trùng.</li>
+<li><b>Giao điểm/lọc góc:</b> giải hai phương trình đường. <code>D=a₁b₂−a₂b₁</code> gần 0 khiến giao điểm không ổn định. Kiểm tra góc 60–120° và khoảng cách tới endpoint để loại giao điểm không tạo góc box hợp lệ.</li>
+<li><b>Chu trình:</b> góc kề chia sẻ line ID; nối bốn góc khép kín thành tứ giác. Không dùng min/max x,y vì box có thể xoay.</li>
+<li><b>Scoring:</b> kết hợp độ phủ cạnh, tương đồng góc/cạnh đối, diện tích và khoảng cách tâm; xếp hạng ứng viên.</li>
+</ol>
+<p><b>Android:</b> Java hiện có core giao điểm/chu trình, chưa đầy đủ Hough/scoring. Cần port tiếp bằng arrays/buffer tái sử dụng, đối chiếu fixture, remap tọa độ và đo trên máy thật. Năm ca hình học chưa chứng minh chất lượng ảnh.</p>
+<p class="reference-sources">Đọc và kiểm tra lại: <a href="https://github.com/navervision/mlsd/blob/453cafa09467d0272760578d35c1fda38e8895a5/utils.py" target="_blank" rel="noopener noreferrer">source NAVER đúng revision</a> · <a href="../../daily/2026-10-09/experiments/04-box-postprocess/src/BoxPostProcessor.java">prototype Java</a>. Tự vẽ một hình chữ nhật và theo dõi line ID qua từng bước trước khi viết lại.</p>
+      </div>
+    </details>
     <label for="reflect-box-core" class="small muted">Viết theo ý hiểu của tôi</label>
     <textarea class="note-input reflection-input" id="reflect-box-core" data-math-note="box-core" aria-describedby="prompt-box-core" placeholder="Tôi hiểu phương pháp này… Ví dụ hoặc bằng chứng tôi đã kiểm tra…" spellcheck="false"></textarea>
     <div class="reflection-actions no-print"><span class="small muted" data-note-status="box-core">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
@@ -419,7 +465,7 @@ python scripts/setup.py --profile runtime --check</code></pre><p>Bộ cũ dùng 
   </div>
   <div class="chapter-end"><span class="muted">Hoàn thành khi bạn có thể tự giải thích, không chỉ xem hết trang.</span><button class="complete" data-section="practice">✓ Đánh dấu đã hiểu</button></div>
 </section>
-<footer class="footer"><span>HUY / MODEL LAB · Bài học ngày 09/10/2026<br>HTML độc lập · CSS, JavaScript, SVG và dữ liệu nằm trong một file.</span><span>Tài liệu học có hỗ trợ AI. Số liệu là phép đo CPU của Huy.<br>Chưa có kết quả Android. Reproduce source Đức được bổ sung ở phần 02.</span></footer>
+<footer class="footer"><span>HUY / MODEL LAB · Bài học ngày 09/10/2026<br>HTML độc lập · CSS, JavaScript, SVG và dữ liệu nằm trong một file.</span><span>Số liệu là phép đo CPU của Huy.<br>Chưa có kết quả Android. Reproduce source Đức được bổ sung ở phần 02.</span></footer>
 </main>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script type="application/json" id="embeddedLearningState">null</script>
