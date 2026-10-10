@@ -65,3 +65,7 @@ Tải file và mở bằng trình duyệt để xem nội dung tương tác:
 - [Ngày 07: triển khai model](docs/2026-10-07/hoc-deploy-model.html)
 - [Ngày 08: quantization](docs/2026-10-08/hoc-quantization.html)
 - [Ngày 09: reproduce, DistilBERT và M-LSD/post-processing](docs/2026-10-09/hoc-ngay-2026-10-09.html)
+
+HTML ngày 09 có 25 câu hỏi và ô tự diễn giải. Mở bằng Chrome/Edge, viết câu trả lời,
+bấm **Save vào HTML** rồi chọn file đang mở ở lần lưu đầu để cấp quyền ghi.
+Câu trả lời được nhúng vào file; có thể tải bản HTML đã điền nếu trình duyệt không hỗ trợ ghi trực tiếp.

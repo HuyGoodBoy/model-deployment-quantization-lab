@@ -2,6 +2,7 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8">
+<meta name="learning-document" content="huy-day09-math-workbook-v1">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Bài học của Huy ngày 09/10/2026: quantization, ONNX Runtime và LiteRT, DistilBERT mixed INT8, chuyển M-LSD và detect box trên Android.">
 <title>Huy · Học ngày 09/10 — Quantization &amp; M-LSD</title>
@@ -15,6 +16,11 @@
 @media(max-width:580px){.hero{grid-template-columns:1fr;padding-top:0}.hero-art{max-width:450px}.page{padding:22px 17px 45px}.topbar{padding:10px 15px}.topbar-title{max-width:140px;line-height:1.4}.topbar-right{gap:8px}.topbar-right button{font-size:12px;padding:6px 10px}.hero h1{font-size:44px}.hero-desc{font-size:15px}.intro-strip{grid-template-columns:1fr}.intro-strip>div{padding:13px 18px}.intro-strip strong{display:inline;margin-right:8px}.chapter{margin-bottom:45px}.chapter-head{gap:11px}.chapter-number{font-size:17px;padding:8px 10px}.chapter-head h2{font-size:31px;letter-spacing:-1px}.chapter-head p{font-size:14px}.card{padding:21px 18px;border-radius:14px}.card h3{font-size:19px}.control-row{grid-template-columns:1fr 65px;gap:8px}.control-row label{grid-column:1/-1}.stats{gap:8px}.stat{padding:11px}.stat strong{font-size:19px}.demo{padding:16px}.bar-row{grid-template-columns:94px 1fr;gap:8px}.bar-name{font-size:11px}.acc-row{grid-template-columns:115px 1fr 35px;gap:8px;font-size:12px}.chapter-end{align-items:flex-start;flex-direction:column}.chapter-end button{width:100%}.table-wrap{margin-left:-3px;margin-right:-3px}th,td{padding:10px 12px}.flow{gap:6px}.flow-arrow{display:none}.flow-node{flex:1 1 120px;padding:12px;font-size:12px}pre{padding:18px;font-size:12px}.quiz-item{padding:18px 14px}.formula{font-size:14px;padding:15px 9px}.toast{left:17px;right:17px;bottom:12px}.chapter-head h2{overflow-wrap:anywhere}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 @media print{@page{margin:15mm}body{background:white;font-size:11px;color:#111}.rail,.topbar,.overlay,.toast,.jump-link,.chapter-end,.tabs,.quiz-options button,.no-print{display:none!important}.page{margin:0;padding:0;max-width:none}.hero{grid-template-columns:1fr 1fr;gap:20px;padding:0 0 20px}.hero h1{font-size:34px}.hero-art{padding:15px}.intro-strip{margin-bottom:20px}.chapter{margin-bottom:25px;break-before:auto}.chapter-head h2{font-size:27px}.card{box-shadow:none;padding:16px;break-inside:avoid;margin-bottom:15px}.grid2,.grid3{display:block}.grid2>.card,.grid3>.card{margin-bottom:15px}.demo,.table-wrap{break-inside:avoid}.control-row input{display:none}.control-row{grid-template-columns:1fr 80px}.grid3 .big-number{font-size:30px}h2,h3,h4{break-after:avoid}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f1f1f1;color:#111;font-size:10px}.table-wrap{overflow:visible}table{font-size:10px}th,td{padding:7px}a{color:#222;text-decoration:none}.note-input{min-height:130px}.print-only{display:block}.flow{flex-wrap:wrap}.quiz-item{break-inside:avoid}.quiz-options{display:none}.small,.data-note{font-size:10px}.bar-fill,.acc-fill{-webkit-print-color-adjust:exact;print-color-adjust:exact}.bar-row{grid-template-columns:130px 1fr}.hero-desc{font-size:12px}.footer{font-size:10px}}
+
+/* Workbook: handwritten explanations stay beside the relevant math. */
+.reflection-card{border-color:#c4d8bb;background:#fcfdf9}.reflection-item{border-top:1px solid var(--line);padding-top:22px;margin-top:24px}.reflection-item label{display:block;line-height:1.55}.reflection-prompt{color:#456259;margin:10px 0 13px}.reflection-input{background:white;min-height:150px}.reflection-actions{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-top:10px}.workbook-save{background:#e8f1e3;border:1px solid #c4d8bb;border-radius:var(--radius);padding:25px 28px;margin:0 0 40px}.workbook-save h3{margin:8px 0 12px}.workbook-actions{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 12px}.file-status{overflow-wrap:anywhere;margin-bottom:0;min-height:24px}.file-status[data-kind=error]{color:var(--red)}.answer-print{white-space:pre-wrap;overflow-wrap:anywhere;border-left:3px solid var(--line);padding-left:12px;margin-top:10px}
+@media(max-width:580px){.workbook-save{padding:21px 18px}.reflection-actions button{width:100%}.workbook-actions>button{flex:1 1 140px}}
+@media print{.reflection-input{display:none}.reflection-card,.reflection-item{break-inside:auto}.reflection-item label{break-after:avoid}.answer-print{display:block}.workbook-save{display:none}}
 </style>
 </head>
 <body>
@@ -37,7 +43,7 @@
     <div class="small"><b id="progressText">0 / 6 phần đã học</b></div>
     <div class="progress-track" role="progressbar" aria-label="Tiến độ học" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0" id="progress"><div class="progress-fill" id="progressFill"></div></div>
     <span class="small muted" id="saveStatus">Tiến độ lưu trên trình duyệt này.</span><br>
-    <button id="resetProgress">Đặt lại tiến độ &amp; câu trả lời</button>
+    <button id="resetProgress">Đặt lại quiz &amp; tiến độ</button>
   </div>
 </aside>
 <div class="overlay" id="overlay" aria-hidden="true"></div>
@@ -82,6 +88,16 @@
   <div><strong>02. Đọc bằng chứng</strong><span>Phân biệt thực đo với giả thuyết.</span></div>
   <div><strong>03. Tự trình bày</strong><span>Giải thích được và chọn thử nghiệm tiếp.</span></div>
 </div>
+
+<section class="workbook-save" aria-labelledby="workbook-title">
+  <span class="pill">Sổ tự diễn giải · 25 câu hỏi</span>
+  <h3 id="workbook-title">Hiểu tới đâu, viết lại tới đó.</h3>
+  <p class="small">Mỗi phần toán bên dưới có ô viết theo ý hiểu của bạn. Bấm <b>Save vào HTML</b> để lưu tất cả câu trả lời, ghi chú và tiến độ vào chính file này.</p>
+  <p class="small muted">Lần Save đầu trong mỗi lần mở trang: chọn đúng file HTML đang mở và cho phép ghi. Những lần Save tiếp dùng lại file đã chọn. Dùng Chrome/Edge; nếu trình duyệt không hỗ trợ ghi trực tiếp, tải bản HTML đã điền bằng nút bên cạnh.</p>
+  <div class="workbook-actions no-print"><button type="button" class="primary" data-save-html>Save vào HTML</button><button type="button" id="downloadWorkbook">Tải bản HTML đã điền ↓</button></div>
+  <b class="small" id="reflectionCount">0 / 25 câu đã viết</b>
+  <p class="small file-status" id="fileSaveStatus" role="status" aria-live="polite">Chưa ghi thay đổi vào file HTML.</p>
+</section>
 
 <section class="chapter" id="quant" aria-labelledby="quant-title">
   <div class="chapter-head"><span class="chapter-number">01</span><div><p class="eyebrow">Nền tảng / khoảng 15 phút</p><h2 id="quant-title">INT8 thực sự làm gì?</h2><p>Giữ 256 mã số nguyên, dùng scale và zero-point để đại diện cho giá trị thực. Một phép ánh xạ gọn, nhưng thông tin có thể mất.</p></div></div>
@@ -131,6 +147,35 @@
     <details><summary>Per-tensor và per-channel là gì?</summary><p>Per-tensor dùng một cặp scale/zero-point cho cả tensor. Per-channel dùng scale riêng cho từng channel được hỗ trợ, thường hữu ích với weights có phân phối khác nhau. Nó không có nghĩa mọi activation đều được per-channel quantize.</p></details>
     <details><summary>Calibration cần dữ liệu thế nào?</summary><p>Cần giống input deployment về nội dung, preprocessing, chiều dài text, padding và phân phối. Tách khỏi evaluation. Dùng calibration để chọn range, dùng evaluation có nhãn để kiểm tra chất lượng; không chỉnh range theo nhãn của tập test. Cả ONNX và TFLite đều có thể sai nếu calibration không đại diện.</p></details>
     <details><summary>FP16 weights có phải CPU tính FP16 không?</summary><p>Không thể kết luận chỉ từ tên file. Runtime có thể đọc weights FP16 rồi chuyển sang float32 để tính. Do đó giảm dung lượng không đảm bảo giảm latency trên CPU.</p></details>
+  </div>
+  <div class="card reflection-card" aria-label="Viết lại phần toán: lượng tử hóa">
+    <div class="label-line"><h3>Viết lại phần toán: lượng tử hóa</h3><span class="pill amber">Tôi tự diễn giải</span></div>
+    <p class="small muted">Đọc câu hỏi, tự làm ví dụ rồi viết bằng lời của bạn. Không có đáp án điền sẵn; mỗi nút Save lưu tất cả câu trả lời vào cùng file HTML.</p>
+    <div class="reflection-item">
+      <label for="reflect-scale"><b>01 · Scale và bước lượng tử</b></label>
+      <p class="small reflection-prompt" id="prompt-scale">Vì sao s là khoảng cách giữa hai mức float liên tiếp? Với x = 1,37; s = 0,1; z = 0, hãy tự tính q, giá trị khôi phục và sai số. Nếu tăng s thì điều gì được và mất?</p>
+      <textarea class="note-input reflection-input" id="reflect-scale" data-math-note="scale" aria-describedby="prompt-scale" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="scale">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="scale"></div>
+    </div><div class="reflection-item">
+      <label for="reflect-zero"><b>02 · Zero-point và giải lượng tử</b></label>
+      <p class="small reflection-prompt" id="prompt-zero">Trong x̂ = s(q − z), vì sao cần trừ z? Với s = 0,2 và z = −5, số thực 0 ứng với mã nào? Hãy giải thích vì sao không được bỏ zero-point khi đọc output INT8.</p>
+      <textarea class="note-input reflection-input" id="reflect-zero" data-math-note="zero" aria-describedby="prompt-zero" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="zero">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="zero"></div>
+    </div><div class="reflection-item">
+      <label for="reflect-clip"><b>03 · Clipping và làm tròn</b></label>
+      <p class="small reflection-prompt" id="prompt-clip">Với INT8 có dấu, s = 0,05 và z = 0, khoảng float biểu diễn được là bao nhiêu? Tự đưa x = 10 qua quantize/dequantize. Vì sao clipping khác sai số làm tròn bên trong khoảng?</p>
+      <textarea class="note-input reflection-input" id="reflect-clip" data-math-note="clip" aria-describedby="prompt-clip" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="clip">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="clip"></div>
+    </div><div class="reflection-item">
+      <label for="reflect-calibration"><b>04 · Ước lượng range và per-channel</b></label>
+      <p class="small reflection-prompt" id="prompt-calibration">Với cách MinMax minh họa s = (max − min)/255, thêm một outlier lớn làm s thay đổi thế nào? Hãy lấy hai channel có range khác nhau để giải thích per-tensor và per-channel; dynamic/static khác nhau ở thời điểm nào?</p>
+      <textarea class="note-input reflection-input" id="reflect-calibration" data-math-note="calibration" aria-describedby="prompt-calibration" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="calibration">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="calibration"></div>
+    </div>
   </div>
   <div class="chapter-end"><span class="muted">Tự nói lại: “dynamic/static” và “mixed/full” khác nhau ở trục nào?</span><button class="complete" data-section="quant">✓ Đánh dấu đã hiểu</button></div>
 </section>
@@ -185,6 +230,53 @@
     </div>
     <h4>Checklist cho một phép so sánh công bằng</h4><p class="small">Cùng hash model/input · cùng batch và thread · cùng provider/delegate · cùng output contract · cùng phạm vi timer · warm-up · không chạy benchmark song song · lưu raw latency · lặp phiên với điều kiện nguồn điện/nhiệt được kiểm soát.</p>
   </div>
+  <div class="card reflection-card" aria-label="Viết lại phần toán: đọc sai số và benchmark">
+    <div class="label-line"><h3>Viết lại phần toán: đọc sai số và benchmark</h3><span class="pill amber">Tôi tự diễn giải</span></div>
+    <p class="small muted">Đọc câu hỏi, tự làm ví dụ rồi viết bằng lời của bạn. Không có đáp án điền sẵn; mỗi nút Save lưu tất cả câu trả lời vào cùng file HTML.</p>
+    <div class="reflection-item">
+      <label for="reflect-mae"><b>05 · MAE và max error</b></label>
+      <p class="small reflection-prompt" id="prompt-mae">Với reference [1, 3] và output [2, 6], hãy tính từng sai lệch, MAE và max error. Hai chỉ số trả lời hai câu hỏi khác nhau thế nào?</p>
+      <textarea class="note-input reflection-input" id="reflect-mae" data-math-note="mae" aria-describedby="prompt-mae" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="mae">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="mae"></div>
+    </div><div class="reflection-item">
+      <label for="reflect-l2"><b>06 · RMSE và relative L2</b></label>
+      <p class="small reflection-prompt" id="prompt-l2">Dùng lại hai vector trên: tự tính RMSE và ‖output − reference‖₂ / ‖reference‖₂. Vì sao relative L2 không có đơn vị? Nếu reference toàn 0 thì phải xử lý thế nào?</p>
+      <textarea class="note-input reflection-input" id="reflect-l2" data-math-note="l2" aria-describedby="prompt-l2" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="l2">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="l2"></div>
+    </div><div class="reflection-item">
+      <label for="reflect-cosine"><b>07 · Cosine similarity</b></label>
+      <p class="small reflection-prompt" id="prompt-cosine">Vì sao [1, 3] và [2, 6] có cosine bằng 1 nhưng output vẫn khác? Tự viết tích vô hướng và hai norm. Nếu một vector toàn 0, công thức gặp vấn đề gì?</p>
+      <textarea class="note-input reflection-input" id="reflect-cosine" data-math-note="cosine" aria-describedby="prompt-cosine" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="cosine">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="cosine"></div>
+    </div><div class="reflection-item">
+      <label for="reflect-snr"><b>08 · Signal-to-noise ratio</b></label>
+      <p class="small reflection-prompt" id="prompt-snr">Trong SNR = 10 log₁₀(Σreference² / Σerror²), signal và noise là gì? Nếu năng lượng signal gấp 100 lần noise thì SNR bao nhiêu dB? Giải thích trường hợp error bằng 0 và vì sao SNR toàn tensor có thể che lỗi ở một channel nhỏ.</p>
+      <textarea class="note-input reflection-input" id="reflect-snr" data-math-note="snr" aria-describedby="prompt-snr" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="snr">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="snr"></div>
+    </div><div class="reflection-item">
+      <label for="reflect-accuracy"><b>09 · Accuracy và agreement</b></label>
+      <p class="small reflection-prompt" id="prompt-accuracy">Hai model cùng chọn class 1 nhưng nhãn thật là class 0: accuracy và agreement khác nhau ra sao? Vì sao argmax giống nhau không đủ kết luận output gần nhau?</p>
+      <textarea class="note-input reflection-input" id="reflect-accuracy" data-math-note="accuracy" aria-describedby="prompt-accuracy" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="accuracy">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="accuracy"></div>
+    </div><div class="reflection-item">
+      <label for="reflect-f1"><b>10 · Precision, recall và F1</b></label>
+      <p class="small reflection-prompt" id="prompt-f1">Với class positive, TP = 8, FP = 2, FN = 4: tính precision, recall và F1 = 2PR/(P+R). Giải thích bằng lời vì sao chỉ đếm số dự đoán đúng chưa mô tả đầy đủ class này.</p>
+      <textarea class="note-input reflection-input" id="reflect-f1" data-math-note="f1" aria-describedby="prompt-f1" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="f1">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="f1"></div>
+    </div><div class="reflection-item">
+      <label for="reflect-latency"><b>11 · Median, p95 và tỷ số tốc độ</b></label>
+      <p class="small reflection-prompt" id="prompt-latency">Với latency [2, 2, 3, 3, 30] ms, median là bao nhiêu? Mean có phản ánh cùng điều không? p95 cho biết gì về đuôi chậm? Nếu thời gian giảm từ 20 xuống 5 ms, speedup và phần trăm giảm latency lần lượt là gì?</p>
+      <textarea class="note-input reflection-input" id="reflect-latency" data-math-note="latency" aria-describedby="prompt-latency" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="latency">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="latency"></div>
+    </div>
+  </div>
   <div class="chapter-end"><span class="muted">Tự nói lại: runtime mới có luôn nhanh hơn không? Bằng chứng nào?</span><button class="complete" data-section="runtime">✓ Đánh dấu đã hiểu</button></div>
 </section>
 
@@ -236,6 +328,23 @@ converter.target_spec.supported_ops = [
     <p class="small">Trong ONNX text, thí nghiệm chọn MatMul/Gemm để quantize; mask/Sub/Softmax ở ngoài phạm vi đó. Khác biệt coverage có thể giải thích vì sao ONNX không gặp biểu hiện giống TFLite ở phép thử này. Không suy ra ONNX miễn nhiễm với calibration sai.</p>
     <h4>Hướng tiếp theo đáng thử</h4><p class="small">Giữ các op nhạy cảm ở float qua selective quantization · thử QAT nếu PTQ không đủ · calibration đại diện padding/độ dài · xác nhận mask FP32 trên tập độc lập trước khi đo INT8 · giữ nguyên evaluation khi chọn cấu hình.</p>
   </div>
+  <div class="card reflection-card" aria-label="Viết lại phần toán: attention và mask">
+    <div class="label-line"><h3>Viết lại phần toán: attention và mask</h3><span class="pill amber">Tôi tự diễn giải</span></div>
+    <p class="small muted">Đọc câu hỏi, tự làm ví dụ rồi viết bằng lời của bạn. Không có đáp án điền sẵn; mỗi nút Save lưu tất cả câu trả lời vào cùng file HTML.</p>
+    <div class="reflection-item">
+      <label for="reflect-attention"><b>12 · Tích vô hướng và Softmax</b></label>
+      <p class="small reflection-prompt" id="prompt-attention">Trong attention, score liên quan đến QKᵀ; Softmax biến các score thành trọng số để cộng các vector V. Theo bạn, mỗi bước có ý nghĩa gì? Với hai score [0, 0], trọng số là bao nhiêu? Giải thích vì sao một score rất âm gần như không đóng góp.</p>
+      <textarea class="note-input reflection-input" id="reflect-attention" data-math-note="attention" aria-describedby="prompt-attention" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="attention">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="attention"></div>
+    </div><div class="reflection-item">
+      <label for="reflect-mask"><b>13 · Sentinel kéo rộng range</b></label>
+      <p class="small reflection-prompt" id="prompt-mask">Tự thay mask = 1 và mask = 0 vào scores′ = scores − sentinel × (1 − mask). Với range minh họa [−100, 5], s = 105/255; hãy tính số khoảng lượng tử trong [−5, 5]. Khi sentinel thành 10³⁰, vì sao các score thông thường dễ bị gộp? Vì sao giảm sentinel vẫn cần kiểm tra lại FP32?</p>
+      <textarea class="note-input reflection-input" id="reflect-mask" data-math-note="mask" aria-describedby="prompt-mask" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="mask">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="mask"></div>
+    </div>
+  </div>
   <div class="chapter-end"><span class="muted">Tự nói lại: vì sao bỏ float fallback vẫn không cứu được accuracy?</span><button class="complete" data-section="bert">✓ Đánh dấu đã hiểu</button></div>
 </section>
 
@@ -255,12 +364,52 @@ converter.target_spec.supported_ops = [
     <div class="grid2"><div><div class="big-number">96.93 <span style="font-size:20px">dB</span></div><div class="fact-label">SNR Keras bridge FP32 so PyTorch</div><p class="small">Relative L2 = 1.424 × 10⁻⁵.<br>Max error = 0.02960 đơn vị map.</p></div><div class="callout warn" style="margin:0"><strong>Gate phải nói đúng</strong><p><code>allclose(atol=rtol=1e-4)</code> ban đầu trả <b>false</b>. Gate công khai sau đó dùng finite + relative L2 &lt; 1e−4 + max error &lt; 0.1 đơn vị map và đạt. Không gọi là bit-equivalent.</p></div></div>
     <p class="small muted">Max displacement error 0.0296 đơn vị map tương ứng khoảng 0.0592 pixel ở input 512. Gate chấp nhận max &lt; 0.1 map = &lt; 0.2 pixel displacement. Chưa có nhãn line/box để chứng minh chất lượng tác vụ.</p>
   </div>
+  <div class="card reflection-card" aria-label="Viết lại phần toán: chuyển model và tọa độ">
+    <div class="label-line"><h3>Viết lại phần toán: chuyển model và tọa độ</h3><span class="pill amber">Tôi tự diễn giải</span></div>
+    <p class="small muted">Đọc câu hỏi, tự làm ví dụ rồi viết bằng lời của bạn. Không có đáp án điền sẵn; mỗi nút Save lưu tất cả câu trả lời vào cùng file HTML.</p>
+    <div class="reflection-item">
+      <label for="reflect-normalize"><b>14 · Chuẩn hóa input</b></label>
+      <p class="small reflection-prompt" id="prompt-normalize">Tự tính x/127,5 − 1 tại x = 0; 127,5; 255. Nếu normalize một lần trước model và một lần nữa trong bridge thì input thay đổi thế nào?</p>
+      <textarea class="note-input reflection-input" id="reflect-normalize" data-math-note="normalize" aria-describedby="prompt-normalize" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="normalize">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="normalize"></div>
+    </div><div class="reflection-item">
+      <label for="reflect-layout"><b>15 · Đổi thứ tự trục tensor</b></label>
+      <p class="small reflection-prompt" id="prompt-layout">Conv weights OIHW → HWIO là chuyển vị trục, không phải thay trọng số học được. Nếu shape OIHW là [16, 3, 3, 3], shape HWIO là gì? Vì sao reshape đơn thuần có thể làm sai phép convolution?</p>
+      <textarea class="note-input reflection-input" id="reflect-layout" data-math-note="layout" aria-describedby="prompt-layout" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="layout">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="layout"></div>
+    </div><div class="reflection-item">
+      <label for="reflect-bnresize"><b>16 · BatchNorm, padding và nội suy</b></label>
+      <p class="small reflection-prompt" id="prompt-bnresize">BatchNorm inference dùng γ(x − μ)/√(variance + ε) + β: từng đại lượng lấy từ đâu, ε làm gì? Vì sao đổi padding hoặc lưới bilinear align_corners có thể lệch vị trí line dù weights giống nhau? Tự vẽ một lưới nhỏ để giải thích.</p>
+      <textarea class="note-input reflection-input" id="reflect-bnresize" data-math-note="bnresize" aria-describedby="prompt-bnresize" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="bnresize">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="bnresize"></div>
+    </div>
+  </div>
   <div class="card">
     <h3>Đọc output trước khi viết decoder</h3>
     <div class="formula">raw output: [1, 256, 256, 9] / NHWC</div>
     <div class="grid3"><div class="stat"><span>Channel 0</span><strong style="font-size:20px">Center logit</strong><p class="small muted" style="margin:5px 0 0">Qua sigmoid thành confidence của tâm.</p></div><div class="stat"><span>Channels 1 … 4</span><strong style="font-size:18px">dx₁, dy₁, dx₂, dy₂</strong><p class="small muted" style="margin:5px 0 0">Vector từ tâm tới hai đầu đoạn thẳng.</p></div><div class="stat"><span>Channels 5 … 8</span><strong style="font-size:20px">4 kênh còn lại</strong><p class="small muted" style="margin:5px 0 0">Không dùng trong decoder hiện tại.</p></div></div>
     <ol class="steps"><li><b>Sigmoid → NMS 3×3 → top 200</b><p>Chỉ giữ tâm nổi bật tại vùng lân cận. Points được lưu theo (y,x), không phải (x,y).</p></li><li><b>Lọc score &gt; 0.1 và độ dài map &gt; 20</b><p>Độ dài từ hai đầu sau khi cộng displacement, trước nhân hệ số về input.</p></li><li><b>Khôi phục hai đầu đoạn thẳng</b><p>(x + dx₁, y + dy₁), (x + dx₂, y + dy₂) → nhân 2 về input 512 → inverse preprocessing về ảnh/camera gốc.</p></li></ol>
     <div class="demo"><h4>Ví dụ một tâm</h4><p class="mono small">points = (y=80, x=100)<br>vmap = (−30, −10, +30, +10)<br>Đầu trên map: (70,70) và (130,90)<br>Đầu trên input 512: (140,140) và (260,180)</p><p class="small muted" style="margin-bottom:0">Đây là ví dụ minh họa. Nếu resize/crop/rotate camera, phải dùng phép biến đổi ngược tương ứng; không chỉ nhân theo chiều rộng.</p></div>
+  </div>
+  <div class="card reflection-card" aria-label="Viết lại phần toán: từ raw output thành line">
+    <div class="label-line"><h3>Viết lại phần toán: từ raw output thành line</h3><span class="pill amber">Tôi tự diễn giải</span></div>
+    <p class="small muted">Đọc câu hỏi, tự làm ví dụ rồi viết bằng lời của bạn. Không có đáp án điền sẵn; mỗi nút Save lưu tất cả câu trả lời vào cùng file HTML.</p>
+    <div class="reflection-item">
+      <label for="reflect-center"><b>17 · Sigmoid, NMS và top-k</b></label>
+      <p class="small reflection-prompt" id="prompt-center">Với logit = 0, sigmoid cho confidence bao nhiêu? NMS 3×3 giữ điểm nào, top-200 làm gì và vì sao hai bước khác nhau? Tự vẽ một cụm điểm gần cùng một tâm.</p>
+      <textarea class="note-input reflection-input" id="reflect-center" data-math-note="center" aria-describedby="prompt-center" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="center">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="center"></div>
+    </div><div class="reflection-item">
+      <label for="reflect-displacement"><b>18 · Vector dịch chuyển và độ dài</b></label>
+      <p class="small reflection-prompt" id="prompt-displacement">Với point (y = 80, x = 100) và displacement (−30, −10, +30, +10), hãy tự tính hai đầu đoạn thẳng, độ dài trên map và tọa độ ảnh 512. Vì sao phải chú ý (y,x) khác (x,y)?</p>
+      <textarea class="note-input reflection-input" id="reflect-displacement" data-math-note="displacement" aria-describedby="prompt-displacement" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="displacement">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="displacement"></div>
+    </div>
   </div>
   <div class="card">
     <div class="label-line"><h3>Quantization: nhỏ hơn, chưa chắc tốt hơn</h3><span class="pill">Thực đo / raw 9-channel</span></div>
@@ -281,6 +430,17 @@ converter.target_spec.supported_ops = [
     <div class="table-wrap"><table><thead><tr><th>Runtime CPU 4 threads</th><th>Huy converted / median ms</th><th>NAVER official / median ms</th></tr></thead><tbody><tr><td>TF 2.15.1</td><td>51.183</td><td>105.265</td></tr><tr><td>LiteRT 2.2.0</td><td>107.193</td><td>110.938</td></tr></tbody></table></div>
     <div class="callout"><strong>Cùng scope, khác checkpoint</strong><p>Official có weights khác nên chỉ dùng làm đối chứng tốc độ, không làm reference tính conversion error. Một phiên đo chưa đủ kết luận bản converted luôn nhanh gấp đôi. Số decoded và raw được đo ở phiên riêng, không dùng chênh lệch của chúng để suy ra “decoder có chi phí âm”.</p></div>
     <p class="small muted">PyTorch raw có phép đo CPU 1 thread và normalization ngoài timer; không so trực tiếp với TFLite 4 threads như một phép đo ngang điều kiện.</p>
+  </div>
+  <div class="card reflection-card" aria-label="Viết lại phần toán: scale chung của output M-LSD">
+    <div class="label-line"><h3>Viết lại phần toán: scale chung của output M-LSD</h3><span class="pill amber">Tôi tự diễn giải</span></div>
+    <p class="small muted">Đọc câu hỏi, tự làm ví dụ rồi viết bằng lời của bạn. Không có đáp án điền sẵn; mỗi nút Save lưu tất cả câu trả lời vào cùng file HTML.</p>
+    <div class="reflection-item">
+      <label for="reflect-headscale"><b>19 · Channel lớn che channel nhỏ</b></label>
+      <p class="small reflection-prompt" id="prompt-headscale">Nếu scale chung xấp xỉ 5,646 và z = 0, hai center logits 0,2 và 0,8 có thể cùng rơi vào mã nào? Trong khi đó displacement cỡ hàng trăm được biểu diễn ra sao? Giải thích vì sao cần metric riêng từng nhóm channel và vì sao line count không phải accuracy.</p>
+      <textarea class="note-input reflection-input" id="reflect-headscale" data-math-note="headscale" aria-describedby="prompt-headscale" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="headscale">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="headscale"></div>
+    </div>
   </div>
   <div class="chapter-end"><span class="muted">Tự nói lại: tại sao quantize đúng graph vẫn có thể ra nhiều line lạ?</span><button class="complete" data-section="mlsd">✓ Đánh dấu đã hiểu</button></div>
 </section>
@@ -318,7 +478,48 @@ converter.target_spec.supported_ops = [
     <div class="card"><span class="pill">Đã có trên desktop</span><h3 style="margin-top:16px">Prototype Java</h3><p class="small">Nhận line đã merge, giới hạn 64 line; intersection có kiểm tra góc/finite/endpoint; tìm chu trình bốn line riêng biệt, convexity/area; score đơn giản bằng area + mean confidence.</p><div class="big-number">5 <span style="font-size:20px">ca hình học đạt</span></div><p class="small muted">Rectangle chuẩn · song song · zero-length · empty · giao điểm quá xa.<br>Demo chưa merge: 4 candidate boxes, median JVM desktop ~0.056 ms.</p><div class="callout warn" style="margin-bottom:0"><strong>Chưa tương đương NAVER</strong><p>Chưa có Hough merge và scoring đầy đủ. 5 ca kiểm tra hình học không chứng minh độ đúng trên ảnh thật. JVM desktop không phải benchmark Android.</p></div></div>
     <div class="card"><span class="pill blue">Hướng triển khai tiếp</span><h3 style="margin-top:16px">Android: contract rõ trước</h3><ol class="steps"><li><b>Preprocess camera</b><p>RGBA / orientation / resize-crop / transform matrix thống nhất với model.</p></li><li><b>Interpreter → buffers</b><p>Dùng đúng shape/dtype; đọc scale và zero-point nếu I/O INT8; tái sử dụng buffer để giảm allocation.</p></li><li><b>Java/Kotlin geometry core</b><p>Decode → merge → intersections → quadrilateral → scoring. Giữ UI thread nhẹ.</p></li><li><b>Đo trên thiết bị thật</b><p>Tách inference/postprocess/end-to-end, báo thread/delegate, warm-up, median/p95 và điều kiện nhiệt.</p></li></ol><p class="small muted">Chỉ cân nhắc C++/JNI khi profiling thiết bị cho thấy geometry là bottleneck. Hôm nay chưa build APK hoặc đo M-LSD/box trên Android. Emulator/VPS không đại diện latency điện thoại.</p></div>
   </div>
-  <div class="card"><h3>Bài tập để Huy tự giải thích thuật toán</h3><p class="small">Mở source, chọn một hình chữ nhật và tự trả lời: (1) tại sao merge trước intersection? (2) line ID chung đảm bảo điều gì? (3) D gần 0 có nguy hiểm gì? (4) vì sao remap cần inverse transform? Viết khoảng 5–10 dòng theo cách hiểu của bạn.</p><label for="algorithmNotes" class="small muted">Ghi chú cá nhân — lưu cục bộ nếu trình duyệt cho phép</label><textarea class="note-input" id="algorithmNotes" placeholder="Tôi hiểu bước merge là... Một cặp line song song cần... Khi đưa box về camera..." spellcheck="false"></textarea><div class="small muted" id="notesStatus" aria-live="polite">Chưa có ghi chú.</div><button id="downloadNotes" class="no-print" style="margin-top:13px">Tải ghi chú .txt ↓</button></div>
+  <div class="card reflection-card" aria-label="Viết lại phần toán: hình học detect box">
+    <div class="label-line"><h3>Viết lại phần toán: hình học detect box</h3><span class="pill amber">Tôi tự diễn giải</span></div>
+    <p class="small muted">Đọc câu hỏi, tự làm ví dụ rồi viết bằng lời của bạn. Không có đáp án điền sẵn; mỗi nút Save lưu tất cả câu trả lời vào cùng file HTML.</p>
+    <div class="reflection-item">
+      <label for="reflect-hough"><b>20 · Phương trình đường và không gian Hough</b></label>
+      <p class="small reflection-prompt" id="prompt-hough">Với ax + by = c, d = |c|/√(a²+b²) biểu diễn điều gì? Tự tính d cho x = 10 và y = 20. Vì sao chỉ gần d chưa đủ để gộp hai line, còn cần góc? Giải thích bins 1 đơn vị/2° và suppression 5×5 khác NMS center 3×3 ở đâu.</p>
+      <textarea class="note-input reflection-input" id="reflect-hough" data-math-note="hough" aria-describedby="prompt-hough" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="hough">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="hough"></div>
+    </div><div class="reflection-item">
+      <label for="reflect-intersection"><b>21 · Định thức và giao điểm</b></label>
+      <p class="small reflection-prompt" id="prompt-intersection">Viết hệ phương trình cho x = 10 và y = 20, rồi tự tính D, x, y theo công thức giao điểm. Khi hai đường song song hoặc gần song song, vì sao D bằng hoặc gần 0 và phép chia có thể không ổn định?</p>
+      <textarea class="note-input reflection-input" id="reflect-intersection" data-math-note="intersection" aria-describedby="prompt-intersection" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="intersection">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="intersection"></div>
+    </div><div class="reflection-item">
+      <label for="reflect-angle"><b>22 · Góc và phạm vi đoạn</b></label>
+      <p class="small reflection-prompt" id="prompt-angle">Hai đường kéo dài cắt nhau có chắc hai đoạn tạo thành góc box không? Hãy vẽ giao điểm ở xa đầu đoạn để giải thích. Nếu tính góc từ hai vector bằng tích vô hướng, cần kiểm tra gì khi vector dài bằng 0? Khoảng 60–120° loại những góc nào?</p>
+      <textarea class="note-input reflection-input" id="reflect-angle" data-math-note="angle" aria-describedby="prompt-angle" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="angle">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="angle"></div>
+    </div><div class="reflection-item">
+      <label for="reflect-cycle"><b>23 · Chu trình bốn cạnh và diện tích</b></label>
+      <p class="small reflection-prompt" id="prompt-cycle">Dùng bốn đoạn tạo hình (10,10) → (110,10) → (110,70) → (10,70) → (10,10). Gán line ID và giải thích vì sao góc kề phải chia sẻ ID. Tự tính diện tích. Nếu hình xoay, vì sao min/max x,y không còn là bốn góc của hình?</p>
+      <textarea class="note-input reflection-input" id="reflect-cycle" data-math-note="cycle" aria-describedby="prompt-cycle" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="cycle">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="cycle"></div>
+    </div><div class="reflection-item">
+      <label for="reflect-score"><b>24 · Chấm điểm hình học</b></label>
+      <p class="small reflection-prompt" id="prompt-score">Theo bạn, độ phủ cạnh, góc đối, độ dài cạnh đối, diện tích và khoảng cách tâm giúp loại ứng viên xấu thế nào? Vì sao cần chuẩn hóa trước khi cộng các thành phần? Score area + mean confidence của prototype đang thiếu gì so với official?</p>
+      <textarea class="note-input reflection-input" id="reflect-score" data-math-note="score" aria-describedby="prompt-score" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="score">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="score"></div>
+    </div><div class="reflection-item">
+      <label for="reflect-remap"><b>25 · Biến đổi ngược về camera</b></label>
+      <p class="small reflection-prompt" id="prompt-remap">Ảnh gốc 1000×500 được resize theo tỷ lệ 0,512 rồi letterbox vào 512×512, thêm padding trên 128 pixel. Một điểm model (256,256) ứng với điểm nào trên ảnh gốc? Tự viết x_gốc = (x_model − pad_x)/scale và y tương tự. Nếu có rotate/crop thì còn phải đảo bước nào?</p>
+      <textarea class="note-input reflection-input" id="reflect-remap" data-math-note="remap" aria-describedby="prompt-remap" placeholder="Viết theo cách hiểu của tôi: ý nghĩa → cách tính hoặc ví dụ → điều cần lưu ý…" spellcheck="false"></textarea>
+      <div class="reflection-actions no-print"><span class="small muted" data-note-status="remap">Chưa viết.</span><button type="button" class="primary" data-save-html>Save vào HTML</button></div>
+      <div class="answer-print print-only" data-print-note="remap"></div>
+    </div>
+  </div>
+  <div class="card"><h3>Bài tập để Huy tự giải thích thuật toán</h3><p class="small">Mở source, chọn một hình chữ nhật và tự trả lời: (1) tại sao merge trước intersection? (2) line ID chung đảm bảo điều gì? (3) D gần 0 có nguy hiểm gì? (4) vì sao remap cần inverse transform? Viết khoảng 5–10 dòng theo cách hiểu của bạn.</p><label for="algorithmNotes" class="small muted">Tổng hợp thuật toán bằng lời của tôi — bấm Save để ghi vào HTML</label><textarea class="note-input" id="algorithmNotes" placeholder="Tôi hiểu bước merge là... Một cặp line song song cần... Khi đưa box về camera..." spellcheck="false"></textarea><div class="small muted" id="notesStatus" aria-live="polite">Chưa có ghi chú.</div><button type="button" class="primary no-print" data-save-html style="margin-top:13px">Save vào HTML</button> <button id="downloadNotes" class="no-print" style="margin-top:13px">Tải ghi chú .txt ↓</button></div>
   <div class="chapter-end"><span class="muted">Tự nói lại: prototype của mình đang thiếu bước nào so với official?</span><button class="complete" data-section="box">✓ Đánh dấu đã hiểu</button></div>
 </section>
 
@@ -336,9 +537,9 @@ converter.target_spec.supported_ops = [
     <p class="small muted">Các link code/MD tương đối hoạt động khi HTML nằm trong thư mục ngày này. Toàn bộ bài học, mô phỏng và số liệu được nhúng trong HTML nên vẫn đọc được khi chép riêng file đi nơi khác.</p>
     <details><summary>Bước 1 · Chỉ đọc dữ liệu đã có — chưa cần chạy lại model</summary><p>Mở <a href="../../daily/2026-10-09/REPORT.md">REPORT.md</a> và JSON trong <code>experiments/*/results</code>. Kiểm tra tên variant, runtime, input/model hash, số mẫu và raw latency. Phân biệt phạm vi ablation, runtime matrix và decoded timing.</p></details>
     <details><summary>Bước 2 · Hai environment riêng biệt</summary><pre><code># PowerShell, chạy từ root repo
-py -3.11 -m venv .venv-day09
-.\.venv-day09\Scripts\python.exe -m pip install -r daily/2026-10-09/requirements-runtime-lock.txt
-.\.venv-day09\Scripts\python.exe -m pip check</code></pre><p>Bộ cũ dùng <code>.venv</code> với <code>quantization/requirements-lock.txt</code>. Không trộn TF 2.15 và NumPy 2.4 vào một venv. Lần đầu tải dependencies/model/data cần Internet.</p></details>
+python scripts/setup.py --profile baseline
+python scripts/setup.py --profile runtime
+python scripts/setup.py --profile runtime --check</code></pre><p>Bộ cũ dùng <code>.venv</code> với <code>environments/baseline/requirements-lock.txt</code>. Không trộn TF 2.15 và NumPy 2.4 vào một venv. Lần đầu tải dependencies/model/data cần Internet.</p></details>
     <details><summary>Bước 3 · Một phép đo mới có run ID riêng</summary><pre><code>.\.venv-day09\Scripts\python.exe daily/2026-10-09/experiments/01-reproduce/src/runtime_compare.py --task text --variant onnx_static --runtime new --threads 4 --run-id run-02</code></pre><p>Cần artifact và canonical input baseline đã chuẩn bị. Chọn run ID chưa dùng để giữ kết quả cũ. Không chạy conversion hoặc benchmark khác song song. Đây là một điều kiện; muốn kết luận cũ/mới phải đo cả hai điều kiện cùng protocol.</p></details>
     <details><summary>Bước 4 · Kiểm chứng bridge rồi mới quantize M-LSD</summary><pre><code>.\.venv-day09\Scripts\python.exe daily/2026-10-09/experiments/03-mlsd/src/prepare_torch.py
 .\.venv\Scripts\python.exe daily/2026-10-09/experiments/03-mlsd/src/port_keras.py --variant fp32</code></pre><p>Đọc <code>bridge_validation.json</code> và điều kiện gate. Chạy các biến thể sau khi hiểu gate, input contract và vị trí normalize. Xem <a href="../../daily/2026-10-09/RUNNING.md">RUNNING.md</a> để chạy toàn bộ pipeline. Những CLI chuẩn bị có thể thay artifact mặc định; lưu kết quả cần giữ trước khi chạy lại.</p></details>
@@ -362,16 +563,40 @@ py -3.11 -m venv .venv-day09
 <footer class="footer"><span>HUY / MODEL LAB · Bài học ngày 09/10/2026<br>HTML độc lập · CSS, JavaScript, SVG và dữ liệu nằm trong một file.</span><span>Tài liệu học có hỗ trợ AI. Số liệu là phép đo CPU của Huy.<br>Chưa có kết quả Android. Reproduce source Đức được bổ sung ở phần 02.</span></footer>
 </main>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script type="application/json" id="embeddedLearningState">null</script>
 <script>
 'use strict';
 const $ = id => document.getElementById(id);
 const storageKey = 'huy-learning-2026-10-09-v1';
 const chapterIds = ['quant','runtime','bert','mlsd','box','practice'];
-let state = {done:[],answers:{},checks:{},notes:''};
-let canSave = true;
-try { const saved = JSON.parse(localStorage.getItem(storageKey) || 'null'); if(saved && typeof saved === 'object') { state.done = Array.isArray(saved.done) ? saved.done.filter(id=>chapterIds.includes(id)) : []; state.answers = saved.answers && typeof saved.answers==='object' ? saved.answers : {}; state.checks = saved.checks && typeof saved.checks==='object' ? saved.checks : {}; state.notes = typeof saved.notes==='string' ? saved.notes : ''; } localStorage.setItem(storageKey,JSON.stringify(state)); } catch(e) { canSave=false; }
-function save() { if(!canSave) return; try { localStorage.setItem(storageKey,JSON.stringify(state)); } catch(e) { canSave=false; updateStorageStatus(); } }
-function updateStorageStatus(){ $('saveStatus').textContent = canSave ? 'Tiến độ lưu trên trình duyệt này.' : 'Trình duyệt chặn lưu: phiên này vẫn học được. Tải ghi chú để giữ lại.'; }
+const initialState = {done:[],answers:{},checks:{},notes:'',mathNotes:{},updatedAt:0};
+let embeddedState = null, cachedState = null, canSave = true;
+try { embeddedState = JSON.parse($('embeddedLearningState').textContent); } catch(e) { /* Empty first edition. */ }
+try { cachedState = JSON.parse(localStorage.getItem(storageKey) || 'null'); } catch(e) { canSave = false; }
+const validState = value => value && typeof value === 'object' && !Array.isArray(value);
+const embeddedTime = Number(embeddedState && embeddedState.updatedAt) || 0;
+const cachedTime = Number(cachedState && cachedState.updatedAt) || 0;
+const restored = validState(cachedState) && (!validState(embeddedState) || cachedTime > embeddedTime) ? cachedState : embeddedState;
+let state = {...initialState};
+if(validState(restored)){
+  state.done = Array.isArray(restored.done) ? restored.done.filter(id=>chapterIds.includes(id)) : [];
+  state.answers = validState(restored.answers) ? restored.answers : {};
+  state.checks = validState(restored.checks) ? restored.checks : {};
+  state.notes = typeof restored.notes === 'string' ? restored.notes : '';
+  state.mathNotes = validState(restored.mathNotes) ? restored.mathNotes : {};
+  state.updatedAt = Number(restored.updatedAt) || 0;
+}
+let fileDirty = state.updatedAt > embeddedTime;
+let savingFile = false, workbookFileHandle = null, lastFileVersion = null;
+let diskSavedAt = embeddedTime;
+function save(){
+  state.updatedAt = Math.max(Date.now(),state.updatedAt+1);
+  fileDirty = true;
+  if(canSave){ try { localStorage.setItem(storageKey,JSON.stringify(state)); } catch(e) { canSave=false; } }
+  updateStorageStatus();
+  updateWorkbookStatus();
+}
+function updateStorageStatus(){ $('saveStatus').textContent = canSave ? 'Bản nháp tự lưu trên trình duyệt. Bấm Save để ghi vào HTML.' : 'Bấm Save để giữ câu trả lời trong HTML; trình duyệt đang chặn bản nháp.'; }
 updateStorageStatus();
 let toastTimer;
 function notify(message){ $('toast').textContent=message; clearTimeout(toastTimer); toastTimer=setTimeout(()=>$('toast').textContent='',3200); }
@@ -410,7 +635,7 @@ document.querySelectorAll('[data-sentinel]').forEach(btn=>btn.addEventListener('
 const boxExplanations=['<b>1. Line candidates:</b> nhiều đoạn cùng nằm trên một cạnh, cần gộp trước khi tìm box.','<b>2. Merge:</b> gộp line gần cùng khoảng cách/góc trong Hough space thành cạnh đại diện. Hình này chỉ ẩn các đoạn trùng để minh họa.','<b>3. Intersections:</b> tính giao điểm, bỏ cặp gần song song và giao điểm quá xa endpoint. Bốn góc lý tưởng được đánh dấu.','<b>4. Quadrilateral:</b> nối góc dùng chung line thành chu trình; kiểm tra hình học, chấm điểm rồi remap về ảnh gốc.'];
 $('boxStep').addEventListener('input',()=>{const step=Number($('boxStep').value);$('boxStepValue').value=(step+1)+' / 4';$('boxDuplicates').style.display=step===0?'':'none';$('boxIntersections').style.display=step>=2?'':'none';$('boxPolygon').style.display=step===3?'':'none';$('boxCenterLabel').textContent=['Line candidates','Bốn cạnh đại diện','Góc chia sẻ line ID','Box candidate'][step];$('boxStepExplanation').innerHTML=boxExplanations[step];});
 $('algorithmNotes').value=state.notes;
-function notesStatus(){ $('notesStatus').textContent=state.notes?(canSave?'Đã lưu ghi chú trên trình duyệt này.':'Ghi chú chỉ ở phiên hiện tại. Dùng nút tải .txt để giữ lại.'):'Chưa có ghi chú.'; }
+function notesStatus(){ $('notesStatus').textContent=state.notes?(fileDirty?(canSave?'Đã giữ bản nháp; bấm Save để ghi vào HTML.':'Bấm Save vào HTML hoặc tải ghi chú để giữ lại.'):'Ghi chú đã nằm trong file HTML.'):'Chưa có ghi chú.'; }
 $('algorithmNotes').addEventListener('input',()=>{state.notes=$('algorithmNotes').value;save();notesStatus();});notesStatus();
 $('downloadNotes').addEventListener('click',()=>{const blob=new Blob(['Huy — ghi chú học ngày 09/10/2026\n\n'+$('algorithmNotes').value],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='huy-ghi-chu-2026-10-09.txt';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);});
 document.querySelectorAll('[data-check]').forEach(input=>{input.checked=state.checks[input.dataset.check]===true;input.addEventListener('change',()=>{state.checks[input.dataset.check]=input.checked;save();});});
@@ -428,7 +653,135 @@ const questions=[
 ];
 function renderQuiz(){const host=$('quiz');host.replaceChildren();questions.forEach((item,index)=>{const group=document.createElement('div');group.className='quiz-item';const title=document.createElement('h4');title.id='quiz-title-'+index;title.textContent=String(index+1).padStart(2,'0')+' / '+item.q;group.appendChild(title);const choices=document.createElement('div');choices.className='quiz-options';choices.setAttribute('role','group');choices.setAttribute('aria-labelledby',title.id);const answer=Number.isInteger(state.answers[index]) && state.answers[index]>=0 && state.answers[index]<item.options.length ? state.answers[index] : undefined;item.options.forEach((option,choice)=>{const button=document.createElement('button');button.type='button';button.textContent=String.fromCharCode(65+choice)+'. '+option;button.setAttribute('aria-pressed',String(answer===choice));if(answer===choice)button.classList.add('selected');button.addEventListener('click',()=>{state.answers[index]=choice;save();const focusedId='quiz-'+index+'-'+choice;renderQuiz();$(focusedId).focus({preventScroll:true});});button.id='quiz-'+index+'-'+choice;choices.appendChild(button);});group.appendChild(choices);const feedback=document.createElement('p');feedback.className='quiz-feedback';feedback.setAttribute('aria-live','polite');if(answer!==undefined){const good=answer===item.correct;feedback.classList.add(good?'good':'bad');feedback.textContent=(good?'✓ Đúng. ':'↻ Chưa đúng. ')+item.why;}group.appendChild(feedback);host.appendChild(group);});const answered=questions.filter((_,i)=>Number.isInteger(state.answers[i])&&state.answers[i]>=0&&state.answers[i]<questions[i].options.length).length;const correct=questions.filter((q,i)=>state.answers[i]===q.correct).length;$('quizScore').textContent='Đã trả lời '+answered+' / '+questions.length+' · Đúng '+correct+(answered===questions.length?' / '+questions.length:'');}
 renderQuiz();
-$('resetProgress').addEventListener('click',()=>{state.done=[];state.answers={};state.checks={};save();updateProgress();renderQuiz();document.querySelectorAll('[data-check]').forEach(el=>el.checked=false);notify('Đã đặt lại tiến độ và câu trả lời. Ghi chú được giữ lại.');});
+$('resetProgress').addEventListener('click',()=>{state.done=[];state.answers={};state.checks={};save();updateProgress();renderQuiz();document.querySelectorAll('[data-check]').forEach(el=>el.checked=false);notify('Đã đặt lại quiz và tiến độ. Các ô tự diễn giải và ghi chú vẫn được giữ.');});
+
+// Self-contained workbook: embedded answers travel with this HTML file.
+const mathInputs = [...document.querySelectorAll('[data-math-note]')];
+function updateWorkbookStatus(){
+  const inputs = [...document.querySelectorAll('[data-math-note]')];
+  const count = inputs.filter(input=>input.value.trim()).length;
+  $('reflectionCount').textContent=count+' / '+inputs.length+' câu đã viết';
+  inputs.forEach(input=>{
+    const message=document.querySelector('[data-note-status="'+input.dataset.mathNote+'"]');
+    message.textContent=input.value.trim() ? (fileDirty?'Có nội dung · chưa Save vào HTML.':'Có nội dung · đã nằm trong HTML.') : 'Chưa viết.';
+    document.querySelector('[data-print-note="'+input.dataset.mathNote+'"]').textContent=input.value || '(Chưa viết)';
+  });
+  notesStatus();
+}
+mathInputs.forEach(input=>{
+  const stored=state.mathNotes[input.dataset.mathNote];
+  input.value=typeof stored==='string'?stored:'';
+  input.addEventListener('input',()=>{state.mathNotes[input.dataset.mathNote]=input.value;save();});
+});
+function fileStatus(message,kind='info'){
+  $('fileSaveStatus').textContent=message;
+  $('fileSaveStatus').dataset.kind=kind;
+  if(kind==='error')notify(message);
+}
+function collectWorkbook(){
+  mathInputs.forEach(input=>state.mathNotes[input.dataset.mathNote]=input.value);
+  state.notes=$('algorithmNotes').value;
+  return JSON.parse(JSON.stringify(state));
+}
+function serializeWorkbook(snapshot){
+  const clone=document.documentElement.cloneNode(true);
+  const json=JSON.stringify(snapshot).replace(/[<>&]/g,character=>String.fromCharCode(92)+'u'+character.charCodeAt(0).toString(16).padStart(4,'0'));
+  clone.querySelector('#embeddedLearningState').textContent=json;
+  document.querySelectorAll('textarea').forEach(input=>{
+    const copy=clone.querySelector('#'+input.id);
+    if(copy)copy.textContent=input.value;
+  });
+  document.querySelectorAll('input').forEach(input=>{
+    if(!input.id && !input.dataset.check)return;
+    const copy=input.id ? clone.querySelector('#'+input.id) : clone.querySelector('[data-check="'+input.dataset.check+'"]');
+    if(!copy)return;
+    if(input.type==='checkbox')copy.toggleAttribute('checked',input.checked);
+    else copy.setAttribute('value',input.value);
+  });
+  clone.querySelectorAll('[data-save-html]').forEach(button=>button.disabled=false);
+  clone.querySelector('body').classList.remove('menu-open');
+  clone.querySelector('#openMenu').setAttribute('aria-expanded','false');
+  clone.querySelector('#toast').textContent='';
+  clone.querySelector('#fileSaveStatus').textContent='Câu trả lời được nhúng trong HTML. Chọn lại file ở lần Save đầu sau khi mở trang.';
+  clone.querySelector('#fileSaveStatus').dataset.kind='info';
+  return '<!doctype html>'+String.fromCharCode(10)+clone.outerHTML+String.fromCharCode(10);
+}
+function downloadWorkbook(){
+  const snapshot=collectWorkbook();
+  const blob=new Blob([serializeWorkbook(snapshot)],{type:'text/html;charset=utf-8'});
+  const url=URL.createObjectURL(blob),link=document.createElement('a');
+  link.href=url;link.download='hoc-ngay-2026-10-09-da-dien.html';
+  document.body.appendChild(link);link.click();link.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1500);
+  fileStatus('Đã tải bản HTML có câu trả lời. File đang mở chưa được ghi đè; hãy mở bản vừa tải để tiếp tục.');
+  notify('Đã tải HTML có câu trả lời; file đang mở chưa được ghi đè.');
+}
+async function saveWorkbook(){
+  if(savingFile)return;
+  if(typeof window.showOpenFilePicker!=='function' || !window.isSecureContext){
+    downloadWorkbook();return;
+  }
+  savingFile=true;
+  document.querySelectorAll('[data-save-html]').forEach(button=>button.disabled=true);
+  let writable=null;
+  try {
+    if(!workbookFileHandle){
+      fileStatus('Chọn đúng file HTML đang mở để lưu câu trả lời vào đó.');
+      const [handle]=await window.showOpenFilePicker({id:'huy-math-workbook',multiple:false,types:[{description:'Bài học HTML ngày 09/10',accept:{'text/html':['.html']}}]});
+      const selected=await handle.getFile();
+      const documentOnDisk=new DOMParser().parseFromString(await selected.text(),'text/html');
+      if(documentOnDisk.querySelector('meta[name="learning-document"]')?.content!=='huy-day09-math-workbook-v1'){
+        throw new Error('Bạn chọn nhầm file. Hãy chọn bản HTML ngày 09 có các ô tự diễn giải này.');
+      }
+      workbookFileHandle=handle;
+      lastFileVersion={lastModified:selected.lastModified,size:selected.size};
+    }
+    const latest=await workbookFileHandle.getFile();
+    if(lastFileVersion && (latest.lastModified!==lastFileVersion.lastModified || latest.size!==lastFileVersion.size)){
+      workbookFileHandle=null;lastFileVersion=null;
+      throw new Error('File đã thay đổi bên ngoài trang. Tải bản HTML đã điền để giữ câu trả lời rồi mở lại file cần dùng.');
+    }
+    const snapshot=collectWorkbook();
+    snapshot.updatedAt=Math.max(Date.now(),snapshot.updatedAt+1);
+    const contents=serializeWorkbook(snapshot);
+    fileStatus('Đang ghi câu trả lời vào '+workbookFileHandle.name+'…');
+    writable=await workbookFileHandle.createWritable();
+    await writable.write(contents);
+    await writable.close();writable=null;
+    const savedFile=await workbookFileHandle.getFile();
+    lastFileVersion={lastModified:savedFile.lastModified,size:savedFile.size};
+    diskSavedAt=snapshot.updatedAt;
+    // Do not mark edits made during an asynchronous write as already saved.
+    if(state.updatedAt<snapshot.updatedAt){
+      state.updatedAt=snapshot.updatedAt;
+      fileDirty=false;
+      if(canSave){try{localStorage.setItem(storageKey,JSON.stringify(state));}catch(e){canSave=false;}}
+    } else fileDirty=true;
+    updateStorageStatus();updateWorkbookStatus();
+    fileStatus('Đã ghi vào '+workbookFileHandle.name+' lúc '+new Date(diskSavedAt).toLocaleTimeString('vi-VN')+'. '+(fileDirty?'Có nội dung mới trong lúc lưu; bấm Save thêm lần nữa.':'Bạn có thể đóng và mở lại file; câu trả lời nằm trong HTML.'),'success');
+    notify(fileDirty?'Đã lưu bản trước; còn thay đổi mới chưa Save.':'Đã lưu câu trả lời vào file HTML.');
+  } catch(error){
+    if(writable){try{await writable.abort();}catch(e){/* Preserve the original write error. */}}
+    if(error.name==='AbortError'){
+      fileStatus('Đã hủy chọn file. Câu trả lời vẫn còn trên trang; chưa ghi vào HTML.');
+      notify('Đã hủy chọn file; câu trả lời vẫn còn trên trang.');
+    }
+    else{
+      if(error.name==='NotAllowedError' || error.name==='SecurityError'){workbookFileHandle=null;lastFileVersion=null;}
+      fileStatus('Chưa lưu vào HTML: '+(error.message || 'Không ghi được file.')+' Bạn có thể dùng nút Tải bản HTML đã điền.','error');
+    }
+  } finally{
+    savingFile=false;
+    document.querySelectorAll('[data-save-html]').forEach(button=>button.disabled=false);
+  }
+}
+document.querySelectorAll('[data-save-html]').forEach(button=>button.addEventListener('click',saveWorkbook));
+$('downloadWorkbook').addEventListener('click',downloadWorkbook);
+window.addEventListener('beforeunload',event=>{if(fileDirty){event.preventDefault();event.returnValue='';}});
+window.addEventListener('beforeprint',updateWorkbookStatus);
+updateWorkbookStatus();
+fileStatus(fileDirty?'Đã khôi phục bản nháp trình duyệt mới hơn bản trong HTML. Bấm Save để ghi vào file.':embeddedTime?'Đã đọc câu trả lời từ HTML. Lần Save đầu, chọn lại file này để cấp quyền ghi.':'Chưa ghi thay đổi vào file HTML. Bắt đầu viết ở các ô bên dưới.');
+
 </script>
 </body>
 </html>
