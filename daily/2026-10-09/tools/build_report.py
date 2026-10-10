@@ -330,7 +330,7 @@ Evidence/code: [prepare_torch.py](experiments/03-mlsd/src/prepare_torch.py), [po
 
 Luồng source NAVER: decode line → Hough merge → giao điểm → kiểm tra khoảng cách/góc → ghép chu trình bốn cạnh → chấm điểm. Center NMS 3×3; Hough accumulator suppression 5×5. Tọa độ point là (y,x), displacement là (x,y).
 
-[Tài liệu đọc thuật toán và contract Android](experiments/04-box-postprocess/ALGORITHM.md). [Prototype Java](experiments/04-box-postprocess/src/BoxPostProcessor.java) xử lý giao điểm/chu trình, giới hạn 64 line, qua 5 ca hình học. Chưa port Hough merge và scoring tương đương NAVER. Thử CSV demo chỉ kiểm tra nối pipeline vì CSV chưa merge; latency JVM Windows không phải latency Android.
+[Tài liệu đọc thuật toán và contract Android](experiments/04-box-postprocess/ALGORITHM.md). [Học liệu HTML tương tác](../../docs/2026-10-09/hoc-ngay-2026-10-09.html). [Prototype Java](experiments/04-box-postprocess/src/BoxPostProcessor.java) xử lý giao điểm/chu trình, giới hạn 64 line, qua 5 ca hình học. Chưa port Hough merge và scoring tương đương NAVER. Thử CSV demo chỉ kiểm tra nối pipeline vì CSV chưa merge; latency JVM Windows không phải latency Android.
 
 {box_text} [Evidence Java](experiments/04-box-postprocess/results/run-01/demo_boxes.json).
 
@@ -348,7 +348,7 @@ Luồng source NAVER: decode line → Hough merge → giao điểm → kiểm tr
 
 [Hướng dẫn chạy](RUNNING.md), [dependency/environment](ENVIRONMENT.md), [matrix](tools/run_matrix.py). Runner chạy tuần tự và ghi exit code từng job. Số job đã có trạng thái: {len(execution)}; thất bại: {len(failed)} ({", ".join(failed) if failed else "không có trong các job đã ghi"}). Không coi “chưa đo” là 0 ms.
 
-Metric matrix Huy dùng float64: `SNR=10·log10(sum(ref²)/sum((ref−test)²))`; MAE/max đo trên output dequantized, cosine và relative L2 toàn tensor. Reproduce q4 Đức giữ thêm SNR float32 đúng source để đối chiếu, đồng thời ghi SNR float64. Median/p95 tính lại từ raw latency samples. Model/venv/cache/credentials không đưa vào Git. Bản chat cục bộ được ignore theo cấu hình repo. Bàn giao qua Git: code, báo cáo, source/dependency lock và JSON/CSV kết quả. Raw tensor, model/dataset, profiler trace, cache, credentials, docs HTML và báo cáo chat giữ cục bộ; clone mới tạo lại artifact trước khi chạy verifier đầy đủ.
+Metric matrix Huy dùng float64: `SNR=10·log10(sum(ref²)/sum((ref−test)²))`; MAE/max đo trên output dequantized, cosine và relative L2 toàn tensor. Reproduce q4 Đức giữ thêm SNR float32 đúng source để đối chiếu, đồng thời ghi SNR float64. Median/p95 tính lại từ raw latency samples. Model/venv/cache/credentials không đưa vào Git. Bản chat cục bộ được ignore theo cấu hình repo. Bàn giao qua Git: code, báo cáo, source/dependency lock và JSON/CSV kết quả. Raw tensor, model/dataset, profiler trace, cache, credentials, tài liệu nội bộ và báo cáo chat giữ cục bộ; clone mới tạo lại artifact trước khi chạy verifier đầy đủ.
 """
     (DAY / "REPORT.md").write_text(content, encoding="utf-8")
     paired = {}

@@ -55,5 +55,13 @@ Lệnh thực nghiệm: [ngày 09](daily/2026-10-09/RUNNING.md),
 [Android](android/README.md). Chạy benchmark tuần tự bằng interpreter của từng profile.
 
 Git lưu code, báo cáo, lock, source manifest và JSON/CSV kết quả.
-Model, dataset, tensor thô, profiler trace, venv, cache, credentials và học liệu
-cục bộ được ignore. Cần tải/tạo lại artifact trước khi chạy toàn bộ verifier.
+Model, dataset, tensor thô, profiler trace, venv, cache, credentials và tài liệu
+nội bộ được ignore. Cần tải/tạo lại artifact trước khi chạy toàn bộ verifier.
+
+## Học liệu HTML
+
+Tải file và mở bằng trình duyệt để xem nội dung tương tác:
+
+- [Ngày 07: triển khai model](docs/2026-10-07/hoc-deploy-model.html)
+- [Ngày 08: quantization](docs/2026-10-08/hoc-quantization.html)
+- [Ngày 09: reproduce, DistilBERT và M-LSD/post-processing](docs/2026-10-09/hoc-ngay-2026-10-09.html)

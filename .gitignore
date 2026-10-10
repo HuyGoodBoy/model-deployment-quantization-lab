@@ -23,7 +23,17 @@ Thumbs.db
 android/local.properties
 android/app/src/main/assets/lab/
 android/gradle/wrapper/gradle-wrapper.jar
-/docs/
+# Publish the three learning pages; keep archived guides and templates local.
+/docs/*
+!/docs/2026-10-07/
+!/docs/2026-10-08/
+!/docs/2026-10-09/
+/docs/2026-10-07/*
+/docs/2026-10-08/*
+/docs/2026-10-09/*
+!/docs/2026-10-07/hoc-deploy-model.html
+!/docs/2026-10-08/hoc-quantization.html
+!/docs/2026-10-09/hoc-ngay-2026-10-09.html
 bao-cao-chat-*.md
 REPORT-CHAT.md
 

@@ -256,7 +256,7 @@ def main():
         "",
         "## 8. Code và bằng chứng bàn giao",
         "",
-        "- `README.md`: cách chạy và giải thích từng module; học liệu HTML giữ cục bộ trong `docs/`.",
+        "- `README.md`: cách chạy và giải thích từng module; [học liệu HTML](../docs/2026-10-08/hoc-quantization.html).",
         "- `run_lab.py`, `qlab/`, `tests/`, `../environments/baseline/requirements.txt`, `../environments/baseline/requirements-lock.txt`, `sources.lock.json`.",
         "- `results/summary.json`, `results/summary.csv`, `results/cv/outputs.npz`, `results/text/outputs.npz`: raw outputs và nhãn cục bộ; không commit tensor vào Git.",
         "- `results/<task>/benchmark_*.json`: đủ mẫu latency; `conversion_*.json`: hash, strategy và audit; `data/<task>/manifest.json`: input/nhãn/source hashes.",
