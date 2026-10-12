@@ -4,3 +4,7 @@
 /results/** -text
 /quantization/results/** -text
 /daily/**/results/** -text
+# Keep the byte hashes of day-12 fixtures and source stable after checkout.
+/daily/2026-10-12/experiments/mlsd-postprocess/fixtures/** -text
+/daily/2026-10-12/experiments/mlsd-postprocess/src/*.java text eol=lf
+/daily/2026-10-12/experiments/mlsd-postprocess/verify.py text eol=lf

@@ -278,7 +278,7 @@ Cả hai dùng 4 thread, batch 1, warm-up 10 lần rồi đo 100 lần lấy med
 
 Agree là tỷ lệ dự đoán giống PyTorch gốc, khác với accuracy là tỷ lệ đúng nhãn. Chất lượng output nhìn chung gần kết quả Đức, nhưng tốc độ thay đổi khá nhiều, rõ nhất ở ONNX dynamic.
 
-Em profile riêng ONNX dynamic trên Linux: `ConvInteger` chiếm 93,3% thời gian các node, còn `DynamicQuantizeLinear` chỉ 1,3%. Như vậy phần chậm chính trong lần chạy này là kernel convolution INT8, không phải bước tính range. Chưa có profile trên Mac để khẳng định nguyên nhân của toàn bộ chênh lệch.
+Profile riêng trên Linux cho thấy `ConvInteger` chiếm 93,3% tổng thời lượng node-kernel events, còn `DynamicQuantizeLinear` chỉ 1,3%. Phần tốn thời gian chính của bản ONNX dynamic trong phiên này là convolution integer. Đây không phải tỷ lệ của toàn bộ thời gian ứng dụng và chưa giải thích được vì sao cùng model lại nhanh hơn trên Mac. [Profile đã lưu](experiments/01-reproduce/results/run-04-peer-linux/output_and_profile_audit.json).
 
 Em cũng kiểm tra TFLite static: output chỉ biểu diễn được tới 14,58 trong khi logit PyTorch lên tới 32,52, nên có clipping. Đây là kết quả kiểm tra range; em chưa làm thí nghiệm thay EMA bằng min/max như phần của Đức.
 
@@ -291,9 +291,11 @@ Em chạy lại ResNet50 và DistilBERT, giữ nguyên file model và input. Nh�
 
 {own_table}
 
-TFLite dynamic thay đổi nhiều nhất. Ví dụ DistilBERT từ 1054,815 ms ở Windows cũ xuống 39,582 ms ở Windows mới và 7,550 ms trên Linux. XNNPACK ở các bản mới có thêm hỗ trợ dynamic-range Conv2D/Fully Connected, nên có thể góp phần vào chênh lệch này; em chưa profile đủ để quy toàn bộ thay đổi cho XNNPACK.
+TFLite dynamic thay đổi nhiều nhất: DistilBERT từ 1054,815 ms ở Windows cũ xuống 39,582 ms ở Windows mới và 7,550 ms trên Linux. Đây là kết quả đo khi thay cả môi trường chạy. [TensorFlow công bố](https://blog.tensorflow.org/2024/04/faster-dynamically-quantized-inference-with-xnnpack.html) XNNPACK hỗ trợ dynamic-range Conv2D/Fully Connected, bật mặc định trong prebuilt binaries từ TF 2.17. Thay đổi này có thể góp phần vào chênh lệch, nhưng chưa có profile hai runtime để xác nhận từng operator chạy kernel nào. Audit ResNet50 dynamic thấy 19 delegate nodes ở bản cũ và 1 ở bản mới; chỉ đếm delegate nodes chưa đủ chứng minh kernel nào nhanh hơn.
 
-Cùng máy nhưng khác OS, bản thư viện và native kernel vẫn có thể chạy khác nhau. Ngoài ra, giữa các phiên đo có biến động latency: DistilBERT static từng khoảng 43 ms, nhưng kiểm tra lại được 123–128 ms; đổi cách đặt thread chưa giải thích được chênh lệch. Vì vậy các số trên là kết quả từng phiên, cần đo lặp và kiểm soát nhiệt độ/power trước khi kết luận chắc về tốc độ.
+Kiểm tra thread riêng với cùng DistilBERT static cho median 123,401 ms khi đặt qua environment và 128,310 ms khi đặt thêm TF API; cả hai vẫn dùng Interpreter 4 thread. Phép thử không tái hiện mức khoảng 43 ms của phiên trước, nên chưa xác định được nguyên nhân biến động. [Hai kết quả đối chứng](experiments/01-reproduce/results/run-02-threadcheck/).
+
+Kết luận về tốc độ: đã xác định phần tốn thời gian chính của ONNX dynamic trên Linux. Với chênh lệch giữa runtime/OS và giữa các phiên, hiện chỉ xác nhận được số đo thay đổi; chưa tách riêng ảnh hưởng kernel, nhiệt độ hay power. Không lấy số giữa các phiên để khẳng định INT8 luôn nhanh hơn hoặc môi trường nào luôn tốt hơn.
 
 Chi tiết môi trường, sai số và profile: [PEER-REPRODUCTION.md](PEER-REPRODUCTION.md).
 
@@ -366,11 +368,11 @@ Code và kết quả: [03-mlsd](experiments/03-mlsd/).
 
 Model dự đoán đoạn thẳng; phần post-processing mới ghép chúng thành box. Luồng chính gồm:
 
-1. **Decode đoạn thẳng:** áp sigmoid lên center heatmap, giữ cực đại trong cửa sổ 3×3 và lấy top 200. Từ center `(x,y)`, cộng displacement để có hai đầu mút. Loại dự đoán yếu/ngắn, rồi nhân tọa độ với 2 để về ảnh 512. `points` là `(y,x)`, displacement là `(x,y)` nên phải đổi đúng thứ tự.
+1. Decode đoạn thẳng: sigmoid, NMS 3×3 và top 200 chọn tâm; cộng displacement để có hai đầu mút, lọc đoạn yếu/ngắn. `points` là `(y,x)`, displacement là `(x,y)`. Trong `pred_squares`, giữ tọa độ map 256×256 để ghép box, cuối cùng mới nhân 2 và đổi về ảnh gốc.
 2. **Gộp đoạn cùng đường:** một cạnh có thể bị dự đoán thành nhiều đoạn. Biểu diễn đường bằng `ax + by = c`, lấy khoảng cách tới gốc `d = |c| / sqrt(a²+b²)` và góc để gom vào ô Hough. Các đoạn có khoảng cách/góc gần nhau được gộp thành một đoạn đại diện. Source dùng suppression 5×5 trên bảng Hough, khác NMS 3×3 ở bước center.
-3. **Tìm góc:** với hai đường, tính `D = a1*b2 − a2*b1`. Nếu D gần 0 thì hai đường gần song song, bỏ cặp đó. Ngược lại, tính giao điểm `x = (c1*b2 − c2*b1)/D`, `y = (a1*c2 − a2*c1)/D`. Chỉ giữ góc khoảng 60–120° và giao điểm đủ gần đầu đoạn, tránh lấy giao điểm của hai đường kéo dài quá xa.
+3. Tìm góc: với `D = a1*b2 − a2*b1`, NAVER chia các tử số giao điểm cho `D+1e-10`, rồi ép tọa độ về INT32. Sau đó lọc góc lớn hơn 60° và nhỏ hơn 120°, kiểm tra khoảng cách tới đầu đoạn. Bản Java khác ở chỗ loại cặp gần song song trước khi chia và giữ tọa độ thực; chưa coi hai cách tương đương.
 4. **Ghép bốn cạnh:** chia góc thành bốn hướng rồi tìm chu trình 0→1→2→3→0. Hai góc kề nhau phải dùng chung ID đường để bảo đảm chúng nối bằng cùng một cạnh. Kết quả là tứ giác gần chữ nhật, có thể bị xoay.
-5. **Chấm điểm:** kết hợp mức phủ cạnh, độ giống góc/cạnh đối diện, diện tích và khoảng cách tới tâm ảnh, rồi xếp hạng ứng viên.
+5. Chấm điểm: kết hợp độ phủ cạnh, độ giống góc/cạnh đối diện, diện tích và khoảng cách tâm, rồi xếp hạng. Mặc định NAVER đặt trọng số độ phủ và độ dài bằng 0; các thành phần này chỉ góp điểm khi đổi trọng số. Cuối cùng đổi tọa độ box về ảnh gốc.
 
 Em đã viết prototype Java cho phần giao điểm và ghép chu trình, qua 5 ca kiểm tra hình học. Demo từ 18 đoạn chưa gộp cho 4 box ứng viên, median 0,056 ms trên JVM Windows. Prototype chưa có Hough merge và scoring đầy đủ như NAVER, số này cũng chưa phải tốc độ Android.
 

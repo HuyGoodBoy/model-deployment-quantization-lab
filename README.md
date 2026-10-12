@@ -9,7 +9,8 @@
 | 07/10/2026 | MobileNetV2 ONNX/TFLite FP32 | [Báo cáo](daily/2026-10-07/REPORT.md) | [lab](lab/) |
 | 08/10/2026 | Quantization ResNet50/DistilBERT, GPU và Android FP32 | [Báo cáo](daily/2026-10-08/REPORT.md) | [quantization](quantization/) · [android](android/) |
 | 09/10/2026 | Reproduce Đức, DistilBERT INT8, M-LSD và detect box | [Báo cáo](daily/2026-10-09/REPORT.md) · [Đối chiếu reproduce](daily/2026-10-09/PEER-REPRODUCTION.md) | [experiments](daily/2026-10-09/experiments/) |
-| 10/10/2026 | Đọc source, nghiên cứu thuật toán M-LSD và quantization | [Báo cáo nháp](daily/2026-10-10/REPORT.md) | [Ghi chép nghiên cứu](daily/2026-10-10/RESEARCH.md) |
+| 10/10/2026 | Đọc source, nghiên cứu thuật toán M-LSD và quantization | [Báo cáo](daily/2026-10-10/REPORT.md) | [Ghi chép nghiên cứu](daily/2026-10-10/RESEARCH.md) |
+| 12/10/2026 | M-LSD: Hough và ghép box Java, đối chiếu Python, thử danh sách kề | [Báo cáo](daily/2026-10-12/REPORT.md) | [Code và kết quả](daily/2026-10-12/experiments/mlsd-postprocess/) |
 
 Ngày 09 đã reproduce 6 biến thể ResNet18 từ source Đức và đo 12 cấu hình model Huy
 trên Linux. M-LSD đã convert/quantize; detect box mới có prototype Java desktop,
@@ -66,6 +67,7 @@ Tải file và mở bằng trình duyệt để xem nội dung tương tác:
 - [Ngày 07: triển khai model](docs/2026-10-07/hoc-deploy-model.html)
 - [Ngày 08: quantization](docs/2026-10-08/hoc-quantization.html)
 - [Ngày 09: reproduce, DistilBERT và M-LSD/post-processing](docs/2026-10-09/hoc-ngay-2026-10-09.html)
+- [Ngày 12: học thuật toán bằng hình tương tác](docs/2026-10-12/hoc-thuat-toan.html)
 
 HTML ngày 09 có 4 ô tự giải thích phương pháp/thuật toán theo yêu cầu mentor. Mở bằng Chrome/Edge, viết câu trả lời,
 bấm **Save vào HTML** rồi chọn file đang mở ở lần lưu đầu để cấp quyền ghi.

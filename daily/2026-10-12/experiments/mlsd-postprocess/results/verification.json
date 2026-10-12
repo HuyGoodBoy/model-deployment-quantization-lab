@@ -1,0 +1,1181 @@
+{
+  "date": "2026-10-12",
+  "generated_at": "2026-10-12T09:04:51.579612+00:00",
+  "scope": "desktop JVM post-processing; no model inference or Android benchmark",
+  "source": {
+    "url": "https://raw.githubusercontent.com/navervision/mlsd/453cafa09467d0272760578d35c1fda38e8895a5/utils.py",
+    "sha256": "2e7caac40d7831f6a9b5e9ab97eed436d80f60dd03bf6d2572deac6277e4b15a"
+  },
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "machine": "AMD64",
+    "cpu": "12th Gen Intel(R) Core(TM) i7-12700H",
+    "logical_processors": 20,
+    "python": "3.11.9",
+    "numpy": "1.26.4",
+    "tensorflow": "2.15.1",
+    "java": "openjdk version \"21.0.12.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)",
+    "single_java_application_thread": true
+  },
+  "protocol": {
+    "warmup_per_mode": 1000,
+    "runs_per_mode": 400,
+    "order": "paired measurements; alternate naive/adjacency first each iteration",
+    "includes": "Hough merge, corners, adjacency construction/search, scoring and sorting",
+    "excludes": "decode model output, input/output CSV, model inference, image remapping",
+    "timing": "System.nanoTime per stage; total from first to last stage"
+  },
+  "code_sha256": {
+    "MlsdPostProcessor.java": "ff70da60d95169b11159c568d58247d3cf99030e6044bd2e3a45aa99936c6eef",
+    "PostprocessBench.java": "53118f8538df613213e6738c7a346cce1c63335c2ee461d35aa30d5947f1fa15",
+    "verify.py": "d3a86729f08c39073db07ae84c69781ff030fbc75e70bd5590f17aade58fcaf0"
+  },
+  "fixtures": [
+    {
+      "name": "fragmented",
+      "input_sha256": "92ff87542ad9a8859af918442ae721a8f78acb089968a30fd028f446e88892f2",
+      "input_segments": 7,
+      "merged_segments": 4,
+      "corner_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "boxes": 1,
+      "naive_checks": 4,
+      "adjacency_checks": 4,
+      "adjacency_output_exact": true,
+      "reference_check": {
+        "merged_max_abs_error": 0.0,
+        "max_score_component_error": 0.0,
+        "corner_coordinates_exact": true,
+        "candidate_set_exact": true,
+        "ranking_scores_match": true,
+        "tie_order": "not required"
+      },
+      "passed": true,
+      "benchmark": {
+        "naive": {
+          "merge": {
+            "median_ms": 0.0032,
+            "p95_ms": 0.0066
+          },
+          "corners": {
+            "median_ms": 0.0008,
+            "p95_ms": 0.0011
+          },
+          "search": {
+            "median_ms": 0.0004,
+            "p95_ms": 0.0007
+          },
+          "score": {
+            "median_ms": 0.0006,
+            "p95_ms": 0.0009
+          },
+          "total": {
+            "median_ms": 0.0051,
+            "p95_ms": 0.0087
+          }
+        },
+        "adjacency": {
+          "merge": {
+            "median_ms": 0.0032,
+            "p95_ms": 0.0066
+          },
+          "corners": {
+            "median_ms": 0.0008,
+            "p95_ms": 0.0012
+          },
+          "search": {
+            "median_ms": 0.0011,
+            "p95_ms": 0.0017199999999999817
+          },
+          "score": {
+            "median_ms": 0.0006,
+            "p95_ms": 0.0009
+          },
+          "total": {
+            "median_ms": 0.0059,
+            "p95_ms": 0.0096
+          }
+        }
+      }
+    },
+    {
+      "name": "rotated",
+      "input_sha256": "60ab3d0285642b3d7d3605bd89bdd9407c36a62f2f0f4f72b7160c6202f9d9e8",
+      "input_segments": 4,
+      "merged_segments": 4,
+      "corner_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "boxes": 1,
+      "naive_checks": 4,
+      "adjacency_checks": 4,
+      "adjacency_output_exact": true,
+      "reference_check": {
+        "merged_max_abs_error": 0.0,
+        "max_score_component_error": 1.1102230246251565e-16,
+        "corner_coordinates_exact": true,
+        "candidate_set_exact": true,
+        "ranking_scores_match": true,
+        "tie_order": "not required"
+      },
+      "passed": true,
+      "benchmark": {
+        "naive": {
+          "merge": {
+            "median_ms": 0.0030499999999999998,
+            "p95_ms": 0.006404999999999996
+          },
+          "corners": {
+            "median_ms": 0.0008,
+            "p95_ms": 0.0011049999999999955
+          },
+          "search": {
+            "median_ms": 0.0003,
+            "p95_ms": 0.0007
+          },
+          "score": {
+            "median_ms": 0.0007,
+            "p95_ms": 0.001
+          },
+          "total": {
+            "median_ms": 0.005,
+            "p95_ms": 0.0086
+          }
+        },
+        "adjacency": {
+          "merge": {
+            "median_ms": 0.0031,
+            "p95_ms": 0.006404999999999996
+          },
+          "corners": {
+            "median_ms": 0.0008,
+            "p95_ms": 0.0012
+          },
+          "search": {
+            "median_ms": 0.0011,
+            "p95_ms": 0.0023049999999999954
+          },
+          "score": {
+            "median_ms": 0.0007,
+            "p95_ms": 0.001
+          },
+          "total": {
+            "median_ms": 0.0059,
+            "p95_ms": 0.0099
+          }
+        }
+      }
+    },
+    {
+      "name": "integer",
+      "input_sha256": "90cbf90a825cd14a437f5c6c755298d7f7e960a26de71c59c21ce535bfcfe955",
+      "input_segments": 4,
+      "merged_segments": 4,
+      "corner_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "boxes": 1,
+      "naive_checks": 4,
+      "adjacency_checks": 4,
+      "adjacency_output_exact": true,
+      "reference_check": {
+        "merged_max_abs_error": 0.0,
+        "max_score_component_error": 0.0,
+        "corner_coordinates_exact": true,
+        "candidate_set_exact": true,
+        "ranking_scores_match": true,
+        "tie_order": "not required"
+      },
+      "passed": true,
+      "benchmark": {
+        "naive": {
+          "merge": {
+            "median_ms": 0.0029,
+            "p95_ms": 0.0063
+          },
+          "corners": {
+            "median_ms": 0.0007,
+            "p95_ms": 0.0011
+          },
+          "search": {
+            "median_ms": 0.0003,
+            "p95_ms": 0.0006
+          },
+          "score": {
+            "median_ms": 0.0005,
+            "p95_ms": 0.0009
+          },
+          "total": {
+            "median_ms": 0.0046,
+            "p95_ms": 0.0082
+          }
+        },
+        "adjacency": {
+          "merge": {
+            "median_ms": 0.0029,
+            "p95_ms": 0.0063
+          },
+          "corners": {
+            "median_ms": 0.0007,
+            "p95_ms": 0.0011
+          },
+          "search": {
+            "median_ms": 0.0011,
+            "p95_ms": 0.0016049999999999955
+          },
+          "score": {
+            "median_ms": 0.0005,
+            "p95_ms": 0.0008
+          },
+          "total": {
+            "median_ms": 0.0055,
+            "p95_ms": 0.009204999999999994
+          }
+        }
+      }
+    },
+    {
+      "name": "reversed",
+      "input_sha256": "dfc1784f9b62072b101c3b24d520c3c619f45350cce7ed25e34d8fce8259d88a",
+      "input_segments": 4,
+      "merged_segments": 4,
+      "corner_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "boxes": 1,
+      "naive_checks": 4,
+      "adjacency_checks": 4,
+      "adjacency_output_exact": true,
+      "reference_check": {
+        "merged_max_abs_error": 0.0,
+        "max_score_component_error": 0.0,
+        "corner_coordinates_exact": true,
+        "candidate_set_exact": true,
+        "ranking_scores_match": true,
+        "tie_order": "not required"
+      },
+      "passed": true,
+      "benchmark": {
+        "naive": {
+          "merge": {
+            "median_ms": 0.003,
+            "p95_ms": 0.0064
+          },
+          "corners": {
+            "median_ms": 0.0008,
+            "p95_ms": 0.0011
+          },
+          "search": {
+            "median_ms": 0.0004,
+            "p95_ms": 0.0006
+          },
+          "score": {
+            "median_ms": 0.0006,
+            "p95_ms": 0.0009
+          },
+          "total": {
+            "median_ms": 0.0048,
+            "p95_ms": 0.0083
+          }
+        },
+        "adjacency": {
+          "merge": {
+            "median_ms": 0.003,
+            "p95_ms": 0.0065
+          },
+          "corners": {
+            "median_ms": 0.0008,
+            "p95_ms": 0.0011
+          },
+          "search": {
+            "median_ms": 0.0011,
+            "p95_ms": 0.0024049999999999952
+          },
+          "score": {
+            "median_ms": 0.0006,
+            "p95_ms": 0.0009
+          },
+          "total": {
+            "median_ms": 0.0057,
+            "p95_ms": 0.009704999999999995
+          }
+        }
+      }
+    },
+    {
+      "name": "endpoint_gaps",
+      "input_sha256": "55a1a012f79e822cbbaf51406ca1a4e0172888bca46662e7669543a32f5a501b",
+      "input_segments": 4,
+      "merged_segments": 4,
+      "corner_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "boxes": 1,
+      "naive_checks": 4,
+      "adjacency_checks": 4,
+      "adjacency_output_exact": true,
+      "reference_check": {
+        "merged_max_abs_error": 0.0,
+        "max_score_component_error": 0.0,
+        "corner_coordinates_exact": true,
+        "candidate_set_exact": true,
+        "ranking_scores_match": true,
+        "tie_order": "not required"
+      },
+      "passed": true,
+      "benchmark": {
+        "naive": {
+          "merge": {
+            "median_ms": 0.003,
+            "p95_ms": 0.0063049999999999955
+          },
+          "corners": {
+            "median_ms": 0.0008,
+            "p95_ms": 0.0013
+          },
+          "search": {
+            "median_ms": 0.0003,
+            "p95_ms": 0.0006049999999999954
+          },
+          "score": {
+            "median_ms": 0.0006,
+            "p95_ms": 0.001
+          },
+          "total": {
+            "median_ms": 0.0049,
+            "p95_ms": 0.0087
+          }
+        },
+        "adjacency": {
+          "merge": {
+            "median_ms": 0.003,
+            "p95_ms": 0.006504999999999995
+          },
+          "corners": {
+            "median_ms": 0.0008,
+            "p95_ms": 0.0012
+          },
+          "search": {
+            "median_ms": 0.0012,
+            "p95_ms": 0.0021049999999999953
+          },
+          "score": {
+            "median_ms": 0.0006,
+            "p95_ms": 0.0009
+          },
+          "total": {
+            "median_ms": 0.0058,
+            "p95_ms": 0.009804999999999996
+          }
+        }
+      }
+    },
+    {
+      "name": "parallel",
+      "input_sha256": "710cdd584326734b0ba6ba68a857194665f7848dce89392848775271e6a846ed",
+      "input_segments": 2,
+      "merged_segments": 2,
+      "corner_counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "boxes": 0,
+      "naive_checks": 0,
+      "adjacency_checks": 0,
+      "adjacency_output_exact": true,
+      "reference_check": {
+        "merged_max_abs_error": 0.0,
+        "max_score_component_error": 0.0,
+        "corner_coordinates_exact": true,
+        "candidate_set_exact": true,
+        "ranking_scores_match": true,
+        "tie_order": "not required"
+      },
+      "passed": true,
+      "benchmark": {
+        "naive": {
+          "merge": {
+            "median_ms": 0.0019,
+            "p95_ms": 0.0051
+          },
+          "corners": {
+            "median_ms": 0.0002,
+            "p95_ms": 0.0004
+          },
+          "search": {
+            "median_ms": 0.0002,
+            "p95_ms": 0.0003
+          },
+          "score": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0001
+          },
+          "total": {
+            "median_ms": 0.0024,
+            "p95_ms": 0.0055
+          }
+        },
+        "adjacency": {
+          "merge": {
+            "median_ms": 0.002,
+            "p95_ms": 0.0034699999999999362
+          },
+          "corners": {
+            "median_ms": 0.0002,
+            "p95_ms": 0.0004
+          },
+          "search": {
+            "median_ms": 0.0003,
+            "p95_ms": 0.0006
+          },
+          "score": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0001
+          },
+          "total": {
+            "median_ms": 0.0025,
+            "p95_ms": 0.005604999999999995
+          }
+        }
+      }
+    },
+    {
+      "name": "near_parallel",
+      "input_sha256": "9031b559f501a55a794140c245cd754f294f7d4af22bada2e9a875e959c3e76d",
+      "input_segments": 2,
+      "merged_segments": 2,
+      "corner_counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "boxes": 0,
+      "naive_checks": 0,
+      "adjacency_checks": 0,
+      "adjacency_output_exact": true,
+      "reference_check": {
+        "merged_max_abs_error": 0.0,
+        "max_score_component_error": 0.0,
+        "corner_coordinates_exact": true,
+        "candidate_set_exact": true,
+        "ranking_scores_match": true,
+        "tie_order": "not required"
+      },
+      "passed": true,
+      "benchmark": {
+        "naive": {
+          "merge": {
+            "median_ms": 0.0023,
+            "p95_ms": 0.0036
+          },
+          "corners": {
+            "median_ms": 0.0003,
+            "p95_ms": 0.0006
+          },
+          "search": {
+            "median_ms": 0.0002,
+            "p95_ms": 0.0004
+          },
+          "score": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0001
+          },
+          "total": {
+            "median_ms": 0.0029,
+            "p95_ms": 0.0061
+          }
+        },
+        "adjacency": {
+          "merge": {
+            "median_ms": 0.0023,
+            "p95_ms": 0.0057
+          },
+          "corners": {
+            "median_ms": 0.0003,
+            "p95_ms": 0.0006
+          },
+          "search": {
+            "median_ms": 0.0003,
+            "p95_ms": 0.0006
+          },
+          "score": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0001
+          },
+          "total": {
+            "median_ms": 0.003,
+            "p95_ms": 0.006404999999999996
+          }
+        }
+      }
+    },
+    {
+      "name": "border",
+      "input_sha256": "1015174b36981eeacd5d9fd685579f012183fc039b300c2310268f1b5a9ed8f3",
+      "input_segments": 4,
+      "merged_segments": 4,
+      "corner_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "boxes": 1,
+      "naive_checks": 4,
+      "adjacency_checks": 4,
+      "adjacency_output_exact": true,
+      "reference_check": {
+        "merged_max_abs_error": 0.0,
+        "max_score_component_error": 0.0,
+        "corner_coordinates_exact": true,
+        "candidate_set_exact": true,
+        "ranking_scores_match": true,
+        "tie_order": "not required"
+      },
+      "passed": true,
+      "benchmark": {
+        "naive": {
+          "merge": {
+            "median_ms": 0.0028,
+            "p95_ms": 0.006004999999999996
+          },
+          "corners": {
+            "median_ms": 0.0008,
+            "p95_ms": 0.0012
+          },
+          "search": {
+            "median_ms": 0.0003,
+            "p95_ms": 0.0006049999999999954
+          },
+          "score": {
+            "median_ms": 0.0006,
+            "p95_ms": 0.0009
+          },
+          "total": {
+            "median_ms": 0.0046,
+            "p95_ms": 0.008
+          }
+        },
+        "adjacency": {
+          "merge": {
+            "median_ms": 0.0028,
+            "p95_ms": 0.006104999999999996
+          },
+          "corners": {
+            "median_ms": 0.0008,
+            "p95_ms": 0.0012
+          },
+          "search": {
+            "median_ms": 0.0011,
+            "p95_ms": 0.0021
+          },
+          "score": {
+            "median_ms": 0.0006,
+            "p95_ms": 0.0009
+          },
+          "total": {
+            "median_ms": 0.0056,
+            "p95_ms": 0.009
+          }
+        }
+      }
+    },
+    {
+      "name": "grid",
+      "input_sha256": "2ab905641f6795a40903b018b695a0ca06875a41e6f7488fe64c1d9233cfa052",
+      "input_segments": 16,
+      "merged_segments": 16,
+      "corner_counts": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "boxes": 256,
+      "naive_checks": 6400,
+      "adjacency_checks": 2368,
+      "adjacency_output_exact": true,
+      "reference_check": {
+        "merged_max_abs_error": 0.0,
+        "max_score_component_error": 1.1102230246251565e-16,
+        "corner_coordinates_exact": true,
+        "candidate_set_exact": true,
+        "ranking_scores_match": true,
+        "tie_order": "not required"
+      },
+      "passed": true,
+      "benchmark": {
+        "naive": {
+          "merge": {
+            "median_ms": 0.0047,
+            "p95_ms": 0.0053049999999999955
+          },
+          "corners": {
+            "median_ms": 0.0065,
+            "p95_ms": 0.0067
+          },
+          "search": {
+            "median_ms": 0.0262,
+            "p95_ms": 0.028904999999999993
+          },
+          "score": {
+            "median_ms": 0.1398,
+            "p95_ms": 0.14650999999999997
+          },
+          "total": {
+            "median_ms": 0.1778,
+            "p95_ms": 0.18562999999999996
+          }
+        },
+        "adjacency": {
+          "merge": {
+            "median_ms": 0.0047,
+            "p95_ms": 0.0054
+          },
+          "corners": {
+            "median_ms": 0.0065,
+            "p95_ms": 0.0067
+          },
+          "search": {
+            "median_ms": 0.01315,
+            "p95_ms": 0.0152
+          },
+          "score": {
+            "median_ms": 0.1399,
+            "p95_ms": 0.14730999999999997
+          },
+          "total": {
+            "median_ms": 0.1647,
+            "p95_ms": 0.173505
+          }
+        }
+      }
+    },
+    {
+      "name": "empty",
+      "input_sha256": "7c43322a6f36e3cd2fb926e761d38dd671551abe4c8395e5fb49928132d5339b",
+      "input_segments": 0,
+      "merged_segments": 0,
+      "corner_counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "boxes": 0,
+      "naive_checks": 0,
+      "adjacency_checks": 0,
+      "adjacency_output_exact": true,
+      "upstream_behavior": "IndexError: too many indices for array: array is 1-dimensional, but 2 were indexed",
+      "reference_check": "robustness case: empty Java result required, not upstream equivalence",
+      "passed": true,
+      "benchmark": {
+        "naive": {
+          "merge": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0004
+          },
+          "corners": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0002
+          },
+          "search": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.00020499999999999547
+          },
+          "score": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0001
+          },
+          "total": {
+            "median_ms": 0.0004,
+            "p95_ms": 0.0007
+          }
+        },
+        "adjacency": {
+          "merge": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0004
+          },
+          "corners": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0003
+          },
+          "search": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0002
+          },
+          "score": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0001
+          },
+          "total": {
+            "median_ms": 0.0004,
+            "p95_ms": 0.0007
+          }
+        }
+      }
+    },
+    {
+      "name": "zero_length",
+      "input_sha256": "b8dd910757a4627f1bc46a9df8dc930fba58ea70226639cacbc9a52f4bd7651f",
+      "input_segments": 1,
+      "merged_segments": 0,
+      "corner_counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "boxes": 0,
+      "naive_checks": 0,
+      "adjacency_checks": 0,
+      "adjacency_output_exact": true,
+      "upstream_behavior": "returned without exception",
+      "reference_check": "robustness case: empty Java result required, not upstream equivalence",
+      "passed": true,
+      "benchmark": {
+        "naive": {
+          "merge": {
+            "median_ms": 0.0003,
+            "p95_ms": 0.0007
+          },
+          "corners": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.00030499999999999543
+          },
+          "search": {
+            "median_ms": 0.0002,
+            "p95_ms": 0.0004
+          },
+          "score": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0001
+          },
+          "total": {
+            "median_ms": 0.0007,
+            "p95_ms": 0.0013
+          }
+        },
+        "adjacency": {
+          "merge": {
+            "median_ms": 0.0003,
+            "p95_ms": 0.0006
+          },
+          "corners": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0002
+          },
+          "search": {
+            "median_ms": 0.0002,
+            "p95_ms": 0.0004
+          },
+          "score": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0001
+          },
+          "total": {
+            "median_ms": 0.0008,
+            "p95_ms": 0.0012
+          }
+        }
+      }
+    },
+    {
+      "name": "invalid",
+      "input_sha256": "b78ff21166a0ff75cdf1224e6917dfd37fe8c80dbcc19ad199e751753c3c5c41",
+      "input_segments": 2,
+      "merged_segments": 0,
+      "corner_counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "boxes": 0,
+      "naive_checks": 0,
+      "adjacency_checks": 0,
+      "adjacency_output_exact": true,
+      "upstream_behavior": "IndexError: index -2147483648 is out of bounds for axis 0 with size 513",
+      "reference_check": "robustness case: empty Java result required, not upstream equivalence",
+      "passed": true,
+      "benchmark": {
+        "naive": {
+          "merge": {
+            "median_ms": 0.0002,
+            "p95_ms": 0.0005
+          },
+          "corners": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0003
+          },
+          "search": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.00020499999999999547
+          },
+          "score": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0001
+          },
+          "total": {
+            "median_ms": 0.0005,
+            "p95_ms": 0.0009
+          }
+        },
+        "adjacency": {
+          "merge": {
+            "median_ms": 0.0002,
+            "p95_ms": 0.0005
+          },
+          "corners": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0002
+          },
+          "search": {
+            "median_ms": 0.0002,
+            "p95_ms": 0.0003
+          },
+          "score": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0001
+          },
+          "total": {
+            "median_ms": 0.0005,
+            "p95_ms": 0.0009
+          }
+        }
+      }
+    },
+    {
+      "name": "outside_accumulator",
+      "input_sha256": "21de25a281b3c2198f3e348c52f91521c16435ebee002ecb008b4ad862ccdda1",
+      "input_segments": 2,
+      "merged_segments": 0,
+      "corner_counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "boxes": 0,
+      "naive_checks": 0,
+      "adjacency_checks": 0,
+      "adjacency_output_exact": true,
+      "upstream_behavior": "IndexError: index 599 is out of bounds for axis 0 with size 513",
+      "reference_check": "robustness case: empty Java result required, not upstream equivalence",
+      "passed": true,
+      "benchmark": {
+        "naive": {
+          "merge": {
+            "median_ms": 0.0005,
+            "p95_ms": 0.0009
+          },
+          "corners": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0004
+          },
+          "search": {
+            "median_ms": 0.0002,
+            "p95_ms": 0.0005
+          },
+          "score": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0001
+          },
+          "total": {
+            "median_ms": 0.0009,
+            "p95_ms": 0.0014
+          }
+        },
+        "adjacency": {
+          "merge": {
+            "median_ms": 0.0005,
+            "p95_ms": 0.0009
+          },
+          "corners": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0002
+          },
+          "search": {
+            "median_ms": 0.0002,
+            "p95_ms": 0.0004
+          },
+          "score": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0002
+          },
+          "total": {
+            "median_ms": 0.0009,
+            "p95_ms": 0.0017
+          }
+        }
+      }
+    },
+    {
+      "name": "real_decoded_fp32_old_t4",
+      "input_sha256": "af2781cadbd70387fe2447af7ae259383e83b845a16b547425e11162fdaf3f7d",
+      "input_segments": 23,
+      "merged_segments": 16,
+      "corner_counts": [
+        6,
+        2,
+        6,
+        11
+      ],
+      "boxes": 6,
+      "naive_checks": 412,
+      "adjacency_checks": 208,
+      "adjacency_output_exact": true,
+      "reference_check": {
+        "merged_max_abs_error": 0.0,
+        "max_score_component_error": 2.220446049250313e-16,
+        "corner_coordinates_exact": true,
+        "candidate_set_exact": true,
+        "ranking_scores_match": true,
+        "tie_order": "not required"
+      },
+      "passed": true,
+      "benchmark": {
+        "naive": {
+          "merge": {
+            "median_ms": 0.0134,
+            "p95_ms": 0.04881499999999999
+          },
+          "corners": {
+            "median_ms": 0.0066,
+            "p95_ms": 0.007504999999999995
+          },
+          "search": {
+            "median_ms": 0.0057,
+            "p95_ms": 0.008819999999999982
+          },
+          "score": {
+            "median_ms": 0.0046,
+            "p95_ms": 0.005504999999999995
+          },
+          "total": {
+            "median_ms": 0.0304,
+            "p95_ms": 0.06791499999999999
+          }
+        },
+        "adjacency": {
+          "merge": {
+            "median_ms": 0.0134,
+            "p95_ms": 0.05083999999999996
+          },
+          "corners": {
+            "median_ms": 0.0066,
+            "p95_ms": 0.008104999999999996
+          },
+          "search": {
+            "median_ms": 0.0082,
+            "p95_ms": 0.011124999999999977
+          },
+          "score": {
+            "median_ms": 0.0048,
+            "p95_ms": 0.005904999999999995
+          },
+          "total": {
+            "median_ms": 0.033,
+            "p95_ms": 0.07270499999999999
+          }
+        }
+      }
+    },
+    {
+      "name": "real_official_old_t4",
+      "input_sha256": "084da5e634294484797198d710ed09d6b8b54cfb17cca3d4016bcc52abccbb1c",
+      "input_segments": 29,
+      "merged_segments": 19,
+      "corner_counts": [
+        7,
+        2,
+        6,
+        16
+      ],
+      "boxes": 12,
+      "naive_checks": 854,
+      "adjacency_checks": 432,
+      "adjacency_output_exact": true,
+      "reference_check": {
+        "merged_max_abs_error": 0.0,
+        "max_score_component_error": 4.440892098500626e-16,
+        "corner_coordinates_exact": true,
+        "candidate_set_exact": true,
+        "ranking_scores_match": true,
+        "tie_order": "not required"
+      },
+      "passed": true,
+      "benchmark": {
+        "naive": {
+          "merge": {
+            "median_ms": 0.0155,
+            "p95_ms": 0.03360999999999999
+          },
+          "corners": {
+            "median_ms": 0.011,
+            "p95_ms": 0.014609999999999991
+          },
+          "search": {
+            "median_ms": 0.0114,
+            "p95_ms": 0.054534999999999965
+          },
+          "score": {
+            "median_ms": 0.0078,
+            "p95_ms": 0.011409999999999991
+          },
+          "total": {
+            "median_ms": 0.04725,
+            "p95_ms": 0.10454999999999995
+          }
+        },
+        "adjacency": {
+          "merge": {
+            "median_ms": 0.0155,
+            "p95_ms": 0.03910999999999999
+          },
+          "corners": {
+            "median_ms": 0.011,
+            "p95_ms": 0.015304999999999996
+          },
+          "search": {
+            "median_ms": 0.0081,
+            "p95_ms": 0.03690999999999999
+          },
+          "score": {
+            "median_ms": 0.0078,
+            "p95_ms": 0.0113
+          },
+          "total": {
+            "median_ms": 0.04455,
+            "p95_ms": 0.09154499999999996
+          }
+        }
+      }
+    },
+    {
+      "name": "real_static_old_t4",
+      "input_sha256": "e61936d9b6ec838b9b07f61fcda0f0ae23c2bc6ef84380b1200e71597d0e1231",
+      "input_segments": 126,
+      "merged_segments": 9,
+      "corner_counts": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "boxes": 0,
+      "naive_checks": 0,
+      "adjacency_checks": 0,
+      "adjacency_output_exact": true,
+      "reference_check": {
+        "merged_max_abs_error": 0.0,
+        "max_score_component_error": 0.0,
+        "corner_coordinates_exact": true,
+        "candidate_set_exact": true,
+        "ranking_scores_match": true,
+        "tie_order": "not required"
+      },
+      "passed": true,
+      "benchmark": {
+        "naive": {
+          "merge": {
+            "median_ms": 0.02155,
+            "p95_ms": 0.03021499999999999
+          },
+          "corners": {
+            "median_ms": 0.0018,
+            "p95_ms": 0.0026
+          },
+          "search": {
+            "median_ms": 0.0002,
+            "p95_ms": 0.0004
+          },
+          "score": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.00010499999999999545
+          },
+          "total": {
+            "median_ms": 0.0237,
+            "p95_ms": 0.03382999999999997
+          }
+        },
+        "adjacency": {
+          "merge": {
+            "median_ms": 0.0215,
+            "p95_ms": 0.0281
+          },
+          "corners": {
+            "median_ms": 0.0018,
+            "p95_ms": 0.0026
+          },
+          "search": {
+            "median_ms": 0.0006,
+            "p95_ms": 0.0012049999999999954
+          },
+          "score": {
+            "median_ms": 0.0001,
+            "p95_ms": 0.0002
+          },
+          "total": {
+            "median_ms": 0.0242,
+            "p95_ms": 0.03161499999999999
+          }
+        }
+      }
+    }
+  ],
+  "all_passed": true,
+  "nondefault_weights_checks": [
+    {
+      "name": "fragmented",
+      "passed": true,
+      "merged_max_abs_error": 0.0,
+      "max_score_component_error": 0.0,
+      "corner_coordinates_exact": true,
+      "candidate_set_exact": true,
+      "ranking_scores_match": true,
+      "tie_order": "not required"
+    },
+    {
+      "name": "grid",
+      "passed": true,
+      "merged_max_abs_error": 0.0,
+      "max_score_component_error": 4.440892098500626e-16,
+      "corner_coordinates_exact": true,
+      "candidate_set_exact": true,
+      "ranking_scores_match": true,
+      "tie_order": "not required"
+    },
+    {
+      "name": "real_decoded_fp32_old_t4",
+      "passed": true,
+      "merged_max_abs_error": 0.0,
+      "max_score_component_error": 8.881784197001252e-16,
+      "corner_coordinates_exact": true,
+      "candidate_set_exact": true,
+      "ranking_scores_match": true,
+      "tie_order": "not required"
+    }
+  ],
+  "timings_sha256": "a7185091d8949054d76e17d8ae8c21b377afb294439afa53d41c17f344e7f498"
+}

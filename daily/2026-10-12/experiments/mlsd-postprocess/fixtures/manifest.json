@@ -1,0 +1,114 @@
+{
+  "coordinates": "map 256x256, before final image scaling",
+  "thresholds": {
+    "score": 0.06,
+    "length": 20
+  },
+  "fixtures": [
+    {
+      "name": "fragmented",
+      "description": "Một hình chữ nhật, cạnh trên bị chia ba và cạnh dưới bị chia hai.",
+      "source_compatible": true,
+      "sha256": "92ff87542ad9a8859af918442ae721a8f78acb089968a30fd028f446e88892f2"
+    },
+    {
+      "name": "rotated",
+      "description": "Box xoay 18 độ.",
+      "source_compatible": true,
+      "sha256": "60ab3d0285642b3d7d3605bd89bdd9407c36a62f2f0f4f72b7160c6202f9d9e8"
+    },
+    {
+      "name": "integer",
+      "description": "Endpoint nguyên để kiểm tra epsilon và ép INT32 ở giao điểm.",
+      "source_compatible": true,
+      "sha256": "90cbf90a825cd14a437f5c6c755298d7f7e960a26de71c59c21ce535bfcfe955"
+    },
+    {
+      "name": "reversed",
+      "description": "Đảo thứ tự hai đầu mút của từng đoạn.",
+      "source_compatible": true,
+      "sha256": "dfc1784f9b62072b101c3b24d520c3c619f45350cce7ed25e34d8fce8259d88a"
+    },
+    {
+      "name": "endpoint_gaps",
+      "description": "Bốn cạnh có khoảng hở ở góc.",
+      "source_compatible": true,
+      "sha256": "55a1a012f79e822cbbaf51406ca1a4e0172888bca46662e7669543a32f5a501b"
+    },
+    {
+      "name": "parallel",
+      "description": "Hai đường song song.",
+      "source_compatible": true,
+      "sha256": "710cdd584326734b0ba6ba68a857194665f7848dce89392848775271e6a846ed"
+    },
+    {
+      "name": "near_parallel",
+      "description": "Hai đường gần song song, giao điểm ở rất xa.",
+      "source_compatible": true,
+      "sha256": "9031b559f501a55a794140c245cd754f294f7d4af22bada2e9a875e959c3e76d"
+    },
+    {
+      "name": "border",
+      "description": "Đường gần biên accumulator Hough.",
+      "source_compatible": true,
+      "sha256": "1015174b36981eeacd5d9fd685579f012183fc039b300c2310268f1b5a9ed8f3"
+    },
+    {
+      "name": "grid",
+      "description": "Lưới 8 ngang × 8 dọc để thử số tổ hợp khi ghép box.",
+      "source_compatible": true,
+      "sha256": "2ab905641f6795a40903b018b695a0ca06875a41e6f7488fe64c1d9233cfa052"
+    },
+    {
+      "name": "empty",
+      "description": "Không có đoạn thẳng.",
+      "source_compatible": false,
+      "sha256": "7c43322a6f36e3cd2fb926e761d38dd671551abe4c8395e5fb49928132d5339b"
+    },
+    {
+      "name": "zero_length",
+      "description": "Đoạn có chiều dài bằng 0.",
+      "source_compatible": false,
+      "sha256": "b8dd910757a4627f1bc46a9df8dc930fba58ea70226639cacbc9a52f4bd7651f"
+    },
+    {
+      "name": "invalid",
+      "description": "NaN/Inf: Java cần bỏ qua, source Python có thể báo lỗi.",
+      "source_compatible": false,
+      "sha256": "b78ff21166a0ff75cdf1224e6917dfd37fe8c80dbcc19ad199e751753c3c5c41"
+    },
+    {
+      "name": "outside_accumulator",
+      "description": "Đường ngoài kích thước bảng Hough: Java bỏ qua thay vì truy cập ngoài mảng.",
+      "source_compatible": false,
+      "sha256": "21de25a281b3c2198f3e348c52f91521c16435ebee002ecb008b4ad862ccdda1"
+    },
+    {
+      "name": "real_decoded_fp32_old_t4",
+      "description": "Đoạn đã decode từ output M-LSD trên frame_1.jpg đã lưu ngày 09.",
+      "source_compatible": true,
+      "sha256": "af2781cadbd70387fe2447af7ae259383e83b845a16b547425e11162fdaf3f7d",
+      "raw_output_sha256": "c4dc5ef6bc3914a705551938c119bdb09005f0dba60c3be0cd350648cc5a3867",
+      "model_sha256": "b6ba168a094151a7e36ebd12e5eb5455819916653ea46f9f5de0a4220c10e8e0",
+      "input_sha256": "6d6032f4b8fb8c19f11ab6bdbd04a6cee8bc9079c4c22a36d5cc21574c61bb4f"
+    },
+    {
+      "name": "real_official_old_t4",
+      "description": "Đoạn đã decode từ output M-LSD trên frame_1.jpg đã lưu ngày 09.",
+      "source_compatible": true,
+      "sha256": "084da5e634294484797198d710ed09d6b8b54cfb17cca3d4016bcc52abccbb1c",
+      "raw_output_sha256": "5dbcd5b0b0e7166a036c08f8cf2edf3b60bf85f8cfae69a13e1c2b875d814dcd",
+      "model_sha256": "9eea1c32aa599a74d60b74fa62a17993da2ee5eb7666aad27e9795fe8bd08293",
+      "input_sha256": "6d6032f4b8fb8c19f11ab6bdbd04a6cee8bc9079c4c22a36d5cc21574c61bb4f"
+    },
+    {
+      "name": "real_static_old_t4",
+      "description": "Đoạn đã decode từ output M-LSD trên frame_1.jpg đã lưu ngày 09.",
+      "source_compatible": true,
+      "sha256": "e61936d9b6ec838b9b07f61fcda0f0ae23c2bc6ef84380b1200e71597d0e1231",
+      "raw_output_sha256": "da666c3561806cf469c15ad25055995a7ec97f239ee9423f5f0a6c720c6b93aa",
+      "model_sha256": "b4725ca54a6ba922a7fffddea2c2ddfefeb0f546b3bffce1c80154237bdb4694",
+      "input_sha256": "6d6032f4b8fb8c19f11ab6bdbd04a6cee8bc9079c4c22a36d5cc21574c61bb4f"
+    }
+  ]
+}

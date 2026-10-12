@@ -1,0 +1,44 @@
+{
+  "review_date": "2026-10-12",
+  "status": "passed",
+  "scope": "Offline recomputation and document review; no new model inference or latency benchmark.",
+  "windows_raw_evidence": {
+    "status": "passed",
+    "checks": {
+      "runtime": 24,
+      "distilbert": 4,
+      "mlsd": 8,
+      "hashes": 36,
+      "thread_controls": 2,
+      "box_candidates": 4
+    },
+    "execution_jobs": 40,
+    "scope": "offline hashes, labels/metrics and 200-sample timing recomputation; not a new benchmark"
+  },
+  "saved_json_timing_records_checked": 50,
+  "windows_linux_model_input_hash_pairs_checked": 12,
+  "profile_event_sums_checked": true,
+  "java_geometry_cases_passed": 5,
+  "java_target_release": 8,
+  "html_checks": [
+    "four reflection fields",
+    "answer migration",
+    "direct file save",
+    "portable HTML",
+    "download fallback",
+    "script injection escaping",
+    "quiz reset preserves answers",
+    "desktop/mobile layout"
+  ],
+  "report_generator_matches_markdown": true,
+  "linux_raw_outputs_reverified_this_review": false,
+  "linux_note": "Historical Linux verification is in daily/2026-10-09/experiments/01-reproduce/results/run-04-peer-linux/verification.json. This review checks saved Linux timing and cross-environment hashes, not the Docker volume raw files.",
+  "reviewed_file_sha256": {
+    "daily/2026-10-09/REPORT.md": "065a97ca1168706bd270221f2bb44dab2e6748a16e9503c5104af21871783434",
+    "daily/2026-10-09/tools/build_report.py": "f6ab9e94b07cf0f163f78a310b9058fd6ccbf8c1a28a74f971fe0169808b80bc",
+    "daily/2026-10-09/experiments/04-box-postprocess/ALGORITHM.md": "fc3e7ea1a2db549cf794f75fc57b63313d56412b90aefe1151775a79d8d08f6c",
+    "daily/2026-10-09/experiments/04-box-postprocess/src/BoxPostProcessor.java": "6d9499ac903d4a651b49c4e736872ffae8ad35e40e8ee7682135f1ec2f628542",
+    "daily/2026-10-10/RESEARCH.md": "5122293c3be16ee26c971f07bb46361fb434a4cd79d2f8806c1dcf57d02b364f",
+    "docs/2026-10-09/hoc-ngay-2026-10-09.html": "35a158911ea41d0984303c5ddc45c55e76532fee2efdc2b81031cd7fdb352eb4"
+  }
+}

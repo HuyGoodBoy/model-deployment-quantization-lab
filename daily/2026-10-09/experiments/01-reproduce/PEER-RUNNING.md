@@ -56,6 +56,6 @@ Sau benchmark, `audit_peer.py` đo profile riêng và đếm mẫu hòa; `verify
 git -C .cache/duke-readonly status --short
 ```
 
-Generator đọc số Đức từ báo cáo ghim revision và số Huy từ JSON thực đo; cập nhật `PEER-REPRODUCTION.md`. Học liệu HTML giữ cục bộ trong docs, không thuộc Git. Không lấy số Mac làm số Huy đo. Các NPZ/NPY/model/cache vẫn ignore. Artifact Linux còn trong volume `huy-peer-day09-artifacts`; có thể dùng helper container + `docker cp` để xuất ra máy nếu cần.
+Generator đọc số Đức từ báo cáo ghim revision và số Huy từ JSON thực đo; cập nhật `PEER-REPRODUCTION.md`. HTML học liệu ngày 07–09 được đưa vào Git. Không lấy số Mac làm số Huy đo. Các NPZ/NPY/model/cache vẫn ignore. Artifact Linux còn trong volume `huy-peer-day09-artifacts`; có thể dùng helper container + `docker cp` để xuất ra máy nếu cần.
 
 Windows ONNX-only là fallback riêng, bỏ import và export TFLite trong AST adaptation q1; không gọi nó là full pipeline. Lần đó nằm ở `run-03-peer-windows`, source gốc vẫn nguyên vẹn.

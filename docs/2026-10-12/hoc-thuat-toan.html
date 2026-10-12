@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="learning-document" content="huy-algorithms-2026-10-12-v1">
+<meta name="color-scheme" content="light">
+<title>Hiểu thuật toán bằng hình · Huy · 12/10</title>
+<style>
+:root{--paper:#f6f5f0;--white:#fff;--ink:#203b39;--muted:#647673;--line:#dce4df;--green:#137c66;--soft:#e8f3ed;--orange:#bd602f;--orange-soft:#fff1e5;--blue:#4775b0;--purple:#8e65b3;--gray:#9aa6a2;--radius:20px}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 "Segoe UI",Arial,sans-serif}button,input,select,textarea{font:inherit}button,a,input,select,textarea{outline-offset:4px}button{cursor:pointer}button:disabled{cursor:wait;opacity:.65}a{color:var(--green);text-underline-offset:3px}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--orange)}
+header{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 32px;background:rgba(246,245,240,.97);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:12px}.mark{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--green);color:white;font-size:22px}.brand small{display:block;color:var(--muted);font-size:12px;letter-spacing:1px}.brand span{font-size:15px}.save-actions{display:flex;align-items:center;gap:8px}.button{border:1px solid var(--line);border-radius:10px;background:white;color:var(--ink);padding:9px 15px;font-size:14px}.button.primary{background:var(--green);color:white;border-color:var(--green)}.button:hover{filter:brightness(.96)}.quiet{font-size:12px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:245px minmax(0,1fr);max-width:1440px;margin:auto}aside{padding:32px 22px;position:sticky;top:77px;height:calc(100vh - 77px);overflow:auto;border-right:1px solid var(--line)}.eyebrow{font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted)}.intro{font-size:13px;color:var(--muted);margin:12px 0 22px}nav{display:grid;gap:7px}.nav-item{display:flex;align-items:center;gap:12px;text-align:left;padding:12px 10px;border:0;background:transparent;color:var(--muted);border-radius:12px;font-size:14px;line-height:1.35}.nav-item .num{display:grid;place-items:center;min-width:27px;height:27px;border:1px solid var(--line);border-radius:50%;font-size:12px}.nav-item[aria-current="step"]{background:var(--soft);color:var(--green)}.nav-item[aria-current="step"] .num{background:var(--green);color:white;border-color:var(--green)}.nav-item.written::after{content:'•';margin-left:auto;color:var(--green)}.progress{margin-top:26px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}.track{height:5px;border-radius:8px;background:var(--line);margin:9px 0}.track div{height:100%;width:0;background:var(--green);border-radius:8px;transition:width .2s}.side-link{display:block;margin-top:18px;font-size:12px}
+main{min-width:0;padding:34px 48px 28px;max-width:1100px}.lesson[hidden]{display:none}.lesson-heading{display:flex;align-items:start;gap:16px;margin:12px 0 14px}.lesson-heading h1{font-size:clamp(27px,3vw,39px);line-height:1.22;letter-spacing:-1.2px;font-weight:600;margin:0}.lede{color:var(--muted);font-size:16px;max-width:740px;margin:0 0 22px}.visual{background:white;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}.scene-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 22px;border-bottom:1px solid #edf1ec;font-size:13px}.pill{display:inline-block;padding:3px 9px;border-radius:30px;background:var(--soft);color:var(--green);font-size:11px;white-space:nowrap}.scene{display:block;width:100%;height:auto;max-height:355px;background:#fff}.scene text{font-family:"Segoe UI",Arial,sans-serif;fill:var(--ink);font-size:14px}.scene .dim{fill:var(--muted);font-size:12px}.scene .big{font-size:22px}.scene .tiny{font-size:10px}.scene .white{fill:white}.controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 26px;padding:18px 22px;background:#fafbf8;border-top:1px solid #edf1ec}.control label{display:flex;justify-content:space-between;gap:12px;font-size:13px;margin-bottom:5px}.control output{color:var(--green);font-variant-numeric:tabular-nums}.control input[type=range]{display:block;width:100%;accent-color:var(--green);height:22px;margin:0}.control select{max-width:100%;width:100%;padding:7px;border-radius:8px;background:white;border:1px solid var(--line);color:var(--ink);font-size:13px}.control.full{grid-column:1/-1}.choice-row{display:flex;gap:8px;flex-wrap:wrap}.choice-row button{border:1px solid var(--line);border-radius:8px;background:white;padding:7px 12px;color:var(--muted);font-size:13px}.choice-row button[aria-pressed=true]{border-color:var(--green);background:var(--soft);color:var(--green)}.check-label{display:flex;align-items:center;gap:8px;font-size:13px}.check-label input{accent-color:var(--green);width:17px;height:17px}.result{border-left:3px solid var(--green);background:var(--soft);border-radius:0 10px 10px 0;padding:14px 18px;margin:16px 0;font-size:14px}.result.warn{border-color:var(--orange);background:var(--orange-soft)}.result small{display:block;color:var(--muted);margin-top:4px}.read{font-size:14px;max-width:780px}.read p{margin:12px 0}.detail{font-size:13px;color:var(--muted);border-bottom:1px solid var(--line);padding:12px 0}.detail summary{cursor:pointer;color:var(--ink)}.detail p{margin:9px 0}.formula{font:14px/1.8 Consolas,monospace;background:white;padding:12px;border-radius:9px;overflow-x:auto;color:var(--ink)}.prompt{margin-top:24px;padding:20px 22px;border:1px solid var(--line);border-radius:var(--radius);background:#eeeee6}.prompt label{display:block;font-size:15px;margin:6px 0 12px}.prompt textarea{display:block;width:100%;resize:vertical;min-height:102px;border:1px solid #ccd6cf;border-radius:10px;background:white;padding:12px 14px;color:var(--ink);font-size:14px;line-height:1.65}.hint{font-size:13px;color:var(--muted);margin-top:10px}.hint summary{cursor:pointer}.hint p{margin:8px 0 0}.bottom-nav{display:flex;justify-content:space-between;gap:12px;margin-top:24px}.bottom-nav .button{min-width:110px}.footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px;margin-top:24px}.footer a{margin-right:12px}#save-status{max-width:260px;font-size:12px;color:var(--muted);line-height:1.4}.port{margin-top:22px;padding:20px 22px;border:1px solid var(--line);border-radius:var(--radius);background:white}.port h2{font-size:19px;font-weight:500;margin:0 0 12px}.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.flow span{background:var(--soft);padding:8px 12px;border-radius:8px;font-size:13px}.flow i{font-style:normal;color:var(--muted)}.port p{font-size:13px;color:var(--muted)}table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0}th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line)}th{font-weight:500;color:var(--muted)}.source-line{font-size:12px;color:var(--muted);margin:16px 0}.mobile-counter{display:none}noscript{display:block;padding:30px;color:var(--orange)}
+.control label.check-label{justify-content:flex-start}.zoom-button{border:0;background:transparent;color:var(--green);font-size:12px;padding:3px 0;text-decoration:underline;text-underline-offset:3px}.scene-tools{display:flex;gap:14px;align-items:center}.zoom-dialog{border:1px solid var(--line);border-radius:16px;padding:0;width:min(1000px,96vw);max-height:92vh;color:var(--ink);background:white}.zoom-dialog::backdrop{background:#203b3977}.zoom-header{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 18px;border-bottom:1px solid var(--line);font-size:13px}.zoom-body{overflow:auto;padding:12px}.zoom-body svg{width:100%;min-width:620px;height:auto;max-height:none}.zoom-caption{font-size:12px;color:var(--muted);padding:0 18px 12px;margin:0}
+@media(min-width:1200px){main{padding-right:65px;padding-left:65px}}
+@media(max-width:850px){header{padding:12px 18px}.layout{grid-template-columns:190px minmax(0,1fr)}aside{padding:24px 12px}main{padding:26px 24px}.nav-item{font-size:12px;gap:8px}.scene-top{padding:12px 16px}.controls{padding:15px 16px;gap:12px 16px}#save-status{display:none}.lesson-heading h1{font-size:30px}}
+@media(max-width:620px){header{position:relative;flex-wrap:wrap;gap:10px;padding:12px 16px}.brand small{font-size:10px}.brand span{font-size:13px}.mark{width:32px;height:32px;font-size:17px}.save-actions{width:100%}.save-actions .button{flex:1;font-size:12px;padding:8px}.layout{display:block}aside{position:relative;top:0;height:auto;padding:12px 16px;border-right:0;border-bottom:1px solid var(--line);overflow:hidden}aside .eyebrow,.intro,.side-link,.track{display:none}nav{display:flex;gap:7px;overflow:auto;padding-bottom:4px}.nav-item{min-width:38px;padding:5px;justify-content:center}.nav-item .nav-label{display:none}.nav-item.written::after{display:none}.progress{border:0;padding:0;margin:5px 0 0}.progress p{margin:0}.layout main{padding:22px 16px}.lesson-heading{margin-top:8px}.lesson-heading h1{font-size:29px;letter-spacing:-.7px}.lede{font-size:14px;margin-bottom:18px}.controls{grid-template-columns:1fr}.control.full{grid-column:auto}.scene-top{font-size:12px;padding:11px 13px}.pill{font-size:10px}.result{padding:12px 14px}.prompt{padding:16px}.scene{min-height:185px}.button{padding:8px 12px}.footer{line-height:1.9}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+@media print{header,aside,.controls,.bottom-nav,.save-actions{display:none}.layout{display:block}main{max-width:none;padding:0}.lesson[hidden]{display:block}.lesson{break-before:page}.scene{max-height:260px}.prompt textarea{min-height:100px}.visual,.prompt{break-inside:avoid}details:not([open])>*:not(summary){display:block}.footer{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><div class="mark" aria-hidden="true">↗</div><div><small>HỌC BẰNG CÁCH THỬ · 12/10/2026</small><span>M-LSD &amp; quantization</span></div></div>
+  <div class="save-actions"><span id="save-status" role="status">Ghi chép được lưu nháp trên trình duyệt.</span><button class="button" id="download">Tải HTML đã viết</button><button class="button primary" id="save">Save vào HTML</button></div>
+</header>
+<div class="layout">
+<aside aria-label="Mục lục">
+  <div class="eyebrow">7 ý cần hiểu</div>
+  <p class="intro">Đổi một con số, nhìn điều gì xảy ra, rồi viết lại bằng lời của mình.</p>
+  <nav id="lesson-nav" aria-label="Chọn bài học"></nav>
+  <div class="progress"><p id="progress-label">Đã viết 0/7 câu</p><div class="track" aria-hidden="true"><div id="progress-bar"></div></div><span class="quiet">Không cần dùng đúng câu chữ ở đây.</span></div>
+  <a class="side-link" href="../../daily/2026-10-09/REPORT.md">Mở báo cáo thí nghiệm ↗</a>
+</aside>
+<main id="main">
+<noscript>Hãy bật JavaScript để dùng hình tương tác và lưu câu trả lời. File chạy offline, không cần cài thư viện.</noscript>
+
+<section class="lesson" id="bai-1" aria-labelledby="title-1">
+  <div class="eyebrow">01 / Từ output ra đoạn thẳng</div>
+  <div class="lesson-heading"><h1 id="title-1">Model đưa một điểm.<br>Ta tìm hai đầu mút.</h1></div>
+  <p class="lede">Center là chỗ để đọc độ dời. Cộng độ dời vào center, ta được đoạn thẳng.</p>
+  <div class="visual">
+    <div class="scene-top"><span>Thử dời center sang phải</span><span class="pill">Tọa độ trên map 256 × 256</span></div>
+    <svg id="decode-scene" class="scene" viewBox="0 0 640 300" role="img" aria-label="Center C và hai vector tới đầu mút A, B"></svg>
+    <div class="controls">
+      <div class="control"><label for="center-x">Center x <output id="center-x-val"></output></label><input id="center-x" type="range" min="45" max="160" value="80"></div>
+      <div class="control"><label for="endpoint-span">Khoảng cách hai đầu mút <output id="endpoint-span-val"></output></label><input id="endpoint-span" type="range" min="5" max="80" value="70"></div>
+      <div class="control"><label for="line-score">Score của center <output id="line-score-val"></output></label><input id="line-score" type="range" min="0" max="100" value="85"></div>
+      <div class="control"><label for="decode-mode">Ngưỡng đang dùng</label><select id="decode-mode"><option value="lines">pred_lines: score &gt; 0,10</option><option value="squares">pred_squares: score &gt; 0,06</option></select></div>
+    </div>
+  </div>
+  <div id="decode-result" class="result" aria-live="polite"></div>
+  <div class="read"><p>Giữ nguyên độ dời mà đổi center thì cả đoạn cùng di chuyển. Center không nhất thiết là trung điểm hình học của đoạn.</p></div>
+  <details class="detail"><summary>Xem phép tính và thứ tự tọa độ</summary>
+    <p>Ví dụ lúc mở bài: C = (80, 60), độ dời A = (−30, −10), B = (40, 15).</p>
+    <div class="formula">A = (80 − 30, 60 − 10) = (50, 50)<br>B = (80 + 40, 60 + 15) = (120, 75)</div>
+    <p>Hình dùng (x, y). Tensor points lại lưu (y, x), còn displacement lưu (x, y). Nhầm thứ tự này sẽ làm đoạn sai vị trí.</p>
+    <p>Decoder trong model TFLite dùng sigmoid → NMS center 3×3 → top 200. Sau đó pred_lines/pred_squares mới cộng độ dời và lọc độ dài &gt; 20.</p>
+    <p>Map 256×256 nhỏ bằng nửa input 512×512. Nếu resize thẳng ảnh gốc W×H về 512×512: x_gốc = 2 × x_map × W/512; y tương tự. pred_squares chỉ đổi tọa độ sau khi ghép box.</p>
+  </details>
+</section>
+
+<section class="lesson" id="bai-2" aria-labelledby="title-2" hidden>
+  <div class="eyebrow">02 / Gộp đoạn bằng ý tưởng Hough</div>
+  <div class="lesson-heading"><h1 id="title-2">Ba đoạn nhỏ,<br>có thể chỉ là một cạnh.</h1></div>
+  <p class="lede">Ta so đường mà đoạn nằm trên đó. Các đoạn rời nhau vẫn có thể cùng đường; song song nhưng ở xa thì khác đường.</p>
+  <div class="visual">
+    <div class="scene-top"><span>Đổi vị trí hoặc độ nghiêng đoạn cam</span><span class="pill">Minh họa ý tưởng Hough</span></div>
+    <svg id="hough-scene" class="scene" viewBox="0 0 640 320" role="img" aria-label="Các đoạn trên ảnh và vị trí tương ứng trong không gian Hough"></svg>
+    <div class="controls">
+      <div class="control"><label for="hough-offset">Dời đoạn cam xuống <output id="hough-offset-val"></output></label><input id="hough-offset" type="range" min="0" max="55" value="0"></div>
+      <div class="control"><label for="hough-angle">Nghiêng đoạn cam <output id="hough-angle-val"></output></label><input id="hough-angle" type="range" min="-20" max="20" value="0"></div>
+      <div class="control full"><button class="button" id="hough-reset">Đưa ba đoạn về cùng đường</button></div>
+    </div>
+  </div>
+  <div id="hough-result" class="result" aria-live="polite"></div>
+  <div class="read"><p>Hough đổi mỗi đường thành một điểm: góc cho biết đường nghiêng thế nào, khoảng cách cho biết nó nằm ở đâu. Các điểm gần nhau gợi ý những đoạn cùng cạnh.</p></div>
+  <details class="detail"><summary>Xem toán và điểm khác với source</summary>
+    <div class="formula">ρ = x cos θ + y sin θ<br>θ: góc của pháp tuyến; ρ: khoảng cách có dấu đến gốc</div>
+    <p>Hình bên phải dùng biểu diễn Hough chuẩn, góc 60–120° và ρ 0–170. Hai chấm xanh trùng nhau khi hai đoạn cùng đường. Điều kiện tô màu ở đây chỉ là |Δθ| ≤ 4° và |Δρ| ≤ 4, không chạy đầy đủ code NAVER.</p>
+    <p>Source NAVER dùng d = |c| / √(a²+b²) cho ax+by=c, chia ô theo d=1 và góc=2°, rồi max-pool 5×5 trên bảng đếm Hough để chọn cụm. Sau đó gom endpoint và dùng biên x/y để tạo đoạn đại diện. Đây là heuristic, không phải fit least squares.</p>
+    <p>NMS center 3×3 ở bài 1 và max-pool Hough 5×5 ở bài này làm hai việc khác nhau.</p>
+  </details>
+</section>
+
+<section class="lesson" id="bai-3" aria-labelledby="title-3" hidden>
+  <div class="eyebrow">03 / Từ giao điểm thành góc</div>
+  <div class="lesson-heading"><h1 id="title-3">Cắt nhau chưa đủ<br>để thành góc của box.</h1></div>
+  <p class="lede">Giao điểm cần ở gần đầu mút của cả hai đoạn, và góc phải hợp lý. Dấu cộng ở giữa hai cạnh thường không phải góc box.</p>
+  <div class="visual">
+    <div class="scene-top"><span>Kéo giao điểm từ đầu cạnh vào giữa cạnh</span><span class="pill">Minh họa bộ lọc góc</span></div>
+    <svg id="corner-scene" class="scene" viewBox="0 0 640 310" role="img" aria-label="Hai đoạn kéo dài, giao điểm và khoảng cách đến endpoint"></svg>
+    <div class="controls">
+      <div class="control"><label for="corner-x">Giao điểm x <output id="corner-x-val"></output></label><input id="corner-x" type="range" min="20" max="130" value="100"></div>
+      <div class="control"><label for="corner-angle">Hướng đoạn cam <output id="corner-angle-val"></output></label><input id="corner-angle" type="range" min="35" max="145" value="90"></div>
+      <div class="control full"><div class="choice-row"><button id="corner-good" class="button">Góc ở đầu cạnh</button><button id="corner-middle" class="button">Giao điểm giữa cạnh</button><button id="corner-far" class="button">Giao điểm ở quá xa</button></div></div>
+    </div>
+  </div>
+  <div id="corner-result" class="result" aria-live="polite"></div>
+  <div class="read"><p>Đường vô hạn cho ta vị trí giao nhau. Endpoint của đoạn cho biết vị trí đó có được cạnh thật hỗ trợ hay không. Phải kiểm tra cả hai.</p></div>
+  <details class="detail"><summary>Xem công thức và cách lọc thật</summary>
+    <div class="formula">a₁x + b₁y = c₁; a₂x + b₂y = c₂<br>D = a₁b₂ − a₂b₁<br>x = (c₁b₂ − c₂b₁)/D<br>y = (a₁c₂ − a₂c₁)/D</div>
+    <p>Hình dùng ngưỡng gần endpoint 12 đơn vị để dễ nhìn. Slider đặt hướng tia cam so với hướng trái; góc thật được tính giữa hai vector từ giao điểm tới tâm hai đoạn. Khi giao điểm trùng tâm đoạn ngang (x=60), vector ngang bằng 0 nên góc không xác định: bỏ ứng viên này.</p>
+    <p>NAVER dùng tỉ lệ so với chiều dài đoạn, phân biệt giao điểm ở trong/ngoài đoạn (inside_ratio=0,45; outside_ratio=0,28); góc từ giao điểm tới tâm hai đoạn phải &gt;60° và &lt;120°. Hình không tái hiện toàn bộ bộ lọc này.</p>
+    <p>D=0 thì không có giao điểm duy nhất. NAVER chia cho D+1e−10 rồi ép INT32; Java prototype ngày 09 loại cặp gần song song trước và giữ double. Bản Java bổ sung ngày 12 giữ epsilon/INT32 để đối chiếu NAVER, đồng thời chủ động xử lý input lỗi. Không mặc định mọi trường hợp biên đều tương đương.</p>
+  </details>
+</section>
+
+<section class="lesson" id="bai-4" aria-labelledby="title-4" hidden>
+  <div class="eyebrow">04 / Ghép bốn góc</div>
+  <div class="lesson-heading"><h1 id="title-4">Bốn điểm phải nối<br>bằng đúng bốn cạnh.</h1></div>
+  <p class="lede">Hai góc đứng cạnh nhau cần dùng chung một đường. Chỉ nhìn bốn tọa độ giống hình chữ nhật chưa đủ.</p>
+  <div class="visual">
+    <div class="scene-top"><span>Thay ID đường ở góc B, giữ nguyên tọa độ</span><span class="pill">ID cạnh → chu trình</span></div>
+    <svg id="cycle-scene" class="scene" viewBox="0 0 640 310" role="img" aria-label="Bốn góc có ID đường và chu trình khép kín hoặc bị đứt"></svg>
+    <div class="controls">
+      <div class="control full"><label class="check-label" for="fake-corner"><input id="fake-corner" type="checkbox"> Dùng góc B giả: (L4, L1) thay cho (L0, L1)</label></div>
+    </div>
+  </div>
+  <div id="cycle-result" class="result" aria-live="polite"></div>
+  <div class="read"><p>Bản thật: A–B cùng L0, B–C cùng L1, C–D cùng L2, D–A cùng L3. Đi một vòng rồi trở lại A, ta có ứng viên bốn cạnh.</p><p>Bật góc giả: A dùng L0 nhưng B dùng L4. Hai điểm vẫn nằm ở chỗ cũ, nhưng không có bằng chứng chúng thuộc cùng một cạnh.</p></div>
+  <details class="detail"><summary>Xem cách ghép trong thuật toán</summary><p>NAVER phân loại góc theo bốn hướng, rồi ghép 0 → 1 → 2 → 3 → 0 bằng ID đường chung. Box có thể xoay, không bắt buộc song song trục hoặc có bốn cạnh bằng nhau. Các bước lọc góc và chấm điểm tiếp tục loại ứng viên kém.</p><p>Nếu dùng bốn vòng lặp trên nhiều góc thì số tổ hợp tăng nhanh. Khi port có thể dùng danh sách kề theo ID đường để chỉ xét các góc có khả năng nối nhau, rồi kiểm tra có đổi kết quả hay không.</p></details>
+</section>
+
+<section class="lesson" id="bai-5" aria-labelledby="title-5" hidden>
+  <div class="eyebrow">05 / Xếp hạng box</div>
+  <div class="lesson-heading"><h1 id="title-5">Box to nhất<br>chưa chắc đứng đầu.</h1></div>
+  <p class="lede">Thuật toán cân nhiều yếu tố. Một box lớn nhưng méo có thể thua box nhỏ hơn mà cân đối.</p>
+  <div class="visual">
+    <div class="scene-top"><span>Thử tăng mức ưu tiên diện tích</span><span class="pill">Điểm thành phần giả lập</span></div>
+    <svg id="rank-scene" class="scene" viewBox="0 0 640 310" role="img" aria-label="Ba box ứng viên và điểm xếp hạng minh họa"></svg>
+    <div class="controls">
+      <div class="control"><label for="area-weight">Trọng số diện tích <output id="area-weight-val"></output></label><input id="area-weight" type="range" min="0" max="8" value="1.86" step="0.01"></div>
+      <div class="control"><label for="box-choice">Xem cách tính cho</label><select id="box-choice"><option value="0">A · cân đối, gần giữa</option><option value="1">B · nhỏ ở góc</option><option value="2">C · lớn nhưng méo</option></select></div>
+      <div class="control full"><button class="button" id="rank-reset">Về trọng số mặc định</button></div>
+    </div>
+  </div>
+  <div id="rank-result" class="result" aria-live="polite"></div>
+  <div class="read"><p>Không có một dấu hiệu nào đủ để chọn box trong mọi ảnh. Cách chấm điểm là một giả định của thuật toán về box “đáng chọn”.</p></div>
+  <details class="detail"><summary>Xem công thức và giới hạn của hình</summary>
+    <div class="formula">score = wO×overlap + wD×degree + wA×area<br>        − wC×center + wL×length</div>
+    <p>NAVER mặc định: wO=0, wD=1,95, wA=1,86, wC=0,14, wL=0. Overlap và length không tác động với bộ trọng số này. Degree thể hiện sự giống nhau của góc đối, area là diện tích chuẩn hóa, center là độ lệch tâm (bị trừ).</p>
+    <p>Hình dùng ba bộ điểm thành phần tự đặt để nhìn rõ đánh đổi; không tính score NAVER từ polygon đã vẽ, không phải kết quả detect trên ảnh. Chỉ công thức cộng/trừ và trọng số ban đầu theo source.</p>
+    <p>Java prototype ngày 09 chấm diện tích + mean confidence. Bản ngày 12 đã thêm đủ thành phần điểm theo NAVER và đối chiếu trên các fixture; xem <a href="../../daily/2026-10-12/REPORT.md">báo cáo ngày 12</a>.</p>
+  </details>
+</section>
+
+<section class="lesson" id="bai-6" aria-labelledby="title-6" hidden>
+  <div class="eyebrow">06 / Dynamic, static và mixed INT8</div>
+  <div class="lesson-heading"><h1 id="title-6">“Lấy range lúc nào?”<br>khác “op nào dùng INT8?”</h1></div>
+  <p class="lede">Static nói về thời điểm chọn range activation. Mixed nói về việc INT8 và float cùng tồn tại. Một model có thể vừa static vừa mixed.</p>
+  <div class="visual">
+    <div class="scene-top"><span>Đổi range rồi quan sát số 3,2</span><span class="pill">Thước INT8 · 256 mã</span></div>
+    <svg id="quant-scene" class="scene" viewBox="0 0 640 330" role="img" aria-label="Thước lượng tử INT8 và ví dụ đồ thị mixed precision"></svg>
+    <div class="controls">
+      <div class="control"><label for="quant-range">Range đối xứng [−R, R] <output id="quant-range-val"></output></label><input id="quant-range" type="range" min="1" max="20" value="5" step="0.5"></div>
+      <div class="control"><label for="quant-value">Giá trị cần biểu diễn <output id="quant-value-val"></output></label><input id="quant-value" type="range" min="-12" max="12" value="3.2" step="0.1"></div>
+      <div class="control full"><div class="choice-row" aria-label="Thời điểm lấy range"><button id="mode-static" aria-pressed="true">Static</button><button id="mode-dynamic" aria-pressed="false">Dynamic</button></div></div>
+      <div class="control full"><label class="check-label" for="mixed"><input id="mixed" type="checkbox" checked> Cho một op không quantize chạy float (mixed)</label></div>
+    </div>
+  </div>
+  <div id="quant-result" class="result" aria-live="polite"></div>
+  <div class="read"><p id="quant-timing"></p><p>ONNX Runtime và TFLite có thể khác op được quantize, per-channel/per-tensor, cách calibration và kernel thực thi. Cùng tên dynamic/static không có nghĩa là cùng phép tính hoặc cùng tốc độ.</p></div>
+  <details class="detail"><summary>Xem phép tính và trường hợp DistilBERT của Huy</summary>
+    <div class="formula">q = clip(round(x / s) + z, −128, 127)<br>x_gần_đúng = (q − z) × s</div>
+    <p>Thước ở đây chọn s=R/127 và z=0. Có 256 mã −128…127; mã −128 nằm hơi ngoài −R, nhãn hai đầu cho thấy điều đó. Range rộng → bước s lớn → mất chi tiết; range hẹp → dễ clipping. Mô phỏng scalar này không chạy model.</p>
+    <p>Dynamic thường quantize weight trước; range activation của op được hỗ trợ được lấy khi chạy. Static lấy range từ dữ liệu calibration trước khi chạy. TFLite dynamic-range có thể dùng kernel hybrid và còn op float; không hiểu là toàn model dynamic INT8.</p>
+    <p>Per-tensor giống dùng một cây thước cho cả tensor. Per-channel giống mỗi kênh có một cây thước riêng: kênh có số nhỏ không cần dùng range quá lớn của kênh khác. Calibration là cho model chạy trên dữ liệu đại diện để chọn các range đó; dữ liệu khác hoặc cách gom min/max khác thì range cũng có thể khác.</p>
+    <p>DistilBERT mixed của Huy có representative calibration và cho phép TFLITE_BUILTINS + TFLITE_BUILTINS_INT8. Vì vậy nó thuộc static nhưng cho phép float fallback. Bản strict giới hạn op INT8 vẫn có thể có ID/index INT32, bias INT32 hoặc cast ở biên; không có nghĩa mọi tensor là INT8.</p>
+    <p>Chọn mixed để dễ convert/fallback, chưa có bằng chứng nó chính xác hơn strict: trong thí nghiệm này cả hai đạt 52% trên 100 mẫu. Đồ thị bốn op phía trên chỉ minh họa cách phân loại, không phải graph DistilBERT thật.</p>
+  </details>
+</section>
+
+<section class="lesson" id="bai-7" aria-labelledby="title-7" hidden>
+  <div class="eyebrow">07 / Mask và range quá rộng</div>
+  <div class="lesson-heading"><h1 id="title-7">Thước quá dài,<br>số nhỏ bị dồn vào một nấc.</h1></div>
+  <p class="lede">Mask âm rất lớn dùng để bỏ qua padding trong attention. Nếu nó đi vào vùng được quantize chung với số bình thường, range có thể quá rộng.</p>
+  <div class="visual">
+    <div class="scene-top"><span>Thử thay độ lớn mask</span><span class="pill">Minh họa range chung</span></div>
+    <svg id="mask-scene" class="scene" viewBox="0 0 640 330" role="img" aria-label="Range có mask âm lớn và giá trị attention nhỏ sau lượng tử"></svg>
+    <div class="controls">
+      <div class="control"><label for="mask-size">Mask</label><select id="mask-size"><option value="10">−10 · để nhìn các nấc</option><option value="100">−100 · ví dụ nhỏ</option><option value="10000">−10⁴</option><option value="1e30" selected>−10³⁰ · rất lớn</option></select></div>
+      <div class="control"><label for="mask-path">Vùng chứa mask</label><select id="mask-path"><option value="quant">Cùng range INT8 (giả định minh họa)</option><option value="float">Giữ float / ngoài vùng quantize</option></select></div>
+    </div>
+  </div>
+  <div id="mask-result" class="result" aria-live="polite"></div>
+  <div class="read"><p>Giảm mask không phải cứ giảm là tốt. Trước hết phải kiểm tra model float còn cho kết quả tương đương trên dữ liệu thử; sau đó mới đo lại bản quantized.</p></div>
+  <details class="detail"><summary>Xem kết quả đã đo, tách khỏi hình minh họa</summary>
+    <table><caption>DistilBERT · accuracy trên 100 mẫu trong bài thí nghiệm</caption><thead><tr><th>Bản</th><th>Accuracy</th></tr></thead><tbody><tr><td>FP32</td><td>91%</td></tr><tr><td>TFLite calibrated mixed INT8, mask gốc</td><td>52%</td></tr><tr><td>TFLite strict INT8, mask gốc</td><td>52%</td></tr><tr><td>INT8, mask giảm còn −10²</td><td>67%</td></tr></tbody></table>
+    <p>Đối chứng float với mask đã đổi khớp output trên 100 mẫu đã thử, không bảo đảm mọi input. 67% vẫn thấp hơn 91%. Hình này giúp hiểu cơ chế mất độ phân giải, không tự chứng minh đó là nguyên nhân duy nhất của toàn bộ sai số.</p>
+    <p>Trong bài của Huy, ONNX static chỉ nhắm MatMul/Gemm; nhánh mask/Sub/Softmax nằm ngoài danh sách quantize. TFLite quantize phạm vi khác. Cần kiểm tra graph/output thực tế, không suy ra chỉ từ tên phương pháp.</p>
+  </details>
+  <div class="port"><h2>Ghép lại để đưa lên Android</h2><div class="flow"><span>RGBA → TFLite</span><i>→</i><span>points / scores / vmap</span><i>→</i><span>Java: line → merge → box</span><i>→</i><span>Đổi tọa độ → vẽ</span></div><p>Giữ sigmoid, NMS center và top-k trong graph. Phần còn lại là vòng lặp và hình học, có thể viết Java/Kotlin. Bản Java ngày 12 đã có Hough merge và scoring, khớp với Python trên 12 bộ input đã thử; 4 ca input lỗi được xử lý riêng. Chưa tích hợp decoder/camera hoặc benchmark Android.</p><p>Để kiểm tra bản port: lưu cùng output model → chạy Python và Java → so đoạn, góc, box và thứ hạng (box bằng điểm có thể đổi thứ tự). Nếu ảnh camera bị letterbox/crop thì phải đảo phép biến đổi đó trước khi vẽ.</p></div>
+</section>
+
+<div class="prompt" id="reflection">
+  <div class="eyebrow">Viết lại theo cách mình hiểu</div>
+  <label id="note-question" for="note"></label>
+  <textarea id="note" rows="3" placeholder="Viết 2–3 câu, dùng ví dụ của bạn cũng được…"></textarea>
+  <details class="hint" id="hint"><summary>Xem một gợi ý</summary><p id="hint-text"></p></details>
+</div>
+<div class="bottom-nav"><button class="button" id="prev">← Bài trước</button><span id="page-label" class="quiet" aria-live="polite"></span><button class="button primary" id="next">Bài tiếp →</button></div>
+<footer class="footer">
+  <div>Hình chạy offline bằng JavaScript, không chạy inference. Màu xanh: giữ lại / hợp lệ · cam: đang xét · xám: bị loại.</div>
+  <div><a href="https://github.com/navervision/mlsd/blob/453cafa09467d0272760578d35c1fda38e8895a5/utils.py" target="_blank" rel="noopener">Source M-LSD (revision cố định)</a><a href="../../daily/2026-10-09/experiments/04-box-postprocess/ALGORITHM.md">Đối chiếu thuật toán</a><a href="../../daily/2026-10-09/REPORT.md">Số liệu thí nghiệm</a></div>
+  <div>Save lần đầu: chọn đúng file HTML này để cấp quyền ghi. Có thể dùng “Tải HTML đã viết” để lưu một bản có câu trả lời. Lưu nháp trình duyệt chỉ nằm trên máy này.</div>
+</footer>
+</main>
+</div>
+<dialog class="zoom-dialog" id="zoom-dialog" aria-labelledby="zoom-title"><div class="zoom-header"><span id="zoom-title">Xem hình lớn</span><button class="button" id="close-zoom">Đóng ✕</button></div><div class="zoom-body" id="zoom-body"></div><p class="zoom-caption">Màn hình nhỏ: vuốt ngang để xem phần còn lại. Nhấn Esc hoặc Đóng để quay lại bài.</p></dialog>
+<script id="workbook-data" type="application/json">{"version":1,"updatedAt":0,"notes":["","","","","","",""]}</script>
+<script>
+"use strict";
+(() => {
+const $ = id => document.getElementById(id);
+const GREEN='#137c66', ORANGE='#bd602f', BLUE='#4775b0', PURPLE='#8e65b3', GRAY='#a4afaa', INK='#203b39';
+const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt = (n,d=2) => Math.abs(n)>=1e6 ? n.toExponential(2) : Number(n.toFixed(d)).toLocaleString('vi-VN',{maximumFractionDigits:d});
+const val = id => Number($(id).value);
+const line = (x1,y1,x2,y2,color=INK,width=3,dash='') => `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="${width}" stroke-linecap="round" ${dash?`stroke-dasharray="${dash}"`:''}/>`;
+const text = (x,y,s,cls='',color='',anchor='start') => `<text x="${x}" y="${y}" class="${cls}" text-anchor="${anchor}" ${color?`style="fill:${color}"`:''}>${esc(s)}</text>`;
+const dot = (x,y,color,r=5) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${color}" stroke="white" stroke-width="2"/>`;
+const rect = (x,y,w,h,fill,stroke='none',r=8) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${fill}" stroke="${stroke}"/>`;
+const grid = (x,y,w,h,step=30) => {let s=rect(x,y,w,h,'#fafbf8','#e3e9e3');for(let i=step;i<w;i+=step)s+=line(x+i,y,x+i,y+h,'#edf0eb',1);for(let i=step;i<h;i+=step)s+=line(x,y+i,x+w,y+i,'#edf0eb',1);return s;};
+const result = (id,html,ok=true) => {$(id).innerHTML=html;$(id).classList.toggle('warn',!ok);};
+function decode(){
+  const x=val('center-x'),span=val('endpoint-span'),score=val('line-score')/100,threshold=$('decode-mode').value==='lines'?.1:.06;
+  const a={x:x-span*3/7,y:60-span/7},b={x:x+span*4/7,y:60+span*3/14},length=Math.hypot(b.x-a.x,b.y-a.y),ok=score>threshold&&length>20;
+  $('center-x-val').textContent=x;$('endpoint-span-val').textContent=fmt(length,1)+' đơn vị';$('line-score-val').textContent=fmt(score);
+  const px=n=>50+n*2.45,py=n=>12+n*2.45;
+  let s=grid(42,28,545,230,35)+text(56,50,'Map output','dim');
+  s+=line(px(a.x),py(a.y),px(b.x),py(b.y),ok?GREEN:GRAY,5);
+  s+=line(px(x),py(60),px(a.x),py(a.y),ORANGE,2,'5 4')+line(px(x),py(60),px(b.x),py(b.y),ORANGE,2,'5 4');
+  s+=dot(px(a.x),py(a.y),ok?GREEN:GRAY,6)+dot(px(b.x),py(b.y),ok?GREEN:GRAY,6)+dot(px(x),py(60),ORANGE,7);
+  s+=text(px(a.x)+(a.x<45?8:-10),py(a.y)-17,`A (${fmt(a.x,1)}, ${fmt(a.y,1)})`,'',GREEN,a.x<45?'start':'end')+text(px(b.x)+(b.x>175?-8:8),py(b.y)+25,`B (${fmt(b.x,1)}, ${fmt(b.y,1)})`,'',GREEN,b.x>175?'end':'start');
+  s+=text(px(x)+8,py(60)-17,`C (${x}, 60)`,'',ORANGE)+text(56,283,'Đường liền: đoạn dự đoán · nét đứt: độ dời từ center','dim');
+  $('decode-scene').innerHTML=s;
+  result('decode-result',`${ok?'Giữ đoạn':'Bỏ đoạn'} · score ${fmt(score)} ${score>threshold?'>':'≤'} ${fmt(threshold)}; độ dài ${fmt(length,1)} ${length>20?'>':'≤'} 20.<small>A và B được tính từ cùng một center, nhưng dùng hai vector độ dời khác nhau.</small>`,ok);
+}
+function hough(){
+  const off=val('hough-offset'),angle=val('hough-angle'),r=angle*Math.PI/180;
+  const cx=178,cy=82+off; const theta=90+angle,rho=cx*Math.cos(theta*Math.PI/180)+cy*Math.sin(theta*Math.PI/180);
+  const same=Math.abs(angle)<=4&&Math.abs(rho-82)<=4;
+  $('hough-offset-val').textContent=off+' đơn vị';$('hough-angle-val').textContent=angle+'°';
+  let s=grid(30,42,270,220,30)+text(38,27,'Trên ảnh','dim')+rect(62,82,200,145,'#fff','#dce4df');
+  s+=line(62,82,110,82,GREEN,5)+line(230,82,262,82,GREEN,5);
+  s+=line(cx-45*Math.cos(r),cy-45*Math.sin(r),cx+45*Math.cos(r),cy+45*Math.sin(r),ORANGE,5);
+  s+=line(75,210,235,210,GRAY,4)+text(83,232,'Song song, nhưng xa','tiny');
+  s+=line(350,266,610,266,GRAY,1)+line(350,266,350,47,GRAY,1)+text(605,289,'θ →','dim','', 'end')+text(326,49,'ρ','dim');
+  const hx=a=>350+(a-60)/60*250,hy=d=>266-d/170*200;
+  s+=line(hx(90),48,hx(90),266,'#e4ebe5',1,'4 4')+text(hx(90),286,'90°','dim','', 'middle');
+  s+=rect(hx(86),hy(86),hx(94)-hx(86),hy(78)-hy(86),'#e8f3ed');
+  s+=dot(hx(90),hy(82),GREEN,7)+dot(hx(theta),hy(rho),ORANGE,6)+dot(hx(90),hy(210),GRAY,5);
+  // The distant line has rho=210, outside the displayed axis; show it at the clipped boundary.
+  s=s.replace(dot(hx(90),hy(210),GRAY,5),dot(hx(90),51,GRAY,5)+text(hx(90)+10,54,'ρ = 210 (ngoài khung)','tiny'));
+  s+=text(365,27,'Trong không gian Hough','dim')+text(365,307,`Cam: θ = ${theta}°; ρ = ${fmt(rho,1)}`,'dim');
+  $('hough-scene').innerHTML=s;
+  result('hough-result',same?'Đoạn cam gần cùng đường với hai đoạn xanh.<small>Các điểm Hough ở gần nhau. Có thể gom chúng thành một đoạn dài đại diện.</small>':'Đoạn cam đã lệch khỏi nhóm xanh trong minh họa.<small>Đổi góc hoặc đổi khoảng cách đều làm điểm Hough di chuyển. Song song thôi chưa đủ.</small>',same);
+}
+function corner(){
+  const ix=val('corner-x'),angle=val('corner-angle'),near=Math.min(Math.abs(ix-20),Math.abs(ix-100));
+  $('corner-x-val').textContent=ix;$('corner-angle-val').textContent=angle+'° so với hướng trái';
+  const px=x=>60+x*3.6,py=y=>37+y*3.6,rad=angle*Math.PI/180;
+  const p={x:px(ix),y:py(40)},dx=-Math.cos(rad),dy=-Math.sin(rad),p1={x:p.x+dx*108,y:p.y+dy*108},p2={x:p.x+dx*18,y:p.y+dy*18};
+  const horizontal=60-ix,realAngle=horizontal===0?null:Math.acos(Math.max(-1,Math.min(1,horizontal*dx/(Math.abs(horizontal)*Math.hypot(dx,dy)))))*180/Math.PI;
+  const angleOk=realAngle!==null&&realAngle>60+1e-9&&realAngle<120-1e-9,ok=near<=12&&angleOk;
+  let s=grid(36,30,563,234,32)+line(px(20),py(40),px(130),py(40),'#c7d0ca',1,'6 5');
+  s+=line(px(20),py(40),px(100),py(40),GREEN,5)+line(p1.x,p1.y,p.x,p.y,ORANGE,1,'5 4')+line(p1.x,p1.y,p2.x,p2.y,ORANGE,5);
+  s+=dot(px(20),py(40),GREEN)+dot(px(100),py(40),GREEN)+dot(p.x,p.y,ok?GREEN:ORANGE,7);
+  s+=text(px(20),py(40)+25,'(20, 40)','dim','', 'middle')+text(px(100),py(40)+25,'(100, 40)','dim','', 'middle');
+  s+=text(p.x+10,p.y-12,`P (${ix}, 40)`,'',ok?GREEN:ORANGE);
+  s+=text(55,56,`Góc giữa hai tia tới tâm: ${realAngle===null?'không xác định':fmt(realAngle,1)+'°'}`,'dim');
+  s+=text(55,286,`Đến endpoint gần nhất: ngang ${near} · cam 5`,'dim');
+  $('corner-scene').innerHTML=s;
+  const checks=`Gần đầu cạnh ngang: ${near<=12?'đạt':'không đạt'} · góc 60–120°: ${realAngle===null?'không xác định':angleOk?'đạt':'không đạt'}`;
+  result('corner-result',`${ok?'Giữ làm ứng viên góc':'Loại trong minh họa'}. ${checks}.<small>Ngưỡng khoảng cách của hình là 12 đơn vị; source thật dùng tỉ lệ theo chiều dài đoạn.</small>`,ok);
+}
+function cycle(){
+  const bad=$('fake-corner').checked,p=[[165,73],[470,73],[470,231],[165,231]],colors=[GREEN,BLUE,ORANGE,PURPLE],ids=['(L3, L0)',bad?'(L4, L1)':'(L0, L1)','(L1, L2)','(L2, L3)'];
+  let s=rect(45,32,550,245,'#fafbf8');
+  p.forEach((a,i)=>{let b=p[(i+1)%4];s+=line(...a,...b,bad&&i===0?GRAY:colors[i],5,bad&&i===0?'9 7':'');});
+  s+=text(318,62,bad?'L0 ≠ L4 : đứt':'L0','',bad?ORANGE:GREEN,'middle')+text(485,157,'L1','',BLUE)+text(318,258,'L2','',ORANGE,'middle')+text(137,157,'L3','',PURPLE,'end');
+  p.forEach((a,i)=>{s+=dot(...a,bad&&i===1?ORANGE:colors[i],7);s+=text(a[0]+(i===0||i===3?-10:10),a[1]+(i<2?-17:24),String.fromCharCode(65+i)+' '+ids[i],'',bad&&i===1?ORANGE:INK,i===0||i===3?'end':'start');});
+  s+=text(318,146,bad?'Vị trí vẫn đúng.':'A → B → C → D → A','big','', 'middle')+text(318,176,bad?'Nhưng ID cạnh không nối được.':'Bốn cạnh khép kín.','dim','', 'middle');
+  $('cycle-scene').innerHTML=s;
+  result('cycle-result',bad?'Không ghép được chu trình này: A và B không chung ID đường.<small>Tọa độ không đổi, nhưng cạnh A–B thiếu sự hỗ trợ của cùng một đường.</small>':'Có chu trình bốn cạnh: L0 → L1 → L2 → L3 → L0.<small>Đây là ứng viên box. Còn bước chấm điểm để chọn trong nhiều ứng viên.</small>',!bad);
+}
+const candidates=[{name:'A',degree:.96,area:.40,center:.10,points:'72,92 168,92 168,207 72,207'}, {name:'B',degree:.98,area:.16,center:.75,points:'245,60 298,60 298,128 245,128'}, {name:'C',degree:.63,area:.64,center:.20,points:'439,58 568,100 553,236 421,200'}];
+function rank(){
+  const wa=val('area-weight'),chosen=val('box-choice'),scores=candidates.map(c=>1.95*c.degree+wa*c.area-.14*c.center),best=scores.indexOf(Math.max(...scores));
+  $('area-weight-val').textContent=fmt(wa);
+  let s='';
+  candidates.forEach((c,i)=>{const x=25+i*205,color=i===best?GREEN:GRAY;s+=rect(x,33,182,221,i===best?'#eff7f0':'#fafbf8',i===chosen?ORANGE:'#e5eae4');s+=`<polygon points="${c.points}" fill="${i===best?'#dcefe1':'#edf0e9'}" stroke="${color}" stroke-width="3"/>`;s+=text(x+12,282,`${c.name} · ${fmt(scores[i],3)}${i===best?'  ← đầu bảng':''}`,'',color);});
+  $('rank-scene').innerHTML=s;
+  const c=candidates[chosen];
+  result('rank-result',`Đang đứng đầu: ${candidates[best].name}. Điểm ${c.name} = 1,95 × ${fmt(c.degree)} + ${fmt(wa)} × ${fmt(c.area)} − 0,14 × ${fmt(c.center)} = ${fmt(scores[chosen],3)}.<small>Các điểm thành phần được đặt để minh họa. Tăng trọng số diện tích lên khoảng 4 thì box C có thể vượt A.</small>`);
+}
+let quantMode='static';
+function quantize(x,scale,z=0){const raw=Math.round(x/scale)+z,q=Math.max(-128,Math.min(127,raw));return {q,xhat:(q-z)*scale,clipped:q!==raw};}
+function quant(){
+  const R=val('quant-range'),x=val('quant-value'),scale=R/127,q=quantize(x,scale),mixed=$('mixed').checked;
+  $('quant-range-val').textContent=`[−${fmt(R)}, ${fmt(R)}]`;$('quant-value-val').textContent=fmt(x);
+  const xp=n=>50+(n+128)/255*540;
+  let s=text(50,31,`Bước = ${fmt(scale,4)} · zero-point = 0`,'dim')+rect(50,55,540,60,'#f5f7f1');
+  for(let i=-128;i<=127;i++)s+=line(xp(i),i%16===0?68:80,xp(i),102,i%16===0?'#85a496':'#d8e3d7',1);
+  s+=text(50,137,`−128 → ${fmt(-128*scale,2)}`,'dim')+text(xp(0),137,'0','dim','', 'middle')+text(590,137,`127 → ${fmt(R)}`,'dim','', 'end');
+  s+=dot(xp(q.q),87,q.clipped?ORANGE:GREEN,7)+text(Math.min(540,Math.max(90,xp(q.q))),53,`q=${q.q}`,'',GREEN,'middle');
+  s+=text(50,177,`x = ${fmt(x)} → q = ${q.q} → x gần đúng = ${fmt(q.xhat,4)}`,'');
+  const names=['MatMul','Op ví dụ','MatMul','Output'];
+  names.forEach((name,i)=>{const xx=50+i*140,isFloat=mixed&&i===1;s+=rect(xx,215,120,55,isFloat?'#fff1e5':'#e8f3ed');s+=text(xx+60,237,name,'','', 'middle')+text(xx+60,257,isFloat?'float':'INT8','dim',isFloat?ORANGE:GREEN,'middle');if(i<3)s+=text(xx+130,246,'→','dim','', 'middle');});
+  s+=text(50,305,'Đồ thị ví dụ: thời điểm lấy range và kiểu dữ liệu là hai trục riêng.','dim');
+  $('quant-scene').innerHTML=s;
+  result('quant-result',`${q.clipped?'Bị clipping ở biên thước.':'Làm tròn về nấc gần nhất.'} Sai số |x − x gần đúng| = ${fmt(Math.abs(x-q.xhat),4)}.<small>Range rộng hơn không mặc định tốt hơn: ít clipping hơn nhưng mỗi nấc cách xa hơn.</small>`,!q.clipped);
+  $('quant-timing').textContent=quantMode==='static'?'Static: calibration lấy range activation trước. Lúc inference dùng lại range đã chọn cho các op static được quantize.':'Dynamic: range activation của các op được hỗ trợ được lấy trong lúc chạy từ input của lần đó. Slider đang đại diện một range ví dụ, không tự hiệu chỉnh theo dữ liệu.';
+  $('mode-static').setAttribute('aria-pressed',String(quantMode==='static'));$('mode-dynamic').setAttribute('aria-pressed',String(quantMode==='dynamic'));
+}
+function mask(){
+  const M=val('mask-size'),isFloat=$('mask-path').value==='float',scale=(M+4)/255,z=Math.max(-128,Math.min(127,Math.round(127-4/scale))),xs=[-1,.2,.8,2],qs=xs.map(x=>quantize(x,scale,z));
+  const coord=x=>50+(x+M)/(M+4)*540;
+  let s=text(50,30,isFloat?'Nhánh giữ float: không đặt lên thước INT8 này.':`Một range chung [−${fmt(M)}, 4] · bước = ${fmt(scale,4)}`,'dim');
+  s+=rect(50,52,540,52,isFloat?'#fff1e5':'#f5f7f1');
+  for(let i=0;i<256;i++)s+=line(50+i/255*540,78-(i%32===0?10:0),50+i/255*540,96,'#c6d7c9',1);
+  s+=dot(50,77,ORANGE,6)+text(50,125,'Mask: −'+fmt(M),'dim')+text(590,125,'4','dim','', 'end');
+  xs.forEach((x,i)=>s+=dot(coord(x),isFloat?68:77,GREEN,4));
+  s+=text(50,163,'Giá trị nhỏ','dim')+text(255,163,isFloat?'Giữ float':'Mã q','dim')+text(415,163,isFloat?'Không lượng tử tại đây':'Giá trị khôi phục','dim');
+  xs.forEach((x,i)=>{const yy=193+i*32;s+=text(50,yy,fmt(x))+text(255,yy,isFloat?'—':qs[i].q,'',isFloat?ORANGE:GREEN)+text(415,yy,isFloat?fmt(x):fmt(qs[i].xhat,4));});
+  $('mask-scene').innerHTML=s;
+  const unique=new Set(qs.map(q=>q.q)).size;
+  result('mask-result',isFloat?'Giữ float ở vùng này thì không có mất độ phân giải do phép INT8 vừa minh họa.<small>Cần kiểm tra graph thật để biết vùng nào được quantize. Giữ float cũng có thể ảnh hưởng latency.</small>':`${xs.length} giá trị nhỏ chỉ còn ${unique} mã INT8 khác nhau.<small>Trục trên là tuyến tính, không phải log. Mask càng lớn thì các số gần 0 càng dồn về sát một đầu thước.</small>`,isFloat||unique===xs.length);
+}
+const lessons=[
+  ['Center → đoạn thẳng','Vì sao center không phải là đầu mút? Lấy một ví dụ cộng độ dời.','Hãy thử giữ nguyên center và đổi độ dời. Một điểm đọc được hai vector, nên có thể tạo hai đầu mút khác nhau.'],
+  ['Gộp đoạn / Hough','Hai đoạn song song có chắc nên gộp không? Vì sao phải gộp trước khi ghép box?','So cả độ nghiêng và vị trí đường. Một cạnh bị chia thành nhiều đoạn có thể làm phát sinh nhiều góc và box gần trùng nhau.'],
+  ['Giao điểm → góc','Vì sao hai đường có giao điểm vẫn chưa đủ để tạo góc box?','Giao điểm của đường kéo dài có thể ở quá xa đoạn, hoặc ở giữa cạnh. Cần xem endpoint và góc giữa các tia tới tâm đoạn.'],
+  ['Ghép bốn góc','Bốn điểm nhìn giống hình chữ nhật, tại sao vẫn có thể không ghép được?','Theo dấu ID đường của từng góc. Có đi được qua bốn cạnh rồi quay về điểm đầu bằng các đường chung hay không?'],
+  ['Xếp hạng box','Vì sao box có diện tích lớn nhất chưa chắc được chọn?','Diện tích chỉ là một thành phần. Hãy đổi trọng số rồi kể lúc nào box C vượt box A.'],
+  ['Static / dynamic / mixed','Một model vừa static vừa mixed có mâu thuẫn không? Vì sao Huy chọn mixed?','Tách hai câu hỏi: range được chọn khi nào; op nào chạy INT8/float. Chọn mixed để có fallback, không tự chứng minh accuracy tốt hơn.'],
+  ['Mask & range INT8','Mask quá lớn có thể làm mất chi tiết ra sao? Nếu giảm mask, bạn cần kiểm tra gì trước?','Thước có hữu hạn nấc. Giảm mask xong phải kiểm tra đối chứng float, rồi mới so output và metric bản quantized.']
+];
+const renderers=[decode,hough,corner,cycle,rank,quant,mask];
+document.querySelectorAll('.scene-top').forEach((top,i)=>{
+  const tools=document.createElement('div');tools.className='scene-tools';tools.append(top.querySelector('.pill'));
+  const zoom=document.createElement('button');zoom.className='zoom-button';zoom.type='button';zoom.textContent='Phóng to';zoom.setAttribute('aria-label','Phóng to hình bài '+(i+1));tools.append(zoom);top.append(tools);
+  zoom.onclick=()=>{const svg=document.querySelectorAll('.lesson .scene')[i].cloneNode(true);svg.removeAttribute('id');$('zoom-body').replaceChildren(svg);$('zoom-title').textContent='Bài '+(i+1)+' · '+lessons[i][0];$('zoom-dialog').showModal();};
+});
+$('close-zoom').onclick=()=>$('zoom-dialog').close();
+const KEY='huy-algorithms-2026-10-12-v1';
+function validState(s){return s&&s.version===1&&Number.isFinite(s.updatedAt)&&Array.isArray(s.notes)&&s.notes.length===7&&s.notes.every(n=>typeof n==='string');}
+let embedded;try{embedded=JSON.parse($('workbook-data').textContent);}catch{embedded=null;}
+let state=validState(embedded)?embedded:{version:1,updatedAt:0,notes:Array(7).fill('')};
+let storageAvailable=true;
+try{const local=JSON.parse(localStorage.getItem(KEY));if(validState(local)&&local.updatedAt>state.updatedAt)state=local;}catch{storageAvailable=false;}
+let current=0,dirty=state.updatedAt>(embedded?.updatedAt||0),fileHandle=null,lastVersion=null,busy=false;
+function progress(){const n=state.notes.filter(n=>n.trim()).length;$('progress-label').textContent=`Đã viết ${n}/7 câu`;$('progress-bar').style.width=n/7*100+'%';document.querySelectorAll('.nav-item').forEach((el,i)=>el.classList.toggle('written',!!state.notes[i].trim()));}
+function saveDraft(){try{localStorage.setItem(KEY,JSON.stringify(state));storageAvailable=true;}catch{storageAvailable=false;}progress();$('save-status').textContent=storageAvailable?'Đã lưu nháp trên máy. Bấm Save để ghi vào HTML.':'Trình duyệt không lưu được nháp. Hãy Save hoặc tải HTML.';}
+function flushNote(){if(state.notes[current]!==$('note').value){state.notes[current]=$('note').value;state.updatedAt=Date.now();dirty=true;saveDraft();}}
+function go(i,focus=false){flushNote();current=Math.max(0,Math.min(6,i));document.querySelectorAll('.lesson').forEach((el,k)=>el.hidden=k!==current);document.querySelectorAll('.nav-item').forEach((el,k)=>{if(k===current)el.setAttribute('aria-current','step');else el.removeAttribute('aria-current');});$('note-question').textContent=lessons[current][1];$('hint-text').textContent=lessons[current][2];$('hint').open=false;$('note').value=state.notes[current];$('page-label').textContent=`${current+1} / 7`;$('prev').hidden=current===0;$('next').hidden=current===6;history.replaceState(null,'',`#bai-${current+1}`);renderers[current]();if(focus){$('title-'+(current+1)).setAttribute('tabindex','-1');$('title-'+(current+1)).focus({preventScroll:true});window.scrollTo({top:0,behavior:'auto'});}}
+$('lesson-nav').innerHTML=lessons.map((l,i)=>`<button class="nav-item" type="button" data-lesson="${i}" title="${esc(l[0])}" aria-label="Bài ${i+1}: ${esc(l[0])}"><span class="num">${i+1}</span><span class="nav-label">${esc(l[0])}</span></button>`).join('');
+$('lesson-nav').addEventListener('click',e=>{const b=e.target.closest('[data-lesson]');if(b)go(Number(b.dataset.lesson),true);});
+$('note').addEventListener('input',flushNote);$('prev').onclick=()=>go(current-1,true);$('next').onclick=()=>go(current+1,true);
+const bindings=[['center-x','endpoint-span','line-score','decode-mode'],['hough-offset','hough-angle'],['corner-x','corner-angle'],['fake-corner'],['area-weight','box-choice'],['quant-range','quant-value','mixed'],['mask-size','mask-path']];
+bindings.forEach((ids,i)=>ids.forEach(id=>$(id).addEventListener('input',renderers[i])));
+$('hough-reset').onclick=()=>{$('hough-offset').value=0;$('hough-angle').value=0;hough();};
+function setCorner(x){$('corner-x').value=x;$('corner-angle').value=90;corner();}
+$('corner-good').onclick=()=>setCorner(100);$('corner-middle').onclick=()=>setCorner(60);$('corner-far').onclick=()=>setCorner(130);
+$('rank-reset').onclick=()=>{$('area-weight').value=1.86;rank();};
+$('mode-static').onclick=()=>{quantMode='static';quant();};$('mode-dynamic').onclick=()=>{quantMode='dynamic';quant();};
+function snapshot(){flushNote();return {version:1,updatedAt:state.updatedAt,notes:[...state.notes]};}
+function serialize(s){
+  const clone=document.documentElement.cloneNode(true);
+  clone.querySelector('#workbook-data').textContent=JSON.stringify(s).replace(/</g,'\\u003c').replace(/>/g,'\\u003e').replace(/&/g,'\\u0026');
+  clone.querySelector('#note').textContent=s.notes[current];
+  clone.querySelector('#save-status').textContent='Câu trả lời đã được nhúng trong file này.';
+  clone.querySelector('#zoom-dialog').removeAttribute('open');clone.querySelector('#zoom-body').replaceChildren();
+  clone.querySelectorAll('.zoom-button').forEach(el=>el.remove());clone.querySelectorAll('.scene-tools').forEach(el=>el.replaceWith(...el.childNodes));
+  for(const id of ['save','download'])clone.querySelector('#'+id).removeAttribute('disabled');
+  // Keep current controls when reopening the saved workbook, including select/checkbox values.
+  document.querySelectorAll('input,select').forEach(el=>{const c=clone.querySelector('#'+el.id);if(!c)return;if(el.tagName==='SELECT'){[...c.options].forEach((o,i)=>o.toggleAttribute('selected',i===el.selectedIndex));}else if(el.type==='checkbox')c.toggleAttribute('checked',el.checked);else c.setAttribute('value',el.value);});
+  return '<!doctype html>\n'+clone.outerHTML;
+}
+function download(){const s=snapshot(),blob=new Blob([serialize(s)],{type:'text/html;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='hoc-thuat-toan-da-viet.html';a.click();setTimeout(()=>URL.revokeObjectURL(url),1500);$('save-status').textContent='Đã tạo bản HTML có câu trả lời. Giữ bản tải về để dùng tiếp.';}
+async function save(){
+  if(busy)return;
+  if(!window.showOpenFilePicker){download();return;}
+  busy=true;$('save').disabled=true;
+  try{
+    if(!fileHandle){const handles=await window.showOpenFilePicker({multiple:false,types:[{description:'File HTML đang học',accept:{'text/html':['.html']}}]});const candidate=handles[0],file=await candidate.getFile(),content=await file.text();if(!/name=["']learning-document["']\s+content=["']huy-algorithms-2026-10-12-v1["']/.test(content))throw new Error('Chọn đúng file học thuật toán ngày 12/10. File vừa chọn chưa bị ghi.');fileHandle=candidate;lastVersion={size:file.size,modified:file.lastModified};}
+    const file=await fileHandle.getFile();if(lastVersion&&(file.size!==lastVersion.size||file.lastModified!==lastVersion.modified))throw new Error('File đã được sửa ở bên ngoài. Tải bản HTML đã viết để giữ ghi chép, rồi mở lại file trước khi ghi tiếp.');
+    const s=snapshot(),writer=await fileHandle.createWritable();try{await writer.write(serialize(s));await writer.close();}catch(e){try{await writer.abort();}catch{}throw e;}
+    const saved=await fileHandle.getFile();lastVersion={size:saved.size,modified:saved.lastModified};dirty=state.updatedAt!==s.updatedAt;
+    $('save-status').textContent=dirty?'Đã ghi file; phần vừa gõ thêm còn ở bản nháp. Bấm Save tiếp.':'Đã ghi câu trả lời trực tiếp vào HTML.';
+  }catch(e){if(e.name==='AbortError')$('save-status').textContent='Chưa chọn file. Bản nháp vẫn được giữ.';else{$('save-status').textContent=e.message;alert(e.message);}}
+  finally{busy=false;$('save').disabled=false;}
+}
+$('save').onclick=save;$('download').onclick=download;
+window.addEventListener('beforeunload',e=>{if(dirty&&!storageAvailable){e.preventDefault();e.returnValue='';}});
+// Initialize the note before navigation so the first flush cannot overwrite an embedded answer.
+const start=/^#bai-([1-7])$/.exec(location.hash);current=start?Number(start[1])-1:0;$('note').value=state.notes[current];
+go(current);progress();
+if(dirty)$('save-status').textContent='Đã khôi phục bản nháp mới hơn file HTML.';
+})();
+</script>
+</body>
+</html>

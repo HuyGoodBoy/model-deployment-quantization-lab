@@ -106,7 +106,8 @@ bước 6 trước khi chạy runner này. Không chạy benchmark song song.
 
 Giữ code, README/RUNNING/ENVIRONMENT, báo cáo, lock, source manifest và JSON/CSV
 kết quả trong repository. `.gitignore` loại model, dataset, tensor NPY/NPZ,
-profiler trace, venv/cache, credentials, docs HTML và báo cáo chat. File bị bỏ
+profiler trace, venv/cache, credentials và báo cáo chat. Ba HTML học liệu ngày
+07–09 được đưa vào Git. File bị bỏ
 khỏi Git vẫn giữ trên máy; clone mới phải tải/tạo lại theo pipeline trước khi
 chạy verifier có yêu cầu raw artifact. Không chỉnh hash/command trong evidence
 lịch sử chỉ để khớp tên thư mục mới.

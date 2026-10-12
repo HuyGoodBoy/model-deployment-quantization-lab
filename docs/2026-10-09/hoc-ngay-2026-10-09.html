@@ -388,10 +388,10 @@ converter.target_spec.supported_ops = [
     <ol class="steps">
       <li><b>Decode center → line</b><p>Sigmoid, NMS 3×3, top-k, threshold và displacement như phần 04.</p></li>
       <li><b>Gộp các line gần trùng trong không gian Hough</b><p>Viết đường thẳng ax + by = c. Nhóm theo khoảng cách d = |c|/√(a²+b²) và góc θ theo chu kỳ 180°. Bins khoảng cách 1, góc 2°. Suppression accumulator 5×5. Đoạn đại diện lấy heuristic đầu mút cực trị, không phải fit least-squares.</p></li>
-      <li><b>Tính giao điểm của từng cặp</b><p>D = a₁b₂ − a₂b₁. Nếu |D| gần 0: song song / không ổn định. Nếu hợp lệ: x = (c₁b₂−c₂b₁)/D, y = (a₁c₂−a₂c₁)/D.</p></li>
+      <li><b>Tính giao điểm của từng cặp</b><p>D = a₁b₂ − a₂b₁. NAVER dùng mẫu D + 1e-10 rồi ép giao điểm về INT32. Prototype Java loại cặp gần song song trước khi chia và giữ tọa độ thực. Hai cách cần đối chiếu bằng cùng input.</p></li>
       <li><b>Lọc và phân loại góc</b><p>Góc khoảng 60–120°, kiểm tra giao điểm gần phạm vi hai đoạn bằng tỷ lệ inside/outside gần endpoint; chia thành bốn hướng góc.</p></li>
       <li><b>Nối bốn góc thành chu trình</b><p>Hai góc kề nhau phải dùng chung line ID. Tìm vòng 0 → 1 → 2 → 3 → 0 để tạo quadrilateral gần chữ nhật; không chỉ lấy min/max x,y thành axis-aligned box.</p></li>
-      <li><b>Chấm điểm, xếp hạng và remap</b><p>Kết hợp overlap/perimeter, góc đối, diện tích, khoảng cách tâm và độ dài cạnh đối. Term khoảng cách tâm mang dấu âm. Đưa corners về ảnh gốc bằng inverse preprocessing.</p></li>
+      <li><b>Chấm điểm, xếp hạng và remap</b><p>Kết hợp overlap/perimeter, góc đối, diện tích, khoảng cách tâm và độ dài cạnh đối. Term khoảng cách tâm mang dấu âm; mặc định overlap và length có trọng số 0. Đưa corners về ảnh gốc bằng inverse preprocessing.</p></li>
     </ol>
     <div class="callout warn"><strong>Hai NMS, hai không gian</strong><p><b>3×3</b>: tìm local maxima tâm trên output image map.<br><b>5×5</b>: suppression trong Hough accumulator để gộp line.<br>Hai bước này không thay thế nhau.</p></div>
     <p class="small">Source đối chiếu: <a href="https://github.com/navervision/mlsd/blob/453cafa09467d0272760578d35c1fda38e8895a5/utils.py" target="_blank" rel="noopener noreferrer">utils.py đúng revision NAVER</a>.</p>
@@ -412,7 +412,7 @@ converter.target_spec.supported_ops = [
         <ol class="reference-steps">
 <li><b>Decode:</b> sigmoid/NMS/top-k chọn tâm. Với tâm (x,y), cộng displacement để có hai đầu: <code>(x+dx₁,y+dy₁)</code>, <code>(x+dx₂,y+dy₂)</code>.</li>
 <li><b>Hough merge:</b> một cạnh có thể có nhiều đoạn dự đoán. Biểu diễn <code>ax+by=c</code>, nhóm theo góc và khoảng cách <code>d=|c|/√(a²+b²)</code> để gộp các đoạn gần trùng.</li>
-<li><b>Giao điểm/lọc góc:</b> giải hai phương trình đường. <code>D=a₁b₂−a₂b₁</code> gần 0 khiến giao điểm không ổn định. Kiểm tra góc 60–120° và khoảng cách tới endpoint để loại giao điểm không tạo góc box hợp lệ.</li>
+<li><b>Giao điểm/lọc góc:</b> giải hai phương trình đường. NAVER chia cho <code>D+1e-10</code> và ép tọa độ INT32; Java chủ động bỏ cặp gần song song và giữ tọa độ thực. NAVER lọc góc lớn hơn 60°, nhỏ hơn 120° và khoảng cách tới endpoint.</li>
 <li><b>Chu trình:</b> góc kề chia sẻ line ID; nối bốn góc khép kín thành tứ giác. Không dùng min/max x,y vì box có thể xoay.</li>
 <li><b>Scoring:</b> kết hợp độ phủ cạnh, tương đồng góc/cạnh đối, diện tích và khoảng cách tâm; xếp hạng ứng viên.</li>
 </ol>
@@ -537,7 +537,7 @@ function renderRuntime(task){ const rows=runtimeData[task],max=Math.max(...rows.
 $('showCv').addEventListener('click',()=>renderRuntime('cv'));$('showText').addEventListener('click',()=>renderRuntime('text'));renderRuntime('cv');
 document.querySelectorAll('[data-sentinel]').forEach(btn=>btn.addEventListener('click',()=>{const sentinel=Number(btn.dataset.sentinel),scale=(sentinel+5)/255,levels=10/scale;document.querySelectorAll('[data-sentinel]').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));$('maskScale').textContent=scale>1e6?scale.toExponential(3):scale.toFixed(4);$('maskLevels').textContent=levels<.001?levels.toExponential(3):levels.toFixed(3);$('maskExplanation').textContent=levels<1?'10 đơn vị score còn nhỏ hơn một bước quantization: nhiều score có thể bị gộp cùng mức.':'Range minh họa nhỏ hơn, có nhiều bước trong vùng score thông thường hơn. Chưa đảm bảo toàn bộ model đạt accuracy tốt.';}));
 // Các bước hình học minh họa; không phải thực thi thuật toán NAVER.
-const boxExplanations=['<b>1. Line candidates:</b> nhiều đoạn cùng nằm trên một cạnh, cần gộp trước khi tìm box.','<b>2. Merge:</b> gộp line gần cùng khoảng cách/góc trong Hough space thành cạnh đại diện. Hình này chỉ ẩn các đoạn trùng để minh họa.','<b>3. Intersections:</b> tính giao điểm, bỏ cặp gần song song và giao điểm quá xa endpoint. Bốn góc lý tưởng được đánh dấu.','<b>4. Quadrilateral:</b> nối góc dùng chung line thành chu trình; kiểm tra hình học, chấm điểm rồi remap về ảnh gốc.'];
+const boxExplanations=['<b>1. Line candidates:</b> nhiều đoạn cùng nằm trên một cạnh, cần gộp trước khi tìm box.','<b>2. Merge:</b> gộp line gần cùng khoảng cách/góc trong Hough space thành cạnh đại diện. Hình này chỉ ẩn các đoạn trùng để minh họa.','<b>3. Intersections:</b> minh họa bốn góc lý tưởng sau lọc. Java bỏ cặp gần song song; NAVER dùng mẫu D+1e-10 rồi ép INT32, sau đó lọc góc/khoảng cách.','<b>4. Quadrilateral:</b> nối góc dùng chung line thành chu trình; kiểm tra hình học, chấm điểm rồi remap về ảnh gốc.'];
 $('boxStep').addEventListener('input',()=>{const step=Number($('boxStep').value);$('boxStepValue').value=(step+1)+' / 4';$('boxDuplicates').style.display=step===0?'':'none';$('boxIntersections').style.display=step>=2?'':'none';$('boxPolygon').style.display=step===3?'':'none';$('boxCenterLabel').textContent=['Line candidates','Bốn cạnh đại diện','Góc chia sẻ line ID','Box candidate'][step];$('boxStepExplanation').innerHTML=boxExplanations[step];});
 document.querySelectorAll('[data-check]').forEach(input=>{input.checked=state.checks[input.dataset.check]===true;input.addEventListener('change',()=>{state.checks[input.dataset.check]=input.checked;save();});});
 const questions=[

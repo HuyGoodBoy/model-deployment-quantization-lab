@@ -8,7 +8,7 @@ Nguồn đối chiếu: [`pred_lines` và `pred_squares`](https://github.com/nav
 
 Model Tiny nhận RGBA 512×512. Bản PyTorch trả bản đồ 256×256×9: channel 0 là center logit, channel 1–4 là `(dx_start, dy_start, dx_end, dy_end)`. Các channel còn lại không dùng cho phép decode đoạn thẳng này.
 
-Áp sigmoid lên center, giữ cực đại trong cửa sổ **3×3**, lấy 200 vị trí mạnh nhất. Với center `(x,y)`, hai đầu mút là `(x+dx_start,y+dy_start)` và `(x+dx_end,y+dy_end)`. Loại center có score ≤0,1 hoặc độ dài displacement ≤20. Nhân tọa độ với 2 để trở lại ảnh 512. `points` có thứ tự **(y,x)**, displacement có thứ tự **(x,y)**; nhầm hai thứ tự này sẽ xoay/sai đoạn thẳng.
+Áp sigmoid lên center, giữ cực đại trong cửa sổ **3×3**, lấy 200 vị trí mạnh nhất. Với center `(x,y)`, hai đầu mút là `(x+dx_start,y+dy_start)` và `(x+dx_end,y+dy_end)`. Trong pred_lines, loại score ≤0,1 hoặc độ dài displacement ≤20; pred_squares dùng score >0,06 và độ dài >20. pred_lines đổi đoạn về ảnh gốc ngay, còn pred_squares giữ tọa độ map để gộp/ghép rồi mới đổi về ảnh gốc. `points` có thứ tự **(y,x)**, displacement có thứ tự **(x,y)**; nhầm hai thứ tự này sẽ xoay/sai đoạn thẳng.
 
 TFLite chính thức đã chứa sigmoid, NMS và top-k trong graph, trả `points`, `scores`, `vmap`. Vì vậy chỉ so latency graph raw PyTorch với graph chính thức sẽ khác phạm vi công việc.
 
@@ -20,9 +20,11 @@ Gom các endpoint quanh cụm, lấy biên x/y để tạo đoạn đại diện
 
 ## 3. Giao điểm và điều kiện góc
 
-Với hai đường, định thức `D=a1*b2-a2*b1`. Khi |D| nhỏ, đường gần song song và giao điểm không đáng tin. Nếu D hợp lệ: `x=(c1*b2-c2*b1)/D`, `y=(a1*c2-a2*c1)/D`.
+Với hai đường, định thức `D=a1*b2-a2*b1`. Công thức toán học là `x=(c1*b2-c2*b1)/D`, `y=(a1*c2-a2*c1)/D`. D bằng 0 thì không có giao điểm duy nhất.
 
-Source tính góc từ giao điểm đến tâm hai đoạn, giữ góc trong khoảng 60–120 độ. Điều kiện khoảng cách kiểm tra giao điểm nằm gần endpoint đến mức nào: phân biệt phần bên trong và ngoài đoạn với `inside_ratio`/`outside_ratio`. Không chỉ cần hai đường cắt nhau là tạo được góc box.
+Source NAVER dùng mẫu `D+1e-10`, rồi ép giao điểm sang INT32; không có bước chủ động loại cặp gần song song tại phép chia này. Prototype Java loại đoạn bằng 0/cặp gần song song trước và giữ tọa độ double. Đây là hai cách xử lý khác nhau, cần so bằng cùng input.
+
+Source tính góc từ giao điểm đến tâm hai đoạn, giữ góc lớn hơn 60 và nhỏ hơn 120 độ. Điều kiện khoảng cách kiểm tra giao điểm nằm gần endpoint đến mức nào: phân biệt phần bên trong và ngoài đoạn với `inside_ratio`/`outside_ratio`. Không chỉ cần hai đường cắt nhau là tạo được góc box.
 
 ## 4. Ghép chu trình
 
@@ -30,7 +32,7 @@ Source phân loại góc thành bốn hướng 0,1,2,3. Góc liền kề phải 
 
 ## 5. Chấm điểm
 
-Source kết hợp độ phủ đoạn trên chu vi, tương đồng góc đối diện, diện tích chuẩn hóa, khoảng cách đến tâm ảnh và tương đồng độ dài cạnh đối diện. Tâm ảnh có trọng số trừ; các thành phần khác có trọng số cộng. Sau đó sắp xếp giảm dần. Prototype hiện tại chỉ dùng diện tích + mean confidence nên **chưa có thứ hạng tương đương** thuật toán NAVER.
+Source kết hợp độ phủ đoạn trên chu vi, tương đồng góc đối diện, diện tích chuẩn hóa, khoảng cách đến tâm ảnh và tương đồng độ dài cạnh đối diện. Tâm ảnh có trọng số trừ; các thành phần khác có trọng số cộng. Mặc định trọng số overlap và length bằng 0. Sau đó sắp xếp giảm dần. Prototype hiện tại chỉ dùng diện tích + mean confidence nên **chưa có thứ hạng tương đương** thuật toán NAVER.
 
 ## 6. Contract Android đề xuất
 
