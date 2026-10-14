@@ -1,0 +1,11 @@
+{
+  "torch": "2.13.0+cpu",
+  "checkpoint_sha256": "3f2323cfb9faec5a0ef2454c4f68998da21a9f1b7918ce89b85886628b750b94",
+  "source_sha256": "c20bd6a7e869a44c0e63d78491fb12ca2c866a4f6ce77f8dfdd21eaee099a4eb",
+  "input_sha256": "7dc8203fd77d9fee2dde64057336a6abe4fcff50353d77ddbb7c231c3514c947",
+  "outputs_sha256": {
+    "calibration": "df84b24583464c7bced569f42110ee20515e986c1a91b65b699b5b4fd2adcf4f",
+    "evaluation": "1eddb8b3e0e0af57392f01971ca2f69bc0f6fb58c25725bfa841a313899d599a"
+  },
+  "scope": "unchanged PyTorch model, first five active output channels; no training"
+}

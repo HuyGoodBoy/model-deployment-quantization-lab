@@ -1,0 +1,164 @@
+{
+  "status": "ok",
+  "variant": "split_int8",
+  "model_sha256": "4d0d335fe686fdc4bd8e99f83f6eb426a0ca4824fe92b27d045b5f0f2672a220",
+  "model_bytes": 787360,
+  "output_sha256": "35010e0c147dd9051bf3c3dad4d8f7fecd08ad365266b55164471176306ddde9",
+  "metrics": {
+    "active": {
+      "snr_db": 5.935383644355236,
+      "rmse": 14.676481151191856,
+      "mae": 4.5888796528844775,
+      "max_abs": 648.298798084259,
+      "relative_l2": 0.5049295850190574
+    },
+    "center": {
+      "snr_db": 17.29782827670357,
+      "rmse": 0.9733332847006682,
+      "mae": 0.5596451560562152,
+      "max_abs": 21.39086151123047,
+      "relative_l2": 0.13649243644449016
+    },
+    "displacement": {
+      "snr_db": 5.88660807227142,
+      "rmse": 16.401586182617695,
+      "mae": 5.596188277091537,
+      "max_abs": 648.298798084259,
+      "relative_l2": 0.5077729908038326
+    }
+  },
+  "line_quality": {
+    "sAP10_subset_percent": 9.929482564554515,
+    "precision_at_0_1": 0.21154803384768542,
+    "recall_at_0_1": 0.23970671178793007,
+    "ground_truth_lines": 1773,
+    "predicted_line_counts": [
+      137,
+      163,
+      98,
+      136,
+      134,
+      116,
+      107,
+      143,
+      116,
+      158,
+      120,
+      129,
+      98,
+      127,
+      92,
+      135
+    ],
+    "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+  },
+  "audit": {
+    "tensor_dtypes": {
+      "int8": 114,
+      "int32": 46
+    },
+    "operators": {
+      "MUL": 1,
+      "SUB": 1,
+      "PAD": 4,
+      "CONV_2D": 32,
+      "DEPTHWISE_CONV_2D": 10,
+      "ADD": 8,
+      "RESIZE_BILINEAR": 4,
+      "CONCATENATION": 2,
+      "DELEGATE": 1
+    },
+    "input": {
+      "dtype": "int8",
+      "quantization": [
+        1.0,
+        -128
+      ]
+    },
+    "outputs": [
+      {
+        "name": "StatefulPartitionedCall:1",
+        "shape": [
+          1,
+          256,
+          256,
+          4
+        ],
+        "dtype": "int8",
+        "quantization": [
+          5.814476013183594,
+          0
+        ]
+      },
+      {
+        "name": "StatefulPartitionedCall:0",
+        "shape": [
+          1,
+          256,
+          256,
+          1
+        ],
+        "dtype": "int8",
+        "quantization": [
+          0.15999068319797516,
+          95
+        ]
+      }
+    ],
+    "float_conv_nodes": 0
+  },
+  "benchmark": {
+    "threads": 4,
+    "warmup": 10,
+    "runs": 40,
+    "median_ms": 272.60405000000003,
+    "p95_ms": 279.47119499999997,
+    "samples_ms": [
+      275.5704,
+      273.6424,
+      272.5476,
+      270.4338,
+      267.7727,
+      265.0979,
+      272.2392,
+      275.6467,
+      278.7423,
+      274.4753,
+      264.2075,
+      272.3839,
+      267.7425,
+      264.8073,
+      271.1134,
+      279.1358,
+      271.2951,
+      273.41,
+      273.2125,
+      277.3898,
+      279.9594,
+      279.4455,
+      273.4757,
+      271.3802,
+      271.0109,
+      269.0303,
+      272.8103,
+      270.7069,
+      272.8929,
+      272.6605,
+      274.9711,
+      271.7733,
+      269.6201,
+      274.599,
+      274.0892,
+      268.6086,
+      272.2311,
+      266.7979,
+      282.1629,
+      273.7849
+    ],
+    "scope": "TFLite inference API + input quantize + output copy/dequantize/reconstruct; no image preprocessing or line decoding"
+  },
+  "changes": {
+    "denied_conv_outputs": [],
+    "converter": "2.15.1"
+  }
+}

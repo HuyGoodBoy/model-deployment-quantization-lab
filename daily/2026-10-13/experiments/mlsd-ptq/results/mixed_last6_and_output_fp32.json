@@ -1,0 +1,166 @@
+{
+  "status": "ok",
+  "variant": "mixed_last6_and_output_fp32",
+  "model_sha256": "cdd052aaaf7e8f4ef06a168cdd31eb83fd24726133e147bbc783094fe87524e3",
+  "model_bytes": 1227840,
+  "output_sha256": "f3f46291e1347999dad146463e0b17a204483d4b4d8f3b2e96595e3d39900d67",
+  "metrics": {
+    "active": {
+      "snr_db": 6.007991279025351,
+      "exact_match": false,
+      "rmse": 14.554307937797427,
+      "mae": 3.9980359031847947,
+      "max_abs": 649.4449772834778,
+      "relative_l2": 0.5007263383890105
+    },
+    "center": {
+      "snr_db": 17.61501931511888,
+      "exact_match": false,
+      "rmse": 0.9384303027911591,
+      "mae": 0.5129801607256192,
+      "max_abs": 21.355533599853516,
+      "relative_l2": 0.13159792280266816
+    },
+    "displacement": {
+      "snr_db": 5.959006326459715,
+      "exact_match": false,
+      "rmse": 16.265444555160247,
+      "mae": 4.869299838799585,
+      "max_abs": 649.4449772834778,
+      "relative_l2": 0.5035582130026324
+    }
+  },
+  "line_quality": {
+    "sAP10_subset_percent": 14.264949354761242,
+    "precision_at_0_1": 0.26422535211267606,
+    "recall_at_0_1": 0.2645234066553864,
+    "ground_truth_lines": 1773,
+    "predicted_line_counts": [
+      129,
+      143,
+      95,
+      131,
+      125,
+      98,
+      99,
+      136,
+      93,
+      148,
+      110,
+      114,
+      97,
+      118,
+      77,
+      126
+    ],
+    "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+  },
+  "audit": {
+    "tensor_dtypes": {
+      "float32": 29,
+      "int32": 39,
+      "int8": 96
+    },
+    "operators": {
+      "QUANTIZE": 3,
+      "MUL": 1,
+      "SUB": 1,
+      "PAD": 4,
+      "CONV_2D": 31,
+      "DEPTHWISE_CONV_2D": 10,
+      "ADD": 8,
+      "RESIZE_BILINEAR": 3,
+      "CONCATENATION": 2,
+      "DEQUANTIZE": 3,
+      "DELEGATE": 1
+    },
+    "input": {
+      "dtype": "float32",
+      "quantization": [
+        0.0,
+        0
+      ]
+    },
+    "outputs": [
+      {
+        "name": "StatefulPartitionedCall:0",
+        "shape": [
+          1,
+          256,
+          256,
+          5
+        ],
+        "dtype": "float32",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ],
+    "float_conv_nodes": 6
+  },
+  "benchmark": {
+    "threads": 4,
+    "warmup": 10,
+    "runs": 40,
+    "median_ms": 270.97934999999995,
+    "p95_ms": 277.46934,
+    "samples_ms": [
+      267.2304,
+      271.7056,
+      269.1123,
+      274.3812,
+      272.6343,
+      277.2395,
+      281.8363,
+      275.3767,
+      276.1148,
+      275.1458,
+      270.1557,
+      274.314,
+      285.5314,
+      269.0612,
+      270.1668,
+      270.9684,
+      264.9237,
+      265.4643,
+      264.7858,
+      269.0392,
+      267.9792,
+      267.6357,
+      269.0054,
+      270.9903,
+      270.2468,
+      272.425,
+      276.5376,
+      274.1632,
+      271.0284,
+      265.5974,
+      271.4471,
+      269.8695,
+      275.79,
+      268.1604,
+      272.409,
+      265.8062,
+      272.3459,
+      270.3616,
+      271.9204,
+      269.1414
+    ],
+    "scope": "TFLite inference API + input quantize + output copy/dequantize/reconstruct; no image preprocessing or line decoding"
+  },
+  "changes": {
+    "denied_conv_outputs": [
+      "model/re_lu_25/Relu;model/batch_normalization_35/FusedBatchNormV3;model/conv2d_25/Conv2D",
+      "model/re_lu_26/Relu;model/batch_normalization_36/FusedBatchNormV3;model/conv2d_29/Conv2D;model/conv2d_26/Conv2D",
+      "model/re_lu_27/Relu;model/batch_normalization_37/FusedBatchNormV3;model/conv2d_29/Conv2D;model/conv2d_27/Conv2D",
+      "model/re_lu_28/Relu;model/batch_normalization_38/FusedBatchNormV3;model/conv2d_29/Conv2D;model/conv2d_28/Conv2D",
+      "model/re_lu_29/Relu;model/batch_normalization_39/FusedBatchNormV3;model/conv2d_29/Conv2D",
+      "model/active_head/BiasAdd;model/active_head/Conv2D;model/active_head/BiasAdd/ReadVariableOp"
+    ],
+    "denied_resize_outputs": [
+      "StatefulPartitionedCall:0"
+    ],
+    "converter": "2.15.1"
+  }
+}

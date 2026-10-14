@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "metric_unit_checks": 7,
+  "ptq_variants_recomputed": [
+    "original_fp32",
+    "original_fp16",
+    "original_static",
+    "fp16_keep_last1_fp32",
+    "fp16_keep_last6_fp32",
+    "fp16_keep_last12_fp32",
+    "recalibrated_int8",
+    "active5_int8",
+    "split_int8",
+    "scaled_split_int8",
+    "mixed_last6_fp32",
+    "mixed_last6_and_output_fp32"
+  ],
+  "qat_progress_verified": [
+    "mlsd",
+    "text"
+  ],
+  "fp32_head_gates": [
+    "active5",
+    "split",
+    "scaled_split"
+  ],
+  "text_train_eval_calibration_split_verified": true,
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "numpy": "1.26.4"
+  },
+  "input_sha256": "7dc8203fd77d9fee2dde64057336a6abe4fcff50353d77ddbb7c231c3514c947",
+  "source_sha256": {
+    "daily/2026-10-13/experiments/mlsd-ptq/src/data.py": "2a78e94652c17b1ad8657e41e71a2e6bcfe0db4242ea36f6289f2b48f3be582f",
+    "daily/2026-10-13/experiments/mlsd-ptq/src/metrics.py": "b28ea556ab914d360e9a7d2a1d2b88d8ba7bcf8e8885722adb18cf6f4f9a7872",
+    "daily/2026-10-13/experiments/mlsd-ptq/src/ptq.py": "40c4ee9098e4e34a5d092ab7e3126a105299aaf58621f429c5a5c41210ad2db9",
+    "daily/2026-10-13/experiments/mlsd-ptq/src/reference.py": "c64fe61e7b4242ce20d7656b358801176906b31a30a12bc6f4799821bf9115bb",
+    "daily/2026-10-13/experiments/mlsd-ptq/src/verify.py": "431864418647b2ee7766206496d79d2205b0f7ef6f679617654143008e3406a7",
+    "daily/2026-10-14/experiments/qat/src/models.py": "5728eb1f9d806dd5872fb380c177d975fcfb8f24a5c8a554b43ad3674b6a3671",
+    "daily/2026-10-14/experiments/qat/src/prepare.py": "4813d14e9bb3bccebbbd7e09ce17c1cad28caf04afaca6b0c30164cc066fc209",
+    "daily/2026-10-14/experiments/qat/src/train.py": "6b278cb1102fd5e0f1d5706b861aff22ece7920bad34ac839aea5665f82922b6"
+  },
+  "scope": "recomputed output metrics, AP, raw timing percentiles, INT8 graph dtype audit, QAT finite losses/weight changes/checkpoint hashes; no new training or inference"
+}

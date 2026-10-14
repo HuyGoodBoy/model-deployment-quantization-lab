@@ -11,6 +11,8 @@
 | 09/10/2026 | Reproduce Đức, DistilBERT INT8, M-LSD và detect box | [Báo cáo](daily/2026-10-09/REPORT.md) · [Đối chiếu reproduce](daily/2026-10-09/PEER-REPRODUCTION.md) | [experiments](daily/2026-10-09/experiments/) |
 | 10/10/2026 | Đọc source, nghiên cứu thuật toán M-LSD và quantization | [Báo cáo](daily/2026-10-10/REPORT.md) | [Ghi chép nghiên cứu](daily/2026-10-10/RESEARCH.md) |
 | 12/10/2026 | M-LSD: Hough và ghép box Java, đối chiếu Python, thử danh sách kề | [Báo cáo](daily/2026-10-12/REPORT.md) | [Code và kết quả](daily/2026-10-12/experiments/mlsd-postprocess/) |
+| 13/10/2026 | Task PTQ M-LSD: tách head và đánh giá trên ảnh có nhãn; chạy bổ sung 14/10 | [Báo cáo](daily/2026-10-13/REPORT.md) | [mlsd-ptq](daily/2026-10-13/experiments/mlsd-ptq/) |
+| 14/10/2026 | QAT M-LSD và DistilBERT: pilot 8 bước/model, task tuần đang làm | [Tiến độ](daily/2026-10-14/REPORT.md) | [qat](daily/2026-10-14/experiments/qat/) |
 
 Ngày 09 đã reproduce 6 biến thể ResNet18 từ source Đức và đo 12 cấu hình model Huy
 trên Linux. M-LSD đã convert/quantize; detect box mới có prototype Java desktop,

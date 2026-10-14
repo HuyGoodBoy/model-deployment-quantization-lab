@@ -1,0 +1,240 @@
+{
+  "task_date": "2026-10-14",
+  "executed_at_utc": "2026-10-14T08:28:27.584463+00:00",
+  "status": "in_progress",
+  "milestone": "fake-quant QAT pilot ran; full weekly training/evaluation and deployable INT8 export remain",
+  "task": "text",
+  "framework": "2.13.0+cpu",
+  "device": "CPU",
+  "cuda_available": false,
+  "threads": 4,
+  "steps_this_run": 8,
+  "total_steps": 8,
+  "batch_size": 2,
+  "learning_rate": 1e-05,
+  "optimizer": "AdamW, weight_decay=.01, gradient clipping 1.0",
+  "observer_schedule": "MinMax warm-up on train/calibration only, then frozen; fake quant remains enabled during training/evaluation",
+  "data": {
+    "train_examples_available": 256,
+    "observer_examples": 100,
+    "evaluation_examples": 100,
+    "train_samples_this_run": 16,
+    "evaluation_used_in_training": false,
+    "labels": "SST-2 train labels + frozen same-checkpoint FP32 teacher logits"
+  },
+  "config": {
+    "fused_batchnorms": 0,
+    "fake_quantized_layers": [
+      "distilbert.transformer.layer.0.attention.q_lin",
+      "distilbert.transformer.layer.0.attention.k_lin",
+      "distilbert.transformer.layer.0.attention.v_lin",
+      "distilbert.transformer.layer.0.attention.out_lin",
+      "distilbert.transformer.layer.0.ffn.lin1",
+      "distilbert.transformer.layer.0.ffn.lin2",
+      "distilbert.transformer.layer.1.attention.q_lin",
+      "distilbert.transformer.layer.1.attention.k_lin",
+      "distilbert.transformer.layer.1.attention.v_lin",
+      "distilbert.transformer.layer.1.attention.out_lin",
+      "distilbert.transformer.layer.1.ffn.lin1",
+      "distilbert.transformer.layer.1.ffn.lin2",
+      "distilbert.transformer.layer.2.attention.q_lin",
+      "distilbert.transformer.layer.2.attention.k_lin",
+      "distilbert.transformer.layer.2.attention.v_lin",
+      "distilbert.transformer.layer.2.attention.out_lin",
+      "distilbert.transformer.layer.2.ffn.lin1",
+      "distilbert.transformer.layer.2.ffn.lin2",
+      "distilbert.transformer.layer.3.attention.q_lin",
+      "distilbert.transformer.layer.3.attention.k_lin",
+      "distilbert.transformer.layer.3.attention.v_lin",
+      "distilbert.transformer.layer.3.attention.out_lin",
+      "distilbert.transformer.layer.3.ffn.lin1",
+      "distilbert.transformer.layer.3.ffn.lin2",
+      "distilbert.transformer.layer.4.attention.q_lin",
+      "distilbert.transformer.layer.4.attention.k_lin",
+      "distilbert.transformer.layer.4.attention.v_lin",
+      "distilbert.transformer.layer.4.attention.out_lin",
+      "distilbert.transformer.layer.4.ffn.lin1",
+      "distilbert.transformer.layer.4.ffn.lin2",
+      "distilbert.transformer.layer.5.attention.q_lin",
+      "distilbert.transformer.layer.5.attention.k_lin",
+      "distilbert.transformer.layer.5.attention.v_lin",
+      "distilbert.transformer.layer.5.attention.out_lin",
+      "distilbert.transformer.layer.5.ffn.lin1",
+      "distilbert.transformer.layer.5.ffn.lin2",
+      "pre_classifier",
+      "classifier"
+    ],
+    "weights": "signed INT8, per-output-channel symmetric (-127..127)",
+    "activations": "signed INT8, per-tensor affine (-128..127), MinMax observer",
+    "float_regions": "bias, residual/add, resize, normalization; text embedding/attention MatMul/Softmax/mask",
+    "scope": "selective W8A8 fake-quant training pilot; not an exported full INT8 model"
+  },
+  "original_teacher_gate": {
+    "snr_db": 125.86798378628507,
+    "exact_match": false,
+    "rmse": 1.86034239046404e-06,
+    "mae": 1.2868642807006836e-06,
+    "max_abs": 1.0594725608825684e-05,
+    "relative_l2": 5.088629258358321e-07
+  },
+  "folding_gate": {
+    "snr_db": null,
+    "exact_match": true,
+    "rmse": 0.0,
+    "mae": 0.0,
+    "max_abs": 0.0,
+    "relative_l2": 0.0
+  },
+  "original_teacher": {
+    "logits": {
+      "snr_db": 125.86798378628507,
+      "exact_match": false,
+      "rmse": 1.86034239046404e-06,
+      "mae": 1.2868642807006836e-06,
+      "max_abs": 1.0594725608825684e-05,
+      "relative_l2": 5.088629258358321e-07
+    },
+    "accuracy": 0.91,
+    "agreement_with_original": 1.0
+  },
+  "fake_quant_before": {
+    "logits": {
+      "snr_db": 20.91758140395676,
+      "exact_match": false,
+      "rmse": 0.3289372075900235,
+      "mae": 0.15578579381108285,
+      "max_abs": 2.057482063770294,
+      "relative_l2": 0.08997480825493415
+    },
+    "accuracy": 0.89,
+    "agreement_with_original": 0.98
+  },
+  "fake_quant_after": {
+    "logits": {
+      "snr_db": 20.82894455769744,
+      "exact_match": false,
+      "rmse": 0.3323110966274646,
+      "mae": 0.2080866651237011,
+      "max_abs": 1.7727893739938736,
+      "relative_l2": 0.09089767441969937
+    },
+    "accuracy": 0.9,
+    "agreement_with_original": 0.99
+  },
+  "history": [
+    {
+      "step": 1,
+      "train_indices": [
+        4,
+        139
+      ],
+      "loss": 1.146989345550537,
+      "gradient_norm_before_clip": 43.526824951171875,
+      "seconds": 0.5435868999920785,
+      "cross_entropy": 1.9435298442840576,
+      "distillation_kl_T2": 0.35044896602630615
+    },
+    {
+      "step": 2,
+      "train_indices": [
+        143,
+        119
+      ],
+      "loss": 0.010938412509858608,
+      "gradient_norm_before_clip": 0.9943971633911133,
+      "seconds": 0.4836330999969505,
+      "cross_entropy": 0.0024527963250875473,
+      "distillation_kl_T2": 0.01942402869462967
+    },
+    {
+      "step": 3,
+      "train_indices": [
+        67,
+        206
+      ],
+      "loss": 0.0007173833437263966,
+      "gradient_norm_before_clip": 0.10143806785345078,
+      "seconds": 0.49058070000319276,
+      "cross_entropy": 0.0008061780245043337,
+      "distillation_kl_T2": 0.0006285887211561203
+    },
+    {
+      "step": 4,
+      "train_indices": [
+        213,
+        212
+      ],
+      "loss": 0.0016248293686658144,
+      "gradient_norm_before_clip": 0.623141348361969,
+      "seconds": 0.4916270999965491,
+      "cross_entropy": 0.0007842803606763482,
+      "distillation_kl_T2": 0.0024653784930706024
+    },
+    {
+      "step": 5,
+      "train_indices": [
+        148,
+        230
+      ],
+      "loss": 0.0005116021493449807,
+      "gradient_norm_before_clip": 0.10604228079319,
+      "seconds": 0.45976069998869207,
+      "cross_entropy": 0.0003837525728158653,
+      "distillation_kl_T2": 0.0006394516676664352
+    },
+    {
+      "step": 6,
+      "train_indices": [
+        215,
+        239
+      ],
+      "loss": 0.005161590874195099,
+      "gradient_norm_before_clip": 0.5829697251319885,
+      "seconds": 0.48165629999130033,
+      "cross_entropy": 0.0009565801010467112,
+      "distillation_kl_T2": 0.009366601705551147
+    },
+    {
+      "step": 7,
+      "train_indices": [
+        36,
+        250
+      ],
+      "loss": 0.003955971449613571,
+      "gradient_norm_before_clip": 0.5830659866333008,
+      "seconds": 0.45987619999505114,
+      "cross_entropy": 0.0003873927053064108,
+      "distillation_kl_T2": 0.007524549961090088
+    },
+    {
+      "step": 8,
+      "train_indices": [
+        20,
+        167
+      ],
+      "loss": 0.0001465350214857608,
+      "gradient_norm_before_clip": 0.024848617613315582,
+      "seconds": 0.46007709999685176,
+      "cross_entropy": 0.00026841420913115144,
+      "distillation_kl_T2": 2.4655833840370178e-05
+    }
+  ],
+  "trainable_parameters": 43119362,
+  "weights_before_sha256": "c2f85f5681db9d4753d6550d35023d8c85a3483c74110272a17d26ba6020d356",
+  "weights_after_sha256": "1002066d555374ef971193083f3b425076ca1333f6b4fe9da7a412c863b9976b",
+  "checkpoint_sha256": "44718be3c38b52f8c7c3e80c52e3dcafb7b07338883decef80bbc133201b3d69",
+  "output_hashes": {
+    "before": "8c9eac8c4ea221afdecfb9df503ac45ab27ce504831c0f3edfb979a3288726ca",
+    "after": "0704c3d100333922b611fb41658436eb2d8919a2eb0addd354cf9f0cced9e2ef"
+  },
+  "not_yet_done": [
+    "longer training and independent validation",
+    "export fake quant graph to deployed INT8 and audit actual operator coverage",
+    "measure deployed INT8 accuracy and latency"
+  ],
+  "limitations": [
+    "CPU-only installed PyTorch build, GPU not used for this pilot",
+    "some operators deliberately remain float; fake quant is not integer execution",
+    "8-step pilot is not evidence of convergence or final quality"
+  ]
+}

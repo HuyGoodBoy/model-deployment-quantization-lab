@@ -1,0 +1,360 @@
+{
+  "task_date": "2026-10-14",
+  "executed_at_utc": "2026-10-14T08:25:23.574745+00:00",
+  "status": "in_progress",
+  "milestone": "fake-quant QAT pilot ran; full weekly training/evaluation and deployable INT8 export remain",
+  "task": "mlsd",
+  "framework": "2.13.0+cpu",
+  "device": "CPU",
+  "cuda_available": false,
+  "threads": 4,
+  "steps_this_run": 8,
+  "total_steps": 8,
+  "batch_size": 1,
+  "learning_rate": 1e-05,
+  "optimizer": "AdamW, weight_decay=.01, gradient clipping 1.0",
+  "observer_schedule": "MinMax warm-up on train/calibration only, then frozen; fake quant remains enabled during training/evaluation",
+  "data": {
+    "train_examples_available": 32,
+    "observer_examples": 32,
+    "evaluation_examples": 16,
+    "train_samples_this_run": 8,
+    "evaluation_used_in_training": false,
+    "labels": "FP32 teacher pseudo-labels on Wireframe train (not ground truth training)"
+  },
+  "config": {
+    "fused_batchnorms": 40,
+    "fake_quantized_layers": [
+      "model.backbone.features.0.0",
+      "model.backbone.features.1.conv.0.0",
+      "model.backbone.features.1.conv.1",
+      "model.backbone.features.2.conv.0.0",
+      "model.backbone.features.2.conv.1.0",
+      "model.backbone.features.2.conv.2",
+      "model.backbone.features.3.conv.0.0",
+      "model.backbone.features.3.conv.1.0",
+      "model.backbone.features.3.conv.2",
+      "model.backbone.features.4.conv.0.0",
+      "model.backbone.features.4.conv.1.0",
+      "model.backbone.features.4.conv.2",
+      "model.backbone.features.5.conv.0.0",
+      "model.backbone.features.5.conv.1.0",
+      "model.backbone.features.5.conv.2",
+      "model.backbone.features.6.conv.0.0",
+      "model.backbone.features.6.conv.1.0",
+      "model.backbone.features.6.conv.2",
+      "model.backbone.features.7.conv.0.0",
+      "model.backbone.features.7.conv.1.0",
+      "model.backbone.features.7.conv.2",
+      "model.backbone.features.8.conv.0.0",
+      "model.backbone.features.8.conv.1.0",
+      "model.backbone.features.8.conv.2",
+      "model.backbone.features.9.conv.0.0",
+      "model.backbone.features.9.conv.1.0",
+      "model.backbone.features.9.conv.2",
+      "model.backbone.features.10.conv.0.0",
+      "model.backbone.features.10.conv.1.0",
+      "model.backbone.features.10.conv.2",
+      "model.block12.conv1.0",
+      "model.block12.conv2.0",
+      "model.block13.conv1.0",
+      "model.block13.conv2.0",
+      "model.block14.conv1.0",
+      "model.block14.conv2.0",
+      "model.block15.conv1.0",
+      "model.block15.conv2.0",
+      "model.block16.conv1.0",
+      "model.block16.conv2.0",
+      "model.block16.conv3"
+    ],
+    "weights": "signed INT8, per-output-channel symmetric (-127..127)",
+    "activations": "signed INT8, per-tensor affine (-128..127), MinMax observer",
+    "float_regions": "bias, residual/add, resize, normalization; text embedding/attention MatMul/Softmax/mask",
+    "scope": "selective W8A8 fake-quant training pilot; not an exported full INT8 model"
+  },
+  "original_teacher_gate": {
+    "snr_db": null,
+    "exact_match": true,
+    "rmse": 0.0,
+    "mae": 0.0,
+    "max_abs": 0.0,
+    "relative_l2": 0.0
+  },
+  "folding_gate": {
+    "snr_db": 94.03378007871777,
+    "exact_match": false,
+    "rmse": 0.0009844502221266465,
+    "mae": 0.0003147397060885737,
+    "max_abs": 0.022857666015625,
+    "relative_l2": 1.9875176591492733e-05
+  },
+  "original_teacher": {
+    "active": {
+      "snr_db": null,
+      "exact_match": true,
+      "rmse": 0.0,
+      "mae": 0.0,
+      "max_abs": 0.0,
+      "relative_l2": 0.0
+    },
+    "center": {
+      "snr_db": null,
+      "exact_match": true,
+      "rmse": 0.0,
+      "mae": 0.0,
+      "max_abs": 0.0,
+      "relative_l2": 0.0
+    },
+    "displacement": {
+      "snr_db": null,
+      "exact_match": true,
+      "rmse": 0.0,
+      "mae": 0.0,
+      "max_abs": 0.0,
+      "relative_l2": 0.0
+    },
+    "line_quality": {
+      "sAP10_subset_percent": 15.161686587585823,
+      "precision_at_0_1": 0.2709497206703911,
+      "recall_at_0_1": 0.27354765933446135,
+      "ground_truth_lines": 1773,
+      "predicted_line_counts": [
+        132,
+        145,
+        100,
+        132,
+        127,
+        97,
+        104,
+        137,
+        98,
+        145,
+        105,
+        118,
+        100,
+        113,
+        80,
+        124
+      ],
+      "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+    }
+  },
+  "fake_quant_before": {
+    "active": {
+      "snr_db": 6.146159769785324,
+      "exact_match": false,
+      "rmse": 14.324620822785056,
+      "mae": 4.6272126765120225,
+      "max_abs": 622.4681096076965,
+      "relative_l2": 0.4928241840188532
+    },
+    "center": {
+      "snr_db": 17.493386973936715,
+      "exact_match": false,
+      "rmse": 0.9516639983440394,
+      "mae": 0.566526748894383,
+      "max_abs": 20.110441207885742,
+      "relative_l2": 0.13345370989797203
+    },
+    "displacement": {
+      "snr_db": 6.097397618998404,
+      "exact_match": false,
+      "rmse": 16.00834270167505,
+      "mae": 5.642384158416433,
+      "max_abs": 622.4681096076965,
+      "relative_l2": 0.4955986549677066
+    },
+    "line_quality": {
+      "sAP10_subset_percent": 7.596568139603262,
+      "precision_at_0_1": 0.19072433559145388,
+      "recall_at_0_1": 0.20642978003384094,
+      "ground_truth_lines": 1773,
+      "predicted_line_counts": [
+        121,
+        154,
+        90,
+        136,
+        117,
+        112,
+        109,
+        142,
+        124,
+        159,
+        116,
+        122,
+        93,
+        115,
+        74,
+        135
+      ],
+      "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+    }
+  },
+  "fake_quant_after": {
+    "active": {
+      "snr_db": 6.3274159987721035,
+      "exact_match": false,
+      "rmse": 14.02879352769691,
+      "mae": 4.506966234419546,
+      "max_abs": 608.4143376350403,
+      "relative_l2": 0.48264654322012285
+    },
+    "center": {
+      "snr_db": 17.79109830927016,
+      "exact_match": false,
+      "rmse": 0.919598117166629,
+      "mae": 0.5558097545119449,
+      "max_abs": 18.70781898498535,
+      "relative_l2": 0.1289570484589355
+    },
+    "displacement": {
+      "snr_db": 6.278552326430642,
+      "exact_match": false,
+      "rmse": 15.677926987620662,
+      "mae": 5.494755354396446,
+      "max_abs": 608.4143376350403,
+      "relative_l2": 0.4853693897328728
+    },
+    "line_quality": {
+      "sAP10_subset_percent": 7.746044903008961,
+      "precision_at_0_1": 0.19356540084388185,
+      "recall_at_0_1": 0.20699379582628313,
+      "ground_truth_lines": 1773,
+      "predicted_line_counts": [
+        128,
+        158,
+        98,
+        136,
+        123,
+        105,
+        105,
+        139,
+        116,
+        148,
+        106,
+        119,
+        91,
+        122,
+        70,
+        132
+      ],
+      "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+    }
+  },
+  "history": [
+    {
+      "step": 1,
+      "train_indices": [
+        27
+      ],
+      "loss": 0.11289491504430771,
+      "gradient_norm_before_clip": 1.1680567264556885,
+      "seconds": 0.4310212000127649,
+      "soft_center_bce": 0.10652916878461838,
+      "positive_displacement_smooth_l1": 0.006365748587995768,
+      "positive_regression_values": 15176
+    },
+    {
+      "step": 2,
+      "train_indices": [
+        31
+      ],
+      "loss": 0.12042000889778137,
+      "gradient_norm_before_clip": 0.2317095845937729,
+      "seconds": 0.37689959999988787,
+      "soft_center_bce": 0.118258036673069,
+      "positive_displacement_smooth_l1": 0.0021619731560349464,
+      "positive_regression_values": 17024
+    },
+    {
+      "step": 3,
+      "train_indices": [
+        9
+      ],
+      "loss": 0.08368917554616928,
+      "gradient_norm_before_clip": 0.8622896671295166,
+      "seconds": 0.40056530000583734,
+      "soft_center_bce": 0.07747943699359894,
+      "positive_displacement_smooth_l1": 0.006209737155586481,
+      "positive_regression_values": 11240
+    },
+    {
+      "step": 4,
+      "train_indices": [
+        23
+      ],
+      "loss": 0.13536161184310913,
+      "gradient_norm_before_clip": 0.5905228853225708,
+      "seconds": 0.3949218000052497,
+      "soft_center_bce": 0.13420513272285461,
+      "positive_displacement_smooth_l1": 0.0011564814485609531,
+      "positive_regression_values": 19584
+    },
+    {
+      "step": 5,
+      "train_indices": [
+        13
+      ],
+      "loss": 0.1170809268951416,
+      "gradient_norm_before_clip": 0.7373063564300537,
+      "seconds": 0.36127249999844935,
+      "soft_center_bce": 0.11580713093280792,
+      "positive_displacement_smooth_l1": 0.0012737972429022193,
+      "positive_regression_values": 17900
+    },
+    {
+      "step": 6,
+      "train_indices": [
+        14
+      ],
+      "loss": 0.11623237282037735,
+      "gradient_norm_before_clip": 0.3200823664665222,
+      "seconds": 0.40530040000157896,
+      "soft_center_bce": 0.11066389828920364,
+      "positive_displacement_smooth_l1": 0.005568471737205982,
+      "positive_regression_values": 15956
+    },
+    {
+      "step": 7,
+      "train_indices": [
+        16
+      ],
+      "loss": 0.11368110775947571,
+      "gradient_norm_before_clip": 0.23408059775829315,
+      "seconds": 0.37747350000427105,
+      "soft_center_bce": 0.1134471595287323,
+      "positive_displacement_smooth_l1": 0.00023394498566631228,
+      "positive_regression_values": 15984
+    },
+    {
+      "step": 8,
+      "train_indices": [
+        11
+      ],
+      "loss": 0.1250258833169937,
+      "gradient_norm_before_clip": 2.070528984069824,
+      "seconds": 0.3483420999982627,
+      "soft_center_bce": 0.08525988459587097,
+      "positive_displacement_smooth_l1": 0.03976599499583244,
+      "positive_regression_values": 11128
+    }
+  ],
+  "trainable_parameters": 614224,
+  "weights_before_sha256": "a8c6a05aef163543c3fdf6b990227a3cfc4a77907e354f93ac1a94996177e7af",
+  "weights_after_sha256": "20e5c787243f16703c44241bdac3fa18bc5494379ce2e830fa37420a0a2c5cb4",
+  "checkpoint_sha256": "531a5eb17a313449a5b50004d8fbac8b7dccfded4d9a31d86c58cb786c883dcd",
+  "output_hashes": {
+    "before": "b69b25375cca3abdd295dbb3a7c54aab20c054db7511d184c4661fb149086c6c",
+    "after": "9a75ab352ef03a6282ad16c0fee25b873c37c9c69fb84bbbfb1c8c2629d05e93"
+  },
+  "not_yet_done": [
+    "longer training and independent validation",
+    "export fake quant graph to deployed INT8 and audit actual operator coverage",
+    "measure deployed INT8 accuracy and latency"
+  ],
+  "limitations": [
+    "CPU-only installed PyTorch build, GPU not used for this pilot",
+    "some operators deliberately remain float; fake quant is not integer execution",
+    "8-step pilot is not evidence of convergence or final quality"
+  ]
+}

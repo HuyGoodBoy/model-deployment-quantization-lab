@@ -1,0 +1,167 @@
+{
+  "status": "ok",
+  "variant": "fp16_keep_last6_fp32",
+  "model_sha256": "dea25cc76bec519e562468da37f964bba71a7a3975d2f83be81015c157f145d4",
+  "model_bytes": 1875720,
+  "output_sha256": "34d7d00b73baa1249cc0a128117360491f0ceea20c8a19a2ff828e8131a31c08",
+  "metrics": {
+    "active": {
+      "snr_db": 24.734129073771737,
+      "rmse": 1.6853289060374452,
+      "mae": 0.3294801328205802,
+      "max_abs": 79.67463684082031,
+      "relative_l2": 0.05798204735724427
+    },
+    "center": {
+      "snr_db": 37.68111645648134,
+      "rmse": 0.09313162184026044,
+      "mae": 0.0395207603254939,
+      "max_abs": 2.4015769958496094,
+      "relative_l2": 0.01306003007891929
+    },
+    "displacement": {
+      "snr_db": 24.684184766711546,
+      "rmse": 1.883679518166523,
+      "mae": 0.4019699759443517,
+      "max_abs": 79.67463684082031,
+      "relative_l2": 0.058316407450214255
+    }
+  },
+  "line_quality": {
+    "sAP10_subset_percent": 15.046471324898855,
+    "precision_at_0_1": 0.27064732142857145,
+    "recall_at_0_1": 0.27354765933446135,
+    "ground_truth_lines": 1773,
+    "predicted_line_counts": [
+      131,
+      145,
+      101,
+      133,
+      125,
+      98,
+      104,
+      138,
+      98,
+      144,
+      107,
+      118,
+      100,
+      113,
+      80,
+      124
+    ],
+    "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+  },
+  "audit": {
+    "tensor_dtypes": {
+      "float32": 177,
+      "int32": 7,
+      "float16": 84
+    },
+    "operators": {
+      "DEQUANTIZE": 72,
+      "MUL": 1,
+      "SUB": 1,
+      "PAD": 4,
+      "CONV_2D": 31,
+      "DEPTHWISE_CONV_2D": 10,
+      "ADD": 8,
+      "RESIZE_BILINEAR": 3,
+      "CONCATENATION": 2,
+      "STRIDED_SLICE": 1,
+      "DELEGATE": 1
+    },
+    "input": {
+      "dtype": "float32",
+      "quantization": [
+        0.0,
+        0
+      ]
+    },
+    "outputs": [
+      {
+        "name": "StatefulPartitionedCall:0",
+        "shape": [
+          1,
+          256,
+          256,
+          9
+        ],
+        "dtype": "float32",
+        "quantization": [
+          0.0,
+          0
+        ]
+      }
+    ],
+    "float_conv_nodes": 41
+  },
+  "benchmark": {
+    "threads": 4,
+    "warmup": 10,
+    "runs": 40,
+    "median_ms": 268.93195000000003,
+    "p95_ms": 273.59539,
+    "samples_ms": [
+      272.08,
+      265.2738,
+      270.6574,
+      270.1219,
+      269.7891,
+      266.5482,
+      281.9245,
+      265.4949,
+      273.5796,
+      268.0648,
+      264.0184,
+      268.2162,
+      266.4788,
+      266.3232,
+      268.2975,
+      269.8526,
+      273.8954,
+      267.4775,
+      270.2399,
+      269.312,
+      266.0521,
+      272.583,
+      270.3192,
+      269.7666,
+      269.0743,
+      271.2246,
+      268.7896,
+      265.4592,
+      262.4921,
+      265.7524,
+      271.0319,
+      266.2203,
+      269.5319,
+      272.6393,
+      265.6514,
+      265.2144,
+      271.7776,
+      266.4208,
+      270.3476,
+      267.1565
+    ],
+    "scope": "TFLite inference API + input quantize + output copy/dequantize/reconstruct; no image preprocessing or line decoding"
+  },
+  "changes": {
+    "restored_last_convolutions": 6,
+    "restored_constants": [
+      "pytorch_mlsd_tiny_bridge/conv2d_25/Conv2D1",
+      "pytorch_mlsd_tiny_bridge/batch_normalization_35/FusedBatchNormV31",
+      "pytorch_mlsd_tiny_bridge/conv2d_26/Conv2D1",
+      "pytorch_mlsd_tiny_bridge/batch_normalization_36/FusedBatchNormV31",
+      "pytorch_mlsd_tiny_bridge/conv2d_27/Conv2D1",
+      "pytorch_mlsd_tiny_bridge/batch_normalization_37/FusedBatchNormV31",
+      "pytorch_mlsd_tiny_bridge/conv2d_28/Conv2D1",
+      "pytorch_mlsd_tiny_bridge/batch_normalization_38/FusedBatchNormV31",
+      "pytorch_mlsd_tiny_bridge/conv2d_29/Conv2D1",
+      "pytorch_mlsd_tiny_bridge/batch_normalization_39/FusedBatchNormV31",
+      "pytorch_mlsd_tiny_bridge/conv2d_30/Conv2D1",
+      "pytorch_mlsd_tiny_bridge/conv2d_30/BiasAdd/ReadVariableOp1"
+    ],
+    "scope": "mixed weight storage FP16/FP32; CPU arithmetic is FP32; no gradient training"
+  }
+}
