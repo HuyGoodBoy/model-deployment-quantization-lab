@@ -1,0 +1,669 @@
+{
+  "executed_at_utc": "2026-10-15T06:39:30.482712+00:00",
+  "checkpoint": {
+    "path": "daily/2026-10-15/experiments/qat/artifacts/mlsd_step0032.pt",
+    "sha256": "a35f18ee152623a6b56486a8bfbffcf2c6c0e21729a1897bfd3968f12f1b1067"
+  },
+  "development_images": 16,
+  "range_fit_images": 32,
+  "protocol": "All scan variants use identical step32 weights, same decoder/16-image subset; no training or score-threshold changes",
+  "teacher_foreground_fraction_train": 0.05819416046142578,
+  "all_displacement_train": {
+    "minimum": -803.5809326171875,
+    "maximum": 795.7341918945312,
+    "percentiles": {
+      "0.1": -161.36473881530762,
+      "1": -80.02209419250488,
+      "50": 0.501988559961319,
+      "99": 81.31500190734863,
+      "99.9": 160.80058634949293
+    },
+    "values": 8388608
+  },
+  "foreground_displacement_train": [
+    {
+      "minimum": -115.3482437133789,
+      "maximum": 4.978792667388916,
+      "percentiles": {
+        "0.1": -105.0398429107666,
+        "1": -89.50650192260743,
+        "50": -3.729965567588806,
+        "99": 1.3920023071765897,
+        "99.9": 1.9667483233213519
+      },
+      "values": 122042
+    },
+    {
+      "minimum": -106.4818115234375,
+      "maximum": 107.42549133300781,
+      "percentiles": {
+        "0.1": -95.56029355621338,
+        "1": -90.06091934204102,
+        "50": 0.15235056728124619,
+        "99": 92.61832138061523,
+        "99.9": 98.0506085128785
+      },
+      "values": 122042
+    },
+    {
+      "minimum": -2.742400646209717,
+      "maximum": 116.8062744140625,
+      "percentiles": {
+        "0.1": -1.07871011531353,
+        "1": -0.4998318743705749,
+        "50": 4.711680173873901,
+        "99": 91.24733329772947,
+        "99.9": 106.6735651168825
+      },
+      "values": 122042
+    },
+    {
+      "minimum": -106.49458312988281,
+      "maximum": 107.45660400390625,
+      "percentiles": {
+        "0.1": -96.93331608581543,
+        "1": -91.30848518371582,
+        "50": 0.9195275902748108,
+        "99": 91.51543701171875,
+        "99.9": 96.8767065582276
+      },
+      "values": 122042
+    }
+  ],
+  "original_regression_scale": [
+    7.02686071395874
+  ],
+  "policies": {
+    "foreground_tensor": {
+      "per_channel": false,
+      "minimum": [
+        -117.7547836303711
+      ],
+      "maximum": [
+        119.19725036621094
+      ],
+      "threshold": 0.1,
+      "margin_fraction": 0.02,
+      "fit_split": "32 Wireframe train images only",
+      "rule": "QAT pre-output displacement extrema at teacher confidence > 0.1, 2% margin/channel"
+    },
+    "foreground_channel": {
+      "per_channel": true,
+      "minimum": [
+        -117.7547836303711,
+        -110.75995635986328,
+        -5.133374214172363,
+        -110.77360534667969
+      ],
+      "maximum": [
+        7.385333061218262,
+        111.7036361694336,
+        119.19725036621094,
+        111.73562622070312
+      ],
+      "threshold": 0.1,
+      "margin_fraction": 0.02,
+      "fit_split": "32 Wireframe train images only",
+      "rule": "QAT pre-output displacement extrema at teacher confidence > 0.1, 2% margin/channel"
+    }
+  },
+  "ablations": [
+    {
+      "name": "scan_baseline",
+      "metrics": {
+        "active": {
+          "snr_db": 7.362085489502999,
+          "exact_match": false,
+          "rmse": 12.45336877711262,
+          "mae": 4.260003069845654,
+          "max_abs": 467.04844665527344,
+          "relative_l2": 0.42844563788412704
+        },
+        "center": {
+          "snr_db": 18.010097050058206,
+          "exact_match": false,
+          "rmse": 0.8967019957735759,
+          "mae": 0.5496492436253999,
+          "max_abs": 17.36469078063965,
+          "relative_l2": 0.12574628042789285
+        },
+        "displacement": {
+          "snr_db": 7.313993669145482,
+          "exact_match": false,
+          "rmse": 13.916068904548737,
+          "mae": 5.187591526400718,
+          "max_abs": 467.04844665527344,
+          "relative_l2": 0.4308244244927757
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 8.20182316807261,
+          "precision_at_0_1": 0.19738903394255874,
+          "recall_at_0_1": 0.2131979695431472,
+          "ground_truth_lines": 1773,
+          "predicted_line_counts": [
+            129,
+            159,
+            95,
+            138,
+            125,
+            108,
+            106,
+            140,
+            117,
+            149,
+            112,
+            118,
+            90,
+            123,
+            74,
+            132
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/scan_baseline_output.npy",
+        "sha256": "b8b84fd8b5022b8c664452db6fb167b2f590bb7bde7cd924440a18ef4f32b7cd"
+      },
+      "diagnostic_only": false,
+      "regression_scale": [
+        7.02686071395874
+      ]
+    },
+    {
+      "name": "scan_regression_output_float",
+      "metrics": {
+        "active": {
+          "snr_db": 7.451234734499401,
+          "exact_match": false,
+          "rmse": 12.326205009552476,
+          "mae": 3.6747717190735045,
+          "max_abs": 468.8969421386719,
+          "relative_l2": 0.42407069625321775
+        },
+        "center": {
+          "snr_db": 18.010097050058206,
+          "exact_match": false,
+          "rmse": 0.8967019957735759,
+          "mae": 0.5496492436253999,
+          "max_abs": 17.36469078063965,
+          "relative_l2": 0.12574628042789285
+        },
+        "displacement": {
+          "snr_db": 7.403236409612486,
+          "exact_match": false,
+          "rmse": 13.773820958782265,
+          "mae": 4.456052337935531,
+          "max_abs": 468.8969421386719,
+          "relative_l2": 0.42642060256644937
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 11.00495660021584,
+          "precision_at_0_1": 0.2309278350515464,
+          "recall_at_0_1": 0.2526790750141004,
+          "ground_truth_lines": 1773,
+          "predicted_line_counts": [
+            127,
+            161,
+            93,
+            140,
+            128,
+            108,
+            108,
+            142,
+            121,
+            151,
+            115,
+            122,
+            95,
+            123,
+            74,
+            132
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/scan_regression_output_float_output.npy",
+        "sha256": "2afbc369ffcfa10cac22359afb5275d47f58699e16d79cc54b4c2e3a7d8614d0"
+      },
+      "diagnostic_only": true,
+      "regression_scale": [
+        7.02686071395874
+      ]
+    },
+    {
+      "name": "scan_center_output_float",
+      "metrics": {
+        "active": {
+          "snr_db": 7.362103493717829,
+          "exact_match": false,
+          "rmse": 12.453342963649208,
+          "mae": 4.259467270120242,
+          "max_abs": 467.04844665527344,
+          "relative_l2": 0.42844474979785924
+        },
+        "center": {
+          "snr_db": 18.027494688738194,
+          "exact_match": false,
+          "rmse": 0.8949077196911497,
+          "mae": 0.5469702449983371,
+          "max_abs": 17.35237216949463,
+          "relative_l2": 0.12549466557202182
+        },
+        "displacement": {
+          "snr_db": 7.313993669145482,
+          "exact_match": false,
+          "rmse": 13.916068904548737,
+          "mae": 5.187591526400718,
+          "max_abs": 467.04844665527344,
+          "relative_l2": 0.4308244244927757
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 10.197706955348742,
+          "precision_at_0_1": 0.21252059308072488,
+          "recall_at_0_1": 0.2182741116751269,
+          "ground_truth_lines": 1773,
+          "predicted_line_counts": [
+            127,
+            145,
+            101,
+            130,
+            131,
+            103,
+            100,
+            133,
+            96,
+            146,
+            111,
+            115,
+            98,
+            124,
+            77,
+            131
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/scan_center_output_float_output.npy",
+        "sha256": "a6676c9b0d4ced5b0a81b23bc978aab03305168f9163dceab70374fdc0993dd7"
+      },
+      "diagnostic_only": true,
+      "regression_scale": [
+        7.02686071395874
+      ]
+    },
+    {
+      "name": "scan_both_outputs_float",
+      "metrics": {
+        "active": {
+          "snr_db": 7.451253112113569,
+          "exact_match": false,
+          "rmse": 12.326178929782914,
+          "mae": 3.6742359193480922,
+          "max_abs": 468.8969421386719,
+          "relative_l2": 0.4240697990049546
+        },
+        "center": {
+          "snr_db": 18.027494688738194,
+          "exact_match": false,
+          "rmse": 0.8949077196911497,
+          "mae": 0.5469702449983371,
+          "max_abs": 17.35237216949463,
+          "relative_l2": 0.12549466557202182
+        },
+        "displacement": {
+          "snr_db": 7.403236409612486,
+          "exact_match": false,
+          "rmse": 13.773820958782265,
+          "mae": 4.456052337935531,
+          "max_abs": 468.8969421386719,
+          "relative_l2": 0.42642060256644937
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 14.333649749425348,
+          "precision_at_0_1": 0.25635478637101133,
+          "recall_at_0_1": 0.2673434856175973,
+          "ground_truth_lines": 1773,
+          "predicted_line_counts": [
+            127,
+            148,
+            100,
+            131,
+            134,
+            102,
+            102,
+            138,
+            99,
+            149,
+            114,
+            119,
+            102,
+            124,
+            76,
+            131
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/scan_both_outputs_float_output.npy",
+        "sha256": "1495fcf64ae752185e9208f82d50690e3ba232b299c2a5800b6b25729a376992"
+      },
+      "diagnostic_only": true,
+      "regression_scale": [
+        7.02686071395874
+      ]
+    },
+    {
+      "name": "scan_weight_only",
+      "metrics": {
+        "active": {
+          "snr_db": 7.363833227300027,
+          "exact_match": false,
+          "rmse": 12.450863215263123,
+          "mae": 3.55445413290738,
+          "max_abs": 461.6525573730469,
+          "relative_l2": 0.42835943654663516
+        },
+        "center": {
+          "snr_db": 18.217205972788193,
+          "exact_match": false,
+          "rmse": 0.8755736641768943,
+          "mae": 0.48727304019506734,
+          "max_abs": 17.792112350463867,
+          "relative_l2": 0.12278341302885486
+        },
+        "displacement": {
+          "snr_db": 7.315533205615452,
+          "exact_match": false,
+          "rmse": 13.913602559946163,
+          "mae": 4.3212494060854585,
+          "max_abs": 461.6525573730469,
+          "relative_l2": 0.43074806948898164
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 14.671360304970978,
+          "precision_at_0_1": 0.26681614349775784,
+          "recall_at_0_1": 0.2684715172024817,
+          "ground_truth_lines": 1773,
+          "predicted_line_counts": [
+            127,
+            143,
+            96,
+            129,
+            129,
+            101,
+            97,
+            134,
+            95,
+            145,
+            110,
+            118,
+            98,
+            123,
+            73,
+            127
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/scan_weight_only_output.npy",
+        "sha256": "78fd10e7feeb14b690995f175db2c13cf300098df37fb15b7848b0a2723b516d"
+      },
+      "diagnostic_only": true,
+      "regression_scale": [
+        7.02686071395874
+      ]
+    },
+    {
+      "name": "scan_activation_only",
+      "metrics": {
+        "active": {
+          "snr_db": 10.318148250040053,
+          "exact_match": false,
+          "rmse": 8.86101987908063,
+          "mae": 3.050247417488374,
+          "max_abs": 367.9547805786133,
+          "relative_l2": 0.3048544841435958
+        },
+        "center": {
+          "snr_db": 18.94404365747949,
+          "exact_match": false,
+          "rmse": 0.8052872184169125,
+          "mae": 0.46299500308165564,
+          "max_abs": 16.614547729492188,
+          "relative_l2": 0.1129270068198
+        },
+        "displacement": {
+          "snr_db": 10.272730449753364,
+          "exact_match": false,
+          "rmse": 9.898735765025311,
+          "mae": 3.697060521090053,
+          "max_abs": 367.9547805786133,
+          "relative_l2": 0.30645271796398715
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 8.33510064671378,
+          "precision_at_0_1": 0.19915478077126256,
+          "recall_at_0_1": 0.212633953750705,
+          "ground_truth_lines": 1773,
+          "predicted_line_counts": [
+            131,
+            160,
+            94,
+            127,
+            122,
+            106,
+            114,
+            135,
+            124,
+            148,
+            111,
+            124,
+            89,
+            109,
+            77,
+            122
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/scan_activation_only_output.npy",
+        "sha256": "dab6153bdd0e8c0b4e90cbda7767b7464b56efef2fca5ae41bbdbe04746ab7b5"
+      },
+      "diagnostic_only": true,
+      "regression_scale": [
+        7.02686071395874
+      ]
+    },
+    {
+      "name": "scan_foreground_tensor",
+      "metrics": {
+        "active": {
+          "snr_db": 6.4231207434251125,
+          "exact_match": false,
+          "rmse": 13.875066912933898,
+          "mae": 3.7537126195125667,
+          "max_abs": 689.029914855957,
+          "relative_l2": 0.47735773352527516
+        },
+        "center": {
+          "snr_db": 18.010097050058206,
+          "exact_match": false,
+          "rmse": 0.8967019957735759,
+          "mae": 0.5496492436253999,
+          "max_abs": 17.36469078063965,
+          "relative_l2": 0.12574628042789285
+        },
+        "displacement": {
+          "snr_db": 6.374152515924862,
+          "exact_match": false,
+          "rmse": 15.50631592870096,
+          "mae": 4.554728463484358,
+          "max_abs": 689.029914855957,
+          "relative_l2": 0.48005652183872854
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 10.977297726327054,
+          "precision_at_0_1": 0.2303719008264463,
+          "recall_at_0_1": 0.251551043429216,
+          "ground_truth_lines": 1773,
+          "predicted_line_counts": [
+            128,
+            160,
+            93,
+            140,
+            128,
+            107,
+            106,
+            143,
+            121,
+            151,
+            116,
+            121,
+            94,
+            122,
+            74,
+            132
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/scan_foreground_tensor_output.npy",
+        "sha256": "bcfdce9c7b2e0be2d34ed552b7765fa488528810551f55555eb6480e48b9696c"
+      },
+      "diagnostic_only": false,
+      "regression_scale": [
+        0.9292236566543579
+      ]
+    },
+    {
+      "name": "scan_foreground_channel",
+      "metrics": {
+        "active": {
+          "snr_db": 6.422853185608943,
+          "exact_match": false,
+          "rmse": 13.875494323358781,
+          "mae": 3.7437047854597365,
+          "max_abs": 689.2623901367188,
+          "relative_l2": 0.47737243815142133
+        },
+        "center": {
+          "snr_db": 18.010097050058206,
+          "exact_match": false,
+          "rmse": 0.8967019957735759,
+          "mae": 0.5496492436253999,
+          "max_abs": 17.36469078063965,
+          "relative_l2": 0.12574628042789285
+        },
+        "displacement": {
+          "snr_db": 6.373884734430675,
+          "exact_match": false,
+          "rmse": 15.506793987786326,
+          "mae": 4.54221867091832,
+          "max_abs": 689.2623901367188,
+          "relative_l2": 0.4800713219616468
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 11.040366283238106,
+          "precision_at_0_1": 0.22990271377368152,
+          "recall_at_0_1": 0.25324309080654256,
+          "ground_truth_lines": 1773,
+          "predicted_line_counts": [
+            129,
+            162,
+            95,
+            140,
+            128,
+            109,
+            110,
+            142,
+            121,
+            151,
+            116,
+            123,
+            96,
+            124,
+            74,
+            133
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/scan_foreground_channel_output.npy",
+        "sha256": "b7c01d2293bd8dcdf02ed45455a98f229c8de8d5b375e7d7b59f085935881f23"
+      },
+      "diagnostic_only": false,
+      "regression_scale": [
+        0.49074554443359375,
+        0.8724062442779541,
+        0.4875710904598236,
+        0.8725852370262146
+      ]
+    }
+  ],
+  "gradient_diagnostics": [
+    {
+      "train_index": 0,
+      "loss": {
+        "center": 0.07649312913417816,
+        "old_displacement": 0.02704665996134281,
+        "new_displacement": 0.059211455285549164
+      },
+      "last_conv_weight_gradient_l2": {
+        "center": 0.0048976559191942215,
+        "old_displacement": 0.0015755174681544304,
+        "new_displacement": 0.004633060656487942
+      }
+    },
+    {
+      "train_index": 1,
+      "loss": {
+        "center": 0.10595695674419403,
+        "old_displacement": 9.793585195438936e-05,
+        "new_displacement": 0.007556837517768145
+      },
+      "last_conv_weight_gradient_l2": {
+        "center": 0.00445074588060379,
+        "old_displacement": 2.667703120096121e-05,
+        "new_displacement": 0.0023850719444453716
+      }
+    },
+    {
+      "train_index": 2,
+      "loss": {
+        "center": 0.11033359169960022,
+        "old_displacement": 0.021866917610168457,
+        "new_displacement": 0.056056324392557144
+      },
+      "last_conv_weight_gradient_l2": {
+        "center": 0.007163333706557751,
+        "old_displacement": 0.001306825433857739,
+        "new_displacement": 0.004445813596248627
+      }
+    },
+    {
+      "train_index": 3,
+      "loss": {
+        "center": 0.100124791264534,
+        "old_displacement": 0.0001642469724174589,
+        "new_displacement": 0.01020196732133627
+      },
+      "last_conv_weight_gradient_l2": {
+        "center": 0.008175899274647236,
+        "old_displacement": 3.343147909617983e-05,
+        "new_displacement": 0.0019310330972075462
+      }
+    }
+  ],
+  "note": "Loss magnitudes alone do not establish gradient influence; gradient norms are for the final Conv weight on four train images",
+  "source_sha256": {
+    "daily/2026-10-15/experiments/qat/src/research_mlsd.py": "9249839003b5280de96e183cb07cb419523f5dbfdbf74d787969ba81628bb929"
+  }
+}

@@ -1,0 +1,496 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-10-15T09:56:27.270513+00:00",
+  "rounding_cases": [
+    {
+      "case": "signed_tensor",
+      "values": 144,
+      "exact_match": true,
+      "output_code_dtype": "INT8"
+    },
+    {
+      "case": "unsigned_tensor",
+      "values": 144,
+      "exact_match": true,
+      "output_code_dtype": "UINT8"
+    },
+    {
+      "case": "signed_channel",
+      "values": 144,
+      "exact_match": true,
+      "output_code_dtype": "INT8"
+    }
+  ],
+  "frozen_constants_and_nonquantizer_nodes_unchanged": true,
+  "local_convolution_audit": [
+    {
+      "name": "model.model.backbone.features.0.0",
+      "snr_db": 137.933223992443,
+      "exact_match": false,
+      "rmse": 3.314386919717371e-07,
+      "mae": 2.0356376801485433e-07,
+      "max_abs": 3.814697265625e-06,
+      "relative_l2": 1.268641168083024e-07
+    },
+    {
+      "name": "model.model.backbone.features.1.conv.0.0",
+      "snr_db": 120.8684491376982,
+      "exact_match": false,
+      "rmse": 3.3002383126349785e-06,
+      "mae": 9.736479611467935e-07,
+      "max_abs": 6.079673767089844e-05,
+      "relative_l2": 9.048519842943918e-07
+    },
+    {
+      "name": "model.model.backbone.features.1.conv.1",
+      "snr_db": 129.03674021902694,
+      "exact_match": false,
+      "rmse": 1.077061615360066e-06,
+      "mae": 7.536271645052633e-07,
+      "max_abs": 8.58306884765625e-06,
+      "relative_l2": 3.533157429526919e-07
+    },
+    {
+      "name": "model.model.backbone.features.2.conv.0.0",
+      "snr_db": 140.63223990741506,
+      "exact_match": false,
+      "rmse": 3.044808602057047e-07,
+      "mae": 1.5646468445233794e-07,
+      "max_abs": 2.288818359375e-05,
+      "relative_l2": 9.297967089091387e-08
+    },
+    {
+      "name": "model.model.backbone.features.2.conv.1.0",
+      "snr_db": 139.10125882868724,
+      "exact_match": false,
+      "rmse": 2.3623368087073703e-07,
+      "mae": 1.3060548491356858e-07,
+      "max_abs": 3.2186508178710938e-06,
+      "relative_l2": 1.1090140764134178e-07
+    },
+    {
+      "name": "model.model.backbone.features.2.conv.2",
+      "snr_db": 127.03091336828749,
+      "exact_match": false,
+      "rmse": 1.0566700736653323e-06,
+      "mae": 7.4739081473707e-07,
+      "max_abs": 1.52587890625e-05,
+      "relative_l2": 4.450966561377267e-07
+    },
+    {
+      "name": "model.model.backbone.features.3.conv.0.0",
+      "snr_db": 138.63399969239958,
+      "exact_match": false,
+      "rmse": 2.837248276915936e-07,
+      "mae": 1.8109578180026182e-07,
+      "max_abs": 3.814697265625e-06,
+      "relative_l2": 1.1703075731138811e-07
+    },
+    {
+      "name": "model.model.backbone.features.3.conv.1.0",
+      "snr_db": 136.21074720282436,
+      "exact_match": false,
+      "rmse": 3.028888609235534e-07,
+      "mae": 1.697645916160992e-07,
+      "max_abs": 4.827976226806641e-06,
+      "relative_l2": 1.546901426176942e-07
+    },
+    {
+      "name": "model.model.backbone.features.3.conv.2",
+      "snr_db": 124.89611152767165,
+      "exact_match": false,
+      "rmse": 2.3065453942368562e-06,
+      "mae": 1.6459707493273374e-06,
+      "max_abs": 1.9073486328125e-05,
+      "relative_l2": 5.691076501840914e-07
+    },
+    {
+      "name": "model.model.backbone.features.4.conv.0.0",
+      "snr_db": 138.95540007348006,
+      "exact_match": false,
+      "rmse": 2.695431730854084e-07,
+      "mae": 1.6080355231425592e-07,
+      "max_abs": 5.7220458984375e-06,
+      "relative_l2": 1.1277945623890491e-07
+    },
+    {
+      "name": "model.model.backbone.features.4.conv.1.0",
+      "snr_db": 140.51575931200802,
+      "exact_match": false,
+      "rmse": 1.99061467771928e-07,
+      "mae": 1.0210859482679552e-07,
+      "max_abs": 2.6226043701171875e-06,
+      "relative_l2": 9.423495649636329e-08
+    },
+    {
+      "name": "model.model.backbone.features.4.conv.2",
+      "snr_db": 129.09227445728123,
+      "exact_match": false,
+      "rmse": 1.2094098909650622e-06,
+      "mae": 8.452510744660913e-07,
+      "max_abs": 1.049041748046875e-05,
+      "relative_l2": 3.5106398406795827e-07
+    },
+    {
+      "name": "model.model.backbone.features.5.conv.0.0",
+      "snr_db": 137.32381253308193,
+      "exact_match": false,
+      "rmse": 3.145503612992431e-07,
+      "mae": 2.0902766105154735e-07,
+      "max_abs": 3.814697265625e-06,
+      "relative_l2": 1.3608472291112903e-07
+    },
+    {
+      "name": "model.model.backbone.features.5.conv.1.0",
+      "snr_db": 137.44259413260073,
+      "exact_match": false,
+      "rmse": 2.6990457650112256e-07,
+      "mae": 1.5840007873239859e-07,
+      "max_abs": 3.0994415283203125e-06,
+      "relative_l2": 1.3423639900924052e-07
+    },
+    {
+      "name": "model.model.backbone.features.5.conv.2",
+      "snr_db": 127.52485048620613,
+      "exact_match": false,
+      "rmse": 1.3249185839920795e-06,
+      "mae": 8.683400061215707e-07,
+      "max_abs": 1.52587890625e-05,
+      "relative_l2": 4.204917463984174e-07
+    },
+    {
+      "name": "model.model.backbone.features.6.conv.0.0",
+      "snr_db": 137.6111146270764,
+      "exact_match": false,
+      "rmse": 2.9202460980838244e-07,
+      "mae": 1.897202905541019e-07,
+      "max_abs": 3.814697265625e-06,
+      "relative_l2": 1.3165709513539356e-07
+    },
+    {
+      "name": "model.model.backbone.features.6.conv.1.0",
+      "snr_db": 136.329746810983,
+      "exact_match": false,
+      "rmse": 3.124215934024917e-07,
+      "mae": 1.71435940832243e-07,
+      "max_abs": 4.76837158203125e-06,
+      "relative_l2": 1.5258528719507928e-07
+    },
+    {
+      "name": "model.model.backbone.features.6.conv.2",
+      "snr_db": 128.2506785749303,
+      "exact_match": false,
+      "rmse": 1.5377363386371467e-06,
+      "mae": 1.0250553899027182e-06,
+      "max_abs": 1.5735626220703125e-05,
+      "relative_l2": 3.8678183657581074e-07
+    },
+    {
+      "name": "model.model.backbone.features.7.conv.0.0",
+      "snr_db": 137.79150205021648,
+      "exact_match": false,
+      "rmse": 2.941871541674634e-07,
+      "mae": 1.9529588912714502e-07,
+      "max_abs": 3.814697265625e-06,
+      "relative_l2": 1.289510543658824e-07
+    },
+    {
+      "name": "model.model.backbone.features.7.conv.1.0",
+      "snr_db": 143.51570555451158,
+      "exact_match": false,
+      "rmse": 1.8012540223085177e-07,
+      "mae": 8.404654853559161e-08,
+      "max_abs": 2.384185791015625e-06,
+      "relative_l2": 6.671365308678033e-08
+    },
+    {
+      "name": "model.model.backbone.features.7.conv.2",
+      "snr_db": 126.1044611283755,
+      "exact_match": false,
+      "rmse": 1.0591777005653923e-06,
+      "mae": 7.592184800842006e-07,
+      "max_abs": 7.62939453125e-06,
+      "relative_l2": 4.951957897600513e-07
+    },
+    {
+      "name": "model.model.backbone.features.8.conv.0.0",
+      "snr_db": 134.99357190691765,
+      "exact_match": false,
+      "rmse": 3.8917948245269286e-07,
+      "mae": 2.680154647863077e-07,
+      "max_abs": 4.76837158203125e-06,
+      "relative_l2": 1.779595933376891e-07
+    },
+    {
+      "name": "model.model.backbone.features.8.conv.1.0",
+      "snr_db": 138.80205073266262,
+      "exact_match": false,
+      "rmse": 2.480520955320327e-07,
+      "mae": 1.4560879290874176e-07,
+      "max_abs": 2.86102294921875e-06,
+      "relative_l2": 1.147882575202408e-07
+    },
+    {
+      "name": "model.model.backbone.features.8.conv.2",
+      "snr_db": 131.95750422196727,
+      "exact_match": false,
+      "rmse": 6.128142573551122e-07,
+      "mae": 4.4435725499170076e-07,
+      "max_abs": 6.67572021484375e-06,
+      "relative_l2": 2.5242059662210417e-07
+    },
+    {
+      "name": "model.model.backbone.features.9.conv.0.0",
+      "snr_db": 135.1779674944083,
+      "exact_match": false,
+      "rmse": 3.7641837162377057e-07,
+      "mae": 2.5961600477047986e-07,
+      "max_abs": 4.76837158203125e-06,
+      "relative_l2": 1.742214505378477e-07
+    },
+    {
+      "name": "model.model.backbone.features.9.conv.1.0",
+      "snr_db": 140.00734858914254,
+      "exact_match": false,
+      "rmse": 2.1974722899311648e-07,
+      "mae": 1.2643828560069773e-07,
+      "max_abs": 3.814697265625e-06,
+      "relative_l2": 9.991543201981853e-08
+    },
+    {
+      "name": "model.model.backbone.features.9.conv.2",
+      "snr_db": 129.16887330765806,
+      "exact_match": false,
+      "rmse": 1.232297913755178e-06,
+      "mae": 8.76887909839752e-07,
+      "max_abs": 9.059906005859375e-06,
+      "relative_l2": 3.479816432473345e-07
+    },
+    {
+      "name": "model.model.backbone.features.10.conv.0.0",
+      "snr_db": 135.2634448567609,
+      "exact_match": false,
+      "rmse": 3.560858824375628e-07,
+      "mae": 2.4005077286249715e-07,
+      "max_abs": 3.814697265625e-06,
+      "relative_l2": 1.7251535538536605e-07
+    },
+    {
+      "name": "model.model.backbone.features.10.conv.1.0",
+      "snr_db": 140.62866206416714,
+      "exact_match": false,
+      "rmse": 1.956796561322054e-07,
+      "mae": 1.0479331368865956e-07,
+      "max_abs": 3.814697265625e-06,
+      "relative_l2": 9.301797844789041e-08
+    },
+    {
+      "name": "model.model.backbone.features.10.conv.2",
+      "snr_db": 126.67291466640944,
+      "exact_match": false,
+      "rmse": 3.275775572910977e-06,
+      "mae": 2.325271196923495e-06,
+      "max_abs": 2.47955322265625e-05,
+      "relative_l2": 4.638251211438747e-07
+    },
+    {
+      "name": "model.model.block12.conv1.0",
+      "snr_db": 135.83726862637855,
+      "exact_match": false,
+      "rmse": 2.2445625371882633e-07,
+      "mae": 1.3380817474872853e-07,
+      "max_abs": 4.76837158203125e-06,
+      "relative_l2": 1.6148662894743668e-07
+    },
+    {
+      "name": "model.model.block12.conv2.0",
+      "snr_db": 137.65957300067214,
+      "exact_match": false,
+      "rmse": 1.8368256950025765e-07,
+      "mae": 1.1611178979604488e-07,
+      "max_abs": 2.1457672119140625e-06,
+      "relative_l2": 1.3092462841144344e-07
+    },
+    {
+      "name": "model.model.block13.conv1.0",
+      "snr_db": 125.02918582236137,
+      "exact_match": false,
+      "rmse": 2.3408779262523215e-06,
+      "mae": 1.5373200256581232e-06,
+      "max_abs": 2.2411346435546875e-05,
+      "relative_l2": 5.604549495192989e-07
+    },
+    {
+      "name": "model.model.block13.conv2.0",
+      "snr_db": 124.9932448811834,
+      "exact_match": false,
+      "rmse": 1.2134002506411878e-06,
+      "mae": 7.81902630482556e-07,
+      "max_abs": 1.5735626220703125e-05,
+      "relative_l2": 5.627788347775728e-07
+    },
+    {
+      "name": "model.model.block14.conv1.0",
+      "snr_db": 136.9844647677613,
+      "exact_match": false,
+      "rmse": 1.6984755006334473e-07,
+      "mae": 1.1209559450109374e-07,
+      "max_abs": 1.9073486328125e-06,
+      "relative_l2": 1.4150662130248642e-07
+    },
+    {
+      "name": "model.model.block14.conv2.0",
+      "snr_db": 138.3016794195329,
+      "exact_match": false,
+      "rmse": 1.3915691897666165e-07,
+      "mae": 4.7249017614235667e-08,
+      "max_abs": 4.76837158203125e-06,
+      "relative_l2": 1.215950873426794e-07
+    },
+    {
+      "name": "model.model.block15.conv1.0",
+      "snr_db": 125.831060003433,
+      "exact_match": false,
+      "rmse": 1.829386822734791e-06,
+      "mae": 1.1853571670100618e-06,
+      "max_abs": 2.86102294921875e-05,
+      "relative_l2": 5.110307103699583e-07
+    },
+    {
+      "name": "model.model.block15.conv2.0",
+      "snr_db": 125.31927666945421,
+      "exact_match": false,
+      "rmse": 9.847093983679033e-07,
+      "mae": 6.434519511565534e-07,
+      "max_abs": 2.002716064453125e-05,
+      "relative_l2": 5.420460282217859e-07
+    },
+    {
+      "name": "model.model.block16.conv1.0",
+      "snr_db": 135.97251418464563,
+      "exact_match": false,
+      "rmse": 2.608851191283431e-07,
+      "mae": 1.6169024519285813e-07,
+      "max_abs": 5.7220458984375e-06,
+      "relative_l2": 1.589916406042501e-07
+    },
+    {
+      "name": "model.model.block16.conv2.0",
+      "snr_db": 129.20440461624872,
+      "exact_match": false,
+      "rmse": 5.252989904676892e-07,
+      "mae": 3.008347560341058e-07,
+      "max_abs": 2.6702880859375e-05,
+      "relative_l2": 3.4656106470552624e-07
+    },
+    {
+      "name": "model.model.block16.conv3",
+      "snr_db": 139.19077653746325,
+      "exact_match": false,
+      "rmse": 2.644521106942524e-06,
+      "mae": 9.90359726865675e-07,
+      "max_abs": 0.000244140625,
+      "relative_l2": 1.0976431541968556e-07
+    }
+  ],
+  "pytorch_backend_sensitivity": {
+    "reference_mkldnn_enabled": true,
+    "candidate_mkldnn_enabled": false,
+    "parity": {
+      "snr_db": 25.239951029600523,
+      "exact_match": false,
+      "rmse": 1.3606575820527476,
+      "mae": 0.6579467651367089,
+      "max_abs": 59.335795402526855,
+      "relative_l2": 0.054701904693796134
+    },
+    "metrics": {
+      "active": {
+        "snr_db": 6.365576349775406,
+        "exact_match": false,
+        "rmse": 13.96729500013894,
+        "mae": 4.039527842187459,
+        "max_abs": 689.2623901367188,
+        "relative_l2": 0.48053074818184094
+      },
+      "center": {
+        "snr_db": 7.187258693787877,
+        "exact_match": false,
+        "rmse": 3.1173822207055877,
+        "mae": 1.9961761642139613,
+        "max_abs": 34.495089530944824,
+        "relative_l2": 0.4371566259173967
+      },
+      "displacement": {
+        "snr_db": 6.356464108951521,
+        "exact_match": false,
+        "rmse": 15.53792598928956,
+        "mae": 4.550365761680833,
+        "max_abs": 689.2623901367188,
+        "relative_l2": 0.48103513054314606
+      },
+      "line_quality": {
+        "sAP10_subset_percent": 13.565560907186642,
+        "precision_at_0_1": 0.24841437632135308,
+        "recall_at_0_1": 0.2650874224478285,
+        "ground_truth_lines": 1773,
+        "predicted_line_counts": [
+          134,
+          153,
+          101,
+          128,
+          132,
+          100,
+          103,
+          139,
+          104,
+          149,
+          120,
+          123,
+          101,
+          127,
+          77,
+          129
+        ],
+        "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+      }
+    },
+    "output": {
+      "path": "daily/2026-10-15/experiments/qat/artifacts/export-parity/mlsd_pytorch_mkldnn_disabled.npy",
+      "sha256": "456393779a9b68de8d6d185b54a0d83c8e17de38db4e04ac53b9a419230510ef"
+    },
+    "interpretation": "Same frozen PyTorch model with a different convolution backend; diagnostic only, not a deployment candidate or reason to relax the gate"
+  },
+  "runtime_profile": {
+    "path": "daily/2026-10-15/experiments/qat/artifacts/export-parity/integer_profile_2026-10-15_16-56-19_313.json",
+    "sha256": "80ae7e78a4c11600924ada2a9be7468c4a71b4ce991d391ec8be19ecf9ff3e21",
+    "executed_operators": {
+      "Pad": 4,
+      "Mul": 82,
+      "Round": 41,
+      "Add": 62,
+      "Clip": 61,
+      "Cast": 82,
+      "ConvInteger": 41,
+      "Relu": 10,
+      "Resize": 3,
+      "Concat": 3,
+      "Slice": 2,
+      "Split": 1,
+      "DequantizeLinear": 2
+    }
+  },
+  "full_development_output_reproduced": true,
+  "export_parity_gate_passed": false,
+  "protected_evidence_sha256": {
+    "daily/2026-10-15/experiments/qat/artifacts/research/selected_checkpoint.pt": "167bc6f9d9d37173f57a31304d895f037a292b13c9e43de08b214c4136cdb0c5",
+    "daily/2026-10-15/experiments/qat/artifacts/research/deploy/mlsd_step0032_integer.onnx": "5d7831552ec30ffe5fff49157eae6f24b522f43217db63bbf50e2f34425a6486",
+    "daily/2026-10-15/experiments/qat/results/research/selection.json": "3173f8cf135e12c378cf91717124648594d2dae19601be18218b7e2de230b3fb",
+    "daily/2026-10-15/experiments/qat/results/research/holdout_evaluation.json": "417a540170a58265a3b4276a806eec9a10bb5eeaaae2732503b6cde6b64ac4cd"
+  },
+  "source_sha256": {
+    "daily/2026-10-15/experiments/qat/src/export_parity.py": "dbc63768f8cceff0fd437615eaa37a6c1f6d23a19775d1091be830045721685c",
+    "daily/2026-10-15/experiments/qat/src/verify_export_parity.py": "9523ba8c6ea848b5afaeddb2605281d4eef508b809a5fb77864a193ef44d9324"
+  },
+  "scope": "Evidence verified; does not override a failed numerical export gate"
+}

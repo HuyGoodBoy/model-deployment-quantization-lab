@@ -10,3 +10,4 @@
 /daily/2026-10-12/experiments/mlsd-postprocess/verify.py text eol=lf
 /daily/2026-10-13/**/*.py text eol=lf
 /daily/2026-10-14/**/*.py text eol=lf
+/daily/2026-10-15/**/*.py text eol=lf

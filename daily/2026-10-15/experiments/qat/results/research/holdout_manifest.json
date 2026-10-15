@@ -1,0 +1,201 @@
+{
+  "prepared_at_utc": "2026-10-15T06:40:21.320376+00:00",
+  "seed": 20261015,
+  "dataset": "lh9171338/YorkUrban",
+  "revision": "ce62ae487aac928c5df3e82f697478b8c6c44d8d",
+  "metadata_sha256": "b3aff09ae0a56b3032874d151d109e50c636c28c21f5172ee29ded4892daabc3",
+  "images": 32,
+  "excluded_development_images": [
+    "P1020822.png",
+    "P1020825.png",
+    "P1020826.png",
+    "P1020829.png",
+    "P1020856.png",
+    "P1020887.png",
+    "P1030004.png",
+    "P1040801.png",
+    "P1040823.png",
+    "P1040863.png",
+    "P1080032.png",
+    "P1080033.png",
+    "P1080036.png",
+    "P1080056.png",
+    "P1080106.png",
+    "P1080113.png"
+  ],
+  "inputs": {
+    "path": "daily/2026-10-15/experiments/qat/artifacts/research/holdout_inputs.npy",
+    "sha256": "de72802b3ba856c853438d7fc827a19fbc9b304c111d94af3db2882f32745b43"
+  },
+  "ground_truth": {
+    "path": "daily/2026-10-15/experiments/qat/artifacts/research/holdout_ground_truth.json",
+    "sha256": "4b2df3545b499f9462ba10c02636e41c4bc082d6a1be98dc830bbdf46935828a"
+  },
+  "records": [
+    {
+      "image_file": "P1080005.png",
+      "image_sha256": "533ccee6efd97bdabcacea7e51490dc3158e890f21e8708317d8c2c9a700957e",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1080005.png"
+    },
+    {
+      "image_file": "P1080078.png",
+      "image_sha256": "437dbe7f88974abdbfc6766fb19716c6c4b6f0fbc7848aa8235ede8a409d2875",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1080078.png"
+    },
+    {
+      "image_file": "P1020171.png",
+      "image_sha256": "3fc10f01e853373f6e4cebfea18915cda64830f8a6f9f38bdde24fcfe17b2834",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1020171.png"
+    },
+    {
+      "image_file": "P1080015.png",
+      "image_sha256": "b9148a021c5c24a48d3162734a4c83070c7cbada0b36cb34a75cbd599fa4cfe1",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1080015.png"
+    },
+    {
+      "image_file": "P1040783.png",
+      "image_sha256": "fb0a9e697fe27cdf3085f66a5dc632bb10afae2ae3a97c20df1631013a4e24d4",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1040783.png"
+    },
+    {
+      "image_file": "P1080074.png",
+      "image_sha256": "957b8bbb7c6b2e25412c8d741ee734eecc6296ad1c4072887c8ea748dc718c4c",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1080074.png"
+    },
+    {
+      "image_file": "P1020871.png",
+      "image_sha256": "85f8d1e9521607c843f61a0bafd252cd063aac3f7f2100503b55acd98a87953c",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1020871.png"
+    },
+    {
+      "image_file": "P1040795.png",
+      "image_sha256": "7e73cc4cf838910f12cc4852ef2aa05df3fc7ff17796c993e1a6bf6b5a30d473",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1040795.png"
+    },
+    {
+      "image_file": "P1080096.png",
+      "image_sha256": "e2e5165015dd734b417441e0e817f8af68866c4fd0478c6cfb1ea2e2ac7627d6",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1080096.png"
+    },
+    {
+      "image_file": "P1040818.png",
+      "image_sha256": "ee0c205f55575c78319f9d3593ff98ab004a623586d3721828e6c0c580132d65",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1040818.png"
+    },
+    {
+      "image_file": "P1020817.png",
+      "image_sha256": "afc229574349f8f29498e37dcc7a375583a0dd5967f5824052716e0f419d7840",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1020817.png"
+    },
+    {
+      "image_file": "P1020912.png",
+      "image_sha256": "eec6debf819299973be9bab6840066c1ecbd75782ff1c87ad5ae5bf5390de8d5",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1020912.png"
+    },
+    {
+      "image_file": "P1040815.png",
+      "image_sha256": "42adeabfc91e794d31ebab389e3131b89fe5b345ad44259d7e40bc24f2f6e360",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1040815.png"
+    },
+    {
+      "image_file": "P1040779.png",
+      "image_sha256": "a5e8dcf3163527f21540aca99fb36acb1ed628e9a37b1c6576ad5c0effc11f0c",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1040779.png"
+    },
+    {
+      "image_file": "P1020841.png",
+      "image_sha256": "655396111ed0f01d88a105a0d9b04e4a999c7dc35c8ed3348b6a58cdc04e68d4",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1020841.png"
+    },
+    {
+      "image_file": "P1040845.png",
+      "image_sha256": "d45c687669a7235488192c5c09c320b49d8cfc19397725c0227e02ded19dce0e",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1040845.png"
+    },
+    {
+      "image_file": "P1040854.png",
+      "image_sha256": "aee35e6de5ed0d1288b2f8afe64ef40c4c778149f294ddf17627fd2137cf005c",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1040854.png"
+    },
+    {
+      "image_file": "P1080008.png",
+      "image_sha256": "60a8a051d38f69881feb6475c41aae44770ad3861027fc29112eb8268ffb04fb",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1080008.png"
+    },
+    {
+      "image_file": "P1040813.png",
+      "image_sha256": "0150bd5b16ccc9ed0a079920d09732780994504835ced847a513f38d84352905",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1040813.png"
+    },
+    {
+      "image_file": "P1040843.png",
+      "image_sha256": "5eeae2b070dcc8ae839eb64a34aed486d3f0af0d954f5582736f93eabac872b7",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1040843.png"
+    },
+    {
+      "image_file": "P1040839.png",
+      "image_sha256": "8c8f7772fceb6ffb57b4ddabe0e5dfd46f18c94a7b974735249825bcb7d51e44",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1040839.png"
+    },
+    {
+      "image_file": "P1080045.png",
+      "image_sha256": "925fc232201f413ab255b73112c5a5499b3369f0f41eb00ecd38b4d2308883b5",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1080045.png"
+    },
+    {
+      "image_file": "P1040833.png",
+      "image_sha256": "d538de301177b72cc3968ff68e45687ae83e85859f249e4f3b4a62785f67a135",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1040833.png"
+    },
+    {
+      "image_file": "P1080023.png",
+      "image_sha256": "a1907feba770b806a5742e9f5dbb488596c1d375c54a8a53d277fd56c056d1b8",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1080023.png"
+    },
+    {
+      "image_file": "P1020848.png",
+      "image_sha256": "3a6f6beed3bd38d4d57ddc1576cae1f4acd1fe4e2046762f2382e457745ec836",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1020848.png"
+    },
+    {
+      "image_file": "P1020177.png",
+      "image_sha256": "32c1aab32914a3cb751e7a5ea8105d3c6f8e1320fac61e7e7682c9dec9247c9f",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1020177.png"
+    },
+    {
+      "image_file": "P1080057.png",
+      "image_sha256": "6c4f80e788aa87beae93e39601e6a8dd789c65cf3a09f5c598a9ad771749dba7",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1080057.png"
+    },
+    {
+      "image_file": "P1080084.png",
+      "image_sha256": "659c7d1bb39a592d569fdadaf00bb48c9fef8af40e08044e70f2ba72f1ef4707",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1080084.png"
+    },
+    {
+      "image_file": "P1040788.png",
+      "image_sha256": "a582bc52bcc2bf61023b56fe2394cda9facce93a408f37a66a80a7d2873e1419",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1040788.png"
+    },
+    {
+      "image_file": "P1020824.png",
+      "image_sha256": "da8c35e3aa40daefefe3d94cf961ff319896de97f858c2a42161fc0d4ccf5da8",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1020824.png"
+    },
+    {
+      "image_file": "P1040856.png",
+      "image_sha256": "b7a6f6c0390024acee1ae652ce6fb5e087c88582890fa878e5e9f5d6b38a2f38",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1040856.png"
+    },
+    {
+      "image_file": "P1040825.png",
+      "image_sha256": "a2015aa1552b35221d1aa8b6b38bc0273fdc3254b425242efcd2a2b5e24ede41",
+      "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1040825.png"
+    }
+  ],
+  "policy": "Lock before candidate selection; no holdout inference until development-only model selection is recorded; never used for calibration/gradient/tuning",
+  "scope": "A fresh subset for this experiment from the same YorkUrban mirror, not proof that original pretrained weights never saw these scenes",
+  "source_sha256": {
+    "daily/2026-10-15/experiments/qat/src/prepare_holdout.py": "f6c1bc60878f2f7838fefd57520c53d29867d9b375c7a895d54d772af4b25e50"
+  }
+}

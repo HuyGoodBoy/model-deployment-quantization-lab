@@ -1,0 +1,2266 @@
+{
+  "task_date": "2026-10-15",
+  "executed_at_utc": "2026-10-15T06:52:10.857788+00:00",
+  "status": "exported_parity_gate_failed",
+  "checkpoint": {
+    "path": "daily/2026-10-15/experiments/qat/artifacts/research/selected_checkpoint.pt",
+    "sha256": "167bc6f9d9d37173f57a31304d895f037a292b13c9e43de08b214c4136cdb0c5",
+    "step": 32
+  },
+  "selection": "Step chosen from repeatedly monitored 16-image subset; not an independent final test",
+  "format": "ONNX opset17; ConvInteger UINT8 x UINT8 -> INT32, per-channel scales, float bias/boundaries",
+  "encoding": "Trained signed activations/weights shifted by +128 with zero points shifted equally; no recalibration",
+  "is_full_integer_model": false,
+  "float_regions": "Bias, scale application, ReLU/Clip, residual Add, Resize, Concat and float I/O; output QDQ retains trained center/displacement ranges",
+  "qat_float_lowering_gate": {
+    "snr_db": null,
+    "exact_match": true,
+    "rmse": 0.0,
+    "mae": 0.0,
+    "max_abs": 0.0,
+    "relative_l2": 0.0
+  },
+  "original_fp32_export_gate": {
+    "snr_db": 98.46209445434575,
+    "exact_match": false,
+    "rmse": 0.00034696558559786514,
+    "mae": 7.057853179243679e-05,
+    "max_abs": 0.025986671447753906,
+    "relative_l2": 1.193700229278713e-05
+  },
+  "fake_quant_to_integer_parity": {
+    "snr_db": 24.573288999865184,
+    "exact_match": false,
+    "rmse": 1.4692034772041689,
+    "mae": 0.6840959762042601,
+    "max_abs": 60.19603252410889,
+    "relative_l2": 0.05906572648834198
+  },
+  "parity_gate": {
+    "passed": false,
+    "maximum_relative_l2": 0.02,
+    "maximum_sAP10_delta_pp": 0.5,
+    "actual_sAP10_delta_pp": 0.03611281059948723
+  },
+  "fake_quant_metrics": {
+    "active": {
+      "snr_db": 6.382823989859059,
+      "exact_match": false,
+      "rmse": 13.93958755001117,
+      "mae": 4.032990165197781,
+      "max_abs": 689.2623901367188,
+      "relative_l2": 0.4795775012045289
+    },
+    "center": {
+      "snr_db": 7.187350623659405,
+      "exact_match": false,
+      "rmse": 3.117349227075407,
+      "mae": 1.9960761423156197,
+      "max_abs": 34.495089530944824,
+      "relative_l2": 0.4371519991558945
+    },
+    "displacement": {
+      "snr_db": 6.373884734430675,
+      "exact_match": false,
+      "rmse": 15.506793987786326,
+      "mae": 4.54221867091832,
+      "max_abs": 689.2623901367188,
+      "relative_l2": 0.4800713219616468
+    },
+    "line_quality": {
+      "sAP10_subset_percent": 13.697320921197253,
+      "precision_at_0_1": 0.2519768054823405,
+      "recall_at_0_1": 0.26959954878736603,
+      "ground_truth_lines": 1773,
+      "predicted_line_counts": [
+        131,
+        152,
+        92,
+        132,
+        133,
+        99,
+        105,
+        138,
+        98,
+        150,
+        116,
+        128,
+        100,
+        132,
+        79,
+        132
+      ],
+      "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+    }
+  },
+  "deployed_integer_metrics": {
+    "active": {
+      "snr_db": 6.365181623833358,
+      "exact_match": false,
+      "rmse": 13.967929751348313,
+      "mae": 4.041559032704248,
+      "max_abs": 689.2623901367188,
+      "relative_l2": 0.4805525861593124
+    },
+    "center": {
+      "snr_db": 7.187488107468267,
+      "exact_match": false,
+      "rmse": 3.1172998847890954,
+      "mae": 1.9955976716877246,
+      "max_abs": 34.495089530944824,
+      "relative_l2": 0.4371450797902627
+    },
+    "displacement": {
+      "snr_db": 6.356063102653593,
+      "exact_match": false,
+      "rmse": 15.538643353920095,
+      "mae": 4.5530493729583785,
+      "max_abs": 689.2623901367188,
+      "relative_l2": 0.4810573392722219
+    },
+    "line_quality": {
+      "sAP10_subset_percent": 13.73343373179674,
+      "precision_at_0_1": 0.2544973544973545,
+      "recall_at_0_1": 0.2712915961646926,
+      "ground_truth_lines": 1773,
+      "predicted_line_counts": [
+        128,
+        149,
+        95,
+        130,
+        129,
+        100,
+        104,
+        136,
+        108,
+        152,
+        113,
+        123,
+        100,
+        126,
+        85,
+        131
+      ],
+      "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+    }
+  },
+  "original_fp32_metrics": {
+    "active": {
+      "snr_db": 98.46209445434575,
+      "exact_match": false,
+      "rmse": 0.00034696558559786514,
+      "mae": 7.057853179243679e-05,
+      "max_abs": 0.025986671447753906,
+      "relative_l2": 1.193700229278713e-05
+    },
+    "center": {
+      "snr_db": 110.13316761423138,
+      "exact_match": false,
+      "rmse": 2.2207241125745638e-05,
+      "mae": 9.09508515767321e-06,
+      "max_abs": 0.0005397796630859375,
+      "relative_l2": 3.1141649993973783e-06
+    },
+    "displacement": {
+      "snr_db": 98.41305659671136,
+      "exact_match": false,
+      "rmse": 0.0003877603726491177,
+      "mae": 8.594939345112768e-05,
+      "max_abs": 0.025986671447753906,
+      "relative_l2": 1.2004585528680062e-05
+    },
+    "line_quality": {
+      "sAP10_subset_percent": 15.161665753735578,
+      "precision_at_0_1": 0.2709497206703911,
+      "recall_at_0_1": 0.27354765933446135,
+      "ground_truth_lines": 1773,
+      "predicted_line_counts": [
+        132,
+        145,
+        100,
+        132,
+        127,
+        97,
+        104,
+        137,
+        98,
+        145,
+        105,
+        118,
+        100,
+        113,
+        80,
+        124
+      ],
+      "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+    }
+  },
+  "graph_audit": {
+    "operators": {
+      "Identity": 51,
+      "Constant": 136,
+      "ConstantOfShape": 4,
+      "Concat": 7,
+      "Reshape": 8,
+      "Slice": 8,
+      "Transpose": 4,
+      "Cast": 45,
+      "Pad": 4,
+      "QuantizeLinear": 43,
+      "ConvInteger": 41,
+      "Mul": 41,
+      "Add": 49,
+      "Clip": 20,
+      "Relu": 10,
+      "Resize": 3,
+      "DequantizeLinear": 2
+    },
+    "initializer_dtypes": {
+      "FLOAT": 104,
+      "UINT8": 52,
+      "INT8": 2
+    },
+    "conv_integer": [
+      {
+        "name": "/model/model/backbone/features.0/features.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            2,
+            2
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.1/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 32,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.1/conv/conv.1/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.2/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.2/conv/conv.1/conv.1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 96,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            2,
+            2
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.2/conv/conv.2/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.3/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.3/conv/conv.1/conv.1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 144,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.3/conv/conv.2/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.4/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.4/conv/conv.1/conv.1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 144,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            2,
+            2
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.4/conv/conv.2/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.5/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.5/conv/conv.1/conv.1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 192,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.5/conv/conv.2/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.6/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.6/conv/conv.1/conv.1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 192,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.6/conv/conv.2/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.7/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.7/conv/conv.1/conv.1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 192,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            2,
+            2
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.7/conv/conv.2/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.8/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.8/conv/conv.1/conv.1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 384,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.8/conv/conv.2/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.9/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.9/conv/conv.1/conv.1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 384,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.9/conv/conv.2/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.10/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.10/conv/conv.1/conv.1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 384,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.10/conv/conv.2/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block12/conv1/conv1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block12/conv2/conv2.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block13/conv1/conv1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block13/conv2/conv2.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block14/conv1/conv1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block14/conv2/conv2.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block15/conv1/conv1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block15/conv2/conv2.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block16/conv1/conv1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            5,
+            5
+          ],
+          "group": 1,
+          "pads": [
+            5,
+            5,
+            5,
+            5
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block16/conv2/conv2.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block16/conv3/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    "float_conv_count": 0,
+    "size_bytes": 760882
+  },
+  "optimized_graph_audit": {
+    "operators": {
+      "Pad": 4,
+      "QuantizeLinear": 41,
+      "ConvInteger": 41,
+      "Cast": 41,
+      "Mul": 41,
+      "Add": 49,
+      "Clip": 3,
+      "Relu": 6,
+      "Resize": 3,
+      "Concat": 3,
+      "Slice": 2,
+      "Split": 1,
+      "DequantizeLinear": 2
+    },
+    "initializer_dtypes": {
+      "FLOAT": 107,
+      "UINT8": 94,
+      "INT8": 1,
+      "INT64": 7
+    },
+    "conv_integer": [
+      {
+        "name": "/model/model/backbone/features.0/features.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            2,
+            2
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.1/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 32,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.1/conv/conv.1/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.2/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.2/conv/conv.1/conv.1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 96,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            2,
+            2
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.2/conv/conv.2/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.3/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.3/conv/conv.1/conv.1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 144,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.3/conv/conv.2/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.4/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.4/conv/conv.1/conv.1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 144,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            2,
+            2
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.4/conv/conv.2/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.5/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.5/conv/conv.1/conv.1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 192,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.5/conv/conv.2/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.6/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.6/conv/conv.1/conv.1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 192,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.6/conv/conv.2/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.7/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.7/conv/conv.1/conv.1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 192,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            2,
+            2
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.7/conv/conv.2/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.8/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.8/conv/conv.1/conv.1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 384,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.8/conv/conv.2/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.9/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.9/conv/conv.1/conv.1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 384,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.9/conv/conv.2/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.10/conv/conv.0/conv.0.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.10/conv/conv.1/conv.1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 384,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/backbone/features.10/conv/conv.2/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block12/conv1/conv1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block12/conv2/conv2.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block13/conv1/conv1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block13/conv2/conv2.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block14/conv1/conv1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block14/conv2/conv2.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block15/conv1/conv1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block15/conv2/conv2.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block16/conv1/conv1.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            5,
+            5
+          ],
+          "group": 1,
+          "pads": [
+            5,
+            5,
+            5,
+            5
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block16/conv2/conv2.0/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "name": "/model/model/block16/conv3/ConvInteger",
+        "weight_dtype": "UINT8",
+        "attributes": {
+          "auto_pad": "NOTSET",
+          "dilations": [
+            1,
+            1
+          ],
+          "group": 1,
+          "pads": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strides": [
+            1,
+            1
+          ]
+        }
+      }
+    ],
+    "float_conv_count": 0,
+    "size_bytes": 725584
+  },
+  "runtime_profile": {
+    "path": "daily/2026-10-15/experiments/qat/artifacts/research/deploy/mlsd_integer_profile_2026-10-15_13-51-24_768.json",
+    "sha256": "2b68793425369837ddc6b577adf41636371a1c5fc4511d8f347f570e4f664c8e",
+    "executed_operators": {
+      "Pad": 4,
+      "QuantizeLinear": 41,
+      "ConvInteger": 41,
+      "Cast": 41,
+      "Mul": 41,
+      "Add": 49,
+      "Clip": 3,
+      "Relu": 6,
+      "Resize": 3,
+      "Concat": 3,
+      "Slice": 2,
+      "Split": 1,
+      "DequantizeLinear": 2
+    },
+    "providers": {
+      "CPUExecutionProvider": 237
+    },
+    "integer_conv_nodes_executed": 41
+  },
+  "benchmark": {
+    "protocol": "CPU ORT, batch1 NCHW 1x4x512x512, 4 intra/1 inter threads, sequential, ALL optimizations; 16 warmups/model, 5 rounds x 16 images, alternating model order; no profiler",
+    "scope": "Inference only; excludes session loading, preprocessing, line decoding and Android",
+    "idle_thread_spinning_disabled": true,
+    "results": {
+      "original_fp32": {
+        "median_ms": 87.55429999996522,
+        "p95_ms": 106.78609999997661,
+        "samples_ms": [
+          82.33169999994061,
+          90.8302999996522,
+          81.7325000002711,
+          84.11209999985658,
+          82.53220000005967,
+          87.22390000002633,
+          80.31730000038806,
+          89.26190000011047,
+          77.23630000009507,
+          82.88919999995414,
+          79.37719999972614,
+          92.11290000030203,
+          94.02749999981097,
+          89.22319999965111,
+          75.7951000000503,
+          88.45419999988735,
+          80.30929999995351,
+          80.94979999987117,
+          104.48529999985112,
+          88.32729999994626,
+          85.74079999971218,
+          81.06940000016039,
+          84.6795999996175,
+          80.83690000012211,
+          98.85649999978341,
+          88.20259999993141,
+          82.46539999981906,
+          77.6120999998966,
+          82.31729999988602,
+          83.32210000025952,
+          105.53829999980735,
+          91.79559999984122,
+          87.50330000020767,
+          78.4870000002229,
+          78.89190000014423,
+          99.65669999974125,
+          86.33190000000468,
+          87.60529999972277,
+          77.72410000006857,
+          89.15079999997033,
+          86.33370000006835,
+          81.73259999966831,
+          83.82960000017192,
+          83.84890000024825,
+          82.83600000004299,
+          95.36870000010822,
+          81.03620000019873,
+          82.56170000004204,
+          91.53569999989486,
+          80.05739999998696,
+          91.05090000002747,
+          86.27710000018851,
+          85.35269999993034,
+          82.75109999976848,
+          108.00399999970978,
+          86.91999999973632,
+          106.64090000000215,
+          99.03429999985747,
+          106.72199999999066,
+          95.47909999992044,
+          104.17779999988852,
+          90.25220000012268,
+          96.46740000016507,
+          87.26710000019011,
+          87.8898000000845,
+          90.4859000002034,
+          84.39510000016526,
+          99.01449999961187,
+          90.71159999984957,
+          131.59619999987626,
+          110.07430000017848,
+          104.37139999976353,
+          92.5454000002901,
+          100.48390000019936,
+          103.3422000000428,
+          84.70820000002277,
+          99.28459999991901,
+          118.75529999997525,
+          95.622800000001,
+          94.333000000006
+        ],
+        "runs": 80
+      },
+      "qat_integer": {
+        "median_ms": 288.6730500001704,
+        "p95_ms": 379.0906900002028,
+        "samples_ms": [
+          250.10769999971671,
+          262.36140000037267,
+          287.29770000018107,
+          271.9024999996691,
+          253.6325000000943,
+          313.6176999996678,
+          322.74169999982405,
+          262.95829999980924,
+          266.0826999999699,
+          392.78509999985545,
+          275.72090000012395,
+          310.75620000001436,
+          326.3155999998162,
+          324.7342999998182,
+          289.57160000027216,
+          277.8008000000227,
+          305.17620000000534,
+          292.04299999992145,
+          309.260600000016,
+          352.3847999999816,
+          286.8102999996154,
+          251.96619999996983,
+          255.84029999981794,
+          263.45509999964634,
+          285.7662999999775,
+          287.1610999995937,
+          267.3501999997825,
+          257.16289999991204,
+          257.3168999997506,
+          246.41729999984818,
+          294.9453999999605,
+          265.616399999999,
+          307.2240999999849,
+          325.4890000002888,
+          281.29989999979443,
+          269.80749999984255,
+          278.23339999986274,
+          287.77450000006866,
+          272.0355000001291,
+          272.2025000002759,
+          263.31019999997807,
+          267.328599999928,
+          272.0636999997623,
+          265.2439999997114,
+          276.1206999998649,
+          276.26329999975496,
+          299.8529999999846,
+          275.695899999846,
+          328.31480000004376,
+          290.5468999997538,
+          291.483099999823,
+          292.3865999996451,
+          253.91639999998006,
+          260.23880000002464,
+          265.6301000001804,
+          362.1432999998433,
+          380.3331000003709,
+          341.8850000002749,
+          359.781699999985,
+          336.6602999999486,
+          421.0464000002503,
+          354.416300000139,
+          320.6368000001021,
+          283.1237999998848,
+          263.3390999999392,
+          282.1636999997281,
+          269.89240000011705,
+          316.4104000002226,
+          364.1264000002593,
+          339.6253999999317,
+          350.1148000000285,
+          318.69979999964926,
+          316.16570000005595,
+          398.3165999998164,
+          298.3595000000605,
+          289.83940000034636,
+          299.99739999993835,
+          379.02530000019397,
+          340.73480000006384,
+          356.84189999983573
+        ],
+        "runs": 80
+      }
+    },
+    "speedup_vs_original_fp32": 0.30329918224064745
+  },
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "torch": "2.13.0+cpu",
+    "onnx": "1.23.2",
+    "onnxruntime": "1.30.0",
+    "provider": "CPUExecutionProvider"
+  },
+  "artifacts": {
+    "integer_model": {
+      "path": "daily/2026-10-15/experiments/qat/artifacts/research/deploy/mlsd_step0032_integer.onnx",
+      "sha256": "5d7831552ec30ffe5fff49157eae6f24b522f43217db63bbf50e2f34425a6486"
+    },
+    "original_fp32_model": {
+      "path": "daily/2026-10-15/experiments/qat/artifacts/research/deploy/mlsd_original_fp32.onnx",
+      "sha256": "3aad0be412ce1f1fb5079fa2d000d6ffd11541dcc3a038d2297555bedda21f7c"
+    },
+    "optimized_integer_model": {
+      "path": "daily/2026-10-15/experiments/qat/artifacts/research/deploy/mlsd_step0032_integer_optimized.onnx",
+      "sha256": "0c194a3f3295b7e27d6c9d02028cc355373aef736e7c7cd56d66dcaaf07426b0"
+    },
+    "integer_output": {
+      "path": "daily/2026-10-15/experiments/qat/artifacts/research/deploy/mlsd_step0032_integer_output.npy",
+      "sha256": "0fd6244a0e07ec612325e0a8794ae2e670e7c4e222e5d5e0c4929db60fe8992d"
+    },
+    "original_fp32_output": {
+      "path": "daily/2026-10-15/experiments/qat/artifacts/research/deploy/mlsd_original_fp32_ort_output.npy",
+      "sha256": "7fb40f620b7c430614dfec59a465e8b2e7820534fb4e94f47dac065b9cd79cc1"
+    }
+  },
+  "source_sha256": {
+    "daily/2026-10-15/experiments/qat/src/export_integer.py": "1aa3f21e9a42cba1b06504b48eb25765f72c10aa5370f105c3746880a508903f"
+  },
+  "references": [
+    "https://onnx.ai/onnx/operators/onnx__ConvInteger.html",
+    "https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html"
+  ],
+  "limitations": [
+    "Mixed 8-bit integer/float experiment; unsigned offset storage, not an all-signed/full-INT8 model",
+    "Custom ConvInteger lowering preserves trained quantization boundaries but is not a tuned QLinearConv deployment",
+    "Fixed input shape; only tested on this Windows ORT CPU build; not Android/TFLite",
+    "Small repeatedly monitored evaluation subset, no final held-out quality claim"
+  ]
+}

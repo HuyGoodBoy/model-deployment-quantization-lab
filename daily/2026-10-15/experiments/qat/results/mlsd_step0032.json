@@ -1,0 +1,561 @@
+{
+  "task_date": "2026-10-15",
+  "executed_at_utc": "2026-10-15T06:15:10.539149+00:00",
+  "status": "in_progress",
+  "task": "mlsd",
+  "framework": "2.13.0+cpu",
+  "device": "CPU",
+  "cuda_available": false,
+  "threads": 4,
+  "start_step": 8,
+  "steps_this_run": 24,
+  "total_steps": 32,
+  "batch_size": 1,
+  "learning_rate": 1e-05,
+  "optimizer": "AdamW, weight_decay=.01, gradient clipping 1.0",
+  "observer_schedule": "Restored frozen day-14 ranges; fake quant stays enabled",
+  "sampling": "Continue fixed seed-20261014 permutation, cycle without reshuffle",
+  "data": {
+    "train_examples_available": 32,
+    "evaluation_examples": 16,
+    "train_samples_this_run": 24,
+    "train_samples_total": 32,
+    "unique_train_examples_total": 32,
+    "equivalent_train_epochs": 1.0,
+    "evaluation_used_in_training": false,
+    "labels": "FP32 teacher pseudo-labels on Wireframe train",
+    "manifest_sha256": "95c8e9613adc4eb64931ae7442f3d9ba80d88c7d23fd08d50ab7731d501c1ea5"
+  },
+  "config": {
+    "fused_batchnorms": 40,
+    "fake_quantized_layers": [
+      "model.backbone.features.0.0",
+      "model.backbone.features.1.conv.0.0",
+      "model.backbone.features.1.conv.1",
+      "model.backbone.features.2.conv.0.0",
+      "model.backbone.features.2.conv.1.0",
+      "model.backbone.features.2.conv.2",
+      "model.backbone.features.3.conv.0.0",
+      "model.backbone.features.3.conv.1.0",
+      "model.backbone.features.3.conv.2",
+      "model.backbone.features.4.conv.0.0",
+      "model.backbone.features.4.conv.1.0",
+      "model.backbone.features.4.conv.2",
+      "model.backbone.features.5.conv.0.0",
+      "model.backbone.features.5.conv.1.0",
+      "model.backbone.features.5.conv.2",
+      "model.backbone.features.6.conv.0.0",
+      "model.backbone.features.6.conv.1.0",
+      "model.backbone.features.6.conv.2",
+      "model.backbone.features.7.conv.0.0",
+      "model.backbone.features.7.conv.1.0",
+      "model.backbone.features.7.conv.2",
+      "model.backbone.features.8.conv.0.0",
+      "model.backbone.features.8.conv.1.0",
+      "model.backbone.features.8.conv.2",
+      "model.backbone.features.9.conv.0.0",
+      "model.backbone.features.9.conv.1.0",
+      "model.backbone.features.9.conv.2",
+      "model.backbone.features.10.conv.0.0",
+      "model.backbone.features.10.conv.1.0",
+      "model.backbone.features.10.conv.2",
+      "model.block12.conv1.0",
+      "model.block12.conv2.0",
+      "model.block13.conv1.0",
+      "model.block13.conv2.0",
+      "model.block14.conv1.0",
+      "model.block14.conv2.0",
+      "model.block15.conv1.0",
+      "model.block15.conv2.0",
+      "model.block16.conv1.0",
+      "model.block16.conv2.0",
+      "model.block16.conv3"
+    ],
+    "weights": "signed INT8, per-output-channel symmetric (-127..127)",
+    "activations": "signed INT8, per-tensor affine (-128..127), MinMax observer",
+    "float_regions": "bias, residual/add, resize, normalization; text embedding/attention MatMul/Softmax/mask",
+    "scope": "selective W8A8 fake-quant training pilot; not an exported full INT8 model"
+  },
+  "original_teacher_gate": {
+    "snr_db": null,
+    "exact_match": true,
+    "rmse": 0.0,
+    "mae": 0.0,
+    "max_abs": 0.0,
+    "relative_l2": 0.0
+  },
+  "original_teacher": {
+    "active": {
+      "snr_db": null,
+      "exact_match": true,
+      "rmse": 0.0,
+      "mae": 0.0,
+      "max_abs": 0.0,
+      "relative_l2": 0.0
+    },
+    "center": {
+      "snr_db": null,
+      "exact_match": true,
+      "rmse": 0.0,
+      "mae": 0.0,
+      "max_abs": 0.0,
+      "relative_l2": 0.0
+    },
+    "displacement": {
+      "snr_db": null,
+      "exact_match": true,
+      "rmse": 0.0,
+      "mae": 0.0,
+      "max_abs": 0.0,
+      "relative_l2": 0.0
+    },
+    "line_quality": {
+      "sAP10_subset_percent": 15.161686587585823,
+      "precision_at_0_1": 0.2709497206703911,
+      "recall_at_0_1": 0.27354765933446135,
+      "ground_truth_lines": 1773,
+      "predicted_line_counts": [
+        132,
+        145,
+        100,
+        132,
+        127,
+        97,
+        104,
+        137,
+        98,
+        145,
+        105,
+        118,
+        100,
+        113,
+        80,
+        124
+      ],
+      "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+    }
+  },
+  "fake_quant_before": {
+    "active": {
+      "snr_db": 6.3274159987721035,
+      "exact_match": false,
+      "rmse": 14.02879352769691,
+      "mae": 4.506966234419546,
+      "max_abs": 608.4143376350403,
+      "relative_l2": 0.48264654322012285
+    },
+    "center": {
+      "snr_db": 17.79109830927016,
+      "exact_match": false,
+      "rmse": 0.919598117166629,
+      "mae": 0.5558097545119449,
+      "max_abs": 18.70781898498535,
+      "relative_l2": 0.1289570484589355
+    },
+    "displacement": {
+      "snr_db": 6.278552326430642,
+      "exact_match": false,
+      "rmse": 15.677926987620662,
+      "mae": 5.494755354396446,
+      "max_abs": 608.4143376350403,
+      "relative_l2": 0.4853693897328728
+    },
+    "line_quality": {
+      "sAP10_subset_percent": 7.746044903008961,
+      "precision_at_0_1": 0.19356540084388185,
+      "recall_at_0_1": 0.20699379582628313,
+      "ground_truth_lines": 1773,
+      "predicted_line_counts": [
+        128,
+        158,
+        98,
+        136,
+        123,
+        105,
+        105,
+        139,
+        116,
+        148,
+        106,
+        119,
+        91,
+        122,
+        70,
+        132
+      ],
+      "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+    }
+  },
+  "fake_quant_after": {
+    "active": {
+      "snr_db": 7.362092651914249,
+      "exact_match": false,
+      "rmse": 12.453358508030764,
+      "mae": 4.2600008578676825,
+      "max_abs": 467.04844665527344,
+      "relative_l2": 0.4284452845866855
+    },
+    "center": {
+      "snr_db": 18.010111977752665,
+      "exact_match": false,
+      "rmse": 0.8967004546899946,
+      "mae": 0.5496448850744042,
+      "max_abs": 17.36469078063965,
+      "relative_l2": 0.12574606431871824
+    },
+    "displacement": {
+      "snr_db": 7.314000823496247,
+      "exact_match": false,
+      "rmse": 13.9160574422344,
+      "mae": 5.187589851066003,
+      "max_abs": 467.04844665527344,
+      "relative_l2": 0.43082406963358294
+    },
+    "line_quality": {
+      "sAP10_subset_percent": 8.20182316807261,
+      "precision_at_0_1": 0.19738903394255874,
+      "recall_at_0_1": 0.2131979695431472,
+      "ground_truth_lines": 1773,
+      "predicted_line_counts": [
+        129,
+        159,
+        95,
+        138,
+        125,
+        108,
+        106,
+        140,
+        117,
+        149,
+        112,
+        118,
+        90,
+        123,
+        74,
+        132
+      ],
+      "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+    }
+  },
+  "history": [
+    {
+      "step": 9,
+      "train_indices": [
+        7
+      ],
+      "loss": 0.0643518790602684,
+      "gradient_norm_before_clip": 0.11770479381084442,
+      "seconds": 0.4997622999999294,
+      "soft_center_bce": 0.06415962427854538,
+      "positive_displacement_smooth_l1": 0.0001922582450788468,
+      "positive_regression_values": 9560
+    },
+    {
+      "step": 10,
+      "train_indices": [
+        19
+      ],
+      "loss": 0.09216480702161789,
+      "gradient_norm_before_clip": 0.13541464507579803,
+      "seconds": 0.370578900000055,
+      "soft_center_bce": 0.09165458381175995,
+      "positive_displacement_smooth_l1": 0.0005102224531583488,
+      "positive_regression_values": 12824
+    },
+    {
+      "step": 11,
+      "train_indices": [
+        28
+      ],
+      "loss": 0.1180405467748642,
+      "gradient_norm_before_clip": 0.24624836444854736,
+      "seconds": 0.3958086000000094,
+      "soft_center_bce": 0.11787304282188416,
+      "positive_displacement_smooth_l1": 0.00016750340000726283,
+      "positive_regression_values": 17528
+    },
+    {
+      "step": 12,
+      "train_indices": [
+        3
+      ],
+      "loss": 0.10150814801454544,
+      "gradient_norm_before_clip": 0.5360680818557739,
+      "seconds": 0.3739252000000306,
+      "soft_center_bce": 0.10134200006723404,
+      "positive_displacement_smooth_l1": 0.0001661485293880105,
+      "positive_regression_values": 14452
+    },
+    {
+      "step": 13,
+      "train_indices": [
+        20
+      ],
+      "loss": 0.13247188925743103,
+      "gradient_norm_before_clip": 0.16287483274936676,
+      "seconds": 0.36290969999981826,
+      "soft_center_bce": 0.13099941611289978,
+      "positive_displacement_smooth_l1": 0.0014724768698215485,
+      "positive_regression_values": 18760
+    },
+    {
+      "step": 14,
+      "train_indices": [
+        4
+      ],
+      "loss": 0.04962915554642677,
+      "gradient_norm_before_clip": 0.5531138181686401,
+      "seconds": 0.34684809999998834,
+      "soft_center_bce": 0.03785286098718643,
+      "positive_displacement_smooth_l1": 0.011776295490562916,
+      "positive_regression_values": 5392
+    },
+    {
+      "step": 15,
+      "train_indices": [
+        26
+      ],
+      "loss": 0.0555923730134964,
+      "gradient_norm_before_clip": 1.24570894241333,
+      "seconds": 0.36311110000019653,
+      "soft_center_bce": 0.04987522214651108,
+      "positive_displacement_smooth_l1": 0.005717151332646608,
+      "positive_regression_values": 6188
+    },
+    {
+      "step": 16,
+      "train_indices": [
+        25
+      ],
+      "loss": 0.13409718871116638,
+      "gradient_norm_before_clip": 0.5994189381599426,
+      "seconds": 0.37921239999991485,
+      "soft_center_bce": 0.13365933299064636,
+      "positive_displacement_smooth_l1": 0.00043785758316516876,
+      "positive_regression_values": 18264
+    },
+    {
+      "step": 17,
+      "train_indices": [
+        29
+      ],
+      "loss": 0.08016245067119598,
+      "gradient_norm_before_clip": 0.20935791730880737,
+      "seconds": 0.34254029999988234,
+      "soft_center_bce": 0.07998394221067429,
+      "positive_displacement_smooth_l1": 0.00017850745643954724,
+      "positive_regression_values": 12016
+    },
+    {
+      "step": 18,
+      "train_indices": [
+        10
+      ],
+      "loss": 0.11092685163021088,
+      "gradient_norm_before_clip": 2.411266803741455,
+      "seconds": 0.35528980000003685,
+      "soft_center_bce": 0.09879200905561447,
+      "positive_displacement_smooth_l1": 0.01213484350591898,
+      "positive_regression_values": 18436
+    },
+    {
+      "step": 19,
+      "train_indices": [
+        1
+      ],
+      "loss": 0.1066606193780899,
+      "gradient_norm_before_clip": 0.3677559196949005,
+      "seconds": 0.36376110000014705,
+      "soft_center_bce": 0.10655523091554642,
+      "positive_displacement_smooth_l1": 0.00010538561036810279,
+      "positive_regression_values": 15836
+    },
+    {
+      "step": 20,
+      "train_indices": [
+        24
+      ],
+      "loss": 0.13309215009212494,
+      "gradient_norm_before_clip": 0.4848991334438324,
+      "seconds": 0.34002620000001116,
+      "soft_center_bce": 0.13290724158287048,
+      "positive_displacement_smooth_l1": 0.00018490389629732817,
+      "positive_regression_values": 19892
+    },
+    {
+      "step": 21,
+      "train_indices": [
+        30
+      ],
+      "loss": 0.10950395464897156,
+      "gradient_norm_before_clip": 0.19614268839359283,
+      "seconds": 0.362408399999822,
+      "soft_center_bce": 0.10927652567625046,
+      "positive_displacement_smooth_l1": 0.00022742661531083286,
+      "positive_regression_values": 15268
+    },
+    {
+      "step": 22,
+      "train_indices": [
+        6
+      ],
+      "loss": 0.05728405341506004,
+      "gradient_norm_before_clip": 0.11007127165794373,
+      "seconds": 0.36218080000003283,
+      "soft_center_bce": 0.057137858122587204,
+      "positive_displacement_smooth_l1": 0.00014619385183323175,
+      "positive_regression_values": 7680
+    },
+    {
+      "step": 23,
+      "train_indices": [
+        21
+      ],
+      "loss": 0.09632982313632965,
+      "gradient_norm_before_clip": 1.409592866897583,
+      "seconds": 0.3279029999998784,
+      "soft_center_bce": 0.09310909360647202,
+      "positive_displacement_smooth_l1": 0.003220729297026992,
+      "positive_regression_values": 15336
+    },
+    {
+      "step": 24,
+      "train_indices": [
+        15
+      ],
+      "loss": 0.12268592417240143,
+      "gradient_norm_before_clip": 0.8540887832641602,
+      "seconds": 0.33570480000003045,
+      "soft_center_bce": 0.12158653140068054,
+      "positive_displacement_smooth_l1": 0.0010993954492732882,
+      "positive_regression_values": 18332
+    },
+    {
+      "step": 25,
+      "train_indices": [
+        18
+      ],
+      "loss": 0.09375350177288055,
+      "gradient_norm_before_clip": 0.1559680849313736,
+      "seconds": 0.35511189999988346,
+      "soft_center_bce": 0.09362785518169403,
+      "positive_displacement_smooth_l1": 0.00012564809003379196,
+      "positive_regression_values": 13180
+    },
+    {
+      "step": 26,
+      "train_indices": [
+        2
+      ],
+      "loss": 0.13696274161338806,
+      "gradient_norm_before_clip": 3.776409387588501,
+      "seconds": 0.3743360999999368,
+      "soft_center_bce": 0.11038095504045486,
+      "positive_displacement_smooth_l1": 0.0265817828476429,
+      "positive_regression_values": 18604
+    },
+    {
+      "step": 27,
+      "train_indices": [
+        22
+      ],
+      "loss": 0.09846458584070206,
+      "gradient_norm_before_clip": 0.6374174356460571,
+      "seconds": 0.37548259999994116,
+      "soft_center_bce": 0.09795442223548889,
+      "positive_displacement_smooth_l1": 0.0005101663409732282,
+      "positive_regression_values": 16304
+    },
+    {
+      "step": 28,
+      "train_indices": [
+        0
+      ],
+      "loss": 0.10832006484270096,
+      "gradient_norm_before_clip": 3.654005289077759,
+      "seconds": 0.3825719999999819,
+      "soft_center_bce": 0.07636909186840057,
+      "positive_displacement_smooth_l1": 0.031950972974300385,
+      "positive_regression_values": 12236
+    },
+    {
+      "step": 29,
+      "train_indices": [
+        5
+      ],
+      "loss": 0.11529296636581421,
+      "gradient_norm_before_clip": 0.3682786822319031,
+      "seconds": 0.35216140000011364,
+      "soft_center_bce": 0.11430706083774567,
+      "positive_displacement_smooth_l1": 0.0009859059937298298,
+      "positive_regression_values": 16016
+    },
+    {
+      "step": 30,
+      "train_indices": [
+        17
+      ],
+      "loss": 0.17168116569519043,
+      "gradient_norm_before_clip": 3.0743627548217773,
+      "seconds": 0.3654114999999365,
+      "soft_center_bce": 0.12692992389202118,
+      "positive_displacement_smooth_l1": 0.04475124552845955,
+      "positive_regression_values": 19640
+    },
+    {
+      "step": 31,
+      "train_indices": [
+        12
+      ],
+      "loss": 0.13438208401203156,
+      "gradient_norm_before_clip": 0.274828165769577,
+      "seconds": 0.37953090000019074,
+      "soft_center_bce": 0.13401275873184204,
+      "positive_displacement_smooth_l1": 0.0003693265316542238,
+      "positive_regression_values": 19884
+    },
+    {
+      "step": 32,
+      "train_indices": [
+        8
+      ],
+      "loss": 0.1471424698829651,
+      "gradient_norm_before_clip": 0.25538551807403564,
+      "seconds": 0.3849583999999595,
+      "soft_center_bce": 0.14694461226463318,
+      "positive_displacement_smooth_l1": 0.00019785633776336908,
+      "positive_regression_values": 22548
+    }
+  ],
+  "weights_before_sha256": "20e5c787243f16703c44241bdac3fa18bc5494379ce2e830fa37420a0a2c5cb4",
+  "weights_after_sha256": "5923ff73163775094f11b485615d2f94eee9a1ea825dd7ce2de4f0ea4051ed72",
+  "resumed_from": {
+    "path": "daily/2026-10-14/experiments/qat/artifacts/mlsd_qat_checkpoint.pt",
+    "sha256": "531a5eb17a313449a5b50004d8fbac8b7dccfded4d9a31d86c58cb786c883dcd",
+    "step": 8
+  },
+  "checkpoint": {
+    "path": "daily/2026-10-15/experiments/qat/artifacts/mlsd_step0032.pt",
+    "sha256": "a35f18ee152623a6b56486a8bfbffcf2c6c0e21729a1897bfd3968f12f1b1067"
+  },
+  "outputs": {
+    "before": {
+      "path": "daily/2026-10-15/experiments/qat/artifacts/mlsd_step0032_before.npy",
+      "sha256": "9a75ab352ef03a6282ad16c0fee25b873c37c9c69fb84bbbfb1c8c2629d05e93"
+    },
+    "after": {
+      "path": "daily/2026-10-15/experiments/qat/artifacts/mlsd_step0032_after.npy",
+      "sha256": "1b8e727d3c28c1d570b45f77e3a132d216953139ae6b1259c5cec6e324e6f128"
+    }
+  },
+  "source_sha256": {
+    "daily/2026-10-15/experiments/qat/src/train_continue.py": "2aa9bae9e69da653da82768e576dd846ab9f2209e87dcc6c51d24fe84236aa38",
+    "daily/2026-10-14/experiments/qat/src/train.py": "6b278cb1102fd5e0f1d5706b861aff22ece7920bad34ac839aea5665f82922b6",
+    "daily/2026-10-14/experiments/qat/src/models.py": "5728eb1f9d806dd5872fb380c177d975fcfb8f24a5c8a554b43ad3674b6a3671"
+  },
+  "limitations": [
+    "Small fixed evaluation subset, repeatedly monitored; not a fresh final test set",
+    "Only fake-quant training metrics; deployment INT8 must be evaluated separately",
+    "M-LSD uses teacher pseudo-labels, not ground-truth supervised training"
+  ]
+}

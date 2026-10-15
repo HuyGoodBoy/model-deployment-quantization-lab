@@ -1,0 +1,29 @@
+{
+  "policy": {
+    "per_channel": true,
+    "minimum": [
+      -117.7547836303711,
+      -110.75995635986328,
+      -5.133374214172363,
+      -110.77360534667969
+    ],
+    "maximum": [
+      7.385333061218262,
+      111.7036361694336,
+      119.19725036621094,
+      111.73562622070312
+    ],
+    "threshold": 0.1,
+    "margin_fraction": 0.02,
+    "fit_split": "32 Wireframe train images only",
+    "rule": "QAT pre-output displacement extrema at teacher confidence > 0.1, 2% margin/channel",
+    "center_minimum": -5.293304824724492,
+    "center_maximum": 4.829615028379256,
+    "center_rule": "Clip below sigmoid .005, below unchanged decoder score .01; max from train + 2% margin"
+  },
+  "development_variant": "center_scan_foreground_channel",
+  "development_sAP10": 13.697320921197253,
+  "criterion": "Highest development sAP10 among predeclared three center/range policies, before any holdout inference",
+  "selected_at_utc": "2026-10-15T06:43:11.958853+00:00",
+  "holdout_used": false
+}

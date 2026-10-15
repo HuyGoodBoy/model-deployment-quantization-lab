@@ -1,0 +1,565 @@
+{
+  "evaluated_at_utc": "2026-10-15T06:55:01.001886+00:00",
+  "selection_sha256": "3173f8cf135e12c378cf91717124648594d2dae19601be18218b7e2de230b3fb",
+  "holdout_manifest_sha256": "6b0a45b47b5426f9d0ff6b50d80d8cf316fe3bebd7aafcea445cb173d4a77ac8",
+  "holdout_images": 32,
+  "models": {
+    "fp32": {
+      "metrics": {
+        "active": {
+          "snr_db": null,
+          "exact_match": true,
+          "rmse": 0.0,
+          "mae": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0
+        },
+        "center": {
+          "snr_db": null,
+          "exact_match": true,
+          "rmse": 0.0,
+          "mae": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0
+        },
+        "displacement": {
+          "snr_db": null,
+          "exact_match": true,
+          "rmse": 0.0,
+          "mae": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 12.338149730859524,
+          "precision_at_0_1": 0.2320675105485232,
+          "recall_at_0_1": 0.24823695345557123,
+          "ground_truth_lines": 3545,
+          "predicted_line_counts": [
+            121,
+            112,
+            124,
+            92,
+            67,
+            109,
+            118,
+            111,
+            134,
+            96,
+            129,
+            120,
+            109,
+            134,
+            119,
+            128,
+            80,
+            144,
+            114,
+            127,
+            158,
+            124,
+            136,
+            155,
+            129,
+            127,
+            111,
+            101,
+            137,
+            124,
+            129,
+            107
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/holdout_fp32.npy",
+        "sha256": "8efdbc2e5342d4d339aa03e4839a9720e07a8c7a8affb0521df3509529d2367e"
+      }
+    },
+    "selected_fake_quant": {
+      "metrics": {
+        "active": {
+          "snr_db": 7.400805727809807,
+          "exact_match": false,
+          "rmse": 11.453992176798936,
+          "mae": 3.375926711516602,
+          "max_abs": 683.2136840820312,
+          "relative_l2": 0.4265399499082974
+        },
+        "center": {
+          "snr_db": 7.6364209436852715,
+          "exact_match": false,
+          "rmse": 2.7949357491739315,
+          "mae": 1.7350830801653556,
+          "max_abs": 33.700045585632324,
+          "relative_l2": 0.415125061375142
+        },
+        "displacement": {
+          "snr_db": 7.397886647392653,
+          "exact_match": false,
+          "rmse": 12.729473850957525,
+          "mae": 3.7861376193544136,
+          "max_abs": 683.2136840820312,
+          "relative_l2": 0.4266833219418282
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 11.286828814746706,
+          "precision_at_0_1": 0.21553446553446554,
+          "recall_at_0_1": 0.24344146685472495,
+          "ground_truth_lines": 3545,
+          "predicted_line_counts": [
+            125,
+            116,
+            128,
+            92,
+            72,
+            110,
+            115,
+            123,
+            146,
+            99,
+            147,
+            126,
+            116,
+            146,
+            123,
+            140,
+            89,
+            151,
+            115,
+            133,
+            159,
+            125,
+            144,
+            161,
+            124,
+            130,
+            112,
+            106,
+            155,
+            131,
+            136,
+            113
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/holdout_selected_fake_quant.npy",
+        "sha256": "19ffb5b142688c7a1568eb4844b113daa2b397b9e345107c80e0ba4fcf365a85"
+      }
+    },
+    "original_fake_quant_step32": {
+      "metrics": {
+        "active": {
+          "snr_db": 8.159780709311182,
+          "exact_match": false,
+          "rmse": 10.495620837182766,
+          "mae": 3.7052420532408745,
+          "max_abs": 466.9802436828613,
+          "relative_l2": 0.3908507633885567
+        },
+        "center": {
+          "snr_db": 18.20237938566736,
+          "exact_match": false,
+          "rmse": 0.8280830716783315,
+          "mae": 0.5001845476067243,
+          "max_abs": 15.121382713317871,
+          "relative_l2": 0.12299318009574434
+        },
+        "displacement": {
+          "snr_db": 8.110243158870727,
+          "exact_match": false,
+          "rmse": 11.727153983553778,
+          "mae": 4.506506429649412,
+          "max_abs": 466.9802436828613,
+          "relative_l2": 0.39308624042223705
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 6.636493867682647,
+          "precision_at_0_1": 0.17320598864223025,
+          "recall_at_0_1": 0.18928067700987306,
+          "ground_truth_lines": 3545,
+          "predicted_line_counts": [
+            113,
+            136,
+            119,
+            83,
+            68,
+            105,
+            113,
+            121,
+            142,
+            89,
+            133,
+            115,
+            103,
+            141,
+            130,
+            134,
+            84,
+            155,
+            95,
+            144,
+            147,
+            122,
+            144,
+            164,
+            124,
+            130,
+            105,
+            94,
+            141,
+            128,
+            143,
+            109
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/holdout_original_fake_quant_step32.npy",
+        "sha256": "6c0872f2ab6b826df67fdfbdbacb9f6be5a45ee7d628cf3869b5c4aa7770c742"
+      }
+    },
+    "original_fake_quant_step128": {
+      "metrics": {
+        "active": {
+          "snr_db": 8.870105532199482,
+          "exact_match": false,
+          "rmse": 9.67145670335131,
+          "mae": 3.5350291109150307,
+          "max_abs": 468.98895263671875,
+          "relative_l2": 0.3601593744881209
+        },
+        "center": {
+          "snr_db": 19.302435968185094,
+          "exact_match": false,
+          "rmse": 0.7295769043586439,
+          "mae": 0.44828826376066766,
+          "max_abs": 17.19067668914795,
+          "relative_l2": 0.1083622968038828
+        },
+        "displacement": {
+          "snr_db": 8.820103354954263,
+          "exact_match": false,
+          "rmse": 10.80686230323841,
+          "mae": 4.3067143227036215,
+          "max_abs": 468.98895263671875,
+          "relative_l2": 0.36223868804811815
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 6.684023454677049,
+          "precision_at_0_1": 0.17642425833552114,
+          "recall_at_0_1": 0.18956276445698167,
+          "ground_truth_lines": 3545,
+          "predicted_line_counts": [
+            124,
+            132,
+            127,
+            66,
+            73,
+            106,
+            116,
+            110,
+            132,
+            83,
+            132,
+            106,
+            102,
+            144,
+            123,
+            131,
+            81,
+            153,
+            104,
+            135,
+            141,
+            127,
+            139,
+            168,
+            128,
+            137,
+            106,
+            90,
+            139,
+            121,
+            135,
+            98
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/holdout_original_fake_quant_step128.npy",
+        "sha256": "782d16b0a59ac21884d4e2711f715b9fc05f216f2a0eda709cff17a7166951cc"
+      }
+    },
+    "original_integer": {
+      "metrics": {
+        "active": {
+          "snr_db": 8.204511917616184,
+          "exact_match": false,
+          "rmse": 10.441708686704034,
+          "mae": 3.6983095619318846,
+          "max_abs": 466.9802436828613,
+          "relative_l2": 0.38884310652886134
+        },
+        "center": {
+          "snr_db": 18.204886257550214,
+          "exact_match": false,
+          "rmse": 0.8278441095549999,
+          "mae": 0.5002938398630862,
+          "max_abs": 15.27625560760498,
+          "relative_l2": 0.12295768762829005
+        },
+        "displacement": {
+          "snr_db": 8.155027258077485,
+          "exact_match": false,
+          "rmse": 11.666844856474988,
+          "mae": 4.497813492449083,
+          "max_abs": 466.9802436828613,
+          "relative_l2": 0.3910647194240652
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 6.693051681075102,
+          "precision_at_0_1": 0.1709090909090909,
+          "recall_at_0_1": 0.1856135401974612,
+          "ground_truth_lines": 3545,
+          "predicted_line_counts": [
+            113,
+            138,
+            117,
+            72,
+            67,
+            103,
+            112,
+            115,
+            145,
+            85,
+            137,
+            105,
+            100,
+            137,
+            134,
+            131,
+            88,
+            157,
+            98,
+            141,
+            144,
+            115,
+            145,
+            168,
+            127,
+            136,
+            109,
+            97,
+            150,
+            121,
+            138,
+            105
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/holdout_original_integer.npy",
+        "sha256": "454b3ecd26b62bb67377fc63d3da662873dcbdfe23c701ed75dad1adce16b0b1"
+      }
+    },
+    "selected_integer": {
+      "metrics": {
+        "active": {
+          "snr_db": 7.414664921726342,
+          "exact_match": false,
+          "rmse": 11.435730774973733,
+          "mae": 3.3705674562748995,
+          "max_abs": 683.2136840820312,
+          "relative_l2": 0.42585990601621626
+        },
+        "center": {
+          "snr_db": 7.636484867645752,
+          "exact_match": false,
+          "rmse": 2.7949151798698773,
+          "mae": 1.734920657692062,
+          "max_abs": 33.700045585632324,
+          "relative_l2": 0.4151220062660539
+        },
+        "displacement": {
+          "snr_db": 7.411912370831182,
+          "exact_match": false,
+          "rmse": 12.708935251681586,
+          "mae": 3.77947915592061,
+          "max_abs": 683.2136840820312,
+          "relative_l2": 0.42599488203695096
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 10.984430356722449,
+          "precision_at_0_1": 0.2110502737680438,
+          "recall_at_0_1": 0.2392101551480959,
+          "ground_truth_lines": 3545,
+          "predicted_line_counts": [
+            123,
+            117,
+            125,
+            86,
+            74,
+            118,
+            119,
+            122,
+            145,
+            98,
+            147,
+            120,
+            123,
+            145,
+            127,
+            133,
+            82,
+            149,
+            114,
+            134,
+            160,
+            124,
+            141,
+            165,
+            134,
+            138,
+            115,
+            101,
+            158,
+            128,
+            140,
+            113
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/holdout_selected_integer.npy",
+        "sha256": "258f581ecaec67dffa4752449e7be7901b875fcf42433838f579dd352d42ff56"
+      }
+    },
+    "ptq_split_full_int8": {
+      "metrics": {
+        "active": {
+          "snr_db": 7.167616705387623,
+          "exact_match": false,
+          "rmse": 11.765661060104854,
+          "mae": 3.972533875545871,
+          "max_abs": 483.13684844970703,
+          "relative_l2": 0.4381463163018908
+        },
+        "center": {
+          "snr_db": 17.60348799896643,
+          "exact_match": false,
+          "rmse": 0.8871937544866503,
+          "mae": 0.5148515877044381,
+          "max_abs": 17.30019187927246,
+          "relative_l2": 0.13177274715233314
+        },
+        "displacement": {
+          "snr_db": 7.117610495273041,
+          "exact_match": false,
+          "rmse": 13.146927285000269,
+          "mae": 4.836954447506228,
+          "max_abs": 483.13684844970703,
+          "relative_l2": 0.44067607765812067
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 7.7612524149249715,
+          "precision_at_0_1": 0.18241437940247754,
+          "recall_at_0_1": 0.21184767277856134,
+          "ground_truth_lines": 3545,
+          "predicted_line_counts": [
+            133,
+            132,
+            127,
+            95,
+            78,
+            118,
+            123,
+            131,
+            133,
+            104,
+            142,
+            115,
+            112,
+            148,
+            135,
+            146,
+            90,
+            159,
+            125,
+            143,
+            146,
+            133,
+            150,
+            165,
+            140,
+            149,
+            109,
+            106,
+            155,
+            127,
+            143,
+            105
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/holdout_ptq_split_full_int8.npy",
+        "sha256": "74bc0aa62b3106e924ffd17ebbdcb567a398b0216717157a20e8e1c9f0902c1f"
+      }
+    }
+  },
+  "paired_comparisons": {
+    "original_fake_quant_step32_to_selected_fake_quant": {
+      "delta_sAP10_pp": 4.650334947064058,
+      "paired_image_bootstrap_95_percentile_ci_pp": [
+        3.2862705182803853,
+        6.780842959986817
+      ],
+      "resamples": 1000,
+      "seed": 20261015,
+      "note": "Uncertainty on this 32-image subset only; not population-wide or cross-dataset proof"
+    },
+    "original_integer_to_selected_integer": {
+      "delta_sAP10_pp": 4.291378675647347,
+      "paired_image_bootstrap_95_percentile_ci_pp": [
+        2.8960863306758884,
+        6.355531085221071
+      ],
+      "resamples": 1000,
+      "seed": 20261015,
+      "note": "Uncertainty on this 32-image subset only; not population-wide or cross-dataset proof"
+    },
+    "ptq_split_full_int8_to_selected_integer": {
+      "delta_sAP10_pp": 3.223177941797477,
+      "paired_image_bootstrap_95_percentile_ci_pp": [
+        2.318296913130446,
+        4.8284846839406885
+      ],
+      "resamples": 1000,
+      "seed": 20261015,
+      "note": "Uncertainty on this 32-image subset only; not population-wide or cross-dataset proof"
+    }
+  },
+  "selected_fake_quant_to_integer_parity": {
+    "snr_db": 25.14814041152391,
+    "exact_match": false,
+    "rmse": 1.3148012854152498,
+    "mae": 0.6459624498497032,
+    "max_abs": 61.953551292419434,
+    "relative_l2": 0.05528317527034837
+  },
+  "decoder": "Unchanged day13 NMS/top200/score>=.01/map-length>20 and sAP10 implementation; no threshold retuning",
+  "precision_scope": "QAT/ONNX integer models keep non-Conv regions float; PTQ split TFLite is full INT8. Fake-quant quality is not integer deployment quality.",
+  "limitations": "Fresh for this experiment, selected before evaluation; same YorkUrban source, small subset; original pretrained-data overlap not audited",
+  "source_sha256": {
+    "daily/2026-10-15/experiments/qat/src/evaluate_research.py": "ad9d7cad75141cd15a99c69b2e79f14f3f839a8a8fb4e7cf690b977f28483076"
+  }
+}

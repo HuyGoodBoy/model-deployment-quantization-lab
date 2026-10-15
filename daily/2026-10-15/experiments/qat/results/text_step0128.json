@@ -1,0 +1,1593 @@
+{
+  "task_date": "2026-10-15",
+  "executed_at_utc": "2026-10-15T06:18:25.841974+00:00",
+  "status": "in_progress",
+  "task": "text",
+  "framework": "2.13.0+cpu",
+  "device": "CPU",
+  "cuda_available": false,
+  "threads": 4,
+  "start_step": 8,
+  "steps_this_run": 120,
+  "total_steps": 128,
+  "batch_size": 2,
+  "learning_rate": 1e-05,
+  "optimizer": "AdamW, weight_decay=.01, gradient clipping 1.0",
+  "observer_schedule": "Restored frozen day-14 ranges; fake quant stays enabled",
+  "sampling": "Continue fixed seed-20261014 permutation, cycle without reshuffle",
+  "data": {
+    "train_examples_available": 256,
+    "evaluation_examples": 100,
+    "train_samples_this_run": 240,
+    "train_samples_total": 256,
+    "unique_train_examples_total": 256,
+    "equivalent_train_epochs": 1.0,
+    "evaluation_used_in_training": false,
+    "labels": "SST-2 train labels + FP32 teacher distillation",
+    "manifest_sha256": "7653ea182d1081dd688de00b7cbb6f81c5894eb62833ce16af6bf6c807076dcb"
+  },
+  "config": {
+    "fused_batchnorms": 0,
+    "fake_quantized_layers": [
+      "distilbert.transformer.layer.0.attention.q_lin",
+      "distilbert.transformer.layer.0.attention.k_lin",
+      "distilbert.transformer.layer.0.attention.v_lin",
+      "distilbert.transformer.layer.0.attention.out_lin",
+      "distilbert.transformer.layer.0.ffn.lin1",
+      "distilbert.transformer.layer.0.ffn.lin2",
+      "distilbert.transformer.layer.1.attention.q_lin",
+      "distilbert.transformer.layer.1.attention.k_lin",
+      "distilbert.transformer.layer.1.attention.v_lin",
+      "distilbert.transformer.layer.1.attention.out_lin",
+      "distilbert.transformer.layer.1.ffn.lin1",
+      "distilbert.transformer.layer.1.ffn.lin2",
+      "distilbert.transformer.layer.2.attention.q_lin",
+      "distilbert.transformer.layer.2.attention.k_lin",
+      "distilbert.transformer.layer.2.attention.v_lin",
+      "distilbert.transformer.layer.2.attention.out_lin",
+      "distilbert.transformer.layer.2.ffn.lin1",
+      "distilbert.transformer.layer.2.ffn.lin2",
+      "distilbert.transformer.layer.3.attention.q_lin",
+      "distilbert.transformer.layer.3.attention.k_lin",
+      "distilbert.transformer.layer.3.attention.v_lin",
+      "distilbert.transformer.layer.3.attention.out_lin",
+      "distilbert.transformer.layer.3.ffn.lin1",
+      "distilbert.transformer.layer.3.ffn.lin2",
+      "distilbert.transformer.layer.4.attention.q_lin",
+      "distilbert.transformer.layer.4.attention.k_lin",
+      "distilbert.transformer.layer.4.attention.v_lin",
+      "distilbert.transformer.layer.4.attention.out_lin",
+      "distilbert.transformer.layer.4.ffn.lin1",
+      "distilbert.transformer.layer.4.ffn.lin2",
+      "distilbert.transformer.layer.5.attention.q_lin",
+      "distilbert.transformer.layer.5.attention.k_lin",
+      "distilbert.transformer.layer.5.attention.v_lin",
+      "distilbert.transformer.layer.5.attention.out_lin",
+      "distilbert.transformer.layer.5.ffn.lin1",
+      "distilbert.transformer.layer.5.ffn.lin2",
+      "pre_classifier",
+      "classifier"
+    ],
+    "weights": "signed INT8, per-output-channel symmetric (-127..127)",
+    "activations": "signed INT8, per-tensor affine (-128..127), MinMax observer",
+    "float_regions": "bias, residual/add, resize, normalization; text embedding/attention MatMul/Softmax/mask",
+    "scope": "selective W8A8 fake-quant training pilot; not an exported full INT8 model"
+  },
+  "original_teacher_gate": {
+    "snr_db": 125.86798378628507,
+    "exact_match": false,
+    "rmse": 1.86034239046404e-06,
+    "mae": 1.2868642807006836e-06,
+    "max_abs": 1.0594725608825684e-05,
+    "relative_l2": 5.088629258358321e-07
+  },
+  "original_teacher": {
+    "logits": {
+      "snr_db": 125.86798378628507,
+      "exact_match": false,
+      "rmse": 1.86034239046404e-06,
+      "mae": 1.2868642807006836e-06,
+      "max_abs": 1.0594725608825684e-05,
+      "relative_l2": 5.088629258358321e-07
+    },
+    "accuracy": 0.91,
+    "agreement_with_original": 1.0
+  },
+  "fake_quant_before": {
+    "logits": {
+      "snr_db": 20.82894455769744,
+      "exact_match": false,
+      "rmse": 0.3323110966274646,
+      "mae": 0.2080866651237011,
+      "max_abs": 1.7727893739938736,
+      "relative_l2": 0.09089767441969937
+    },
+    "accuracy": 0.9,
+    "agreement_with_original": 0.99
+  },
+  "fake_quant_after": {
+    "logits": {
+      "snr_db": 18.40111475577374,
+      "exact_match": false,
+      "rmse": 0.4394771846491892,
+      "mae": 0.3042374987900257,
+      "max_abs": 2.0931690335273743,
+      "relative_l2": 0.12021101446970626
+    },
+    "accuracy": 0.9,
+    "agreement_with_original": 0.99
+  },
+  "history": [
+    {
+      "step": 9,
+      "train_indices": [
+        120,
+        0
+      ],
+      "loss": 0.012588255107402802,
+      "gradient_norm_before_clip": 1.6679106950759888,
+      "seconds": 0.5582038000000011,
+      "cross_entropy": 0.0012578823370859027,
+      "distillation_kl_T2": 0.023918628692626953
+    },
+    {
+      "step": 10,
+      "train_indices": [
+        163,
+        249
+      ],
+      "loss": 0.0004988877917639911,
+      "gradient_norm_before_clip": 0.05404504016041756,
+      "seconds": 0.5098825999998553,
+      "cross_entropy": 0.00015239728963933885,
+      "distillation_kl_T2": 0.0008453782647848129
+    },
+    {
+      "step": 11,
+      "train_indices": [
+        175,
+        147
+      ],
+      "loss": 0.0018671187572181225,
+      "gradient_norm_before_clip": 0.15010055899620056,
+      "seconds": 0.45115310000005593,
+      "cross_entropy": 0.00043573311995714903,
+      "distillation_kl_T2": 0.003298504278063774
+    },
+    {
+      "step": 12,
+      "train_indices": [
+        90,
+        5
+      ],
+      "loss": 0.0007373245898634195,
+      "gradient_norm_before_clip": 0.11991795897483826,
+      "seconds": 0.43754199999989396,
+      "cross_entropy": 0.0004069530114065856,
+      "distillation_kl_T2": 0.001067696139216423
+    },
+    {
+      "step": 13,
+      "train_indices": [
+        8,
+        189
+      ],
+      "loss": 0.0012469645589590073,
+      "gradient_norm_before_clip": 0.13968876004219055,
+      "seconds": 0.44693009999991773,
+      "cross_entropy": 0.00046295858919620514,
+      "distillation_kl_T2": 0.0020309705287218094
+    },
+    {
+      "step": 14,
+      "train_indices": [
+        252,
+        231
+      ],
+      "loss": 0.003390986705198884,
+      "gradient_norm_before_clip": 0.5131725072860718,
+      "seconds": 0.44487880000019686,
+      "cross_entropy": 0.0007957502966746688,
+      "distillation_kl_T2": 0.005986222997307777
+    },
+    {
+      "step": 15,
+      "train_indices": [
+        208,
+        28
+      ],
+      "loss": 0.028104113414883614,
+      "gradient_norm_before_clip": 4.73996114730835,
+      "seconds": 0.44943030000013096,
+      "cross_entropy": 0.027132593095302582,
+      "distillation_kl_T2": 0.029075633734464645
+    },
+    {
+      "step": 16,
+      "train_indices": [
+        235,
+        81
+      ],
+      "loss": 0.005101357586681843,
+      "gradient_norm_before_clip": 0.6813756823539734,
+      "seconds": 0.42983249999997497,
+      "cross_entropy": 0.0036264085210859776,
+      "distillation_kl_T2": 0.006576307117938995
+    },
+    {
+      "step": 17,
+      "train_indices": [
+        141,
+        177
+      ],
+      "loss": 0.0017181836301460862,
+      "gradient_norm_before_clip": 0.3073795437812805,
+      "seconds": 0.4336127999999917,
+      "cross_entropy": 0.0006062344764359295,
+      "distillation_kl_T2": 0.002830132842063904
+    },
+    {
+      "step": 18,
+      "train_indices": [
+        164,
+        140
+      ],
+      "loss": 0.0012974496930837631,
+      "gradient_norm_before_clip": 0.2686816453933716,
+      "seconds": 0.4405583000000206,
+      "cross_entropy": 0.0006350019248202443,
+      "distillation_kl_T2": 0.0019598975777626038
+    },
+    {
+      "step": 19,
+      "train_indices": [
+        221,
+        207
+      ],
+      "loss": 0.000357477372745052,
+      "gradient_norm_before_clip": 0.08059019595384598,
+      "seconds": 0.4376916999999594,
+      "cross_entropy": 0.0002365418040426448,
+      "distillation_kl_T2": 0.0004784129559993744
+    },
+    {
+      "step": 20,
+      "train_indices": [
+        73,
+        91
+      ],
+      "loss": 0.008782166987657547,
+      "gradient_norm_before_clip": 1.6708869934082031,
+      "seconds": 0.44295229999988806,
+      "cross_entropy": 0.004897750914096832,
+      "distillation_kl_T2": 0.012666583061218262
+    },
+    {
+      "step": 21,
+      "train_indices": [
+        41,
+        101
+      ],
+      "loss": 0.00321584427729249,
+      "gradient_norm_before_clip": 0.6067841053009033,
+      "seconds": 0.43909310000003643,
+      "cross_entropy": 0.0062820808961987495,
+      "distillation_kl_T2": 0.00014960765838623047
+    },
+    {
+      "step": 22,
+      "train_indices": [
+        251,
+        115
+      ],
+      "loss": 0.45634177327156067,
+      "gradient_norm_before_clip": 186.98971557617188,
+      "seconds": 0.44996549999996205,
+      "cross_entropy": 0.42310717701911926,
+      "distillation_kl_T2": 0.4895763695240021
+    },
+    {
+      "step": 23,
+      "train_indices": [
+        27,
+        71
+      ],
+      "loss": 0.00040978300967253745,
+      "gradient_norm_before_clip": 0.06417103856801987,
+      "seconds": 0.45360180000011496,
+      "cross_entropy": 0.00016962020890787244,
+      "distillation_kl_T2": 0.0006499458104372025
+    },
+    {
+      "step": 24,
+      "train_indices": [
+        222,
+        2
+      ],
+      "loss": 0.00045804010005667806,
+      "gradient_norm_before_clip": 0.07598956674337387,
+      "seconds": 0.4356186999998499,
+      "cross_entropy": 0.0003153641300741583,
+      "distillation_kl_T2": 0.0006007160991430283
+    },
+    {
+      "step": 25,
+      "train_indices": [
+        144,
+        23
+      ],
+      "loss": 0.010041442699730396,
+      "gradient_norm_before_clip": 0.9587206840515137,
+      "seconds": 0.4194238999998561,
+      "cross_entropy": 0.0017707176739349961,
+      "distillation_kl_T2": 0.01831216737627983
+    },
+    {
+      "step": 26,
+      "train_indices": [
+        243,
+        111
+      ],
+      "loss": 0.002649067435413599,
+      "gradient_norm_before_clip": 0.5190300941467285,
+      "seconds": 0.4347316000000774,
+      "cross_entropy": 0.0022736762184649706,
+      "distillation_kl_T2": 0.003024458885192871
+    },
+    {
+      "step": 27,
+      "train_indices": [
+        186,
+        9
+      ],
+      "loss": 0.0012257726630195975,
+      "gradient_norm_before_clip": 0.08435899019241333,
+      "seconds": 0.44080110000004424,
+      "cross_entropy": 0.00045498894178308547,
+      "distillation_kl_T2": 0.0019965562969446182
+    },
+    {
+      "step": 28,
+      "train_indices": [
+        16,
+        201
+      ],
+      "loss": 0.007729521486908197,
+      "gradient_norm_before_clip": 1.7043569087982178,
+      "seconds": 0.4993197000001146,
+      "cross_entropy": 0.004146740771830082,
+      "distillation_kl_T2": 0.011312302201986313
+    },
+    {
+      "step": 29,
+      "train_indices": [
+        173,
+        80
+      ],
+      "loss": 0.0004647024907171726,
+      "gradient_norm_before_clip": 0.058451805263757706,
+      "seconds": 0.5026534999999512,
+      "cross_entropy": 0.0004010395787190646,
+      "distillation_kl_T2": 0.0005283653736114502
+    },
+    {
+      "step": 30,
+      "train_indices": [
+        155,
+        39
+      ],
+      "loss": 0.0019290256313979626,
+      "gradient_norm_before_clip": 0.8396331071853638,
+      "seconds": 0.4636628999999175,
+      "cross_entropy": 0.0007234541699290276,
+      "distillation_kl_T2": 0.0031345970928668976
+    },
+    {
+      "step": 31,
+      "train_indices": [
+        61,
+        135
+      ],
+      "loss": 0.01629498228430748,
+      "gradient_norm_before_clip": 3.779392719268799,
+      "seconds": 0.44578610000007757,
+      "cross_entropy": 0.027358872815966606,
+      "distillation_kl_T2": 0.005231089890003204
+    },
+    {
+      "step": 32,
+      "train_indices": [
+        232,
+        54
+      ],
+      "loss": 0.0015927040949463844,
+      "gradient_norm_before_clip": 0.343902051448822,
+      "seconds": 0.4277320000001055,
+      "cross_entropy": 0.0005887745646759868,
+      "distillation_kl_T2": 0.0025966335088014603
+    },
+    {
+      "step": 33,
+      "train_indices": [
+        107,
+        237
+      ],
+      "loss": 0.002640641527250409,
+      "gradient_norm_before_clip": 0.5826922059059143,
+      "seconds": 0.4297910000000229,
+      "cross_entropy": 0.0010353238321840763,
+      "distillation_kl_T2": 0.004245959222316742
+    },
+    {
+      "step": 34,
+      "train_indices": [
+        171,
+        62
+      ],
+      "loss": 0.02805272303521633,
+      "gradient_norm_before_clip": 5.89439058303833,
+      "seconds": 0.4292209999998704,
+      "cross_entropy": 0.007299434393644333,
+      "distillation_kl_T2": 0.04880601167678833
+    },
+    {
+      "step": 35,
+      "train_indices": [
+        106,
+        11
+      ],
+      "loss": 0.011353875510394573,
+      "gradient_norm_before_clip": 1.3170005083084106,
+      "seconds": 0.42966880000017227,
+      "cross_entropy": 0.0022410359233617783,
+      "distillation_kl_T2": 0.020466715097427368
+    },
+    {
+      "step": 36,
+      "train_indices": [
+        225,
+        156
+      ],
+      "loss": 0.0032067198771983385,
+      "gradient_norm_before_clip": 0.5654850006103516,
+      "seconds": 0.4467725000001792,
+      "cross_entropy": 0.0004943633684888482,
+      "distillation_kl_T2": 0.005919076502323151
+    },
+    {
+      "step": 37,
+      "train_indices": [
+        158,
+        124
+      ],
+      "loss": 0.002547343261539936,
+      "gradient_norm_before_clip": 0.3708953261375427,
+      "seconds": 0.4637815999999475,
+      "cross_entropy": 0.00023069589224178344,
+      "distillation_kl_T2": 0.004863990470767021
+    },
+    {
+      "step": 38,
+      "train_indices": [
+        136,
+        46
+      ],
+      "loss": 0.00038531579775735736,
+      "gradient_norm_before_clip": 0.06841200590133667,
+      "seconds": 0.48138569999991887,
+      "cross_entropy": 0.00023749598767608404,
+      "distillation_kl_T2": 0.0005331356078386307
+    },
+    {
+      "step": 39,
+      "train_indices": [
+        78,
+        97
+      ],
+      "loss": 0.0008648765506222844,
+      "gradient_norm_before_clip": 0.24964816868305206,
+      "seconds": 0.42749109999999746,
+      "cross_entropy": 0.0004849436809308827,
+      "distillation_kl_T2": 0.001244809478521347
+    },
+    {
+      "step": 40,
+      "train_indices": [
+        55,
+        194
+      ],
+      "loss": 0.021154720336198807,
+      "gradient_norm_before_clip": 3.833169460296631,
+      "seconds": 0.4478902000000744,
+      "cross_entropy": 0.02694343961775303,
+      "distillation_kl_T2": 0.015366002917289734
+    },
+    {
+      "step": 41,
+      "train_indices": [
+        70,
+        58
+      ],
+      "loss": 0.0004999974044039845,
+      "gradient_norm_before_clip": 0.15587162971496582,
+      "seconds": 0.42480969999996887,
+      "cross_entropy": 0.00029694868135266006,
+      "distillation_kl_T2": 0.0007030460983514786
+    },
+    {
+      "step": 42,
+      "train_indices": [
+        98,
+        100
+      ],
+      "loss": 0.00047265630564652383,
+      "gradient_norm_before_clip": 0.07593894749879837,
+      "seconds": 0.44886539999993147,
+      "cross_entropy": 0.0001908947597257793,
+      "distillation_kl_T2": 0.0007544178515672684
+    },
+    {
+      "step": 43,
+      "train_indices": [
+        193,
+        255
+      ],
+      "loss": 0.0020957423839718103,
+      "gradient_norm_before_clip": 0.3929605185985565,
+      "seconds": 0.44211299999983567,
+      "cross_entropy": 0.001453027711249888,
+      "distillation_kl_T2": 0.0027384571731090546
+    },
+    {
+      "step": 44,
+      "train_indices": [
+        219,
+        118
+      ],
+      "loss": 0.016331959515810013,
+      "gradient_norm_before_clip": 3.333818197250366,
+      "seconds": 0.4308008999998947,
+      "cross_entropy": 0.00582280196249485,
+      "distillation_kl_T2": 0.026841115206480026
+    },
+    {
+      "step": 45,
+      "train_indices": [
+        84,
+        200
+      ],
+      "loss": 0.000688461004756391,
+      "gradient_norm_before_clip": 0.10245785862207413,
+      "seconds": 0.43292889999997897,
+      "cross_entropy": 0.00025179312797263265,
+      "distillation_kl_T2": 0.0011251289397478104
+    },
+    {
+      "step": 46,
+      "train_indices": [
+        25,
+        32
+      ],
+      "loss": 0.0015375027433037758,
+      "gradient_norm_before_clip": 0.3503699004650116,
+      "seconds": 0.5232655999998315,
+      "cross_entropy": 0.00031274190405383706,
+      "distillation_kl_T2": 0.0027622636407613754
+    },
+    {
+      "step": 47,
+      "train_indices": [
+        103,
+        142
+      ],
+      "loss": 0.06124787777662277,
+      "gradient_norm_before_clip": 9.412110328674316,
+      "seconds": 0.46250780000013947,
+      "cross_entropy": 0.004697050433605909,
+      "distillation_kl_T2": 0.11779870837926865
+    },
+    {
+      "step": 48,
+      "train_indices": [
+        105,
+        96
+      ],
+      "loss": 0.00014539965195581317,
+      "gradient_norm_before_clip": 0.018705185502767563,
+      "seconds": 0.4453854999999294,
+      "cross_entropy": 0.0002370713191339746,
+      "distillation_kl_T2": 5.3727999329566956e-05
+    },
+    {
+      "step": 49,
+      "train_indices": [
+        187,
+        180
+      ],
+      "loss": 0.004697032272815704,
+      "gradient_norm_before_clip": 0.6569772362709045,
+      "seconds": 0.42905900000005204,
+      "cross_entropy": 0.0003364605945535004,
+      "distillation_kl_T2": 0.009057603776454926
+    },
+    {
+      "step": 50,
+      "train_indices": [
+        133,
+        116
+      ],
+      "loss": 0.0004908753326162696,
+      "gradient_norm_before_clip": 0.1007954329252243,
+      "seconds": 0.43401749999998174,
+      "cross_entropy": 0.00025179312797263265,
+      "distillation_kl_T2": 0.0007299575954675674
+    },
+    {
+      "step": 51,
+      "train_indices": [
+        190,
+        216
+      ],
+      "loss": 0.00033023871947079897,
+      "gradient_norm_before_clip": 0.1171303540468216,
+      "seconds": 0.4295988999999736,
+      "cross_entropy": 0.00042614174890331924,
+      "distillation_kl_T2": 0.00023433566093444824
+    },
+    {
+      "step": 52,
+      "train_indices": [
+        82,
+        122
+      ],
+      "loss": 0.003806901164352894,
+      "gradient_norm_before_clip": 0.6502562165260315,
+      "seconds": 0.45940189999987524,
+      "cross_entropy": 0.00028825560002587736,
+      "distillation_kl_T2": 0.007325546815991402
+    },
+    {
+      "step": 53,
+      "train_indices": [
+        102,
+        66
+      ],
+      "loss": 0.001832039444707334,
+      "gradient_norm_before_clip": 0.12795870006084442,
+      "seconds": 0.4394195999998374,
+      "cross_entropy": 0.0003087043878622353,
+      "distillation_kl_T2": 0.0033553745597600937
+    },
+    {
+      "step": 54,
+      "train_indices": [
+        7,
+        69
+      ],
+      "loss": 0.014574028551578522,
+      "gradient_norm_before_clip": 1.0748000144958496,
+      "seconds": 0.44894399999998313,
+      "cross_entropy": 0.00039400759851559997,
+      "distillation_kl_T2": 0.02875404991209507
+    },
+    {
+      "step": 55,
+      "train_indices": [
+        246,
+        244
+      ],
+      "loss": 0.00011720739712473005,
+      "gradient_norm_before_clip": 0.007743015419691801,
+      "seconds": 0.4410413000000517,
+      "cross_entropy": 0.0002059722028207034,
+      "distillation_kl_T2": 2.8442591428756714e-05
+    },
+    {
+      "step": 56,
+      "train_indices": [
+        203,
+        229
+      ],
+      "loss": 0.0007844936335459352,
+      "gradient_norm_before_clip": 0.11144702136516571,
+      "seconds": 0.46719290000010005,
+      "cross_entropy": 0.00032240833388641477,
+      "distillation_kl_T2": 0.0012465789914131165
+    },
+    {
+      "step": 57,
+      "train_indices": [
+        195,
+        77
+      ],
+      "loss": 0.019274428486824036,
+      "gradient_norm_before_clip": 3.4112014770507812,
+      "seconds": 0.4585266000001411,
+      "cross_entropy": 0.004039279650896788,
+      "distillation_kl_T2": 0.034509576857089996
+    },
+    {
+      "step": 58,
+      "train_indices": [
+        123,
+        85
+      ],
+      "loss": 0.00038226941251195967,
+      "gradient_norm_before_clip": 0.06045593321323395,
+      "seconds": 0.44893930000012006,
+      "cross_entropy": 0.0001653891958994791,
+      "distillation_kl_T2": 0.000599149614572525
+    },
+    {
+      "step": 59,
+      "train_indices": [
+        45,
+        92
+      ],
+      "loss": 0.004539544694125652,
+      "gradient_norm_before_clip": 0.7910633683204651,
+      "seconds": 0.4503835999998955,
+      "cross_entropy": 0.0015364461578428745,
+      "distillation_kl_T2": 0.007542643696069717
+    },
+    {
+      "step": 60,
+      "train_indices": [
+        233,
+        35
+      ],
+      "loss": 0.0011395016917958856,
+      "gradient_norm_before_clip": 0.16105705499649048,
+      "seconds": 0.448890800000072,
+      "cross_entropy": 0.00027402417617850006,
+      "distillation_kl_T2": 0.0020049791783094406
+    },
+    {
+      "step": 61,
+      "train_indices": [
+        146,
+        26
+      ],
+      "loss": 0.003148474730551243,
+      "gradient_norm_before_clip": 0.5876444578170776,
+      "seconds": 0.44017940000003364,
+      "cross_entropy": 0.0005743245128542185,
+      "distillation_kl_T2": 0.005722625181078911
+    },
+    {
+      "step": 62,
+      "train_indices": [
+        157,
+        234
+      ],
+      "loss": 0.0011744726216420531,
+      "gradient_norm_before_clip": 0.23756210505962372,
+      "seconds": 0.44080669999993916,
+      "cross_entropy": 0.0007726892363280058,
+      "distillation_kl_T2": 0.0015762560069561005
+    },
+    {
+      "step": 63,
+      "train_indices": [
+        149,
+        72
+      ],
+      "loss": 0.912161111831665,
+      "gradient_norm_before_clip": 134.82652282714844,
+      "seconds": 0.43197299999997085,
+      "cross_entropy": 1.0473597049713135,
+      "distillation_kl_T2": 0.7769625186920166
+    },
+    {
+      "step": 64,
+      "train_indices": [
+        30,
+        236
+      ],
+      "loss": 0.0015856885584071279,
+      "gradient_norm_before_clip": 0.18144133687019348,
+      "seconds": 0.42713579999985996,
+      "cross_entropy": 0.0002823530521709472,
+      "distillation_kl_T2": 0.002889024093747139
+    },
+    {
+      "step": 65,
+      "train_indices": [
+        48,
+        74
+      ],
+      "loss": 0.42897719144821167,
+      "gradient_norm_before_clip": 76.20519256591797,
+      "seconds": 0.4264086999999108,
+      "cross_entropy": 0.6053208112716675,
+      "distillation_kl_T2": 0.25263354182243347
+    },
+    {
+      "step": 66,
+      "train_indices": [
+        161,
+        108
+      ],
+      "loss": 0.0005723927170038223,
+      "gradient_norm_before_clip": 0.13419771194458008,
+      "seconds": 0.4206667999999354,
+      "cross_entropy": 0.0002987421758007258,
+      "distillation_kl_T2": 0.0008460432291030884
+    },
+    {
+      "step": 67,
+      "train_indices": [
+        125,
+        169
+      ],
+      "loss": 0.002701998222619295,
+      "gradient_norm_before_clip": 0.6186055541038513,
+      "seconds": 0.42104919999997037,
+      "cross_entropy": 0.000964359613135457,
+      "distillation_kl_T2": 0.004439637064933777
+    },
+    {
+      "step": 68,
+      "train_indices": [
+        88,
+        83
+      ],
+      "loss": 0.00021107647626195103,
+      "gradient_norm_before_clip": 0.07177453488111496,
+      "seconds": 0.42273210000007566,
+      "cross_entropy": 0.0001807038497645408,
+      "distillation_kl_T2": 0.00024144910275936127
+    },
+    {
+      "step": 69,
+      "train_indices": [
+        113,
+        134
+      ],
+      "loss": 0.00842278078198433,
+      "gradient_norm_before_clip": 1.3921812772750854,
+      "seconds": 0.4241887000000588,
+      "cross_entropy": 0.010230758227407932,
+      "distillation_kl_T2": 0.006614804267883301
+    },
+    {
+      "step": 70,
+      "train_indices": [
+        59,
+        29
+      ],
+      "loss": 0.001955214887857437,
+      "gradient_norm_before_clip": 0.40802398324012756,
+      "seconds": 0.4189665999999761,
+      "cross_entropy": 0.000785624491982162,
+      "distillation_kl_T2": 0.0031248051673173904
+    },
+    {
+      "step": 71,
+      "train_indices": [
+        137,
+        33
+      ],
+      "loss": 0.0012848222395405173,
+      "gradient_norm_before_clip": 0.3117316663265228,
+      "seconds": 0.4247697999999218,
+      "cross_entropy": 0.0006167821120470762,
+      "distillation_kl_T2": 0.0019528623670339584
+    },
+    {
+      "step": 72,
+      "train_indices": [
+        170,
+        57
+      ],
+      "loss": 0.021501030772924423,
+      "gradient_norm_before_clip": 1.9691431522369385,
+      "seconds": 0.48884669999984,
+      "cross_entropy": 0.0019775237888097763,
+      "distillation_kl_T2": 0.04102453961968422
+    },
+    {
+      "step": 73,
+      "train_indices": [
+        217,
+        42
+      ],
+      "loss": 0.0011877227807417512,
+      "gradient_norm_before_clip": 0.10142090171575546,
+      "seconds": 0.44073950000006334,
+      "cross_entropy": 0.00025673507479950786,
+      "distillation_kl_T2": 0.0021187104284763336
+    },
+    {
+      "step": 74,
+      "train_indices": [
+        86,
+        3
+      ],
+      "loss": 0.005206082947552204,
+      "gradient_norm_before_clip": 0.9869075417518616,
+      "seconds": 0.42422579999993104,
+      "cross_entropy": 0.0026941837277263403,
+      "distillation_kl_T2": 0.007717981934547424
+    },
+    {
+      "step": 75,
+      "train_indices": [
+        226,
+        94
+      ],
+      "loss": 0.000343642255757004,
+      "gradient_norm_before_clip": 0.03772148862481117,
+      "seconds": 0.4261501999999382,
+      "cross_entropy": 0.00032960448879748583,
+      "distillation_kl_T2": 0.0003576800227165222
+    },
+    {
+      "step": 76,
+      "train_indices": [
+        14,
+        131
+      ],
+      "loss": 0.0002664963249117136,
+      "gradient_norm_before_clip": 0.04560232162475586,
+      "seconds": 0.4224402999998347,
+      "cross_entropy": 0.0002451227337587625,
+      "distillation_kl_T2": 0.0002878699451684952
+    },
+    {
+      "step": 77,
+      "train_indices": [
+        43,
+        240
+      ],
+      "loss": 0.0008443049155175686,
+      "gradient_norm_before_clip": 0.09366922080516815,
+      "seconds": 0.44785830000000715,
+      "cross_entropy": 0.00034284492721781135,
+      "distillation_kl_T2": 0.001345764845609665
+    },
+    {
+      "step": 78,
+      "train_indices": [
+        220,
+        150
+      ],
+      "loss": 0.0008528886828571558,
+      "gradient_norm_before_clip": 0.1453697830438614,
+      "seconds": 0.4556833999999981,
+      "cross_entropy": 0.00028683472191914916,
+      "distillation_kl_T2": 0.0014189425855875015
+    },
+    {
+      "step": 79,
+      "train_indices": [
+        183,
+        22
+      ],
+      "loss": 0.1325768083333969,
+      "gradient_norm_before_clip": 9.014009475708008,
+      "seconds": 0.4261887000000115,
+      "cross_entropy": 0.001081047928892076,
+      "distillation_kl_T2": 0.26407256722450256
+    },
+    {
+      "step": 80,
+      "train_indices": [
+        210,
+        238
+      ],
+      "loss": 0.005559022072702646,
+      "gradient_norm_before_clip": 0.6909435987472534,
+      "seconds": 0.4428573000000142,
+      "cross_entropy": 0.0011676448630169034,
+      "distillation_kl_T2": 0.009950399398803711
+    },
+    {
+      "step": 81,
+      "train_indices": [
+        224,
+        228
+      ],
+      "loss": 0.00071874720742926,
+      "gradient_norm_before_clip": 0.11236943304538727,
+      "seconds": 0.4265307999999095,
+      "cross_entropy": 0.00035607433528639376,
+      "distillation_kl_T2": 0.0010814201086759567
+    },
+    {
+      "step": 82,
+      "train_indices": [
+        38,
+        248
+      ],
+      "loss": 0.0005959672853350639,
+      "gradient_norm_before_clip": 0.1425541490316391,
+      "seconds": 0.452283800000032,
+      "cross_entropy": 0.0008297822787426412,
+      "distillation_kl_T2": 0.00036215223371982574
+    },
+    {
+      "step": 83,
+      "train_indices": [
+        127,
+        254
+      ],
+      "loss": 0.0016334573738276958,
+      "gradient_norm_before_clip": 0.1730358749628067,
+      "seconds": 0.4417488000001413,
+      "cross_entropy": 0.00043763883877545595,
+      "distillation_kl_T2": 0.0028292760252952576
+    },
+    {
+      "step": 84,
+      "train_indices": [
+        47,
+        211
+      ],
+      "loss": 0.00098584801889956,
+      "gradient_norm_before_clip": 0.18020305037498474,
+      "seconds": 0.42893949999984216,
+      "cross_entropy": 0.0011629207292571664,
+      "distillation_kl_T2": 0.0008087754249572754
+    },
+    {
+      "step": 85,
+      "train_indices": [
+        13,
+        50
+      ],
+      "loss": 0.0005807015113532543,
+      "gradient_norm_before_clip": 0.06895334273576736,
+      "seconds": 0.43990549999989526,
+      "cross_entropy": 0.00023022570530883968,
+      "distillation_kl_T2": 0.0009311772882938385
+    },
+    {
+      "step": 86,
+      "train_indices": [
+        138,
+        191
+      ],
+      "loss": 0.0009103023330681026,
+      "gradient_norm_before_clip": 0.10573287308216095,
+      "seconds": 0.47097550000012234,
+      "cross_entropy": 0.0003558912721928209,
+      "distillation_kl_T2": 0.0014647133648395538
+    },
+    {
+      "step": 87,
+      "train_indices": [
+        245,
+        223
+      ],
+      "loss": 0.006974764168262482,
+      "gradient_norm_before_clip": 1.7644890546798706,
+      "seconds": 0.44087930000000597,
+      "cross_entropy": 0.0028770663775503635,
+      "distillation_kl_T2": 0.011072462424635887
+    },
+    {
+      "step": 88,
+      "train_indices": [
+        10,
+        117
+      ],
+      "loss": 0.0001364498311886564,
+      "gradient_norm_before_clip": 0.015567806549370289,
+      "seconds": 0.47940890000018044,
+      "cross_entropy": 0.00016115771722979844,
+      "distillation_kl_T2": 0.00011174194514751434
+    },
+    {
+      "step": 89,
+      "train_indices": [
+        56,
+        76
+      ],
+      "loss": 0.00032001890940591693,
+      "gradient_norm_before_clip": 0.05068838596343994,
+      "seconds": 0.44889089999992393,
+      "cross_entropy": 0.0002258730964967981,
+      "distillation_kl_T2": 0.000414164736866951
+    },
+    {
+      "step": 90,
+      "train_indices": [
+        176,
+        87
+      ],
+      "loss": 0.0011493884958326817,
+      "gradient_norm_before_clip": 0.3035551607608795,
+      "seconds": 0.45381049999991774,
+      "cross_entropy": 0.0004142755933571607,
+      "distillation_kl_T2": 0.001884501427412033
+    },
+    {
+      "step": 91,
+      "train_indices": [
+        31,
+        104
+      ],
+      "loss": 0.010538337752223015,
+      "gradient_norm_before_clip": 0.39397990703582764,
+      "seconds": 0.44599010000001726,
+      "cross_entropy": 0.0004010395787190646,
+      "distillation_kl_T2": 0.02067563682794571
+    },
+    {
+      "step": 92,
+      "train_indices": [
+        49,
+        75
+      ],
+      "loss": 0.004399774130433798,
+      "gradient_norm_before_clip": 0.6026369333267212,
+      "seconds": 0.4457164999998895,
+      "cross_entropy": 0.00437385868281126,
+      "distillation_kl_T2": 0.0044256895780563354
+    },
+    {
+      "step": 93,
+      "train_indices": [
+        79,
+        132
+      ],
+      "loss": 0.0007138163200579584,
+      "gradient_norm_before_clip": 0.20780767500400543,
+      "seconds": 0.4402557999999317,
+      "cross_entropy": 0.0010640629334375262,
+      "distillation_kl_T2": 0.0003635697066783905
+    },
+    {
+      "step": 94,
+      "train_indices": [
+        44,
+        185
+      ],
+      "loss": 0.021760249510407448,
+      "gradient_norm_before_clip": 2.346637487411499,
+      "seconds": 0.4571246999998948,
+      "cross_entropy": 0.0025027000810950994,
+      "distillation_kl_T2": 0.0410178005695343
+    },
+    {
+      "step": 95,
+      "train_indices": [
+        199,
+        241
+      ],
+      "loss": 0.0005969587946310639,
+      "gradient_norm_before_clip": 0.04320719838142395,
+      "seconds": 0.46127339999998185,
+      "cross_entropy": 0.0003944684285670519,
+      "distillation_kl_T2": 0.000799449160695076
+    },
+    {
+      "step": 96,
+      "train_indices": [
+        242,
+        65
+      ],
+      "loss": 0.0005083822179585695,
+      "gradient_norm_before_clip": 0.059350352734327316,
+      "seconds": 0.42759539999997287,
+      "cross_entropy": 0.0009047077037394047,
+      "distillation_kl_T2": 0.00011205673217773438
+    },
+    {
+      "step": 97,
+      "train_indices": [
+        110,
+        188
+      ],
+      "loss": 0.028276385739445686,
+      "gradient_norm_before_clip": 1.6872550249099731,
+      "seconds": 0.43343300000015006,
+      "cross_entropy": 0.00040147107210941613,
+      "distillation_kl_T2": 0.05615130066871643
+    },
+    {
+      "step": 98,
+      "train_indices": [
+        18,
+        129
+      ],
+      "loss": 0.003316133050248027,
+      "gradient_norm_before_clip": 0.5736707448959351,
+      "seconds": 0.44673740000007456,
+      "cross_entropy": 0.0010373680852353573,
+      "distillation_kl_T2": 0.005594898015260696
+    },
+    {
+      "step": 99,
+      "train_indices": [
+        112,
+        253
+      ],
+      "loss": 0.0018977969884872437,
+      "gradient_norm_before_clip": 0.18324825167655945,
+      "seconds": 0.44989110000005894,
+      "cross_entropy": 0.00014888125588186085,
+      "distillation_kl_T2": 0.003646712750196457
+    },
+    {
+      "step": 100,
+      "train_indices": [
+        130,
+        181
+      ],
+      "loss": 0.008202546276152134,
+      "gradient_norm_before_clip": 0.9283849000930786,
+      "seconds": 0.42755029999989347,
+      "cross_entropy": 0.0009401720017194748,
+      "distillation_kl_T2": 0.015464920550584793
+    },
+    {
+      "step": 101,
+      "train_indices": [
+        214,
+        34
+      ],
+      "loss": 0.007460649125277996,
+      "gradient_norm_before_clip": 2.470053195953369,
+      "seconds": 0.42923799999994117,
+      "cross_entropy": 0.009459512308239937,
+      "distillation_kl_T2": 0.005461785942316055
+    },
+    {
+      "step": 102,
+      "train_indices": [
+        160,
+        121
+      ],
+      "loss": 0.00025008979719132185,
+      "gradient_norm_before_clip": 0.026315292343497276,
+      "seconds": 0.4416114999999081,
+      "cross_entropy": 0.00028658448718488216,
+      "distillation_kl_T2": 0.00021359510719776154
+    },
+    {
+      "step": 103,
+      "train_indices": [
+        40,
+        159
+      ],
+      "loss": 0.0003623200173024088,
+      "gradient_norm_before_clip": 0.13408613204956055,
+      "seconds": 0.4438335999998344,
+      "cross_entropy": 0.0003434925456531346,
+      "distillation_kl_T2": 0.00038114748895168304
+    },
+    {
+      "step": 104,
+      "train_indices": [
+        227,
+        192
+      ],
+      "loss": 0.0008452271576970816,
+      "gradient_norm_before_clip": 0.18646454811096191,
+      "seconds": 0.42612290000010944,
+      "cross_entropy": 0.0006123459315858781,
+      "distillation_kl_T2": 0.001078108325600624
+    },
+    {
+      "step": 105,
+      "train_indices": [
+        218,
+        128
+      ],
+      "loss": 0.006625906564295292,
+      "gradient_norm_before_clip": 1.4865152835845947,
+      "seconds": 0.420410800000127,
+      "cross_entropy": 0.004885951057076454,
+      "distillation_kl_T2": 0.00836586207151413
+    },
+    {
+      "step": 106,
+      "train_indices": [
+        109,
+        21
+      ],
+      "loss": 0.0004594729980453849,
+      "gradient_norm_before_clip": 0.057039786130189896,
+      "seconds": 0.4195075000000088,
+      "cross_entropy": 0.0007645252626389265,
+      "distillation_kl_T2": 0.00015442073345184326
+    },
+    {
+      "step": 107,
+      "train_indices": [
+        17,
+        51
+      ],
+      "loss": 0.005985889583826065,
+      "gradient_norm_before_clip": 0.784462571144104,
+      "seconds": 0.43036819999997533,
+      "cross_entropy": 0.0009532161056995392,
+      "distillation_kl_T2": 0.011018563061952591
+    },
+    {
+      "step": 108,
+      "train_indices": [
+        24,
+        126
+      ],
+      "loss": 0.0045461575500667095,
+      "gradient_norm_before_clip": 0.3734104633331299,
+      "seconds": 0.4423725999999988,
+      "cross_entropy": 0.00025155680486932397,
+      "distillation_kl_T2": 0.008840758353471756
+    },
+    {
+      "step": 109,
+      "train_indices": [
+        196,
+        165
+      ],
+      "loss": 0.003541733603924513,
+      "gradient_norm_before_clip": 0.559704065322876,
+      "seconds": 0.451344699999936,
+      "cross_entropy": 0.0006211315048858523,
+      "distillation_kl_T2": 0.0064623355865478516
+    },
+    {
+      "step": 110,
+      "train_indices": [
+        99,
+        153
+      ],
+      "loss": 0.0007434174767695367,
+      "gradient_norm_before_clip": 0.2583591938018799,
+      "seconds": 0.42389700000012454,
+      "cross_entropy": 0.0010092396987602115,
+      "distillation_kl_T2": 0.000477595254778862
+    },
+    {
+      "step": 111,
+      "train_indices": [
+        174,
+        68
+      ],
+      "loss": 0.00024381493858527392,
+      "gradient_norm_before_clip": 0.027261581271886826,
+      "seconds": 0.422883899999988,
+      "cross_entropy": 0.0003744127170648426,
+      "distillation_kl_T2": 0.00011321716010570526
+    },
+    {
+      "step": 112,
+      "train_indices": [
+        166,
+        197
+      ],
+      "loss": 0.0002832788450177759,
+      "gradient_norm_before_clip": 0.057904861867427826,
+      "seconds": 0.42551730000013777,
+      "cross_entropy": 0.0001697975239949301,
+      "distillation_kl_T2": 0.0003967601805925369
+    },
+    {
+      "step": 113,
+      "train_indices": [
+        205,
+        179
+      ],
+      "loss": 0.001353768166154623,
+      "gradient_norm_before_clip": 0.14767205715179443,
+      "seconds": 0.430317599999853,
+      "cross_entropy": 0.0003344387805555016,
+      "distillation_kl_T2": 0.002373097464442253
+    },
+    {
+      "step": 114,
+      "train_indices": [
+        145,
+        204
+      ],
+      "loss": 0.0003826925531029701,
+      "gradient_norm_before_clip": 0.0916064903140068,
+      "seconds": 0.4277357999999367,
+      "cross_entropy": 0.00031012482941150665,
+      "distillation_kl_T2": 0.0004552602767944336
+    },
+    {
+      "step": 115,
+      "train_indices": [
+        60,
+        52
+      ],
+      "loss": 0.00016429394599981606,
+      "gradient_norm_before_clip": 0.016950111836194992,
+      "seconds": 0.4244426000000203,
+      "cross_entropy": 0.000182491319719702,
+      "distillation_kl_T2": 0.00014609657227993011
+    },
+    {
+      "step": 116,
+      "train_indices": [
+        6,
+        114
+      ],
+      "loss": 0.0006352266063913703,
+      "gradient_norm_before_clip": 0.08097702264785767,
+      "seconds": 0.41867419999994127,
+      "cross_entropy": 0.00022956612519919872,
+      "distillation_kl_T2": 0.0010408870875835419
+    },
+    {
+      "step": 117,
+      "train_indices": [
+        151,
+        202
+      ],
+      "loss": 0.5679607391357422,
+      "gradient_norm_before_clip": 157.34011840820312,
+      "seconds": 0.41391539999995075,
+      "cross_entropy": 0.3292112648487091,
+      "distillation_kl_T2": 0.8067101836204529
+    },
+    {
+      "step": 118,
+      "train_indices": [
+        1,
+        95
+      ],
+      "loss": 0.0003756375808734447,
+      "gradient_norm_before_clip": 0.03694535046815872,
+      "seconds": 0.424498500000027,
+      "cross_entropy": 0.0002170555089833215,
+      "distillation_kl_T2": 0.0005342196673154831
+    },
+    {
+      "step": 119,
+      "train_indices": [
+        93,
+        152
+      ],
+      "loss": 0.0020272117108106613,
+      "gradient_norm_before_clip": 0.08524986356496811,
+      "seconds": 0.4160185000000638,
+      "cross_entropy": 0.00013422055053524673,
+      "distillation_kl_T2": 0.003920203074812889
+    },
+    {
+      "step": 120,
+      "train_indices": [
+        154,
+        19
+      ],
+      "loss": 0.0013202803675085306,
+      "gradient_norm_before_clip": 0.22636225819587708,
+      "seconds": 0.4193611000000601,
+      "cross_entropy": 0.000373825867427513,
+      "distillation_kl_T2": 0.0022667348384857178
+    },
+    {
+      "step": 121,
+      "train_indices": [
+        89,
+        247
+      ],
+      "loss": 0.001089929137378931,
+      "gradient_norm_before_clip": 0.24866928160190582,
+      "seconds": 0.42201920000002247,
+      "cross_entropy": 0.0005840536905452609,
+      "distillation_kl_T2": 0.0015958044677972794
+    },
+    {
+      "step": 122,
+      "train_indices": [
+        172,
+        184
+      ],
+      "loss": 0.00010499688505660743,
+      "gradient_norm_before_clip": 0.013388401828706264,
+      "seconds": 0.42398450000018784,
+      "cross_entropy": 0.0001842203491833061,
+      "distillation_kl_T2": 2.5773420929908752e-05
+    },
+    {
+      "step": 123,
+      "train_indices": [
+        198,
+        53
+      ],
+      "loss": 0.00010243692668154836,
+      "gradient_norm_before_clip": 0.012095006182789803,
+      "seconds": 0.4238519999998971,
+      "cross_entropy": 0.00016300531569868326,
+      "distillation_kl_T2": 4.186853766441345e-05
+    },
+    {
+      "step": 124,
+      "train_indices": [
+        15,
+        178
+      ],
+      "loss": 0.00604715570807457,
+      "gradient_norm_before_clip": 0.9771285057067871,
+      "seconds": 0.42630209999992985,
+      "cross_entropy": 0.0008107650792226195,
+      "distillation_kl_T2": 0.011283546686172485
+    },
+    {
+      "step": 125,
+      "train_indices": [
+        162,
+        182
+      ],
+      "loss": 0.016587495803833008,
+      "gradient_norm_before_clip": 2.843020439147949,
+      "seconds": 0.4231671000000006,
+      "cross_entropy": 0.008607637137174606,
+      "distillation_kl_T2": 0.02456735447049141
+    },
+    {
+      "step": 126,
+      "train_indices": [
+        64,
+        37
+      ],
+      "loss": 0.007729055359959602,
+      "gradient_norm_before_clip": 1.208107590675354,
+      "seconds": 0.4249290000000201,
+      "cross_entropy": 0.0017212402308359742,
+      "distillation_kl_T2": 0.013736870139837265
+    },
+    {
+      "step": 127,
+      "train_indices": [
+        209,
+        12
+      ],
+      "loss": 0.0003468045615591109,
+      "gradient_norm_before_clip": 0.0716250091791153,
+      "seconds": 0.4234443000000283,
+      "cross_entropy": 0.0002083546423818916,
+      "distillation_kl_T2": 0.0004852544516324997
+    },
+    {
+      "step": 128,
+      "train_indices": [
+        63,
+        168
+      ],
+      "loss": 0.0049584414809942245,
+      "gradient_norm_before_clip": 0.09553244709968567,
+      "seconds": 0.4243390999999974,
+      "cross_entropy": 0.009169301018118858,
+      "distillation_kl_T2": 0.0007475819438695908
+    }
+  ],
+  "weights_before_sha256": "1002066d555374ef971193083f3b425076ca1333f6b4fe9da7a412c863b9976b",
+  "weights_after_sha256": "afaa361525c146482774ffa049bf08436a30e24a2dcee7a44f5d0416bf4d40de",
+  "resumed_from": {
+    "path": "daily/2026-10-14/experiments/qat/artifacts/text_qat_checkpoint.pt",
+    "sha256": "44718be3c38b52f8c7c3e80c52e3dcafb7b07338883decef80bbc133201b3d69",
+    "step": 8
+  },
+  "checkpoint": {
+    "path": "daily/2026-10-15/experiments/qat/artifacts/text_step0128.pt",
+    "sha256": "d9fd098fc301d1b7a5a0658cb678acc3171a28be8c85ccbd7afed60f65e5d1db"
+  },
+  "outputs": {
+    "before": {
+      "path": "daily/2026-10-15/experiments/qat/artifacts/text_step0128_before.npy",
+      "sha256": "0704c3d100333922b611fb41658436eb2d8919a2eb0addd354cf9f0cced9e2ef"
+    },
+    "after": {
+      "path": "daily/2026-10-15/experiments/qat/artifacts/text_step0128_after.npy",
+      "sha256": "37598919a25a69a02b74562920a9cbed519f94275ed89c3dc1eefb6dcaf40dcc"
+    }
+  },
+  "source_sha256": {
+    "daily/2026-10-15/experiments/qat/src/train_continue.py": "03041250548c2678462f2ce9574d7edeb4317c29321217ebbe25db09e1ea4f4b",
+    "daily/2026-10-14/experiments/qat/src/train.py": "6b278cb1102fd5e0f1d5706b861aff22ece7920bad34ac839aea5665f82922b6",
+    "daily/2026-10-14/experiments/qat/src/models.py": "5728eb1f9d806dd5872fb380c177d975fcfb8f24a5c8a554b43ad3674b6a3671"
+  },
+  "limitations": [
+    "Small fixed evaluation subset, repeatedly monitored; not a fresh final test set",
+    "Only fake-quant training metrics; deployment INT8 must be evaluated separately",
+    "M-LSD uses teacher pseudo-labels, not ground-truth supervised training"
+  ]
+}

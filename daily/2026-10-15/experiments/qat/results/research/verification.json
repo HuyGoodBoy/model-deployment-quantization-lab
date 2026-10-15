@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-10-15T07:04:41.804563+00:00",
+  "development_ablations_recomputed": [
+    "scan_baseline",
+    "scan_regression_output_float",
+    "scan_center_output_float",
+    "scan_both_outputs_float",
+    "scan_weight_only",
+    "scan_activation_only",
+    "scan_foreground_tensor",
+    "scan_foreground_channel",
+    "center_scan_foreground_tensor",
+    "center_scan_foreground_channel",
+    "center_scan_center_only",
+    "range_only_step0064",
+    "range_only_step0128",
+    "loss_only_step0064",
+    "loss_only_step0128",
+    "range_and_loss_step0064",
+    "range_and_loss_step0128"
+  ],
+  "holdout_models_recomputed": [
+    "fp32",
+    "selected_fake_quant",
+    "original_fake_quant_step32",
+    "original_fake_quant_step128",
+    "original_integer",
+    "selected_integer",
+    "ptq_split_full_int8"
+  ],
+  "paired_bootstrap_recomputed": true,
+  "holdout_disjoint_and_selection_locked": true,
+  "weights_changed_by_training": {
+    "range_only_step0064": "182dbe832dd2a1cc4c88c40d6ec9214dbc0cbdfda9d42448c297193746765683",
+    "range_only_step0128": "c229b0a737e2540291891fac583daae152d0ddfea9d5ab43459d66a66de98b5f",
+    "loss_only_step0064": "f660f56e092e5153c601b3c64068ca1f3c4c038b56f4d4bbd01e88fe118f9e42",
+    "loss_only_step0128": "e7cb070eea103fa50e91f8254da32eb2acbd177786f8a1fa89917b4fc151b5a1",
+    "range_and_loss_step0064": "9358598c57327866132d7e276f6235d667b181fda9d94ac1873d3434ccf60721",
+    "range_and_loss_step0128": "27a798c7ee67bd1ad2dce6a090fb724786601975c129e1259dcd63613e7aa51e"
+  },
+  "selected_weights_sha256": "5923ff73163775094f11b485615d2f94eee9a1ea825dd7ce2de4f0ea4051ed72",
+  "original_center_scale": [
+    0.19554093480110168
+  ],
+  "integer_convs_executed": 41,
+  "numerical_export_parity_gate_passed": false,
+  "scope": "Evidence, data separation, controls and quality gains verified; mixed precision and failed dense-output parity gate remain explicit",
+  "source_sha256": {
+    "daily/2026-10-15/experiments/qat/src/benchmark_research.py": "be3d070b51281fb069b7dff2208c92800246759e51df6d0f5c1621994a315bab",
+    "daily/2026-10-15/experiments/qat/src/evaluate_research.py": "ad9d7cad75141cd15a99c69b2e79f14f3f839a8a8fb4e7cf690b977f28483076",
+    "daily/2026-10-15/experiments/qat/src/export_integer.py": "1aa3f21e9a42cba1b06504b48eb25765f72c10aa5370f105c3746880a508903f",
+    "daily/2026-10-15/experiments/qat/src/plot_research.py": "b08f52f8e2947ecd4233ae945047beff108c344b5d38b372470be83d22dff84c",
+    "daily/2026-10-15/experiments/qat/src/prepare_holdout.py": "f6c1bc60878f2f7838fefd57520c53d29867d9b375c7a895d54d772af4b25e50",
+    "daily/2026-10-15/experiments/qat/src/research_mlsd.py": "59b554b9150257721db7ba245a362e8aa6e33ca048d636d96eecbb76c195368b",
+    "daily/2026-10-15/experiments/qat/src/train_continue.py": "03041250548c2678462f2ce9574d7edeb4317c29321217ebbe25db09e1ea4f4b",
+    "daily/2026-10-15/experiments/qat/src/verify.py": "1cabfb46881c9451f2efaa1069717715437d42c417a93415f6cc2c3f3458fe13",
+    "daily/2026-10-15/experiments/qat/src/verify_research.py": "b6d245fd8014518b85a6897e2ab4ef8ae13a849214b3932fbacdee002d1c09b8"
+  }
+}

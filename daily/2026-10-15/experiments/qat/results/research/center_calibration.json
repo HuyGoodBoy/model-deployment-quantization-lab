@@ -1,0 +1,255 @@
+{
+  "checkpoint": {
+    "path": "daily/2026-10-15/experiments/qat/artifacts/mlsd_step0032.pt",
+    "sha256": "a35f18ee152623a6b56486a8bfbffcf2c6c0e21729a1897bfd3968f12f1b1067"
+  },
+  "protocol": "Same step32 weights; center/range clipping fit on 32 train images, fixed decoder, same 16 development images",
+  "ablations": [
+    {
+      "name": "center_scan_foreground_tensor",
+      "metrics": {
+        "active": {
+          "snr_db": 6.383089092833334,
+          "exact_match": false,
+          "rmse": 13.939162104848974,
+          "mae": 4.042997999250611,
+          "max_abs": 689.029914855957,
+          "relative_l2": 0.47956286419127053
+        },
+        "center": {
+          "snr_db": 7.187350623659405,
+          "exact_match": false,
+          "rmse": 3.117349227075407,
+          "mae": 1.9960761423156197,
+          "max_abs": 34.495089530944824,
+          "relative_l2": 0.4371519991558945
+        },
+        "displacement": {
+          "snr_db": 6.374152515924862,
+          "exact_match": false,
+          "rmse": 15.50631592870096,
+          "mae": 4.554728463484358,
+          "max_abs": 689.029914855957,
+          "relative_l2": 0.48005652183872854
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 13.55491346442913,
+          "precision_at_0_1": 0.25159574468085105,
+          "recall_at_0_1": 0.2667794698251551,
+          "ground_truth_lines": 1773,
+          "predicted_line_counts": [
+            129,
+            149,
+            91,
+            132,
+            133,
+            98,
+            102,
+            140,
+            98,
+            149,
+            115,
+            126,
+            99,
+            129,
+            79,
+            131
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/center_scan_foreground_tensor_output.npy",
+        "sha256": "a26136600500fb03d1a41d097822bb28918c91cc541e9379f7dfcba6e668d638"
+      },
+      "policy": {
+        "per_channel": false,
+        "minimum": [
+          -117.7547836303711
+        ],
+        "maximum": [
+          119.19725036621094
+        ],
+        "threshold": 0.1,
+        "margin_fraction": 0.02,
+        "fit_split": "32 Wireframe train images only",
+        "rule": "QAT pre-output displacement extrema at teacher confidence > 0.1, 2% margin/channel",
+        "center_minimum": -5.293304824724492,
+        "center_maximum": 4.829615028379256,
+        "center_rule": "Clip below sigmoid .005, below unchanged decoder score .01; max from train + 2% margin"
+      },
+      "center_scale": [
+        0.03969772532582283
+      ],
+      "regression_scale": [
+        0.9292236566543579
+      ]
+    },
+    {
+      "name": "center_scan_foreground_channel",
+      "metrics": {
+        "active": {
+          "snr_db": 6.382823989859059,
+          "exact_match": false,
+          "rmse": 13.93958755001117,
+          "mae": 4.032990165197781,
+          "max_abs": 689.2623901367188,
+          "relative_l2": 0.4795775012045289
+        },
+        "center": {
+          "snr_db": 7.187350623659405,
+          "exact_match": false,
+          "rmse": 3.117349227075407,
+          "mae": 1.9960761423156197,
+          "max_abs": 34.495089530944824,
+          "relative_l2": 0.4371519991558945
+        },
+        "displacement": {
+          "snr_db": 6.373884734430675,
+          "exact_match": false,
+          "rmse": 15.506793987786326,
+          "mae": 4.54221867091832,
+          "max_abs": 689.2623901367188,
+          "relative_l2": 0.4800713219616468
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 13.697320921197253,
+          "precision_at_0_1": 0.2519768054823405,
+          "recall_at_0_1": 0.26959954878736603,
+          "ground_truth_lines": 1773,
+          "predicted_line_counts": [
+            131,
+            152,
+            92,
+            132,
+            133,
+            99,
+            105,
+            138,
+            98,
+            150,
+            116,
+            128,
+            100,
+            132,
+            79,
+            132
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/center_scan_foreground_channel_output.npy",
+        "sha256": "b5def28dba08cdd268511efc5bbcb25a3302981256bbeaecd5379ec2865cf85d"
+      },
+      "policy": {
+        "per_channel": true,
+        "minimum": [
+          -117.7547836303711,
+          -110.75995635986328,
+          -5.133374214172363,
+          -110.77360534667969
+        ],
+        "maximum": [
+          7.385333061218262,
+          111.7036361694336,
+          119.19725036621094,
+          111.73562622070312
+        ],
+        "threshold": 0.1,
+        "margin_fraction": 0.02,
+        "fit_split": "32 Wireframe train images only",
+        "rule": "QAT pre-output displacement extrema at teacher confidence > 0.1, 2% margin/channel",
+        "center_minimum": -5.293304824724492,
+        "center_maximum": 4.829615028379256,
+        "center_rule": "Clip below sigmoid .005, below unchanged decoder score .01; max from train + 2% margin"
+      },
+      "center_scale": [
+        0.03969772532582283
+      ],
+      "regression_scale": [
+        0.49074554443359375,
+        0.8724062442779541,
+        0.4875710904598236,
+        0.8725852370262146
+      ]
+    },
+    {
+      "name": "center_scan_center_only",
+      "metrics": {
+        "active": {
+          "snr_db": 7.312446972032323,
+          "exact_match": false,
+          "rmse": 12.524741603946493,
+          "mae": 4.549288449583698,
+          "max_abs": 467.04844665527344,
+          "relative_l2": 0.4309011482659148
+        },
+        "center": {
+          "snr_db": 7.187350623659405,
+          "exact_match": false,
+          "rmse": 3.117349227075407,
+          "mae": 1.9960761423156197,
+          "max_abs": 34.495089530944824,
+          "relative_l2": 0.4371519991558945
+        },
+        "displacement": {
+          "snr_db": 7.313993669145482,
+          "exact_match": false,
+          "rmse": 13.916068904548737,
+          "mae": 5.187591526400718,
+          "max_abs": 467.04844665527344,
+          "relative_l2": 0.4308244244927757
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 9.659273722587674,
+          "precision_at_0_1": 0.20882669537136705,
+          "recall_at_0_1": 0.2188381274675691,
+          "ground_truth_lines": 1773,
+          "predicted_line_counts": [
+            130,
+            147,
+            92,
+            131,
+            130,
+            98,
+            102,
+            136,
+            95,
+            147,
+            112,
+            122,
+            95,
+            130,
+            80,
+            131
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/center_scan_center_only_output.npy",
+        "sha256": "4718ac57eb10591ecb877a1654a5608cd4073d56f558f23449de7c634947cd52"
+      },
+      "policy": {
+        "per_channel": false,
+        "minimum": [
+          -900.1666870117188
+        ],
+        "maximum": [
+          891.6828002929688
+        ],
+        "fit_split": "Original day14 regression range",
+        "center_minimum": -5.293304824724492,
+        "center_maximum": 4.829615028379256,
+        "center_rule": "Clip below sigmoid .005, below unchanged decoder score .01; max from train + 2% margin"
+      },
+      "center_scale": [
+        0.03969772532582283
+      ],
+      "regression_scale": [
+        7.02686071395874
+      ]
+    }
+  ]
+}

@@ -13,6 +13,7 @@
 | 12/10/2026 | M-LSD: Hough và ghép box Java, đối chiếu Python, thử danh sách kề | [Báo cáo](daily/2026-10-12/REPORT.md) | [Code và kết quả](daily/2026-10-12/experiments/mlsd-postprocess/) |
 | 13/10/2026 | Task PTQ M-LSD: tách head và đánh giá trên ảnh có nhãn; chạy bổ sung 14/10 | [Báo cáo](daily/2026-10-13/REPORT.md) | [mlsd-ptq](daily/2026-10-13/experiments/mlsd-ptq/) |
 | 14/10/2026 | QAT M-LSD và DistilBERT: pilot 8 bước/model, task tuần đang làm | [Tiến độ](daily/2026-10-14/REPORT.md) | [qat](daily/2026-10-14/experiments/qat/) |
+| 15/10/2026 | QAT 128 bước/model; calibration M-LSD tăng chất lượng trên 32 ảnh; sửa làm tròn export giảm lệch tensor, chưa đạt gate 2% | [Báo cáo](daily/2026-10-15/REPORT.md) · [Research](daily/2026-10-15/RESEARCH.md) | [qat](daily/2026-10-15/experiments/qat/) |
 
 Ngày 09 đã reproduce 6 biến thể ResNet18 từ source Đức và đo 12 cấu hình model Huy
 trên Linux. M-LSD đã convert/quantize; detect box mới có prototype Java desktop,

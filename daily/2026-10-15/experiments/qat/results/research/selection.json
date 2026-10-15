@@ -1,0 +1,230 @@
+{
+  "selected_at_utc": "2026-10-15T06:51:02.170818+00:00",
+  "criterion": "Highest fixed-decoder sAP10 on the 16 development images, not holdout",
+  "holdout_used": false,
+  "holdout_manifest_sha256": "6b0a45b47b5426f9d0ff6b50d80d8cf316fe3bebd7aafcea445cb173d4a77ac8",
+  "candidates": [
+    {
+      "name": "range_calibration_no_new_training",
+      "source": "daily/2026-10-15/experiments/qat/artifacts/mlsd_step0032.pt",
+      "policy": {
+        "per_channel": true,
+        "minimum": [
+          -117.7547836303711,
+          -110.75995635986328,
+          -5.133374214172363,
+          -110.77360534667969
+        ],
+        "maximum": [
+          7.385333061218262,
+          111.7036361694336,
+          119.19725036621094,
+          111.73562622070312
+        ],
+        "threshold": 0.1,
+        "margin_fraction": 0.02,
+        "fit_split": "32 Wireframe train images only",
+        "rule": "QAT pre-output displacement extrema at teacher confidence > 0.1, 2% margin/channel",
+        "center_minimum": -5.293304824724492,
+        "center_maximum": 4.829615028379256,
+        "center_rule": "Clip below sigmoid .005, below unchanged decoder score .01; max from train + 2% margin"
+      },
+      "total_steps": 32,
+      "development_sAP10": 13.697320921197253,
+      "development_output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/center_scan_foreground_channel_output.npy",
+        "sha256": "b5def28dba08cdd268511efc5bbcb25a3302981256bbeaecd5379ec2865cf85d"
+      }
+    },
+    {
+      "name": "range_only_step0064",
+      "source": "daily/2026-10-15/experiments/qat/artifacts/research/range_only_step0064.pt",
+      "policy": {
+        "per_channel": true,
+        "minimum": [
+          -117.7547836303711,
+          -110.75995635986328,
+          -5.133374214172363,
+          -110.77360534667969
+        ],
+        "maximum": [
+          7.385333061218262,
+          111.7036361694336,
+          119.19725036621094,
+          111.73562622070312
+        ],
+        "threshold": 0.1,
+        "margin_fraction": 0.02,
+        "fit_split": "32 Wireframe train images only",
+        "rule": "QAT pre-output displacement extrema at teacher confidence > 0.1, 2% margin/channel",
+        "center_minimum": -5.293304824724492,
+        "center_maximum": 4.829615028379256,
+        "center_rule": "Clip below sigmoid .005, below unchanged decoder score .01; max from train + 2% margin"
+      },
+      "total_steps": 64,
+      "development_sAP10": 13.309281841230197,
+      "development_output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/range_only_step0064_output.npy",
+        "sha256": "c026bdc60ea179649446a9d5cf9184a7d7ec5703e9e184902e8e4a67eb1f69a2"
+      }
+    },
+    {
+      "name": "range_only_step0128",
+      "source": "daily/2026-10-15/experiments/qat/artifacts/research/range_only_step0128.pt",
+      "policy": {
+        "per_channel": true,
+        "minimum": [
+          -117.7547836303711,
+          -110.75995635986328,
+          -5.133374214172363,
+          -110.77360534667969
+        ],
+        "maximum": [
+          7.385333061218262,
+          111.7036361694336,
+          119.19725036621094,
+          111.73562622070312
+        ],
+        "threshold": 0.1,
+        "margin_fraction": 0.02,
+        "fit_split": "32 Wireframe train images only",
+        "rule": "QAT pre-output displacement extrema at teacher confidence > 0.1, 2% margin/channel",
+        "center_minimum": -5.293304824724492,
+        "center_maximum": 4.829615028379256,
+        "center_rule": "Clip below sigmoid .005, below unchanged decoder score .01; max from train + 2% margin"
+      },
+      "total_steps": 128,
+      "development_sAP10": 13.324965825833617,
+      "development_output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/range_only_step0128_output.npy",
+        "sha256": "9a496a92a49e13bd8b267a0eabfcd388d4c3678b6a7b60f364461c4117d728ee"
+      }
+    },
+    {
+      "name": "loss_only_step0064",
+      "source": "daily/2026-10-15/experiments/qat/artifacts/research/loss_only_step0064.pt",
+      "policy": {},
+      "total_steps": 64,
+      "development_sAP10": 7.59794411087486,
+      "development_output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/loss_only_step0064_output.npy",
+        "sha256": "b91b1f7c36d02f76d9f6be69cd9a1b727a409916d1644eea0d53e698055ff24b"
+      }
+    },
+    {
+      "name": "loss_only_step0128",
+      "source": "daily/2026-10-15/experiments/qat/artifacts/research/loss_only_step0128.pt",
+      "policy": {},
+      "total_steps": 128,
+      "development_sAP10": 7.9447046897150315,
+      "development_output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/loss_only_step0128_output.npy",
+        "sha256": "448bc4a8cd5f7c30d2318bc6f3ce5eddca335b81ce57dc3b3cf74035a254bcb7"
+      }
+    },
+    {
+      "name": "range_and_loss_step0064",
+      "source": "daily/2026-10-15/experiments/qat/artifacts/research/range_and_loss_step0064.pt",
+      "policy": {
+        "per_channel": true,
+        "minimum": [
+          -117.7547836303711,
+          -110.75995635986328,
+          -5.133374214172363,
+          -110.77360534667969
+        ],
+        "maximum": [
+          7.385333061218262,
+          111.7036361694336,
+          119.19725036621094,
+          111.73562622070312
+        ],
+        "threshold": 0.1,
+        "margin_fraction": 0.02,
+        "fit_split": "32 Wireframe train images only",
+        "rule": "QAT pre-output displacement extrema at teacher confidence > 0.1, 2% margin/channel",
+        "center_minimum": -5.293304824724492,
+        "center_maximum": 4.829615028379256,
+        "center_rule": "Clip below sigmoid .005, below unchanged decoder score .01; max from train + 2% margin"
+      },
+      "total_steps": 64,
+      "development_sAP10": 13.40267724001522,
+      "development_output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/range_and_loss_step0064_output.npy",
+        "sha256": "8468813541aa7d106bb4ce70e3c51ee14dc8323e1d2a7c6f25018536e0403d5f"
+      }
+    },
+    {
+      "name": "range_and_loss_step0128",
+      "source": "daily/2026-10-15/experiments/qat/artifacts/research/range_and_loss_step0128.pt",
+      "policy": {
+        "per_channel": true,
+        "minimum": [
+          -117.7547836303711,
+          -110.75995635986328,
+          -5.133374214172363,
+          -110.77360534667969
+        ],
+        "maximum": [
+          7.385333061218262,
+          111.7036361694336,
+          119.19725036621094,
+          111.73562622070312
+        ],
+        "threshold": 0.1,
+        "margin_fraction": 0.02,
+        "fit_split": "32 Wireframe train images only",
+        "rule": "QAT pre-output displacement extrema at teacher confidence > 0.1, 2% margin/channel",
+        "center_minimum": -5.293304824724492,
+        "center_maximum": 4.829615028379256,
+        "center_rule": "Clip below sigmoid .005, below unchanged decoder score .01; max from train + 2% margin"
+      },
+      "total_steps": 128,
+      "development_sAP10": 13.13018975080733,
+      "development_output": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/range_and_loss_step0128_output.npy",
+        "sha256": "de7e8b06c1e962784b15d4a621b23de1ffeb1be622c3863895c5fdf773e77f06"
+      }
+    }
+  ],
+  "selected": {
+    "name": "range_calibration_no_new_training",
+    "source": "daily/2026-10-15/experiments/qat/artifacts/mlsd_step0032.pt",
+    "policy": {
+      "per_channel": true,
+      "minimum": [
+        -117.7547836303711,
+        -110.75995635986328,
+        -5.133374214172363,
+        -110.77360534667969
+      ],
+      "maximum": [
+        7.385333061218262,
+        111.7036361694336,
+        119.19725036621094,
+        111.73562622070312
+      ],
+      "threshold": 0.1,
+      "margin_fraction": 0.02,
+      "fit_split": "32 Wireframe train images only",
+      "rule": "QAT pre-output displacement extrema at teacher confidence > 0.1, 2% margin/channel",
+      "center_minimum": -5.293304824724492,
+      "center_maximum": 4.829615028379256,
+      "center_rule": "Clip below sigmoid .005, below unchanged decoder score .01; max from train + 2% margin"
+    },
+    "total_steps": 32,
+    "development_sAP10": 13.697320921197253,
+    "development_output": {
+      "path": "daily/2026-10-15/experiments/qat/artifacts/research/center_scan_foreground_channel_output.npy",
+      "sha256": "b5def28dba08cdd268511efc5bbcb25a3302981256bbeaecd5379ec2865cf85d"
+    }
+  },
+  "checkpoint": {
+    "path": "daily/2026-10-15/experiments/qat/artifacts/research/selected_checkpoint.pt",
+    "sha256": "167bc6f9d9d37173f57a31304d895f037a292b13c9e43de08b214c4136cdb0c5"
+  },
+  "development_output": {
+    "path": "daily/2026-10-15/experiments/qat/artifacts/research/center_scan_foreground_channel_output.npy",
+    "sha256": "b5def28dba08cdd268511efc5bbcb25a3302981256bbeaecd5379ec2865cf85d"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "foreground_tensor": {
+    "per_channel": false,
+    "minimum": [
+      -117.7547836303711
+    ],
+    "maximum": [
+      119.19725036621094
+    ],
+    "threshold": 0.1,
+    "margin_fraction": 0.02,
+    "fit_split": "32 Wireframe train images only",
+    "rule": "QAT pre-output displacement extrema at teacher confidence > 0.1, 2% margin/channel"
+  },
+  "foreground_channel": {
+    "per_channel": true,
+    "minimum": [
+      -117.7547836303711,
+      -110.75995635986328,
+      -5.133374214172363,
+      -110.77360534667969
+    ],
+    "maximum": [
+      7.385333061218262,
+      111.7036361694336,
+      119.19725036621094,
+      111.73562622070312
+    ],
+    "threshold": 0.1,
+    "margin_fraction": 0.02,
+    "fit_split": "32 Wireframe train images only",
+    "rule": "QAT pre-output displacement extrema at teacher confidence > 0.1, 2% margin/channel"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-10-15T07:08:05.221196+00:00",
+  "training_runs": [
+    "mlsd_step0032",
+    "mlsd_step0064",
+    "mlsd_step0128",
+    "text_step0128"
+  ],
+  "checks": "Checkpoint hashes/weights, contiguous resume outputs, finite losses/gradients, deterministic sample indices, recomputed quality, frozen observers, data split disjointness, original and optimized graph audits, actual integer CPU kernels, timing percentiles",
+  "day14_checkpoints_unchanged": true,
+  "export_parity_gate_passed": false,
+  "source_differences_since_recording": [
+    {
+      "run": "mlsd_step0032",
+      "path": "daily/2026-10-15/experiments/qat/src/train_continue.py",
+      "recorded_sha256": "2aa9bae9e69da653da82768e576dd846ab9f2209e87dcc6c51d24fe84236aa38",
+      "current_sha256": "03041250548c2678462f2ce9574d7edeb4317c29321217ebbe25db09e1ea4f4b"
+    },
+    {
+      "run": "mlsd_step0064",
+      "path": "daily/2026-10-15/experiments/qat/src/train_continue.py",
+      "recorded_sha256": "2aa9bae9e69da653da82768e576dd846ab9f2209e87dcc6c51d24fe84236aa38",
+      "current_sha256": "03041250548c2678462f2ce9574d7edeb4317c29321217ebbe25db09e1ea4f4b"
+    },
+    {
+      "run": "mlsd_step0128",
+      "path": "daily/2026-10-15/experiments/qat/src/train_continue.py",
+      "recorded_sha256": "2aa9bae9e69da653da82768e576dd846ab9f2209e87dcc6c51d24fe84236aa38",
+      "current_sha256": "03041250548c2678462f2ce9574d7edeb4317c29321217ebbe25db09e1ea4f4b"
+    }
+  ],
+  "source_difference_note": "Day-15 trainer was reformatted with Ruff after M-LSD ran; executed-source checksums remain recorded. Historical day-14 sources are unchanged.",
+  "source_sha256": {
+    "daily/2026-10-15/experiments/qat/src/benchmark_research.py": "be3d070b51281fb069b7dff2208c92800246759e51df6d0f5c1621994a315bab",
+    "daily/2026-10-15/experiments/qat/src/evaluate_research.py": "ad9d7cad75141cd15a99c69b2e79f14f3f839a8a8fb4e7cf690b977f28483076",
+    "daily/2026-10-15/experiments/qat/src/export_integer.py": "1aa3f21e9a42cba1b06504b48eb25765f72c10aa5370f105c3746880a508903f",
+    "daily/2026-10-15/experiments/qat/src/plot_research.py": "b08f52f8e2947ecd4233ae945047beff108c344b5d38b372470be83d22dff84c",
+    "daily/2026-10-15/experiments/qat/src/prepare_holdout.py": "f6c1bc60878f2f7838fefd57520c53d29867d9b375c7a895d54d772af4b25e50",
+    "daily/2026-10-15/experiments/qat/src/research_mlsd.py": "59b554b9150257721db7ba245a362e8aa6e33ca048d636d96eecbb76c195368b",
+    "daily/2026-10-15/experiments/qat/src/train_continue.py": "03041250548c2678462f2ce9574d7edeb4317c29321217ebbe25db09e1ea4f4b",
+    "daily/2026-10-15/experiments/qat/src/verify.py": "1cabfb46881c9451f2efaa1069717715437d42c417a93415f6cc2c3f3458fe13",
+    "daily/2026-10-15/experiments/qat/src/verify_research.py": "b6d245fd8014518b85a6897e2ab4ef8ae13a849214b3932fbacdee002d1c09b8"
+  },
+  "scope": "Evidence consistency passed; does not override a failed numerical export parity gate or establish final held-out quality"
+}
