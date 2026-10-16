@@ -1,0 +1,111 @@
+{
+  "selected_at_utc": "2026-10-16T07:10:31.755556+00:00",
+  "rule": "Development only: prefer unchanged task-specific gate passing; then highest label agreement, then lowest relative L2; if none pass preserve failed gate",
+  "holdout_used": false,
+  "selected": "static_integer",
+  "candidates": {
+    "static_integer": {
+      "model": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/text_qat_static_integer.onnx",
+        "sha256": "534321dace35ce89370774ecd14c1d73d8ab82fd4769f1a14af4f77ef4f6d330",
+        "bytes": 138937414
+      },
+      "output": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/text_static_integer_selection_development.npy",
+        "sha256": "a748754f1f4807e39455753ab4a2161d51b29314071dcda0633f574703133f19",
+        "bytes": 928
+      },
+      "parity": {
+        "snr_db": 25.117299156420557,
+        "exact_match": false,
+        "rmse": 0.21648769652502267,
+        "mae": 0.05245980486273766,
+        "max_abs": 1.8200339376926422,
+        "relative_l2": 0.05547981984803387
+      },
+      "label_agreement": 0.98,
+      "accuracy_percent": 90.0,
+      "accuracy_delta_pp": 0.0,
+      "gate_passed": false
+    },
+    "static_explicit_rounding": {
+      "model": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/text_qat_static_explicit_rounding.onnx",
+        "sha256": "bccc47ad4406095105458eefd0636e940b22c081ed9409052048cdf845f64986",
+        "bytes": 138956338
+      },
+      "output": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/text_static_explicit_rounding_selection_development.npy",
+        "sha256": "65df9731ab70b0b5c0790139ee36f8481f06fe70095e8d7fd72c5a378218b68a",
+        "bytes": 928
+      },
+      "parity": {
+        "snr_db": 25.102572286618283,
+        "exact_match": false,
+        "rmse": 0.21685506136111116,
+        "mae": 0.05335197910666466,
+        "max_abs": 1.8200339376926422,
+        "relative_l2": 0.05557396531335059
+      },
+      "label_agreement": 0.98,
+      "accuracy_percent": 90.0,
+      "accuracy_delta_pp": 0.0,
+      "gate_passed": false
+    }
+  },
+  "quantizers_rewritten": 39,
+  "runtime": {
+    "unique_executed_operators": {
+      "Gather": 2,
+      "SkipLayerNormalization": 13,
+      "QuantizeLinear": 27,
+      "MatMulInteger": 38,
+      "Cast": 38,
+      "Mul": 38,
+      "Add": 20,
+      "Reshape": 24,
+      "Transpose": 24,
+      "FusedMatMul": 6,
+      "Unsqueeze": 2,
+      "Equal": 1,
+      "Where": 6,
+      "Softmax": 6,
+      "MatMul": 6,
+      "BiasGelu": 6,
+      "DequantizeLinear": 1
+    },
+    "providers": {
+      "CPUExecutionProvider": 258
+    },
+    "operator_ms_profiled": {
+      "Gather": 0.44999999999999996,
+      "SkipLayerNormalization": 7.575000000000001,
+      "QuantizeLinear": 6.823999999999999,
+      "MatMulInteger": 104.25799999999998,
+      "Cast": 5.535000000000001,
+      "Mul": 4.861,
+      "Add": 1.3649999999999998,
+      "Reshape": 1.0070000000000003,
+      "Transpose": 3.2129999999999996,
+      "FusedMatMul": 2.4290000000000003,
+      "Unsqueeze": 0.138,
+      "Equal": 0.079,
+      "Where": 1.955,
+      "Softmax": 1.191,
+      "MatMul": 2.2030000000000003,
+      "BiasGelu": 4.653,
+      "DequantizeLinear": 0.03
+    },
+    "profile": {
+      "path": "daily/2026-10-16/experiments/finalize/artifacts/text_selected_profile_2026-10-16_14-10-30_975.json",
+      "sha256": "ef3bd214ce9290245487ee27243466f6495406f92fe9b128649d311901861e48",
+      "bytes": 260923
+    }
+  },
+  "release_gate_passed": false,
+  "source_code": {
+    "path": "daily/2026-10-16/experiments/finalize/src/select_text.py",
+    "sha256": "2e67d7c6a3011e13a0b4aa431cea1e1e22a5a462c6d42a98840e5c10572fe6c9",
+    "bytes": 3648
+  }
+}

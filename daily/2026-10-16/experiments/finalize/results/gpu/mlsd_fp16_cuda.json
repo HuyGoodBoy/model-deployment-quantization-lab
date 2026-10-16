@@ -1,0 +1,581 @@
+{
+  "task": "mlsd",
+  "variant": "fp16",
+  "device": "cuda",
+  "started_at_utc": "2026-10-16T07:49:46.796207+00:00",
+  "ort": "1.20.2",
+  "status": "ok",
+  "source_code": {
+    "path": "daily/2026-10-16/experiments/finalize/src/gpu_final.py",
+    "sha256": "a4fd09d58157e1a465e7a34f36f924531258e6e28b0a4d39bcba353b4567acea",
+    "bytes": 11646
+  },
+  "preloaded_dlls": [
+    "nvJitLink_120_0.dll",
+    "cudart64_12.dll",
+    "cublasLt64_12.dll",
+    "cublas64_12.dll",
+    "cufft64_11.dll",
+    "cudnn64_9.dll"
+  ],
+  "model": {
+    "path": "daily/2026-10-16/experiments/finalize/artifacts/gpu/mlsd_fp16.onnx",
+    "sha256": "37cf950a2db6cb8c8c90f3c8ed556192a6c9cdd7bd08ea5e965ccae9a6bb57c0",
+    "bytes": 1291699
+  },
+  "manifest": {
+    "path": "daily/2026-10-16/experiments/finalize/results/mlsd_manifest.json",
+    "sha256": "7b26ee9db44f945ae0db373f801b629716e5565a39a0ceaca3c7dd6838f8d0c1",
+    "bytes": 17222
+  },
+  "providers": [
+    "CUDAExecutionProvider",
+    "CPUExecutionProvider"
+  ],
+  "provider_options": {
+    "CUDAExecutionProvider": {
+      "device_id": "0",
+      "has_user_compute_stream": "0",
+      "cudnn_conv1d_pad_to_nc1d": "0",
+      "user_compute_stream": "0",
+      "gpu_external_alloc": "0",
+      "gpu_mem_limit": "2147483648",
+      "enable_cuda_graph": "0",
+      "gpu_external_free": "0",
+      "gpu_external_empty_cache": "0",
+      "arena_extend_strategy": "kNextPowerOfTwo",
+      "cudnn_conv_algo_search": "HEURISTIC",
+      "do_copy_in_default_stream": "1",
+      "cudnn_conv_use_max_workspace": "0",
+      "tunable_op_enable": "0",
+      "tunable_op_tuning_enable": "0",
+      "tunable_op_max_tuning_duration_ms": "0",
+      "enable_skip_layer_norm_strict_mode": "0",
+      "prefer_nhwc": "0",
+      "use_ep_level_unified_stream": "0",
+      "use_tf32": "0",
+      "sdpa_kernel": "0",
+      "fuse_conv_bias": "0"
+    },
+    "CPUExecutionProvider": {}
+  },
+  "parity_vs_ort130_cpu_fp32": {
+    "snr_db": 25.722435141867635,
+    "exact_match": false,
+    "rmse": 1.409056884630106,
+    "mae": 0.2970836175683572,
+    "max_abs": 98.48275756835938,
+    "relative_l2": 0.05174617380742198
+  },
+  "quality": {
+    "sAP10_subset_percent": 12.645690618582488,
+    "precision_at_0_1": 0.257285595337219,
+    "recall_at_0_1": 0.22707231040564374,
+    "ground_truth_lines": 6804,
+    "predicted_line_counts": [
+      126,
+      126,
+      110,
+      124,
+      119,
+      147,
+      112,
+      153,
+      143,
+      130,
+      119,
+      163,
+      80,
+      98,
+      121,
+      99,
+      81,
+      135,
+      155,
+      102,
+      120,
+      135,
+      117,
+      111,
+      146,
+      115,
+      124,
+      150,
+      138,
+      110,
+      110,
+      69,
+      114,
+      94,
+      101,
+      130,
+      131,
+      102,
+      151,
+      63,
+      134,
+      58,
+      105,
+      136,
+      102,
+      87,
+      102,
+      103,
+      110,
+      119,
+      86,
+      95,
+      80,
+      133
+    ],
+    "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+  },
+  "output": {
+    "path": "daily/2026-10-16/experiments/finalize/artifacts/gpu/mlsd_fp16_cuda.npy",
+    "sha256": "67fddf4da5239ad64917c0475b2e8c81af87b02999880f6c1cd7edfea5f8dcc2",
+    "bytes": 70779008
+  },
+  "profile": {
+    "file": {
+      "path": "daily/2026-10-16/experiments/finalize/artifacts/gpu/profile_mlsd_fp16_cuda_2026-10-16_14-49-51.json",
+      "sha256": "476bf7c1617118db86b918cf9ab2e9231d0bb7eae24ae3653e24a05a9f3fd8a8",
+      "bytes": 100080
+    },
+    "unique_nodes_by_provider": {
+      "CUDAExecutionProvider": 88
+    },
+    "operator_counts_by_provider": {
+      "CUDAExecutionProvider": {
+        "Cast": 2,
+        "Conv": 41,
+        "Clip": 20,
+        "Add": 8,
+        "Relu": 10,
+        "Resize": 3,
+        "Concat": 2,
+        "Slice": 2
+      }
+    },
+    "kernel_events_by_provider": {
+      "CUDAExecutionProvider": 88
+    },
+    "cuda_compute_nodes": 88,
+    "cpu_nodes": [],
+    "cuda_compute_operators": [
+      "Add",
+      "Cast",
+      "Clip",
+      "Concat",
+      "Conv",
+      "Relu",
+      "Resize",
+      "Slice"
+    ],
+    "cuda_compute_examples": [
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "graph_input_cast0_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              4,
+              512,
+              512
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "/model/backbone/features.0/features.0.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              4,
+              512,
+              512
+            ]
+          },
+          {
+            "float16": [
+              32,
+              4,
+              3,
+              3
+            ]
+          },
+          {
+            "float16": [
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "/model/backbone/features.0/features.0.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              32,
+              256,
+              256
+            ]
+          },
+          {
+            "float16": []
+          },
+          {
+            "float16": []
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "/model/backbone/features.1/conv/conv.0/conv.0.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              32,
+              256,
+              256
+            ]
+          },
+          {
+            "float16": [
+              32,
+              1,
+              3,
+              3
+            ]
+          },
+          {
+            "float16": [
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "/model/backbone/features.1/conv/conv.0/conv.0.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              32,
+              256,
+              256
+            ]
+          },
+          {
+            "float16": []
+          },
+          {
+            "float16": []
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "/model/backbone/features.1/conv/conv.1/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              32,
+              256,
+              256
+            ]
+          },
+          {
+            "float16": [
+              16,
+              32,
+              1,
+              1
+            ]
+          },
+          {
+            "float16": [
+              16
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "/model/backbone/features.2/conv/conv.0/conv.0.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              16,
+              256,
+              256
+            ]
+          },
+          {
+            "float16": [
+              96,
+              16,
+              1,
+              1
+            ]
+          },
+          {
+            "float16": [
+              96
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "/model/backbone/features.2/conv/conv.0/conv.0.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              96,
+              256,
+              256
+            ]
+          },
+          {
+            "float16": []
+          },
+          {
+            "float16": []
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "/model/backbone/features.2/conv/conv.1/conv.1.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              96,
+              256,
+              256
+            ]
+          },
+          {
+            "float16": [
+              96,
+              1,
+              3,
+              3
+            ]
+          },
+          {
+            "float16": [
+              96
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "/model/backbone/features.2/conv/conv.1/conv.1.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              96,
+              128,
+              128
+            ]
+          },
+          {
+            "float16": []
+          },
+          {
+            "float16": []
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "/model/backbone/features.2/conv/conv.2/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              96,
+              128,
+              128
+            ]
+          },
+          {
+            "float16": [
+              24,
+              96,
+              1,
+              1
+            ]
+          },
+          {
+            "float16": [
+              24
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "name": "/model/backbone/features.3/conv/conv.0/conv.0.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              24,
+              128,
+              128
+            ]
+          },
+          {
+            "float16": [
+              144,
+              24,
+              1,
+              1
+            ]
+          },
+          {
+            "float16": [
+              144
+            ]
+          }
+        ]
+      }
+    ],
+    "note": "Separate profiling session after timing; counts show provider assignment, not kernel-only latency or INT8 arithmetic coverage"
+  },
+  "benchmark": {
+    "samples_ms": [
+      6.3223,
+      6.5325,
+      6.5063,
+      6.0847,
+      6.0172,
+      6.0721,
+      6.0234,
+      6.079,
+      6.016,
+      6.0303,
+      6.103,
+      6.0389,
+      6.0597,
+      6.0303,
+      6.0091,
+      6.029,
+      6.0223,
+      5.9939,
+      6.1217,
+      5.6626,
+      5.5548,
+      5.8899,
+      5.7304,
+      5.6691,
+      5.6373,
+      5.6121,
+      5.6624,
+      5.5964,
+      5.9835,
+      5.7025,
+      5.666,
+      5.6238,
+      5.6457,
+      6.005,
+      6.0264,
+      6.173,
+      6.1675,
+      5.7108,
+      5.7331,
+      5.6863,
+      5.8638,
+      5.6417,
+      5.6057,
+      5.6232,
+      5.6215,
+      5.9737,
+      5.6696,
+      5.9489,
+      5.6999,
+      5.9961,
+      5.932,
+      5.6319,
+      5.6141,
+      5.9279,
+      5.5845,
+      5.6397,
+      5.6793,
+      5.7601,
+      5.7979,
+      5.6886,
+      5.7517,
+      5.7908,
+      5.6593,
+      5.6308,
+      5.9369,
+      6.1768,
+      5.6687,
+      5.6234,
+      5.6076,
+      5.5942,
+      5.9214,
+      5.9061,
+      6.4837,
+      5.95,
+      5.9509,
+      5.6896,
+      5.8742,
+      6.101,
+      5.7447,
+      5.7007
+    ],
+    "runs": 80,
+    "median_ms": 5.83085,
+    "p95_ms": 6.184075,
+    "input_indices": [
+      0,
+      3,
+      7,
+      10,
+      14,
+      17,
+      21,
+      24,
+      28,
+      31,
+      35,
+      38,
+      42,
+      45,
+      49,
+      53
+    ],
+    "protocol": "One isolated process/session per variant/device; ORT 1.20.2, 4 intra/1 inter threads, sequential ALL, spinning disabled; 16 warmups then 5x16 timing samples; batch1; profile in separate session after timing/evaluation",
+    "scope": "Synchronous session.run, CPU NumPy IO includes H2D/D2H and API overhead; excludes load/preprocess/decode; CUDA TF32 disabled; 2GiB arena limit and heuristic cuDNN workspace policy"
+  },
+  "scope": "Same frozen 54-image/772-sentence set used for runtime comparison; no new tuning or independent test-set claim"
+}

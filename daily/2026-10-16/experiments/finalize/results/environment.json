@@ -1,0 +1,15 @@
+{
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+  "numpy": "2.4.6",
+  "torch": "2.13.0+cpu",
+  "onnx": "1.23.2",
+  "onnxruntime": "1.30.0",
+  "provider": "CPUExecutionProvider",
+  "threads": {
+    "intra": 4,
+    "inter": 1
+  },
+  "spinning_disabled": true
+}

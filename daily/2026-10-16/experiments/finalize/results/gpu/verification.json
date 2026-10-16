@@ -1,0 +1,834 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-10-16T07:57:58.146488+00:00",
+  "scope": "Evidence consistency for 14 attempted cases; failed cases remain failures; existing QAT release gates unchanged",
+  "environment": {
+    "path": "daily/2026-10-16/experiments/finalize/results/gpu/environment.json",
+    "sha256": "cd8e9eb0532fa4c9f9ee120fe96b766d7e14b6e1babdc107ba206f47e5e4be7d",
+    "bytes": 735
+  },
+  "verification_package_versions": {
+    "onnxruntime-gpu": "1.20.2",
+    "onnx": "1.16.2",
+    "numpy": "1.26.4",
+    "nvidia-cuda-runtime-cu12": "12.6.77",
+    "nvidia-cublas-cu12": "12.6.4.1",
+    "nvidia-cudnn-cu12": "9.5.1.17",
+    "nvidia-cufft-cu12": "11.3.0.4",
+    "nvidia-nvjitlink-cu12": "12.6.85"
+  },
+  "rows": {
+    "mlsd_fp32_cpu": {
+      "status": "ok",
+      "model": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/deploy/mlsd_original_fp32.onnx",
+        "sha256": "3aad0be412ce1f1fb5079fa2d000d6ffd11541dcc3a038d2297555bedda21f7c",
+        "bytes": 2502514
+      },
+      "quality_percent": 12.780214947600369,
+      "median_ms": 27.1115,
+      "p95_ms": 28.008475,
+      "cuda_compute_nodes": 0,
+      "cpu_nodes": 51,
+      "operator_counts_by_provider": {
+        "CPUExecutionProvider": {
+          "Conv": 41,
+          "Upsample": 2,
+          "Concat": 2,
+          "Add": 2,
+          "ReorderOutput": 1,
+          "Slice": 2,
+          "Resize": 1
+        }
+      },
+      "scheduled_operator_first_input_type_counts": {
+        "CPUExecutionProvider/Conv/float": 41,
+        "CPUExecutionProvider/Upsample/float": 2,
+        "CPUExecutionProvider/Concat/float": 2,
+        "CPUExecutionProvider/Add/float": 2,
+        "CPUExecutionProvider/ReorderOutput/float": 1,
+        "CPUExecutionProvider/Slice/float": 2,
+        "CPUExecutionProvider/Resize/float": 1
+      }
+    },
+    "mlsd_fp32_cuda": {
+      "status": "ok",
+      "model": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/deploy/mlsd_original_fp32.onnx",
+        "sha256": "3aad0be412ce1f1fb5079fa2d000d6ffd11541dcc3a038d2297555bedda21f7c",
+        "bytes": 2502514
+      },
+      "quality_percent": 12.780214947600369,
+      "median_ms": 7.510149999999999,
+      "p95_ms": 7.7748800000000005,
+      "cuda_compute_nodes": 86,
+      "cpu_nodes": 0,
+      "operator_counts_by_provider": {
+        "CUDAExecutionProvider": {
+          "Conv": 41,
+          "Clip": 20,
+          "Add": 8,
+          "Relu": 10,
+          "Resize": 3,
+          "Concat": 2,
+          "Slice": 2
+        }
+      },
+      "scheduled_operator_first_input_type_counts": {
+        "CUDAExecutionProvider/Conv/float": 41,
+        "CUDAExecutionProvider/Clip/float": 20,
+        "CUDAExecutionProvider/Add/float": 8,
+        "CUDAExecutionProvider/Relu/float": 10,
+        "CUDAExecutionProvider/Resize/float": 3,
+        "CUDAExecutionProvider/Concat/float": 2,
+        "CUDAExecutionProvider/Slice/float": 2
+      }
+    },
+    "mlsd_fp16_cpu": {
+      "status": "ok",
+      "model": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/gpu/mlsd_fp16.onnx",
+        "sha256": "37cf950a2db6cb8c8c90f3c8ed556192a6c9cdd7bd08ea5e965ccae9a6bb57c0",
+        "bytes": 1291699
+      },
+      "quality_percent": 12.70053204301697,
+      "median_ms": 61.0347,
+      "p95_ms": 66.47025,
+      "cuda_compute_nodes": 0,
+      "cpu_nodes": 172,
+      "operator_counts_by_provider": {
+        "CPUExecutionProvider": {
+          "Cast": 86,
+          "Conv": 41,
+          "Clip": 20,
+          "Add": 8,
+          "Relu": 10,
+          "Resize": 3,
+          "Concat": 2,
+          "Slice": 2
+        }
+      },
+      "scheduled_operator_first_input_type_counts": {
+        "CPUExecutionProvider/Cast/float16": 85,
+        "CPUExecutionProvider/Conv/float": 41,
+        "CPUExecutionProvider/Clip/float": 20,
+        "CPUExecutionProvider/Add/float": 8,
+        "CPUExecutionProvider/Relu/float": 10,
+        "CPUExecutionProvider/Resize/float": 3,
+        "CPUExecutionProvider/Concat/float": 2,
+        "CPUExecutionProvider/Slice/float": 1,
+        "CPUExecutionProvider/Cast/float": 1,
+        "CPUExecutionProvider/Slice/float16": 1
+      }
+    },
+    "mlsd_fp16_cuda": {
+      "status": "ok",
+      "model": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/gpu/mlsd_fp16.onnx",
+        "sha256": "37cf950a2db6cb8c8c90f3c8ed556192a6c9cdd7bd08ea5e965ccae9a6bb57c0",
+        "bytes": 1291699
+      },
+      "quality_percent": 12.645690618582488,
+      "median_ms": 5.83085,
+      "p95_ms": 6.184075,
+      "cuda_compute_nodes": 88,
+      "cpu_nodes": 0,
+      "operator_counts_by_provider": {
+        "CUDAExecutionProvider": {
+          "Cast": 2,
+          "Conv": 41,
+          "Clip": 20,
+          "Add": 8,
+          "Relu": 10,
+          "Resize": 3,
+          "Concat": 2,
+          "Slice": 2
+        }
+      },
+      "scheduled_operator_first_input_type_counts": {
+        "CUDAExecutionProvider/Cast/float": 1,
+        "CUDAExecutionProvider/Conv/float16": 41,
+        "CUDAExecutionProvider/Clip/float16": 20,
+        "CUDAExecutionProvider/Add/float16": 8,
+        "CUDAExecutionProvider/Relu/float16": 10,
+        "CUDAExecutionProvider/Resize/float16": 3,
+        "CUDAExecutionProvider/Concat/float16": 2,
+        "CUDAExecutionProvider/Slice/float16": 2,
+        "CUDAExecutionProvider/Cast/float16": 1
+      }
+    },
+    "mlsd_qat_41_integer_cpu": {
+      "status": "ok",
+      "model": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/deploy/mlsd_step0032_integer.onnx",
+        "sha256": "5d7831552ec30ffe5fff49157eae6f24b522f43217db63bbf50e2f34425a6486",
+        "bytes": 760882
+      },
+      "quality_percent": 12.176682836676944,
+      "median_ms": 234.64864999999998,
+      "p95_ms": 315.233745,
+      "cuda_compute_nodes": 0,
+      "cpu_nodes": 237,
+      "operator_counts_by_provider": {
+        "CPUExecutionProvider": {
+          "Pad": 4,
+          "QuantizeLinear": 41,
+          "ConvInteger": 41,
+          "Cast": 41,
+          "Mul": 41,
+          "Add": 49,
+          "Clip": 3,
+          "Relu": 6,
+          "Resize": 3,
+          "Concat": 3,
+          "Slice": 2,
+          "Split": 1,
+          "DequantizeLinear": 2
+        }
+      },
+      "scheduled_operator_first_input_type_counts": {
+        "CPUExecutionProvider/Pad/float": 4,
+        "CPUExecutionProvider/QuantizeLinear/float": 41,
+        "CPUExecutionProvider/ConvInteger/uint8": 41,
+        "CPUExecutionProvider/Cast/int32": 41,
+        "CPUExecutionProvider/Mul/float": 41,
+        "CPUExecutionProvider/Add/float": 49,
+        "CPUExecutionProvider/Clip/float": 3,
+        "CPUExecutionProvider/Relu/float": 6,
+        "CPUExecutionProvider/Resize/float": 3,
+        "CPUExecutionProvider/Concat/float": 3,
+        "CPUExecutionProvider/Slice/float": 2,
+        "CPUExecutionProvider/Split/float": 1,
+        "CPUExecutionProvider/DequantizeLinear/int8": 1,
+        "CPUExecutionProvider/DequantizeLinear/uint8": 1
+      }
+    },
+    "mlsd_qat_41_integer_cuda": {
+      "status": "ok",
+      "model": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/research/deploy/mlsd_step0032_integer.onnx",
+        "sha256": "5d7831552ec30ffe5fff49157eae6f24b522f43217db63bbf50e2f34425a6486",
+        "bytes": 760882
+      },
+      "quality_percent": 12.172670172035735,
+      "median_ms": 77.05340000000001,
+      "p95_ms": 80.20072,
+      "cuda_compute_nodes": 217,
+      "cpu_nodes": 41,
+      "operator_counts_by_provider": {
+        "CUDAExecutionProvider": {
+          "Pad": 4,
+          "QuantizeLinear": 41,
+          "MemcpyToHost": 39,
+          "MemcpyFromHost": 41,
+          "Cast": 41,
+          "Mul": 41,
+          "Add": 49,
+          "Clip": 20,
+          "Relu": 10,
+          "Resize": 3,
+          "Concat": 3,
+          "Slice": 2,
+          "Split": 1,
+          "DequantizeLinear": 2
+        },
+        "CPUExecutionProvider": {
+          "ConvInteger": 41
+        }
+      },
+      "scheduled_operator_first_input_type_counts": {
+        "CUDAExecutionProvider/Pad/float": 4,
+        "CUDAExecutionProvider/QuantizeLinear/float": 41,
+        "CUDAExecutionProvider/MemcpyToHost/uint8": 39,
+        "CPUExecutionProvider/ConvInteger/uint8": 41,
+        "CUDAExecutionProvider/MemcpyFromHost/int32": 41,
+        "CUDAExecutionProvider/Cast/int32": 41,
+        "CUDAExecutionProvider/Mul/float": 41,
+        "CUDAExecutionProvider/Add/float": 49,
+        "CUDAExecutionProvider/Clip/float": 20,
+        "CUDAExecutionProvider/Relu/float": 10,
+        "CUDAExecutionProvider/Resize/float": 3,
+        "CUDAExecutionProvider/Concat/float": 3,
+        "CUDAExecutionProvider/Slice/float": 2,
+        "CUDAExecutionProvider/Split/float": 1,
+        "CUDAExecutionProvider/DequantizeLinear/int8": 2
+      }
+    },
+    "mlsd_qat_qdq_cpu": {
+      "status": "ok",
+      "model": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/mlsd_frozen_qdq.onnx",
+        "sha256": "32aec91c3e1b3d23e09745f0f1c0973f81220f2ba3ebb1f973c47a79ab3ec7b9",
+        "bytes": 773207
+      },
+      "quality_percent": 12.079604904207528,
+      "median_ms": 75.45089999999999,
+      "p95_ms": 80.99821,
+      "cuda_compute_nodes": 0,
+      "cpu_nodes": 181,
+      "operator_counts_by_provider": {
+        "CPUExecutionProvider": {
+          "DequantizeLinear": 84,
+          "Pad": 4,
+          "QuantizeLinear": 41,
+          "Conv": 26,
+          "FusedConv": 15,
+          "Resize": 3,
+          "Concat": 3,
+          "Add": 2,
+          "Slice": 2,
+          "Split": 1
+        }
+      },
+      "scheduled_operator_first_input_type_counts": {
+        "CPUExecutionProvider/DequantizeLinear/uint8": 83,
+        "CPUExecutionProvider/Pad/float": 4,
+        "CPUExecutionProvider/QuantizeLinear/float": 41,
+        "CPUExecutionProvider/Conv/float": 26,
+        "CPUExecutionProvider/FusedConv/float": 15,
+        "CPUExecutionProvider/Resize/float": 3,
+        "CPUExecutionProvider/Concat/float": 3,
+        "CPUExecutionProvider/Add/float": 2,
+        "CPUExecutionProvider/Slice/float": 2,
+        "CPUExecutionProvider/Split/float": 1,
+        "CPUExecutionProvider/DequantizeLinear/int8": 1
+      }
+    },
+    "mlsd_qat_qdq_cuda": {
+      "status": "ok",
+      "model": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/mlsd_frozen_qdq.onnx",
+        "sha256": "32aec91c3e1b3d23e09745f0f1c0973f81220f2ba3ebb1f973c47a79ab3ec7b9",
+        "bytes": 773207
+      },
+      "quality_percent": 12.085106199970326,
+      "median_ms": 13.455,
+      "p95_ms": 18.30646,
+      "cuda_compute_nodes": 217,
+      "cpu_nodes": 0,
+      "operator_counts_by_provider": {
+        "CUDAExecutionProvider": {
+          "DequantizeLinear": 84,
+          "Pad": 4,
+          "QuantizeLinear": 41,
+          "Conv": 41,
+          "Clip": 20,
+          "Add": 8,
+          "Relu": 10,
+          "Resize": 3,
+          "Concat": 3,
+          "Slice": 2,
+          "Split": 1
+        }
+      },
+      "scheduled_operator_first_input_type_counts": {
+        "CUDAExecutionProvider/DequantizeLinear/uint8": 82,
+        "CUDAExecutionProvider/Pad/float": 4,
+        "CUDAExecutionProvider/QuantizeLinear/float": 41,
+        "CUDAExecutionProvider/Conv/float": 41,
+        "CUDAExecutionProvider/Clip/float": 20,
+        "CUDAExecutionProvider/Add/float": 8,
+        "CUDAExecutionProvider/Relu/float": 10,
+        "CUDAExecutionProvider/Resize/float": 3,
+        "CUDAExecutionProvider/Concat/float": 3,
+        "CUDAExecutionProvider/Slice/float": 2,
+        "CUDAExecutionProvider/Split/float": 1,
+        "CUDAExecutionProvider/DequantizeLinear/int8": 2
+      }
+    },
+    "text_fp32_cpu": {
+      "status": "ok",
+      "model": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/text_teacher_fp32.onnx",
+        "sha256": "fd36041ee5b03f8fe62567b57625e295982a5d8fbb9f3b0ba09fdac0a16a26b6",
+        "bytes": 267886677
+      },
+      "quality_percent": 91.06217616580311,
+      "median_ms": 62.503299999999996,
+      "p95_ms": 74.50438,
+      "cuda_compute_nodes": 0,
+      "cpu_nodes": 164,
+      "operator_counts_by_provider": {
+        "CPUExecutionProvider": {
+          "Gather": 2,
+          "SkipLayerNormalization": 13,
+          "MatMul": 42,
+          "Add": 30,
+          "Reshape": 24,
+          "Transpose": 24,
+          "FusedMatMul": 6,
+          "Unsqueeze": 2,
+          "Equal": 1,
+          "Where": 6,
+          "Softmax": 6,
+          "BiasGelu": 6,
+          "FusedGemm": 1,
+          "Gemm": 1
+        }
+      },
+      "scheduled_operator_first_input_type_counts": {
+        "CPUExecutionProvider/Gather/float": 2,
+        "CPUExecutionProvider/SkipLayerNormalization/float": 13,
+        "CPUExecutionProvider/MatMul/float": 42,
+        "CPUExecutionProvider/Add/float": 30,
+        "CPUExecutionProvider/Reshape/float": 24,
+        "CPUExecutionProvider/Transpose/float": 24,
+        "CPUExecutionProvider/FusedMatMul/float": 6,
+        "CPUExecutionProvider/Unsqueeze/int64": 2,
+        "CPUExecutionProvider/Equal/int64": 1,
+        "CPUExecutionProvider/Where/bool": 6,
+        "CPUExecutionProvider/Softmax/float": 6,
+        "CPUExecutionProvider/BiasGelu/float": 6,
+        "CPUExecutionProvider/FusedGemm/float": 1,
+        "CPUExecutionProvider/Gemm/float": 1
+      }
+    },
+    "text_fp32_cuda": {
+      "status": "ok",
+      "model": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/text_teacher_fp32.onnx",
+        "sha256": "fd36041ee5b03f8fe62567b57625e295982a5d8fbb9f3b0ba09fdac0a16a26b6",
+        "bytes": 267886677
+      },
+      "quality_percent": 91.06217616580311,
+      "median_ms": 6.58885,
+      "p95_ms": 10.648984999999998,
+      "cuda_compute_nodes": 165,
+      "cpu_nodes": 0,
+      "operator_counts_by_provider": {
+        "CUDAExecutionProvider": {
+          "Gather": 2,
+          "SkipLayerNormalization": 13,
+          "MatMul": 42,
+          "Add": 30,
+          "Reshape": 24,
+          "Transpose": 24,
+          "FusedMatMul": 6,
+          "Unsqueeze": 2,
+          "Equal": 1,
+          "Where": 6,
+          "Softmax": 6,
+          "BiasGelu": 6,
+          "Gemm": 2,
+          "Relu": 1
+        }
+      },
+      "scheduled_operator_first_input_type_counts": {
+        "CUDAExecutionProvider/Gather/float": 2,
+        "CUDAExecutionProvider/SkipLayerNormalization/float": 13,
+        "CUDAExecutionProvider/MatMul/float": 42,
+        "CUDAExecutionProvider/Add/float": 30,
+        "CUDAExecutionProvider/Reshape/float": 24,
+        "CUDAExecutionProvider/Transpose/float": 24,
+        "CUDAExecutionProvider/FusedMatMul/float": 6,
+        "CUDAExecutionProvider/Unsqueeze/int64": 2,
+        "CUDAExecutionProvider/Equal/int64": 1,
+        "CUDAExecutionProvider/Where/bool": 6,
+        "CUDAExecutionProvider/Softmax/float": 6,
+        "CUDAExecutionProvider/BiasGelu/float": 6,
+        "CUDAExecutionProvider/Gemm/float": 2,
+        "CUDAExecutionProvider/Relu/float": 1
+      }
+    },
+    "text_fp16_cpu": {
+      "status": "ok",
+      "model": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/gpu/text_fp16.onnx",
+        "sha256": "a95866dcd9a557450726d9d9f87cb82db9b84d8d6511a4716d8d08d85addc7f0",
+        "bytes": 133999199
+      },
+      "quality_percent": 91.06217616580311,
+      "median_ms": 134.1868,
+      "p95_ms": 181.98449499999998,
+      "cuda_compute_nodes": 0,
+      "cpu_nodes": 396,
+      "operator_counts_by_provider": {
+        "CPUExecutionProvider": {
+          "Cast": 158,
+          "Gather": 2,
+          "Add": 55,
+          "LayerNormalization": 13,
+          "MatMul": 48,
+          "Reshape": 24,
+          "Transpose": 24,
+          "Div": 18,
+          "Unsqueeze": 2,
+          "Equal": 1,
+          "Where": 6,
+          "ReduceMax": 6,
+          "Sub": 6,
+          "Exp": 6,
+          "ReduceSum": 6,
+          "Erf": 6,
+          "Mul": 12,
+          "Gemm": 2,
+          "Relu": 1
+        }
+      },
+      "scheduled_operator_first_input_type_counts": {
+        "CPUExecutionProvider/Cast/float16": 132,
+        "CPUExecutionProvider/Gather/float16": 2,
+        "CPUExecutionProvider/Add/float": 55,
+        "CPUExecutionProvider/LayerNormalization/float": 12,
+        "CPUExecutionProvider/MatMul/float": 48,
+        "CPUExecutionProvider/Cast/float": 26,
+        "CPUExecutionProvider/Reshape/float16": 24,
+        "CPUExecutionProvider/Transpose/float16": 24,
+        "CPUExecutionProvider/Div/float": 18,
+        "CPUExecutionProvider/Unsqueeze/int64": 2,
+        "CPUExecutionProvider/Equal/int64": 1,
+        "CPUExecutionProvider/Where/bool": 6,
+        "CPUExecutionProvider/ReduceMax/float": 6,
+        "CPUExecutionProvider/Sub/float": 6,
+        "CPUExecutionProvider/Exp/float": 6,
+        "CPUExecutionProvider/ReduceSum/float": 6,
+        "CPUExecutionProvider/Erf/float": 6,
+        "CPUExecutionProvider/Mul/float": 12,
+        "CPUExecutionProvider/LayerNormalization/float16": 1,
+        "CPUExecutionProvider/Gemm/float": 2,
+        "CPUExecutionProvider/Relu/float": 1
+      }
+    },
+    "text_fp16_cuda": {
+      "status": "ok",
+      "model": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/gpu/text_fp16.onnx",
+        "sha256": "a95866dcd9a557450726d9d9f87cb82db9b84d8d6511a4716d8d08d85addc7f0",
+        "bytes": 133999199
+      },
+      "quality_percent": 91.06217616580311,
+      "median_ms": 6.652900000000001,
+      "p95_ms": 11.693549999999997,
+      "cuda_compute_nodes": 166,
+      "cpu_nodes": 0,
+      "operator_counts_by_provider": {
+        "CUDAExecutionProvider": {
+          "Gather": 2,
+          "SkipLayerNormalization": 13,
+          "MatMul": 42,
+          "Add": 30,
+          "Reshape": 24,
+          "Transpose": 24,
+          "FusedMatMul": 6,
+          "Unsqueeze": 2,
+          "Equal": 1,
+          "Where": 6,
+          "Softmax": 6,
+          "BiasGelu": 6,
+          "Gemm": 2,
+          "Relu": 1,
+          "Cast": 1
+        }
+      },
+      "scheduled_operator_first_input_type_counts": {
+        "CUDAExecutionProvider/Gather/float16": 2,
+        "CUDAExecutionProvider/SkipLayerNormalization/float16": 13,
+        "CUDAExecutionProvider/MatMul/float16": 42,
+        "CUDAExecutionProvider/Add/float16": 30,
+        "CUDAExecutionProvider/Reshape/float16": 24,
+        "CUDAExecutionProvider/Transpose/float16": 24,
+        "CUDAExecutionProvider/FusedMatMul/float16": 6,
+        "CUDAExecutionProvider/Unsqueeze/int64": 2,
+        "CUDAExecutionProvider/Equal/int64": 1,
+        "CUDAExecutionProvider/Where/bool": 6,
+        "CUDAExecutionProvider/Softmax/float16": 6,
+        "CUDAExecutionProvider/BiasGelu/float16": 6,
+        "CUDAExecutionProvider/Gemm/float16": 2,
+        "CUDAExecutionProvider/Relu/float16": 1,
+        "CUDAExecutionProvider/Cast/float16": 1
+      }
+    },
+    "text_qat_static_cpu": {
+      "status": "ok",
+      "model": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/text_qat_static_integer.onnx",
+        "sha256": "534321dace35ce89370774ecd14c1d73d8ab82fd4769f1a14af4f77ef4f6d330",
+        "bytes": 138937414
+      },
+      "quality_percent": 90.15544041450777,
+      "median_ms": 11.3172,
+      "p95_ms": 40.27884999999999,
+      "cuda_compute_nodes": 0,
+      "cpu_nodes": 258,
+      "operator_counts_by_provider": {
+        "CPUExecutionProvider": {
+          "Gather": 2,
+          "SkipLayerNormalization": 13,
+          "QuantizeLinear": 27,
+          "MatMulInteger": 38,
+          "Cast": 38,
+          "Mul": 38,
+          "Add": 20,
+          "Reshape": 24,
+          "Transpose": 24,
+          "FusedMatMul": 6,
+          "Unsqueeze": 2,
+          "Equal": 1,
+          "Where": 6,
+          "Softmax": 6,
+          "MatMul": 6,
+          "BiasGelu": 6,
+          "DequantizeLinear": 1
+        }
+      },
+      "scheduled_operator_first_input_type_counts": {
+        "CPUExecutionProvider/Gather/float": 2,
+        "CPUExecutionProvider/SkipLayerNormalization/float": 13,
+        "CPUExecutionProvider/QuantizeLinear/float": 27,
+        "CPUExecutionProvider/MatMulInteger/uint8": 38,
+        "CPUExecutionProvider/Cast/int32": 38,
+        "CPUExecutionProvider/Mul/float": 38,
+        "CPUExecutionProvider/Add/float": 20,
+        "CPUExecutionProvider/Reshape/float": 18,
+        "CPUExecutionProvider/Transpose/float": 18,
+        "CPUExecutionProvider/FusedMatMul/float": 6,
+        "CPUExecutionProvider/Unsqueeze/int64": 2,
+        "CPUExecutionProvider/Equal/int64": 1,
+        "CPUExecutionProvider/Where/bool": 6,
+        "CPUExecutionProvider/Softmax/float": 6,
+        "CPUExecutionProvider/MatMul/float": 6,
+        "CPUExecutionProvider/Transpose/uint8": 6,
+        "CPUExecutionProvider/Reshape/uint8": 6,
+        "CPUExecutionProvider/BiasGelu/float": 6,
+        "CPUExecutionProvider/DequantizeLinear/uint8": 1
+      }
+    },
+    "text_qat_static_cuda": {
+      "status": "ok",
+      "model": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/text_qat_static_integer.onnx",
+        "sha256": "534321dace35ce89370774ecd14c1d73d8ab82fd4769f1a14af4f77ef4f6d330",
+        "bytes": 138937414
+      },
+      "quality_percent": 90.28497409326425,
+      "median_ms": 43.2937,
+      "p95_ms": 53.62842,
+      "cuda_compute_nodes": 245,
+      "cpu_nodes": 38,
+      "operator_counts_by_provider": {
+        "CUDAExecutionProvider": {
+          "Gather": 2,
+          "SkipLayerNormalization": 13,
+          "QuantizeLinear": 39,
+          "MemcpyToHost": 26,
+          "MemcpyFromHost": 38,
+          "Cast": 38,
+          "Mul": 38,
+          "Add": 20,
+          "Reshape": 24,
+          "Transpose": 24,
+          "FusedMatMul": 6,
+          "Unsqueeze": 2,
+          "Equal": 1,
+          "Where": 6,
+          "Softmax": 6,
+          "MatMul": 6,
+          "DequantizeLinear": 13,
+          "BiasGelu": 6,
+          "Relu": 1
+        },
+        "CPUExecutionProvider": {
+          "MatMulInteger": 38
+        }
+      },
+      "scheduled_operator_first_input_type_counts": {
+        "CUDAExecutionProvider/Gather/float": 2,
+        "CUDAExecutionProvider/SkipLayerNormalization/float": 13,
+        "CUDAExecutionProvider/QuantizeLinear/float": 39,
+        "CUDAExecutionProvider/MemcpyToHost/uint8": 26,
+        "CPUExecutionProvider/MatMulInteger/uint8": 38,
+        "CUDAExecutionProvider/MemcpyFromHost/int32": 38,
+        "CUDAExecutionProvider/Cast/int32": 38,
+        "CUDAExecutionProvider/Mul/float": 38,
+        "CUDAExecutionProvider/Add/float": 20,
+        "CUDAExecutionProvider/Reshape/float": 24,
+        "CUDAExecutionProvider/Transpose/float": 24,
+        "CUDAExecutionProvider/FusedMatMul/float": 6,
+        "CUDAExecutionProvider/Unsqueeze/int64": 2,
+        "CUDAExecutionProvider/Equal/int64": 1,
+        "CUDAExecutionProvider/Where/bool": 6,
+        "CUDAExecutionProvider/Softmax/float": 6,
+        "CUDAExecutionProvider/MatMul/float": 6,
+        "CUDAExecutionProvider/DequantizeLinear/uint8": 12,
+        "CUDAExecutionProvider/BiasGelu/float": 6,
+        "CUDAExecutionProvider/Relu/float": 1,
+        "CUDAExecutionProvider/DequantizeLinear/int8": 1
+      }
+    }
+  },
+  "matched_runtime_comparisons": {
+    "mlsd_fp32": {
+      "cpu_to_cuda_parity": {
+        "snr_db": 108.11846351596692,
+        "exact_match": false,
+        "rmse": 0.00010693678116317858,
+        "mae": 2.5493382641876214e-05,
+        "max_abs": 0.011831283569335938,
+        "relative_l2": 3.927143981790853e-06
+      },
+      "quality_delta_cuda_minus_cpu_pp": 0.0,
+      "cpu_over_cuda_median_ratio": 3.6099811588317148
+    },
+    "mlsd_fp16": {
+      "cpu_to_cuda_parity": {
+        "snr_db": 34.929302150291306,
+        "exact_match": false,
+        "rmse": 0.48850292778807974,
+        "mae": 0.11470546560895956,
+        "max_abs": 55.03125,
+        "relative_l2": 0.01792812586371892
+      },
+      "quality_delta_cuda_minus_cpu_pp": -0.05484142443448192,
+      "cpu_over_cuda_median_ratio": 10.467547613126731
+    },
+    "mlsd_qat_41_integer": {
+      "cpu_to_cuda_parity": {
+        "snr_db": 57.58563293305975,
+        "exact_match": false,
+        "rmse": 0.031807261841808966,
+        "mae": 0.0010044398409311945,
+        "max_abs": 5.888946533203125,
+        "relative_l2": 0.001320439031430175
+      },
+      "quality_delta_cuda_minus_cpu_pp": -0.004012664641209085,
+      "cpu_over_cuda_median_ratio": 3.045273148232264
+    },
+    "mlsd_qat_qdq": {
+      "cpu_to_cuda_parity": {
+        "snr_db": 25.767142811597665,
+        "exact_match": false,
+        "rmse": 1.240269642140587,
+        "mae": 0.6103619040024209,
+        "max_abs": 81.15042495727539,
+        "relative_l2": 0.051480512223530915
+      },
+      "quality_delta_cuda_minus_cpu_pp": 0.005501295762798009,
+      "cpu_over_cuda_median_ratio": 5.607647714604235
+    },
+    "text_fp32": {
+      "cpu_to_cuda_parity": {
+        "snr_db": 122.64608445770304,
+        "exact_match": false,
+        "rmse": 2.636140125616462e-06,
+        "mae": 1.463535425151877e-06,
+        "max_abs": 2.6106834411621094e-05,
+        "relative_l2": 7.373875098967001e-07
+      },
+      "quality_delta_cuda_minus_cpu_pp": 0.0,
+      "cpu_over_cuda_median_ratio": 9.486222937234874,
+      "label_agreement": 1.0
+    },
+    "text_fp16": {
+      "cpu_to_cuda_parity": {
+        "snr_db": 59.89214068661699,
+        "exact_match": false,
+        "rmse": 0.003619710227699005,
+        "mae": 0.0022196119754946757,
+        "max_abs": 0.02840358018875122,
+        "relative_l2": 0.0010124951828991953
+      },
+      "quality_delta_cuda_minus_cpu_pp": 0.0,
+      "cpu_over_cuda_median_ratio": 20.16967036931263,
+      "label_agreement": 1.0
+    },
+    "text_qat_static": {
+      "cpu_to_cuda_parity": {
+        "snr_db": 31.631797190064653,
+        "exact_match": false,
+        "rmse": 0.10014622749573573,
+        "mae": 0.02272037692715467,
+        "max_abs": 1.39179065823555,
+        "relative_l2": 0.026206567446680706
+      },
+      "quality_delta_cuda_minus_cpu_pp": 0.1295336787564878,
+      "cpu_over_cuda_median_ratio": 0.26140523909945323,
+      "label_agreement": 0.9987046632124352
+    }
+  },
+  "checked_results": {
+    "mlsd_fp32_cpu": {
+      "path": "daily/2026-10-16/experiments/finalize/results/gpu/mlsd_fp32_cpu.json",
+      "sha256": "b662e87b16cdd5745505adc05d1c514dd03c3ab2f57f644dc036377a636a2716",
+      "bytes": 33355
+    },
+    "mlsd_fp32_cuda": {
+      "path": "daily/2026-10-16/experiments/finalize/results/gpu/mlsd_fp32_cuda.json",
+      "sha256": "f8799ec1587f5cad27a812bb362d9100268f0a3d09a2398dd982a49e357783fa",
+      "bytes": 12403
+    },
+    "mlsd_fp16_cpu": {
+      "path": "daily/2026-10-16/experiments/finalize/results/gpu/mlsd_fp16_cpu.json",
+      "sha256": "5fc699474e53dc4e4a4c9e896ce459844395cf0b34ff1af317b93bcf73565f42",
+      "bytes": 72450
+    },
+    "mlsd_fp16_cuda": {
+      "path": "daily/2026-10-16/experiments/finalize/results/gpu/mlsd_fp16_cuda.json",
+      "sha256": "6b23b60a32103b746a908411e3140d5e5e7b43a9e6dbdad2e59f3e17d42b135f",
+      "bytes": 12313
+    },
+    "mlsd_qat_41_integer_cpu": {
+      "path": "daily/2026-10-16/experiments/finalize/results/gpu/mlsd_qat_41_integer_cpu.json",
+      "sha256": "c9b9bc8bc3475a4a515f42c33fcb499056946902811d4159a026f42b2ae86866",
+      "bytes": 114108
+    },
+    "mlsd_qat_41_integer_cuda": {
+      "path": "daily/2026-10-16/experiments/finalize/results/gpu/mlsd_qat_41_integer_cuda.json",
+      "sha256": "f6af868cc9ac47c9b10bd50526a85311759ff0dbd7cd25a490b490fe013587e6",
+      "bytes": 35989
+    },
+    "mlsd_qat_qdq_cpu": {
+      "path": "daily/2026-10-16/experiments/finalize/results/gpu/mlsd_qat_qdq_cpu.json",
+      "sha256": "ca4af5521e1c3fc4d58fa00a40509f03a9483e715fdd4400ac593cf8b056191c",
+      "bytes": 95615
+    },
+    "mlsd_qat_qdq_cuda": {
+      "path": "daily/2026-10-16/experiments/finalize/results/gpu/mlsd_qat_qdq_cuda.json",
+      "sha256": "42317fbf6ddc489fa2148f17976e9d4439b0209da9e67711cad4cee5e372e8dd",
+      "bytes": 12770
+    },
+    "text_fp32_cpu": {
+      "path": "daily/2026-10-16/experiments/finalize/results/gpu/text_fp32_cpu.json",
+      "sha256": "41d2940b5ba1f19e095d822f3fa5109ac0cc3b9a5e03425090b9516a5133b58b",
+      "bytes": 69721
+    },
+    "text_fp32_cuda": {
+      "path": "daily/2026-10-16/experiments/finalize/results/gpu/text_fp32_cuda.json",
+      "sha256": "7647788d32a2b9c66cbb87ebf0460d219378592edac0e003838329748a0f68fc",
+      "bytes": 10846
+    },
+    "text_fp16_cpu": {
+      "path": "daily/2026-10-16/experiments/finalize/results/gpu/text_fp16_cpu.json",
+      "sha256": "555037b26d55a13aca26c5bbda883a6b368d5b9bd0a7f672ba1c3c5423a8ce45",
+      "bytes": 151307
+    },
+    "text_fp16_cuda": {
+      "path": "daily/2026-10-16/experiments/finalize/results/gpu/text_fp16_cuda.json",
+      "sha256": "7db640483562d8e354fb9f23261695796231e1cc8c2968da69e2e29bbd8efca3",
+      "bytes": 10920
+    },
+    "text_qat_static_cpu": {
+      "path": "daily/2026-10-16/experiments/finalize/results/gpu/text_qat_static_cpu.json",
+      "sha256": "b9f1dc8f35a87e317d42558c48d0d62110a2656b6377f0b056b58d174de03af1",
+      "bytes": 111416
+    },
+    "text_qat_static_cuda": {
+      "path": "daily/2026-10-16/experiments/finalize/results/gpu/text_qat_static_cuda.json",
+      "sha256": "0af87b21079a984f6f48ac12a32a2684f93945267b111cca3ea797a7efb14e17",
+      "bytes": 27823
+    }
+  },
+  "source_sha256": {
+    "daily/2026-10-16/experiments/finalize/src/benchmark_final.py": "e358347942cb2a79c24110aaf4a38a8e23a31d59bb3d9825145fb332a9f32d6a",
+    "daily/2026-10-16/experiments/finalize/src/common.py": "f9e0a17e03ee86c675c953f3672168f9354c85875fa7421f7e8672b753df683a",
+    "daily/2026-10-16/experiments/finalize/src/evaluate_final.py": "cd0fdca1822d3b01d88b021ef1eaa13fd99e6bbaff548b08e074cb6ee9c74b7a",
+    "daily/2026-10-16/experiments/finalize/src/export_text.py": "d61612f2a10b3ffefe89c048872932cc7ff820c1425bb841000ac290a1be4ea6",
+    "daily/2026-10-16/experiments/finalize/src/finalize_mlsd.py": "dab5db63e9cc14252e70874daa45ac811ec56cec218bf9422ed23a9cba97957a",
+    "daily/2026-10-16/experiments/finalize/src/gpu_final.py": "a4fd09d58157e1a465e7a34f36f924531258e6e28b0a4d39bcba353b4567acea",
+    "daily/2026-10-16/experiments/finalize/src/plot_final.py": "4f03dd9fced9e5fd3ffcb190edcb6d25fa9b3147e88b237c96e938adfa42e73c",
+    "daily/2026-10-16/experiments/finalize/src/prepare_final.py": "26f5094a8173e1c234479d51a60bf9ce4b71f1eb32437c16e027fc0ad42f63d4",
+    "daily/2026-10-16/experiments/finalize/src/select_text.py": "2e67d7c6a3011e13a0b4aa431cea1e1e22a5a462c6d42a98840e5c10572fe6c9",
+    "daily/2026-10-16/experiments/finalize/src/verify_final.py": "23be8c74861b3ec64ccc7672cb6bbcff07661cd9fef934c3ba8c7bf766a9bd75",
+    "daily/2026-10-16/experiments/finalize/src/verify_gpu.py": "03c7920544e7ba440fb8807e3b50107e5216d6371f0da5b07b83a2c2dacf4282",
+    "daily/2026-10-16/experiments/finalize/src/write_reports.py": "06f3f03cce7854ee07e1026440a83da551627ca6af61dad50b20c8f157d5489e"
+  }
+}

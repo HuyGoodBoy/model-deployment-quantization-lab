@@ -1,0 +1,133 @@
+{
+  "evaluated_at_utc": "2026-10-16T07:18:20.495507+00:00",
+  "manifest": {
+    "path": "daily/2026-10-16/experiments/finalize/results/text_manifest.json",
+    "sha256": "e943cceadc4ea458f3c129382de84771b198a9c7d31663f3f62c5605e8558b70",
+    "bytes": 109770
+  },
+  "export": {
+    "path": "daily/2026-10-16/experiments/finalize/results/text_export.json",
+    "sha256": "9f11c99736b67e13202a41b9a2b3cf5d22831854ae983e617dbad10fc666e4dc",
+    "bytes": 6109
+  },
+  "selection": {
+    "path": "daily/2026-10-16/experiments/finalize/results/text_selection.json",
+    "sha256": "ee7075c897aab7d17411aa5a07154497e3e610a1f15920b6aaa9bbde657c7e91",
+    "bytes": 3705
+  },
+  "samples": 772,
+  "models": {
+    "teacher_fp32": {
+      "output": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/text_final_teacher_fp32.npy",
+        "sha256": "a757e299086f4428318d129b1d5cfd52a3125627c81ba1c3a36f201407f1481d",
+        "bytes": 6304
+      },
+      "correct": 703,
+      "samples": 772,
+      "accuracy_percent": 91.06217616580311,
+      "wilson_95_ci_percent": [
+        88.84113559534576,
+        92.87659072514528
+      ],
+      "relative_to_teacher": {
+        "snr_db": null,
+        "exact_match": true,
+        "rmse": 0.0,
+        "mae": 0.0,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      }
+    },
+    "qat_weights_fp32": {
+      "output": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/text_final_qat_weights_fp32.npy",
+        "sha256": "c0c74e088fa225b8f07dc7c93424d208da01a07a6e0317028eac2a81fc6edf3b",
+        "bytes": 6304
+      },
+      "correct": 702,
+      "samples": 772,
+      "accuracy_percent": 90.93264248704664,
+      "wilson_95_ci_percent": [
+        88.69931754713292,
+        92.76062414774144
+      ],
+      "relative_to_teacher": {
+        "snr_db": 19.278261442284492,
+        "exact_match": false,
+        "rmse": 0.3884719365619871,
+        "mae": 0.32415815453175356,
+        "max_abs": 2.6452948451042175,
+        "relative_l2": 0.10866431030892872
+      }
+    },
+    "qat_static_integer": {
+      "output": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/text_final_qat_static_integer.npy",
+        "sha256": "070b226930555f032ea5dd65faf8c24e317936f86ad06464acf17b86131de139",
+        "bytes": 6304
+      },
+      "correct": 698,
+      "samples": 772,
+      "accuracy_percent": 90.41450777202073,
+      "wilson_95_ci_percent": [
+        88.13324502286545,
+        92.29555816954213
+      ],
+      "relative_to_teacher": {
+        "snr_db": 17.074306003978933,
+        "exact_match": false,
+        "rmse": 0.5006767477286551,
+        "mae": 0.34030065478496446,
+        "max_abs": 3.5207408666610718,
+        "relative_l2": 0.14005051165638185
+      }
+    },
+    "qat_fake_quant": {
+      "output": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/text_final_qat_fake_quant.npy",
+        "sha256": "1d66061702d6c6da00c575699bea71e680b39f31beb8152d76920e909e9f316d",
+        "bytes": 6304
+      },
+      "correct": 700,
+      "samples": 772,
+      "accuracy_percent": 90.67357512953367,
+      "wilson_95_ci_percent": [
+        88.41604580274532,
+        92.52832664089566
+      ],
+      "relative_to_teacher": {
+        "snr_db": 17.332865227975947,
+        "exact_match": false,
+        "rmse": 0.48599238156654123,
+        "mae": 0.33613393515097506,
+        "max_abs": 3.3417128324508667,
+        "relative_l2": 0.13594296521312607
+      }
+    }
+  },
+  "fake_quant_to_integer_parity": {
+    "snr_db": 28.767854404842844,
+    "exact_match": false,
+    "rmse": 0.13917242506371563,
+    "mae": 0.042667157253144315,
+    "max_abs": 1.5345382690429688,
+    "relative_l2": 0.03644242593125504
+  },
+  "fake_quant_integer_label_agreement": 0.9948186528497409,
+  "accuracy_delta_integer_minus_fake_pp": -0.25906735751295334,
+  "paired_bootstrap_delta_95_ci_pp": [
+    -0.7772020725388601,
+    0.25906735751295334
+  ],
+  "paired_disagreements": {
+    "fake_correct_integer_wrong": 3,
+    "integer_correct_fake_wrong": 1
+  },
+  "scope": "772 normalized unique validation sentences disjoint from recorded train/calibration/development; same fixed tokenizer and sequence length; no final-set tuning",
+  "source_code": {
+    "path": "daily/2026-10-16/experiments/finalize/src/evaluate_final.py",
+    "sha256": "0a456b8baf5c754d8ec8852b7763572924fea2d1111ef37fc72956da0a7c71d9",
+    "bytes": 10663
+  }
+}

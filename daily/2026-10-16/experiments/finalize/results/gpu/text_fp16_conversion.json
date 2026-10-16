@@ -1,0 +1,27 @@
+{
+  "source": {
+    "path": "daily/2026-10-16/experiments/finalize/artifacts/text_teacher_fp32.onnx",
+    "sha256": "fd36041ee5b03f8fe62567b57625e295982a5d8fbb9f3b0ba09fdac0a16a26b6",
+    "bytes": 267886677
+  },
+  "model": {
+    "path": "daily/2026-10-16/experiments/finalize/artifacts/gpu/text_fp16.onnx",
+    "sha256": "a95866dcd9a557450726d9d9f87cb82db9b84d8d6511a4716d8d08d85addc7f0",
+    "bytes": 133999199
+  },
+  "settings": {
+    "keep_io_types": true,
+    "min_positive_val": 1e-07,
+    "max_finite_val": 10000.0,
+    "default_blocked_ops": true
+  },
+  "initializer_types": {
+    "FLOAT16": 104
+  },
+  "scope": "Floating precision conversion, not QAT or INT8; default blocked ops remain FP32",
+  "source_code": {
+    "path": "daily/2026-10-16/experiments/finalize/src/gpu_final.py",
+    "sha256": "f431c33de43d2d4203025016e6670d79e4bfde82ae32216cc7b54c964e2998af",
+    "bytes": 11587
+  }
+}

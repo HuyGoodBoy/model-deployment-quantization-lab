@@ -1,0 +1,3487 @@
+{
+  "task": "mlsd",
+  "variant": "fp16",
+  "device": "cpu",
+  "started_at_utc": "2026-10-16T07:49:34.804619+00:00",
+  "ort": "1.20.2",
+  "status": "ok",
+  "source_code": {
+    "path": "daily/2026-10-16/experiments/finalize/src/gpu_final.py",
+    "sha256": "a4fd09d58157e1a465e7a34f36f924531258e6e28b0a4d39bcba353b4567acea",
+    "bytes": 11646
+  },
+  "preloaded_dlls": [
+    "nvJitLink_120_0.dll",
+    "cudart64_12.dll",
+    "cublasLt64_12.dll",
+    "cublas64_12.dll",
+    "cufft64_11.dll",
+    "cudnn64_9.dll"
+  ],
+  "model": {
+    "path": "daily/2026-10-16/experiments/finalize/artifacts/gpu/mlsd_fp16.onnx",
+    "sha256": "37cf950a2db6cb8c8c90f3c8ed556192a6c9cdd7bd08ea5e965ccae9a6bb57c0",
+    "bytes": 1291699
+  },
+  "manifest": {
+    "path": "daily/2026-10-16/experiments/finalize/results/mlsd_manifest.json",
+    "sha256": "7b26ee9db44f945ae0db373f801b629716e5565a39a0ceaca3c7dd6838f8d0c1",
+    "bytes": 17222
+  },
+  "providers": [
+    "CPUExecutionProvider"
+  ],
+  "provider_options": {
+    "CPUExecutionProvider": {}
+  },
+  "parity_vs_ort130_cpu_fp32": {
+    "snr_db": 26.247506058509256,
+    "exact_match": false,
+    "rmse": 1.3264014269069835,
+    "mae": 0.27414249194709067,
+    "max_abs": 101.86410140991211,
+    "relative_l2": 0.04871073660958629
+  },
+  "quality": {
+    "sAP10_subset_percent": 12.70053204301697,
+    "precision_at_0_1": 0.2581182348043297,
+    "recall_at_0_1": 0.2278071722516167,
+    "ground_truth_lines": 6804,
+    "predicted_line_counts": [
+      126,
+      126,
+      111,
+      124,
+      119,
+      151,
+      112,
+      152,
+      143,
+      130,
+      120,
+      163,
+      80,
+      99,
+      122,
+      100,
+      81,
+      136,
+      155,
+      101,
+      119,
+      135,
+      117,
+      109,
+      145,
+      115,
+      124,
+      149,
+      141,
+      109,
+      107,
+      69,
+      113,
+      94,
+      101,
+      131,
+      131,
+      102,
+      150,
+      63,
+      133,
+      58,
+      104,
+      136,
+      103,
+      87,
+      102,
+      103,
+      109,
+      119,
+      86,
+      97,
+      79,
+      133
+    ],
+    "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+  },
+  "output": {
+    "path": "daily/2026-10-16/experiments/finalize/artifacts/gpu/mlsd_fp16_cpu.npy",
+    "sha256": "d34808bacb246be7527ef4706eaae1d6768a70d0e116717781020dd7c97bc8ff",
+    "bytes": 70779008
+  },
+  "profile": {
+    "file": {
+      "path": "daily/2026-10-16/experiments/finalize/artifacts/gpu/profile_mlsd_fp16_cpu_2026-10-16_14-49-46.json",
+      "sha256": "8aac14e5ae94c2f8524245a6b87ee0dbd91a3cc9d50dbb2c91edb5585fa0102d",
+      "bytes": 190659
+    },
+    "unique_nodes_by_provider": {
+      "CPUExecutionProvider": 172
+    },
+    "operator_counts_by_provider": {
+      "CPUExecutionProvider": {
+        "Cast": 86,
+        "Conv": 41,
+        "Clip": 20,
+        "Add": 8,
+        "Relu": 10,
+        "Resize": 3,
+        "Concat": 2,
+        "Slice": 2
+      }
+    },
+    "kernel_events_by_provider": {
+      "CPUExecutionProvider": 172
+    },
+    "cuda_compute_nodes": 0,
+    "cpu_nodes": [
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_model.block16.conv3.bias_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              16
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_model.block16.conv3.weight_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              16,
+              64,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_664_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_663_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64,
+              64,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_661_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_660_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64,
+              64,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_658_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_657_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64,
+              64,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_655_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_654_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64,
+              64,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_649_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_648_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              32,
+              64,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_646_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_645_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64,
+              128,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_643_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_642_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              128,
+              128,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_637_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_636_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64,
+              64,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_634_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_633_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64,
+              384,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_/model/backbone/features.5/conv/conv.1/conv.1.2/Constant_1_output_0_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_/model/backbone/features.10/conv/conv.1/conv.1.2/Constant_output_0_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_631_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              384
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_630_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              384,
+              1,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_628_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              384
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_627_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              384,
+              64,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_625_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_624_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64,
+              384,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_622_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              384
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_621_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              384,
+              1,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_619_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              384
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_618_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              384,
+              64,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_616_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_615_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64,
+              384,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_613_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              384
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_612_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              384,
+              1,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_610_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              384
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_609_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              384,
+              64,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_607_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_606_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64,
+              192,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_604_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              192
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_603_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              192,
+              1,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_601_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              192
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_600_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              192,
+              32,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_598_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_597_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              32,
+              192,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_595_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              192
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_594_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              192,
+              1,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_592_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              192
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_591_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              192,
+              32,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_589_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_588_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              32,
+              192,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_586_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              192
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_585_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              192,
+              1,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_583_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              192
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_582_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              192,
+              32,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_580_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_579_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              32,
+              144,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_577_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              144
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_576_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              144,
+              1,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_574_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              144
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_573_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              144,
+              24,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_571_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              24
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_570_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              24,
+              144,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_568_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              144
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_567_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              144,
+              1,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_565_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              144
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_564_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              144,
+              24,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_562_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              24
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_561_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              24,
+              96,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_559_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              96
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_558_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              96,
+              1,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_556_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              96
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_555_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              96,
+              16,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_553_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              16
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_552_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              16,
+              32,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_550_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_549_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              32,
+              1,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_547_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_546_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              32,
+              4,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.0/features.0.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              4,
+              512,
+              512
+            ]
+          },
+          {
+            "float": [
+              32,
+              4,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.0/features.0.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              32,
+              256,
+              256
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.1/conv/conv.0/conv.0.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              32,
+              256,
+              256
+            ]
+          },
+          {
+            "float": [
+              32,
+              1,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.1/conv/conv.0/conv.0.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              32,
+              256,
+              256
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.1/conv/conv.1/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              32,
+              256,
+              256
+            ]
+          },
+          {
+            "float": [
+              16,
+              32,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              16
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.2/conv/conv.0/conv.0.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              16,
+              256,
+              256
+            ]
+          },
+          {
+            "float": [
+              96,
+              16,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              96
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.2/conv/conv.0/conv.0.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              96,
+              256,
+              256
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.2/conv/conv.1/conv.1.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              96,
+              256,
+              256
+            ]
+          },
+          {
+            "float": [
+              96,
+              1,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              96
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.2/conv/conv.1/conv.1.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              96,
+              128,
+              128
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.2/conv/conv.2/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              96,
+              128,
+              128
+            ]
+          },
+          {
+            "float": [
+              24,
+              96,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              24
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.3/conv/conv.0/conv.0.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              24,
+              128,
+              128
+            ]
+          },
+          {
+            "float": [
+              144,
+              24,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              144
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.3/conv/conv.0/conv.0.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              144,
+              128,
+              128
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.3/conv/conv.1/conv.1.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              144,
+              128,
+              128
+            ]
+          },
+          {
+            "float": [
+              144,
+              1,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              144
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.3/conv/conv.1/conv.1.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              144,
+              128,
+              128
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.3/conv/conv.2/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              144,
+              128,
+              128
+            ]
+          },
+          {
+            "float": [
+              24,
+              144,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              24
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.3/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              24,
+              128,
+              128
+            ]
+          },
+          {
+            "float": [
+              1,
+              24,
+              128,
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.4/conv/conv.0/conv.0.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              24,
+              128,
+              128
+            ]
+          },
+          {
+            "float": [
+              144,
+              24,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              144
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.4/conv/conv.0/conv.0.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              144,
+              128,
+              128
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.4/conv/conv.1/conv.1.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              144,
+              128,
+              128
+            ]
+          },
+          {
+            "float": [
+              144,
+              1,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              144
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.4/conv/conv.1/conv.1.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              144,
+              64,
+              64
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.4/conv/conv.2/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              144,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              32,
+              144,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.5/conv/conv.0/conv.0.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              32,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              192,
+              32,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              192
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.5/conv/conv.0/conv.0.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              192,
+              64,
+              64
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.5/conv/conv.1/conv.1.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              192,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              192,
+              1,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              192
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.5/conv/conv.1/conv.1.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              192,
+              64,
+              64
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.5/conv/conv.2/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              192,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              32,
+              192,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.5/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              32,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              32,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.6/conv/conv.0/conv.0.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              32,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              192,
+              32,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              192
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.6/conv/conv.0/conv.0.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              192,
+              64,
+              64
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.6/conv/conv.1/conv.1.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              192,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              192,
+              1,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              192
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.6/conv/conv.1/conv.1.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              192,
+              64,
+              64
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.6/conv/conv.2/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              192,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              32,
+              192,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.6/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              32,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              32,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.7/conv/conv.0/conv.0.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              32,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              192,
+              32,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              192
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.7/conv/conv.0/conv.0.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              192,
+              64,
+              64
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.7/conv/conv.1/conv.1.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              192,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              192,
+              1,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              192
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.7/conv/conv.1/conv.1.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              192,
+              32,
+              32
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.7/conv/conv.2/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              192,
+              32,
+              32
+            ]
+          },
+          {
+            "float": [
+              64,
+              192,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.8/conv/conv.0/conv.0.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              32,
+              32
+            ]
+          },
+          {
+            "float": [
+              384,
+              64,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              384
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.8/conv/conv.0/conv.0.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              384,
+              32,
+              32
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.8/conv/conv.1/conv.1.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              384,
+              32,
+              32
+            ]
+          },
+          {
+            "float": [
+              384,
+              1,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              384
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.8/conv/conv.1/conv.1.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              384,
+              32,
+              32
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.8/conv/conv.2/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              384,
+              32,
+              32
+            ]
+          },
+          {
+            "float": [
+              64,
+              384,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.8/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              32,
+              32
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              32,
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.9/conv/conv.0/conv.0.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              32,
+              32
+            ]
+          },
+          {
+            "float": [
+              384,
+              64,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              384
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.9/conv/conv.0/conv.0.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              384,
+              32,
+              32
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.9/conv/conv.1/conv.1.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              384,
+              32,
+              32
+            ]
+          },
+          {
+            "float": [
+              384,
+              1,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              384
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.9/conv/conv.1/conv.1.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              384,
+              32,
+              32
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.9/conv/conv.2/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              384,
+              32,
+              32
+            ]
+          },
+          {
+            "float": [
+              64,
+              384,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.9/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              32,
+              32
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              32,
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.10/conv/conv.0/conv.0.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              32,
+              32
+            ]
+          },
+          {
+            "float": [
+              384,
+              64,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              384
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.10/conv/conv.0/conv.0.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              384,
+              32,
+              32
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.10/conv/conv.1/conv.1.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              384,
+              32,
+              32
+            ]
+          },
+          {
+            "float": [
+              384,
+              1,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              384
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.10/conv/conv.1/conv.1.2/Clip_kernel_time",
+        "op": "Clip",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              384,
+              32,
+              32
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.10/conv/conv.2/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              384,
+              32,
+              32
+            ]
+          },
+          {
+            "float": [
+              64,
+              384,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/backbone/features.10/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              32,
+              32
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              32,
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block12/conv1/conv1.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              32,
+              32
+            ]
+          },
+          {
+            "float": [
+              64,
+              64,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block12/conv1/conv1.2/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              32,
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block12/Resize_kernel_time",
+        "op": "Resize",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              32,
+              32
+            ]
+          },
+          {
+            "float": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_640_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_639_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              64,
+              32,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block12/conv2/conv2.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              32,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              64,
+              32,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block12/conv2/conv2.2/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block12/Concat_kernel_time",
+        "op": "Concat",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block13/conv1/conv1.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              128,
+              128,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block13/conv1/conv1.2/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block13/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              128,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block13/conv2/conv2.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              128,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              64,
+              128,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block13/conv2/conv2.2/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block14/conv1/conv1.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              32,
+              64,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block14/conv1/conv1.2/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              32,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block14/Resize_kernel_time",
+        "op": "Resize",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              32,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_652_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_onnx::Conv_651_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              32,
+              24,
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block14/conv2/conv2.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              24,
+              128,
+              128
+            ]
+          },
+          {
+            "float": [
+              32,
+              24,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              32
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block14/conv2/conv2.2/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              32,
+              128,
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block14/Concat_kernel_time",
+        "op": "Concat",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              32,
+              128,
+              128
+            ]
+          },
+          {
+            "float": [
+              1,
+              32,
+              128,
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block15/conv1/conv1.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              128,
+              128
+            ]
+          },
+          {
+            "float": [
+              64,
+              64,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block15/conv1/conv1.2/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              128,
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block15/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              128,
+              128
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              128,
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block15/conv2/conv2.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              128,
+              128
+            ]
+          },
+          {
+            "float": [
+              64,
+              64,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block15/conv2/conv2.2/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              128,
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block16/conv1/conv1.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              128,
+              128
+            ]
+          },
+          {
+            "float": [
+              64,
+              64,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block16/conv1/conv1.2/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              128,
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block16/conv2/conv2.0/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              128,
+              128
+            ]
+          },
+          {
+            "float": [
+              64,
+              64,
+              3,
+              3
+            ]
+          },
+          {
+            "float": [
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block16/conv2/conv2.2/Relu_kernel_time",
+        "op": "Relu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              128,
+              128
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/block16/conv3/Conv_kernel_time",
+        "op": "Conv",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              128,
+              128
+            ]
+          },
+          {
+            "float": [
+              16,
+              64,
+              1,
+              1
+            ]
+          },
+          {
+            "float": [
+              16
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/Slice_kernel_time",
+        "op": "Slice",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              16,
+              128,
+              128
+            ]
+          },
+          {
+            "int64": [
+              1
+            ]
+          },
+          {
+            "int64": [
+              1
+            ]
+          },
+          {
+            "int64": [
+              1
+            ]
+          },
+          {
+            "int64": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/Resize_kernel_time",
+        "op": "Resize",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              9,
+              128,
+              128
+            ]
+          },
+          {
+            "float": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "InsertedPrecisionFreeCast_/model/Resize_output_0_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              9,
+              256,
+              256
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/Slice_kernel_time",
+        "op": "Slice",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              9,
+              256,
+              256
+            ]
+          },
+          {
+            "int64": [
+              1
+            ]
+          },
+          {
+            "int64": [
+              1
+            ]
+          },
+          {
+            "int64": [
+              1
+            ]
+          },
+          {
+            "int64": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "graph_output_cast0_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "float16": [
+              1,
+              5,
+              256,
+              256
+            ]
+          }
+        ]
+      }
+    ],
+    "cuda_compute_operators": [],
+    "cuda_compute_examples": [],
+    "note": "Separate profiling session after timing; counts show provider assignment, not kernel-only latency or INT8 arithmetic coverage"
+  },
+  "benchmark": {
+    "samples_ms": [
+      61.7749,
+      60.0586,
+      60.0216,
+      61.0368,
+      60.6048,
+      58.7809,
+      61.0512,
+      61.5104,
+      60.978,
+      60.8668,
+      60.1733,
+      61.0005,
+      61.5003,
+      60.5433,
+      60.5115,
+      60.5113,
+      62.9272,
+      66.6862,
+      60.8481,
+      62.1473,
+      60.8422,
+      61.3796,
+      62.2166,
+      66.6384,
+      66.4614,
+      65.5045,
+      100.0217,
+      61.6239,
+      64.3245,
+      62.9775,
+      67.6289,
+      62.4289,
+      60.1774,
+      62.2505,
+      61.209,
+      60.3266,
+      60.4356,
+      59.5793,
+      61.1655,
+      59.6487,
+      58.7414,
+      59.0877,
+      60.6706,
+      60.2574,
+      61.2299,
+      61.1317,
+      59.6859,
+      61.3006,
+      59.5879,
+      60.4546,
+      60.8107,
+      59.4258,
+      60.6682,
+      60.0811,
+      59.5536,
+      60.1675,
+      61.3857,
+      62.1881,
+      62.7576,
+      62.4672,
+      62.4511,
+      61.0326,
+      62.4929,
+      60.7145,
+      60.2556,
+      60.1406,
+      60.0779,
+      61.5107,
+      60.5261,
+      60.6535,
+      60.933,
+      62.2307,
+      61.8582,
+      63.0404,
+      60.6748,
+      61.5937,
+      61.6128,
+      63.7833,
+      62.7895,
+      63.0853
+    ],
+    "runs": 80,
+    "median_ms": 61.0347,
+    "p95_ms": 66.47025,
+    "input_indices": [
+      0,
+      3,
+      7,
+      10,
+      14,
+      17,
+      21,
+      24,
+      28,
+      31,
+      35,
+      38,
+      42,
+      45,
+      49,
+      53
+    ],
+    "protocol": "One isolated process/session per variant/device; ORT 1.20.2, 4 intra/1 inter threads, sequential ALL, spinning disabled; 16 warmups then 5x16 timing samples; batch1; profile in separate session after timing/evaluation",
+    "scope": "Synchronous session.run, CPU NumPy IO includes H2D/D2H and API overhead; excludes load/preprocess/decode; CUDA TF32 disabled; 2GiB arena limit and heuristic cuDNN workspace policy"
+  },
+  "scope": "Same frozen 54-image/772-sentence set used for runtime comparison; no new tuning or independent test-set claim"
+}

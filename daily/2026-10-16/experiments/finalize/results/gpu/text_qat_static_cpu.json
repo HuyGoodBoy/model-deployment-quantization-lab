@@ -1,0 +1,5168 @@
+{
+  "task": "text",
+  "variant": "qat_static",
+  "device": "cpu",
+  "started_at_utc": "2026-10-16T07:54:26.660932+00:00",
+  "ort": "1.20.2",
+  "status": "ok",
+  "source_code": {
+    "path": "daily/2026-10-16/experiments/finalize/src/gpu_final.py",
+    "sha256": "a4fd09d58157e1a465e7a34f36f924531258e6e28b0a4d39bcba353b4567acea",
+    "bytes": 11646
+  },
+  "preloaded_dlls": [
+    "nvJitLink_120_0.dll",
+    "cudart64_12.dll",
+    "cublasLt64_12.dll",
+    "cublas64_12.dll",
+    "cufft64_11.dll",
+    "cudnn64_9.dll"
+  ],
+  "model": {
+    "path": "daily/2026-10-16/experiments/finalize/artifacts/text_qat_static_integer.onnx",
+    "sha256": "534321dace35ce89370774ecd14c1d73d8ab82fd4769f1a14af4f77ef4f6d330",
+    "bytes": 138937414
+  },
+  "manifest": {
+    "path": "daily/2026-10-16/experiments/finalize/results/text_manifest.json",
+    "sha256": "e943cceadc4ea458f3c129382de84771b198a9c7d31663f3f62c5605e8558b70",
+    "bytes": 109770
+  },
+  "providers": [
+    "CPUExecutionProvider"
+  ],
+  "provider_options": {
+    "CPUExecutionProvider": {}
+  },
+  "parity_vs_ort130_cpu_fp32": {
+    "snr_db": 17.073524930099126,
+    "exact_match": false,
+    "rmse": 0.5007217728360276,
+    "mae": 0.34424039902445414,
+    "max_abs": 3.5207408666610718,
+    "relative_l2": 0.14006310618838982
+  },
+  "quality": {
+    "correct": 696,
+    "samples": 772,
+    "accuracy_percent": 90.15544041450777,
+    "label_agreement_vs_ort130_cpu_fp32": 0.977979274611399
+  },
+  "output": {
+    "path": "daily/2026-10-16/experiments/finalize/artifacts/gpu/text_qat_static_cpu.npy",
+    "sha256": "751f0511872b40ffa29596c8adc4838f517536b1101e31b4a3d95dff30f68580",
+    "bytes": 6304
+  },
+  "profile": {
+    "file": {
+      "path": "daily/2026-10-16/experiments/finalize/artifacts/gpu/profile_text_qat_static_cpu_2026-10-16_14-55-04.json",
+      "sha256": "fca4edee4870563d676550405fa891028674ad9afbe681ba73c3527484fc6f07",
+      "bytes": 301701
+    },
+    "unique_nodes_by_provider": {
+      "CPUExecutionProvider": 258
+    },
+    "operator_counts_by_provider": {
+      "CPUExecutionProvider": {
+        "Gather": 2,
+        "SkipLayerNormalization": 13,
+        "QuantizeLinear": 27,
+        "MatMulInteger": 38,
+        "Cast": 38,
+        "Mul": 38,
+        "Add": 20,
+        "Reshape": 24,
+        "Transpose": 24,
+        "FusedMatMul": 6,
+        "Unsqueeze": 2,
+        "Equal": 1,
+        "Where": 6,
+        "Softmax": 6,
+        "MatMul": 6,
+        "BiasGelu": 6,
+        "DequantizeLinear": 1
+      }
+    },
+    "kernel_events_by_provider": {
+      "CPUExecutionProvider": 258
+    },
+    "cuda_compute_nodes": 0,
+    "cpu_nodes": [
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/embeddings/word_embeddings/Gather_kernel_time",
+        "op": "Gather",
+        "input_type_shape": [
+          {
+            "float": [
+              30522,
+              768
+            ]
+          },
+          {
+            "int64": [
+              1,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "SkipLayerNormalization_kernel_time",
+        "op": "SkipLayerNormalization",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/k_lin/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/k_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/k_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/k_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/k_lin/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/Reshape_1_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/Transpose_2_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/q_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/q_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/q_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/q_lin/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/Transpose_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/MatMul/MatMulScaleFusion/_kernel_time",
+        "op": "FusedMatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/Unsqueeze_kernel_time",
+        "op": "Unsqueeze",
+        "input_type_shape": [
+          {
+            "int64": [
+              1,
+              64
+            ]
+          },
+          {
+            "int64": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/Unsqueeze_1_kernel_time",
+        "op": "Unsqueeze",
+        "input_type_shape": [
+          {
+            "int64": [
+              1,
+              1,
+              64
+            ]
+          },
+          {
+            "int64": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/Equal_kernel_time",
+        "op": "Equal",
+        "input_type_shape": [
+          {
+            "int64": [
+              1,
+              1,
+              1,
+              64
+            ]
+          },
+          {
+            "int64": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/Where_kernel_time",
+        "op": "Where",
+        "input_type_shape": [
+          {
+            "bool": [
+              1,
+              1,
+              1,
+              64
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/Softmax_kernel_time",
+        "op": "Softmax",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/v_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/v_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/v_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/v_lin/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/Reshape_2_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/Transpose_1_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/MatMul_1_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/MatMul_1_output_0_q_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/Transpose_3_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/Reshape_3_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              12,
+              64
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/out_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/out_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/attention/out_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "SkipLayerNormalization_token_10_kernel_time",
+        "op": "SkipLayerNormalization",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/ffn/lin1/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/ffn/lin1/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/ffn/lin1/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/ffn/lin1/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "BiasGelu_kernel_time",
+        "op": "BiasGelu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/ffn/lin2/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/ffn/lin2/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/ffn/lin2/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.0/ffn/lin2/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "SkipLayerNormalization_token_11_kernel_time",
+        "op": "SkipLayerNormalization",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/k_lin/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/k_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/k_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/k_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/k_lin/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/Reshape_1_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/Transpose_2_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/q_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/q_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/q_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/q_lin/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/Transpose_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/MatMul/MatMulScaleFusion/_kernel_time",
+        "op": "FusedMatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/Where_kernel_time",
+        "op": "Where",
+        "input_type_shape": [
+          {
+            "bool": [
+              1,
+              1,
+              1,
+              64
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/Softmax_kernel_time",
+        "op": "Softmax",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/v_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/v_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/v_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/v_lin/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/Reshape_2_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/Transpose_1_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/MatMul_1_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/MatMul_1_output_0_q_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/Transpose_3_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/Reshape_3_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              12,
+              64
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/out_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/out_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/attention/out_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "SkipLayerNormalization_token_12_kernel_time",
+        "op": "SkipLayerNormalization",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/ffn/lin1/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/ffn/lin1/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/ffn/lin1/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/ffn/lin1/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "BiasGelu_token_5_kernel_time",
+        "op": "BiasGelu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/ffn/lin2/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/ffn/lin2/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/ffn/lin2/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.1/ffn/lin2/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "SkipLayerNormalization_token_13_kernel_time",
+        "op": "SkipLayerNormalization",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/k_lin/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/k_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/k_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/k_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/k_lin/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/Reshape_1_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/Transpose_2_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/q_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/q_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/q_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/q_lin/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/Transpose_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/MatMul/MatMulScaleFusion/_kernel_time",
+        "op": "FusedMatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/Where_kernel_time",
+        "op": "Where",
+        "input_type_shape": [
+          {
+            "bool": [
+              1,
+              1,
+              1,
+              64
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/Softmax_kernel_time",
+        "op": "Softmax",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/v_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/v_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/v_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/v_lin/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/Reshape_2_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/Transpose_1_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/MatMul_1_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/MatMul_1_output_0_q_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/Transpose_3_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/Reshape_3_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              12,
+              64
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/out_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/out_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/attention/out_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "SkipLayerNormalization_token_14_kernel_time",
+        "op": "SkipLayerNormalization",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/ffn/lin1/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/ffn/lin1/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/ffn/lin1/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/ffn/lin1/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "BiasGelu_token_6_kernel_time",
+        "op": "BiasGelu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/ffn/lin2/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/ffn/lin2/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/ffn/lin2/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.2/ffn/lin2/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "SkipLayerNormalization_token_15_kernel_time",
+        "op": "SkipLayerNormalization",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/k_lin/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/k_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/k_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/k_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/k_lin/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/Reshape_1_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/Transpose_2_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/q_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/q_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/q_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/q_lin/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/Transpose_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/MatMul/MatMulScaleFusion/_kernel_time",
+        "op": "FusedMatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/Where_kernel_time",
+        "op": "Where",
+        "input_type_shape": [
+          {
+            "bool": [
+              1,
+              1,
+              1,
+              64
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/Softmax_kernel_time",
+        "op": "Softmax",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/v_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/v_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/v_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/v_lin/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/Reshape_2_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/Transpose_1_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/MatMul_1_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/MatMul_1_output_0_q_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/Transpose_3_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/Reshape_3_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              12,
+              64
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/out_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/out_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/attention/out_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "SkipLayerNormalization_token_16_kernel_time",
+        "op": "SkipLayerNormalization",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/ffn/lin1/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/ffn/lin1/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/ffn/lin1/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/ffn/lin1/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "BiasGelu_token_7_kernel_time",
+        "op": "BiasGelu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/ffn/lin2/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/ffn/lin2/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/ffn/lin2/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.3/ffn/lin2/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "SkipLayerNormalization_token_17_kernel_time",
+        "op": "SkipLayerNormalization",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/k_lin/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/k_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/k_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/k_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/k_lin/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/Reshape_1_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/Transpose_2_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/q_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/q_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/q_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/q_lin/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/Transpose_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/MatMul/MatMulScaleFusion/_kernel_time",
+        "op": "FusedMatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/Where_kernel_time",
+        "op": "Where",
+        "input_type_shape": [
+          {
+            "bool": [
+              1,
+              1,
+              1,
+              64
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/Softmax_kernel_time",
+        "op": "Softmax",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/v_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/v_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/v_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/v_lin/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/Reshape_2_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/Transpose_1_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/MatMul_1_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/MatMul_1_output_0_q_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/Transpose_3_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/Reshape_3_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              12,
+              64
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/out_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/out_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/attention/out_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "SkipLayerNormalization_token_18_kernel_time",
+        "op": "SkipLayerNormalization",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/ffn/lin1/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/ffn/lin1/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/ffn/lin1/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/ffn/lin1/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "BiasGelu_token_8_kernel_time",
+        "op": "BiasGelu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/ffn/lin2/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/ffn/lin2/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/ffn/lin2/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.4/ffn/lin2/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "SkipLayerNormalization_token_19_kernel_time",
+        "op": "SkipLayerNormalization",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/k_lin/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/k_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/k_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/k_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/k_lin/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/Reshape_1_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/Transpose_2_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/q_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/q_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/q_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/q_lin/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/Reshape_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/Transpose_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/MatMul/MatMulScaleFusion/_kernel_time",
+        "op": "FusedMatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/Where_kernel_time",
+        "op": "Where",
+        "input_type_shape": [
+          {
+            "bool": [
+              1,
+              1,
+              1,
+              64
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/Softmax_kernel_time",
+        "op": "Softmax",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/v_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/v_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/v_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/v_lin/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/Reshape_2_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": [
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/Transpose_1_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              12,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/MatMul_1_kernel_time",
+        "op": "MatMul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/MatMul_1_output_0_q_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              12,
+              64,
+              64
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/Transpose_3_kernel_time",
+        "op": "Transpose",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              12,
+              64,
+              64
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/Reshape_3_kernel_time",
+        "op": "Reshape",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              12,
+              64
+            ]
+          },
+          {
+            "int64": [
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/out_lin/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/out_lin/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/attention/out_lin/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "SkipLayerNormalization_token_20_kernel_time",
+        "op": "SkipLayerNormalization",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/ffn/lin1/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/ffn/lin1/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/ffn/lin1/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/ffn/lin1/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "BiasGelu_token_9_kernel_time",
+        "op": "BiasGelu",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": [
+              3072
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/ffn/lin2/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/ffn/lin2/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              64,
+              3072
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/ffn/lin2/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              64,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/distilbert/transformer/layer.5/ffn/lin2/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "SkipLayerNormalization_token_21_kernel_time",
+        "op": "SkipLayerNormalization",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/Gather_kernel_time",
+        "op": "Gather",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              64,
+              768
+            ]
+          },
+          {
+            "int64": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/pre_classifier/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              768
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/pre_classifier/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/pre_classifier/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/pre_classifier/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/pre_classifier/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              768
+            ]
+          },
+          {
+            "float": [
+              768
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/classifier/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              768
+            ]
+          },
+          {
+            "float": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/classifier/MatMulInteger_kernel_time",
+        "op": "MatMulInteger",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              768
+            ]
+          },
+          {
+            "uint8": []
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/classifier/Cast_kernel_time",
+        "op": "Cast",
+        "input_type_shape": [
+          {
+            "int32": [
+              1,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/classifier/Mul_kernel_time",
+        "op": "Mul",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              2
+            ]
+          },
+          {
+            "float": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/model/classifier/Add_kernel_time",
+        "op": "Add",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              2
+            ]
+          },
+          {
+            "float": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/center_quant/QuantizeLinear_kernel_time",
+        "op": "QuantizeLinear",
+        "input_type_shape": [
+          {
+            "float": [
+              1,
+              2
+            ]
+          },
+          {
+            "float": [
+              1
+            ]
+          },
+          {
+            "uint8": []
+          }
+        ]
+      },
+      {
+        "provider": "CPUExecutionProvider",
+        "name": "/center_quant/DequantizeLinear_kernel_time",
+        "op": "DequantizeLinear",
+        "input_type_shape": [
+          {
+            "uint8": [
+              1,
+              2
+            ]
+          },
+          {
+            "float": [
+              1
+            ]
+          },
+          {
+            "uint8": []
+          }
+        ]
+      }
+    ],
+    "cuda_compute_operators": [],
+    "cuda_compute_examples": [],
+    "note": "Separate profiling session after timing; counts show provider assignment, not kernel-only latency or INT8 arithmetic coverage"
+  },
+  "benchmark": {
+    "samples_ms": [
+      11.6062,
+      11.6626,
+      11.0318,
+      11.24,
+      11.1884,
+      11.1447,
+      11.2329,
+      11.4277,
+      11.0024,
+      11.2509,
+      11.274,
+      10.8943,
+      11.365,
+      11.3849,
+      11.3149,
+      11.3373,
+      11.3522,
+      11.5825,
+      11.6083,
+      10.9347,
+      11.2374,
+      11.4954,
+      11.0389,
+      11.3372,
+      11.4184,
+      11.2286,
+      11.1118,
+      11.074,
+      11.6618,
+      11.2666,
+      11.0995,
+      11.3435,
+      10.8215,
+      11.0732,
+      11.1736,
+      10.8958,
+      11.4244,
+      11.0304,
+      11.4172,
+      11.2131,
+      10.8339,
+      11.1356,
+      11.365,
+      10.9443,
+      11.0734,
+      10.9849,
+      11.3925,
+      11.048,
+      11.1549,
+      11.315,
+      10.8561,
+      11.0976,
+      10.8899,
+      11.0275,
+      10.9869,
+      10.7673,
+      11.3194,
+      10.7892,
+      11.4351,
+      11.7265,
+      11.0666,
+      11.5229,
+      27.0109,
+      43.5112,
+      52.2254,
+      43.2267,
+      45.3607,
+      40.1237,
+      38.9218,
+      39.8076,
+      37.239,
+      37.5751,
+      36.4144,
+      39.2152,
+      39.1943,
+      38.305,
+      37.0572,
+      36.6646,
+      36.2682,
+      38.6751
+    ],
+    "runs": 80,
+    "median_ms": 11.3172,
+    "p95_ms": 40.27884999999999,
+    "input_indices": [
+      0,
+      51,
+      102,
+      154,
+      205,
+      257,
+      308,
+      359,
+      411,
+      462,
+      514,
+      565,
+      616,
+      668,
+      719,
+      771
+    ],
+    "protocol": "One isolated process/session per variant/device; ORT 1.20.2, 4 intra/1 inter threads, sequential ALL, spinning disabled; 16 warmups then 5x16 timing samples; batch1; profile in separate session after timing/evaluation",
+    "scope": "Synchronous session.run, CPU NumPy IO includes H2D/D2H and API overhead; excludes load/preprocess/decode; CUDA TF32 disabled; 2GiB arena limit and heuristic cuDNN workspace policy"
+  },
+  "scope": "Same frozen 54-image/772-sentence set used for runtime comparison; no new tuning or independent test-set claim"
+}

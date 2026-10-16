@@ -1,0 +1,189 @@
+{
+  "exported_at_utc": "2026-10-16T07:06:11.879082+00:00",
+  "checkpoint": {
+    "path": "daily/2026-10-15/experiments/qat/artifacts/text_step0128.pt",
+    "sha256": "d9fd098fc301d1b7a5a0658cb678acc3171a28be8c85ccbd7afed60f65e5d1db"
+  },
+  "models": {
+    "teacher_fp32": {
+      "model": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/text_teacher_fp32.onnx",
+        "sha256": "fd36041ee5b03f8fe62567b57625e295982a5d8fbb9f3b0ba09fdac0a16a26b6",
+        "bytes": 267886677
+      },
+      "output": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/text_teacher_fp32_development.npy",
+        "sha256": "f8ed272314e4408959922aea1ef4426f1968d1d14f4db755a17cb6650f469e0c",
+        "bytes": 928
+      },
+      "metrics": {
+        "logits": {
+          "snr_db": 124.80735582283928,
+          "exact_match": false,
+          "rmse": 2.101959192412647e-06,
+          "mae": 1.4825165271759032e-06,
+          "max_abs": 8.761882781982422e-06,
+          "relative_l2": 5.749528205782706e-07
+        },
+        "accuracy": 0.91,
+        "agreement_with_original": 1.0
+      }
+    },
+    "qat_weights_fp32": {
+      "model": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/text_qat_weights_fp32.onnx",
+        "sha256": "58816f24ec2e5d397eb2054a1c86048eb877240b1cc0fa497302780104b4248d",
+        "bytes": 267893283
+      },
+      "output": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/text_qat_weights_fp32_development.npy",
+        "sha256": "597a94fbd68d700b9cc9b49b4a946388870296759e3192d33cb6643de0c8020a",
+        "bytes": 928
+      },
+      "metrics": {
+        "logits": {
+          "snr_db": 19.509664939432408,
+          "exact_match": false,
+          "rmse": 0.3868199144275941,
+          "mae": 0.32882033839821817,
+          "max_abs": 1.115879774093628,
+          "relative_l2": 0.10580757307696075
+        },
+        "accuracy": 0.91,
+        "agreement_with_original": 1.0
+      }
+    },
+    "qat_static_integer": {
+      "model": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/text_qat_static_integer.onnx",
+        "sha256": "534321dace35ce89370774ecd14c1d73d8ab82fd4769f1a14af4f77ef4f6d330",
+        "bytes": 138937414
+      },
+      "output": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/text_qat_static_integer_development.npy",
+        "sha256": "a748754f1f4807e39455753ab4a2161d51b29314071dcda0633f574703133f19",
+        "bytes": 928
+      },
+      "metrics": {
+        "logits": {
+          "snr_db": 17.43046715828558,
+          "exact_match": false,
+          "rmse": 0.49143797590405575,
+          "mae": 0.33323066264390944,
+          "max_abs": 2.0931690335273743,
+          "relative_l2": 0.13442394667091304
+        },
+        "accuracy": 0.9,
+        "agreement_with_original": 0.99
+      }
+    }
+  },
+  "fake_quant_reference": {
+    "path": "daily/2026-10-15/experiments/qat/artifacts/text_step0128_after.npy",
+    "sha256": "37598919a25a69a02b74562920a9cbed519f94275ed89c3dc1eefb6dcaf40dcc"
+  },
+  "float_lowering_parity_first_four": {
+    "snr_db": null,
+    "exact_match": true,
+    "rmse": 0.0,
+    "mae": 0.0,
+    "max_abs": 0.0,
+    "relative_l2": 0.0
+  },
+  "fake_quant_to_integer_parity": {
+    "snr_db": 25.117299156420557,
+    "exact_match": false,
+    "rmse": 0.21648769652502267,
+    "mae": 0.05245980486273766,
+    "max_abs": 1.8200339376926422,
+    "relative_l2": 0.05547981984803387
+  },
+  "label_agreement": 0.98,
+  "accuracy_delta_pp": 0.0,
+  "gate": {
+    "maximum_relative_l2": 0.02,
+    "minimum_label_agreement": 0.99,
+    "maximum_accuracy_delta_pp": 1.0,
+    "reason": "A 2% logit parity tolerance with at least 99/100 unchanged labels and at most one accuracy point on development; separate numerical and decision checks; not a population quality guarantee",
+    "passed": false
+  },
+  "integer_linear_layers": 38,
+  "graph_operators": {
+    "Identity": 27,
+    "Constant": 97,
+    "Gather": 3,
+    "Add": 57,
+    "LayerNormalization": 13,
+    "QuantizeLinear": 39,
+    "MatMulInteger": 38,
+    "Cast": 44,
+    "Mul": 50,
+    "Reshape": 24,
+    "Transpose": 24,
+    "Div": 12,
+    "MatMul": 12,
+    "Unsqueeze": 2,
+    "Equal": 1,
+    "Where": 6,
+    "Softmax": 6,
+    "Erf": 6,
+    "Relu": 1,
+    "DequantizeLinear": 1
+  },
+  "runtime": {
+    "unique_executed_operators": {
+      "Gather": 2,
+      "SkipLayerNormalization": 13,
+      "QuantizeLinear": 27,
+      "MatMulInteger": 38,
+      "Cast": 38,
+      "Mul": 38,
+      "Add": 20,
+      "Reshape": 24,
+      "Transpose": 24,
+      "FusedMatMul": 6,
+      "Unsqueeze": 2,
+      "Equal": 1,
+      "Where": 6,
+      "Softmax": 6,
+      "MatMul": 6,
+      "BiasGelu": 6,
+      "DequantizeLinear": 1
+    },
+    "providers": {
+      "CPUExecutionProvider": 258
+    },
+    "operator_ms_profiled": {
+      "Gather": 0.41600000000000004,
+      "SkipLayerNormalization": 3.814,
+      "QuantizeLinear": 1.7009999999999996,
+      "MatMulInteger": 273.7640000000001,
+      "Cast": 109.32200000000002,
+      "Mul": 146.62800000000001,
+      "Add": 0.8550000000000002,
+      "Reshape": 141.60300000000004,
+      "Transpose": 137.72499999999997,
+      "FusedMatMul": 204.38899999999995,
+      "Unsqueeze": 0.095,
+      "Equal": 0.066,
+      "Where": 1.307,
+      "Softmax": 321.066,
+      "MatMul": 0.8970000000000001,
+      "BiasGelu": 1.687,
+      "DequantizeLinear": 19.027
+    },
+    "profile": {
+      "path": "daily/2026-10-16/experiments/finalize/artifacts/text_integer_profile_2026-10-16_14-06-01_133.json",
+      "sha256": "3895583334ea0912aef1a6edff8860e05392266ff2a0a6aec09eaaf5725be677",
+      "bytes": 260457
+    }
+  },
+  "is_full_integer_model": false,
+  "format": "Static frozen QAT scales; UINT8 offset x UINT8 weight -> INT32 MatMulInteger; per-output-channel weight scales",
+  "float_regions": "bias, residual/add, resize, normalization; text embedding/attention MatMul/Softmax/mask",
+  "source_code": {
+    "path": "daily/2026-10-16/experiments/finalize/src/export_text.py",
+    "sha256": "d61612f2a10b3ffefe89c048872932cc7ff820c1425bb841000ac290a1be4ea6",
+    "bytes": 9062
+  }
+}

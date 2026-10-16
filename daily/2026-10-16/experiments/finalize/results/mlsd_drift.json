@@ -1,0 +1,377 @@
+{
+  "date": "2026-10-16",
+  "images": 1,
+  "mode": "Accumulated upstream activation drift; not same-input local convolution error",
+  "instrumentation_preserves_output": true,
+  "layers": [
+    {
+      "layer": "model.model.backbone.features.0.0",
+      "snr_db": null,
+      "exact_match": true,
+      "rmse": 0.0,
+      "mae": 0.0,
+      "max_abs": 0.0,
+      "relative_l2": 0.0
+    },
+    {
+      "layer": "model.model.backbone.features.1.conv.0.0",
+      "snr_db": 137.7651593932933,
+      "exact_match": false,
+      "rmse": 3.222840579051949e-07,
+      "mae": 1.886295437313057e-07,
+      "max_abs": 2.86102294921875e-06,
+      "relative_l2": 1.293427321139781e-07
+    },
+    {
+      "layer": "model.model.backbone.features.1.conv.1",
+      "snr_db": 64.89360763585532,
+      "exact_match": false,
+      "rmse": 0.0012988375271845,
+      "mae": 3.1314869365648215e-06,
+      "max_abs": 1.3173484802246094,
+      "relative_l2": 0.0005692717311772824
+    },
+    {
+      "layer": "model.model.backbone.features.2.conv.0.0",
+      "snr_db": 52.331454475304646,
+      "exact_match": false,
+      "rmse": 0.007370633824391991,
+      "mae": 5.4111477562566665e-05,
+      "max_abs": 4.163880348205566,
+      "relative_l2": 0.00241783843055879
+    },
+    {
+      "layer": "model.model.backbone.features.2.conv.1.0",
+      "snr_db": 58.794982850927546,
+      "exact_match": false,
+      "rmse": 0.0025070423031810446,
+      "mae": 2.5051647976760154e-05,
+      "max_abs": 2.582341432571411,
+      "relative_l2": 0.0011488170102938002
+    },
+    {
+      "layer": "model.model.backbone.features.2.conv.2",
+      "snr_db": 64.58190604437583,
+      "exact_match": false,
+      "rmse": 0.0011186677138772718,
+      "mae": 2.3884914733168284e-05,
+      "max_abs": 0.4730241298675537,
+      "relative_l2": 0.0005900715797896051
+    },
+    {
+      "layer": "model.model.backbone.features.3.conv.0.0",
+      "snr_db": 57.782601337757704,
+      "exact_match": false,
+      "rmse": 0.0030644674257760537,
+      "mae": 0.0001721567797270581,
+      "max_abs": 0.5354750156402588,
+      "relative_l2": 0.0012908326241554077
+    },
+    {
+      "layer": "model.model.backbone.features.3.conv.1.0",
+      "snr_db": 57.7733225332348,
+      "exact_match": false,
+      "rmse": 0.002938493424899614,
+      "mae": 0.00014111892269454604,
+      "max_abs": 0.45310938358306885,
+      "relative_l2": 0.0012922123082016392
+    },
+    {
+      "layer": "model.model.backbone.features.3.conv.2",
+      "snr_db": 54.49935230518492,
+      "exact_match": false,
+      "rmse": 0.0033261161257939404,
+      "mae": 0.00025379675493330736,
+      "max_abs": 0.4628450870513916,
+      "relative_l2": 0.0018837895558425446
+    },
+    {
+      "layer": "model.model.backbone.features.4.conv.0.0",
+      "snr_db": 45.824444367679476,
+      "exact_match": false,
+      "rmse": 0.02329291290191894,
+      "mae": 0.0030965409842226657,
+      "max_abs": 1.5110552310943604,
+      "relative_l2": 0.00511420086818714
+    },
+    {
+      "layer": "model.model.backbone.features.4.conv.1.0",
+      "snr_db": 47.02362852642216,
+      "exact_match": false,
+      "rmse": 0.008369504257147905,
+      "mae": 0.0008568266382766871,
+      "max_abs": 0.6710424423217773,
+      "relative_l2": 0.004454701145850054
+    },
+    {
+      "layer": "model.model.backbone.features.4.conv.2",
+      "snr_db": 51.44037081929319,
+      "exact_match": false,
+      "rmse": 0.0052299713045931015,
+      "mae": 0.0007918524553994866,
+      "max_abs": 0.3002157211303711,
+      "relative_l2": 0.002679053947807671
+    },
+    {
+      "layer": "model.model.backbone.features.5.conv.0.0",
+      "snr_db": 45.71537434955938,
+      "exact_match": false,
+      "rmse": 0.017840972404637057,
+      "mae": 0.00400008907954863,
+      "max_abs": 0.3870978355407715,
+      "relative_l2": 0.00517882555683458
+    },
+    {
+      "layer": "model.model.backbone.features.5.conv.1.0",
+      "snr_db": 47.812729811075485,
+      "exact_match": false,
+      "rmse": 0.008760609661846623,
+      "mae": 0.0017533880856690418,
+      "max_abs": 0.315157413482666,
+      "relative_l2": 0.004067836692926201
+    },
+    {
+      "layer": "model.model.backbone.features.5.conv.2",
+      "snr_db": 43.08950585220274,
+      "exact_match": false,
+      "rmse": 0.010080393006015155,
+      "mae": 0.002089236107900188,
+      "max_abs": 0.41496944427490234,
+      "relative_l2": 0.007006880444822765
+    },
+    {
+      "layer": "model.model.backbone.features.6.conv.0.0",
+      "snr_db": 39.37295475787422,
+      "exact_match": false,
+      "rmse": 0.05024423432578662,
+      "mae": 0.018246004318996256,
+      "max_abs": 1.0517544746398926,
+      "relative_l2": 0.01074860893012431
+    },
+    {
+      "layer": "model.model.backbone.features.6.conv.1.0",
+      "snr_db": 43.029276794107204,
+      "exact_match": false,
+      "rmse": 0.014404215585825568,
+      "mae": 0.004599758128837234,
+      "max_abs": 0.3494443893432617,
+      "relative_l2": 0.007055635883501656
+    },
+    {
+      "layer": "model.model.backbone.features.6.conv.2",
+      "snr_db": 38.05850600141889,
+      "exact_match": false,
+      "rmse": 0.016506563393927927,
+      "mae": 0.004510543562794997,
+      "max_abs": 0.4217454195022583,
+      "relative_l2": 0.012504740969460677
+    },
+    {
+      "layer": "model.model.backbone.features.7.conv.0.0",
+      "snr_db": 34.491903580644106,
+      "exact_match": false,
+      "rmse": 0.11688426146715078,
+      "mae": 0.056314201323459656,
+      "max_abs": 1.847367286682129,
+      "relative_l2": 0.018854057227995533
+    },
+    {
+      "layer": "model.model.backbone.features.7.conv.1.0",
+      "snr_db": 35.65491386977557,
+      "exact_match": false,
+      "rmse": 0.024256383845628327,
+      "mae": 0.007950245751854369,
+      "max_abs": 0.618880957365036,
+      "relative_l2": 0.016491277760399107
+    },
+    {
+      "layer": "model.model.backbone.features.7.conv.2",
+      "snr_db": 43.85278429023391,
+      "exact_match": false,
+      "rmse": 0.016651587267782,
+      "mae": 0.006674749887633817,
+      "max_abs": 0.3434770107269287,
+      "relative_l2": 0.006417424758912671
+    },
+    {
+      "layer": "model.model.backbone.features.8.conv.0.0",
+      "snr_db": 35.95314490737968,
+      "exact_match": false,
+      "rmse": 0.03408275084948578,
+      "mae": 0.020404850549439857,
+      "max_abs": 0.327894926071167,
+      "relative_l2": 0.015934658287364657
+    },
+    {
+      "layer": "model.model.backbone.features.8.conv.1.0",
+      "snr_db": 37.69106867384394,
+      "exact_match": false,
+      "rmse": 0.026065986992996525,
+      "mae": 0.013764982361547174,
+      "max_abs": 0.34004926681518555,
+      "relative_l2": 0.013045074578778869
+    },
+    {
+      "layer": "model.model.backbone.features.8.conv.2",
+      "snr_db": 33.23970360564449,
+      "exact_match": false,
+      "rmse": 0.02728332313385133,
+      "mae": 0.010566098775964155,
+      "max_abs": 0.4006601423025131,
+      "relative_l2": 0.021777840850515946
+    },
+    {
+      "layer": "model.model.backbone.features.9.conv.0.0",
+      "snr_db": 32.014061335256244,
+      "exact_match": false,
+      "rmse": 0.08308891990213225,
+      "mae": 0.05831665726589108,
+      "max_abs": 0.6646609306335449,
+      "relative_l2": 0.02507823301020698
+    },
+    {
+      "layer": "model.model.backbone.features.9.conv.1.0",
+      "snr_db": 34.8371499386332,
+      "exact_match": false,
+      "rmse": 0.03360147347385099,
+      "mae": 0.019711489848693926,
+      "max_abs": 0.3749748393893242,
+      "relative_l2": 0.018119345369068646
+    },
+    {
+      "layer": "model.model.backbone.features.9.conv.2",
+      "snr_db": 32.545029739973245,
+      "exact_match": false,
+      "rmse": 0.03217623388939771,
+      "mae": 0.013253271365374289,
+      "max_abs": 1.005094051361084,
+      "relative_l2": 0.023591117462286024
+    },
+    {
+      "layer": "model.model.backbone.features.10.conv.0.0",
+      "snr_db": 29.290121090471967,
+      "exact_match": false,
+      "rmse": 0.170536956520227,
+      "mae": 0.12588039378260873,
+      "max_abs": 1.1799569129943848,
+      "relative_l2": 0.03431578557803116
+    },
+    {
+      "layer": "model.model.backbone.features.10.conv.1.0",
+      "snr_db": 32.01761094372897,
+      "exact_match": false,
+      "rmse": 0.04133703649454883,
+      "mae": 0.02286428505638805,
+      "max_abs": 0.4745321273803711,
+      "relative_l2": 0.025067986538588907
+    },
+    {
+      "layer": "model.model.backbone.features.10.conv.2",
+      "snr_db": 31.74084282135023,
+      "exact_match": false,
+      "rmse": 0.03505196104296934,
+      "mae": 0.014164139095063574,
+      "max_abs": 0.5009276866912842,
+      "relative_l2": 0.025879617842541544
+    },
+    {
+      "layer": "model.model.block12.conv1.0",
+      "snr_db": 25.784162037951184,
+      "exact_match": false,
+      "rmse": 0.4374683518577879,
+      "mae": 0.3192820171773292,
+      "max_abs": 3.465975761413574,
+      "relative_l2": 0.05137973950940031
+    },
+    {
+      "layer": "model.model.block12.conv2.0",
+      "snr_db": 34.491903580644106,
+      "exact_match": false,
+      "rmse": 0.11688426146715078,
+      "mae": 0.056314201323459656,
+      "max_abs": 1.847367286682129,
+      "relative_l2": 0.018854057227995533
+    },
+    {
+      "layer": "model.model.block13.conv1.0",
+      "snr_db": 30.016559015242798,
+      "exact_match": false,
+      "rmse": 0.019504890700167074,
+      "mae": 0.00860916812229029,
+      "max_abs": 0.635955810546875,
+      "relative_l2": 0.03156254751336644
+    },
+    {
+      "layer": "model.model.block13.conv2.0",
+      "snr_db": 26.767905735107714,
+      "exact_match": false,
+      "rmse": 0.06326545967867442,
+      "mae": 0.024761302814032642,
+      "max_abs": 1.3221673965454102,
+      "relative_l2": 0.04587802495001198
+    },
+    {
+      "layer": "model.model.block14.conv1.0",
+      "snr_db": 29.027924602164017,
+      "exact_match": false,
+      "rmse": 0.055914860752438046,
+      "mae": 0.026057238497189418,
+      "max_abs": 1.0048794746398926,
+      "relative_l2": 0.03536745176429031
+    },
+    {
+      "layer": "model.model.block14.conv2.0",
+      "snr_db": 45.824444367679476,
+      "exact_match": false,
+      "rmse": 0.02329291290191894,
+      "mae": 0.0030965409842226657,
+      "max_abs": 1.5110552310943604,
+      "relative_l2": 0.00511420086818714
+    },
+    {
+      "layer": "model.model.block15.conv1.0",
+      "snr_db": 31.902004113115808,
+      "exact_match": false,
+      "rmse": 0.02027091658776582,
+      "mae": 0.008885355921671442,
+      "max_abs": 0.592694103717804,
+      "relative_l2": 0.025403864893418834
+    },
+    {
+      "layer": "model.model.block15.conv2.0",
+      "snr_db": 26.47220228374792,
+      "exact_match": false,
+      "rmse": 0.06827739713996182,
+      "mae": 0.028148246232622222,
+      "max_abs": 2.6652985513210297,
+      "relative_l2": 0.04746679249186868
+    },
+    {
+      "layer": "model.model.block16.conv1.0",
+      "snr_db": 25.30261575074027,
+      "exact_match": false,
+      "rmse": 0.05524548574062127,
+      "mae": 0.024261980671849686,
+      "max_abs": 2.1650606095790863,
+      "relative_l2": 0.05430867565945657
+    },
+    {
+      "layer": "model.model.block16.conv2.0",
+      "snr_db": 25.021595420423782,
+      "exact_match": false,
+      "rmse": 0.055660965454239944,
+      "mae": 0.02147216481355363,
+      "max_abs": 2.753783702850342,
+      "relative_l2": 0.05609449324485037
+    },
+    {
+      "layer": "model.model.block16.conv3",
+      "snr_db": 24.455599315046996,
+      "exact_match": false,
+      "rmse": 0.07610383176016683,
+      "mae": 0.02867717597089298,
+      "max_abs": 2.9625015258789062,
+      "relative_l2": 0.059871485566259326
+    }
+  ]
+}

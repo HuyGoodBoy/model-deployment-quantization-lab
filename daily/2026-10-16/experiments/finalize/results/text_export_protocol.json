@@ -1,0 +1,10 @@
+{
+  "declared_at_utc": "2026-10-16T07:05:38.791675+00:00",
+  "gate": {
+    "maximum_relative_l2": 0.02,
+    "minimum_label_agreement": 0.99,
+    "maximum_accuracy_delta_pp": 1.0,
+    "reason": "A 2% logit parity tolerance with at least 99/100 unchanged labels and at most one accuracy point on development; separate numerical and decision checks; not a population quality guarantee"
+  },
+  "scope": "Static trained W8A8 Linear; no dynamic calibration; embedding, attention matmuls, normalization, activation and boundaries remain float"
+}

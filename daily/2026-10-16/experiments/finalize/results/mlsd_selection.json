@@ -1,0 +1,293 @@
+{
+  "locked_at_utc": "2026-10-16T07:03:55.778526+00:00",
+  "checkpoint": {
+    "path": "daily/2026-10-15/experiments/qat/artifacts/research/selected_checkpoint.pt",
+    "sha256": "167bc6f9d9d37173f57a31304d895f037a292b13c9e43de08b214c4136cdb0c5"
+  },
+  "selection_rule": "Development only; prefer candidates passing unchanged 2%/0.5pp gate; otherwise fastest experimental candidate within 0.5pp sAP10 with verified integer execution; failed release gate remains failed",
+  "holdout_used": false,
+  "selected": "frozen_qdq",
+  "candidates": {
+    "explicit_rounding": {
+      "model": {
+        "path": "daily/2026-10-15/experiments/qat/artifacts/export-parity/mlsd_explicit_rounding.onnx",
+        "sha256": "c37339acb373abb6594fb7c901fd292f47d8ab6650fc5a51ad58297168974c82",
+        "bytes": 783085
+      },
+      "output": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/mlsd_explicit_rounding_development.npy",
+        "sha256": "908ee040b64a152bba8f57b6c39fff3d56b0633e06847d6d700c0d28d39e1508",
+        "bytes": 20971648
+      },
+      "metrics": {
+        "active": {
+          "snr_db": 6.368893599131749,
+          "exact_match": false,
+          "rmse": 13.96196173482809,
+          "mae": 4.035794296945584,
+          "max_abs": 689.2623901367188,
+          "relative_l2": 0.4803472625484345
+        },
+        "center": {
+          "snr_db": 7.187522003776143,
+          "exact_match": false,
+          "rmse": 3.117287719685133,
+          "mae": 1.9957445285858841,
+          "max_abs": 34.495089530944824,
+          "relative_l2": 0.437143373853863
+        },
+        "displacement": {
+          "snr_db": 6.359812101479765,
+          "exact_match": false,
+          "rmse": 15.531938020549138,
+          "mae": 4.545806739035507,
+          "max_abs": 689.2623901367188,
+          "relative_l2": 0.48084975037550187
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 13.705253245105316,
+          "precision_at_0_1": 0.2506568575932738,
+          "recall_at_0_1": 0.26903553299492383,
+          "ground_truth_lines": 1773,
+          "predicted_line_counts": [
+            128,
+            158,
+            95,
+            132,
+            129,
+            103,
+            106,
+            133,
+            110,
+            151,
+            116,
+            125,
+            101,
+            130,
+            85,
+            128
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "parity": {
+        "snr_db": 24.94904197336309,
+        "exact_match": false,
+        "rmse": 1.4070006525528636,
+        "mae": 0.6755804489936488,
+        "max_abs": 58.46321105957031,
+        "relative_l2": 0.05656501431017054
+      },
+      "development_median_ms": 121.7690500000117,
+      "selection_timing_ms": [
+        124.17770000001838,
+        127.02130000025136,
+        124.63509999997768,
+        140.6979000003048,
+        125.01429999974789,
+        121.13890000000538,
+        120.90020000005097,
+        120.3520999997636,
+        120.57970000023488,
+        118.5766000003241,
+        122.51359999982014,
+        118.784499999947,
+        122.39920000001803,
+        121.13640000006853,
+        123.96069999977044,
+        120.89749999995547
+      ],
+      "parity_gate_passed": false,
+      "sAP10_delta_pp": 0.00793232390806331
+    },
+    "frozen_qdq": {
+      "model": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/mlsd_frozen_qdq.onnx",
+        "sha256": "32aec91c3e1b3d23e09745f0f1c0973f81220f2ba3ebb1f973c47a79ab3ec7b9",
+        "bytes": 773207
+      },
+      "output": {
+        "path": "daily/2026-10-16/experiments/finalize/artifacts/mlsd_frozen_qdq_development.npy",
+        "sha256": "0eddf02fef72d5d5d66eec431d7039d7d5d73494128f3e329d83d7bd57727851",
+        "bytes": 20971648
+      },
+      "metrics": {
+        "active": {
+          "snr_db": 6.4001909716485805,
+          "exact_match": false,
+          "rmse": 13.911743919395528,
+          "mae": 4.0145472989321105,
+          "max_abs": 689.2623901367188,
+          "relative_l2": 0.4786195690743849
+        },
+        "center": {
+          "snr_db": 7.187400467174072,
+          "exact_match": false,
+          "rmse": 3.1173313383843717,
+          "mae": 1.9961219185741679,
+          "max_abs": 34.495089530944824,
+          "relative_l2": 0.4371494905896484
+        },
+        "displacement": {
+          "snr_db": 6.391427030755441,
+          "exact_match": false,
+          "rmse": 15.475507582313083,
+          "mae": 4.519153644021596,
+          "max_abs": 689.2623901367188,
+          "relative_l2": 0.4791027332226207
+        },
+        "line_quality": {
+          "sAP10_subset_percent": 13.688431214479307,
+          "precision_at_0_1": 0.25,
+          "recall_at_0_1": 0.2673434856175973,
+          "ground_truth_lines": 1773,
+          "predicted_line_counts": [
+            133,
+            157,
+            103,
+            134,
+            133,
+            100,
+            106,
+            132,
+            101,
+            152,
+            116,
+            125,
+            103,
+            126,
+            76,
+            130
+          ],
+          "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+        }
+      },
+      "parity": {
+        "snr_db": 21.0294940161361,
+        "exact_match": false,
+        "rmse": 2.209386503580304,
+        "mae": 0.9045394982042353,
+        "max_abs": 88.98543930053711,
+        "relative_l2": 0.08882297173420965
+      },
+      "development_median_ms": 48.701449999953184,
+      "selection_timing_ms": [
+        49.991700000191486,
+        48.591100000066945,
+        49.66930000000502,
+        49.89679999971486,
+        49.081999999998516,
+        48.782200000005105,
+        48.696299999846815,
+        48.24319999988802,
+        49.07550000007177,
+        48.70660000005955,
+        48.51759999974092,
+        48.11179999978776,
+        47.53749999963475,
+        48.85030000014012,
+        48.48790000005465,
+        48.29460000019026
+      ],
+      "parity_gate_passed": false,
+      "sAP10_delta_pp": -0.00888970671794631
+    }
+  },
+  "qdq_float_reference_parity": {
+    "snr_db": null,
+    "exact_match": true,
+    "rmse": 0.0,
+    "mae": 0.0,
+    "max_abs": 0.0,
+    "relative_l2": 0.0
+  },
+  "qdq_wrapped_convolutions": 41,
+  "qdq_runtime": {
+    "unique_executed_operators": {
+      "DequantizeLinear": 40,
+      "Pad": 4,
+      "QuantizeLinear": 19,
+      "Transpose": 24,
+      "QLinearConv": 22,
+      "FusedConv": 15,
+      "Conv": 4,
+      "Resize": 3,
+      "Concat": 3,
+      "Add": 2,
+      "Slice": 2,
+      "Split": 1
+    },
+    "providers": {
+      "CPUExecutionProvider": 139
+    },
+    "operator_ms_profiled": {
+      "DequantizeLinear": 7.669999999999998,
+      "Pad": 15.845999999999998,
+      "QuantizeLinear": 10.564,
+      "Transpose": 17.787999999999997,
+      "QLinearConv": 74.413,
+      "FusedConv": 61.59000000000002,
+      "Conv": 4.405,
+      "Resize": 3.401,
+      "Concat": 1.077,
+      "Add": 1.105,
+      "Slice": 0.259,
+      "Split": 0.166
+    },
+    "profile": {
+      "path": "daily/2026-10-16/experiments/finalize/artifacts/mlsd_qdq_profile_2026-10-16_14-03-44_981.json",
+      "sha256": "452eb68a4c59e3fae9f2d16a780b782fec0fc7e4ad4442c37f56d46870a048f0",
+      "bytes": 144705
+    }
+  },
+  "qdq_graph": {
+    "operators": {
+      "Identity": 83,
+      "Constant": 136,
+      "ConstantOfShape": 4,
+      "Concat": 7,
+      "Reshape": 8,
+      "Slice": 8,
+      "Transpose": 4,
+      "Cast": 4,
+      "Pad": 4,
+      "QuantizeLinear": 43,
+      "DequantizeLinear": 84,
+      "Expand": 41,
+      "Conv": 41,
+      "Clip": 20,
+      "Add": 8,
+      "Relu": 10,
+      "Resize": 3
+    },
+    "initializer_dtypes": {
+      "FLOAT": 104,
+      "UINT8": 52,
+      "INT64": 9,
+      "INT8": 2
+    },
+    "conv_integer": [],
+    "float_conv_count": 41,
+    "size_bytes": 773207
+  },
+  "qdq_optimized_operators": {
+    "DequantizeLinear": 40,
+    "Pad": 4,
+    "QuantizeLinear": 19,
+    "Transpose": 24,
+    "QLinearConv": 22,
+    "FusedConv": 15,
+    "Conv": 4,
+    "Resize": 3,
+    "Concat": 3,
+    "Add": 2,
+    "Slice": 2,
+    "Split": 1
+  },
+  "scope": "Frozen U8U8 QDQ lowering, no recalibration/training; actual mixed precision determined by profiler",
+  "source_code": {
+    "path": "daily/2026-10-16/experiments/finalize/src/finalize_mlsd.py",
+    "sha256": "dab5db63e9cc14252e70874daa45ac811ec56cec218bf9422ed23a9cba97957a",
+    "bytes": 9530
+  }
+}

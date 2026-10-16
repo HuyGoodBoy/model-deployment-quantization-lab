@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "hand_computed_cases": [
+    {
+      "case": "reversed_endpoints",
+      "expected_AP_percent": 100,
+      "passed": true
+    },
+    {
+      "case": "duplicate_prediction",
+      "expected_AP_percent": 100,
+      "passed": true
+    },
+    {
+      "case": "false_positive_before_true",
+      "expected_AP_percent": 50,
+      "passed": true
+    },
+    {
+      "case": "non_square_resize",
+      "expected_AP_percent": 100,
+      "passed": true
+    },
+    {
+      "case": "strict_distance_equal_10",
+      "expected_AP_percent": 0,
+      "passed": true
+    },
+    {
+      "case": "strict_distance_9",
+      "expected_AP_percent": 100,
+      "passed": true
+    },
+    {
+      "case": "no_prediction",
+      "expected_AP_percent": 0,
+      "passed": true
+    },
+    {
+      "case": "no_ground_truth",
+      "expected_AP_percent": 0,
+      "passed": true
+    },
+    {
+      "case": "decoder_center_displacement_grid_scaling",
+      "passed": true
+    }
+  ],
+  "scope": "Tests the repo's stated subset protocol, not equivalence to the paper evaluator"
+}
