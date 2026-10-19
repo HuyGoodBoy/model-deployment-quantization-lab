@@ -1,0 +1,16 @@
+{
+  "validated_at_utc": "2026-10-19T10:26:42.576282+00:00",
+  "status": "passed",
+  "scientific_verification": "passed",
+  "release_gate_passed": false,
+  "report_words": 243,
+  "local_markdown_links_checked": true,
+  "comparison_csv_rows": 7,
+  "code_lint_and_format": "passed",
+  "large_artifacts_ignored": true,
+  "astra_review": "No blocking issue; added QAT float control to main table and explained dominance in research",
+  "report_sha256": "0392b4d38a4f3fe177a96092826db6af986b27eaa973364c306a1320ff4092a1",
+  "report_generator_sha256": "e4bdbade53d8d126cd67685625aa1d24430d778a56acea632fc04f2a0d9dd078",
+  "research_summary_in_main_report": true,
+  "mentor_bullet_format": true
+}

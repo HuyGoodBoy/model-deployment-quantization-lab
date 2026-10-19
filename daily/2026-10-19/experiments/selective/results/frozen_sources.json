@@ -1,0 +1,66 @@
+{
+  "locked_at_utc": "2026-10-19T06:43:51.520721+00:00",
+  "files": [
+    {
+      "path": "daily/2026-10-19/PROTOCOL.md",
+      "sha256": "0023c699e7f4315a3a2bd62790067ec366bfca5e8d72528a6ed17ef35c1fa0d3",
+      "bytes": 3343
+    },
+    {
+      "path": "daily/2026-10-16/experiments/finalize/results/mlsd_selection.json",
+      "sha256": "d7d14e76180e6c00f13a3c0f0001f1ca76d86af535b05ceeba4477715fafe5f8",
+      "bytes": 8767
+    },
+    {
+      "path": "daily/2026-10-16/experiments/finalize/results/mlsd_manifest.json",
+      "sha256": "7b26ee9db44f945ae0db373f801b629716e5565a39a0ceaca3c7dd6838f8d0c1",
+      "bytes": 17222
+    },
+    {
+      "path": "daily/2026-10-16/experiments/finalize/results/mlsd_final.json",
+      "sha256": "451b32ee3439b56bd968e2f81253c7174ea65582b3de75414a434cbe7148207c",
+      "bytes": 18950
+    },
+    {
+      "path": "daily/2026-10-16/experiments/finalize/results/mlsd_benchmark.json",
+      "sha256": "f2e34a502dca76fb2ed7ca0603be5013d0c54969a44bbf7518a8744fef75baa7",
+      "bytes": 11276
+    },
+    {
+      "path": "daily/2026-10-15/experiments/qat/results/research/selection.json",
+      "sha256": "3173f8cf135e12c378cf91717124648594d2dae19601be18218b7e2de230b3fb",
+      "bytes": 9152
+    },
+    {
+      "path": "daily/2026-10-15/experiments/qat/artifacts/research/deploy/mlsd_original_fp32.onnx",
+      "sha256": "3aad0be412ce1f1fb5079fa2d000d6ffd11541dcc3a038d2297555bedda21f7c",
+      "bytes": 2502514
+    },
+    {
+      "path": "daily/2026-10-15/experiments/qat/artifacts/research/deploy/mlsd_step0032_integer.onnx",
+      "sha256": "5d7831552ec30ffe5fff49157eae6f24b522f43217db63bbf50e2f34425a6486",
+      "bytes": 760882
+    },
+    {
+      "path": "daily/2026-10-16/experiments/finalize/artifacts/mlsd_frozen_qdq.onnx",
+      "sha256": "32aec91c3e1b3d23e09745f0f1c0973f81220f2ba3ebb1f973c47a79ab3ec7b9",
+      "bytes": 773207
+    },
+    {
+      "path": "daily/2026-10-15/experiments/qat/artifacts/research/selected_checkpoint.pt",
+      "sha256": "167bc6f9d9d37173f57a31304d895f037a292b13c9e43de08b214c4136cdb0c5",
+      "bytes": 7802329
+    },
+    {
+      "path": "daily/2026-10-16/experiments/finalize/artifacts/mlsd_final_inputs.npy",
+      "sha256": "d3ee5f46f5a45e820e70cd4b42d9e6072e04ec5aebc6c60dfb32ad53157ce352",
+      "bytes": 226492544
+    },
+    {
+      "path": "daily/2026-10-16/experiments/finalize/artifacts/mlsd_final_truth.json",
+      "sha256": "7208e277f8c265b4aa638fb0fb35beaa33236977590a47a6d9b65ac5e6466171",
+      "bytes": 1111245
+    }
+  ],
+  "scope": "Only checking hashes of existing regression artifacts; no new regression inference before selection"
+}

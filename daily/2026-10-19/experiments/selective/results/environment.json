@@ -1,0 +1,21 @@
+{
+  "recorded_at_utc": "2026-10-19T06:43:51.490636+00:00",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+  "python": "3.11.9",
+  "numpy": "2.4.6",
+  "torch": "2.13.0+cpu",
+  "onnx": "1.23.2",
+  "onnxruntime": "1.30.0",
+  "provider": "CPUExecutionProvider",
+  "intra_threads": 4,
+  "inter_threads": 1,
+  "spinning": false,
+  "batch": 1,
+  "input_shape": [
+    1,
+    4,
+    512,
+    512
+  ]
+}

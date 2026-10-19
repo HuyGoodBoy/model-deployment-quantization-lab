@@ -15,6 +15,7 @@
 | 14/10/2026 | QAT M-LSD và DistilBERT: pilot 8 bước/model, task tuần đang làm | [Tiến độ](daily/2026-10-14/REPORT.md) | [qat](daily/2026-10-14/experiments/qat/) |
 | 15/10/2026 | QAT 128 bước/model; calibration M-LSD tăng chất lượng trên 32 ảnh; sửa làm tròn export giảm lệch tensor, chưa đạt gate 2% | [Báo cáo](daily/2026-10-15/REPORT.md) · [Research](daily/2026-10-15/RESEARCH.md) | [qat](daily/2026-10-15/experiments/qat/) |
 | 16/10/2026 | Chốt 54 ảnh M-LSD và 772 câu SST-2; export integer DistilBERT, đối chiếu CPU/GPU và kiểm chứng cuối tuần | [Báo cáo ngày](daily/2026-10-16/REPORT.md) · [Tổng kết tuần](daily/2026-10-16/WEEKLY-REPORT.md) | [Code và kết quả](daily/2026-10-16/experiments/finalize/) |
+| 19/10/2026 | M-LSD: kiểm chứng fusion QDQ và thử giữ hai block head ở float; median giảm 7,8% so QDQ cũ, gate export vẫn chưa đạt | [Báo cáo](daily/2026-10-19/REPORT.md) · [Research](daily/2026-10-19/RESEARCH.md) | [Code và kết quả](daily/2026-10-19/experiments/selective/) |
 
 Ngày 09 đã reproduce 6 biến thể ResNet18 từ source Đức và đo 12 cấu hình model Huy
 trên Linux. M-LSD đã convert/quantize; detect box mới có prototype Java desktop,

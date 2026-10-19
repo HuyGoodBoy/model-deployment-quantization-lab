@@ -1,0 +1,142 @@
+{
+  "verified_at_utc": "2026-10-19T06:56:27.087889+00:00",
+  "status": "passed",
+  "frozen_source_files_unchanged": 12,
+  "candidate_policy_weights_and_retained_scales_checked": true,
+  "kernel_dtypes_and_counts": {
+    "qdq_all": {
+      "DequantizeLinear": 40,
+      "Pad": 4,
+      "QuantizeLinear": 19,
+      "Transpose": 24,
+      "QLinearConv": 22,
+      "FusedConv": 15,
+      "Conv": 4,
+      "Resize": 3,
+      "Concat": 3,
+      "Add": 2,
+      "Slice": 2,
+      "Split": 1
+    },
+    "custom_41_integer": {
+      "Pad": 4,
+      "QuantizeLinear": 41,
+      "ConvInteger": 41,
+      "Cast": 41,
+      "Mul": 41,
+      "Add": 49,
+      "Clip": 3,
+      "Relu": 6,
+      "Resize": 3,
+      "Concat": 3,
+      "Slice": 2,
+      "Split": 1,
+      "DequantizeLinear": 2
+    },
+    "qdq_optimizer_off": {
+      "Identity": 83,
+      "Expand": 41,
+      "DequantizeLinear": 84,
+      "ConstantOfShape": 4,
+      "Concat": 7,
+      "Reshape": 8,
+      "Slice": 8,
+      "Transpose": 4,
+      "Cast": 4,
+      "Pad": 4,
+      "QuantizeLinear": 43,
+      "Conv": 41,
+      "Clip": 20,
+      "Add": 8,
+      "Relu": 10,
+      "Resize": 3
+    },
+    "selective_a": {
+      "DequantizeLinear": 40,
+      "Pad": 4,
+      "QuantizeLinear": 19,
+      "Transpose": 22,
+      "QLinearConv": 19,
+      "FusedConv": 16,
+      "Conv": 6,
+      "Resize": 3,
+      "Concat": 3,
+      "Add": 2,
+      "ReorderInput": 1,
+      "ReorderOutput": 1,
+      "Slice": 2,
+      "Split": 1
+    },
+    "selective_b": {
+      "DequantizeLinear": 36,
+      "Pad": 4,
+      "QuantizeLinear": 17,
+      "Transpose": 22,
+      "QLinearConv": 19,
+      "FusedConv": 14,
+      "Conv": 8,
+      "Resize": 3,
+      "Concat": 3,
+      "Add": 2,
+      "ReorderInput": 2,
+      "ReorderOutput": 2,
+      "Slice": 2,
+      "Split": 1
+    }
+  },
+  "reruns": [
+    "selective_a:16 development exact",
+    "selective_b:16 development exact",
+    "qat_weights_fp32:16 development exact",
+    "selective_b:54 regression exact"
+  ],
+  "metric_bootstrap_timing_recomputed": true,
+  "development_selection_recomputed": "selective_b",
+  "export_release_gates": {
+    "selective_a": false,
+    "selective_b": false
+  },
+  "scope": "Evidence consistency passed; failed model release gates remain failed; regression is not new holdout",
+  "sources": {
+    "diagnose.py": {
+      "path": "daily/2026-10-19/experiments/selective/src/diagnose.py",
+      "sha256": "77909a9c72fab55fe37dedbfb880376a7a0e4963f72920c1ba803fe930f21608",
+      "bytes": 8217
+    },
+    "export_selective.py": {
+      "path": "daily/2026-10-19/experiments/selective/src/export_selective.py",
+      "sha256": "1b85fe35e175d854f62d575c4ee554d0e5dc99ff25c7d41d5eb3c20bf007bcab",
+      "bytes": 6183
+    },
+    "fusion_control.py": {
+      "path": "daily/2026-10-19/experiments/selective/src/fusion_control.py",
+      "sha256": "7876af640530a88c9b6970cad3cb6f7e197706213c1f8c08af0009d5521e3752",
+      "bytes": 4128
+    },
+    "measure.py": {
+      "path": "daily/2026-10-19/experiments/selective/src/measure.py",
+      "sha256": "a325bbeee14be7e6b5123bcd8fc10883d781aad72c4bc6505a4f69a786c8bf4e",
+      "bytes": 5659
+    },
+    "regression.py": {
+      "path": "daily/2026-10-19/experiments/selective/src/regression.py",
+      "sha256": "4ba642a90f073d3c04ba7266d5932da4700a6181d9cb5f0a5f49e2d42a2167fd",
+      "bytes": 2827
+    },
+    "support.py": {
+      "path": "daily/2026-10-19/experiments/selective/src/support.py",
+      "sha256": "9ab6c759e70315c64e1e6a10b9146901057af5fa8ad24a84e3b5b1afc8068ea6",
+      "bytes": 6644
+    },
+    "verify.py": {
+      "path": "daily/2026-10-19/experiments/selective/src/verify.py",
+      "sha256": "b1879312a8be979d70886857bda641963c5f934ad65320d023376eb2332905f5",
+      "bytes": 14597
+    },
+    "write_report.py": {
+      "path": "daily/2026-10-19/experiments/selective/src/write_report.py",
+      "sha256": "81226d87b53339e5d3c22bb3dc762cf6b62aae36e1ed0bfecd3decddcdaa3939",
+      "bytes": 12992
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "locked_at_utc": "2026-10-19T06:52:48.585552+00:00",
+  "model": {
+    "path": "daily/2026-10-16/experiments/finalize/artifacts/mlsd_frozen_qdq.onnx",
+    "sha256": "32aec91c3e1b3d23e09745f0f1c0973f81220f2ba3ebb1f973c47a79ab3ec7b9",
+    "bytes": 773207
+  },
+  "disabled_pass": "QDQSelectorActionTransformer",
+  "scope": "Supplementary causal control of this optimizer pass on the same graph, all other optimization levels retained. Does not isolate each Conv fusion from all other rules in the pass. Not used to select A/B.",
+  "protocol": "Two conditions, 5 alternating-order rounds, 16 warmups plus16 timed development inputs/round; profiling in separate sessions after timing; 4 intra/1 inter threads, spinning off",
+  "source_code": {
+    "path": "daily/2026-10-19/experiments/selective/src/fusion_control.py",
+    "sha256": "7876af640530a88c9b6970cad3cb6f7e197706213c1f8c08af0009d5521e3752",
+    "bytes": 4128
+  }
+}
