@@ -1,0 +1,339 @@
+{
+  "finished_at_utc": "2026-10-20T05:51:27.623023+00:00",
+  "protocol": {
+    "path": "daily/2026-10-20/experiments/mlsd/results/aeq_float_output_protocol.json",
+    "sha256": "b63309e8d9615d583df497431d35e19b77e9ec146c12c8219def13e9ca38a00a",
+    "bytes": 507
+  },
+  "model": {
+    "path": "daily/2026-10-20/experiments/mlsd/artifacts/aeq_float_output.tflite",
+    "sha256": "1def59f1658f1ab558bd255c9c494e9547938d1acf461e6220e061833aade762",
+    "bytes": 798624
+  },
+  "graph": [
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.0/features.0.0/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.1/conv/conv.0/conv.0.0/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.float32'>",
+      "output_dtype": "<class 'numpy.float32'>"
+    },
+    {
+      "op": "DEPTHWISE_CONV_2D",
+      "weight": "wa/model/model/backbone/features.1/conv/conv.0/conv.0.0/Conv_depthwise_filter",
+      "scope": "wa/model/model/backbone/features.1/conv/conv.1/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.float32'>",
+      "output_dtype": "<class 'numpy.float32'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.1/conv/conv.1/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.1/conv/conv.1/Conv_output_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.2/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.2/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "DEPTHWISE_CONV_2D",
+      "weight": "wa/model/model/backbone/features.2/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "scope": "wa/model/model/backbone/features.2/conv/conv.2/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.2/conv/conv.2/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.2/conv/conv.2/Conv_output_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.3/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.3/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "DEPTHWISE_CONV_2D",
+      "weight": "wa/model/model/backbone/features.3/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "scope": "wa/model/model/backbone/features.3/conv/conv.2/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.float32'>",
+      "output_dtype": "<class 'numpy.float32'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.3/conv/conv.2/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.3/conv/conv.2/Conv_output_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.4/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.4/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/block14/conv2/conv2.0/Conv_conv_filter",
+      "scope": "wa/model/model/block14/conv2/conv2.2/Relu_output_0",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "DEPTHWISE_CONV_2D",
+      "weight": "wa/model/model/backbone/features.4/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "scope": "wa/model/model/backbone/features.4/conv/conv.2/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.4/conv/conv.2/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.4/conv/conv.2/Conv_output_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.5/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.5/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "DEPTHWISE_CONV_2D",
+      "weight": "wa/model/model/backbone/features.5/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "scope": "wa/model/model/backbone/features.5/conv/conv.2/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.5/conv/conv.2/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.5/conv/conv.2/Conv_output_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.6/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.6/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "DEPTHWISE_CONV_2D",
+      "weight": "wa/model/model/backbone/features.6/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "scope": "wa/model/model/backbone/features.6/conv/conv.2/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.6/conv/conv.2/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.6/conv/conv.2/Conv_output_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.7/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.7/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/block12/conv2/conv2.0/Conv_conv_filter",
+      "scope": "wa/model/model/block12/conv2/conv2.2/Relu_output_0",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "DEPTHWISE_CONV_2D",
+      "weight": "wa/model/model/backbone/features.7/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "scope": "wa/model/model/backbone/features.7/conv/conv.2/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.7/conv/conv.2/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.7/conv/conv.2/Conv_output_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.8/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.8/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "DEPTHWISE_CONV_2D",
+      "weight": "wa/model/model/backbone/features.8/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "scope": "wa/model/model/backbone/features.8/conv/conv.2/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.8/conv/conv.2/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.8/conv/conv.2/Conv_output_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.9/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.9/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "DEPTHWISE_CONV_2D",
+      "weight": "wa/model/model/backbone/features.9/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "scope": "wa/model/model/backbone/features.9/conv/conv.2/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.9/conv/conv.2/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.9/conv/conv.2/Conv_output_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.10/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.10/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "DEPTHWISE_CONV_2D",
+      "weight": "wa/model/model/backbone/features.10/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "scope": "wa/model/model/backbone/features.10/conv/conv.2/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/backbone/features.10/conv/conv.2/Conv_conv_filter",
+      "scope": "wa/model/model/backbone/features.10/conv/conv.2/Conv_output_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/block12/conv1/conv1.0/Conv_conv_filter",
+      "scope": "wa/model/model/block12/Resize_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/block13/conv1/conv1.0/Conv_conv_filter",
+      "scope": "wa/model/model/block13/conv1/conv1.2/Relu_output_0",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/block13/conv2/conv2.0/Conv_conv_filter",
+      "scope": "wa/model/model/block14/conv1/conv1.0/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/block14/conv1/conv1.0/Conv_conv_filter",
+      "scope": "wa/model/model/block14/Resize_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/block15/conv1/conv1.0/Conv_conv_filter",
+      "scope": "wa/model/model/block15/conv1/conv1.2/Relu_output_0",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/block15/conv2/conv2.0/Conv_conv_filter",
+      "scope": "wa/model/model/block16/conv1/conv1.0/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/block16/conv1/conv1.0/Conv_conv_filter",
+      "scope": "wa/model/model/block16/conv2/conv2.0/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/block16/conv2/conv2.0/Conv_conv_filter",
+      "scope": "wa/model/model/block16/conv3/Conv_input_nhwc",
+      "weight_dtype": "<class 'numpy.int8'>",
+      "output_dtype": "<class 'numpy.int8'>"
+    },
+    {
+      "op": "CONV_2D",
+      "weight": "wa/model/model/block16/conv3/Conv_conv_filter",
+      "scope": "wa/model/model/block16/conv3/Conv_output_nhwc",
+      "weight_dtype": "<class 'numpy.float32'>",
+      "output_dtype": "<class 'numpy.float32'>"
+    }
+  ],
+  "native_output_dtype": "<class 'numpy.float32'>",
+  "sAP10": {
+    "sAP10_subset_percent": 3.013926708427508,
+    "precision_at_0_1": 0.11756695415342715,
+    "recall_at_0_1": 0.1460800902425268,
+    "ground_truth_lines": 1773,
+    "predicted_line_counts": [
+      138,
+      143,
+      113,
+      150,
+      125,
+      157,
+      140,
+      149,
+      145,
+      116,
+      113,
+      168,
+      119,
+      144,
+      125,
+      158
+    ],
+    "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+  },
+  "output": {
+    "path": "daily/2026-10-20/experiments/mlsd/artifacts/float_output_development.npy",
+    "sha256": "97dec44d4b5c2471eae7c3ddf51855bc0b43078e2993ac342d18f6c5e285066a",
+    "bytes": 20971648
+  },
+  "development_only": true,
+  "source_code": {
+    "path": "daily/2026-10-20/experiments/mlsd/src/explore_float_output.py",
+    "sha256": "8ffd530ee7a8b6b9675a835ad5c914392f9dbc1a880ff85abec31d6d31683828",
+    "bytes": 5543
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "locked_at_utc": "2026-10-20T05:07:52.643131+00:00",
+  "repo": "csukuangfj/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17",
+  "revision": "d42f2d9f7ca24806fb667456a18a9f1b60f70d16",
+  "files": [
+    {
+      "name": "README.md",
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/source/README.md",
+      "sha256": "505f6b0e8a39f066a0794c4fb0b5689533d3bcd9d1dc5e5f47ccffeef1af9877",
+      "bytes": 304,
+      "url": "https://huggingface.co/csukuangfj/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17/resolve/d42f2d9f7ca24806fb667456a18a9f1b60f70d16/README.md",
+      "upstream_lfs_sha256": null
+    },
+    {
+      "name": "decoder-epoch-99-avg-1.onnx",
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/source/decoder-epoch-99-avg-1.onnx",
+      "sha256": "45a7f940ecfb53d89fa270ad11b88b961e53a317203eb24b1c8e95ed208b0f30",
+      "bytes": 2092272,
+      "url": "https://huggingface.co/csukuangfj/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17/resolve/d42f2d9f7ca24806fb667456a18a9f1b60f70d16/decoder-epoch-99-avg-1.onnx",
+      "upstream_lfs_sha256": "45a7f940ecfb53d89fa270ad11b88b961e53a317203eb24b1c8e95ed208b0f30"
+    },
+    {
+      "name": "encoder-epoch-99-avg-1.onnx",
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/source/encoder-epoch-99-avg-1.onnx",
+      "sha256": "f77a22f4ff94604e1afb2aeb13504d7699363528c047c97d3436087c95c9b659",
+      "bytes": 88804590,
+      "url": "https://huggingface.co/csukuangfj/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17/resolve/d42f2d9f7ca24806fb667456a18a9f1b60f70d16/encoder-epoch-99-avg-1.onnx",
+      "upstream_lfs_sha256": "f77a22f4ff94604e1afb2aeb13504d7699363528c047c97d3436087c95c9b659"
+    },
+    {
+      "name": "export-onnx-en-20M.sh",
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/source/export-onnx-en-20M.sh",
+      "sha256": "76abe8e1f8f134fa33a1df07d21240a7c8e7033be1d7c9587d45ed36a46d2e59",
+      "bytes": 998,
+      "url": "https://huggingface.co/csukuangfj/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17/resolve/d42f2d9f7ca24806fb667456a18a9f1b60f70d16/export-onnx-en-20M.sh",
+      "upstream_lfs_sha256": null
+    },
+    {
+      "name": "joiner-epoch-99-avg-1.onnx",
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/source/joiner-epoch-99-avg-1.onnx",
+      "sha256": "343e17dffa4f386ca206e00d3c406908f68f473c3d35968d6c3cddd5b8559a94",
+      "bytes": 1026462,
+      "url": "https://huggingface.co/csukuangfj/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17/resolve/d42f2d9f7ca24806fb667456a18a9f1b60f70d16/joiner-epoch-99-avg-1.onnx",
+      "upstream_lfs_sha256": "343e17dffa4f386ca206e00d3c406908f68f473c3d35968d6c3cddd5b8559a94"
+    },
+    {
+      "name": "test_wavs/0.wav",
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/source/test_wavs/0.wav",
+      "sha256": "6bc58a4efdf20daac252b6b1502632601a71efe0308f6757dc1eda34891a7e4f",
+      "bytes": 212044,
+      "url": "https://huggingface.co/csukuangfj/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17/resolve/d42f2d9f7ca24806fb667456a18a9f1b60f70d16/test_wavs/0.wav",
+      "upstream_lfs_sha256": null
+    },
+    {
+      "name": "test_wavs/1.wav",
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/source/test_wavs/1.wav",
+      "sha256": "5143a6ba93c4b274e2c4ac22deb75c2c48936c853f0519add1de828b6c79cc5a",
+      "bytes": 534924,
+      "url": "https://huggingface.co/csukuangfj/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17/resolve/d42f2d9f7ca24806fb667456a18a9f1b60f70d16/test_wavs/1.wav",
+      "upstream_lfs_sha256": null
+    },
+    {
+      "name": "test_wavs/8k.wav",
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/source/test_wavs/8k.wav",
+      "sha256": "f6f3c8b33e2534cdc154fe773ad2750f1f6a2ca5096179cdf037ae782456613e",
+      "bytes": 77244,
+      "url": "https://huggingface.co/csukuangfj/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17/resolve/d42f2d9f7ca24806fb667456a18a9f1b60f70d16/test_wavs/8k.wav",
+      "upstream_lfs_sha256": null
+    },
+    {
+      "name": "test_wavs/trans.txt",
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/source/test_wavs/trans.txt",
+      "sha256": "b9ac44e7b794abb1a2d5faf0005e98a665971e7ac2ed15435832cc34edaa9100",
+      "bytes": 449,
+      "url": "https://huggingface.co/csukuangfj/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17/resolve/d42f2d9f7ca24806fb667456a18a9f1b60f70d16/test_wavs/trans.txt",
+      "upstream_lfs_sha256": null
+    },
+    {
+      "name": "tokens.txt",
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/source/tokens.txt",
+      "sha256": "49e3c2646595fd907228b3c6787069658f67b17377c60aeb8619c4551b2316fb",
+      "bytes": 5048,
+      "url": "https://huggingface.co/csukuangfj/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17/resolve/d42f2d9f7ca24806fb667456a18a9f1b60f70d16/tokens.txt",
+      "upstream_lfs_sha256": null
+    }
+  ],
+  "source_code_sha256": "ef3c3150bf1ca4122e0111e20e9a028fe5984c3f9c767ed2ce23e7c93ac835e7"
+}

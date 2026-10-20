@@ -1,0 +1,17 @@
+{
+  "recorded_at_utc": "2026-10-20T05:23:15.017692+00:00",
+  "status": "strict_conversion_failed",
+  "error_type": "TypeError",
+  "error": "Parameter to CopyFrom() must be instance of same class: expected <class 'onnx.onnx_ml_pb2.ModelProto'> got <class 'onnx2tf.gs.Graph'>.",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/daily/2026-10-20/experiments/zipformer/src/validate_artifacts.py\", line 61, in main\n    export_tflite_model_flatbuffer_direct(\n  File \"/usr/local/lib/python3.12/site-packages/onnx2tf/tflite_builder/__init__.py\", line 497, in export_tflite_model_flatbuffer_direct\n    preprocessed_onnx_graph, preprocess_report = run_preprocess_pipeline(\n                                                 ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/onnx2tf/tflite_builder/preprocess/pipeline.py\", line 59, in run_preprocess_pipeline\n    working_graph.CopyFrom(onnx_graph)\nTypeError: Parameter to CopyFrom() must be instance of same class: expected <class 'onnx.onnx_ml_pb2.ModelProto'> got <class 'onnx2tf.gs.Graph'>.\n",
+  "log": {
+    "path": "daily/2026-10-20/experiments/zipformer/artifacts/strict_decoder/traceback.txt",
+    "sha256": "feb645bc49e05c71244dce5818be51068e6f3380c1fa28a63118d189cbf211d9",
+    "bytes": 782
+  },
+  "source_code": {
+    "path": "daily/2026-10-20/experiments/zipformer/src/validate_artifacts.py",
+    "sha256": "da58eb25c8fccb7615f6f6b742b6f7ee9095b0148ff2e21602a3ea5c6c6d0d0a",
+    "bytes": 3272
+  }
+}

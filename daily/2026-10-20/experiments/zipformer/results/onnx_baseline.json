@@ -1,0 +1,1320 @@
+{
+  "recorded_at_utc": "2026-10-20T05:20:59.717469+00:00",
+  "graphs": {
+    "encoder": {
+      "model": {
+        "path": "daily/2026-10-20/experiments/zipformer/artifacts/source/encoder-epoch-99-avg-1.onnx",
+        "sha256": "f77a22f4ff94604e1afb2aeb13504d7699363528c047c97d3436087c95c9b659",
+        "bytes": 88804590
+      },
+      "opset": [
+        {
+          "domain": "",
+          "version": 13
+        }
+      ],
+      "inputs": [
+        {
+          "name": "x",
+          "dtype": "FLOAT",
+          "shape": [
+            "N",
+            39,
+            80
+          ]
+        },
+        {
+          "name": "cached_len_0",
+          "dtype": "INT64",
+          "shape": [
+            2,
+            "N"
+          ]
+        },
+        {
+          "name": "cached_len_1",
+          "dtype": "INT64",
+          "shape": [
+            2,
+            "N"
+          ]
+        },
+        {
+          "name": "cached_len_2",
+          "dtype": "INT64",
+          "shape": [
+            2,
+            "N"
+          ]
+        },
+        {
+          "name": "cached_len_3",
+          "dtype": "INT64",
+          "shape": [
+            2,
+            "N"
+          ]
+        },
+        {
+          "name": "cached_len_4",
+          "dtype": "INT64",
+          "shape": [
+            2,
+            "N"
+          ]
+        },
+        {
+          "name": "cached_avg_0",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256
+          ]
+        },
+        {
+          "name": "cached_avg_1",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256
+          ]
+        },
+        {
+          "name": "cached_avg_2",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256
+          ]
+        },
+        {
+          "name": "cached_avg_3",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256
+          ]
+        },
+        {
+          "name": "cached_avg_4",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256
+          ]
+        },
+        {
+          "name": "cached_key_0",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            64,
+            "N",
+            192
+          ]
+        },
+        {
+          "name": "cached_key_1",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            32,
+            "N",
+            192
+          ]
+        },
+        {
+          "name": "cached_key_2",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            16,
+            "N",
+            192
+          ]
+        },
+        {
+          "name": "cached_key_3",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            8,
+            "N",
+            192
+          ]
+        },
+        {
+          "name": "cached_key_4",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            32,
+            "N",
+            192
+          ]
+        },
+        {
+          "name": "cached_val_0",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            64,
+            "N",
+            96
+          ]
+        },
+        {
+          "name": "cached_val_1",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            32,
+            "N",
+            96
+          ]
+        },
+        {
+          "name": "cached_val_2",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            16,
+            "N",
+            96
+          ]
+        },
+        {
+          "name": "cached_val_3",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            8,
+            "N",
+            96
+          ]
+        },
+        {
+          "name": "cached_val_4",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            32,
+            "N",
+            96
+          ]
+        },
+        {
+          "name": "cached_val2_0",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            64,
+            "N",
+            96
+          ]
+        },
+        {
+          "name": "cached_val2_1",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            32,
+            "N",
+            96
+          ]
+        },
+        {
+          "name": "cached_val2_2",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            16,
+            "N",
+            96
+          ]
+        },
+        {
+          "name": "cached_val2_3",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            8,
+            "N",
+            96
+          ]
+        },
+        {
+          "name": "cached_val2_4",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            32,
+            "N",
+            96
+          ]
+        },
+        {
+          "name": "cached_conv1_0",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            30
+          ]
+        },
+        {
+          "name": "cached_conv1_1",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            30
+          ]
+        },
+        {
+          "name": "cached_conv1_2",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            30
+          ]
+        },
+        {
+          "name": "cached_conv1_3",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            30
+          ]
+        },
+        {
+          "name": "cached_conv1_4",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            30
+          ]
+        },
+        {
+          "name": "cached_conv2_0",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            30
+          ]
+        },
+        {
+          "name": "cached_conv2_1",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            30
+          ]
+        },
+        {
+          "name": "cached_conv2_2",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            30
+          ]
+        },
+        {
+          "name": "cached_conv2_3",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            30
+          ]
+        },
+        {
+          "name": "cached_conv2_4",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            30
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "encoder_out",
+          "dtype": "FLOAT",
+          "shape": [
+            "N",
+            "Addencoder_out_dim_1",
+            512
+          ]
+        },
+        {
+          "name": "new_cached_len_0",
+          "dtype": "INT64",
+          "shape": [
+            2,
+            "N"
+          ]
+        },
+        {
+          "name": "new_cached_len_1",
+          "dtype": "INT64",
+          "shape": [
+            2,
+            "N"
+          ]
+        },
+        {
+          "name": "new_cached_len_2",
+          "dtype": "INT64",
+          "shape": [
+            2,
+            "N"
+          ]
+        },
+        {
+          "name": "new_cached_len_3",
+          "dtype": "INT64",
+          "shape": [
+            2,
+            "N"
+          ]
+        },
+        {
+          "name": "new_cached_len_4",
+          "dtype": "INT64",
+          "shape": [
+            2,
+            "N"
+          ]
+        },
+        {
+          "name": "new_cached_avg_0",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256
+          ]
+        },
+        {
+          "name": "new_cached_avg_1",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            "Concatnew_cached_avg_1_dim_2"
+          ]
+        },
+        {
+          "name": "new_cached_avg_2",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            "Concatnew_cached_avg_2_dim_2"
+          ]
+        },
+        {
+          "name": "new_cached_avg_3",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            "Concatnew_cached_avg_3_dim_2"
+          ]
+        },
+        {
+          "name": "new_cached_avg_4",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            "Concatnew_cached_avg_4_dim_2"
+          ]
+        },
+        {
+          "name": "new_cached_key_0",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "Concatnew_cached_key_0_dim_1",
+            "N",
+            "Concatnew_cached_key_0_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_key_1",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "Concatnew_cached_key_1_dim_1",
+            "N",
+            "Concatnew_cached_key_1_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_key_2",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "Concatnew_cached_key_2_dim_1",
+            "N",
+            "Concatnew_cached_key_2_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_key_3",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "Concatnew_cached_key_3_dim_1",
+            "N",
+            "Concatnew_cached_key_3_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_key_4",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "Concatnew_cached_key_4_dim_1",
+            "N",
+            "Concatnew_cached_key_4_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_val_0",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "Concatnew_cached_val_0_dim_1",
+            "N",
+            "Concatnew_cached_val_0_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_val_1",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "Concatnew_cached_val_1_dim_1",
+            "N",
+            "Concatnew_cached_val_1_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_val_2",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "Concatnew_cached_val_2_dim_1",
+            "N",
+            "Concatnew_cached_val_2_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_val_3",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "Concatnew_cached_val_3_dim_1",
+            "N",
+            "Concatnew_cached_val_3_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_val_4",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "Concatnew_cached_val_4_dim_1",
+            "N",
+            "Concatnew_cached_val_4_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_val2_0",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "Concatnew_cached_val2_0_dim_1",
+            "N",
+            "Concatnew_cached_val2_0_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_val2_1",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "Concatnew_cached_val2_1_dim_1",
+            "N",
+            "Concatnew_cached_val2_1_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_val2_2",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "Concatnew_cached_val2_2_dim_1",
+            "N",
+            "Concatnew_cached_val2_2_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_val2_3",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "Concatnew_cached_val2_3_dim_1",
+            "N",
+            "Concatnew_cached_val2_3_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_val2_4",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "Concatnew_cached_val2_4_dim_1",
+            "N",
+            "Concatnew_cached_val2_4_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_conv1_0",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            "Concatnew_cached_conv1_0_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_conv1_1",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            "Concatnew_cached_conv1_1_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_conv1_2",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            "Concatnew_cached_conv1_2_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_conv1_3",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            "Concatnew_cached_conv1_3_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_conv1_4",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            "Concatnew_cached_conv1_4_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_conv2_0",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            "Concatnew_cached_conv2_0_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_conv2_1",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            "Concatnew_cached_conv2_1_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_conv2_2",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            "Concatnew_cached_conv2_2_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_conv2_3",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            "Concatnew_cached_conv2_3_dim_3"
+          ]
+        },
+        {
+          "name": "new_cached_conv2_4",
+          "dtype": "FLOAT",
+          "shape": [
+            2,
+            "N",
+            256,
+            "Concatnew_cached_conv2_4_dim_3"
+          ]
+        }
+      ],
+      "metadata": {
+        "model_type": "zipformer",
+        "version": "1",
+        "model_author": "k2-fsa",
+        "decode_chunk_len": "32",
+        "T": "39",
+        "num_encoder_layers": "2,2,2,2,2",
+        "encoder_dims": "256,256,256,256,256",
+        "attention_dims": "192,192,192,192,192",
+        "cnn_module_kernels": "31,31,31,31,31",
+        "left_context_len": "64,32,16,8,32"
+      },
+      "operators": {
+        "Constant": 1404,
+        "Unsqueeze": 471,
+        "Conv": 63,
+        "Sub": 93,
+        "Sigmoid": 73,
+        "Mul": 212,
+        "Shape": 185,
+        "Gather": 251,
+        "Transpose": 123,
+        "Concat": 229,
+        "Reshape": 124,
+        "MatMul": 162,
+        "Add": 301,
+        "Slice": 99,
+        "CumSum": 10,
+        "Cast": 60,
+        "Range": 30,
+        "Reciprocal": 10,
+        "Neg": 20,
+        "ConstantOfShape": 14,
+        "Expand": 14,
+        "Tile": 10,
+        "GatherElements": 10,
+        "Softmax": 15,
+        "Split": 20,
+        "ReduceMean": 10,
+        "Pow": 10,
+        "Div": 5,
+        "ReduceSum": 10,
+        "Equal": 4,
+        "Where": 4
+      }
+    },
+    "decoder": {
+      "model": {
+        "path": "daily/2026-10-20/experiments/zipformer/artifacts/source/decoder-epoch-99-avg-1.onnx",
+        "sha256": "45a7f940ecfb53d89fa270ad11b88b961e53a317203eb24b1c8e95ed208b0f30",
+        "bytes": 2092272
+      },
+      "opset": [
+        {
+          "domain": "",
+          "version": 13
+        }
+      ],
+      "inputs": [
+        {
+          "name": "y",
+          "dtype": "INT64",
+          "shape": [
+            "N",
+            2
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "decoder_out",
+          "dtype": "FLOAT",
+          "shape": [
+            "N",
+            512
+          ]
+        }
+      ],
+      "metadata": {
+        "context_size": "2",
+        "vocab_size": "500"
+      },
+      "operators": {
+        "Cast": 1,
+        "Gather": 1,
+        "Transpose": 2,
+        "Conv": 1,
+        "Relu": 1,
+        "Constant": 1,
+        "Squeeze": 1,
+        "Gemm": 1
+      }
+    },
+    "joiner": {
+      "model": {
+        "path": "daily/2026-10-20/experiments/zipformer/artifacts/source/joiner-epoch-99-avg-1.onnx",
+        "sha256": "343e17dffa4f386ca206e00d3c406908f68f473c3d35968d6c3cddd5b8559a94",
+        "bytes": 1026462
+      },
+      "opset": [
+        {
+          "domain": "",
+          "version": 13
+        }
+      ],
+      "inputs": [
+        {
+          "name": "encoder_out",
+          "dtype": "FLOAT",
+          "shape": [
+            "N",
+            512
+          ]
+        },
+        {
+          "name": "decoder_out",
+          "dtype": "FLOAT",
+          "shape": [
+            "N",
+            512
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "logit",
+          "dtype": "FLOAT",
+          "shape": [
+            "N",
+            500
+          ]
+        }
+      ],
+      "metadata": {
+        "joiner_dim": "512"
+      },
+      "operators": {
+        "Add": 1,
+        "Tanh": 1,
+        "Gemm": 1
+      }
+    }
+  },
+  "smoke_audio": [
+    {
+      "text": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BRAFFLELS",
+      "tokens": [
+        266,
+        54,
+        36,
+        31,
+        385,
+        38,
+        20,
+        58,
+        4,
+        224,
+        58,
+        150,
+        129,
+        17,
+        21,
+        3,
+        148,
+        417,
+        176,
+        22,
+        26,
+        7,
+        153,
+        4,
+        35,
+        371,
+        124,
+        12,
+        34,
+        371,
+        23,
+        83,
+        9,
+        4,
+        51,
+        89,
+        228,
+        25,
+        131,
+        3
+      ],
+      "audio_seconds": 6.625,
+      "original_sample_rate": 16000,
+      "chunks": 21,
+      "pipeline_seconds": 2.00914917099999,
+      "RTF": 0.3032677993962249,
+      "captures": [
+        {
+          "path": "daily/2026-10-20/experiments/zipformer/artifacts/capture_0_wav_chunk000.npz",
+          "sha256": "4c7fde37ce931e83dcc14ad2cf8793e4089e6a87acedcf2bc666e34ef2d0531a",
+          "bytes": 19715
+        },
+        {
+          "path": "daily/2026-10-20/experiments/zipformer/artifacts/capture_0_wav_chunk001.npz",
+          "sha256": "d00d8337db03530d555ea9b2518a2a65d44d5fab63db1cd2a66ef1096a837beb",
+          "bytes": 296538
+        },
+        {
+          "path": "daily/2026-10-20/experiments/zipformer/artifacts/capture_0_wav_chunk002.npz",
+          "sha256": "e290fa9f003060eece03955f09bceafebc1c13c5b01fbefe984758bfaff24d7e",
+          "bytes": 544738
+        },
+        {
+          "path": "daily/2026-10-20/experiments/zipformer/artifacts/capture_0_wav_chunk003.npz",
+          "sha256": "d9748df282116f7bbc4b17e093861290d46a20c9acc3690bd4c477e15dc73a05",
+          "bytes": 740380
+        },
+        {
+          "path": "daily/2026-10-20/experiments/zipformer/artifacts/capture_0_wav_chunk020.npz",
+          "sha256": "6a5cdb8e1fa2217a7ab5901eb34655816c2c3d01afd754f8939dc8b01810aa50",
+          "bytes": 1046554
+        }
+      ],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            336
+          ],
+          [
+            336
+          ]
+        ],
+        "cached_len_1": [
+          [
+            168
+          ],
+          [
+            168
+          ]
+        ],
+        "cached_len_2": [
+          [
+            84
+          ],
+          [
+            84
+          ]
+        ],
+        "cached_len_3": [
+          [
+            42
+          ],
+          [
+            42
+          ]
+        ],
+        "cached_len_4": [
+          [
+            168
+          ],
+          [
+            168
+          ]
+        ]
+      },
+      "encoded_output": {
+        "path": "daily/2026-10-20/experiments/zipformer/artifacts/onnx_encoded_0.wav.npy",
+        "sha256": "505b9714596669f9cfb0cca455eb7acf0cec869677ee97f1b2ad5bdeca2f279d",
+        "bytes": 344192
+      },
+      "name": "0.wav",
+      "reference": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BROTHELS",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 18,
+        "errors": 1,
+        "WER_percent": 5.555555555555555
+      },
+      "sherpa_native_text": "THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BRAFFLELS",
+      "native_text_agreement": false
+    },
+    {
+      "text": "GOD AS A DIRECT CONSEQUENCE OF THE SIN WHICH MAN THUS PUNISHED HAD GIVEN HER A LOVELY CHILD WHOSE PLACE WAS ON THAT SAME DISHONORED BOSOM TO CONNECT HER PARENT FOR EVER WITH THE RACE AND DESCENT OF MORTALS AND TO BE FINALLY A BLESSED SOUL IN HEAVEN",
+      "tokens": [
+        117,
+        12,
+        57,
+        5,
+        272,
+        26,
+        18,
+        6,
+        111,
+        77,
+        368,
+        13,
+        66,
+        9,
+        4,
+        35,
+        40,
+        110,
+        133,
+        119,
+        159,
+        59,
+        194,
+        205,
+        8,
+        62,
+        358,
+        13,
+        60,
+        5,
+        370,
+        31,
+        410,
+        118,
+        77,
+        362,
+        33,
+        74,
+        32,
+        407,
+        203,
+        269,
+        13,
+        43,
+        8,
+        141,
+        3,
+        204,
+        10,
+        111,
+        88,
+        18,
+        6,
+        60,
+        59,
+        36,
+        96,
+        42,
+        54,
+        123,
+        55,
+        4,
+        188,
+        66,
+        7,
+        78,
+        3,
+        18,
+        96,
+        9,
+        106,
+        23,
+        6,
+        48,
+        3,
+        7,
+        10,
+        37,
+        147,
+        13,
+        48,
+        31,
+        5,
+        51,
+        315,
+        8,
+        63,
+        191,
+        15,
+        22,
+        20,
+        75,
+        13
+      ],
+      "audio_seconds": 16.715,
+      "original_sample_rate": 16000,
+      "chunks": 52,
+      "pipeline_seconds": 2.5771056970000927,
+      "RTF": 0.1541792220759852,
+      "captures": [
+        {
+          "path": "daily/2026-10-20/experiments/zipformer/artifacts/capture_1_wav_chunk000.npz",
+          "sha256": "c330c46957ec0a8ddfa282c2c7393814aa7538b168c86ce7a05973eee1763822",
+          "bytes": 20307
+        },
+        {
+          "path": "daily/2026-10-20/experiments/zipformer/artifacts/capture_1_wav_chunk001.npz",
+          "sha256": "0f39c2797600f087569a9df5e3dff5d576527b557de453095df4de9878d974c7",
+          "bytes": 297177
+        },
+        {
+          "path": "daily/2026-10-20/experiments/zipformer/artifacts/capture_1_wav_chunk002.npz",
+          "sha256": "534e3039f78ac05fce5bce75189f02522b387fa51826730a0ec28e0e74cc4b30",
+          "bytes": 545134
+        },
+        {
+          "path": "daily/2026-10-20/experiments/zipformer/artifacts/capture_1_wav_chunk003.npz",
+          "sha256": "55177dd6d73a75ae8be73a6bcfffd95fd2ee0cec9dcaf4c260a8038c7d5ce868",
+          "bytes": 740427
+        },
+        {
+          "path": "daily/2026-10-20/experiments/zipformer/artifacts/capture_1_wav_chunk051.npz",
+          "sha256": "394cfd0ebfda7dc33033373ea307204f0409b4233f854a2a075a1857ee80cef9",
+          "bytes": 1051464
+        }
+      ],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            832
+          ],
+          [
+            832
+          ]
+        ],
+        "cached_len_1": [
+          [
+            416
+          ],
+          [
+            416
+          ]
+        ],
+        "cached_len_2": [
+          [
+            208
+          ],
+          [
+            208
+          ]
+        ],
+        "cached_len_3": [
+          [
+            104
+          ],
+          [
+            104
+          ]
+        ],
+        "cached_len_4": [
+          [
+            416
+          ],
+          [
+            416
+          ]
+        ]
+      },
+      "encoded_output": {
+        "path": "daily/2026-10-20/experiments/zipformer/artifacts/onnx_encoded_1.wav.npy",
+        "sha256": "65a9c8909911c45a02afd30d5575e2d866824acf8b710325cf8bd230bbdb724f",
+        "bytes": 852096
+      },
+      "name": "1.wav",
+      "reference": "GOD AS A DIRECT CONSEQUENCE OF THE SIN WHICH MAN THUS PUNISHED HAD GIVEN HER A LOVELY CHILD WHOSE PLACE WAS ON THAT SAME DISHONOURED BOSOM TO CONNECT HER PARENT FOR EVER WITH THE RACE AND DESCENT OF MORTALS AND TO BE FINALLY A BLESSED SOUL IN HEAVEN",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 48,
+        "errors": 1,
+        "WER_percent": 2.083333333333333
+      },
+      "sherpa_native_text": "AS A DIRECT CONSEQUENCE OF THE SIN WHICH MAN THUS PUNISHED HAD GIVEN HER A LOVELY CHILD WHOSE PLACE WAS ON THAT SAME DISHONORED BOSOM TO CONNECT HER PARENT FOR EVER WITH THE RACE AND DESCENT OF MORTALS AND TO BE FINALLY A BLESSED SOUL IN HEAVEN",
+      "native_text_agreement": false
+    },
+    {
+      "text": "YET THESE THOUGHTS AFFECTED HESTER PRYNNE LESS WITH HOPE THAN APPREHENSION",
+      "tokens": [
+        224,
+        6,
+        4,
+        77,
+        335,
+        3,
+        5,
+        228,
+        11,
+        18,
+        192,
+        22,
+        3,
+        83,
+        59,
+        138,
+        13,
+        88,
+        34,
+        315,
+        55,
+        154,
+        175,
+        236,
+        5,
+        145,
+        26,
+        206,
+        13,
+        3,
+        155
+      ],
+      "audio_seconds": 4.825,
+      "original_sample_rate": 8000,
+      "chunks": 15,
+      "pipeline_seconds": 2.2248034880000205,
+      "RTF": 0.46109916849741356,
+      "captures": [
+        {
+          "path": "daily/2026-10-20/experiments/zipformer/artifacts/capture_8k_wav_chunk000.npz",
+          "sha256": "657f3d55c2673ea4183bbb888bfd07a292d44700e48e2e2a2c48523dccdd7aaa",
+          "bytes": 18512
+        },
+        {
+          "path": "daily/2026-10-20/experiments/zipformer/artifacts/capture_8k_wav_chunk001.npz",
+          "sha256": "b4aff72ca45059ab536931c5ef7882b23afcfb519007317ae5f54751d2d3fba4",
+          "bytes": 295338
+        },
+        {
+          "path": "daily/2026-10-20/experiments/zipformer/artifacts/capture_8k_wav_chunk002.npz",
+          "sha256": "dcc59a730b6458a86cf99c964ba85120723d657f90e82031857f6df11646ebcd",
+          "bytes": 543390
+        },
+        {
+          "path": "daily/2026-10-20/experiments/zipformer/artifacts/capture_8k_wav_chunk003.npz",
+          "sha256": "cb7611824848d9ac731f6a5a59caeae1fa6128da98ccafc1bb3e3d116c8dd877",
+          "bytes": 738726
+        },
+        {
+          "path": "daily/2026-10-20/experiments/zipformer/artifacts/capture_8k_wav_chunk014.npz",
+          "sha256": "6963c5bb8b1a625ba204859d31948edffb57d759df37a17238387725b79139f4",
+          "bytes": 1043140
+        }
+      ],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            240
+          ],
+          [
+            240
+          ]
+        ],
+        "cached_len_1": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ],
+        "cached_len_2": [
+          [
+            60
+          ],
+          [
+            60
+          ]
+        ],
+        "cached_len_3": [
+          [
+            30
+          ],
+          [
+            30
+          ]
+        ],
+        "cached_len_4": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ]
+      },
+      "encoded_output": {
+        "path": "daily/2026-10-20/experiments/zipformer/artifacts/onnx_encoded_8k.wav.npy",
+        "sha256": "e47a0c75de554369eff99b79e442dffe28effb3d88c80aff6f1f9148a5e9b281",
+        "bytes": 245888
+      },
+      "name": "8k.wav",
+      "reference": "YET THESE THOUGHTS AFFECTED HESTER PRYNNE LESS WITH HOPE THAN APPREHENSION",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 11,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "sherpa_native_text": "S AFFECTED HESTER PRYNNE LESS WITH HOPE THAN APPREHENSION",
+      "native_text_agreement": false
+    }
+  ],
+  "environment": {
+    "onnx": "1.20.1",
+    "onnxruntime": "1.26.0",
+    "ai-edge-litert": "2.1.2",
+    "onnx2tf": "2.6.9",
+    "kaldi-native-fbank": "1.22.3",
+    "sherpa-onnx": "1.13.8"
+  },
+  "frontend": "KNF80,16kHz normalized float waveform,dither0,snip_edgesFalse,high_freq-400,tail0.3s;8k resample_poly;chunk39 frames/hop32;greedy max1symbol/frame;blank0,context2;state reset per utterance",
+  "scope": "Three bundled audio clips are smoke/frontend checks, not independent quality benchmark; native sherpa is an additional reference, not the timing baseline",
+  "source_code": {
+    "path": "daily/2026-10-20/experiments/zipformer/src/baseline.py",
+    "sha256": "2915506cc41b0dba380a59279e775a460ef0f9931f0d7389a29277aa26686901",
+    "bytes": 3900
+  }
+}

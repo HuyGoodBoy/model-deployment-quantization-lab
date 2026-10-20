@@ -1,0 +1,35 @@
+{
+  "recorded_at_utc": "2026-10-20T05:52:22.238416+00:00",
+  "host_platform": "Windows-10-10.0.26200-SP0",
+  "host_python": "3.11.9",
+  "environments": {
+    "zipformer": {
+      "image": "huy-day20-zipformer:onnx2tf269",
+      "image_id": "sha256:bdda599868579fdee3b68c769b046fb7da2a57bdf5ab8c71d86aeb979ee83616",
+      "repo_digests": [
+        "huy-day20-zipformer@sha256:bdda599868579fdee3b68c769b046fb7da2a57bdf5ab8c71d86aeb979ee83616"
+      ],
+      "python": "3.12.15",
+      "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+      "machine": "x86_64",
+      "logical_cpus": 20,
+      "cpu_model": [
+        "12th Gen Intel(R) Core(TM) i7-12700H"
+      ]
+    },
+    "mlsd": {
+      "image": "huy-peer-day09:cpu",
+      "image_id": "sha256:0da2a299ffa5f1a4f469c3af94c18e90b68d619dbabd7e8e0fbd340380f0ec60",
+      "repo_digests": [
+        "huy-peer-day09@sha256:0da2a299ffa5f1a4f469c3af94c18e90b68d619dbabd7e8e0fbd340380f0ec60"
+      ],
+      "python": "3.11.17",
+      "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+      "machine": "x86_64",
+      "logical_cpus": 20,
+      "cpu_model": [
+        "12th Gen Intel(R) Core(TM) i7-12700H"
+      ]
+    }
+  }
+}

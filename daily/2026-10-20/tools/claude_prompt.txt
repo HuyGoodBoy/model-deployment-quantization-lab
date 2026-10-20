@@ -1,0 +1,7 @@
+Review the requested csukuangfj/sherpa-onnx-streaming-zipformer-en-20M-2023-02-17 conversion experiment in daily/2026-10-20/experiments/zipformer. Read only this experiment and daily/2026-10-20/PROTOCOL.md. Do not inspect credentials, unrelated user files or previous conversations.
+
+The task is to propose and, when independently tested by the operator, optimize the model graph for LiteRT 2.x. Read the raw/static runtime failures, decoder_conv2d_repair.json, decoder_lookup_optimization.json, evaluation_*.json and matched_benchmark.json. Review the code under src. The existing compatibility and lookup rewrites were authored by Codex, not you.
+
+Explain concrete conversion failures and the fixes, and propose at most two additional safe graph optimizations based on this exact graph. Specify assumptions, nodes affected, expected operator lowering and validation gates. Discuss the negative lookup latency result and whether any measured end-to-end speedup is supported. Do not invent experiments or claim an untested suggestion works. Preserve all streaming states, token/blank semantics and INT64 input contracts. Never recommend a blanket INT64-to-INT32 cast.
+
+Return a concise Vietnamese technical review and an explicit list of the tools you actually called. You have Read/Grep/Glob tools only; the operator will apply and benchmark any useful patch separately. Report suggestions as untested. This execution is read-only; do not modify files or perform network downloads.

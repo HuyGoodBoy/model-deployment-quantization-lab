@@ -1,0 +1,670 @@
+{
+  "locked_at_utc": "2026-10-20T05:16:23.203998+00:00",
+  "dataset": "hf-internal-testing/librispeech_asr_dummy clean validation",
+  "revision": "5be91486e11a2d616f4ec5db8d3fd248585ac07a",
+  "selection": "All rows sorted by ID, no model-based filtering",
+  "utterances": 73,
+  "speaker_count": 1,
+  "parquet_url": "https://huggingface.co/datasets/hf-internal-testing/librispeech_asr_dummy/resolve/5be91486e11a2d616f4ec5db8d3fd248585ac07a/clean/validation-00000-of-00001.parquet",
+  "parquet_sha256": "4e69a06fa5edc90921e5e7e39a7084881f8b3ed9c805c574f4f39c6fde27c603",
+  "records": [
+    {
+      "id": "1272-128104-0000",
+      "text": "MISTER QUILTER IS THE APOSTLE OF THE MIDDLE CLASSES AND WE ARE GLAD TO WELCOME HIS GOSPEL",
+      "speaker_id": 1272,
+      "chapter_id": 128104,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-128104-0000.flac",
+      "sha256": "4e25e22555cd16e90edb0a3b49fdcf1fe652b2a1250ab643634db33895c75b41",
+      "bytes": 120041
+    },
+    {
+      "id": "1272-128104-0001",
+      "text": "NOR IS MISTER QUILTER'S MANNER LESS INTERESTING THAN HIS MATTER",
+      "speaker_id": 1272,
+      "chapter_id": 128104,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-128104-0001.flac",
+      "sha256": "46a9d58622b4675b29564da2d9ba73e702241c5fa969f12c387cad4aa984276a",
+      "bytes": 101672
+    },
+    {
+      "id": "1272-128104-0002",
+      "text": "HE TELLS US THAT AT THIS FESTIVE SEASON OF THE YEAR WITH CHRISTMAS AND ROAST BEEF LOOMING BEFORE US SIMILES DRAWN FROM EATING AND ITS RESULTS OCCUR MOST READILY TO THE MIND",
+      "speaker_id": 1272,
+      "chapter_id": 128104,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-128104-0002.flac",
+      "sha256": "59bf7bb1129c11734a8dd362ad52b4e10ae31c03f0879fc92f7107ecd513513f",
+      "bytes": 255853
+    },
+    {
+      "id": "1272-128104-0003",
+      "text": "HE HAS GRAVE DOUBTS WHETHER SIR FREDERICK LEIGHTON'S WORK IS REALLY GREEK AFTER ALL AND CAN DISCOVER IN IT BUT LITTLE OF ROCKY ITHACA",
+      "speaker_id": 1272,
+      "chapter_id": 128104,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-128104-0003.flac",
+      "sha256": "60d72657439cd3092fc2313efe0fabd31f0cd2f28f8ca46a21380c290b2e031d",
+      "bytes": 196122
+    },
+    {
+      "id": "1272-128104-0004",
+      "text": "LINNELL'S PICTURES ARE A SORT OF UP GUARDS AND AT EM PAINTINGS AND MASON'S EXQUISITE IDYLLS ARE AS NATIONAL AS A JINGO POEM MISTER BIRKET FOSTER'S LANDSCAPES SMILE AT ONE MUCH IN THE SAME WAY THAT MISTER CARKER USED TO FLASH HIS TEETH AND MISTER JOHN COLLIER GIVES HIS SITTER A CHEERFUL SLAP ON THE BACK BEFORE HE SAYS LIKE A SHAMPOOER IN A TURKISH BATH NEXT MAN",
+      "speaker_id": 1272,
+      "chapter_id": 128104,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-128104-0004.flac",
+      "sha256": "07244790e9a8300bfcbf12c28ac5230792e75238d03b2ac167a72bf3943c5404",
+      "bytes": 572784
+    },
+    {
+      "id": "1272-128104-0005",
+      "text": "IT IS OBVIOUSLY UNNECESSARY FOR US TO POINT OUT HOW LUMINOUS THESE CRITICISMS ARE HOW DELICATE IN EXPRESSION",
+      "speaker_id": 1272,
+      "chapter_id": 128104,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-128104-0005.flac",
+      "sha256": "870faa0669d19ca8416b9923cdf722ba9fd6ccce766a50583fa9c0f808b39eba",
+      "bytes": 182093
+    },
+    {
+      "id": "1272-128104-0006",
+      "text": "ON THE GENERAL PRINCIPLES OF ART MISTER QUILTER WRITES WITH EQUAL LUCIDITY",
+      "speaker_id": 1272,
+      "chapter_id": 128104,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-128104-0006.flac",
+      "sha256": "12475ade3c01c9f750bfc95e1c5a5dd05afcfe30141a0f5464da59f0c01d26e4",
+      "bytes": 112599
+    },
+    {
+      "id": "1272-128104-0007",
+      "text": "PAINTING HE TELLS US IS OF A DIFFERENT QUALITY TO MATHEMATICS AND FINISH IN ART IS ADDING MORE FACT",
+      "speaker_id": 1272,
+      "chapter_id": 128104,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-128104-0007.flac",
+      "sha256": "84998a43cb534e09801f5522b9ed0aa58e88035c9727bc8e4d362a7bc158d0b6",
+      "bytes": 177422
+    },
+    {
+      "id": "1272-128104-0008",
+      "text": "AS FOR ETCHINGS THEY ARE OF TWO KINDS BRITISH AND FOREIGN",
+      "speaker_id": 1272,
+      "chapter_id": 128104,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-128104-0008.flac",
+      "sha256": "08a3f099d544fac5df1b6105bfd4952d911995f271b494c9a689c083c39ab855",
+      "bytes": 100125
+    },
+    {
+      "id": "1272-128104-0009",
+      "text": "HE LAMENTS MOST BITTERLY THE DIVORCE THAT HAS BEEN MADE BETWEEN DECORATIVE ART AND WHAT WE USUALLY CALL PICTURES MAKES THE CUSTOMARY APPEAL TO THE LAST JUDGMENT AND REMINDS US THAT IN THE GREAT DAYS OF ART MICHAEL ANGELO WAS THE FURNISHING UPHOLSTERER",
+      "speaker_id": 1272,
+      "chapter_id": 128104,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-128104-0009.flac",
+      "sha256": "2bfbcdfab6024ccd3bfeb4e883cc7f9cc613235e504bfc068fd34069056513b7",
+      "bytes": 359417
+    },
+    {
+      "id": "1272-128104-0010",
+      "text": "NEAR THE FIRE AND THE ORNAMENTS FRED BROUGHT HOME FROM INDIA ON THE MANTEL BOARD",
+      "speaker_id": 1272,
+      "chapter_id": 128104,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-128104-0010.flac",
+      "sha256": "2ebbcaa44f14c15fd8afd0e4a71cae494377d30812a0ba05d6be07c55d00bbea",
+      "bytes": 107013
+    },
+    {
+      "id": "1272-128104-0011",
+      "text": "IN FACT HE IS QUITE SEVERE ON MISTER RUSKIN FOR NOT RECOGNISING THAT A PICTURE SHOULD DENOTE THE FRAILTY OF MAN AND REMARKS WITH PLEASING COURTESY AND FELICITOUS GRACE THAT MANY PHASES OF FEELING",
+      "speaker_id": 1272,
+      "chapter_id": 128104,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-128104-0011.flac",
+      "sha256": "d481b97c34ef7c5087dcd53f93d311e050834ba5e4b0f9165f6a8e9e8c7fb245",
+      "bytes": 299273
+    },
+    {
+      "id": "1272-128104-0012",
+      "text": "ONLY UNFORTUNATELY HIS OWN WORK NEVER DOES GET GOOD",
+      "speaker_id": 1272,
+      "chapter_id": 128104,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-128104-0012.flac",
+      "sha256": "222cd90cd9edf086096fb0abba901b772f8ca4e763d5becb803b0a7f9b16ace9",
+      "bytes": 107771
+    },
+    {
+      "id": "1272-128104-0013",
+      "text": "MISTER QUILTER HAS MISSED HIS CHANCE FOR HE HAS FAILED EVEN TO MAKE HIMSELF THE TUPPER OF PAINTING",
+      "speaker_id": 1272,
+      "chapter_id": 128104,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-128104-0013.flac",
+      "sha256": "4e090445122aee10fe3045cf79fb234f5059e6b911c0ffcbedb91e04c20473ae",
+      "bytes": 139157
+    },
+    {
+      "id": "1272-128104-0014",
+      "text": "BY HARRY QUILTER M A",
+      "speaker_id": 1272,
+      "chapter_id": 128104,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-128104-0014.flac",
+      "sha256": "5e7e3b96d975c74c952209a4d3a0731ec57019689685e1cf5f3c73a76f6f8a36",
+      "bytes": 46388
+    },
+    {
+      "id": "1272-135031-0000",
+      "text": "BECAUSE YOU WERE SLEEPING INSTEAD OF CONQUERING THE LOVELY ROSE PRINCESS HAS BECOME A FIDDLE WITHOUT A BOW WHILE POOR SHAGGY SITS THERE A COOING DOVE",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0000.flac",
+      "sha256": "26cbebbdd8954104c936dc38fbb8a80958f2169ada0fa6fe46a89cfa9e3d824c",
+      "bytes": 219564
+    },
+    {
+      "id": "1272-135031-0001",
+      "text": "HE HAS GONE AND GONE FOR GOOD ANSWERED POLYCHROME WHO HAD MANAGED TO SQUEEZE INTO THE ROOM BESIDE THE DRAGON AND HAD WITNESSED THE OCCURRENCES WITH MUCH INTEREST",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0001.flac",
+      "sha256": "7565c448f1e4cab4eebce19116ad20b22b24a5c38a82a2f98ae19bb068a3aecb",
+      "bytes": 218848
+    },
+    {
+      "id": "1272-135031-0002",
+      "text": "I HAVE REMAINED A PRISONER ONLY BECAUSE I WISHED TO BE ONE AND WITH THIS HE STEPPED FORWARD AND BURST THE STOUT CHAINS AS EASILY AS IF THEY HAD BEEN THREADS",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0002.flac",
+      "sha256": "6fbbe1b5e143f2ac7baa9c62bbf3575d34ab79a79f9fcbaa0cac60c2e08e1703",
+      "bytes": 229038
+    },
+    {
+      "id": "1272-135031-0003",
+      "text": "THE LITTLE GIRL HAD BEEN ASLEEP BUT SHE HEARD THE RAPS AND OPENED THE DOOR",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0003.flac",
+      "sha256": "80f47603018506ec4a646b68d9f7716b132d8d5ee740dc503ed4f9122cd76243",
+      "bytes": 97050
+    },
+    {
+      "id": "1272-135031-0004",
+      "text": "THE KING HAS FLED IN DISGRACE AND YOUR FRIENDS ARE ASKING FOR YOU",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0004.flac",
+      "sha256": "919d80690bed932be273b0e6e3512b18a6166ed974400ca7e03903760ef24420",
+      "bytes": 91069
+    },
+    {
+      "id": "1272-135031-0005",
+      "text": "I BEGGED RUGGEDO LONG AGO TO SEND HIM AWAY BUT HE WOULD NOT DO SO",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0005.flac",
+      "sha256": "d3da297f1f6a0f933ce6d778b8dc8fecff4cc7c21616dbd536146e76ebb98fbe",
+      "bytes": 99754
+    },
+    {
+      "id": "1272-135031-0006",
+      "text": "I ALSO OFFERED TO HELP YOUR BROTHER TO ESCAPE BUT HE WOULD NOT GO",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0006.flac",
+      "sha256": "65ae3678b861333fb9ba2e5d7db9a0f77fe58ad89d4480872eeb62d22e894dd3",
+      "bytes": 87310
+    },
+    {
+      "id": "1272-135031-0007",
+      "text": "HE EATS AND SLEEPS VERY STEADILY REPLIED THE NEW KING",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0007.flac",
+      "sha256": "1d1b4106711196bcf15091b2df60096dfa234132df32f5d7a57ef4931dfc5d83",
+      "bytes": 89078
+    },
+    {
+      "id": "1272-135031-0008",
+      "text": "I HOPE HE DOESN'T WORK TOO HARD SAID SHAGGY",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0008.flac",
+      "sha256": "bc3c6a74fccbe7a7c86f9f59ed4589d8be65dc84d00a3d413b58d4722a341570",
+      "bytes": 80403
+    },
+    {
+      "id": "1272-135031-0009",
+      "text": "HE DOESN'T WORK AT ALL",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0009.flac",
+      "sha256": "d23fc0e9c9ccb35f6ec9223954c921e1c9daa0cc9d8e8ad10b3b9cb4b14b6617",
+      "bytes": 42378
+    },
+    {
+      "id": "1272-135031-0010",
+      "text": "IN FACT THERE IS NOTHING HE CAN DO IN THESE DOMINIONS AS WELL AS OUR NOMES WHOSE NUMBERS ARE SO GREAT THAT IT WORRIES US TO KEEP THEM ALL BUSY",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0010.flac",
+      "sha256": "cec411cc16334eae88f793cf4cc0c2c6f83087c06b4e11a451c329a33b26b884",
+      "bytes": 186553
+    },
+    {
+      "id": "1272-135031-0011",
+      "text": "NOT EXACTLY RETURNED KALIKO",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0011.flac",
+      "sha256": "765c97d18eb1aa76ab4223359dd403ab8e606d9dc195c0b82f4b6b40b5b91a14",
+      "bytes": 68286
+    },
+    {
+      "id": "1272-135031-0012",
+      "text": "WHERE IS MY BROTHER NOW",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0012.flac",
+      "sha256": "2da8a3d5a915be58a29cae9520c94e96395619f1dd3a0968486c9d5154b77b12",
+      "bytes": 47997
+    },
+    {
+      "id": "1272-135031-0013",
+      "text": "INQUIRED SHAGGY IN THE METAL FOREST",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0013.flac",
+      "sha256": "52e72bda6f458ffea420adc0044fd93392d16d3f0393f03c71888b773e9ad02c",
+      "bytes": 75960
+    },
+    {
+      "id": "1272-135031-0014",
+      "text": "WHERE IS THAT",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0014.flac",
+      "sha256": "659d4e11b195fa5e15dcb1fa860d703cbb9e1a57fa307d4ac6a6093435cf49cb",
+      "bytes": 38589
+    },
+    {
+      "id": "1272-135031-0015",
+      "text": "THE METAL FOREST IS IN THE GREAT DOMED CAVERN THE LARGEST IN ALL OUR DOMINIONS REPLIED KALIKO",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0015.flac",
+      "sha256": "95eb0d408f2f4275bd44995e2202b1b1377ac00538662d5cae509de32e9d353f",
+      "bytes": 152362
+    },
+    {
+      "id": "1272-135031-0016",
+      "text": "KALIKO HESITATED",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0016.flac",
+      "sha256": "e4ef839a12f5e01279f449fbec8decd9917a2a01516a8a67635c4cde526caee5",
+      "bytes": 48986
+    },
+    {
+      "id": "1272-135031-0017",
+      "text": "HOWEVER IF WE LOOK SHARP WE MAY BE ABLE TO DISCOVER ONE OF THESE SECRET WAYS",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0017.flac",
+      "sha256": "18bf640efb70a8735f674c4289ab2cc9ee42a529e097dca376d0f69a3907e56f",
+      "bytes": 139768
+    },
+    {
+      "id": "1272-135031-0018",
+      "text": "OH NO I'M QUITE SURE HE DIDN'T",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0018.flac",
+      "sha256": "db055fdf17b99b4e68f2e2bdbd01a5a8388321df44e0fcb1600e6b4387466fc3",
+      "bytes": 55006
+    },
+    {
+      "id": "1272-135031-0019",
+      "text": "THAT'S FUNNY REMARKED BETSY THOUGHTFULLY",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0019.flac",
+      "sha256": "c19e0c3de6100627ffbca103dc5d8502dc6d74a3e1f06e00d5e6dc6ffbb25d94",
+      "bytes": 76027
+    },
+    {
+      "id": "1272-135031-0020",
+      "text": "I DON'T BELIEVE ANN KNEW ANY MAGIC OR SHE'D HAVE WORKED IT BEFORE",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0020.flac",
+      "sha256": "293af6add35a8f87e03f4ec59ef6e23538293c6fc8be45346dd17f6a69cc7f1f",
+      "bytes": 97534
+    },
+    {
+      "id": "1272-135031-0021",
+      "text": "I DO NOT KNOW CONFESSED SHAGGY",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0021.flac",
+      "sha256": "cce5a7959d35cd34310e6868853d7d755b5aa13caa9579ddbaf0e5b28ffd29fd",
+      "bytes": 58793
+    },
+    {
+      "id": "1272-135031-0022",
+      "text": "TRUE AGREED KALIKO",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0022.flac",
+      "sha256": "0d3573eac7e74ab8c05a5743b050bd6bda2e6f73629bc7ec338394206a29e7f2",
+      "bytes": 55441
+    },
+    {
+      "id": "1272-135031-0023",
+      "text": "KALIKO WENT TO THE BIG GONG AND POUNDED ON IT JUST AS RUGGEDO USED TO DO BUT NO ONE ANSWERED THE SUMMONS",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0023.flac",
+      "sha256": "9d37ebdf780a28eaeebaada1f12bc2b2a2fca2278c09a2652f5e5b7e9420aa04",
+      "bytes": 154022
+    },
+    {
+      "id": "1272-135031-0024",
+      "text": "HAVING RETURNED TO THE ROYAL CAVERN KALIKO FIRST POUNDED THE GONG AND THEN SAT IN THE THRONE WEARING RUGGEDO'S DISCARDED RUBY CROWN AND HOLDING IN HIS HAND THE SCEPTRE WHICH RUGGEDO HAD SO OFTEN THROWN AT HIS HEAD",
+      "speaker_id": 1272,
+      "chapter_id": 135031,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-135031-0024.flac",
+      "sha256": "f1359484fb8e3647248cc1f6fd978d331f83fbfe20e173e287110c087c45d967",
+      "bytes": 294376
+    },
+    {
+      "id": "1272-141231-0000",
+      "text": "A MAN SAID TO THE UNIVERSE SIR I EXIST",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0000.flac",
+      "sha256": "adb240047a1e0732c96b029b7dbd7c81a17c853cbd30aec0ee0d9c4e59fe720a",
+      "bytes": 94321
+    },
+    {
+      "id": "1272-141231-0001",
+      "text": "SWEAT COVERED BRION'S BODY TRICKLING INTO THE TIGHT LOINCLOTH THAT WAS THE ONLY GARMENT HE WORE",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0001.flac",
+      "sha256": "5ec33d1ae2a06430ddd4faa6090673f7dbb09f71405ce401a08301eedb313275",
+      "bytes": 129876
+    },
+    {
+      "id": "1272-141231-0002",
+      "text": "THE CUT ON HIS CHEST STILL DRIPPING BLOOD THE ACHE OF HIS OVERSTRAINED EYES EVEN THE SOARING ARENA AROUND HIM WITH THE THOUSANDS OF SPECTATORS WERE TRIVIALITIES NOT WORTH THINKING ABOUT",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0002.flac",
+      "sha256": "9a490059a63cd2f92fbc8c447135ed87f97ed36ee53714987b01c8ac7c33dec4",
+      "bytes": 265035
+    },
+    {
+      "id": "1272-141231-0003",
+      "text": "HIS INSTANT OF PANIC WAS FOLLOWED BY A SMALL SHARP BLOW HIGH ON HIS CHEST",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0003.flac",
+      "sha256": "da658227a61fdfefa7a54ad9bb4614a7da33e335358e5b3620ddcf7c93c3e77f",
+      "bytes": 110284
+    },
+    {
+      "id": "1272-141231-0004",
+      "text": "ONE MINUTE A VOICE SAID AND THE TIME BUZZER SOUNDED",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0004.flac",
+      "sha256": "34c4339d921ca363faa292996ea12864c9bbdb5a69fa40178e41629f069a36e0",
+      "bytes": 92877
+    },
+    {
+      "id": "1272-141231-0005",
+      "text": "A MINUTE IS NOT A VERY LARGE MEASURE OF TIME AND HIS BODY NEEDED EVERY FRACTION OF IT",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0005.flac",
+      "sha256": "65265556f1956c0f20f5234b6aa2166dfdcde396ffc3cd1287d9e9e64489afbb",
+      "bytes": 120383
+    },
+    {
+      "id": "1272-141231-0006",
+      "text": "THE BUZZER'S WHIRR TRIGGERED HIS MUSCLES INTO COMPLETE RELAXATION",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0006.flac",
+      "sha256": "c3e32102b9faeb6dc3ec5203440d4e2a365cc0ea44fa6aeaefe5e3668a9a8585",
+      "bytes": 100219
+    },
+    {
+      "id": "1272-141231-0007",
+      "text": "ONLY HIS HEART AND LUNGS WORKED ON AT A STRONG MEASURED RATE",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0007.flac",
+      "sha256": "1cc95ce7c6be4352b94c10d77a4b0475ccc5ad543b0d3a5f791459963ce4efb1",
+      "bytes": 92454
+    },
+    {
+      "id": "1272-141231-0008",
+      "text": "HE WAS IN REVERIE SLIDING ALONG THE BORDERS OF CONSCIOUSNESS",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0008.flac",
+      "sha256": "1d5eb4bf16f57e21ac034f012f37c9b97a61f8e2552a441352b9d0eab58c48e7",
+      "bytes": 90731
+    },
+    {
+      "id": "1272-141231-0009",
+      "text": "THE CONTESTANTS IN THE TWENTIES NEEDED UNDISTURBED REST THEREFORE NIGHTS IN THE DORMITORIES WERE AS QUIET AS DEATH",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0009.flac",
+      "sha256": "42cf54411f05e2cd4397d9e7cbfb566c204954e1d6dc3f892b57499433c8e7fd",
+      "bytes": 167134
+    },
+    {
+      "id": "1272-141231-0010",
+      "text": "PARTICULARLY SO ON THIS LAST NIGHT WHEN ONLY TWO OF THE LITTLE CUBICLES WERE OCCUPIED THE THOUSANDS OF OTHERS STANDING WITH DARK EMPTY DOORS",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0010.flac",
+      "sha256": "b0316adbccaff2af04f6d397c03905f157a6b2418a9b54e88a16d5859b000211",
+      "bytes": 203344
+    },
+    {
+      "id": "1272-141231-0011",
+      "text": "THE OTHER VOICE SNAPPED WITH A HARSH URGENCY CLEARLY USED TO COMMAND",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0011.flac",
+      "sha256": "49975adce742d343d7755ad7e52f75f93bf28ee6f9f038b4dab9a217336b78f7",
+      "bytes": 104242
+    },
+    {
+      "id": "1272-141231-0012",
+      "text": "I'M HERE BECAUSE THE MATTER IS OF UTMOST IMPORTANCE AND BRANDD IS THE ONE I MUST SEE NOW STAND ASIDE",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0012.flac",
+      "sha256": "3559a8ddb75104a20769c00b17226fb86de0e4329bfca313833eb83c0561efef",
+      "bytes": 155005
+    },
+    {
+      "id": "1272-141231-0013",
+      "text": "THE TWENTIES",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0013.flac",
+      "sha256": "ff87e7b407cf5355d492e618dbc87e9800a688ccb950ab1ac693d64a1bcfb80f",
+      "bytes": 36491
+    },
+    {
+      "id": "1272-141231-0014",
+      "text": "HE MUST HAVE DRAWN HIS GUN BECAUSE THE INTRUDER SAID QUICKLY PUT THAT AWAY YOU'RE BEING A FOOL OUT",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0014.flac",
+      "sha256": "9a2410edf224fc38005243625b49e18fba5b297867171177906f9ed1f808b714",
+      "bytes": 138313
+    },
+    {
+      "id": "1272-141231-0015",
+      "text": "THERE WAS SILENCE THEN AND STILL WONDERING BRION WAS ONCE MORE ASLEEP",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0015.flac",
+      "sha256": "24727264f148b3bbe587338e1456281298e6cbd7a29eff07ab06ea096cbdd174",
+      "bytes": 111945
+    },
+    {
+      "id": "1272-141231-0016",
+      "text": "TEN SECONDS",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0016.flac",
+      "sha256": "2de6e800e9a973de275a2c57ef2a8ccf0e25655f0158a0a551bdc0e944607ebc",
+      "bytes": 37052
+    },
+    {
+      "id": "1272-141231-0017",
+      "text": "HE ASKED THE HANDLER WHO WAS KNEADING HIS ACHING MUSCLES",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0017.flac",
+      "sha256": "54aac47c491c01ca59b3be862b9f53cf4fd93862e1363b02471d910f76e3b4ac",
+      "bytes": 79014
+    },
+    {
+      "id": "1272-141231-0018",
+      "text": "A RED HAIRED MOUNTAIN OF A MAN WITH AN APPARENTLY INEXHAUSTIBLE STORE OF ENERGY",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0018.flac",
+      "sha256": "dcc9cc41630ec440e639cf8349899f6e76000d728659ca42ef7ac0ef003ca201",
+      "bytes": 114528
+    },
+    {
+      "id": "1272-141231-0019",
+      "text": "THERE COULD BE LITTLE ART IN THIS LAST AND FINAL ROUND OF FENCING",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0019.flac",
+      "sha256": "42735cf9485cd4c93d766d01cddebabed5a21f49e26a9c6dd15f8e5db2f6b5a6",
+      "bytes": 99076
+    },
+    {
+      "id": "1272-141231-0020",
+      "text": "JUST THRUST AND PARRY AND VICTORY TO THE STRONGER",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0020.flac",
+      "sha256": "3998b463548c90f6686faf96432cc237c96f0bd784d8124a1a3c851fd4451acf",
+      "bytes": 80864
+    },
+    {
+      "id": "1272-141231-0021",
+      "text": "EVERY MAN WHO ENTERED THE TWENTIES HAD HIS OWN TRAINING TRICKS",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0021.flac",
+      "sha256": "f40d906923ec180a258635ec7bf5bfdaeac2c1ee3bef24c32ef6361b420d6ea8",
+      "bytes": 92325
+    },
+    {
+      "id": "1272-141231-0022",
+      "text": "THERE APPEARED TO BE AN IMMEDIATE ASSOCIATION WITH THE DEATH TRAUMA AS IF THE TWO WERE INEXTRICABLY LINKED INTO ONE",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0022.flac",
+      "sha256": "6fca2f211411ffd83f84ccfe38ac1434a83ba02497c68cd1819cb63da57fb3a4",
+      "bytes": 164782
+    },
+    {
+      "id": "1272-141231-0023",
+      "text": "THE STRENGTH THAT ENABLES SOMEONE IN A TRANCE TO HOLD HIS BODY STIFF AND UNSUPPORTED EXCEPT AT TWO POINTS THE HEAD AND HEELS",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0023.flac",
+      "sha256": "e4eee59ba1119187a240da9e67bc4f60af77b023b2aac7b33ffe2a6258e8a7f8",
+      "bytes": 172969
+    },
+    {
+      "id": "1272-141231-0024",
+      "text": "THIS IS PHYSICALLY IMPOSSIBLE WHEN CONSCIOUS",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0024.flac",
+      "sha256": "84bd6220942701e8973dc0e8a2c8a7ac5f794a15d1a884994e95c5e3b8efa96e",
+      "bytes": 73997
+    },
+    {
+      "id": "1272-141231-0025",
+      "text": "OTHERS HAD DIED BEFORE DURING THE TWENTIES AND DEATH DURING THE LAST ROUND WAS IN SOME WAYS EASIER THAN DEFEAT",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0025.flac",
+      "sha256": "b3819f4ebe697500f8fdb302dcf832e73e08c8d8e3abc69e04328f1cdce5dceb",
+      "bytes": 171146
+    },
+    {
+      "id": "1272-141231-0026",
+      "text": "BREATHING DEEPLY BRION SOFTLY SPOKE THE AUTO HYPNOTIC PHRASES THAT TRIGGERED THE PROCESS",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0026.flac",
+      "sha256": "78bbbfada3676e97548fe946e252cfffc5fba916542d2c6e39d5ecbb8be76710",
+      "bytes": 131676
+    },
+    {
+      "id": "1272-141231-0027",
+      "text": "WHEN THE BUZZER SOUNDED HE PULLED HIS FOIL FROM HIS SECOND'S STARTLED GRASP AND RAN FORWARD",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0027.flac",
+      "sha256": "b676f024fec3c98d3e7783e5bf3846739b47807aa30c1ed0c9066e3988b2dfeb",
+      "bytes": 129278
+    },
+    {
+      "id": "1272-141231-0028",
+      "text": "IROLG LOOKED AMAZED AT THE SUDDEN FURY OF THE ATTACK THEN SMILED",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0028.flac",
+      "sha256": "a6833433f5c62c5ffae8a368811c507dde2401d3ff7e9669a492c150f6afe8d4",
+      "bytes": 108857
+    },
+    {
+      "id": "1272-141231-0029",
+      "text": "HE THOUGHT IT WAS A LAST BURST OF ENERGY HE KNEW HOW CLOSE THEY BOTH WERE TO EXHAUSTION",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0029.flac",
+      "sha256": "8b76b5e12d811444604a97633f4cfeb6e4228273f734d3c14ee0f8aa9c8df860",
+      "bytes": 133829
+    },
+    {
+      "id": "1272-141231-0030",
+      "text": "BRION SAW SOMETHING CLOSE TO PANIC ON HIS OPPONENT'S FACE WHEN THE MAN FINALLY RECOGNIZED HIS ERROR",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0030.flac",
+      "sha256": "f65aeae1485f33072d636c36ad06ae205627f59619b2113a0c91d91126afed3e",
+      "bytes": 142587
+    },
+    {
+      "id": "1272-141231-0031",
+      "text": "A WAVE OF DESPAIR ROLLED OUT FROM IROLG BRION SENSED IT AND KNEW THE FIFTH POINT WAS HIS",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0031.flac",
+      "sha256": "8b2218bd45e5df4d097c0f6a7ca9ac44e3b3f5add0a4d035d3da2f4e3f1e31c6",
+      "bytes": 133805
+    },
+    {
+      "id": "1272-141231-0032",
+      "text": "THEN THE POWERFUL TWIST THAT THRUST IT ASIDE IN AND UNDER THE GUARD",
+      "speaker_id": 1272,
+      "chapter_id": 141231,
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/evaluation/1272-141231-0032.flac",
+      "sha256": "57a830871a87def230b541a41898aca9ef444b2ae420cdc776a4e6debf74d50c",
+      "bytes": 93983
+    }
+  ],
+  "scope": "Small public test subset; WER valid only here, not full LibriSpeech benchmark or proof of unseen pretraining data"
+}

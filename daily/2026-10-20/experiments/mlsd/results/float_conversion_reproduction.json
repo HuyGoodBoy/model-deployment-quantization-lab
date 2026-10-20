@@ -1,0 +1,57 @@
+{
+  "finished_at_utc": "2026-10-20T05:49:51.266033+00:00",
+  "command": [
+    "onnx2tf",
+    "-i",
+    "/workspace/daily/2026-10-20/experiments/mlsd/artifacts/conversion_reproduced/qat_weights_fp32.onnx",
+    "-o",
+    "/workspace/daily/2026-10-20/experiments/mlsd/artifacts/conversion_reproduced/output",
+    "-tb",
+    "flatbuffer_direct",
+    "-kat",
+    "input",
+    "-v",
+    "error"
+  ],
+  "source_unchanged": {
+    "path": "daily/2026-10-19/experiments/selective/artifacts/qat_weights_fp32.onnx",
+    "sha256": "ce7b26475cb5eee7e9f5b34d873b51e7401c3cc9d9584e415b5a186e0f49dd1e",
+    "bytes": 2512757
+  },
+  "input_copy_before": {
+    "path": "daily/2026-10-20/experiments/mlsd/artifacts/conversion_reproduced/qat_weights_fp32.onnx",
+    "sha256": "ce7b26475cb5eee7e9f5b34d873b51e7401c3cc9d9584e415b5a186e0f49dd1e",
+    "bytes": 2512757
+  },
+  "input_copy_after": {
+    "path": "daily/2026-10-20/experiments/mlsd/artifacts/conversion_reproduced/qat_weights_fp32.onnx",
+    "sha256": "5a4e22d9f6e0d4c8e4431f806128d1e1b82fd904fe7f967897f881559bea610d",
+    "bytes": 2497158
+  },
+  "model": {
+    "path": "daily/2026-10-20/experiments/mlsd/artifacts/conversion_reproduced/output/qat_weights_fp32_float32.tflite",
+    "sha256": "cafe7a915c77d90f07ff7b2094d1b8868c7e5855a168d0694aea429b8e584eda",
+    "bytes": 2483636
+  },
+  "byte_identical_to_evaluated_model": {
+    "path": "daily/2026-10-20/experiments/mlsd/artifacts/float_conversion/qat_weights_fp32_float32.tflite",
+    "sha256": "cafe7a915c77d90f07ff7b2094d1b8868c7e5855a168d0694aea429b8e584eda",
+    "bytes": 2483636
+  },
+  "log": {
+    "path": "daily/2026-10-20/experiments/mlsd/artifacts/conversion_reproduced/conversion.log",
+    "sha256": "e075660af0353ea4e02612cc2b597427701aa2475bce81c38c7db04b4c2c571d",
+    "bytes": 6045
+  },
+  "environment": {
+    "onnx2tf": "2.6.9",
+    "ai-edge-litert": "2.1.2",
+    "onnxruntime": "1.26.0"
+  },
+  "incident": "The first direct conversion simplified the previous-day ONNX file in place. The original was re-exported with the original code/checkpoint and restored only after SHA256 exactly matched the pre-existing exports.json (ce7b26475cb5eee7e9f5b34d873b51e7401c3cc9d9584e415b5a186e0f49dd1e). The altered copy is preserved in today's artifacts. This reproduction uses a disposable copy and verifies the source remains byte-identical.",
+  "source_code": {
+    "path": "daily/2026-10-20/experiments/mlsd/src/convert_float.py",
+    "sha256": "96a5bd3abe34b076129e32fcfe8302657abb6882338b8b4460c9e0fb6bf5113e",
+    "bytes": 2318
+  }
+}

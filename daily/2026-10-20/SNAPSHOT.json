@@ -1,0 +1,399 @@
+{
+  "frozen_at_utc": "2026-10-20T10:20:19.733420+00:00",
+  "scope": "Daily research snapshot after documentation revision. All measured results, source and artifacts are unchanged. Updated REPORT tables and links checked against original evidence; prior review covers experiments and metrics, not the new prose. Snapshot manifest excludes itself. Claude work remains incomplete.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 6123,
+      "sha256": "03d751d03ba292a2fa0808c8d0e33e93758e5da9ac7c0ee19308017e622d3034"
+    },
+    {
+      "path": "daily/2026-10-20/PROTOCOL.md",
+      "bytes": 4224,
+      "sha256": "4b185e4f6478d99654153b7d0ce33bbbdd3b59c068715c7391ba4a2a0627317b"
+    },
+    {
+      "path": "daily/2026-10-20/REPORT.md",
+      "bytes": 16331,
+      "sha256": "ffb6c03f9c96168eb412c029ec800e0aaf4e5eb5121e00201de99f44226739bc"
+    },
+    {
+      "path": "daily/2026-10-20/RESEARCH.md",
+      "bytes": 15709,
+      "sha256": "5fe1a079a8d77a1d66f78bb7016bbc6f6cb9d778969b39969f5225f28aa7580b"
+    },
+    {
+      "path": "daily/2026-10-20/REVIEW.md",
+      "bytes": 2172,
+      "sha256": "6cf93864025df5748b6b57ad03702a9563160ab8ad317e6ed907009b6faddc4b"
+    },
+    {
+      "path": "daily/2026-10-20/RUNNING.md",
+      "bytes": 7076,
+      "sha256": "9aa721646bef84050c5d598660601dc60bef8601813cf2fce9cebb16a399e051"
+    },
+    {
+      "path": "daily/2026-10-20/VERIFICATION.json",
+      "bytes": 672,
+      "sha256": "d4c3dad3ce76dff6f949537121efa485f34bcf72add49431c9501384c22c3217"
+    },
+    {
+      "path": "daily/2026-10-20/VERIFICATION_final.json",
+      "bytes": 760,
+      "sha256": "137cbd5fb7ec272cdf5e36fc9eda3599446e351e4eb4591596acfe05a93a0ae1"
+    },
+    {
+      "path": "daily/2026-10-20/environments/mlsd-requirements-lock.txt",
+      "bytes": 1236,
+      "sha256": "c882bbb7ff3e67b950f41961ec0c30af45e36d74454d7620472adbc71663b34e"
+    },
+    {
+      "path": "daily/2026-10-20/environments/runtime.json",
+      "bytes": 1221,
+      "sha256": "6e382edfc0156ee915178f4dbec0649807bc78f47f057b5552fedd23273e8fb4"
+    },
+    {
+      "path": "daily/2026-10-20/environments/zipformer-requirements-lock.txt",
+      "bytes": 661,
+      "sha256": "aeda13f554640f2bb0b5fd807722bf2c87c46b23901042872abf991d3325451a"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/results/aeq_benchmark.json",
+      "bytes": 8983,
+      "sha256": "8660cef318ea7b3a546b3e53fbe5a4f1d9e5ff2e54d54b535b44b55b22b1fad2"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/results/aeq_development.json",
+      "bytes": 3915,
+      "sha256": "c3fa84ea4d66a2e44ff367805d0b2305e8a6f1b7d7cbb45fa62154f5b63fde3c"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/results/aeq_exports.json",
+      "bytes": 59939,
+      "sha256": "54bb929c082c6e379f6876096ca167afcc156cbd36a04f21afafac686c0bd60e"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/results/aeq_float_output_development.json",
+      "bytes": 13700,
+      "sha256": "6780ead4b95f097857889ad1b3148161e0aedf3f51c2896a1b45385356222e21"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/results/aeq_float_output_protocol.json",
+      "bytes": 507,
+      "sha256": "b63309e8d9615d583df497431d35e19b77e9ec146c12c8219def13e9ca38a00a"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/results/aeq_output_diagnosis.json",
+      "bytes": 4051,
+      "sha256": "d8378757262b312e22f6178c8bb2eb46a4d51fa5cc4a007b87e5b5723a3f946d"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/results/aeq_regression.json",
+      "bytes": 7002,
+      "sha256": "596a37f83ebca1fcad56ca6b9c90ea209a2e3ee5609fea8f9cb703b254e24a7c"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/results/aeq_selection.json",
+      "bytes": 721,
+      "sha256": "248cc47d1d013f9db8dde3c315dcecb41f8ccc75f97526562b7aa2601359a5e3"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/results/float_conversion_reproduction.json",
+      "bytes": 2537,
+      "sha256": "e42bb259396fb80886eeaa83c6a9f3d312a46ecd6fb9367886f1d8c0dd8a5032"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/results/float_thread_tuning.json",
+      "bytes": 8899,
+      "sha256": "70bedc63d3cc1e147b181c4f1398b5f5a74da8adfc22aa2acbb830aff35b89de"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/results/ort_conv_comparison.csv",
+      "bytes": 4686,
+      "sha256": "ee4f77081f35e8ba9ab00fea56d3c9f3f62cd5c9536718d5827f777ee58edf6f"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/results/ort_profile_comparison.json",
+      "bytes": 260839,
+      "sha256": "f20584df83277e613c16078d2096018c87cd51151a757faf4c4131ada458e1c4"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/src/convert_float.py",
+      "bytes": 2752,
+      "sha256": "bc3b36119b0aeff93c7abe4a1c385c20a052869bfaf9fdeda523c57028ed2498"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/src/diagnose_output_quantization.py",
+      "bytes": 2486,
+      "sha256": "a93f7d04afab822d11c043e211ea9988da96817ef95d1ef43530b4cc46e4019c"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/src/evaluate_litert.py",
+      "bytes": 7433,
+      "sha256": "a3cfa5a71ed055505de68568b5a537ac5c729dde89fce0cd9f9c08cea0b5c4cd"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/src/explore_float_output.py",
+      "bytes": 5820,
+      "sha256": "5a87da76f8c59244f86397810ad093c7369977031d17a502641752d42fe202d9"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/src/mlsd_support.py",
+      "bytes": 2476,
+      "sha256": "53a56b68a83b5d65571dd1aae1f5d590e727f4ed4733c60d275f627d16df0b3e"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/src/profile_onnx.py",
+      "bytes": 5994,
+      "sha256": "663319492de1eab1937246cadeba634a8abf0ff2382ec5e2714f0240e43e843c"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/src/quantize_litert.py",
+      "bytes": 5668,
+      "sha256": "149ba5b9574983bf0b3b38f2f46afac3a4187e09955ee9c936e39b9c2369a679"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/mlsd/src/thread_tuning.py",
+      "bytes": 3175,
+      "sha256": "06a3d7676a7039b562beb4b5c935370d1280913f68546ed62e6fa583de9691da"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/.dockerignore",
+      "bytes": 37,
+      "sha256": "9dc7c7bc9b084d9a4cac3ae8238b6d06013a9192f06c274a3521233828daeba6"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/Dockerfile",
+      "bytes": 435,
+      "sha256": "048848696b424b53d9f71539bac1726096f1ee5a02f67ce79e70efd8bb4409bc"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/requirements-lock.txt",
+      "bytes": 661,
+      "sha256": "aeda13f554640f2bb0b5fd807722bf2c87c46b23901042872abf991d3325451a"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/claude_execution.json",
+      "bytes": 3094,
+      "sha256": "cd36e5303fea206d94e5d1f0bf613c1fb300513e7b35f85b70f4d657c1cdc4cd"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/conversion_raw_decoder.json",
+      "bytes": 5218,
+      "sha256": "5a567fd252c087a003779183ef439be87d7334ac8779eea5c3acd7ef1905d5d9"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/conversion_raw_encoder.json",
+      "bytes": 5417,
+      "sha256": "e0f78c9c37468cb5bd6c55614392da9939a39ab357ca40b33eb10e0df55a89f5"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/conversion_raw_joiner.json",
+      "bytes": 5225,
+      "sha256": "3b1b9511642a80235263faa0ddc26aa6f3eb404b199d280b6b5d9cff6a135a07"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/conversion_static_decoder.json",
+      "bytes": 5804,
+      "sha256": "b6e8e5f483b6859c29e581851d34e14e3d27ca3d07256ac78b713424af81c8e7"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/conversion_static_encoder.json",
+      "bytes": 7709,
+      "sha256": "4e183e5a31a81c246f102b600009df1ceace5f2c65c7e3b2197b00da2937cdc7"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/conversion_static_joiner.json",
+      "bytes": 5629,
+      "sha256": "7e396ba7d851d21860c87e6538d27128699cd4231a47470a6493f36a4c1fe4bc"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/decoder_conv2d_repair.json",
+      "bytes": 10033,
+      "sha256": "aad09699454b26ee6ec56ee1653f7431f5aa01c9e2a827e019502c65609317a3"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/decoder_lookup_optimization.json",
+      "bytes": 43938,
+      "sha256": "41559d73e8e944ab04f36348b251aff34afdbdba87b6e1416d480298a115f5a2"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/evaluation_fixed.json",
+      "bytes": 129531,
+      "sha256": "880295b10ba106e068f3a3ee4debd0b9ad28d28c954fb89c58e10697079f1ccc"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/evaluation_manifest.json",
+      "bytes": 30435,
+      "sha256": "a85f5c21bc8c5917e14ccdfe8e0a25b1c23e8f173203738f51576a581cbcfb75"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/evaluation_onnx.json",
+      "bytes": 129318,
+      "sha256": "f8afd765e0fec4c79672e4f4c0692cb8606ed9cf7157c0dfb6f81c6c48d030d5"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/evaluation_optimized.json",
+      "bytes": 129529,
+      "sha256": "3fb7884d597136ae6a3b69519b2bdbc679800c48250f8c170f89e651d9af06bb"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/matched_benchmark.json",
+      "bytes": 223913,
+      "sha256": "f792d877145b215dd390b839cc46156197e8e8c9b74a515ea0c88c5a5e750a92"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/matched_benchmark_v2.json",
+      "bytes": 223962,
+      "sha256": "b3510ecee663e70eec09babffb6d0e026743c42b3876ee8c4befdbf068589f93"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/native_context_diagnosis.json",
+      "bytes": 2564,
+      "sha256": "946732d69b78dbb7997d65db708e58287be49b1056a8e9952298fb9eafd15dd5"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/onnx_baseline.json",
+      "bytes": 29090,
+      "sha256": "f0523419b9977e63e25e748449c396586f3ca9ef109b6a9aa72b279455acecd0"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/registry_optimized.json",
+      "bytes": 773,
+      "sha256": "e3ed87df33a4a90f41ae96b7f5232d3a74a9859db8fda643a9cb6f1aa0fbae20"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/runtime_validation_raw.json",
+      "bytes": 56400,
+      "sha256": "9d550e977b1d62e019abf2ec57e36adb8f2c673393f90910c2fcf4b209c43fde"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/runtime_validation_static.json",
+      "bytes": 54675,
+      "sha256": "a7df12ea5205c937c4de619fccf23b8af2f31e8a84ddcf05f55b204a2c5ea237"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/source_manifest.json",
+      "bytes": 4992,
+      "sha256": "7bafb855cb3e366c9260257c19aec49b964b9dd9c00fc934ad1f12eee70351cc"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/strict_decoder_error.json",
+      "bytes": 1506,
+      "sha256": "f1ba351b53aec1cbcf7acd4adfee002200e73cebac8670f0d032f65ed874b2ee"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/results/strict_decoder_error_modelproto.json",
+      "bytes": 3382,
+      "sha256": "4d71640f3f771acf8deae8a71ca775416ec3f347f3774019932ae4cac35e4e67"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/src/baseline.py",
+      "bytes": 3900,
+      "sha256": "2915506cc41b0dba380a59279e775a460ef0f9931f0d7389a29277aa26686901"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/src/benchmark.py",
+      "bytes": 5409,
+      "sha256": "50fd4693e24abef2b2e4913de21a604867eca4a390e1784cb2a0f8c2afa1f0fe"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/src/check_native_context.py",
+      "bytes": 1868,
+      "sha256": "92cd3d705dcab4c8f6c718a2103dd6e8765fc7c5f5197f84bfa028e0b7bfed16"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/src/convert_models.py",
+      "bytes": 5305,
+      "sha256": "d1aa721a53aaa6f0c14d512814c5e20c18dc7ff848345b1a52550fa67b3d2658"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/src/evaluate_asr.py",
+      "bytes": 5163,
+      "sha256": "3acfb7ee52fa31f9d952fe0ab6c0e26a9a2b342863062f1492422ff525dcb921"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/src/optimize_decoder.py",
+      "bytes": 4983,
+      "sha256": "dcbe650a10a71a73b6778e6bc3122514a5c4fcc58b51d9d32ac5d3e813a36057"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/src/prepare.py",
+      "bytes": 2990,
+      "sha256": "088d3f9fe9d78c0004deaecdf79c4179ce4d08b492f8e8523c9906f854b6c013"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/src/prepare_eval.py",
+      "bytes": 2695,
+      "sha256": "c75985bfb5d04b08957a6e46fcf5484ab4b4b458c12f37133d397961abf6c9c5"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/src/repair_decoder.py",
+      "bytes": 5463,
+      "sha256": "55b8308fa11101aa1fcf1fcb90e141f586ce85c1f7d9a7906bc19850bc50b7d0"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/src/streaming.py",
+      "bytes": 4516,
+      "sha256": "a2dd6bf992602a440bd1b107f03c4dc175827bd962574966bbc51761761e1fac"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/src/support.py",
+      "bytes": 5604,
+      "sha256": "cc2304c57e874b52cdb8542d4b6d2d6612f86da121a1c641f811f26300025559"
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/src/validate_artifacts.py",
+      "bytes": 3320,
+      "sha256": "bf9ba234ec0d2fa6fabe32ece93b6ff1d35997e23773b848d63a2c5c834b9c1d"
+    },
+    {
+      "path": "daily/2026-10-20/tools/capture_environment.py",
+      "bytes": 2220,
+      "sha256": "96a1eb2c57799e60fb3b67fab03c27bb3afce30ebcc69c24e160dae8b1fde77f"
+    },
+    {
+      "path": "daily/2026-10-20/tools/claude_prompt.txt",
+      "bytes": 1483,
+      "sha256": "7a3762c0fa59a647b1cb2e0feadeca4c355d26f3067b83d271f74caa1ffcdfd1"
+    },
+    {
+      "path": "daily/2026-10-20/tools/run_claude_review.py",
+      "bytes": 1969,
+      "sha256": "2fc3732406213e83a7d8dd0c214466f097e41379782ad586dc7dade25039e859"
+    },
+    {
+      "path": "daily/2026-10-20/tools/schedule.json",
+      "bytes": 636,
+      "sha256": "0b4d132eba5d9acd94f7012efae8e4a792d929c0809f5246b7bead811f08b26b"
+    },
+    {
+      "path": "daily/2026-10-20/tools/schedule_guard_verification.json",
+      "bytes": 278,
+      "sha256": "be95b9cc21401e7361de37e1e77e4e5c03d36195616adc10aac6569d5e784e47"
+    },
+    {
+      "path": "daily/2026-10-20/tools/scheduled_commit.py",
+      "bytes": 2277,
+      "sha256": "2e77cce929f30d9997edf4dcc87177b549464adf98beb727cd985024175ad995"
+    },
+    {
+      "path": "daily/2026-10-20/tools/test_scheduled_commit.py",
+      "bytes": 3872,
+      "sha256": "e6911830ad39f44769e45ab0561b86a92612acf2f7fbbe92b0782294598f8267"
+    },
+    {
+      "path": "daily/2026-10-20/tools/verify.py",
+      "bytes": 13272,
+      "sha256": "136bfd20e23df187edda3554dbbde6fc5ff2dbd5067e97191e20f6c9611abb61"
+    }
+  ],
+  "previous_frozen_at_utc": "2026-10-20T06:08:02.289375+00:00",
+  "document_revision": {
+    "request": "Expand REPORT.md following prior detailed reports; keep chat brief and omit AI-review attribution; replace20/10commit",
+    "experiment_results_unchanged": true,
+    "report_tables_checked_against_JSON": true,
+    "relative_links_checked": 15,
+    "review_scope": "Original experiment/numerical review retained; report prose revised afterwards."
+  }
+}

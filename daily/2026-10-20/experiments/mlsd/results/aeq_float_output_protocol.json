@@ -1,0 +1,5 @@
+{
+  "declared_at_utc": "2026-10-20T05:51:21.652608+00:00",
+  "scope": "Exploratory after main candidate lock; development16 only. Do not run/reselect on54regression images.",
+  "hypothesis": "Shared output scale2.335 destroys center logits. Keep final Conv and output transpose float, plus the3 ORT-selected slow integer scopes. Compare to original selective and float on development; gate within0.5pp of float development sAP10 and faster than float. No deployment claim without independent validation."
+}

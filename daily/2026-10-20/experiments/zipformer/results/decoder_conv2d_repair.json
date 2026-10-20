@@ -1,0 +1,476 @@
+{
+  "finished_at_utc": "2026-10-20T05:25:01.017377+00:00",
+  "author": "Codex; baseline compatibility repair, not a Claude execution",
+  "original": {
+    "path": "daily/2026-10-20/experiments/zipformer/artifacts/conversion/static/decoder/input.onnx",
+    "sha256": "9324f39e3e44d633897c853fb849d42a1d1597ae2f4b630850878ccf3bac2add",
+    "bytes": 2092442
+  },
+  "fixed_onnx": {
+    "path": "daily/2026-10-20/experiments/zipformer/artifacts/conversion/conv2d/decoder/input.onnx",
+    "sha256": "83dc9fa3286e2edc0e0f2be5b4f0c640c451f68939982789a75521b6bfb7fe92",
+    "bytes": 2092910
+  },
+  "tflite": {
+    "path": "daily/2026-10-20/experiments/zipformer/artifacts/conversion/conv2d/decoder/output/input_float32.tflite",
+    "sha256": "4a13f805b095c679c03f40276c4e86525191fdd7fcd637c548b7ffd941ec91da",
+    "bytes": 2097736
+  },
+  "changes": [
+    {
+      "node": "/decoder/conv/Conv",
+      "group": 128,
+      "old_weight_shape": [
+        512,
+        4,
+        2
+      ],
+      "new_weight_shape": [
+        512,
+        4,
+        1,
+        2
+      ],
+      "embedding": "NCW -> NC1W; same groups/weights/bias/stride/dilation/padding"
+    }
+  ],
+  "command": [
+    "onnx2tf",
+    "-i",
+    "/workspace/daily/2026-10-20/experiments/zipformer/artifacts/conversion/conv2d/decoder/input.onnx",
+    "-o",
+    "/workspace/daily/2026-10-20/experiments/zipformer/artifacts/conversion/conv2d/decoder/output",
+    "-tb",
+    "flatbuffer_direct",
+    "-kat",
+    "y",
+    "-v",
+    "error"
+  ],
+  "conversion_seconds": 3.439842323999983,
+  "log": {
+    "path": "daily/2026-10-20/experiments/zipformer/artifacts/conversion/conv2d/decoder/conversion.log",
+    "sha256": "7fa46462bacac7bd971296dcf11cb6abcbfec319c751a783e3fd4312dabc24a3",
+    "bytes": 5931
+  },
+  "test_contexts": [
+    [
+      [
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        1,
+        499
+      ]
+    ],
+    [
+      [
+        425,
+        434
+      ]
+    ],
+    [
+      [
+        55,
+        66
+      ]
+    ],
+    [
+      [
+        228,
+        430
+      ]
+    ],
+    [
+      [
+        363,
+        186
+      ]
+    ],
+    [
+      [
+        82,
+        356
+      ]
+    ],
+    [
+      [
+        247,
+        448
+      ]
+    ],
+    [
+      [
+        200,
+        45
+      ]
+    ],
+    [
+      [
+        317,
+        457
+      ]
+    ],
+    [
+      [
+        471,
+        114
+      ]
+    ],
+    [
+      [
+        409,
+        366
+      ]
+    ],
+    [
+      [
+        452,
+        497
+      ]
+    ],
+    [
+      [
+        99,
+        195
+      ]
+    ],
+    [
+      [
+        439,
+        136
+      ]
+    ],
+    [
+      [
+        214,
+        256
+      ]
+    ],
+    [
+      [
+        75,
+        272
+      ]
+    ],
+    [
+      [
+        303,
+        289
+      ]
+    ]
+  ],
+  "onnx_parity": [
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "allclose_rtol1e_4_atol1e_4": true
+    }
+  ],
+  "lite_parity": [
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": true,
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": false,
+      "max_abs": 2.86102294921875e-06,
+      "relative_l2": 3.081895718586648e-07,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": false,
+      "max_abs": 1.9073486328125e-06,
+      "relative_l2": 2.516669454215989e-07,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": false,
+      "max_abs": 1.1920928955078125e-06,
+      "relative_l2": 2.2391443137479948e-07,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": false,
+      "max_abs": 1.1920928955078125e-06,
+      "relative_l2": 2.2471285828017541e-07,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": false,
+      "max_abs": 1.9073486328125e-06,
+      "relative_l2": 2.0505242123660713e-07,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": false,
+      "max_abs": 1.430511474609375e-06,
+      "relative_l2": 2.1981385933463895e-07,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": false,
+      "max_abs": 1.9073486328125e-06,
+      "relative_l2": 2.1455184954648626e-07,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": false,
+      "max_abs": 1.9073486328125e-06,
+      "relative_l2": 2.8485237695835727e-07,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": false,
+      "max_abs": 1.6689300537109375e-06,
+      "relative_l2": 2.6081500600701557e-07,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": false,
+      "max_abs": 1.6689300537109375e-06,
+      "relative_l2": 2.6189103069377965e-07,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": false,
+      "max_abs": 2.384185791015625e-06,
+      "relative_l2": 2.065763230780135e-07,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": false,
+      "max_abs": 2.384185791015625e-06,
+      "relative_l2": 2.7037331960879273e-07,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": false,
+      "max_abs": 9.5367431640625e-07,
+      "relative_l2": 2.1788567003937297e-07,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": false,
+      "max_abs": 1.3113021850585938e-06,
+      "relative_l2": 2.328731665180267e-07,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": false,
+      "max_abs": 3.337860107421875e-06,
+      "relative_l2": 2.594403815222638e-07,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": false,
+      "max_abs": 1.430511474609375e-06,
+      "relative_l2": 2.1886251983954845e-07,
+      "allclose_rtol1e_4_atol1e_4": true
+    },
+    {
+      "shape_equal": true,
+      "finite": true,
+      "exact": false,
+      "max_abs": 9.5367431640625e-07,
+      "relative_l2": 2.1433030051722827e-07,
+      "allclose_rtol1e_4_atol1e_4": true
+    }
+  ],
+  "runtime_operators": {
+    "CAST": 1,
+    "LESS": 1,
+    "ADD": 1,
+    "SELECT": 1,
+    "GATHER": 1,
+    "TRANSPOSE": 3,
+    "RESHAPE": 4,
+    "CONV_2D": 1,
+    "RELU": 1,
+    "FULLY_CONNECTED": 1,
+    "DELEGATE": 1
+  },
+  "source_code": {
+    "path": "daily/2026-10-20/experiments/zipformer/src/repair_decoder.py",
+    "sha256": "55b8308fa11101aa1fcf1fcb90e141f586ce85c1f7d9a7906bc19850bc50b7d0",
+    "bytes": 5463
+  }
+}

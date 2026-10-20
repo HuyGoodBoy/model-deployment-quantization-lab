@@ -1,0 +1,89 @@
+{
+  "finished_at_utc": "2026-10-20T05:16:24.393329+00:00",
+  "variant": "raw",
+  "component": "encoder",
+  "backend": "onnx2tf flatbuffer_direct; no TensorFlow conversion",
+  "onnx2tf": "2.6.9",
+  "litert": "2.1.2",
+  "command": [
+    "onnx2tf",
+    "-i",
+    "/workspace/daily/2026-10-20/experiments/zipformer/artifacts/conversion/raw/encoder/input.onnx",
+    "-o",
+    "/workspace/daily/2026-10-20/experiments/zipformer/artifacts/conversion/raw/encoder/output",
+    "-v",
+    "error",
+    "-tb",
+    "flatbuffer_direct"
+  ],
+  "returncode": 0,
+  "elapsed_s": 90.68306183699997,
+  "input": {
+    "path": "daily/2026-10-20/experiments/zipformer/artifacts/conversion/raw/encoder/input.onnx",
+    "sha256": "7a754a7e402179ac78682d473910596042ac18c92387ec653fdee0fd481b9440",
+    "bytes": 78158240
+  },
+  "original": {
+    "path": "daily/2026-10-20/experiments/zipformer/artifacts/source/encoder-epoch-99-avg-1.onnx",
+    "sha256": "f77a22f4ff94604e1afb2aeb13504d7699363528c047c97d3436087c95c9b659",
+    "bytes": 88804590
+  },
+  "changes": {
+    "author": "Codex",
+    "claude_execution": false
+  },
+  "models": [
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/conversion/raw/encoder/output/input_float16.tflite",
+      "sha256": "cc3ddc4de6c5af32b237442d5e9f359d1152bd9bc3e98c3a35c2e0446af7ebab",
+      "bytes": 39537028
+    },
+    {
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/conversion/raw/encoder/output/input_float32.tflite",
+      "sha256": "7c2b32ecccf6b95d6df5017384c3bdf195f41738e6299ba3a73f0efacfa7a59f",
+      "bytes": 78459668
+    }
+  ],
+  "log": {
+    "path": "daily/2026-10-20/experiments/zipformer/artifacts/conversion/raw/encoder/conversion.log",
+    "sha256": "8838251f29a9081c3f24a07e8084cedf234063e7312fcd0e454141874cd9a5b4",
+    "bytes": 19802
+  },
+  "last_log_lines": [
+    "flatbuffer_direct export [2/3] write float32 tflite:  33%|███▎      | 1/3 [00:00<00:00,  2.81it/s, /]",
+    "flatbuffer_direct export [2/3] write float32 tflite:  33%|███▎      | 1/3 [00:01<00:00,  2.81it/s, -]",
+    "flatbuffer_direct export [2/3] write float32 tflite:  33%|███▎      | 1/3 [00:01<00:00,  2.81it/s, \\]",
+    "flatbuffer_direct export [2/3] write float32 tflite:  33%|███▎      | 1/3 [00:01<00:00,  2.81it/s, |]",
+    "flatbuffer_direct export [2/3] write float32 tflite:  33%|███▎      | 1/3 [00:01<00:00,  2.81it/s, /]",
+    "flatbuffer_direct export [2/3] write float32 tflite:  33%|███▎      | 1/3 [00:01<00:00,  2.81it/s, -]",
+    "flatbuffer_direct export [2/3] write float32 tflite:  33%|███▎      | 1/3 [00:01<00:00,  2.81it/s, \\]",
+    "flatbuffer_direct export [2/3] write float32 tflite:  33%|███▎      | 1/3 [00:01<00:00,  2.81it/s, |]",
+    "                                                                                                     ",
+    "",
+    "flatbuffer_direct export [2/3] write float32 tflite:  33%|███▎      | 1/3 [00:01<00:00,  2.81it/s, |]",
+    "flatbuffer_direct export [2/3] write float32 tflite:  33%|███▎      | 1/3 [00:01<00:00,  2.81it/s]   ",
+    "flatbuffer_direct export [2/3] write float32 tflite:  67%|██████▋   | 2/3 [00:01<00:00,  1.05it/s]",
+    "flatbuffer_direct export [2/3] write float32 tflite:  67%|██████▋   | 2/3 [00:01<00:00,  1.05it/s]",
+    "flatbuffer_direct export [2/3] write float32 tflite:  67%|██████▋   | 2/3 [00:01<00:00,  1.05it/s, |]",
+    "flatbuffer_direct export [3/3] write float16 tflite:  67%|██████▋   | 2/3 [00:01<00:00,  1.05it/s, |]",
+    "flatbuffer_direct export [3/3] write float16 tflite:  67%|██████▋   | 2/3 [00:01<00:00,  1.05it/s, /]",
+    "flatbuffer_direct export [3/3] write float16 tflite:  67%|██████▋   | 2/3 [00:01<00:00,  1.05it/s, -]",
+    "flatbuffer_direct export [3/3] write float16 tflite:  67%|██████▋   | 2/3 [00:02<00:00,  1.05it/s, \\]",
+    "flatbuffer_direct export [3/3] write float16 tflite:  67%|██████▋   | 2/3 [00:02<00:00,  1.05it/s, |]",
+    "flatbuffer_direct export [3/3] write float16 tflite:  67%|██████▋   | 2/3 [00:02<00:00,  1.05it/s, /]",
+    "flatbuffer_direct export [3/3] write float16 tflite:  67%|██████▋   | 2/3 [00:02<00:00,  1.05it/s, -]",
+    "flatbuffer_direct export [3/3] write float16 tflite:  67%|██████▋   | 2/3 [00:02<00:00,  1.05it/s, \\]",
+    "                                                                                                     ",
+    "",
+    "flatbuffer_direct export [3/3] write float16 tflite:  67%|██████▋   | 2/3 [00:02<00:00,  1.05it/s, \\]",
+    "flatbuffer_direct export [3/3] write float16 tflite:  67%|██████▋   | 2/3 [00:02<00:00,  1.05it/s]   ",
+    "flatbuffer_direct export [3/3] write float16 tflite: 100%|██████████| 3/3 [00:02<00:00,  1.16it/s]",
+    "flatbuffer_direct export [3/3] write float16 tflite: 100%|██████████| 3/3 [00:02<00:00,  1.16it/s]",
+    "flatbuffer_direct export [3/3] write float16 tflite: 100%|██████████| 3/3 [00:02<00:00,  1.21it/s]"
+  ],
+  "source_code": {
+    "path": "daily/2026-10-20/experiments/zipformer/src/convert_models.py",
+    "sha256": "d1aa721a53aaa6f0c14d512814c5e20c18dc7ff848345b1a52550fa67b3d2658",
+    "bytes": 5305
+  }
+}

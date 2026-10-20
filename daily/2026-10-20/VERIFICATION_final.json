@@ -1,0 +1,21 @@
+{
+  "verified_at_utc": "2026-10-20T06:04:43.732833+00:00",
+  "passed": true,
+  "scope": "Evidence integrity and recomputation pass; not a claim that all quantized models passed quality/release gates or that Claude executed.",
+  "asr": {
+    "WER_percent": 7.91304347826087,
+    "all73tokens_and_final_counters_match": true,
+    "state_fixtures": 15,
+    "state_outputs_each": 36,
+    "claude_inference_executed": false
+  },
+  "mlsd": {
+    "all8_development_and_regression_metrics_recomputed": true,
+    "AEQ_selective3float38int8_verified": true,
+    "original_source_SHA256_restored": true,
+    "selection_before_regression": true,
+    "thread_tuning_selected": 8,
+    "ORT_graph_and_raw_trace_recomputed": true,
+    "thread_tuning_output_exact": true
+  }
+}

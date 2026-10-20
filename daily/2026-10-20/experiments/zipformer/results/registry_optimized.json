@@ -1,0 +1,19 @@
+{
+  "models": {
+    "encoder": {
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/conversion/static/encoder/output/input_float32.tflite",
+      "sha256": "990657ef54fef0d1bc6a89ef9e8cc81381e5ab8cbf86e0c66fa73ba9d5ed65c7",
+      "bytes": 78638936
+    },
+    "decoder": {
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/conversion/lookup/decoder/output/input_float32.tflite",
+      "sha256": "068d3743d25ea6c7b9a139db50ca65cfe2e7c9db576721ede203defabdadb3fb",
+      "bytes": 3102340
+    },
+    "joiner": {
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/conversion/static/joiner/output/input_float32.tflite",
+      "sha256": "e86519a479c623b9996ced232550892b3196e52f814d246912b16daeeb4df43c",
+      "bytes": 1027220
+    }
+  }
+}

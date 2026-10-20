@@ -1,0 +1,134 @@
+{
+  "finished_at_utc": "2026-10-20T05:46:59.517177+00:00",
+  "images": 16,
+  "models": {
+    "float": {
+      "output": {
+        "path": "daily/2026-10-20/experiments/mlsd/artifacts/float_development.npy",
+        "sha256": "6d1e2933b701e4e8ca58af3b9f921da6fb7254a469656062256fd005482e9aa1",
+        "bytes": 20971648
+      },
+      "sAP10": {
+        "sAP10_subset_percent": 15.323017406007905,
+        "precision_at_0_1": 0.2732362821948488,
+        "recall_at_0_1": 0.27523970671178793,
+        "ground_truth_lines": 1773,
+        "predicted_line_counts": [
+          130,
+          146,
+          98,
+          128,
+          127,
+          98,
+          102,
+          136,
+          98,
+          142,
+          108,
+          120,
+          99,
+          118,
+          79,
+          120
+        ],
+        "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+      }
+    },
+    "static": {
+      "output": {
+        "path": "daily/2026-10-20/experiments/mlsd/artifacts/static_development.npy",
+        "sha256": "690df981d81bb98e18585f271604bdc32fa2f9670dea0a0ad337d0fe182bb821",
+        "bytes": 20971648
+      },
+      "sAP10": {
+        "sAP10_subset_percent": 2.8522416501132133,
+        "precision_at_0_1": 0.12088930060213061,
+        "recall_at_0_1": 0.14720812182741116,
+        "ground_truth_lines": 1773,
+        "predicted_line_counts": [
+          134,
+          148,
+          86,
+          151,
+          134,
+          159,
+          133,
+          148,
+          139,
+          114,
+          114,
+          165,
+          119,
+          140,
+          123,
+          152
+        ],
+        "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+      }
+    },
+    "selective": {
+      "output": {
+        "path": "daily/2026-10-20/experiments/mlsd/artifacts/selective_development.npy",
+        "sha256": "7d03341b18ae424866063eb6cf777893f8648483c83a8d00c1cd1b778f4037b4",
+        "bytes": 20971648
+      },
+      "sAP10": {
+        "sAP10_subset_percent": 3.0851582028631515,
+        "precision_at_0_1": 0.12,
+        "recall_at_0_1": 0.1505922165820643,
+        "ground_truth_lines": 1773,
+        "predicted_line_counts": [
+          140,
+          141,
+          111,
+          155,
+          125,
+          160,
+          146,
+          152,
+          145,
+          114,
+          113,
+          168,
+          120,
+          145,
+          132,
+          158
+        ],
+        "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+      }
+    },
+    "dynamic": {
+      "output": {
+        "path": "daily/2026-10-20/experiments/mlsd/artifacts/dynamic_development.npy",
+        "sha256": "2b0a397bb76e7679c7cb3eba902e4dd1a3d61588ffd4b3314bb71d4bdc5058fd",
+        "bytes": 20971648
+      },
+      "sAP10": {
+        "sAP10_subset_percent": 14.716074863849022,
+        "precision_at_0_1": 0.2655114589155953,
+        "recall_at_0_1": 0.2679075014100395,
+        "ground_truth_lines": 1773,
+        "predicted_line_counts": [
+          125,
+          145,
+          97,
+          128,
+          130,
+          101,
+          99,
+          135,
+          93,
+          144,
+          108,
+          121,
+          100,
+          123,
+          74,
+          125
+        ],
+        "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "finished_at_utc": "2026-10-20T05:59:07.160542+00:00",
+  "records": [
+    {
+      "name": "0.wav",
+      "icefall_zero_context_text": "AFTER EARLY NIGHTFALL THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BRAFFLELS",
+      "negative_context_text": "THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BRAFFLELS",
+      "native_text": "THE YELLOW LAMPS WOULD LIGHT UP HERE AND THERE THE SQUALID QUARTER OF THE BRAFFLELS",
+      "negative_context_matches_native": true
+    },
+    {
+      "name": "1.wav",
+      "icefall_zero_context_text": "GOD AS A DIRECT CONSEQUENCE OF THE SIN WHICH MAN THUS PUNISHED HAD GIVEN HER A LOVELY CHILD WHOSE PLACE WAS ON THAT SAME DISHONORED BOSOM TO CONNECT HER PARENT FOR EVER WITH THE RACE AND DESCENT OF MORTALS AND TO BE FINALLY A BLESSED SOUL IN HEAVEN",
+      "negative_context_text": "AS A DIRECT CONSEQUENCE OF THE SIN WHICH MAN THUS PUNISHED HAD GIVEN HER A LOVELY CHILD WHOSE PLACE WAS ON THAT SAME DISHONORED BOSOM TO CONNECT HER PARENT FOR EVER WITH THE RACE AND DESCENT OF MORTALS AND TO BE FINALLY A BLESSED SOUL IN HEAVEN",
+      "native_text": "AS A DIRECT CONSEQUENCE OF THE SIN WHICH MAN THUS PUNISHED HAD GIVEN HER A LOVELY CHILD WHOSE PLACE WAS ON THAT SAME DISHONORED BOSOM TO CONNECT HER PARENT FOR EVER WITH THE RACE AND DESCENT OF MORTALS AND TO BE FINALLY A BLESSED SOUL IN HEAVEN",
+      "negative_context_matches_native": true
+    },
+    {
+      "name": "8k.wav",
+      "icefall_zero_context_text": "YET THESE THOUGHTS AFFECTED HESTER PRYNNE LESS WITH HOPE THAN APPREHENSION",
+      "negative_context_text": "S AFFECTED HESTER PRYNNE LESS WITH HOPE THAN APPREHENSION",
+      "native_text": "S AFFECTED HESTER PRYNNE LESS WITH HOPE THAN APPREHENSION",
+      "negative_context_matches_native": true
+    }
+  ],
+  "scope": "Diagnostic only; main ONNX/fixed/lookup WER and benchmarks all retain[0,0]initial context following Icefall ONNX example. Native Sherpa initializes[-1,0], and also treats unk as blank. Do not call the two pipelines equivalent based only on conversion parity.",
+  "sources": [
+    "https://github.com/k2-fsa/icefall/blob/master/egs/librispeech/ASR/pruned_transducer_stateless7_streaming/onnx_pretrained.py",
+    "https://github.com/k2-fsa/sherpa-onnx/blob/master/sherpa-onnx/csrc/online-transducer-greedy-search-decoder.cc"
+  ],
+  "source_code": {
+    "path": "daily/2026-10-20/experiments/zipformer/src/check_native_context.py",
+    "sha256": "92cd3d705dcab4c8f6c718a2103dd6e8765fc7c5f5197f84bfa028e0b7bfed16",
+    "bytes": 1868
+  }
+}

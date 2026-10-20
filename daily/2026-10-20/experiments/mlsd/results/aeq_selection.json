@@ -1,0 +1,17 @@
+{
+  "locked_at_utc": "2026-10-20T05:47:18.696069+00:00",
+  "selected": "static",
+  "eligible": [],
+  "regression_used": false,
+  "criterion": "Fastest alternative within0.5pp of static development sAP10 and faster than static; otherwise static. Also compare all results to float; selection is not deployment approval.",
+  "development": {
+    "path": "daily/2026-10-20/experiments/mlsd/results/aeq_development.json",
+    "sha256": "c3fa84ea4d66a2e44ff367805d0b2305e8a6f1b7d7cbb45fa62154f5b63fde3c",
+    "bytes": 3915
+  },
+  "benchmark": {
+    "path": "daily/2026-10-20/experiments/mlsd/results/aeq_benchmark.json",
+    "sha256": "8660cef318ea7b3a546b3e53fbe5a4f1d9e5ff2e54d54b535b44b55b22b1fad2",
+    "bytes": 8983
+  }
+}

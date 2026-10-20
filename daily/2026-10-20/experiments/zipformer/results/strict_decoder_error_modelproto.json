@@ -1,0 +1,17 @@
+{
+  "recorded_at_utc": "2026-10-20T05:23:39.415194+00:00",
+  "status": "strict_conversion_failed",
+  "error_type": "NotImplementedError",
+  "error": "flatbuffer_direct validation failed: op=Conv node=/decoder/conv/Conv reason_code=unsupported_grouped_convolution message=Grouped Conv currently supports rank-4 only. group=128 input_shape=[1, 512, 2] output_shape=[1, 512, 1] weight_shape=[512, 4, 2]",
+  "traceback": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.12/site-packages/onnx2tf/tflite_builder/lower_from_onnx2tf.py\", line 3875, in lower_onnx_to_ir\n    dispatch_node(wrapped, ctx)\n  File \"/usr/local/lib/python3.12/site-packages/onnx2tf/tflite_builder/dispatcher.py\", line 13, in dispatch_node\n    _LOWERING_REGISTRY.lower(node, ctx)\n  File \"/usr/local/lib/python3.12/site-packages/onnx2tf/tflite_builder/core/lowering_registry.py\", line 34, in lower\n    resolution = self.resolve(node, context)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/onnx2tf/tflite_builder/core/lowering_registry.py\", line 30, in resolve\n    entry = self._resolver(node, context)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/onnx2tf/tflite_builder/op_registry.py\", line 8636, in validate_node_support\n    return resolve_node_dispatch(node, ctx).entry\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/onnx2tf/tflite_builder/op_registry.py\", line 8632, in resolve_node_dispatch\n    raise ve\n  File \"/usr/local/lib/python3.12/site-packages/onnx2tf/tflite_builder/op_registry.py\", line 8619, in resolve_node_dispatch\n    entry.extra_validator(node, ctx)\n  File \"/usr/local/lib/python3.12/site-packages/onnx2tf/tflite_builder/op_registry.py\", line 892, in _validate_conv\n    raise NodeValidationError(\nonnx2tf.tflite_builder.core.op_contracts.NodeValidationError: Grouped Conv currently supports rank-4 only. group=128 input_shape=[1, 512, 2] output_shape=[1, 512, 1] weight_shape=[512, 4, 2]\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/workspace/daily/2026-10-20/experiments/zipformer/src/validate_artifacts.py\", line 61, in main\n    export_tflite_model_flatbuffer_direct(\n  File \"/usr/local/lib/python3.12/site-packages/onnx2tf/tflite_builder/__init__.py\", line 518, in export_tflite_model_flatbuffer_direct\n    model_ir = lower_onnx_to_ir(\n               ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/onnx2tf/tflite_builder/lower_from_onnx2tf.py\", line 3877, in lower_onnx_to_ir\n    raise NotImplementedError(\nNotImplementedError: flatbuffer_direct validation failed: op=Conv node=/decoder/conv/Conv reason_code=unsupported_grouped_convolution message=Grouped Conv currently supports rank-4 only. group=128 input_shape=[1, 512, 2] output_shape=[1, 512, 1] weight_shape=[512, 4, 2]\n",
+  "log": {
+    "path": "daily/2026-10-20/experiments/zipformer/artifacts/strict_decoder/traceback.txt",
+    "sha256": "baaaee342966003c107d79ec23e7c0deb20658e671ccb27021bb79eb3fe77ccf",
+    "bytes": 2492
+  },
+  "source_code": {
+    "path": "daily/2026-10-20/experiments/zipformer/src/validate_artifacts.py",
+    "sha256": "1b02d4857f6f0b640eb532220ded5be6dcfb62eb01eea3c03c2953f38f5c80c7",
+    "bytes": 3397
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "task_name": "Codex-Commit-2026-10-20-1700",
+  "state_at_registration": "Ready",
+  "scheduled_local_time": "2026-10-20T17:00:00+07:00",
+  "timezone": "Asia/Saigon",
+  "windows_timezone": "SE Asia Standard Time",
+  "commit_message": "20/10",
+  "push": false,
+  "guards": "Requires reviewed snapshot marker, same HEAD/branch/index tree, no unstaged tracked changes; otherwise logs skipped",
+  "readiness_file": ".cache/scheduled-commit-2026-10-20/ready.json",
+  "result_file": ".cache/scheduled-commit-2026-10-20/result.json",
+  "requires": "Computer on and user session available; StartWhenAvailable may execute later after sleep"
+}
