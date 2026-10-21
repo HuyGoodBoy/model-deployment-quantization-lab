@@ -1,0 +1,48 @@
+{
+  "finished_at_utc": "2026-10-21T08:19:07.438284+00:00",
+  "original": {
+    "path": "daily/2026-10-19/experiments/selective/artifacts/qat_weights_fp32.onnx",
+    "sha256": "ce7b26475cb5eee7e9f5b34d873b51e7401c3cc9d9584e415b5a186e0f49dd1e",
+    "bytes": 2512757
+  },
+  "rewritten_before_simplification": {
+    "path": "daily/2026-10-21/experiments/mlsd/artifacts/refinement/prune_conversion/pruned.onnx",
+    "sha256": "d324998ac6de8ea0f41ee64b65bdfa898a0f498867f5856640a61ff072cf81ad",
+    "bytes": 2525081
+  },
+  "converted_onnx": {
+    "path": "daily/2026-10-21/experiments/mlsd/artifacts/refinement/prune_conversion/pruned.onnx",
+    "sha256": "d6effd6399feb6ce7d17edeb6b9cc5d587ac1322981c8d018e6b73f037c74959",
+    "bytes": 2492578
+  },
+  "tflite": {
+    "path": "daily/2026-10-21/experiments/mlsd/artifacts/refinement/prune_conversion/output/pruned_float32.tflite",
+    "sha256": "23dd0eafcb37975f89bdc1d87ee9c89bb6da569b4dcd570d1f88e19a3d9e57bb",
+    "bytes": 2478504
+  },
+  "command": [
+    "onnx2tf",
+    "-i",
+    "/workspace/daily/2026-10-21/experiments/mlsd/artifacts/refinement/prune_conversion/pruned.onnx",
+    "-o",
+    "/workspace/daily/2026-10-21/experiments/mlsd/artifacts/refinement/prune_conversion/output",
+    "-tb",
+    "flatbuffer_direct",
+    "-kat",
+    "input",
+    "-v",
+    "error"
+  ],
+  "log": {
+    "path": "daily/2026-10-21/experiments/mlsd/artifacts/refinement/prune_conversion/conversion.log",
+    "sha256": "3b85aade4d3d6c7923802843b0bd408285c8b26d62157725c6f82c47315584b8",
+    "bytes": 6614
+  },
+  "rewrite": "Single final Conv with original filters7:12; unchanged upstream; same align_corners2xresize; one active5channel output; no split/concat output adapter.",
+  "source_unchanged": true,
+  "source_code": {
+    "path": "daily/2026-10-21/experiments/mlsd/src/prune_head.py",
+    "sha256": "3568a686c924b8dffe9bc94e06edb0b53ceb0eb19a97244f53b3b97a5bab47ce",
+    "bytes": 3826
+  }
+}

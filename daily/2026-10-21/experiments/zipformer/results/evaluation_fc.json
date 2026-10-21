@@ -1,0 +1,7177 @@
+{
+  "started_at_utc": "2026-10-21T07:15:29.977499+00:00",
+  "finished_at_utc": "2026-10-21T07:15:43.775154+00:00",
+  "variant": "fc",
+  "utterances": 73,
+  "models": {
+    "encoder": {
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/encoder_fc.tflite",
+      "sha256": "5b235da0e125f70983759e5188273719c1b1f06bd837e240c78b18e16fe9b041",
+      "bytes": 78639872
+    },
+    "decoder": {
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/conversion/conv2d/decoder/output/input_float32.tflite",
+      "sha256": "4a13f805b095c679c03f40276c4e86525191fdd7fcd637c548b7ffd941ec91da",
+      "bytes": 2097736
+    },
+    "joiner": {
+      "path": "daily/2026-10-20/experiments/zipformer/artifacts/conversion/static/joiner/output/input_float32.tflite",
+      "sha256": "e86519a479c623b9996ced232550892b3196e52f814d246912b16daeeb4df43c",
+      "bytes": 1027220
+    }
+  },
+  "manifest": {
+    "path": "daily/2026-10-20/experiments/zipformer/results/evaluation_manifest.json",
+    "sha256": "a85f5c21bc8c5917e14ccdfe8e0a25b1c23e8f173203738f51576a581cbcfb75",
+    "bytes": 30435
+  },
+  "word_errors": {
+    "S": 75,
+    "D": 13,
+    "I": 3,
+    "N": 1150,
+    "errors": 91,
+    "WER_percent": 7.91304347826087
+  },
+  "records": [
+    {
+      "text": "MISTER QUILTER IS THE APOSTLE OF THE MIDDLE CLASSES AND WE ARE GLAD TO WELCOME HIS GOSPEL",
+      "tokens": [
+        330,
+        34,
+        299,
+        25,
+        83,
+        67,
+        4,
+        5,
+        21,
+        24,
+        61,
+        44,
+        9,
+        4,
+        139,
+        12,
+        12,
+        44,
+        39,
+        108,
+        3,
+        77,
+        3,
+        7,
+        98,
+        169,
+        80,
+        108,
+        12,
+        10,
+        98,
+        25,
+        18,
+        204,
+        11,
+        46,
+        117,
+        3,
+        21,
+        131
+      ],
+      "audio_seconds": 5.855,
+      "original_sample_rate": 16000,
+      "chunks": 18,
+      "pipeline_seconds": 0.204461874999879,
+      "RTF": 0.034920900939347396,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            288
+          ],
+          [
+            288
+          ]
+        ],
+        "cached_len_1": [
+          [
+            144
+          ],
+          [
+            144
+          ]
+        ],
+        "cached_len_2": [
+          [
+            72
+          ],
+          [
+            72
+          ]
+        ],
+        "cached_len_3": [
+          [
+            36
+          ],
+          [
+            36
+          ]
+        ],
+        "cached_len_4": [
+          [
+            144
+          ],
+          [
+            144
+          ]
+        ]
+      },
+      "id": "1272-128104-0000",
+      "reference": "MISTER QUILTER IS THE APOSTLE OF THE MIDDLE CLASSES AND WE ARE GLAD TO WELCOME HIS GOSPEL",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 17,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "NOR IS MISTER QUILTER'S MANNER LESS INTERESTING THAN HIS MATTER",
+      "tokens": [
+        94,
+        23,
+        67,
+        330,
+        34,
+        299,
+        25,
+        83,
+        45,
+        3,
+        133,
+        13,
+        29,
+        34,
+        315,
+        15,
+        83,
+        207,
+        14,
+        236,
+        46,
+        473
+      ],
+      "audio_seconds": 4.815,
+      "original_sample_rate": 16000,
+      "chunks": 15,
+      "pipeline_seconds": 0.14318167999999787,
+      "RTF": 0.02973658982346788,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            240
+          ],
+          [
+            240
+          ]
+        ],
+        "cached_len_1": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ],
+        "cached_len_2": [
+          [
+            60
+          ],
+          [
+            60
+          ]
+        ],
+        "cached_len_3": [
+          [
+            30
+          ],
+          [
+            30
+          ]
+        ],
+        "cached_len_4": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ]
+      },
+      "id": "1272-128104-0001",
+      "reference": "NOR IS MISTER QUILTER'S MANNER LESS INTERESTING THAN HIS MATTER",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 10,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "HE TELLS US THAT AT THIS FESTIVE SEASON OF THE YEAR WITH CHRISTMAS AND ROAST BEEF LOOMING BEFORE US SIMILES DRAWN FROM EATING AND ITS RESULTS OCCUR MOST READILY TO THE MINE",
+      "tokens": [
+        22,
+        389,
+        3,
+        212,
+        32,
+        84,
+        107,
+        157,
+        61,
+        211,
+        125,
+        183,
+        76,
+        9,
+        4,
+        224,
+        36,
+        55,
+        34,
+        81,
+        53,
+        61,
+        17,
+        183,
+        7,
+        171,
+        20,
+        61,
+        37,
+        11,
+        38,
+        182,
+        204,
+        14,
+        296,
+        212,
+        35,
+        252,
+        91,
+        90,
+        121,
+        89,
+        65,
+        13,
+        116,
+        54,
+        140,
+        14,
+        7,
+        30,
+        3,
+        49,
+        3,
+        191,
+        6,
+        3,
+        152,
+        18,
+        18,
+        79,
+        379,
+        49,
+        136,
+        27,
+        31,
+        10,
+        4,
+        139,
+        88
+      ],
+      "audio_seconds": 12.485,
+      "original_sample_rate": 16000,
+      "chunks": 39,
+      "pipeline_seconds": 0.3539119550000578,
+      "RTF": 0.028346972767325413,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            624
+          ],
+          [
+            624
+          ]
+        ],
+        "cached_len_1": [
+          [
+            312
+          ],
+          [
+            312
+          ]
+        ],
+        "cached_len_2": [
+          [
+            156
+          ],
+          [
+            156
+          ]
+        ],
+        "cached_len_3": [
+          [
+            78
+          ],
+          [
+            78
+          ]
+        ],
+        "cached_len_4": [
+          [
+            312
+          ],
+          [
+            312
+          ]
+        ]
+      },
+      "id": "1272-128104-0002",
+      "reference": "HE TELLS US THAT AT THIS FESTIVE SEASON OF THE YEAR WITH CHRISTMAS AND ROAST BEEF LOOMING BEFORE US SIMILES DRAWN FROM EATING AND ITS RESULTS OCCUR MOST READILY TO THE MIND",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 32,
+        "errors": 1,
+        "WER_percent": 3.125
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "HE HAS GRAVED DOUBTS WHETHER SIR FREDERICK LAYTON'S WORK IS REALLY GREEK AFTER ALL AND CAN DISCOVER IN IT BUT LITTLE OF ROCKY ITHACA",
+      "tokens": [
+        22,
+        262,
+        306,
+        50,
+        8,
+        100,
+        28,
+        41,
+        6,
+        3,
+        122,
+        206,
+        144,
+        35,
+        97,
+        64,
+        26,
+        172,
+        53,
+        113,
+        129,
+        16,
+        6,
+        76,
+        45,
+        3,
+        390,
+        67,
+        49,
+        48,
+        31,
+        80,
+        26,
+        11,
+        82,
+        266,
+        101,
+        7,
+        242,
+        203,
+        18,
+        24,
+        123,
+        15,
+        30,
+        71,
+        237,
+        9,
+        171,
+        113,
+        16,
+        30,
+        388,
+        18,
+        20
+      ],
+      "audio_seconds": 9.9,
+      "original_sample_rate": 16000,
+      "chunks": 31,
+      "pipeline_seconds": 0.27852474699989216,
+      "RTF": 0.028133812828271935,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            496
+          ],
+          [
+            496
+          ]
+        ],
+        "cached_len_1": [
+          [
+            248
+          ],
+          [
+            248
+          ]
+        ],
+        "cached_len_2": [
+          [
+            124
+          ],
+          [
+            124
+          ]
+        ],
+        "cached_len_3": [
+          [
+            62
+          ],
+          [
+            62
+          ]
+        ],
+        "cached_len_4": [
+          [
+            248
+          ],
+          [
+            248
+          ]
+        ]
+      },
+      "id": "1272-128104-0003",
+      "reference": "HE HAS GRAVE DOUBTS WHETHER SIR FREDERICK LEIGHTON'S WORK IS REALLY GREEK AFTER ALL AND CAN DISCOVER IN IT BUT LITTLE OF ROCKY ITHACA",
+      "word_errors": {
+        "S": 2,
+        "D": 0,
+        "I": 0,
+        "N": 24,
+        "errors": 2,
+        "WER_percent": 8.333333333333332
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "LINEAL'S PICTURES ARE A SORT OF UPGUARDS AND ATOM PAINTINGS AND MASON'S EXQUISITE IDOLS ARE AS NATIONAL AS A JINGO POEM MISTER BURKET FOSTER'S LANDSCAPES SMILE AT ONE MUCH IN THE SAME WAY THAT MISTER CARR USED TO FLASH HIS TEETH AND MISTER JOHN COLLIER GIVES HIS SITTER A CHEERFUL SLAP ON THE BACK BEFORE HE SAYS LIKE A SHAMPOOER IN A TURKISH BATH NEXT MAN",
+      "tokens": [
+        166,
+        88,
+        48,
+        45,
+        3,
+        59,
+        93,
+        276,
+        3,
+        169,
+        5,
+        35,
+        43,
+        6,
+        9,
+        176,
+        52,
+        28,
+        215,
+        3,
+        7,
+        84,
+        204,
+        158,
+        40,
+        291,
+        3,
+        7,
+        161,
+        3,
+        76,
+        45,
+        3,
+        135,
+        299,
+        3,
+        85,
+        11,
+        19,
+        12,
+        184,
+        3,
+        169,
+        57,
+        298,
+        173,
+        48,
+        57,
+        5,
+        34,
+        340,
+        14,
+        24,
+        178,
+        11,
+        17,
+        330,
+        51,
+        79,
+        190,
+        6,
+        312,
+        3,
+        83,
+        45,
+        3,
+        129,
+        68,
+        3,
+        18,
+        20,
+        175,
+        3,
+        35,
+        17,
+        91,
+        11,
+        84,
+        126,
+        329,
+        15,
+        4,
+        407,
+        333,
+        32,
+        330,
+        325,
+        23,
+        212,
+        8,
+        10,
+        64,
+        108,
+        270,
+        46,
+        56,
+        11,
+        11,
+        70,
+        7,
+        330,
+        332,
+        99,
+        13,
+        220,
+        58,
+        27,
+        29,
+        358,
+        3,
+        46,
+        35,
+        85,
+        83,
+        5,
+        39,
+        206,
+        29,
+        246,
+        35,
+        108,
+        21,
+        74,
+        4,
+        338,
+        296,
+        22,
+        289,
+        3,
+        231,
+        5,
+        400,
+        17,
+        21,
+        24,
+        24,
+        29,
+        15,
+        5,
+        56,
+        79,
+        82,
+        205,
+        248,
+        70,
+        197,
+        245,
+        6,
+        133
+      ],
+      "audio_seconds": 29.4,
+      "original_sample_rate": 16000,
+      "chunks": 92,
+      "pipeline_seconds": 0.775262659999953,
+      "RTF": 0.026369478231290922,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            1472
+          ],
+          [
+            1472
+          ]
+        ],
+        "cached_len_1": [
+          [
+            736
+          ],
+          [
+            736
+          ]
+        ],
+        "cached_len_2": [
+          [
+            368
+          ],
+          [
+            368
+          ]
+        ],
+        "cached_len_3": [
+          [
+            184
+          ],
+          [
+            184
+          ]
+        ],
+        "cached_len_4": [
+          [
+            736
+          ],
+          [
+            736
+          ]
+        ]
+      },
+      "id": "1272-128104-0004",
+      "reference": "LINNELL'S PICTURES ARE A SORT OF UP GUARDS AND AT EM PAINTINGS AND MASON'S EXQUISITE IDYLLS ARE AS NATIONAL AS A JINGO POEM MISTER BIRKET FOSTER'S LANDSCAPES SMILE AT ONE MUCH IN THE SAME WAY THAT MISTER CARKER USED TO FLASH HIS TEETH AND MISTER JOHN COLLIER GIVES HIS SITTER A CHEERFUL SLAP ON THE BACK BEFORE HE SAYS LIKE A SHAMPOOER IN A TURKISH BATH NEXT MAN",
+      "word_errors": {
+        "S": 6,
+        "D": 2,
+        "I": 0,
+        "N": 68,
+        "errors": 8,
+        "WER_percent": 11.76470588235294
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "IT IS OBVIOUSLY UNNECESSARY FOR US TO POINT OUT HOW LUMINOUS THESE CRITICISMS ARE HOW DELICATE IN EXPRESSION",
+      "tokens": [
+        30,
+        67,
+        398,
+        50,
+        295,
+        31,
+        180,
+        88,
+        66,
+        3,
+        3,
+        36,
+        16,
+        42,
+        212,
+        10,
+        485,
+        163,
+        319,
+        447,
+        17,
+        40,
+        281,
+        4,
+        77,
+        39,
+        53,
+        6,
+        93,
+        198,
+        17,
+        3,
+        169,
+        319,
+        78,
+        25,
+        93,
+        216,
+        15,
+        135,
+        21,
+        293,
+        155
+      ],
+      "audio_seconds": 9.01,
+      "original_sample_rate": 16000,
+      "chunks": 28,
+      "pipeline_seconds": 0.3064924359998713,
+      "RTF": 0.03401691853494687,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            448
+          ],
+          [
+            448
+          ]
+        ],
+        "cached_len_1": [
+          [
+            224
+          ],
+          [
+            224
+          ]
+        ],
+        "cached_len_2": [
+          [
+            112
+          ],
+          [
+            112
+          ]
+        ],
+        "cached_len_3": [
+          [
+            56
+          ],
+          [
+            56
+          ]
+        ],
+        "cached_len_4": [
+          [
+            224
+          ],
+          [
+            224
+          ]
+        ]
+      },
+      "id": "1272-128104-0005",
+      "reference": "IT IS OBVIOUSLY UNNECESSARY FOR US TO POINT OUT HOW LUMINOUS THESE CRITICISMS ARE HOW DELICATE IN EXPRESSION",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 18,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "ON THE GENERAL PRINCIPLES OF ART MISTER QUILTER WRITES WITH EQUAL LUCIDITY",
+      "tokens": [
+        74,
+        4,
+        80,
+        72,
+        29,
+        48,
+        59,
+        53,
+        13,
+        200,
+        21,
+        44,
+        3,
+        9,
+        244,
+        6,
+        330,
+        34,
+        299,
+        25,
+        83,
+        122,
+        53,
+        114,
+        3,
+        55,
+        54,
+        371,
+        25,
+        447,
+        200,
+        12,
+        210
+      ],
+      "audio_seconds": 5.64,
+      "original_sample_rate": 16000,
+      "chunks": 18,
+      "pipeline_seconds": 0.17764011900021615,
+      "RTF": 0.031496475000038326,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            288
+          ],
+          [
+            288
+          ]
+        ],
+        "cached_len_1": [
+          [
+            144
+          ],
+          [
+            144
+          ]
+        ],
+        "cached_len_2": [
+          [
+            72
+          ],
+          [
+            72
+          ]
+        ],
+        "cached_len_3": [
+          [
+            36
+          ],
+          [
+            36
+          ]
+        ],
+        "cached_len_4": [
+          [
+            144
+          ],
+          [
+            144
+          ]
+        ]
+      },
+      "id": "1272-128104-0006",
+      "reference": "ON THE GENERAL PRINCIPLES OF ART MISTER QUILTER WRITES WITH EQUAL LUCIDITY",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 12,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "PAINTING HE TELLS US IS OF A DIFFERENT QUALITY TO MATHEMATICS AND FINISH IN ART IS ADDING MORE EFFECT",
+      "tokens": [
+        158,
+        40,
+        291,
+        22,
+        389,
+        3,
+        212,
+        67,
+        9,
+        5,
+        272,
+        228,
+        29,
+        96,
+        34,
+        371,
+        25,
+        210,
+        10,
+        161,
+        70,
+        11,
+        17,
+        140,
+        93,
+        3,
+        7,
+        147,
+        13,
+        205,
+        15,
+        244,
+        6,
+        67,
+        5,
+        12,
+        12,
+        14,
+        213,
+        54,
+        228,
+        11,
+        18,
+        6
+      ],
+      "audio_seconds": 9.24,
+      "original_sample_rate": 16000,
+      "chunks": 29,
+      "pipeline_seconds": 0.2778810230001909,
+      "RTF": 0.030073703787899447,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            464
+          ],
+          [
+            464
+          ]
+        ],
+        "cached_len_1": [
+          [
+            232
+          ],
+          [
+            232
+          ]
+        ],
+        "cached_len_2": [
+          [
+            116
+          ],
+          [
+            116
+          ]
+        ],
+        "cached_len_3": [
+          [
+            58
+          ],
+          [
+            58
+          ]
+        ],
+        "cached_len_4": [
+          [
+            232
+          ],
+          [
+            232
+          ]
+        ]
+      },
+      "id": "1272-128104-0007",
+      "reference": "PAINTING HE TELLS US IS OF A DIFFERENT QUALITY TO MATHEMATICS AND FINISH IN ART IS ADDING MORE FACT",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 19,
+        "errors": 1,
+        "WER_percent": 5.263157894736842
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "AS FOR ETCHINGS THEREOF TWO KINDS BRITISH AND FOREIGN",
+      "tokens": [
+        57,
+        42,
+        54,
+        6,
+        81,
+        14,
+        3,
+        153,
+        24,
+        38,
+        287,
+        444,
+        3,
+        51,
+        53,
+        6,
+        205,
+        7,
+        42,
+        11,
+        377
+      ],
+      "audio_seconds": 5.12,
+      "original_sample_rate": 16000,
+      "chunks": 16,
+      "pipeline_seconds": 0.17685143700009576,
+      "RTF": 0.0345412962890812,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            256
+          ],
+          [
+            256
+          ]
+        ],
+        "cached_len_1": [
+          [
+            128
+          ],
+          [
+            128
+          ]
+        ],
+        "cached_len_2": [
+          [
+            64
+          ],
+          [
+            64
+          ]
+        ],
+        "cached_len_3": [
+          [
+            32
+          ],
+          [
+            32
+          ]
+        ],
+        "cached_len_4": [
+          [
+            128
+          ],
+          [
+            128
+          ]
+        ]
+      },
+      "id": "1272-128104-0008",
+      "reference": "AS FOR ETCHINGS THEY ARE OF TWO KINDS BRITISH AND FOREIGN",
+      "word_errors": {
+        "S": 1,
+        "D": 2,
+        "I": 0,
+        "N": 11,
+        "errors": 3,
+        "WER_percent": 27.27272727272727
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "HE LAMENTS MOST BITTERLY THE DIVORCE THAT HAS BEEN MADE BETWEEN DECORATIVE ART AND WHAT WE USUALLY CALL PICTURES MAKES A CUSTOMARY APPEAL TO THE LAST JUDGMENT AND REMINDS US THAT IN THE GREAT DAYS OF ART MY CALANGHILO WAS THE FURNISHING UPHOLSTERER",
+      "tokens": [
+        22,
+        129,
+        160,
+        3,
+        379,
+        51,
+        85,
+        83,
+        31,
+        4,
+        272,
+        50,
+        43,
+        66,
+        32,
+        262,
+        186,
+        300,
+        469,
+        78,
+        18,
+        43,
+        140,
+        211,
+        244,
+        6,
+        7,
+        156,
+        98,
+        212,
+        28,
+        48,
+        31,
+        127,
+        58,
+        59,
+        93,
+        276,
+        3,
+        348,
+        3,
+        5,
+        39,
+        28,
+        61,
+        204,
+        36,
+        16,
+        5,
+        145,
+        11,
+        48,
+        10,
+        4,
+        391,
+        420,
+        12,
+        52,
+        160,
+        7,
+        49,
+        17,
+        40,
+        12,
+        3,
+        212,
+        32,
+        15,
+        4,
+        263,
+        249,
+        3,
+        9,
+        244,
+        6,
+        105,
+        127,
+        108,
+        92,
+        233,
+        103,
+        33,
+        4,
+        64,
+        79,
+        13,
+        205,
+        14,
+        176,
+        269,
+        25,
+        3,
+        83,
+        29
+      ],
+      "audio_seconds": 18.29,
+      "original_sample_rate": 16000,
+      "chunks": 57,
+      "pipeline_seconds": 0.4547070240000721,
+      "RTF": 0.024860963586663322,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            912
+          ],
+          [
+            912
+          ]
+        ],
+        "cached_len_1": [
+          [
+            456
+          ],
+          [
+            456
+          ]
+        ],
+        "cached_len_2": [
+          [
+            228
+          ],
+          [
+            228
+          ]
+        ],
+        "cached_len_3": [
+          [
+            114
+          ],
+          [
+            114
+          ]
+        ],
+        "cached_len_4": [
+          [
+            456
+          ],
+          [
+            456
+          ]
+        ]
+      },
+      "id": "1272-128104-0009",
+      "reference": "HE LAMENTS MOST BITTERLY THE DIVORCE THAT HAS BEEN MADE BETWEEN DECORATIVE ART AND WHAT WE USUALLY CALL PICTURES MAKES THE CUSTOMARY APPEAL TO THE LAST JUDGMENT AND REMINDS US THAT IN THE GREAT DAYS OF ART MICHAEL ANGELO WAS THE FURNISHING UPHOLSTERER",
+      "word_errors": {
+        "S": 3,
+        "D": 0,
+        "I": 0,
+        "N": 43,
+        "errors": 3,
+        "WER_percent": 6.976744186046512
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "NEAR THE FIRE AND THE ORNAMENTS FRED BROUGHT HOME FROM INDIA ON THE MENTAL BOARD",
+      "tokens": [
+        197,
+        36,
+        4,
+        147,
+        26,
+        7,
+        4,
+        120,
+        13,
+        20,
+        160,
+        3,
+        64,
+        23,
+        8,
+        51,
+        87,
+        247,
+        6,
+        426,
+        116,
+        15,
+        12,
+        27,
+        20,
+        74,
+        4,
+        337,
+        6,
+        48,
+        141,
+        215
+      ],
+      "audio_seconds": 5.6,
+      "original_sample_rate": 16000,
+      "chunks": 18,
+      "pipeline_seconds": 0.15625180600000022,
+      "RTF": 0.027902108214285754,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            288
+          ],
+          [
+            288
+          ]
+        ],
+        "cached_len_1": [
+          [
+            144
+          ],
+          [
+            144
+          ]
+        ],
+        "cached_len_2": [
+          [
+            72
+          ],
+          [
+            72
+          ]
+        ],
+        "cached_len_3": [
+          [
+            36
+          ],
+          [
+            36
+          ]
+        ],
+        "cached_len_4": [
+          [
+            144
+          ],
+          [
+            144
+          ]
+        ]
+      },
+      "id": "1272-128104-0010",
+      "reference": "NEAR THE FIRE AND THE ORNAMENTS FRED BROUGHT HOME FROM INDIA ON THE MANTEL BOARD",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 15,
+        "errors": 1,
+        "WER_percent": 6.666666666666667
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "IN FACT HE IS QUITE SEVERE ON MISTER RUSKIN FOR NOT RECOGNIZING THAT A PICTURE SHOULD DENOTE THE FRAILTY OF MAN AND REMARKS WAS PLEASING COURTESY AND FELICITOUS GRACE THAT MANY PHASES OF FEELING",
+      "tokens": [
+        15,
+        134,
+        18,
+        6,
+        22,
+        67,
+        450,
+        125,
+        123,
+        11,
+        74,
+        330,
+        322,
+        3,
+        82,
+        40,
+        42,
+        69,
+        49,
+        18,
+        24,
+        52,
+        13,
+        27,
+        234,
+        14,
+        32,
+        5,
+        59,
+        93,
+        276,
+        279,
+        78,
+        13,
+        24,
+        114,
+        4,
+        64,
+        89,
+        91,
+        240,
+        9,
+        133,
+        7,
+        49,
+        17,
+        36,
+        82,
+        3,
+        33,
+        59,
+        44,
+        183,
+        14,
+        39,
+        282,
+        114,
+        3,
+        16,
+        7,
+        157,
+        25,
+        93,
+        85,
+        281,
+        306,
+        66,
+        32,
+        133,
+        16,
+        59,
+        388,
+        77,
+        3,
+        9,
+        157,
+        131,
+        14
+      ],
+      "audio_seconds": 15.115,
+      "original_sample_rate": 16000,
+      "chunks": 47,
+      "pipeline_seconds": 0.39861190199985685,
+      "RTF": 0.02637194191199847,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            752
+          ],
+          [
+            752
+          ]
+        ],
+        "cached_len_1": [
+          [
+            376
+          ],
+          [
+            376
+          ]
+        ],
+        "cached_len_2": [
+          [
+            188
+          ],
+          [
+            188
+          ]
+        ],
+        "cached_len_3": [
+          [
+            94
+          ],
+          [
+            94
+          ]
+        ],
+        "cached_len_4": [
+          [
+            376
+          ],
+          [
+            376
+          ]
+        ]
+      },
+      "id": "1272-128104-0011",
+      "reference": "IN FACT HE IS QUITE SEVERE ON MISTER RUSKIN FOR NOT RECOGNISING THAT A PICTURE SHOULD DENOTE THE FRAILTY OF MAN AND REMARKS WITH PLEASING COURTESY AND FELICITOUS GRACE THAT MANY PHASES OF FEELING",
+      "word_errors": {
+        "S": 2,
+        "D": 0,
+        "I": 0,
+        "N": 34,
+        "errors": 2,
+        "WER_percent": 5.88235294117647
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "ONLY UNFORTUNATELY HIS OWN WORK NEVER DOES GET GOOD",
+      "tokens": [
+        284,
+        180,
+        38,
+        43,
+        6,
+        194,
+        216,
+        31,
+        46,
+        346,
+        390,
+        318,
+        100,
+        90,
+        373,
+        286
+      ],
+      "audio_seconds": 5.38,
+      "original_sample_rate": 16000,
+      "chunks": 17,
+      "pipeline_seconds": 0.16129706399988208,
+      "RTF": 0.029980866914476226,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            272
+          ],
+          [
+            272
+          ]
+        ],
+        "cached_len_1": [
+          [
+            136
+          ],
+          [
+            136
+          ]
+        ],
+        "cached_len_2": [
+          [
+            68
+          ],
+          [
+            68
+          ]
+        ],
+        "cached_len_3": [
+          [
+            34
+          ],
+          [
+            34
+          ]
+        ],
+        "cached_len_4": [
+          [
+            136
+          ],
+          [
+            136
+          ]
+        ]
+      },
+      "id": "1272-128104-0012",
+      "reference": "ONLY UNFORTUNATELY HIS OWN WORK NEVER DOES GET GOOD",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 9,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "MISTER QUILTER HAS MISSED HIS CHANCE FOR HE HAS FAILED EVEN TO MAKE HIMSELF THE TUPPER OF PAINTING",
+      "tokens": [
+        330,
+        34,
+        299,
+        25,
+        83,
+        262,
+        139,
+        3,
+        3,
+        8,
+        46,
+        243,
+        13,
+        66,
+        42,
+        22,
+        262,
+        134,
+        91,
+        8,
+        303,
+        10,
+        348,
+        350,
+        4,
+        56,
+        28,
+        145,
+        29,
+        9,
+        158,
+        40,
+        291
+      ],
+      "audio_seconds": 7.1,
+      "original_sample_rate": 16000,
+      "chunks": 22,
+      "pipeline_seconds": 0.1932965979999608,
+      "RTF": 0.02722487295774096,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            352
+          ],
+          [
+            352
+          ]
+        ],
+        "cached_len_1": [
+          [
+            176
+          ],
+          [
+            176
+          ]
+        ],
+        "cached_len_2": [
+          [
+            88
+          ],
+          [
+            88
+          ]
+        ],
+        "cached_len_3": [
+          [
+            44
+          ],
+          [
+            44
+          ]
+        ],
+        "cached_len_4": [
+          [
+            176
+          ],
+          [
+            176
+          ]
+        ]
+      },
+      "id": "1272-128104-0013",
+      "reference": "MISTER QUILTER HAS MISSED HIS CHANCE FOR HE HAS FAILED EVEN TO MAKE HIMSELF THE TUPPER OF PAINTING",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 18,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "BY HARRY QUILTER M A",
+      "tokens": [
+        104,
+        132,
+        23,
+        138,
+        34,
+        299,
+        25,
+        83,
+        260,
+        5
+      ],
+      "audio_seconds": 2.245,
+      "original_sample_rate": 16000,
+      "chunks": 7,
+      "pipeline_seconds": 0.08272628999998233,
+      "RTF": 0.03684912694876718,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            112
+          ],
+          [
+            112
+          ]
+        ],
+        "cached_len_1": [
+          [
+            56
+          ],
+          [
+            56
+          ]
+        ],
+        "cached_len_2": [
+          [
+            28
+          ],
+          [
+            28
+          ]
+        ],
+        "cached_len_3": [
+          [
+            14
+          ],
+          [
+            14
+          ]
+        ],
+        "cached_len_4": [
+          [
+            56
+          ],
+          [
+            56
+          ]
+        ]
+      },
+      "id": "1272-128104-0014",
+      "reference": "BY HARRY QUILTER M A",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 5,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "BECAUSE YOU ARE ASLEEPING INSTEAD OF CONQUERING THE LOVELY ROSE PRINCESS HAS BECOME A FIDDLE WITHOUT A BOW O POOR SHAGGY SITS THERE ACCOOING DOVE",
+      "tokens": [
+        433,
+        47,
+        169,
+        57,
+        44,
+        11,
+        21,
+        14,
+        15,
+        3,
+        114,
+        136,
+        9,
+        111,
+        368,
+        354,
+        4,
+        370,
+        31,
+        171,
+        77,
+        455,
+        3,
+        3,
+        262,
+        37,
+        18,
+        204,
+        11,
+        5,
+        147,
+        12,
+        12,
+        44,
+        374,
+        5,
+        51,
+        150,
+        152,
+        178,
+        43,
+        400,
+        353,
+        16,
+        35,
+        85,
+        3,
+        153,
+        5,
+        18,
+        18,
+        24,
+        24,
+        14,
+        100,
+        75
+      ],
+      "audio_seconds": 10.885,
+      "original_sample_rate": 16000,
+      "chunks": 34,
+      "pipeline_seconds": 0.30165634299987687,
+      "RTF": 0.02771303105189498,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            544
+          ],
+          [
+            544
+          ]
+        ],
+        "cached_len_1": [
+          [
+            272
+          ],
+          [
+            272
+          ]
+        ],
+        "cached_len_2": [
+          [
+            136
+          ],
+          [
+            136
+          ]
+        ],
+        "cached_len_3": [
+          [
+            68
+          ],
+          [
+            68
+          ]
+        ],
+        "cached_len_4": [
+          [
+            272
+          ],
+          [
+            272
+          ]
+        ]
+      },
+      "id": "1272-135031-0000",
+      "reference": "BECAUSE YOU WERE SLEEPING INSTEAD OF CONQUERING THE LOVELY ROSE PRINCESS HAS BECOME A FIDDLE WITHOUT A BOW WHILE POOR SHAGGY SITS THERE A COOING DOVE",
+      "word_errors": {
+        "S": 4,
+        "D": 1,
+        "I": 0,
+        "N": 26,
+        "errors": 5,
+        "WER_percent": 19.230769230769234
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "HE HAS GONE AND GONE FOR GOOD ANSWERED POLYCHROME WHO HAD MANAGED TO SQUEEZE INTO THE ROOM BESIDE THE DRAGON AND HAD WITNESSED THE OCCURRENCES WITH MUCH INTEREST",
+      "tokens": [
+        22,
+        262,
+        117,
+        88,
+        7,
+        117,
+        88,
+        42,
+        286,
+        429,
+        8,
+        178,
+        31,
+        81,
+        87,
+        258,
+        118,
+        62,
+        133,
+        225,
+        12,
+        10,
+        35,
+        368,
+        11,
+        234,
+        11,
+        218,
+        4,
+        406,
+        37,
+        310,
+        4,
+        121,
+        89,
+        52,
+        76,
+        7,
+        62,
+        223,
+        6,
+        257,
+        8,
+        4,
+        152,
+        18,
+        18,
+        79,
+        23,
+        209,
+        3,
+        55,
+        329,
+        15,
+        83,
+        207
+      ],
+      "audio_seconds": 11.13,
+      "original_sample_rate": 16000,
+      "chunks": 35,
+      "pipeline_seconds": 0.2826196489997983,
+      "RTF": 0.025392600988301733,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            560
+          ],
+          [
+            560
+          ]
+        ],
+        "cached_len_1": [
+          [
+            280
+          ],
+          [
+            280
+          ]
+        ],
+        "cached_len_2": [
+          [
+            140
+          ],
+          [
+            140
+          ]
+        ],
+        "cached_len_3": [
+          [
+            70
+          ],
+          [
+            70
+          ]
+        ],
+        "cached_len_4": [
+          [
+            280
+          ],
+          [
+            280
+          ]
+        ]
+      },
+      "id": "1272-135031-0001",
+      "reference": "HE HAS GONE AND GONE FOR GOOD ANSWERED POLYCHROME WHO HAD MANAGED TO SQUEEZE INTO THE ROOM BESIDE THE DRAGON AND HAD WITNESSED THE OCCURRENCES WITH MUCH INTEREST",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 28,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "I HAVE REMAINED A PRISONER ONLY BECAUSE I WISHED TO BE ONE AND WITH THIS HE STEPPED FORWARD AND BURST THE STOUT CHAINS AS EASILY AS IF THEY HAD BEEN THREADS",
+      "tokens": [
+        19,
+        102,
+        49,
+        17,
+        20,
+        40,
+        8,
+        5,
+        59,
+        53,
+        3,
+        76,
+        29,
+        284,
+        433,
+        19,
+        122,
+        205,
+        8,
+        10,
+        37,
+        126,
+        7,
+        55,
+        107,
+        22,
+        109,
+        11,
+        145,
+        8,
+        42,
+        311,
+        7,
+        51,
+        79,
+        61,
+        4,
+        336,
+        162,
+        243,
+        40,
+        3,
+        57,
+        54,
+        183,
+        27,
+        31,
+        57,
+        165,
+        112,
+        62,
+        186,
+        119,
+        26,
+        136,
+        3
+      ],
+      "audio_seconds": 11.475,
+      "original_sample_rate": 16000,
+      "chunks": 36,
+      "pipeline_seconds": 0.2861470109999118,
+      "RTF": 0.02493655869280277,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            576
+          ],
+          [
+            576
+          ]
+        ],
+        "cached_len_1": [
+          [
+            288
+          ],
+          [
+            288
+          ]
+        ],
+        "cached_len_2": [
+          [
+            144
+          ],
+          [
+            144
+          ]
+        ],
+        "cached_len_3": [
+          [
+            72
+          ],
+          [
+            72
+          ]
+        ],
+        "cached_len_4": [
+          [
+            288
+          ],
+          [
+            288
+          ]
+        ]
+      },
+      "id": "1272-135031-0002",
+      "reference": "I HAVE REMAINED A PRISONER ONLY BECAUSE I WISHED TO BE ONE AND WITH THIS HE STEPPED FORWARD AND BURST THE STOUT CHAINS AS EASILY AS IF THEY HAD BEEN THREADS",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 31,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "THE LITTLE GIRL HAD BEEN ASLEEP BUT SHE HEARD THE RAPS AND OPENED THE DOOR",
+      "tokens": [
+        4,
+        237,
+        432,
+        62,
+        186,
+        57,
+        44,
+        11,
+        21,
+        71,
+        73,
+        22,
+        215,
+        4,
+        188,
+        21,
+        3,
+        7,
+        419,
+        8,
+        4,
+        100,
+        43
+      ],
+      "audio_seconds": 4.755,
+      "original_sample_rate": 16000,
+      "chunks": 15,
+      "pipeline_seconds": 0.13683258900005058,
+      "RTF": 0.028776569716098963,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            240
+          ],
+          [
+            240
+          ]
+        ],
+        "cached_len_1": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ],
+        "cached_len_2": [
+          [
+            60
+          ],
+          [
+            60
+          ]
+        ],
+        "cached_len_3": [
+          [
+            30
+          ],
+          [
+            30
+          ]
+        ],
+        "cached_len_4": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ]
+      },
+      "id": "1272-135031-0003",
+      "reference": "THE LITTLE GIRL HAD BEEN ASLEEP BUT SHE HEARD THE RAPS AND OPENED THE DOOR",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 15,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "THE KING HAS FLOODED DISGRACE IN YOUR FRIENDS OR ASKING FOR YOU",
+      "tokens": [
+        4,
+        167,
+        14,
+        262,
+        64,
+        103,
+        24,
+        12,
+        8,
+        203,
+        52,
+        89,
+        66,
+        15,
+        217,
+        404,
+        3,
+        120,
+        57,
+        82,
+        14,
+        42,
+        47
+      ],
+      "audio_seconds": 4.225,
+      "original_sample_rate": 16000,
+      "chunks": 13,
+      "pipeline_seconds": 0.1282367180001529,
+      "RTF": 0.030351885917195957,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            208
+          ],
+          [
+            208
+          ]
+        ],
+        "cached_len_1": [
+          [
+            104
+          ],
+          [
+            104
+          ]
+        ],
+        "cached_len_2": [
+          [
+            52
+          ],
+          [
+            52
+          ]
+        ],
+        "cached_len_3": [
+          [
+            26
+          ],
+          [
+            26
+          ]
+        ],
+        "cached_len_4": [
+          [
+            104
+          ],
+          [
+            104
+          ]
+        ]
+      },
+      "id": "1272-135031-0004",
+      "reference": "THE KING HAS FLED IN DISGRACE AND YOUR FRIENDS ARE ASKING FOR YOU",
+      "word_errors": {
+        "S": 3,
+        "D": 1,
+        "I": 0,
+        "N": 13,
+        "errors": 4,
+        "WER_percent": 30.76923076923077
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "I BEGGED RUGGEDO LONG AGO TO SEND HIM AWAY BUT HE WOULD NOT DO SO",
+      "tokens": [
+        19,
+        37,
+        353,
+        8,
+        322,
+        353,
+        8,
+        24,
+        308,
+        5,
+        52,
+        24,
+        10,
+        125,
+        68,
+        95,
+        369,
+        71,
+        22,
+        148,
+        69,
+        100,
+        63
+      ],
+      "audio_seconds": 4.625,
+      "original_sample_rate": 16000,
+      "chunks": 15,
+      "pipeline_seconds": 0.1325492830001167,
+      "RTF": 0.028659304432457667,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            240
+          ],
+          [
+            240
+          ]
+        ],
+        "cached_len_1": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ],
+        "cached_len_2": [
+          [
+            60
+          ],
+          [
+            60
+          ]
+        ],
+        "cached_len_3": [
+          [
+            30
+          ],
+          [
+            30
+          ]
+        ],
+        "cached_len_4": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ]
+      },
+      "id": "1272-135031-0005",
+      "reference": "I BEGGED RUGGEDO LONG AGO TO SEND HIM AWAY BUT HE WOULD NOT DO SO",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 15,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "I ALSO OFFERED TO HELP YOUR BROTHER TO ESCAPE BUT HE WOULD NOT GO",
+      "tokens": [
+        19,
+        457,
+        9,
+        38,
+        29,
+        8,
+        10,
+        22,
+        25,
+        21,
+        217,
+        51,
+        87,
+        144,
+        10,
+        54,
+        3,
+        18,
+        20,
+        175,
+        71,
+        22,
+        148,
+        69,
+        117
+      ],
+      "audio_seconds": 4.09,
+      "original_sample_rate": 16000,
+      "chunks": 13,
+      "pipeline_seconds": 0.14431676699996387,
+      "RTF": 0.03528527310512564,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            208
+          ],
+          [
+            208
+          ]
+        ],
+        "cached_len_1": [
+          [
+            104
+          ],
+          [
+            104
+          ]
+        ],
+        "cached_len_2": [
+          [
+            52
+          ],
+          [
+            52
+          ]
+        ],
+        "cached_len_3": [
+          [
+            26
+          ],
+          [
+            26
+          ]
+        ],
+        "cached_len_4": [
+          [
+            104
+          ],
+          [
+            104
+          ]
+        ]
+      },
+      "id": "1272-135031-0006",
+      "reference": "I ALSO OFFERED TO HELP YOUR BROTHER TO ESCAPE BUT HE WOULD NOT GO",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 14,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "HE EATS AND SLEEPS VERY STEADILY REPLIED THE NEW KING",
+      "tokens": [
+        22,
+        54,
+        140,
+        3,
+        7,
+        35,
+        44,
+        11,
+        21,
+        3,
+        230,
+        109,
+        11,
+        136,
+        27,
+        31,
+        495,
+        4,
+        392,
+        167,
+        14
+      ],
+      "audio_seconds": 4.055,
+      "original_sample_rate": 16000,
+      "chunks": 13,
+      "pipeline_seconds": 0.12173285599988048,
+      "RTF": 0.030020433045593216,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            208
+          ],
+          [
+            208
+          ]
+        ],
+        "cached_len_1": [
+          [
+            104
+          ],
+          [
+            104
+          ]
+        ],
+        "cached_len_2": [
+          [
+            52
+          ],
+          [
+            52
+          ]
+        ],
+        "cached_len_3": [
+          [
+            26
+          ],
+          [
+            26
+          ]
+        ],
+        "cached_len_4": [
+          [
+            104
+          ],
+          [
+            104
+          ]
+        ]
+      },
+      "id": "1272-135031-0007",
+      "reference": "HE EATS AND SLEEPS VERY STEADILY REPLIED THE NEW KING",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 10,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "I HOPE HE DOESN'T WORK TOO HARD SAID SHAGGY",
+      "tokens": [
+        19,
+        154,
+        175,
+        22,
+        100,
+        90,
+        13,
+        45,
+        6,
+        390,
+        10,
+        24,
+        132,
+        23,
+        12,
+        115,
+        400,
+        353,
+        16
+      ],
+      "audio_seconds": 3.67,
+      "original_sample_rate": 16000,
+      "chunks": 12,
+      "pipeline_seconds": 0.13434134799990716,
+      "RTF": 0.03660527193457961,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            192
+          ],
+          [
+            192
+          ]
+        ],
+        "cached_len_1": [
+          [
+            96
+          ],
+          [
+            96
+          ]
+        ],
+        "cached_len_2": [
+          [
+            48
+          ],
+          [
+            48
+          ]
+        ],
+        "cached_len_3": [
+          [
+            24
+          ],
+          [
+            24
+          ]
+        ],
+        "cached_len_4": [
+          [
+            96
+          ],
+          [
+            96
+          ]
+        ]
+      },
+      "id": "1272-135031-0008",
+      "reference": "I HOPE HE DOESN'T WORK TOO HARD SAID SHAGGY",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 9,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "HE DOESN'T WORK AT ALL",
+      "tokens": [
+        22,
+        100,
+        90,
+        13,
+        45,
+        6,
+        390,
+        84,
+        101
+      ],
+      "audio_seconds": 1.91,
+      "original_sample_rate": 16000,
+      "chunks": 6,
+      "pipeline_seconds": 0.06501032599999235,
+      "RTF": 0.034036819895283954,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            96
+          ],
+          [
+            96
+          ]
+        ],
+        "cached_len_1": [
+          [
+            48
+          ],
+          [
+            48
+          ]
+        ],
+        "cached_len_2": [
+          [
+            24
+          ],
+          [
+            24
+          ]
+        ],
+        "cached_len_3": [
+          [
+            12
+          ],
+          [
+            12
+          ]
+        ],
+        "cached_len_4": [
+          [
+            48
+          ],
+          [
+            48
+          ]
+        ]
+      },
+      "id": "1272-135031-0009",
+      "reference": "HE DOESN'T WORK AT ALL",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 5,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "IN FACT THERE IS NOTHING HE CAN DO IN THESE DOMINIONS AS WELL AS OUR GNOMES WHOSE NUMBERS ARE SO GREAT THAT IT WORRIES US TO KEEP THEM ALL BUSY",
+      "tokens": [
+        15,
+        134,
+        18,
+        6,
+        153,
+        67,
+        386,
+        22,
+        242,
+        100,
+        15,
+        4,
+        77,
+        100,
+        17,
+        40,
+        155,
+        3,
+        57,
+        283,
+        57,
+        292,
+        80,
+        13,
+        204,
+        90,
+        118,
+        77,
+        34,
+        13,
+        326,
+        41,
+        241,
+        169,
+        63,
+        263,
+        32,
+        30,
+        122,
+        43,
+        53,
+        90,
+        212,
+        10,
+        471,
+        199,
+        101,
+        360,
+        3,
+        16
+      ],
+      "audio_seconds": 8.995,
+      "original_sample_rate": 16000,
+      "chunks": 28,
+      "pipeline_seconds": 0.22766985499993098,
+      "RTF": 0.02531071206224914,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            448
+          ],
+          [
+            448
+          ]
+        ],
+        "cached_len_1": [
+          [
+            224
+          ],
+          [
+            224
+          ]
+        ],
+        "cached_len_2": [
+          [
+            112
+          ],
+          [
+            112
+          ]
+        ],
+        "cached_len_3": [
+          [
+            56
+          ],
+          [
+            56
+          ]
+        ],
+        "cached_len_4": [
+          [
+            224
+          ],
+          [
+            224
+          ]
+        ]
+      },
+      "id": "1272-135031-0010",
+      "reference": "IN FACT THERE IS NOTHING HE CAN DO IN THESE DOMINIONS AS WELL AS OUR NOMES WHOSE NUMBERS ARE SO GREAT THAT IT WORRIES US TO KEEP THEM ALL BUSY",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 30,
+        "errors": 1,
+        "WER_percent": 3.3333333333333335
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "NOT EXACTLY RETURNED CALICO",
+      "tokens": [
+        69,
+        135,
+        20,
+        18,
+        6,
+        31,
+        441,
+        8,
+        39,
+        48,
+        93,
+        24
+      ],
+      "audio_seconds": 3.18,
+      "original_sample_rate": 16000,
+      "chunks": 10,
+      "pipeline_seconds": 0.0976732379999703,
+      "RTF": 0.03071485471697179,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            160
+          ],
+          [
+            160
+          ]
+        ],
+        "cached_len_1": [
+          [
+            80
+          ],
+          [
+            80
+          ]
+        ],
+        "cached_len_2": [
+          [
+            40
+          ],
+          [
+            40
+          ]
+        ],
+        "cached_len_3": [
+          [
+            20
+          ],
+          [
+            20
+          ]
+        ],
+        "cached_len_4": [
+          [
+            80
+          ],
+          [
+            80
+          ]
+        ]
+      },
+      "id": "1272-135031-0011",
+      "reference": "NOT EXACTLY RETURNED KALIKO",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 4,
+        "errors": 1,
+        "WER_percent": 25.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "WHERE IS MY BROTHER NOW",
+      "tokens": [
+        313,
+        67,
+        105,
+        51,
+        87,
+        144,
+        226
+      ],
+      "audio_seconds": 2.04,
+      "original_sample_rate": 16000,
+      "chunks": 7,
+      "pipeline_seconds": 0.08537843099998099,
+      "RTF": 0.04185217205881421,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            112
+          ],
+          [
+            112
+          ]
+        ],
+        "cached_len_1": [
+          [
+            56
+          ],
+          [
+            56
+          ]
+        ],
+        "cached_len_2": [
+          [
+            28
+          ],
+          [
+            28
+          ]
+        ],
+        "cached_len_3": [
+          [
+            14
+          ],
+          [
+            14
+          ]
+        ],
+        "cached_len_4": [
+          [
+            56
+          ],
+          [
+            56
+          ]
+        ]
+      },
+      "id": "1272-135031-0012",
+      "reference": "WHERE IS MY BROTHER NOW",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 5,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "INQUIRED SHAGGY IN THE METAL FOREST",
+      "tokens": [
+        15,
+        299,
+        23,
+        8,
+        400,
+        353,
+        16,
+        15,
+        4,
+        86,
+        6,
+        48,
+        42,
+        207
+      ],
+      "audio_seconds": 3.7,
+      "original_sample_rate": 16000,
+      "chunks": 12,
+      "pipeline_seconds": 0.12086621599996761,
+      "RTF": 0.03266654486485611,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            192
+          ],
+          [
+            192
+          ]
+        ],
+        "cached_len_1": [
+          [
+            96
+          ],
+          [
+            96
+          ]
+        ],
+        "cached_len_2": [
+          [
+            48
+          ],
+          [
+            48
+          ]
+        ],
+        "cached_len_3": [
+          [
+            24
+          ],
+          [
+            24
+          ]
+        ],
+        "cached_len_4": [
+          [
+            96
+          ],
+          [
+            96
+          ]
+        ]
+      },
+      "id": "1272-135031-0013",
+      "reference": "INQUIRED SHAGGY IN THE METAL FOREST",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 6,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "WHERE IS THAT",
+      "tokens": [
+        313,
+        67,
+        32
+      ],
+      "audio_seconds": 1.74,
+      "original_sample_rate": 16000,
+      "chunks": 6,
+      "pipeline_seconds": 0.07457912999984728,
+      "RTF": 0.042861568965429475,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            96
+          ],
+          [
+            96
+          ]
+        ],
+        "cached_len_1": [
+          [
+            48
+          ],
+          [
+            48
+          ]
+        ],
+        "cached_len_2": [
+          [
+            24
+          ],
+          [
+            24
+          ]
+        ],
+        "cached_len_3": [
+          [
+            12
+          ],
+          [
+            12
+          ]
+        ],
+        "cached_len_4": [
+          [
+            48
+          ],
+          [
+            48
+          ]
+        ]
+      },
+      "id": "1272-135031-0014",
+      "reference": "WHERE IS THAT",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 3,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "THE MIDDLE FOREST IS IN THE GREAT DOMED CAVERN THE LARGEST AND ALL OUR DOMINIONS REPLIED CALICO",
+      "tokens": [
+        4,
+        139,
+        12,
+        12,
+        44,
+        42,
+        207,
+        67,
+        15,
+        4,
+        263,
+        100,
+        17,
+        8,
+        127,
+        123,
+        13,
+        4,
+        490,
+        61,
+        7,
+        101,
+        292,
+        100,
+        17,
+        40,
+        155,
+        3,
+        495,
+        39,
+        48,
+        93,
+        24
+      ],
+      "audio_seconds": 7.375,
+      "original_sample_rate": 16000,
+      "chunks": 23,
+      "pipeline_seconds": 0.1901950429999033,
+      "RTF": 0.025789158372868246,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            368
+          ],
+          [
+            368
+          ]
+        ],
+        "cached_len_1": [
+          [
+            184
+          ],
+          [
+            184
+          ]
+        ],
+        "cached_len_2": [
+          [
+            92
+          ],
+          [
+            92
+          ]
+        ],
+        "cached_len_3": [
+          [
+            46
+          ],
+          [
+            46
+          ]
+        ],
+        "cached_len_4": [
+          [
+            184
+          ],
+          [
+            184
+          ]
+        ]
+      },
+      "id": "1272-135031-0015",
+      "reference": "THE METAL FOREST IS IN THE GREAT DOMED CAVERN THE LARGEST IN ALL OUR DOMINIONS REPLIED KALIKO",
+      "word_errors": {
+        "S": 3,
+        "D": 0,
+        "I": 0,
+        "N": 17,
+        "errors": 3,
+        "WER_percent": 17.647058823529413
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "CALICO HESITATED",
+      "tokens": [
+        39,
+        48,
+        93,
+        24,
+        22,
+        3,
+        85,
+        349
+      ],
+      "audio_seconds": 2.28,
+      "original_sample_rate": 16000,
+      "chunks": 7,
+      "pipeline_seconds": 0.09051047000002654,
+      "RTF": 0.03969757456141516,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            112
+          ],
+          [
+            112
+          ]
+        ],
+        "cached_len_1": [
+          [
+            56
+          ],
+          [
+            56
+          ]
+        ],
+        "cached_len_2": [
+          [
+            28
+          ],
+          [
+            28
+          ]
+        ],
+        "cached_len_3": [
+          [
+            14
+          ],
+          [
+            14
+          ]
+        ],
+        "cached_len_4": [
+          [
+            56
+          ],
+          [
+            56
+          ]
+        ]
+      },
+      "id": "1272-135031-0016",
+      "reference": "KALIKO HESITATED",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 2,
+        "errors": 1,
+        "WER_percent": 50.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "HOWEVER IF WE LOOK SHARP WE MAY BE ABLE TO DISCOVER ONE OF THESE SECRET WAYS",
+      "tokens": [
+        482,
+        165,
+        98,
+        239,
+        187,
+        36,
+        21,
+        98,
+        331,
+        37,
+        5,
+        259,
+        10,
+        203,
+        18,
+        24,
+        123,
+        126,
+        9,
+        4,
+        77,
+        125,
+        18,
+        26,
+        6,
+        333,
+        3
+      ],
+      "audio_seconds": 6.86,
+      "original_sample_rate": 16000,
+      "chunks": 22,
+      "pipeline_seconds": 0.1991436910000175,
+      "RTF": 0.029029692565600215,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            352
+          ],
+          [
+            352
+          ]
+        ],
+        "cached_len_1": [
+          [
+            176
+          ],
+          [
+            176
+          ]
+        ],
+        "cached_len_2": [
+          [
+            88
+          ],
+          [
+            88
+          ]
+        ],
+        "cached_len_3": [
+          [
+            44
+          ],
+          [
+            44
+          ]
+        ],
+        "cached_len_4": [
+          [
+            176
+          ],
+          [
+            176
+          ]
+        ]
+      },
+      "id": "1272-135031-0017",
+      "reference": "HOWEVER IF WE LOOK SHARP WE MAY BE ABLE TO DISCOVER ONE OF THESE SECRET WAYS",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 16,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "OH NO I'M QUITE SURE HE DIDN",
+      "tokens": [
+        152,
+        99,
+        94,
+        19,
+        45,
+        17,
+        450,
+        137,
+        26,
+        22,
+        238,
+        13
+      ],
+      "audio_seconds": 2.4449375,
+      "original_sample_rate": 16000,
+      "chunks": 8,
+      "pipeline_seconds": 0.07751157999996394,
+      "RTF": 0.031702888110622024,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            128
+          ],
+          [
+            128
+          ]
+        ],
+        "cached_len_1": [
+          [
+            64
+          ],
+          [
+            64
+          ]
+        ],
+        "cached_len_2": [
+          [
+            32
+          ],
+          [
+            32
+          ]
+        ],
+        "cached_len_3": [
+          [
+            16
+          ],
+          [
+            16
+          ]
+        ],
+        "cached_len_4": [
+          [
+            64
+          ],
+          [
+            64
+          ]
+        ]
+      },
+      "id": "1272-135031-0018",
+      "reference": "OH NO I'M QUITE SURE HE DIDN'T",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 7,
+        "errors": 1,
+        "WER_percent": 14.285714285714285
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "THAT'S FUNNY REMARKED BETSEY THOUGHTFULLY",
+      "tokens": [
+        32,
+        45,
+        3,
+        64,
+        194,
+        13,
+        16,
+        49,
+        17,
+        36,
+        82,
+        8,
+        37,
+        6,
+        77,
+        16,
+        335,
+        246,
+        31
+      ],
+      "audio_seconds": 3.525,
+      "original_sample_rate": 16000,
+      "chunks": 11,
+      "pipeline_seconds": 0.10780314600015117,
+      "RTF": 0.030582452766000332,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            176
+          ],
+          [
+            176
+          ]
+        ],
+        "cached_len_1": [
+          [
+            88
+          ],
+          [
+            88
+          ]
+        ],
+        "cached_len_2": [
+          [
+            44
+          ],
+          [
+            44
+          ]
+        ],
+        "cached_len_3": [
+          [
+            22
+          ],
+          [
+            22
+          ]
+        ],
+        "cached_len_4": [
+          [
+            88
+          ],
+          [
+            88
+          ]
+        ]
+      },
+      "id": "1272-135031-0019",
+      "reference": "THAT'S FUNNY REMARKED BETSY THOUGHTFULLY",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 5,
+        "errors": 1,
+        "WER_percent": 20.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "I DON'T BELIEVE ANNE KNEW ANY MAGIC OR SHE'D AVERTED BEFORE",
+      "tokens": [
+        19,
+        339,
+        45,
+        6,
+        475,
+        128,
+        88,
+        442,
+        253,
+        161,
+        52,
+        93,
+        120,
+        73,
+        45,
+        12,
+        5,
+        123,
+        192,
+        296
+      ],
+      "audio_seconds": 4.65,
+      "original_sample_rate": 16000,
+      "chunks": 15,
+      "pipeline_seconds": 0.15358257699995193,
+      "RTF": 0.03302851118278536,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            240
+          ],
+          [
+            240
+          ]
+        ],
+        "cached_len_1": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ],
+        "cached_len_2": [
+          [
+            60
+          ],
+          [
+            60
+          ]
+        ],
+        "cached_len_3": [
+          [
+            30
+          ],
+          [
+            30
+          ]
+        ],
+        "cached_len_4": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ]
+      },
+      "id": "1272-135031-0020",
+      "reference": "I DON'T BELIEVE ANN KNEW ANY MAGIC OR SHE'D HAVE WORKED IT BEFORE",
+      "word_errors": {
+        "S": 2,
+        "D": 2,
+        "I": 0,
+        "N": 13,
+        "errors": 4,
+        "WER_percent": 30.76923076923077
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "I DO NOT KNOW CONFESS SHAGGY",
+      "tokens": [
+        19,
+        100,
+        69,
+        219,
+        111,
+        38,
+        90,
+        3,
+        400,
+        353,
+        16
+      ],
+      "audio_seconds": 2.595,
+      "original_sample_rate": 16000,
+      "chunks": 8,
+      "pipeline_seconds": 0.0862381849999565,
+      "RTF": 0.03323244123312389,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            128
+          ],
+          [
+            128
+          ]
+        ],
+        "cached_len_1": [
+          [
+            64
+          ],
+          [
+            64
+          ]
+        ],
+        "cached_len_2": [
+          [
+            32
+          ],
+          [
+            32
+          ]
+        ],
+        "cached_len_3": [
+          [
+            16
+          ],
+          [
+            16
+          ]
+        ],
+        "cached_len_4": [
+          [
+            64
+          ],
+          [
+            64
+          ]
+        ]
+      },
+      "id": "1272-135031-0021",
+      "reference": "I DO NOT KNOW CONFESSED SHAGGY",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 6,
+        "errors": 1,
+        "WER_percent": 16.666666666666664
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "TRUE AGREED CALICO",
+      "tokens": [
+        56,
+        181,
+        11,
+        5,
+        52,
+        26,
+        8,
+        39,
+        48,
+        93,
+        24
+      ],
+      "audio_seconds": 2.695,
+      "original_sample_rate": 16000,
+      "chunks": 9,
+      "pipeline_seconds": 0.08559877700008656,
+      "RTF": 0.03176206938778722,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            144
+          ],
+          [
+            144
+          ]
+        ],
+        "cached_len_1": [
+          [
+            72
+          ],
+          [
+            72
+          ]
+        ],
+        "cached_len_2": [
+          [
+            36
+          ],
+          [
+            36
+          ]
+        ],
+        "cached_len_3": [
+          [
+            18
+          ],
+          [
+            18
+          ]
+        ],
+        "cached_len_4": [
+          [
+            72
+          ],
+          [
+            72
+          ]
+        ]
+      },
+      "id": "1272-135031-0022",
+      "reference": "TRUE AGREED KALIKO",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 3,
+        "errors": 1,
+        "WER_percent": 33.33333333333333
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "CALICO WENT TO THE BIG GONG AND POUNDED ON IT JUST AS BURGADA USED TO DO BUT NO ONE ANSWERED THE SUMMONS",
+      "tokens": [
+        39,
+        48,
+        93,
+        24,
+        351,
+        10,
+        4,
+        51,
+        304,
+        117,
+        92,
+        7,
+        178,
+        195,
+        8,
+        74,
+        30,
+        344,
+        57,
+        51,
+        79,
+        52,
+        136,
+        20,
+        212,
+        8,
+        10,
+        100,
+        71,
+        94,
+        126,
+        429,
+        8,
+        4,
+        137,
+        17,
+        17,
+        76,
+        3
+      ],
+      "audio_seconds": 7.52,
+      "original_sample_rate": 16000,
+      "chunks": 24,
+      "pipeline_seconds": 0.20886459200005447,
+      "RTF": 0.027774546808517882,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            384
+          ],
+          [
+            384
+          ]
+        ],
+        "cached_len_1": [
+          [
+            192
+          ],
+          [
+            192
+          ]
+        ],
+        "cached_len_2": [
+          [
+            96
+          ],
+          [
+            96
+          ]
+        ],
+        "cached_len_3": [
+          [
+            48
+          ],
+          [
+            48
+          ]
+        ],
+        "cached_len_4": [
+          [
+            192
+          ],
+          [
+            192
+          ]
+        ]
+      },
+      "id": "1272-135031-0023",
+      "reference": "KALIKO WENT TO THE BIG GONG AND POUNDED ON IT JUST AS RUGGEDO USED TO DO BUT NO ONE ANSWERED THE SUMMONS",
+      "word_errors": {
+        "S": 2,
+        "D": 0,
+        "I": 0,
+        "N": 22,
+        "errors": 2,
+        "WER_percent": 9.090909090909092
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "HAVING RETURNED TO THE ROYAL CAVERN CALICO FIRST POUNDED THE GONG AND THEN SAT IN THE THRONE WEARING RIGADOES DISCARDED RUBY CROWN AND HOLDING IN HIS HAND THE SCEPTRE WHICH RUGGEDO HAD SO OFTEN THROWN AT HIS HEAD",
+      "tokens": [
+        459,
+        441,
+        8,
+        10,
+        4,
+        171,
+        16,
+        48,
+        127,
+        123,
+        13,
+        39,
+        48,
+        93,
+        24,
+        343,
+        178,
+        195,
+        8,
+        4,
+        117,
+        92,
+        7,
+        278,
+        193,
+        6,
+        15,
+        4,
+        119,
+        87,
+        88,
+        98,
+        36,
+        14,
+        307,
+        52,
+        136,
+        24,
+        90,
+        203,
+        18,
+        215,
+        8,
+        322,
+        41,
+        16,
+        39,
+        261,
+        13,
+        7,
+        154,
+        25,
+        12,
+        14,
+        15,
+        46,
+        273,
+        4,
+        35,
+        66,
+        21,
+        6,
+        26,
+        110,
+        322,
+        353,
+        8,
+        24,
+        62,
+        63,
+        9,
+        251,
+        119,
+        261,
+        13,
+        84,
+        46,
+        378
+      ],
+      "audio_seconds": 14.47,
+      "original_sample_rate": 16000,
+      "chunks": 45,
+      "pipeline_seconds": 0.3818384559999686,
+      "RTF": 0.02638828306841524,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            720
+          ],
+          [
+            720
+          ]
+        ],
+        "cached_len_1": [
+          [
+            360
+          ],
+          [
+            360
+          ]
+        ],
+        "cached_len_2": [
+          [
+            180
+          ],
+          [
+            180
+          ]
+        ],
+        "cached_len_3": [
+          [
+            90
+          ],
+          [
+            90
+          ]
+        ],
+        "cached_len_4": [
+          [
+            360
+          ],
+          [
+            360
+          ]
+        ]
+      },
+      "id": "1272-135031-0024",
+      "reference": "HAVING RETURNED TO THE ROYAL CAVERN KALIKO FIRST POUNDED THE GONG AND THEN SAT IN THE THRONE WEARING RUGGEDO'S DISCARDED RUBY CROWN AND HOLDING IN HIS HAND THE SCEPTRE WHICH RUGGEDO HAD SO OFTEN THROWN AT HIS HEAD",
+      "word_errors": {
+        "S": 2,
+        "D": 0,
+        "I": 0,
+        "N": 38,
+        "errors": 2,
+        "WER_percent": 5.263157894736842
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "A MAN SAID TO THE UNIVERSE SIR I EXIST",
+      "tokens": [
+        5,
+        133,
+        115,
+        10,
+        4,
+        180,
+        27,
+        123,
+        77,
+        35,
+        97,
+        19,
+        135,
+        275
+      ],
+      "audio_seconds": 4.65,
+      "original_sample_rate": 16000,
+      "chunks": 15,
+      "pipeline_seconds": 0.18390384400004223,
+      "RTF": 0.039549213763449935,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            240
+          ],
+          [
+            240
+          ]
+        ],
+        "cached_len_1": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ],
+        "cached_len_2": [
+          [
+            60
+          ],
+          [
+            60
+          ]
+        ],
+        "cached_len_3": [
+          [
+            30
+          ],
+          [
+            30
+          ]
+        ],
+        "cached_len_4": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ]
+      },
+      "id": "1272-141231-0000",
+      "reference": "A MAN SAID TO THE UNIVERSE SIR I EXIST",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 9,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "SWEAT COVERED BRION'S BODY TRICKLING INTO THE TITLING CLOTH THAT WAS THE ONLY GERMAN HE WORE",
+      "tokens": [
+        366,
+        11,
+        140,
+        220,
+        123,
+        8,
+        51,
+        53,
+        76,
+        45,
+        3,
+        141,
+        12,
+        16,
+        56,
+        53,
+        113,
+        25,
+        14,
+        218,
+        4,
+        56,
+        85,
+        25,
+        14,
+        39,
+        103,
+        70,
+        32,
+        33,
+        4,
+        284,
+        80,
+        29,
+        285,
+        22,
+        324,
+        26
+      ],
+      "audio_seconds": 6.535,
+      "original_sample_rate": 16000,
+      "chunks": 21,
+      "pipeline_seconds": 0.18381008999995174,
+      "RTF": 0.028127022188209908,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            336
+          ],
+          [
+            336
+          ]
+        ],
+        "cached_len_1": [
+          [
+            168
+          ],
+          [
+            168
+          ]
+        ],
+        "cached_len_2": [
+          [
+            84
+          ],
+          [
+            84
+          ]
+        ],
+        "cached_len_3": [
+          [
+            42
+          ],
+          [
+            42
+          ]
+        ],
+        "cached_len_4": [
+          [
+            168
+          ],
+          [
+            168
+          ]
+        ]
+      },
+      "id": "1272-141231-0001",
+      "reference": "SWEAT COVERED BRION'S BODY TRICKLING INTO THE TIGHT LOINCLOTH THAT WAS THE ONLY GARMENT HE WORE",
+      "word_errors": {
+        "S": 3,
+        "D": 0,
+        "I": 0,
+        "N": 16,
+        "errors": 3,
+        "WER_percent": 18.75
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "THE CUT ON HIS CHEST STILL DRIPPING BLOOD THE ACHE OF HIS OVERSTRAINED EYES EVEN THE SOARING ARENA AROUND HIM WITH A THOUSANDS OF SPECTATORS WERE TRIVIALITIES NOT WORTH THINKING ABOUT",
+      "tokens": [
+        4,
+        39,
+        162,
+        74,
+        46,
+        39,
+        206,
+        61,
+        384,
+        121,
+        53,
+        145,
+        14,
+        51,
+        103,
+        24,
+        12,
+        4,
+        5,
+        81,
+        11,
+        9,
+        46,
+        255,
+        61,
+        89,
+        40,
+        8,
+        382,
+        303,
+        4,
+        63,
+        36,
+        14,
+        169,
+        13,
+        20,
+        5,
+        87,
+        195,
+        95,
+        55,
+        5,
+        119,
+        281,
+        20,
+        68,
+        3,
+        9,
+        177,
+        11,
+        18,
+        6,
+        140,
+        43,
+        3,
+        130,
+        56,
+        53,
+        50,
+        27,
+        48,
+        85,
+        256,
+        69,
+        122,
+        43,
+        70,
+        328,
+        14,
+        250
+      ],
+      "audio_seconds": 13.335,
+      "original_sample_rate": 16000,
+      "chunks": 42,
+      "pipeline_seconds": 0.36197235999998156,
+      "RTF": 0.02714453393325696,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            672
+          ],
+          [
+            672
+          ]
+        ],
+        "cached_len_1": [
+          [
+            336
+          ],
+          [
+            336
+          ]
+        ],
+        "cached_len_2": [
+          [
+            168
+          ],
+          [
+            168
+          ]
+        ],
+        "cached_len_3": [
+          [
+            84
+          ],
+          [
+            84
+          ]
+        ],
+        "cached_len_4": [
+          [
+            336
+          ],
+          [
+            336
+          ]
+        ]
+      },
+      "id": "1272-141231-0002",
+      "reference": "THE CUT ON HIS CHEST STILL DRIPPING BLOOD THE ACHE OF HIS OVERSTRAINED EYES EVEN THE SOARING ARENA AROUND HIM WITH THE THOUSANDS OF SPECTATORS WERE TRIVIALITIES NOT WORTH THINKING ABOUT",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 31,
+        "errors": 1,
+        "WER_percent": 3.225806451612903
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "HIS INSTANT PANIC WAS FOLLOWED BY A SMALL SHARP BLOW HIGH ON HIS CHEST",
+      "tokens": [
+        46,
+        15,
+        61,
+        196,
+        158,
+        13,
+        93,
+        33,
+        440,
+        8,
+        104,
+        5,
+        476,
+        187,
+        36,
+        21,
+        51,
+        25,
+        150,
+        437,
+        74,
+        46,
+        39,
+        206,
+        61
+      ],
+      "audio_seconds": 5.42,
+      "original_sample_rate": 16000,
+      "chunks": 17,
+      "pipeline_seconds": 0.15269540300005247,
+      "RTF": 0.028172583579345475,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            272
+          ],
+          [
+            272
+          ]
+        ],
+        "cached_len_1": [
+          [
+            136
+          ],
+          [
+            136
+          ]
+        ],
+        "cached_len_2": [
+          [
+            68
+          ],
+          [
+            68
+          ]
+        ],
+        "cached_len_3": [
+          [
+            34
+          ],
+          [
+            34
+          ]
+        ],
+        "cached_len_4": [
+          [
+            136
+          ],
+          [
+            136
+          ]
+        ]
+      },
+      "id": "1272-141231-0003",
+      "reference": "HIS INSTANT OF PANIC WAS FOLLOWED BY A SMALL SHARP BLOW HIGH ON HIS CHEST",
+      "word_errors": {
+        "S": 0,
+        "D": 1,
+        "I": 0,
+        "N": 15,
+        "errors": 1,
+        "WER_percent": 6.666666666666667
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "ONE MINUTE A VOICE SAID AND A TIME BUZZER SOUNDED",
+      "tokens": [
+        126,
+        139,
+        13,
+        162,
+        11,
+        5,
+        465,
+        115,
+        7,
+        5,
+        222,
+        360,
+        234,
+        234,
+        29,
+        63,
+        195,
+        8
+      ],
+      "audio_seconds": 5.09,
+      "original_sample_rate": 16000,
+      "chunks": 16,
+      "pipeline_seconds": 0.12981974400008767,
+      "RTF": 0.025504861296677343,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            256
+          ],
+          [
+            256
+          ]
+        ],
+        "cached_len_1": [
+          [
+            128
+          ],
+          [
+            128
+          ]
+        ],
+        "cached_len_2": [
+          [
+            64
+          ],
+          [
+            64
+          ]
+        ],
+        "cached_len_3": [
+          [
+            32
+          ],
+          [
+            32
+          ]
+        ],
+        "cached_len_4": [
+          [
+            128
+          ],
+          [
+            128
+          ]
+        ]
+      },
+      "id": "1272-141231-0004",
+      "reference": "ONE MINUTE A VOICE SAID AND THE TIME BUZZER SOUNDED",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 10,
+        "errors": 1,
+        "WER_percent": 10.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "A MINUTE IS NOT A VERY LARGE MEASURE OF TIME AND HIS BODY NEEDED EVERY FRACTION OF IT",
+      "tokens": [
+        5,
+        139,
+        13,
+        162,
+        11,
+        67,
+        69,
+        5,
+        230,
+        490,
+        86,
+        183,
+        28,
+        26,
+        9,
+        222,
+        7,
+        46,
+        141,
+        12,
+        16,
+        197,
+        8,
+        8,
+        301,
+        64,
+        89,
+        18,
+        173,
+        9,
+        30
+      ],
+      "audio_seconds": 5.81,
+      "original_sample_rate": 16000,
+      "chunks": 18,
+      "pipeline_seconds": 0.1528731289999996,
+      "RTF": 0.026312070395869126,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            288
+          ],
+          [
+            288
+          ]
+        ],
+        "cached_len_1": [
+          [
+            144
+          ],
+          [
+            144
+          ]
+        ],
+        "cached_len_2": [
+          [
+            72
+          ],
+          [
+            72
+          ]
+        ],
+        "cached_len_3": [
+          [
+            36
+          ],
+          [
+            36
+          ]
+        ],
+        "cached_len_4": [
+          [
+            144
+          ],
+          [
+            144
+          ]
+        ]
+      },
+      "id": "1272-141231-0005",
+      "reference": "A MINUTE IS NOT A VERY LARGE MEASURE OF TIME AND HIS BODY NEEDED EVERY FRACTION OF IT",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 18,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "THE BUZZERS WERE TRIGGERED AS MUSCLES INTO COMPLETE RELAXATION",
+      "tokens": [
+        4,
+        360,
+        234,
+        234,
+        29,
+        3,
+        130,
+        56,
+        53,
+        353,
+        29,
+        8,
+        57,
+        260,
+        159,
+        18,
+        44,
+        3,
+        218,
+        334,
+        44,
+        114,
+        49,
+        108,
+        245,
+        146
+      ],
+      "audio_seconds": 4.93,
+      "original_sample_rate": 16000,
+      "chunks": 16,
+      "pipeline_seconds": 0.14383459399982712,
+      "RTF": 0.02917537403647609,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            256
+          ],
+          [
+            256
+          ]
+        ],
+        "cached_len_1": [
+          [
+            128
+          ],
+          [
+            128
+          ]
+        ],
+        "cached_len_2": [
+          [
+            64
+          ],
+          [
+            64
+          ]
+        ],
+        "cached_len_3": [
+          [
+            32
+          ],
+          [
+            32
+          ]
+        ],
+        "cached_len_4": [
+          [
+            128
+          ],
+          [
+            128
+          ]
+        ]
+      },
+      "id": "1272-141231-0006",
+      "reference": "THE BUZZER'S WHIRR TRIGGERED HIS MUSCLES INTO COMPLETE RELAXATION",
+      "word_errors": {
+        "S": 3,
+        "D": 0,
+        "I": 0,
+        "N": 9,
+        "errors": 3,
+        "WER_percent": 33.33333333333333
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "ONLY HIS HEART AND LUNGS WORKED ON AT A STRONG MISERED RATE",
+      "tokens": [
+        284,
+        46,
+        413,
+        7,
+        447,
+        92,
+        3,
+        390,
+        8,
+        74,
+        84,
+        5,
+        109,
+        87,
+        92,
+        139,
+        3,
+        29,
+        8,
+        188,
+        114
+      ],
+      "audio_seconds": 4.735,
+      "original_sample_rate": 16000,
+      "chunks": 15,
+      "pipeline_seconds": 0.12776502800011258,
+      "RTF": 0.026983110454089243,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            240
+          ],
+          [
+            240
+          ]
+        ],
+        "cached_len_1": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ],
+        "cached_len_2": [
+          [
+            60
+          ],
+          [
+            60
+          ]
+        ],
+        "cached_len_3": [
+          [
+            30
+          ],
+          [
+            30
+          ]
+        ],
+        "cached_len_4": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ]
+      },
+      "id": "1272-141231-0007",
+      "reference": "ONLY HIS HEART AND LUNGS WORKED ON AT A STRONG MEASURED RATE",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 12,
+        "errors": 1,
+        "WER_percent": 8.333333333333332
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "HE WAS IN REVERIE SLIDING ALONG THE BORDERS OF CONSCIOUSNESS",
+      "tokens": [
+        22,
+        33,
+        15,
+        49,
+        75,
+        53,
+        11,
+        35,
+        124,
+        12,
+        14,
+        5,
+        103,
+        92,
+        4,
+        51,
+        43,
+        12,
+        241,
+        9,
+        111,
+        3,
+        18,
+        295,
+        257
+      ],
+      "audio_seconds": 4.595,
+      "original_sample_rate": 16000,
+      "chunks": 15,
+      "pipeline_seconds": 0.14282671000000846,
+      "RTF": 0.03108307072905516,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            240
+          ],
+          [
+            240
+          ]
+        ],
+        "cached_len_1": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ],
+        "cached_len_2": [
+          [
+            60
+          ],
+          [
+            60
+          ]
+        ],
+        "cached_len_3": [
+          [
+            30
+          ],
+          [
+            30
+          ]
+        ],
+        "cached_len_4": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ]
+      },
+      "id": "1272-141231-0008",
+      "reference": "HE WAS IN REVERIE SLIDING ALONG THE BORDERS OF CONSCIOUSNESS",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 10,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "THE CONTESTANTS IN THE TWENTIES NEEDED UNDISTURBED REST THEREFORE KNIGHTS AND ADRMITORIES WERE AS QUIET AS DEATH",
+      "tokens": [
+        4,
+        111,
+        6,
+        207,
+        196,
+        3,
+        15,
+        4,
+        56,
+        65,
+        96,
+        256,
+        197,
+        8,
+        8,
+        180,
+        12,
+        275,
+        79,
+        41,
+        8,
+        49,
+        61,
+        153,
+        38,
+        43,
+        11,
+        167,
+        13,
+        179,
+        3,
+        7,
+        5,
+        12,
+        23,
+        17,
+        85,
+        43,
+        256,
+        130,
+        57,
+        34,
+        299,
+        151,
+        57,
+        78,
+        20,
+        70
+      ],
+      "audio_seconds": 8.62,
+      "original_sample_rate": 16000,
+      "chunks": 27,
+      "pipeline_seconds": 0.23416859700000714,
+      "RTF": 0.027165730510441667,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            432
+          ],
+          [
+            432
+          ]
+        ],
+        "cached_len_1": [
+          [
+            216
+          ],
+          [
+            216
+          ]
+        ],
+        "cached_len_2": [
+          [
+            108
+          ],
+          [
+            108
+          ]
+        ],
+        "cached_len_3": [
+          [
+            54
+          ],
+          [
+            54
+          ]
+        ],
+        "cached_len_4": [
+          [
+            216
+          ],
+          [
+            216
+          ]
+        ]
+      },
+      "id": "1272-141231-0009",
+      "reference": "THE CONTESTANTS IN THE TWENTIES NEEDED UNDISTURBED REST THEREFORE NIGHTS IN THE DORMITORIES WERE AS QUIET AS DEATH",
+      "word_errors": {
+        "S": 3,
+        "D": 1,
+        "I": 0,
+        "N": 18,
+        "errors": 4,
+        "WER_percent": 22.22222222222222
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "PARTICULARLY SO AND ITS LAST NIGHT WHEN ONLY TWO OF THE LITTLE CUBICLES WERE OCCUPIED THE THOUSANDS OF OTHERS STANDING WITH DARK EMPTY DOORS",
+      "tokens": [
+        357,
+        93,
+        191,
+        36,
+        31,
+        63,
+        7,
+        30,
+        3,
+        391,
+        385,
+        142,
+        284,
+        287,
+        9,
+        4,
+        237,
+        39,
+        28,
+        41,
+        93,
+        44,
+        3,
+        130,
+        152,
+        18,
+        18,
+        28,
+        21,
+        27,
+        8,
+        4,
+        119,
+        281,
+        20,
+        68,
+        3,
+        9,
+        235,
+        3,
+        277,
+        68,
+        14,
+        55,
+        493,
+        54,
+        17,
+        21,
+        240,
+        100,
+        43,
+        3
+      ],
+      "audio_seconds": 10.76,
+      "original_sample_rate": 16000,
+      "chunks": 34,
+      "pipeline_seconds": 0.27266759300005106,
+      "RTF": 0.025340854368034484,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            544
+          ],
+          [
+            544
+          ]
+        ],
+        "cached_len_1": [
+          [
+            272
+          ],
+          [
+            272
+          ]
+        ],
+        "cached_len_2": [
+          [
+            136
+          ],
+          [
+            136
+          ]
+        ],
+        "cached_len_3": [
+          [
+            68
+          ],
+          [
+            68
+          ]
+        ],
+        "cached_len_4": [
+          [
+            272
+          ],
+          [
+            272
+          ]
+        ]
+      },
+      "id": "1272-141231-0010",
+      "reference": "PARTICULARLY SO ON THIS LAST NIGHT WHEN ONLY TWO OF THE LITTLE CUBICLES WERE OCCUPIED THE THOUSANDS OF OTHERS STANDING WITH DARK EMPTY DOORS",
+      "word_errors": {
+        "S": 2,
+        "D": 0,
+        "I": 0,
+        "N": 24,
+        "errors": 2,
+        "WER_percent": 8.333333333333332
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "THE OTHER VOICE SNAPPED WITH A HARSH URGENCY CLEARLY USED TO COMMAND",
+      "tokens": [
+        4,
+        235,
+        465,
+        35,
+        13,
+        20,
+        145,
+        8,
+        55,
+        5,
+        132,
+        23,
+        270,
+        34,
+        79,
+        201,
+        13,
+        18,
+        16,
+        39,
+        44,
+        36,
+        31,
+        212,
+        8,
+        10,
+        274,
+        285,
+        12
+      ],
+      "audio_seconds": 5.015,
+      "original_sample_rate": 16000,
+      "chunks": 16,
+      "pipeline_seconds": 0.1399438519999876,
+      "RTF": 0.027905055234294637,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            256
+          ],
+          [
+            256
+          ]
+        ],
+        "cached_len_1": [
+          [
+            128
+          ],
+          [
+            128
+          ]
+        ],
+        "cached_len_2": [
+          [
+            64
+          ],
+          [
+            64
+          ]
+        ],
+        "cached_len_3": [
+          [
+            32
+          ],
+          [
+            32
+          ]
+        ],
+        "cached_len_4": [
+          [
+            128
+          ],
+          [
+            128
+          ]
+        ]
+      },
+      "id": "1272-141231-0011",
+      "reference": "THE OTHER VOICE SNAPPED WITH A HARSH URGENCY CLEARLY USED TO COMMAND",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 12,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "I'M HERE BECAUSE THE MATTER IS OF UTMOST IMPORTANCE AND BRAND IS THE ONE I MUST SEE NOW STAND ASIDE",
+      "tokens": [
+        19,
+        45,
+        17,
+        22,
+        26,
+        433,
+        4,
+        473,
+        67,
+        9,
+        34,
+        162,
+        314,
+        61,
+        359,
+        43,
+        6,
+        221,
+        7,
+        51,
+        89,
+        68,
+        67,
+        4,
+        126,
+        19,
+        317,
+        189,
+        226,
+        277,
+        68,
+        5,
+        310
+      ],
+      "audio_seconds": 7.74,
+      "original_sample_rate": 16000,
+      "chunks": 24,
+      "pipeline_seconds": 0.20329340800003592,
+      "RTF": 0.02626529819121911,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            384
+          ],
+          [
+            384
+          ]
+        ],
+        "cached_len_1": [
+          [
+            192
+          ],
+          [
+            192
+          ]
+        ],
+        "cached_len_2": [
+          [
+            96
+          ],
+          [
+            96
+          ]
+        ],
+        "cached_len_3": [
+          [
+            48
+          ],
+          [
+            48
+          ]
+        ],
+        "cached_len_4": [
+          [
+            192
+          ],
+          [
+            192
+          ]
+        ]
+      },
+      "id": "1272-141231-0012",
+      "reference": "I'M HERE BECAUSE THE MATTER IS OF UTMOST IMPORTANCE AND BRANDD IS THE ONE I MUST SEE NOW STAND ASIDE",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 20,
+        "errors": 1,
+        "WER_percent": 5.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "THE TWENTIES",
+      "tokens": [
+        4,
+        56,
+        65,
+        96,
+        256
+      ],
+      "audio_seconds": 1.6399375,
+      "original_sample_rate": 16000,
+      "chunks": 5,
+      "pipeline_seconds": 0.059443889000021954,
+      "RTF": 0.03624765516979882,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            80
+          ],
+          [
+            80
+          ]
+        ],
+        "cached_len_1": [
+          [
+            40
+          ],
+          [
+            40
+          ]
+        ],
+        "cached_len_2": [
+          [
+            20
+          ],
+          [
+            20
+          ]
+        ],
+        "cached_len_3": [
+          [
+            10
+          ],
+          [
+            10
+          ]
+        ],
+        "cached_len_4": [
+          [
+            40
+          ],
+          [
+            40
+          ]
+        ]
+      },
+      "id": "1272-141231-0013",
+      "reference": "THE TWENTIES",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 2,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "YOU MUST HAVE DRAWN HIS GUN BECAUSE THE INTRUDER SAID QUICKLY BUT THAT A WAY YOUR BEING A FOOL OUT",
+      "tokens": [
+        47,
+        317,
+        102,
+        121,
+        89,
+        65,
+        13,
+        46,
+        80,
+        194,
+        433,
+        4,
+        15,
+        6,
+        181,
+        12,
+        29,
+        115,
+        34,
+        299,
+        113,
+        31,
+        71,
+        32,
+        5,
+        333,
+        217,
+        37,
+        14,
+        5,
+        312,
+        184,
+        163
+      ],
+      "audio_seconds": 7.305,
+      "original_sample_rate": 16000,
+      "chunks": 23,
+      "pipeline_seconds": 0.2114248850000422,
+      "RTF": 0.028942489390833978,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            368
+          ],
+          [
+            368
+          ]
+        ],
+        "cached_len_1": [
+          [
+            184
+          ],
+          [
+            184
+          ]
+        ],
+        "cached_len_2": [
+          [
+            92
+          ],
+          [
+            92
+          ]
+        ],
+        "cached_len_3": [
+          [
+            46
+          ],
+          [
+            46
+          ]
+        ],
+        "cached_len_4": [
+          [
+            184
+          ],
+          [
+            184
+          ]
+        ]
+      },
+      "id": "1272-141231-0014",
+      "reference": "HE MUST HAVE DRAWN HIS GUN BECAUSE THE INTRUDER SAID QUICKLY PUT THAT AWAY YOU'RE BEING A FOOL OUT",
+      "word_errors": {
+        "S": 4,
+        "D": 0,
+        "I": 1,
+        "N": 19,
+        "errors": 5,
+        "WER_percent": 26.31578947368421
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "THROUGH A SILENCE THEN AND STILL WONDERING BRION WAS ONCE MORE ASLEEP",
+      "tokens": [
+        364,
+        5,
+        35,
+        91,
+        209,
+        278,
+        7,
+        384,
+        497,
+        14,
+        51,
+        53,
+        76,
+        33,
+        74,
+        66,
+        213,
+        57,
+        44,
+        11,
+        21
+      ],
+      "audio_seconds": 5.68,
+      "original_sample_rate": 16000,
+      "chunks": 18,
+      "pipeline_seconds": 0.15910455400012324,
+      "RTF": 0.02801136514086677,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            288
+          ],
+          [
+            288
+          ]
+        ],
+        "cached_len_1": [
+          [
+            144
+          ],
+          [
+            144
+          ]
+        ],
+        "cached_len_2": [
+          [
+            72
+          ],
+          [
+            72
+          ]
+        ],
+        "cached_len_3": [
+          [
+            36
+          ],
+          [
+            36
+          ]
+        ],
+        "cached_len_4": [
+          [
+            144
+          ],
+          [
+            144
+          ]
+        ]
+      },
+      "id": "1272-141231-0015",
+      "reference": "THERE WAS SILENCE THEN AND STILL WONDERING BRION WAS ONCE MORE ASLEEP",
+      "word_errors": {
+        "S": 2,
+        "D": 0,
+        "I": 0,
+        "N": 12,
+        "errors": 2,
+        "WER_percent": 16.666666666666664
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "TEN SECONDS",
+      "tokens": [
+        56,
+        72,
+        125,
+        18,
+        76,
+        12,
+        3
+      ],
+      "audio_seconds": 1.85,
+      "original_sample_rate": 16000,
+      "chunks": 6,
+      "pipeline_seconds": 0.07528416499985724,
+      "RTF": 0.04069414324316607,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            96
+          ],
+          [
+            96
+          ]
+        ],
+        "cached_len_1": [
+          [
+            48
+          ],
+          [
+            48
+          ]
+        ],
+        "cached_len_2": [
+          [
+            24
+          ],
+          [
+            24
+          ]
+        ],
+        "cached_len_3": [
+          [
+            12
+          ],
+          [
+            12
+          ]
+        ],
+        "cached_len_4": [
+          [
+            48
+          ],
+          [
+            48
+          ]
+        ]
+      },
+      "id": "1272-141231-0016",
+      "reference": "TEN SECONDS",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 2,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "HE ASKED THE HANDLER WHO WAS NEEDING HIS ACHING MUSCLES",
+      "tokens": [
+        22,
+        421,
+        4,
+        273,
+        25,
+        29,
+        118,
+        33,
+        197,
+        8,
+        14,
+        46,
+        5,
+        81,
+        14,
+        260,
+        159,
+        18,
+        44,
+        3
+      ],
+      "audio_seconds": 3.735,
+      "original_sample_rate": 16000,
+      "chunks": 12,
+      "pipeline_seconds": 0.11955848599995988,
+      "RTF": 0.03201030414992233,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            192
+          ],
+          [
+            192
+          ]
+        ],
+        "cached_len_1": [
+          [
+            96
+          ],
+          [
+            96
+          ]
+        ],
+        "cached_len_2": [
+          [
+            48
+          ],
+          [
+            48
+          ]
+        ],
+        "cached_len_3": [
+          [
+            24
+          ],
+          [
+            24
+          ]
+        ],
+        "cached_len_4": [
+          [
+            96
+          ],
+          [
+            96
+          ]
+        ]
+      },
+      "id": "1272-141231-0017",
+      "reference": "HE ASKED THE HANDLER WHO WAS KNEADING HIS ACHING MUSCLES",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 10,
+        "errors": 1,
+        "WER_percent": 10.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "A RED HAIRED MOUNTAIN OF A MAN WITH AN APPARENTLY INEXHAUSTIBLE STORE OF ENERGY",
+      "tokens": [
+        5,
+        49,
+        12,
+        132,
+        97,
+        8,
+        106,
+        194,
+        265,
+        40,
+        9,
+        5,
+        133,
+        55,
+        128,
+        5,
+        145,
+        36,
+        96,
+        31,
+        15,
+        11,
+        245,
+        388,
+        159,
+        227,
+        259,
+        336,
+        26,
+        9,
+        214,
+        29,
+        52,
+        16
+      ],
+      "audio_seconds": 6.0,
+      "original_sample_rate": 16000,
+      "chunks": 19,
+      "pipeline_seconds": 0.1613914240001577,
+      "RTF": 0.02689857066669295,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            304
+          ],
+          [
+            304
+          ]
+        ],
+        "cached_len_1": [
+          [
+            152
+          ],
+          [
+            152
+          ]
+        ],
+        "cached_len_2": [
+          [
+            76
+          ],
+          [
+            76
+          ]
+        ],
+        "cached_len_3": [
+          [
+            38
+          ],
+          [
+            38
+          ]
+        ],
+        "cached_len_4": [
+          [
+            152
+          ],
+          [
+            152
+          ]
+        ]
+      },
+      "id": "1272-141231-0018",
+      "reference": "A RED HAIRED MOUNTAIN OF A MAN WITH AN APPARENTLY INEXHAUSTIBLE STORE OF ENERGY",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 14,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "THERE COULD BE LITTLE ART IN THIS LAST AND FINAL ROUND OF FENCING",
+      "tokens": [
+        153,
+        202,
+        37,
+        237,
+        244,
+        6,
+        15,
+        107,
+        391,
+        7,
+        147,
+        13,
+        48,
+        171,
+        195,
+        9,
+        157,
+        13,
+        18,
+        14
+      ],
+      "audio_seconds": 4.7,
+      "original_sample_rate": 16000,
+      "chunks": 15,
+      "pipeline_seconds": 0.1461244690001422,
+      "RTF": 0.031090312553221745,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            240
+          ],
+          [
+            240
+          ]
+        ],
+        "cached_len_1": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ],
+        "cached_len_2": [
+          [
+            60
+          ],
+          [
+            60
+          ]
+        ],
+        "cached_len_3": [
+          [
+            30
+          ],
+          [
+            30
+          ]
+        ],
+        "cached_len_4": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ]
+      },
+      "id": "1272-141231-0019",
+      "reference": "THERE COULD BE LITTLE ART IN THIS LAST AND FINAL ROUND OF FENCING",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 13,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "JUST THRUST AND PERRY AND VICTORY TO THE STRONGER",
+      "tokens": [
+        344,
+        119,
+        181,
+        61,
+        7,
+        361,
+        138,
+        7,
+        264,
+        18,
+        6,
+        43,
+        16,
+        10,
+        4,
+        109,
+        87,
+        92,
+        29
+      ],
+      "audio_seconds": 4.32,
+      "original_sample_rate": 16000,
+      "chunks": 14,
+      "pipeline_seconds": 0.12351420799996049,
+      "RTF": 0.028591251851842706,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            224
+          ],
+          [
+            224
+          ]
+        ],
+        "cached_len_1": [
+          [
+            112
+          ],
+          [
+            112
+          ]
+        ],
+        "cached_len_2": [
+          [
+            56
+          ],
+          [
+            56
+          ]
+        ],
+        "cached_len_3": [
+          [
+            28
+          ],
+          [
+            28
+          ]
+        ],
+        "cached_len_4": [
+          [
+            112
+          ],
+          [
+            112
+          ]
+        ]
+      },
+      "id": "1272-141231-0020",
+      "reference": "JUST THRUST AND PARRY AND VICTORY TO THE STRONGER",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 9,
+        "errors": 1,
+        "WER_percent": 11.11111111111111
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "EVERY MAN WHO ENTERED THE TWENTIES HAD HIS OWN TRAINING TRICKS",
+      "tokens": [
+        301,
+        133,
+        118,
+        214,
+        83,
+        8,
+        4,
+        56,
+        65,
+        96,
+        256,
+        62,
+        46,
+        346,
+        342,
+        40,
+        14,
+        56,
+        53,
+        113,
+        3
+      ],
+      "audio_seconds": 4.65,
+      "original_sample_rate": 16000,
+      "chunks": 15,
+      "pipeline_seconds": 0.13223081899991485,
+      "RTF": 0.02843673526879889,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            240
+          ],
+          [
+            240
+          ]
+        ],
+        "cached_len_1": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ],
+        "cached_len_2": [
+          [
+            60
+          ],
+          [
+            60
+          ]
+        ],
+        "cached_len_3": [
+          [
+            30
+          ],
+          [
+            30
+          ]
+        ],
+        "cached_len_4": [
+          [
+            120
+          ],
+          [
+            120
+          ]
+        ]
+      },
+      "id": "1272-141231-0021",
+      "reference": "EVERY MAN WHO ENTERED THE TWENTIES HAD HIS OWN TRAINING TRICKS",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 11,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "THERE APPEARED TO BE AN IMMEDIATE ASSOCIATION WITH THE DEATH DRAMA AS IF THE TWO WERE INEXTRICABLY LINKED INTO ONE",
+      "tokens": [
+        153,
+        451,
+        8,
+        10,
+        37,
+        128,
+        19,
+        17,
+        17,
+        8,
+        27,
+        216,
+        57,
+        3,
+        24,
+        200,
+        146,
+        55,
+        4,
+        78,
+        20,
+        70,
+        121,
+        89,
+        17,
+        20,
+        57,
+        165,
+        4,
+        287,
+        130,
+        15,
+        11,
+        245,
+        6,
+        53,
+        18,
+        20,
+        41,
+        31,
+        166,
+        13,
+        82,
+        8,
+        218,
+        126
+      ],
+      "audio_seconds": 8.35,
+      "original_sample_rate": 16000,
+      "chunks": 26,
+      "pipeline_seconds": 0.21692018499993537,
+      "RTF": 0.02597846526945334,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            416
+          ],
+          [
+            416
+          ]
+        ],
+        "cached_len_1": [
+          [
+            208
+          ],
+          [
+            208
+          ]
+        ],
+        "cached_len_2": [
+          [
+            104
+          ],
+          [
+            104
+          ]
+        ],
+        "cached_len_3": [
+          [
+            52
+          ],
+          [
+            52
+          ]
+        ],
+        "cached_len_4": [
+          [
+            208
+          ],
+          [
+            208
+          ]
+        ]
+      },
+      "id": "1272-141231-0022",
+      "reference": "THERE APPEARED TO BE AN IMMEDIATE ASSOCIATION WITH THE DEATH TRAUMA AS IF THE TWO WERE INEXTRICABLY LINKED INTO ONE",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 20,
+        "errors": 1,
+        "WER_percent": 5.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "TO STRENGTHEN ENABLES SOME ONE IN A TRANCE TO HOLD HIS BODY STIFF AND UNSUPPORTED EXCEPT AT TWO POINTS THE HEAD AND HEELS",
+      "tokens": [
+        10,
+        109,
+        26,
+        92,
+        70,
+        72,
+        214,
+        229,
+        3,
+        208,
+        126,
+        15,
+        5,
+        56,
+        23,
+        221,
+        10,
+        154,
+        25,
+        12,
+        46,
+        141,
+        12,
+        16,
+        109,
+        27,
+        228,
+        7,
+        180,
+        3,
+        28,
+        21,
+        422,
+        8,
+        135,
+        66,
+        21,
+        6,
+        84,
+        287,
+        485,
+        3,
+        4,
+        378,
+        7,
+        22,
+        131,
+        3
+      ],
+      "audio_seconds": 8.66,
+      "original_sample_rate": 16000,
+      "chunks": 27,
+      "pipeline_seconds": 0.2304201029999149,
+      "RTF": 0.026607402193985552,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            432
+          ],
+          [
+            432
+          ]
+        ],
+        "cached_len_1": [
+          [
+            216
+          ],
+          [
+            216
+          ]
+        ],
+        "cached_len_2": [
+          [
+            108
+          ],
+          [
+            108
+          ]
+        ],
+        "cached_len_3": [
+          [
+            54
+          ],
+          [
+            54
+          ]
+        ],
+        "cached_len_4": [
+          [
+            216
+          ],
+          [
+            216
+          ]
+        ]
+      },
+      "id": "1272-141231-0023",
+      "reference": "THE STRENGTH THAT ENABLES SOMEONE IN A TRANCE TO HOLD HIS BODY STIFF AND UNSUPPORTED EXCEPT AT TWO POINTS THE HEAD AND HEELS",
+      "word_errors": {
+        "S": 3,
+        "D": 1,
+        "I": 1,
+        "N": 23,
+        "errors": 5,
+        "WER_percent": 21.73913043478261
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "THIS IS PHYSICALLY IMPOSSIBLE WHEN CONSCIOUS",
+      "tokens": [
+        107,
+        67,
+        59,
+        99,
+        16,
+        3,
+        93,
+        48,
+        31,
+        359,
+        24,
+        3,
+        3,
+        27,
+        259,
+        142,
+        111,
+        3,
+        18,
+        295
+      ],
+      "audio_seconds": 3.64,
+      "original_sample_rate": 16000,
+      "chunks": 12,
+      "pipeline_seconds": 0.11960601499981749,
+      "RTF": 0.03285879532962019,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            192
+          ],
+          [
+            192
+          ]
+        ],
+        "cached_len_1": [
+          [
+            96
+          ],
+          [
+            96
+          ]
+        ],
+        "cached_len_2": [
+          [
+            48
+          ],
+          [
+            48
+          ]
+        ],
+        "cached_len_3": [
+          [
+            24
+          ],
+          [
+            24
+          ]
+        ],
+        "cached_len_4": [
+          [
+            96
+          ],
+          [
+            96
+          ]
+        ]
+      },
+      "id": "1272-141231-0024",
+      "reference": "THIS IS PHYSICALLY IMPOSSIBLE WHEN CONSCIOUS",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 6,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "OTHERS HAD DIED BEFORE DURING THE TWENTIES AND DEATH DURING THE LAST ROUND WAS IN SOME WAYS EASIER THAN DEFEAT",
+      "tokens": [
+        235,
+        3,
+        62,
+        272,
+        8,
+        296,
+        355,
+        354,
+        4,
+        56,
+        65,
+        96,
+        256,
+        7,
+        78,
+        20,
+        70,
+        355,
+        354,
+        4,
+        391,
+        171,
+        195,
+        33,
+        15,
+        208,
+        333,
+        3,
+        54,
+        183,
+        27,
+        29,
+        236,
+        78,
+        38,
+        11,
+        140
+      ],
+      "audio_seconds": 8.725,
+      "original_sample_rate": 16000,
+      "chunks": 27,
+      "pipeline_seconds": 0.22355620400003318,
+      "RTF": 0.025622487564473717,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            432
+          ],
+          [
+            432
+          ]
+        ],
+        "cached_len_1": [
+          [
+            216
+          ],
+          [
+            216
+          ]
+        ],
+        "cached_len_2": [
+          [
+            108
+          ],
+          [
+            108
+          ]
+        ],
+        "cached_len_3": [
+          [
+            54
+          ],
+          [
+            54
+          ]
+        ],
+        "cached_len_4": [
+          [
+            216
+          ],
+          [
+            216
+          ]
+        ]
+      },
+      "id": "1272-141231-0025",
+      "reference": "OTHERS HAD DIED BEFORE DURING THE TWENTIES AND DEATH DURING THE LAST ROUND WAS IN SOME WAYS EASIER THAN DEFEAT",
+      "word_errors": {
+        "S": 0,
+        "D": 0,
+        "I": 0,
+        "N": 20,
+        "errors": 0,
+        "WER_percent": 0.0
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "BREATHING DEEPLY BRION SOFTLY SPOKE THE OTTER HYPNOTIC PHRASES THAT TRIGGERED PROCESS",
+      "tokens": [
+        51,
+        26,
+        20,
+        70,
+        14,
+        78,
+        11,
+        21,
+        31,
+        51,
+        53,
+        76,
+        63,
+        38,
+        6,
+        31,
+        177,
+        24,
+        190,
+        4,
+        152,
+        6,
+        83,
+        34,
+        99,
+        16,
+        21,
+        13,
+        309,
+        93,
+        59,
+        99,
+        89,
+        77,
+        3,
+        32,
+        56,
+        53,
+        353,
+        29,
+        8,
+        149,
+        66,
+        3,
+        3
+      ],
+      "audio_seconds": 6.635,
+      "original_sample_rate": 16000,
+      "chunks": 21,
+      "pipeline_seconds": 0.2008528699998351,
+      "RTF": 0.03027172117555917,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            336
+          ],
+          [
+            336
+          ]
+        ],
+        "cached_len_1": [
+          [
+            168
+          ],
+          [
+            168
+          ]
+        ],
+        "cached_len_2": [
+          [
+            84
+          ],
+          [
+            84
+          ]
+        ],
+        "cached_len_3": [
+          [
+            42
+          ],
+          [
+            42
+          ]
+        ],
+        "cached_len_4": [
+          [
+            168
+          ],
+          [
+            168
+          ]
+        ]
+      },
+      "id": "1272-141231-0026",
+      "reference": "BREATHING DEEPLY BRION SOFTLY SPOKE THE AUTO HYPNOTIC PHRASES THAT TRIGGERED THE PROCESS",
+      "word_errors": {
+        "S": 1,
+        "D": 1,
+        "I": 0,
+        "N": 13,
+        "errors": 2,
+        "WER_percent": 15.384615384615385
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "WHEN THE BUZZER SOUNDED HE PULLED HIS FOIL FROM HIS SECOND STARTLED GRASP AND RAN FORWARD",
+      "tokens": [
+        142,
+        4,
+        360,
+        234,
+        234,
+        29,
+        63,
+        195,
+        8,
+        22,
+        59,
+        28,
+        58,
+        8,
+        46,
+        312,
+        91,
+        116,
+        46,
+        125,
+        18,
+        76,
+        12,
+        109,
+        36,
+        6,
+        25,
+        8,
+        306,
+        3,
+        21,
+        7,
+        188,
+        13,
+        42,
+        311
+      ],
+      "audio_seconds": 6.57,
+      "original_sample_rate": 16000,
+      "chunks": 21,
+      "pipeline_seconds": 0.20839023200005613,
+      "RTF": 0.03171845235921707,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            336
+          ],
+          [
+            336
+          ]
+        ],
+        "cached_len_1": [
+          [
+            168
+          ],
+          [
+            168
+          ]
+        ],
+        "cached_len_2": [
+          [
+            84
+          ],
+          [
+            84
+          ]
+        ],
+        "cached_len_3": [
+          [
+            42
+          ],
+          [
+            42
+          ]
+        ],
+        "cached_len_4": [
+          [
+            168
+          ],
+          [
+            168
+          ]
+        ]
+      },
+      "id": "1272-141231-0027",
+      "reference": "WHEN THE BUZZER SOUNDED HE PULLED HIS FOIL FROM HIS SECOND'S STARTLED GRASP AND RAN FORWARD",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 16,
+        "errors": 1,
+        "WER_percent": 6.25
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "I ROLLED LOOKED AMAZED AT THE SUDDEN FURY OF THE ATTACK THEN SMILED",
+      "tokens": [
+        19,
+        171,
+        58,
+        8,
+        239,
+        8,
+        5,
+        17,
+        20,
+        234,
+        8,
+        84,
+        4,
+        494,
+        64,
+        79,
+        16,
+        9,
+        4,
+        84,
+        265,
+        113,
+        278,
+        35,
+        17,
+        91,
+        8
+      ],
+      "audio_seconds": 5.65,
+      "original_sample_rate": 16000,
+      "chunks": 18,
+      "pipeline_seconds": 0.15988742199988337,
+      "RTF": 0.028298658761041304,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            288
+          ],
+          [
+            288
+          ]
+        ],
+        "cached_len_1": [
+          [
+            144
+          ],
+          [
+            144
+          ]
+        ],
+        "cached_len_2": [
+          [
+            72
+          ],
+          [
+            72
+          ]
+        ],
+        "cached_len_3": [
+          [
+            36
+          ],
+          [
+            36
+          ]
+        ],
+        "cached_len_4": [
+          [
+            144
+          ],
+          [
+            144
+          ]
+        ]
+      },
+      "id": "1272-141231-0028",
+      "reference": "IROLG LOOKED AMAZED AT THE SUDDEN FURY OF THE ATTACK THEN SMILED",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 1,
+        "N": 12,
+        "errors": 2,
+        "WER_percent": 16.666666666666664
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "HE SAID IT WAS THE LAST BURST OF ENERGY HE KNEW HOW CLOSE THEY BOTH WERE TO EXHAUSTION",
+      "tokens": [
+        22,
+        115,
+        30,
+        33,
+        4,
+        391,
+        51,
+        79,
+        61,
+        9,
+        214,
+        29,
+        52,
+        16,
+        22,
+        442,
+        319,
+        39,
+        103,
+        77,
+        112,
+        141,
+        70,
+        130,
+        10,
+        135,
+        388,
+        159,
+        173
+      ],
+      "audio_seconds": 6.88,
+      "original_sample_rate": 16000,
+      "chunks": 22,
+      "pipeline_seconds": 0.19400976700012507,
+      "RTF": 0.028199094040715852,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            352
+          ],
+          [
+            352
+          ]
+        ],
+        "cached_len_1": [
+          [
+            176
+          ],
+          [
+            176
+          ]
+        ],
+        "cached_len_2": [
+          [
+            88
+          ],
+          [
+            88
+          ]
+        ],
+        "cached_len_3": [
+          [
+            44
+          ],
+          [
+            44
+          ]
+        ],
+        "cached_len_4": [
+          [
+            176
+          ],
+          [
+            176
+          ]
+        ]
+      },
+      "id": "1272-141231-0029",
+      "reference": "HE THOUGHT IT WAS A LAST BURST OF ENERGY HE KNEW HOW CLOSE THEY BOTH WERE TO EXHAUSTION",
+      "word_errors": {
+        "S": 2,
+        "D": 0,
+        "I": 0,
+        "N": 18,
+        "errors": 2,
+        "WER_percent": 11.11111111111111
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "BRION SAW SOMETHING CLOSE TO PANIC ON HIS OPPONENT'S FACE WHEN A MAN FINALLY RECOGNIZED HIS ERROR",
+      "tokens": [
+        51,
+        53,
+        76,
+        402,
+        431,
+        39,
+        103,
+        77,
+        10,
+        158,
+        13,
+        93,
+        74,
+        46,
+        152,
+        145,
+        76,
+        96,
+        45,
+        3,
+        393,
+        142,
+        5,
+        133,
+        147,
+        13,
+        48,
+        31,
+        49,
+        18,
+        24,
+        52,
+        13,
+        438,
+        12,
+        46,
+        34,
+        29,
+        23,
+        43
+      ],
+      "audio_seconds": 7.13,
+      "original_sample_rate": 16000,
+      "chunks": 22,
+      "pipeline_seconds": 0.19204731000013453,
+      "RTF": 0.026935106591884226,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            352
+          ],
+          [
+            352
+          ]
+        ],
+        "cached_len_1": [
+          [
+            176
+          ],
+          [
+            176
+          ]
+        ],
+        "cached_len_2": [
+          [
+            88
+          ],
+          [
+            88
+          ]
+        ],
+        "cached_len_3": [
+          [
+            44
+          ],
+          [
+            44
+          ]
+        ],
+        "cached_len_4": [
+          [
+            176
+          ],
+          [
+            176
+          ]
+        ]
+      },
+      "id": "1272-141231-0030",
+      "reference": "BRION SAW SOMETHING CLOSE TO PANIC ON HIS OPPONENT'S FACE WHEN THE MAN FINALLY RECOGNIZED HIS ERROR",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 17,
+        "errors": 1,
+        "WER_percent": 5.88235294117647
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "A WAVE OF DESPAIR ROLLED OUT FROM IRON BRION SENSED IT AND KNEW THE FIFTH POINT WAS HIS",
+      "tokens": [
+        5,
+        174,
+        75,
+        9,
+        78,
+        3,
+        21,
+        20,
+        97,
+        171,
+        58,
+        8,
+        163,
+        116,
+        19,
+        87,
+        13,
+        51,
+        53,
+        76,
+        125,
+        13,
+        3,
+        8,
+        30,
+        7,
+        442,
+        4,
+        147,
+        38,
+        70,
+        485,
+        33,
+        46
+      ],
+      "audio_seconds": 7.115,
+      "original_sample_rate": 16000,
+      "chunks": 22,
+      "pipeline_seconds": 0.19122528599996258,
+      "RTF": 0.026876357835553418,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            352
+          ],
+          [
+            352
+          ]
+        ],
+        "cached_len_1": [
+          [
+            176
+          ],
+          [
+            176
+          ]
+        ],
+        "cached_len_2": [
+          [
+            88
+          ],
+          [
+            88
+          ]
+        ],
+        "cached_len_3": [
+          [
+            44
+          ],
+          [
+            44
+          ]
+        ],
+        "cached_len_4": [
+          [
+            176
+          ],
+          [
+            176
+          ]
+        ]
+      },
+      "id": "1272-141231-0031",
+      "reference": "A WAVE OF DESPAIR ROLLED OUT FROM IROLG BRION SENSED IT AND KNEW THE FIFTH POINT WAS HIS",
+      "word_errors": {
+        "S": 1,
+        "D": 0,
+        "I": 0,
+        "N": 18,
+        "errors": 1,
+        "WER_percent": 5.555555555555555
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    },
+    {
+      "text": "THEN THE POWERFUL TWIST THAT THRUSTED ASIDE IN AND UNDER THE GUARD",
+      "tokens": [
+        278,
+        4,
+        467,
+        246,
+        56,
+        65,
+        275,
+        32,
+        119,
+        181,
+        61,
+        8,
+        5,
+        310,
+        15,
+        7,
+        367,
+        4,
+        80,
+        28,
+        215
+      ],
+      "audio_seconds": 4.48,
+      "original_sample_rate": 16000,
+      "chunks": 14,
+      "pipeline_seconds": 0.16189955699996972,
+      "RTF": 0.03613829397320752,
+      "captures": [],
+      "final_cached_len": {
+        "cached_len_0": [
+          [
+            224
+          ],
+          [
+            224
+          ]
+        ],
+        "cached_len_1": [
+          [
+            112
+          ],
+          [
+            112
+          ]
+        ],
+        "cached_len_2": [
+          [
+            56
+          ],
+          [
+            56
+          ]
+        ],
+        "cached_len_3": [
+          [
+            28
+          ],
+          [
+            28
+          ]
+        ],
+        "cached_len_4": [
+          [
+            112
+          ],
+          [
+            112
+          ]
+        ]
+      },
+      "id": "1272-141231-0032",
+      "reference": "THEN THE POWERFUL TWIST THAT THRUST IT ASIDE IN AND UNDER THE GUARD",
+      "word_errors": {
+        "S": 1,
+        "D": 1,
+        "I": 0,
+        "N": 13,
+        "errors": 2,
+        "WER_percent": 15.384615384615385
+      },
+      "original_tokens_equal": true,
+      "original_final_counters_equal": true
+    }
+  ],
+  "scope": "Same locked73public dummy utterances,one speaker;shared frontend/context[0,0]/greedy/state rules. Runtime observed time is not the matched benchmark. No claim of full LibriSpeech WER.",
+  "source_code": {
+    "path": "daily/2026-10-21/experiments/zipformer/src/evaluate21.py",
+    "sha256": "005e34ddd500e85f8032626844dd83bfd59c33e21bd387ead62ba04f6dedb38d",
+    "bytes": 3961
+  }
+}

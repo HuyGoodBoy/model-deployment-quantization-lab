@@ -1,0 +1,25 @@
+{
+  "verified_at_utc": "2026-10-21T07:28:03.499164+00:00",
+  "passed": true,
+  "previous_day_files_unchanged": 76,
+  "mlsd": {
+    "development5_and_regression3_AP_recomputed": true,
+    "split_float_output_exact": true,
+    "head_float30INT8_11FP32_verified": true,
+    "split42INT8_independent_output_scales_verified": true,
+    "same32calibration16development_input_hashes": true,
+    "selection_precedes_regression": true,
+    "timing8threads_and_uncertainty_recomputed": true
+  },
+  "zipformer": {
+    "112weights_transposed_exactly_other_operator_types_unchanged": true,
+    "public_inputs_outputs_preserved": true,
+    "15state_fixtures36outputs_passed": true,
+    "73utterance_WER_recomputed": true,
+    "100utterance20speaker_WER_recomputed": true,
+    "continuous79_5seconds_tokens_and_counters_match": true,
+    "matched_encoder_and_RTF_samples_recomputed": true
+  },
+  "scope": "Evidence integrity/metric recomputation and graph rewrite checks;not a deployment certification. Corpus quality subsets and hardware/timing limits remain.",
+  "source_sha256": "65bfd4302b0b00912db147b58b9d3f154a22850ed256b36adcdf7f791fbb46b0"
+}

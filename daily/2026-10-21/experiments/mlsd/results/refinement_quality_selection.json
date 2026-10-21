@@ -1,0 +1,34 @@
+{
+  "locked_at_utc": "2026-10-21T08:29:37.173132+00:00",
+  "quality_eligible": [
+    "C1"
+  ],
+  "candidates": {
+    "C1": {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_C1.json",
+      "sha256": "b59894a3ad6ed058cba8d9993ede794e3d97dac2e2ee9339aceef78093a2fe70",
+      "bytes": 20640
+    },
+    "C2": {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_C2.json",
+      "sha256": "9476f1fb3e82e85001070c4a7b3c85fc16e30992a4c457015f2e0891f6fc20e0",
+      "bytes": 19308
+    },
+    "C3": {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_C3.json",
+      "sha256": "960a860d67b7c0b6b20792f058b2e3b4d5512c62f90ae7ab826b75132ffe5fe6",
+      "bytes": 19443
+    }
+  },
+  "C3_condition": "C1 passes and C2 fails;otherwise skipped",
+  "failed_skipped_full_benchmark_regression": [
+    "C2",
+    "C3"
+  ],
+  "rule": "Lock quality before new matched timing/regression;compare speed to FP32 as well as prior A,never reselect on regression.",
+  "source_code": {
+    "path": "daily/2026-10-21/experiments/mlsd/src/refinement_mlsd.py",
+    "sha256": "06ce3eda99d387f5cca3ff7f550ae3f7705f28cfb45d8ee90f13c9ce646346ef",
+    "bytes": 7288
+  }
+}

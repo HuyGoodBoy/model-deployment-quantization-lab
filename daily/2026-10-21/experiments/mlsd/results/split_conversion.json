@@ -1,0 +1,53 @@
+{
+  "finished_at_utc": "2026-10-21T07:03:15.730840+00:00",
+  "original": {
+    "path": "daily/2026-10-19/experiments/selective/artifacts/qat_weights_fp32.onnx",
+    "sha256": "ce7b26475cb5eee7e9f5b34d873b51e7401c3cc9d9584e415b5a186e0f49dd1e",
+    "bytes": 2512757
+  },
+  "rewritten_before_simplification": {
+    "path": "daily/2026-10-21/experiments/mlsd/artifacts/split_conversion/split.onnx",
+    "sha256": "4ff79770b76965acf8af5dd54c53a211efca070b87e2dc1569760ea5d5b5667f",
+    "bytes": 2525710
+  },
+  "converted_onnx": {
+    "path": "daily/2026-10-21/experiments/mlsd/artifacts/split_conversion/split.onnx",
+    "sha256": "6f14e97736dac2cdb79fbc1787b9343a4ac9f09925f53d312cf7b107c7218971",
+    "bytes": 2493184
+  },
+  "tflite": {
+    "path": "daily/2026-10-21/experiments/mlsd/artifacts/split_conversion/output/split_float32.tflite",
+    "sha256": "34469be18405751f324e2ceb689c5e7f19caca3696bf2015d4c8e49e687e3dae",
+    "bytes": 2479164
+  },
+  "command": [
+    "onnx2tf",
+    "-i",
+    "/workspace/daily/2026-10-21/experiments/mlsd/artifacts/split_conversion/split.onnx",
+    "-o",
+    "/workspace/daily/2026-10-21/experiments/mlsd/artifacts/split_conversion/output",
+    "-tb",
+    "flatbuffer_direct",
+    "-kat",
+    "input",
+    "-v",
+    "error"
+  ],
+  "log": {
+    "path": "daily/2026-10-21/experiments/mlsd/artifacts/split_conversion/conversion.log",
+    "sha256": "fe1e1a2124965ab2cfc7e4679fd2666d64a0d90822e4dc4e98b99d20f0ce9e14",
+    "bytes": 6712
+  },
+  "rewrite": "Keep original upstream graph; split final16-filter1x1Conv into original filter7(center) and8:12(displacement); independent align_corners2xresize; discard unused filters; two native outputs, application merges only after dequantization. Numeric/API parity is checked separately before PTQ.",
+  "source_unchanged": true,
+  "environment": {
+    "onnx2tf": "2.6.9",
+    "ai-edge-litert": "2.1.2",
+    "onnxruntime": "1.26.0"
+  },
+  "source_code": {
+    "path": "daily/2026-10-21/experiments/mlsd/src/split_heads.py",
+    "sha256": "91e4c1ddc5c10053f26e7ee7c0f97021eb189e084325c01b2e7e685e5fefae5b",
+    "bytes": 4471
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "locked_at_utc": "2026-10-21T08:38:00.161850+00:00",
+  "quality_eligible": [
+    "C1"
+  ],
+  "faster_than_float8_in_both_sessions": [
+    "C1"
+  ],
+  "replacement_proposal": "C1",
+  "benchmarks": {
+    "t4_s1": {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_contiguous_benchmark_t4_s1.json",
+      "sha256": "dba75f614a3515e9e3803ccbb4bb23f31c8686feef05462a7c6b38c8351b479c",
+      "bytes": 9671
+    },
+    "t4_s2": {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_contiguous_benchmark_t4_s2.json",
+      "sha256": "1992ec6f999c0aa3a4561bf3195afeef56a18ccac315acf5dca9fd554aef47e8",
+      "bytes": 9722
+    },
+    "t8_s1": {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_contiguous_benchmark_t8_s1.json",
+      "sha256": "4ea97af2bd7b2d67bb8c72126d8bfd67acde84716987e4d686b5fad8a10aefd3",
+      "bytes": 9685
+    },
+    "t8_s2": {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_contiguous_benchmark_t8_s2.json",
+      "sha256": "ca88cf2931be11a546c888cd6f078b742f24d7755790b63decbe6f82553a57c4",
+      "bytes": 9700
+    }
+  },
+  "rule": "Quality screened first;replacement needs lower matched8thread median in both sessions. Point-median screen only,not proof of general/significant speedup. Regression cannot rescue a candidate or change selection.",
+  "source_code": {
+    "path": "daily/2026-10-21/experiments/mlsd/src/refinement_measure.py",
+    "sha256": "8f80b043d815a32976f9a555b134607fab5e9682eda94ab1e202bb1bdb7d7288",
+    "bytes": 7244
+  }
+}

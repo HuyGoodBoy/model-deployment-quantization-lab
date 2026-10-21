@@ -1,0 +1,171 @@
+{
+  "finished_at_utc": "2026-10-21T08:20:39.608436+00:00",
+  "model": {
+    "path": "daily/2026-10-21/experiments/mlsd/artifacts/refinement/prune_conversion/output/pruned_float32.tflite",
+    "sha256": "23dd0eafcb37975f89bdc1d87ee9c89bb6da569b4dcd570d1f88e19a3d9e57bb",
+    "bytes": 2478504
+  },
+  "reference": {
+    "output": {
+      "path": "daily/2026-10-21/experiments/mlsd/artifacts/float_development.npz",
+      "sha256": "0db342caf74b08ce257afefc5c21c354a33c429339c9d347b4f2d1a9fe01aa06",
+      "bytes": 19579887
+    },
+    "sAP10": {
+      "sAP10_subset_percent": 15.323017406007905,
+      "precision_at_0_1": 0.2732362821948488,
+      "recall_at_0_1": 0.27523970671178793,
+      "ground_truth_lines": 1773,
+      "predicted_line_counts": [
+        130,
+        146,
+        98,
+        128,
+        127,
+        98,
+        102,
+        136,
+        98,
+        142,
+        108,
+        120,
+        99,
+        118,
+        79,
+        120
+      ],
+      "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+    },
+    "native_IO": {
+      "inputs": {
+        "input": {
+          "dtype": "<class 'numpy.float32'>",
+          "shape": [
+            1,
+            4,
+            512,
+            512
+          ],
+          "scale": 0.0,
+          "zero_point": 0
+        }
+      },
+      "outputs": {
+        "output": {
+          "dtype": "<class 'numpy.float32'>",
+          "shape": [
+            1,
+            5,
+            256,
+            256
+          ],
+          "scale": 0.0,
+          "zero_point": 0
+        }
+      }
+    },
+    "model": {
+      "path": "daily/2026-10-20/experiments/mlsd/artifacts/float_conversion/qat_weights_fp32_float32.tflite",
+      "sha256": "cafe7a915c77d90f07ff7b2094d1b8868c7e5855a168d0694aea429b8e584eda",
+      "bytes": 2483636
+    },
+    "vs_float": {
+      "all": {
+        "snr_db": null,
+        "exact_match": true,
+        "rmse": 0.0,
+        "mae": 0.0,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "center": {
+        "snr_db": null,
+        "exact_match": true,
+        "rmse": 0.0,
+        "mae": 0.0,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      "displacement": {
+        "snr_db": null,
+        "exact_match": true,
+        "rmse": 0.0,
+        "mae": 0.0,
+        "max_abs": 0.0,
+        "relative_l2": 0.0
+      }
+    }
+  },
+  "output": {
+    "path": "daily/2026-10-21/experiments/mlsd/artifacts/refinement/pruned_float_development.npz",
+    "sha256": "0db342caf74b08ce257afefc5c21c354a33c429339c9d347b4f2d1a9fe01aa06",
+    "bytes": 19579887
+  },
+  "parity": {
+    "snr_db": null,
+    "exact_match": true,
+    "rmse": 0.0,
+    "mae": 0.0,
+    "max_abs": 0.0,
+    "relative_l2": 0.0
+  },
+  "output_exact": true,
+  "sAP10": {
+    "sAP10_subset_percent": 15.323017406007905,
+    "precision_at_0_1": 0.2732362821948488,
+    "recall_at_0_1": 0.27523970671178793,
+    "ground_truth_lines": 1773,
+    "predicted_line_counts": [
+      130,
+      146,
+      98,
+      128,
+      127,
+      98,
+      102,
+      136,
+      98,
+      142,
+      108,
+      120,
+      99,
+      118,
+      79,
+      120
+    ],
+    "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+  },
+  "native_IO": {
+    "inputs": {
+      "input": {
+        "dtype": "<class 'numpy.float32'>",
+        "shape": [
+          1,
+          4,
+          512,
+          512
+        ],
+        "scale": 0.0,
+        "zero_point": 0
+      }
+    },
+    "outputs": {
+      "output": {
+        "dtype": "<class 'numpy.float32'>",
+        "shape": [
+          1,
+          256,
+          256,
+          5
+        ],
+        "scale": 0.0,
+        "zero_point": 0
+      }
+    }
+  },
+  "source_code": {
+    "path": "daily/2026-10-21/experiments/mlsd/src/refinement_mlsd.py",
+    "sha256": "7c95382a252cc757edbb700bf0a945bfc2961d1bd0ecbdc5e3494d5c630681a4",
+    "bytes": 7271
+  }
+}

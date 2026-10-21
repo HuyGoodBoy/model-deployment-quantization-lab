@@ -1,0 +1,850 @@
+{
+  "locked_at_utc": "2026-10-21T07:23:21.351356+00:00",
+  "dataset": "LibriSpeech test-clean subset from official OpenSLR12",
+  "source_url": "https://www.openslr.org/resources/12/test-clean.tar.gz",
+  "publisher_MD5": "32fa31d27d2e1cad72775fee3f4849a9",
+  "archive": {
+    "path": ".cache/librispeech/test-clean.tar.gz",
+    "sha256": "39fde525e59672dc6d1551919b1478f724438a95aa55f874b576be21967e6c23",
+    "bytes": 346663984
+  },
+  "checksum_source": "https://www.openslr.org/resources/12/md5sum.txt",
+  "license": "CC BY4.0",
+  "seed": 20261021,
+  "selection": "Random20speakers then5utterances/speaker;fixed after patch, before evaluation;exclude previous speaker/IDs",
+  "speakers": [
+    61,
+    121,
+    1188,
+    1995,
+    2300,
+    3575,
+    3729,
+    4077,
+    4446,
+    4992,
+    5105,
+    5683,
+    6930,
+    7021,
+    7176,
+    7729,
+    8230,
+    8455,
+    8463,
+    8555
+  ],
+  "speaker_count": 20,
+  "utterances": 100,
+  "records": [
+    {
+      "id": "1188-133604-0003",
+      "speaker_id": 1188,
+      "text": "MY FIRST AND PRINCIPAL REASON WAS THAT THEY ENFORCED BEYOND ALL RESISTANCE ON ANY STUDENT WHO MIGHT ATTEMPT TO COPY THEM THIS METHOD OF LAYING PORTIONS OF DISTINCT HUE SIDE BY SIDE",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/1188-133604-0003.flac",
+      "sha256": "a013400c991a40062cb4f458d247cfd6dac24fa0016bf6e2eac7a3e8e08b8ae8",
+      "bytes": 205807
+    },
+    {
+      "id": "1188-133604-0007",
+      "speaker_id": 1188,
+      "text": "THE BROWN GROUND BENEATH IS LEFT FOR THE MOST PART ONE TOUCH OF BLACK IS PUT FOR THE HOLLOW TWO DELICATE LINES OF DARK GRAY DEFINE THE OUTER CURVE AND ONE LITTLE QUIVERING TOUCH OF WHITE DRAWS THE INNER EDGE OF THE MANDIBLE",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/1188-133604-0007.flac",
+      "sha256": "fb4ab915829db56145a8bd4549f0d8983ed1ff38fbc0f06dc732078a462fe9da",
+      "bytes": 221440
+    },
+    {
+      "id": "1188-133604-0009",
+      "speaker_id": 1188,
+      "text": "NOW YOU WILL SEE IN THESE STUDIES THAT THE MOMENT THE WHITE IS INCLOSED PROPERLY AND HARMONIZED WITH THE OTHER HUES IT BECOMES SOMEHOW MORE PRECIOUS AND PEARLY THAN THE WHITE PAPER AND THAT I AM NOT AFRAID TO LEAVE A WHOLE FIELD OF UNTREATED WHITE PAPER ALL ROUND IT BEING SURE THAT EVEN THE LITTLE DIAMONDS IN THE ROUND WINDOW WILL TELL AS JEWELS IF THEY ARE GRADATED JUSTLY",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/1188-133604-0009.flac",
+      "sha256": "f5bd36156c4be312917bb118ead088ba2782a545ffbe5c6a925e6522583cba06",
+      "bytes": 363440
+    },
+    {
+      "id": "1188-133604-0011",
+      "speaker_id": 1188,
+      "text": "THEY ARE BEYOND ALL OTHER WORKS THAT I KNOW EXISTING DEPENDENT FOR THEIR EFFECT ON LOW SUBDUED TONES THEIR FAVORITE CHOICE IN TIME OF DAY BEING EITHER DAWN OR TWILIGHT AND EVEN THEIR BRIGHTEST SUNSETS PRODUCED CHIEFLY OUT OF GRAY PAPER",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/1188-133604-0011.flac",
+      "sha256": "a0111946a79f5267b218115188280f16f2e4c9d0c056f4e73db4253c06ff9a8e",
+      "bytes": 250165
+    },
+    {
+      "id": "1188-133604-0041",
+      "speaker_id": 1188,
+      "text": "IT IS A GLEANER BRINGING DOWN HER ONE SHEAF OF CORN TO AN OLD WATERMILL ITSELF MOSSY AND RENT SCARCELY ABLE TO GET ITS STONES TO TURN",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/1188-133604-0041.flac",
+      "sha256": "092021885eb0b1670f46b1b2ed4308497a50a60845026cd71efe063de8f56cf5",
+      "bytes": 170250
+    },
+    {
+      "id": "121-123852-0001",
+      "speaker_id": 121,
+      "text": "AY ME",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/121-123852-0001.flac",
+      "sha256": "fee87ada20b733c708cd73d51b794d5381e898eea3695bc44c5ac720aebf7a8b",
+      "bytes": 28188
+    },
+    {
+      "id": "121-123852-0004",
+      "speaker_id": 121,
+      "text": "MY HEART DOTH PLEAD THAT THOU IN HIM DOST LIE A CLOSET NEVER PIERC'D WITH CRYSTAL EYES BUT THE DEFENDANT DOTH THAT PLEA DENY AND SAYS IN HIM THY FAIR APPEARANCE LIES",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/121-123852-0004.flac",
+      "sha256": "01495a50429f7aafac7b1a33c9713bae0c87390940a33c4e304d557ec5a511f7",
+      "bytes": 283880
+    },
+    {
+      "id": "121-127105-0018",
+      "speaker_id": 121,
+      "text": "CRIED THE LADIES WHOSE DEPARTURE HAD BEEN FIXED",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/121-127105-0018.flac",
+      "sha256": "1561baa48de1f41272c1c8b9faa4d272cb9e09328e96e93f078ff4d45ea9d2f4",
+      "bytes": 59712
+    },
+    {
+      "id": "121-127105-0023",
+      "speaker_id": 121,
+      "text": "LET ME SAY HERE DISTINCTLY TO HAVE DONE WITH IT THAT THIS NARRATIVE FROM AN EXACT TRANSCRIPT OF MY OWN MADE MUCH LATER IS WHAT I SHALL PRESENTLY GIVE",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/121-127105-0023.flac",
+      "sha256": "4b3979253bd95e23eca3dff699c225d223be8895b3db1d3579ac100191aafb5a",
+      "bytes": 214812
+    },
+    {
+      "id": "121-127105-0029",
+      "speaker_id": 121,
+      "text": "THERE WERE PLENTY OF PEOPLE TO HELP BUT OF COURSE THE YOUNG LADY WHO SHOULD GO DOWN AS GOVERNESS WOULD BE IN SUPREME AUTHORITY",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/121-127105-0029.flac",
+      "sha256": "58a5e0637ea3e7c85decc2aac38baa58e7c5790b573002c4dd5a49f68686fdf7",
+      "bytes": 136779
+    },
+    {
+      "id": "1995-1826-0006",
+      "speaker_id": 1995,
+      "text": "BEEN LOOKING UP TOOMS COUNTY",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/1995-1826-0006.flac",
+      "sha256": "3a670c460ca8607a5f67fed57c329dc6f7df7479cec7484b2786a326c5305fd2",
+      "bytes": 48337
+    },
+    {
+      "id": "1995-1826-0014",
+      "speaker_id": 1995,
+      "text": "COTTON SHE PAUSED",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/1995-1826-0014.flac",
+      "sha256": "6a0bf110294aac8b2e2d49f8044495f52f7dc363f41186e74e5ad0319c4af8a1",
+      "bytes": 45913
+    },
+    {
+      "id": "1995-1826-0021",
+      "speaker_id": 1995,
+      "text": "DON'T KNOW WELL OF ALL THINGS INWARDLY COMMENTED MISS TAYLOR LITERALLY BORN IN COTTON AND OH WELL AS MUCH AS TO ASK WHAT'S THE USE SHE TURNED AGAIN TO GO",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/1995-1826-0021.flac",
+      "sha256": "85ccf2e5b479f62e4eb45025bfea0ec1bf0d9e530dee86b39ee47e1f584b75dd",
+      "bytes": 204543
+    },
+    {
+      "id": "1995-1836-0005",
+      "speaker_id": 1995,
+      "text": "MISSUS GREY HAD MET SOUTHERNERS BEFORE BUT NOT INTIMATELY AND SHE ALWAYS HAD IN MIND VIVIDLY THEIR CRUELTY TO POOR NEGROES A SUBJECT SHE MADE A POINT OF INTRODUCING FORTHWITH",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/1995-1836-0005.flac",
+      "sha256": "c313336adfb9a4d953ce34de9cc59e0871719418b22a37afca11b4e3f0e9d6dd",
+      "bytes": 204545
+    },
+    {
+      "id": "1995-1837-0003",
+      "speaker_id": 1995,
+      "text": "THE REVELATION OF HIS LOVE LIGHTED AND BRIGHTENED SLOWLY TILL IT FLAMED LIKE A SUNRISE OVER HIM AND LEFT HIM IN BURNING WONDER",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/1995-1837-0003.flac",
+      "sha256": "6f4e2ad51219f731c0607c32e9f31aacebd4150ff82836f0d7fae239c0c34f22",
+      "bytes": 155309
+    },
+    {
+      "id": "2300-131720-0000",
+      "speaker_id": 2300,
+      "text": "THE PARIS PLANT LIKE THAT AT THE CRYSTAL PALACE WAS A TEMPORARY EXHIBIT",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/2300-131720-0000.flac",
+      "sha256": "84cb3f03857e7a68d5811c2f07f14725f8583a61d3a280816e30ec44956d8d7e",
+      "bytes": 96342
+    },
+    {
+      "id": "2300-131720-0017",
+      "speaker_id": 2300,
+      "text": "EDISON HAD INSTALLED HIS HISTORIC FIRST GREAT CENTRAL STATION SYSTEM IN NEW YORK ON THE MULTIPLE ARC SYSTEM COVERED BY HIS FEEDER AND MAIN INVENTION WHICH RESULTED IN A NOTABLE SAVING IN THE COST OF CONDUCTORS AS AGAINST A STRAIGHT TWO WIRE SYSTEM THROUGHOUT OF THE TREE KIND",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/2300-131720-0017.flac",
+      "sha256": "e40f6209d9d72301ca7aa91cd6bc637f97aa1fa08c52e0c604ed75f1c70849e5",
+      "bytes": 364332
+    },
+    {
+      "id": "2300-131720-0023",
+      "speaker_id": 2300,
+      "text": "I THINK HE WAS PERHAPS MORE APPRECIATIVE THAN I WAS OF THE DISCIPLINE OF THE EDISON CONSTRUCTION DEPARTMENT AND THOUGHT IT WOULD BE WELL FOR US TO WAIT UNTIL THE MORNING OF THE FOURTH BEFORE WE STARTED UP",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/2300-131720-0023.flac",
+      "sha256": "6dc954c710d3f1804fcb2fafa08339c966edd439e76670ef2b13329a3930c04b",
+      "bytes": 188147
+    },
+    {
+      "id": "2300-131720-0035",
+      "speaker_id": 2300,
+      "text": "IN THIS CONNECTION IT SHOULD BE MENTIONED THAT THE ASSOCIATION OF EDISON ILLUMINATING COMPANIES IN THE SAME YEAR ADOPTED RESOLUTIONS UNANIMOUSLY TO THE EFFECT THAT THE EDISON METER WAS ACCURATE AND THAT ITS USE WAS NOT EXPENSIVE FOR STATIONS ABOVE ONE THOUSAND LIGHTS AND THAT THE BEST FINANCIAL RESULTS WERE INVARIABLY SECURED IN A STATION SELLING CURRENT BY METER",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/2300-131720-0035.flac",
+      "sha256": "94ac8c20f2589b2a13fdc6c65208f1cd38bedcf20d204f29a809ef1d1f8266ba",
+      "bytes": 461632
+    },
+    {
+      "id": "2300-131720-0037",
+      "speaker_id": 2300,
+      "text": "HE WEIGHED AND REWEIGHED THE METER PLATES AND PURSUED EVERY LINE OF INVESTIGATION IMAGINABLE BUT ALL IN VAIN",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/2300-131720-0037.flac",
+      "sha256": "ac09892cd39ae17446b7c4a175d6482c6fd53bc564bd01689648c8f1c309fd1c",
+      "bytes": 142094
+    },
+    {
+      "id": "3575-170457-0006",
+      "speaker_id": 3575,
+      "text": "HER FEEBLE HEALTH GAVE HER HER YIELDING MANNER FOR SHE COULD NEVER OPPOSE ANY ONE WITHOUT GATHERING UP ALL HER STRENGTH FOR THE STRUGGLE",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/3575-170457-0006.flac",
+      "sha256": "04d7f6017cfba4ccd3ed68d04b4edeb62dff1152a49bfce3c82928a1c82a530a",
+      "bytes": 157743
+    },
+    {
+      "id": "3575-170457-0009",
+      "speaker_id": 3575,
+      "text": "JANUARY AND FEBRUARY OF EIGHTEEN THIRTY SEVEN HAD PASSED AWAY AND STILL THERE WAS NO REPLY FROM SOUTHEY",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/3575-170457-0009.flac",
+      "sha256": "175b6288ed51f41e0960320801de689ac15796f1213be0cda3f7ff6c30fe2014",
+      "bytes": 136882
+    },
+    {
+      "id": "3575-170457-0019",
+      "speaker_id": 3575,
+      "text": "I HAD NOT VENTURED TO HOPE FOR SUCH A REPLY SO CONSIDERATE IN ITS TONE SO NOBLE IN ITS SPIRIT",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/3575-170457-0019.flac",
+      "sha256": "b1d25f63bf1290afba4b6e9914e0230c4e2be67b16b3ea28cebccfebd571d3a5",
+      "bytes": 130491
+    },
+    {
+      "id": "3575-170457-0033",
+      "speaker_id": 3575,
+      "text": "SATURDAY AFTER SATURDAY COMES ROUND AND I CAN HAVE NO HOPE OF HEARING YOUR KNOCK AT THE DOOR AND THEN BEING TOLD THAT MISS E IS COME OH DEAR",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/3575-170457-0033.flac",
+      "sha256": "84f15e1d13ed08afeb10049ed302481b3ca8d1b5edd7dcd34b8ed98419a04e4b",
+      "bytes": 181181
+    },
+    {
+      "id": "3575-170457-0051",
+      "speaker_id": 3575,
+      "text": "AT TEA TIME THEY WERE SAD AND SILENT AND THE MEAL WENT AWAY UNTOUCHED BY ANY OF THE THREE",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/3575-170457-0051.flac",
+      "sha256": "d3c356176722ca068d7bf932fc054316fae97499cc7656cadd84cabdd4e767b5",
+      "bytes": 102179
+    },
+    {
+      "id": "3729-6852-0005",
+      "speaker_id": 3729,
+      "text": "SILVIA WAS THE ADORATION OF FRANCE AND HER TALENT WAS THE REAL SUPPORT OF ALL THE COMEDIES WHICH THE GREATEST AUTHORS WROTE FOR HER ESPECIALLY OF THE PLAYS OF MARIVAUX FOR WITHOUT HER HIS COMEDIES WOULD NEVER HAVE GONE TO POSTERITY",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/3729-6852-0005.flac",
+      "sha256": "2136d7f3620cc4469d20aed72a3ce6926a23bcb83b11f5e6b810ae22eb8dee94",
+      "bytes": 319685
+    },
+    {
+      "id": "3729-6852-0006",
+      "speaker_id": 3729,
+      "text": "SILVIA DID NOT THINK THAT HER GOOD CONDUCT WAS A MERIT FOR SHE KNEW THAT SHE WAS VIRTUOUS ONLY BECAUSE HER SELF LOVE COMPELLED HER TO BE SO AND SHE NEVER EXHIBITED ANY PRIDE OR ASSUMED ANY SUPERIORITY TOWARDS HER THEATRICAL SISTERS ALTHOUGH SATISFIED TO SHINE BY THEIR TALENT OR THEIR BEAUTY THEY CARED LITTLE ABOUT RENDERING THEMSELVES CONSPICUOUS BY THEIR VIRTUE",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/3729-6852-0006.flac",
+      "sha256": "fa36338104ec3f27c596c80fc5da3fd421a6dc6cddfa07f857771b164c35f440",
+      "bytes": 437206
+    },
+    {
+      "id": "3729-6852-0013",
+      "speaker_id": 3729,
+      "text": "YOU DO ME A GREAT HONOUR",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/3729-6852-0013.flac",
+      "sha256": "561903c4730b81ecfc0cfc0f573ba827753a2b66d888235b7fe5d1201ffadd4f",
+      "bytes": 58761
+    },
+    {
+      "id": "3729-6852-0029",
+      "speaker_id": 3729,
+      "text": "IT IS SOLD EVERYWHERE BUT FOR THE LAST THREE WEEKS NOBODY WILL USE ANY SNUFF BUT THAT SOLD AT THE CIVET CAT",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/3729-6852-0029.flac",
+      "sha256": "557bebb58f477bcc105dd9fecf8c62397cc5d99c7288bd1c4ab08355c65241bd",
+      "bytes": 159348
+    },
+    {
+      "id": "3729-6852-0036",
+      "speaker_id": 3729,
+      "text": "WHEN THE KING COMES TO PARIS EVERYBODY CALLS OUT VIVE LE ROI",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/3729-6852-0036.flac",
+      "sha256": "3a90450a2b4bf0b20a380212655a2b15f63d2ce07837d53d91f32f1ba7c77229",
+      "bytes": 107447
+    },
+    {
+      "id": "4077-13751-0006",
+      "speaker_id": 4077,
+      "text": "THEIR EYES WERE FROM THE FIRST TURNED IN ANTICIPATION TOWARD THE EVENING SUN NOT MERELY THAT THE WORK OF PROSELYTING SHOULD BE CARRIED ON IN THE WEST BUT THAT THE HEADQUARTERS OF THE CHURCH SHOULD BE THERE ESTABLISHED",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/4077-13751-0006.flac",
+      "sha256": "969803f07780cc65e4836592ea4ff63ab885fed7e852f36cb0cb50c3cacd36f4",
+      "bytes": 257918
+    },
+    {
+      "id": "4077-13754-0002",
+      "speaker_id": 4077,
+      "text": "IT WAS THROUGH FLOYD'S ADVICE THAT BUCHANAN ORDERED THE MILITARY EXPEDITION TO UTAH OSTENSIBLY TO INSTALL CERTAIN FEDERAL OFFICIALS AND TO REPRESS AN ALLEGED INFANTILE REBELLION WHICH IN FACT HAD NEVER COME INTO EXISTENCE BUT IN REALITY TO FURTHER THE INTERESTS OF THE SECESSIONISTS",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/4077-13754-0002.flac",
+      "sha256": "58ff360d46e4fc6bcaf04da1a6ead97dc191c54426528cfa13efe7e780349ff5",
+      "bytes": 359699
+    },
+    {
+      "id": "4077-13754-0003",
+      "speaker_id": 4077,
+      "text": "MOREOVER HAD THE PEOPLE BEEN INCLINED TO REBELLION WHAT GREATER OPPORTUNITY COULD THEY HAVE WISHED",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/4077-13754-0003.flac",
+      "sha256": "313a40d78133893c303d760dc06d4fd421bd7a8207bc291027c3429cc4d8023c",
+      "bytes": 111340
+    },
+    {
+      "id": "4077-13754-0005",
+      "speaker_id": 4077,
+      "text": "THEY KNEW NO NORTH NO SOUTH NO EAST NO WEST THEY STOOD POSITIVELY BY THE CONSTITUTION AND WOULD HAVE NOTHING TO DO IN THE BLOODY STRIFE BETWEEN BROTHERS UNLESS INDEED THEY WERE SUMMONED BY THE AUTHORITY TO WHICH THEY HAD ALREADY ONCE LOYALLY RESPONDED TO FURNISH MEN AND ARMS FOR THEIR COUNTRY'S NEED",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/4077-13754-0005.flac",
+      "sha256": "2c5814ee1f722a01ca5966a89d514f50e9fc732923d76a7bbf7058825b266aaf",
+      "bytes": 350545
+    },
+    {
+      "id": "4077-13754-0014",
+      "speaker_id": 4077,
+      "text": "THE PEOPLE CONTESTED THESE MEASURES ONE BY ONE IN THE COURTS PRESENTING IN CASE AFTER CASE THE DIFFERENT PHASES OF THE SUBJECT AND URGING THE UNCONSTITUTIONALITY OF THE MEASURE",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/4077-13754-0014.flac",
+      "sha256": "29ea0e8a2902d6513e6e9da9cb71ccde5855a6d737864c61e9f3869231525e90",
+      "bytes": 216520
+    },
+    {
+      "id": "4446-2271-0001",
+      "speaker_id": 4446,
+      "text": "HE HAD PRECONCEIVED IDEAS ABOUT EVERYTHING AND HIS IDEA ABOUT AMERICANS WAS THAT THEY SHOULD BE ENGINEERS OR MECHANICS",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/4446-2271-0001.flac",
+      "sha256": "0469768ab489b6855389d9ac8532b7dde006891820d8137913d7789965b07c89",
+      "bytes": 108405
+    },
+    {
+      "id": "4446-2271-0020",
+      "speaker_id": 4446,
+      "text": "OF COURSE HE REFLECTED SHE ALWAYS HAD THAT COMBINATION OF SOMETHING HOMELY AND SENSIBLE AND SOMETHING UTTERLY WILD AND DAFT",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/4446-2271-0020.flac",
+      "sha256": "3917942060d397823929f79de37c29c2d71b98a5c990711e0ff5c5665177e261",
+      "bytes": 125382
+    },
+    {
+      "id": "4446-2273-0001",
+      "speaker_id": 4446,
+      "text": "THEY ASKED HIM TO COME TO SEE THEM IN CHELSEA AND THEY SPOKE VERY TENDERLY OF HILDA",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/4446-2273-0001.flac",
+      "sha256": "258bdd056a6f1c52509ce59004100a9ca7fb627de2f1f155b7c5a0debda52328",
+      "bytes": 95792
+    },
+    {
+      "id": "4446-2275-0021",
+      "speaker_id": 4446,
+      "text": "HILDA'S FACE QUIVERED BUT SHE WHISPERED YES I THINK IT MUST HAVE BEEN",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/4446-2275-0021.flac",
+      "sha256": "661386173c60cb357d45bc4a87e41bce6f78676bfad71c4aae18c099fa667f65",
+      "bytes": 92240
+    },
+    {
+      "id": "4446-2275-0041",
+      "speaker_id": 4446,
+      "text": "YOU SEE LOVING SOME ONE AS I LOVE YOU MAKES THE WHOLE WORLD DIFFERENT",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/4446-2275-0041.flac",
+      "sha256": "ab4e34e36d4ee97d1cf992337aa88301a07bf6b322a42c19a7013a4a8711582a",
+      "bytes": 93782
+    },
+    {
+      "id": "4992-23283-0017",
+      "speaker_id": 4992,
+      "text": "MISS WOODLEY WAS TOO LITTLE VERSED IN THE SUBJECT TO KNOW THIS WOULD HAVE BEEN NOT TO LOVE AT ALL AT LEAST NOT TO THE EXTENT OF BREAKING THROUGH ENGAGEMENTS AND ALL THE VARIOUS OBSTACLES THAT STILL MILITATED AGAINST THEIR UNION",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/4992-23283-0017.flac",
+      "sha256": "890873e7ad14e00ad4d6fbf79e85721d94b67e4aa9b877028156919531b5d6a5",
+      "bytes": 234601
+    },
+    {
+      "id": "4992-41797-0000",
+      "speaker_id": 4992,
+      "text": "YES DEAD THESE FOUR YEARS AN A GOOD JOB FOR HER TOO",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/4992-41797-0000.flac",
+      "sha256": "f7dbbd42eb06171dccf937d53a6c9144e51b88ea5b1b2ee69978900b87216fb5",
+      "bytes": 97334
+    },
+    {
+      "id": "4992-41797-0014",
+      "speaker_id": 4992,
+      "text": "WHEN SHE COULD NOT MAKE A RABBIT OR A BIRD LOOK REAL ON PAPER SHE SEARCHED IN HER FATHER'S BOOKS FOR PICTURES OF ITS BONES",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/4992-41797-0014.flac",
+      "sha256": "f644c34191a48debfabffb515d4aeb550ad95ef178f23976398afe58dd73d6b7",
+      "bytes": 122702
+    },
+    {
+      "id": "4992-41797-0021",
+      "speaker_id": 4992,
+      "text": "SHE'S WONDERFUL MORE WONDERFUL THAN ANYBODY WE'VE EVER SEEN ANYWHERE AND SHE DRAWS BETTER THAN THE TEACHER IN CHARLESTOWN",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/4992-41797-0021.flac",
+      "sha256": "78b87a40845337e51db8665752b8342b6087411ce244b7f19bda91b53c765ed8",
+      "bytes": 149153
+    },
+    {
+      "id": "4992-41797-0022",
+      "speaker_id": 4992,
+      "text": "SHE'S OLDER THAN I AM BUT SO TINY AND SAD AND SHY THAT SHE SEEMS LIKE A CHILD",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/4992-41797-0022.flac",
+      "sha256": "f321f9dc1db9b69ddf396716e05c31f7f2acc409204f05fee9bcf17a3d7386bb",
+      "bytes": 113418
+    },
+    {
+      "id": "5105-28241-0002",
+      "speaker_id": 5105,
+      "text": "THE LATE ASTOUNDING EVENTS HOWEVER HAD RENDERED PROCOPE MANIFESTLY UNEASY AND NOT THE LESS SO FROM HIS CONSCIOUSNESS THAT THE COUNT SECRETLY PARTOOK OF HIS OWN ANXIETY",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/5105-28241-0002.flac",
+      "sha256": "fd852c5f382dbc5f99a39c2801267bfd78ab91fabbd71d9f8de577ffcfef518c",
+      "bytes": 202786
+    },
+    {
+      "id": "5105-28241-0003",
+      "speaker_id": 5105,
+      "text": "STEAM UP AND CANVAS SPREAD THE SCHOONER STARTED EASTWARDS",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/5105-28241-0003.flac",
+      "sha256": "5bd328b5c55618d8c8610f82e9d81501b96aba8813d880ba384a2d1eb367c5c6",
+      "bytes": 82259
+    },
+    {
+      "id": "5105-28241-0005",
+      "speaker_id": 5105,
+      "text": "FOR A FEW MILES SHE FOLLOWED THE LINE HITHERTO PRESUMABLY OCCUPIED BY THE COAST OF ALGERIA BUT NO LAND APPEARED TO THE SOUTH",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/5105-28241-0005.flac",
+      "sha256": "7a1668c505323bc5b686a709c45832ad3d759cf5f5febb9205aaf1829ed33544",
+      "bytes": 153393
+    },
+    {
+      "id": "5105-28241-0010",
+      "speaker_id": 5105,
+      "text": "OCEAN REIGNED SUPREME",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/5105-28241-0010.flac",
+      "sha256": "275ad09671d0219a846e771f4f793eb1991918e40a6efd2c305a9beb391fb3ca",
+      "bytes": 44271
+    },
+    {
+      "id": "5105-28241-0013",
+      "speaker_id": 5105,
+      "text": "WOULD NOT THE LOFTIEST EMINENCES OF THE CITY AT LEAST BE VISIBLE",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/5105-28241-0013.flac",
+      "sha256": "6f22b810e2af34f8c741fc282697468e1a436f96eb0841862a7bbbffc84ec1e1",
+      "bytes": 94368
+    },
+    {
+      "id": "5683-32865-0003",
+      "speaker_id": 5683,
+      "text": "THEY ARE COUSINS YOU KNOW WE ARE ALL COUSINS",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/5683-32865-0003.flac",
+      "sha256": "9a5e8328c6476a5eb70d3bd2f63340584a5320451073de39b641d5551b56512c",
+      "bytes": 63177
+    },
+    {
+      "id": "5683-32865-0009",
+      "speaker_id": 5683,
+      "text": "AND HE PLACED IT IN THAT GENTLEMAN'S FINGERS WHO NOW TOOK HIS TURN AT THE LAMP AND CONTEMPLATED THE LITTLE PARALLELOGRAM WITH A GLEAM OF SLY AMUSEMENT",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/5683-32865-0009.flac",
+      "sha256": "74c4f759dcd8bc3abe050166dbb09f5f24e34a1b935cff685d1b4149ce618797",
+      "bytes": 182335
+    },
+    {
+      "id": "5683-32866-0012",
+      "speaker_id": 5683,
+      "text": "NOW THAT'S IMPOSSIBLE RADIE FOR I REALLY DON'T THINK I ONCE THOUGHT OF HIM ALL THIS EVENING EXCEPT JUST WHILE WE WERE TALKING",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/5683-32866-0012.flac",
+      "sha256": "c5eb505469ef1344b69a37f7fa0f0aa0e9e1a751ed7a07f2e9ecbea72ad9308e",
+      "bytes": 156043
+    },
+    {
+      "id": "5683-32866-0015",
+      "speaker_id": 5683,
+      "text": "WHAT I SAY IS ALTOGETHER ON YOUR OWN ACCOUNT",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/5683-32866-0015.flac",
+      "sha256": "8e4503b01a88ea71a1fe7919cc8febc2f2ecc8dff0bce3ea30d5505f7d78aa0e",
+      "bytes": 63672
+    },
+    {
+      "id": "5683-32879-0018",
+      "speaker_id": 5683,
+      "text": "IT IS AN ANTIPATHY AN ANTIPATHY I CANNOT GET OVER DEAR DORCAS YOU MAY THINK IT A MADNESS BUT DON'T BLAME ME",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/5683-32879-0018.flac",
+      "sha256": "3c69ad4603ea1bc0b85a701757cb380b1add44813940515ad6a0160fbffd6fad",
+      "bytes": 148749
+    },
+    {
+      "id": "61-70968-0011",
+      "speaker_id": 61,
+      "text": "HE GAVE WAY TO THE OTHERS VERY READILY AND RETREATED UNPERCEIVED BY THE SQUIRE AND MISTRESS FITZOOTH TO THE REAR OF THE TENT",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/61-70968-0011.flac",
+      "sha256": "670ebf7f5252665a373e35486d5604c916f4d4ca68441009e458a23f91f60a22",
+      "bytes": 127646
+    },
+    {
+      "id": "61-70968-0013",
+      "speaker_id": 61,
+      "text": "BEFORE THEM FLED THE STROLLER AND HIS THREE SONS CAPLESS AND TERRIFIED",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/61-70968-0013.flac",
+      "sha256": "38d4d558f31bf01a04f90117cd50361fb4f2d878f5e5719c5c0749fb28a8dc2b",
+      "bytes": 92132
+    },
+    {
+      "id": "61-70968-0015",
+      "speaker_id": 61,
+      "text": "NAY WE REFUSED THEIR REQUEST MOST POLITELY MOST NOBLE SAID THE LITTLE STROLLER",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/61-70968-0015.flac",
+      "sha256": "7ac00acda3b3174ac3cdcea544799a0824ba1310123c5894b28bbd7871aa3ab8",
+      "bytes": 112512
+    },
+    {
+      "id": "61-70968-0052",
+      "speaker_id": 61,
+      "text": "BUT WHO IS THIS FELLOW PLUCKING AT YOUR SLEEVE",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/61-70968-0052.flac",
+      "sha256": "f7cc6a6f305664a08e84bb871fae6ba6f0db45e44d293de6ccb9a606032f3355",
+      "bytes": 61313
+    },
+    {
+      "id": "61-70968-0059",
+      "speaker_id": 61,
+      "text": "IT WILL BE NO DISAPPOINTMENT TO ME",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/61-70968-0059.flac",
+      "sha256": "fdf4101a3b84f891fed3654601d14ca92d076ec5bc83b593c15a1ee06b93971e",
+      "bytes": 47273
+    },
+    {
+      "id": "6930-75918-0005",
+      "speaker_id": 6930,
+      "text": "THE COUNT HAD THROWN HIMSELF BACK ON HIS SEAT LEANING HIS SHOULDERS AGAINST THE PARTITION OF THE TENT AND REMAINED THUS HIS FACE BURIED IN HIS HANDS WITH HEAVING CHEST AND RESTLESS LIMBS",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/6930-75918-0005.flac",
+      "sha256": "ccc0da025ef4f4596a4e70fbde291527d140364166d19d9bb516a48407b3491e",
+      "bytes": 261183
+    },
+    {
+      "id": "6930-76324-0001",
+      "speaker_id": 6930,
+      "text": "THEY WERE CERTAINLY NO NEARER THE SOLUTION OF THEIR PROBLEM",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/6930-76324-0001.flac",
+      "sha256": "3c2d7791724330d1d1333b3c95d86d726b63a73a5a1b81bc898efe443b2393f6",
+      "bytes": 70868
+    },
+    {
+      "id": "6930-76324-0011",
+      "speaker_id": 6930,
+      "text": "THEY WORRY ME TERRIBLY AND BESIDES I'D LIKE TO SEE WHAT THIS LOVELY FURNITURE LOOKS LIKE WITHOUT SUCH QUANTITIES OF DUST ALL OVER IT GOOD SCHEME CYN",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/6930-76324-0011.flac",
+      "sha256": "2cdf79b1c3c65fc09a7f924027ee817a1fb2528482b26ddb7fe2d3026569b16e",
+      "bytes": 185826
+    },
+    {
+      "id": "6930-76324-0019",
+      "speaker_id": 6930,
+      "text": "NOW LET'S DUST THE FURNITURE AND PICTURES",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/6930-76324-0019.flac",
+      "sha256": "1b27de4ded885cb9ca4ff68a3645c9c1e26a2c0d7399a0130caf3783a6fe37a4",
+      "bytes": 57638
+    },
+    {
+      "id": "6930-76324-0020",
+      "speaker_id": 6930,
+      "text": "YET LITTLE AS IT WAS IT HAD ALREADY MADE A VAST DIFFERENCE IN THE ASPECT OF THE ROOM",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/6930-76324-0020.flac",
+      "sha256": "b189c886b899598d76bab28426fa6b0245d617862e50978f9230958075551488",
+      "bytes": 128816
+    },
+    {
+      "id": "7021-79730-0005",
+      "speaker_id": 7021,
+      "text": "SO YOU WILL BE A GOOD GIRL I KNOW AND NOT MAKE ANY TROUBLE BUT WILL STAY AT HOME CONTENTEDLY WON'T YOU",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/7021-79730-0005.flac",
+      "sha256": "80b28d0bd86f21a2ede8f3e65f81374bd58bcd0eab211ced7ab38581a89ab71a",
+      "bytes": 136990
+    },
+    {
+      "id": "7021-79740-0006",
+      "speaker_id": 7021,
+      "text": "I EXPECT YOU HAVE BEEN A VERY GOOD GIRL ANDELLA SINCE YOU WERE HERE LAST",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/7021-79740-0006.flac",
+      "sha256": "f8a1fabe1162a7d0bdf537ed51b685514adc3bb1ce088b69e1ed0864461f7818",
+      "bytes": 102505
+    },
+    {
+      "id": "7021-79740-0007",
+      "speaker_id": 7021,
+      "text": "THEN TURNING TO JANE SHE ASKED IN A SOMEWHAT ALTERED TONE HAS SHE BEEN A GOOD GIRL JANE",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/7021-79740-0007.flac",
+      "sha256": "8212cf056eb5dad6c63c971e39cda69a1f3f356f78ad4bd3462d714cc096b8cb",
+      "bytes": 111267
+    },
+    {
+      "id": "7021-85628-0002",
+      "speaker_id": 7021,
+      "text": "HE WAS SUCH A BIG BOY THAT HE WORE HIGH BOOTS AND CARRIED A JACK KNIFE",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/7021-85628-0002.flac",
+      "sha256": "270e2aba59f2447b0964abc5422bc8686eff553d7645fef5299769ea8a6bf7a7",
+      "bytes": 120918
+    },
+    {
+      "id": "7021-85628-0027",
+      "speaker_id": 7021,
+      "text": "IF YOU DRESSED IN SILK AND GOLD FROM TOP TO TOE YOU COULD NOT LOOK ANY NICER THAN IN YOUR LITTLE RED CAP",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/7021-85628-0027.flac",
+      "sha256": "791475e22daa46583e8fee83d621d38369a71b0b21d5a41620b19bea7010d37d",
+      "bytes": 137049
+    },
+    {
+      "id": "7176-88083-0008",
+      "speaker_id": 7176,
+      "text": "IN DESPAIR HE HURLED HIMSELF DOWNWARD TOO SOON",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/7176-88083-0008.flac",
+      "sha256": "2b8384c497239a7056328df985549238c813cbab24becf7075515e3f04fbbc6d",
+      "bytes": 70228
+    },
+    {
+      "id": "7176-88083-0026",
+      "speaker_id": 7176,
+      "text": "THE DRAG UPON HIS BEAK AND THE LIGHT CHECK UPON HIS WINGS WERE INEXPLICABLE TO HIM AND APPALLING",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/7176-88083-0026.flac",
+      "sha256": "c637736d1dbd70e42d9ad3e319b273baf390cbc3f3ec8b31239ea7dca8e9d5d6",
+      "bytes": 104542
+    },
+    {
+      "id": "7176-92135-0019",
+      "speaker_id": 7176,
+      "text": "I WANT DOUBLE NINE HAL LO",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/7176-92135-0019.flac",
+      "sha256": "6513b30c34df1e4b618c18cbaebf81f77f7eabe9071eb648abf15bb71bef015e",
+      "bytes": 46071
+    },
+    {
+      "id": "7176-92135-0038",
+      "speaker_id": 7176,
+      "text": "A STAGE MEAL IS POPULAR BECAUSE IT PROVES TO THE AUDIENCE THAT THE ACTORS EVEN WHEN CALLED CHARLES HAWTREY OR OWEN NARES ARE REAL PEOPLE JUST LIKE YOU AND ME",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/7176-92135-0038.flac",
+      "sha256": "f55967c091f1d7139b0c1ea74737336b8135ec6ed84d19dad90fb4986bdc2093",
+      "bytes": 174242
+    },
+    {
+      "id": "7176-92135-0043",
+      "speaker_id": 7176,
+      "text": "TWO BITES ARE MADE AND THE BREAD IS CRUMBLED WITH AN AIR OF GREAT EAGERNESS INDEED ONE FEELS THAT IN REAL LIFE THE GUEST WOULD CLUTCH HOLD OF THE FOOTMAN AND SAY HALF A MO OLD CHAP I HAVEN'T NEARLY FINISHED BUT THE ACTOR IS BETTER SCHOOLED THAN THIS",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/7176-92135-0043.flac",
+      "sha256": "54bf0142a93f6bdb665533a125e1150af38e6347e2bf6fca8c17119ee295b6a5",
+      "bytes": 248341
+    },
+    {
+      "id": "7729-102255-0003",
+      "speaker_id": 7729,
+      "text": "FOR GENERAL SERVICE THEREFORE REQUIRING NO SPECIAL EFFORT THE NUMERICAL STRENGTH OF THE FACTIONS WAS ABOUT EQUAL WHILE ON EXTRAORDINARY OCCASIONS THE TWO THOUSAND BORDER RUFFIAN RESERVE LYING A LITTLE FARTHER BACK FROM THE STATE LINE COULD AT ANY TIME EASILY TURN THE SCALE",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/7729-102255-0003.flac",
+      "sha256": "5f7767c76f430619b1165275a138199af51f066046c82a9e10e99b4d10a2b0e0",
+      "bytes": 372715
+    },
+    {
+      "id": "7729-102255-0013",
+      "speaker_id": 7729,
+      "text": "IT WAS IN FACT THE BEST WEAPON OF ITS DAY",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/7729-102255-0013.flac",
+      "sha256": "756d150933b956a50bfb438c266059c04592df7c1cb64008dfd6b2953db765d7",
+      "bytes": 56377
+    },
+    {
+      "id": "7729-102255-0014",
+      "speaker_id": 7729,
+      "text": "THE LEADERS OF THE CONSPIRACY BECAME DISTRUSTFUL OF THEIR POWER TO CRUSH THE TOWN",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/7729-102255-0014.flac",
+      "sha256": "a56d5303079fbae7840d32cd277a19e39cd97669423e028ce7499e51d161eae0",
+      "bytes": 103871
+    },
+    {
+      "id": "7729-102255-0018",
+      "speaker_id": 7729,
+      "text": "LITTLE BY LITTLE HOWEVER THE LATTER BECAME HEMMED AND BOUND IN THE MESHES OF THE VARIOUS DEVICES AND PROCEEDINGS WHICH THE TERRITORIAL OFFICIALS EVOLVED FROM THE BOGUS LAWS",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/7729-102255-0018.flac",
+      "sha256": "6f49ebb80e4b04d423ffcaec6cdc1790750a88ab479ccf446036017d220bffaa",
+      "bytes": 212802
+    },
+    {
+      "id": "7729-102255-0042",
+      "speaker_id": 7729,
+      "text": "RELOCATED FOOTNOTE GOVERNOR ROBINSON BEING ON HIS WAY EAST THE STEAMBOAT ON WHICH HE WAS TRAVELING STOPPED AT LEXINGTON MISSOURI",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/7729-102255-0042.flac",
+      "sha256": "258a5f83b294976c312b375ef48ed79028fb41459458f6ece40b90fab7bce317",
+      "bytes": 171397
+    },
+    {
+      "id": "8230-279154-0000",
+      "speaker_id": 8230,
+      "text": "THE ANALYSIS OF KNOWLEDGE WILL OCCUPY US UNTIL THE END OF THE THIRTEENTH LECTURE AND IS THE MOST DIFFICULT PART OF OUR WHOLE ENTERPRISE",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8230-279154-0000.flac",
+      "sha256": "27f288ccebd4a68b77e7721d164bbed2e67c4da24155a4253a14f3abd9cf7d0f",
+      "bytes": 153801
+    },
+    {
+      "id": "8230-279154-0011",
+      "speaker_id": 8230,
+      "text": "SOME IMAGES LIKE SOME SENSATIONS FEEL VERY FAMILIAR WHILE OTHERS FEEL STRANGE",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8230-279154-0011.flac",
+      "sha256": "63ac92b91eacd3e253f422726ee83af7947ab562d1e69c311a63e55030b30964",
+      "bytes": 119279
+    },
+    {
+      "id": "8230-279154-0013",
+      "speaker_id": 8230,
+      "text": "IN AN IMAGE OF A WELL KNOWN FACE FOR EXAMPLE SOME PARTS MAY FEEL MORE FAMILIAR THAN OTHERS WHEN THIS HAPPENS WE HAVE MORE BELIEF IN THE ACCURACY OF THE FAMILIAR PARTS THAN IN THAT OF THE UNFAMILIAR PARTS",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8230-279154-0013.flac",
+      "sha256": "9a2a28f88fe1c4c227ee0c3e9529cbc62dfe7b241f591f2e6dddf6f3fc3694be",
+      "bytes": 252243
+    },
+    {
+      "id": "8230-279154-0029",
+      "speaker_id": 8230,
+      "text": "THE FACT THAT A MAN CAN RECITE A POEM DOES NOT SHOW THAT HE REMEMBERS ANY PREVIOUS OCCASION ON WHICH HE HAS RECITED OR READ IT",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8230-279154-0029.flac",
+      "sha256": "6ae822aad78d4c2879f6e3163ef39ba0549bac735dab197136c8654623886edb",
+      "bytes": 149617
+    },
+    {
+      "id": "8230-279154-0035",
+      "speaker_id": 8230,
+      "text": "THUS NO KNOWLEDGE AS TO THE PAST IS TO BE DERIVED FROM THE FEELING OF FAMILIARITY ALONE",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8230-279154-0035.flac",
+      "sha256": "69ded4510aac9cc34b9d25bb628eeea15aeb4b2e633d73f880b45d149c1210f5",
+      "bytes": 132705
+    },
+    {
+      "id": "8455-210777-0016",
+      "speaker_id": 8455,
+      "text": "THIS I FELT WAS PAID TO ME AS BEING PRESIDENT OF THE REPUBLIC AND I ENDEAVOURED TO BEHAVE MYSELF WITH SUCH MINGLED HUMILITY AND DIGNITY AS MIGHT BEFIT THE OCCASION BUT I COULD NOT BUT FEEL THAT SOMETHING WAS WANTING TO THE SIMPLICITY OF MY ORDINARY LIFE",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8455-210777-0016.flac",
+      "sha256": "c23f0dfa5b5c25c7a2639ac0e93690d8d18d960df8856b06bfa6377b1e72203b",
+      "bytes": 308863
+    },
+    {
+      "id": "8455-210777-0019",
+      "speaker_id": 8455,
+      "text": "THEN THERE WERE THREE OR FOUR LEADING MEN OF THE COMMUNITY WITH THEIR WIVES WHO WERE FOR THE MOST PART THE FATHERS AND MOTHERS OF THE YOUNG LADIES",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8455-210777-0019.flac",
+      "sha256": "46deb473a297ec5271f81ae4f6d1d52d9af5548b1f73da67c93f701f95c7647e",
+      "bytes": 157256
+    },
+    {
+      "id": "8455-210777-0044",
+      "speaker_id": 8455,
+      "text": "I WAS TO BE TAKEN AWAY AND CARRIED TO ENGLAND OR ELSEWHERE OR DROWNED UPON THE VOYAGE IT MATTERED NOT WHICH",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8455-210777-0044.flac",
+      "sha256": "e1bf366b361ee79e6619015cce0312165013cdff24b13a3dda95dd3c2256b3b6",
+      "bytes": 132937
+    },
+    {
+      "id": "8455-210777-0060",
+      "speaker_id": 8455,
+      "text": "THE JOHN BRIGHT IS ARMED WITH A WEAPON OF GREAT POWER AGAINST WHICH IT IS IMPOSSIBLE THAT THE PEOPLE OF BRITANNULA SHOULD PREVAIL",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8455-210777-0060.flac",
+      "sha256": "ef57db07976e02027d19da092bac4747c7928a93199441010b967c12ce13e724",
+      "bytes": 139397
+    },
+    {
+      "id": "8455-210777-0065",
+      "speaker_id": 8455,
+      "text": "I SHALL BE HAPPY TO TAKE CHARGE OF THEM SAID SIR FERDINANDO",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8455-210777-0065.flac",
+      "sha256": "bf9da84c8af53895300177b2b5d15cf439501534a49e185565e74cebbf20370b",
+      "bytes": 78629
+    },
+    {
+      "id": "8463-294825-0007",
+      "speaker_id": 8463,
+      "text": "EVEN THE SUPPORTING CAST IS SHREWDLY DRAWN PROFESSOR ARONNAX THE CAREER SCIENTIST CAUGHT IN AN ETHICAL CONFLICT CONSEIL THE COMPULSIVE CLASSIFIER WHO SUPPLIES HUMOROUS TAG LINES FOR VERNE'S FAST FACTS THE HARPOONER NED LAND A CREATURE OF CONSTANT APPETITES MAN AS HEROIC ANIMAL",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8463-294825-0007.flac",
+      "sha256": "ae7287dd69015aa06f15d282e2ba917b28a7cdcd01ff069ff3c7ef59d5738be9",
+      "bytes": 429220
+    },
+    {
+      "id": "8463-294825-0013",
+      "speaker_id": 8463,
+      "text": "FOR MANY THEN THIS BOOK HAS BEEN A SOURCE OF FASCINATION SURELY ONE OF THE MOST INFLUENTIAL NOVELS EVER WRITTEN AN INSPIRATION FOR SUCH SCIENTISTS AND DISCOVERERS AS ENGINEER SIMON LAKE OCEANOGRAPHER WILLIAM BEEBE POLAR TRAVELER SIR ERNEST SHACKLETON",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8463-294825-0013.flac",
+      "sha256": "98896b401ad9d34b411d4717d86c12e214dd805325429c2448e1407de0d10e91",
+      "bytes": 377264
+    },
+    {
+      "id": "8463-294828-0004",
+      "speaker_id": 8463,
+      "text": "BUT NOW NOTHING COULD HOLD ME BACK",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8463-294828-0004.flac",
+      "sha256": "77411849769c50f16648e6beffc779ae9a3fb6b21d26c17c9d08397a41cd153e",
+      "bytes": 54034
+    },
+    {
+      "id": "8463-294828-0020",
+      "speaker_id": 8463,
+      "text": "YES WE ARE CERTAINLY I REPLIED EVASIVELY BUT AFTER WE MAKE A DETOUR",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8463-294828-0020.flac",
+      "sha256": "e515992cd2aa00b88467c0fb497cac94305e93cac70eb3f9de0603d2c7f5dc51",
+      "bytes": 118877
+    },
+    {
+      "id": "8463-294828-0036",
+      "speaker_id": 8463,
+      "text": "THE WHARVES OF BROOKLYN AND EVERY PART OF NEW YORK BORDERING THE EAST RIVER WERE CROWDED WITH CURIOSITY SEEKERS",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8463-294828-0036.flac",
+      "sha256": "dde9eef4dd949f242eae31aa98ce822b2afbfff9ded75ea94ca2ad1fbf80395b",
+      "bytes": 148621
+    },
+    {
+      "id": "8555-284447-0023",
+      "speaker_id": 8555,
+      "text": "I COULDN'T SHIVER MUCH BEIN BOUND SO TIGHT BUT WHEN I'M LOOSE I MEAN TO HAVE JUS ONE GOOD SHIVER TO RELIEVE MY FEELIN'S",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8555-284447-0023.flac",
+      "sha256": "e96ee0869c03409ebcb9739c6ae3c2e74075d1ebd439a9ef005047adf1fa0059",
+      "bytes": 141240
+    },
+    {
+      "id": "8555-284449-0005",
+      "speaker_id": 8555,
+      "text": "WHEN HE FINISHED SHE SAID CHEERFULLY",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8555-284449-0005.flac",
+      "sha256": "5404216dd50810d155b859787920cef068334d148e890aada0507b99678b0d1c",
+      "bytes": 53155
+    },
+    {
+      "id": "8555-284449-0007",
+      "speaker_id": 8555,
+      "text": "NOW THEN LET'S ENTER THE CITY AN ENJOY THE GRAND FEAST THAT'S BEING COOKED I'M NEARLY STARVED MYSELF FOR THIS CONQUERIN KINGDOMS IS HARD WORK",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8555-284449-0007.flac",
+      "sha256": "b08fe106218d904dfc612b77e809b80489fde23dca5e8991f504be34c687cdf7",
+      "bytes": 179497
+    },
+    {
+      "id": "8555-284449-0013",
+      "speaker_id": 8555,
+      "text": "SCUSE ME SAID TROT I NEGLECTED TO TELL YOU THAT YOU'RE NOT THE BOOLOOROO ANY MORE",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8555-284449-0013.flac",
+      "sha256": "56487ddde846e059d08e96c1dc4b9e3fa35c4219a2b4cc541d25f4fc698848d5",
+      "bytes": 110163
+    },
+    {
+      "id": "8555-292519-0014",
+      "speaker_id": 8555,
+      "text": "SHE WAS ALONE THAT NIGHT",
+      "path": "daily/2026-10-21/experiments/zipformer/artifacts/multispeaker/8555-292519-0014.flac",
+      "sha256": "f5379ac93421713b25cf55a32f026c19cc62017114e65b2ae2526c5f73ab359b",
+      "bytes": 42599
+    }
+  ],
+  "no_overlap_with_previous73_ids": true,
+  "no_overlap_with_previous73_speakers": true,
+  "reference_words": 2295,
+  "scope": "New to these experiments, not proof of unseen pretraining;100utterance subset,not complete test-clean benchmark. No model-based filtering or patch tuning on this set.",
+  "source_code": {
+    "path": "daily/2026-10-21/experiments/zipformer/src/prepare_multispeaker.py",
+    "sha256": "52e36c6ba571683be1487c529bd6f0c7e7742f17e9ed31fc9d64cdeeef11722a",
+    "bytes": 5438
+  }
+}

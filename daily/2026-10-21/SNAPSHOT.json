@@ -1,0 +1,415 @@
+{
+  "frozen_at_utc": "2026-10-21T09:07:14.246177+00:00",
+  "scope": "Day21 local handoff after approved refinement. No commit/push;original results/sources and day20 preserved. Source-at-execution hashes may precede final Ruff formatting. Excludes this snapshot itself and ignored model/audio/tensor artifacts.",
+  "git_head_unchanged": "822a9971f061ec6567646d66eb2869161c06a6eb",
+  "initial_snapshot": {
+    "path": "daily/2026-10-21/SNAPSHOT.initial.json",
+    "bytes": 8787,
+    "sha256": "4783e4769156625f515621dcf15ebaed24f7dfc0527439c99b4960b93712ca09"
+  },
+  "initial_source_result_files_preserved": 40,
+  "document_checks": {
+    "numeric_tables_and_C1_size_reduction_match_results": true,
+    "project_groups_start_with_Evidence": true,
+    "local_links_resolve": 41
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 6361,
+      "sha256": "97a79203057f238f5e288c3d4909d2e47eba90ac388a553e251f1346789239f5"
+    },
+    {
+      "path": "daily/2026-10-21/environments/mlsd-requirements-lock.txt",
+      "bytes": 1236,
+      "sha256": "c882bbb7ff3e67b950f41961ec0c30af45e36d74454d7620472adbc71663b34e"
+    },
+    {
+      "path": "daily/2026-10-21/environments/refinement_profiler_inventory.json",
+      "bytes": 2652,
+      "sha256": "8d916b24ec2ee6b83f332a687691fb4ede90684e8edd9500fc9b8bd79b12d84f"
+    },
+    {
+      "path": "daily/2026-10-21/environments/runtime.json",
+      "bytes": 1492,
+      "sha256": "78bb51761333458c1ff7ca11dd0d9074adb9808b7a8de36724ac7ab7fa11aaff"
+    },
+    {
+      "path": "daily/2026-10-21/environments/zipformer-requirements-lock.txt",
+      "bytes": 661,
+      "sha256": "aeda13f554640f2bb0b5fd807722bf2c87c46b23901042872abf991d3325451a"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/activation_diagnosis.json",
+      "bytes": 138755,
+      "sha256": "068c4138b4f1e2734e8a52b374b89f8f54c6c110e9335f82049de4df2538fae3"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/activation_summary.csv",
+      "bytes": 8336,
+      "sha256": "002b77f053805540da3fb61f49d9dd37f598a6987b42bf2ba5c978fff991e1a7"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/benchmark.json",
+      "bytes": 11344,
+      "sha256": "f7b4347c2c3bdbf131a23c6835a721f182eaaf7498bfb9d00b94a8a030386d9a"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/benchmark8.json",
+      "bytes": 6612,
+      "sha256": "d7f833a82d35043075ef560222677e906d05adb08d6f78603f2ded2a69080ad2"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/development.json",
+      "bytes": 13732,
+      "sha256": "677788cf14272477bd23184684c3587531e621ec1e6295dc61b202f0fdddad69"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/exports.json",
+      "bytes": 66160,
+      "sha256": "64a5542b3154e9d21d4feae64f829ad936b77f3bdbc23f52f37cd843377dc663"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_benchmark_t4_s1.json",
+      "bytes": 9510,
+      "sha256": "de89d97e9658297c6519c0c3efb9e13ae6a714d740f5ef954f6fbf62f34d96b7"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_benchmark_t8_s1.json",
+      "bytes": 9494,
+      "sha256": "a581b6d11938a0a2e46a9299c839337451e6e3faf4636c9447ce6e41621ff9c1"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_C1.json",
+      "bytes": 20640,
+      "sha256": "b59894a3ad6ed058cba8d9993ede794e3d97dac2e2ee9339aceef78093a2fe70"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_C2.json",
+      "bytes": 19308,
+      "sha256": "9476f1fb3e82e85001070c4a7b3c85fc16e30992a4c457015f2e0891f6fc20e0"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_C3.json",
+      "bytes": 19443,
+      "sha256": "960a860d67b7c0b6b20792f058b2e3b4d5512c62f90ae7ab826b75132ffe5fe6"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_contiguous_benchmark_t4_s1.json",
+      "bytes": 9671,
+      "sha256": "dba75f614a3515e9e3803ccbb4bb23f31c8686feef05462a7c6b38c8351b479c"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_contiguous_benchmark_t4_s2.json",
+      "bytes": 9722,
+      "sha256": "1992ec6f999c0aa3a4561bf3195afeef56a18ccac315acf5dca9fd554aef47e8"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_contiguous_benchmark_t8_s1.json",
+      "bytes": 9685,
+      "sha256": "4ea97af2bd7b2d67bb8c72126d8bfd67acde84716987e4d686b5fad8a10aefd3"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_contiguous_benchmark_t8_s2.json",
+      "bytes": 9700,
+      "sha256": "ca88cf2931be11a546c888cd6f078b742f24d7755790b63decbe6f82553a57c4"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_io_profile.json",
+      "bytes": 221914,
+      "sha256": "45d96a6142e24339d1d658d020cd1d06b840c627aa9f4fbbbda61fa551632ac8"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_prune_conversion.json",
+      "bytes": 1925,
+      "sha256": "78aae9f7c31d42c1ec981b270c89ac901584b9b2650f7afbeaac5dad0c617d28"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_prune_parity.json",
+      "bytes": 4156,
+      "sha256": "740c3588bda923c08ed9a90eda9d363ba9e1edab1c544fae6baaf18f62afb664"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_quality_selection.json",
+      "bytes": 1188,
+      "sha256": "1c5bf68397e95df23c306223b5b71f0dbeb20aef8764667b73b58142504dd078"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_regression.json",
+      "bytes": 2688,
+      "sha256": "91fb028c846f2a37993cd022dcf700b782c520564da838461f2550031dba032b"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_speed_selection.json",
+      "bytes": 1543,
+      "sha256": "5c7135cb866643b1b792ac62e5d02e55bb9477f0c094cb69b6759bf9322a4f2f"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/regression.json",
+      "bytes": 6171,
+      "sha256": "8ded478b02f760b63382f0c429cef5c179f76f63940a0cf6a4fc955a62196c6e"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/selection.json",
+      "bytes": 722,
+      "sha256": "8a9366d63d716f1b1f6f16c6e9b2a658deb0994994e83e75e30bafb0a5b16998"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/split_conversion.json",
+      "bytes": 2100,
+      "sha256": "c1d1ae0f55f701e97db8bf55123c258003a3a2e6c446a37f3e82e8def1a7ca52"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/split_float_parity.json",
+      "bytes": 2953,
+      "sha256": "72e8c154667b1e7f58ccbfb56dfd7b049b3876627df9bde6189f6cf700d966b7"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/timing_analysis.json",
+      "bytes": 1165,
+      "sha256": "c957928716f639d1adef1643c619b3f1d3f656d8764eca40b82a89722d7fd30f"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/analyze_timing.py",
+      "bytes": 1668,
+      "sha256": "a1181373b90709f9c8651a140710f2a19e45b24c8d9e5237c24de8e25ad656b1"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/benchmark8.py",
+      "bytes": 3100,
+      "sha256": "5218e3d40e547d706c88bfe96fddcc9b9b35bedf23273abcecade6683658d5ca"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/diagnose_activations.py",
+      "bytes": 6337,
+      "sha256": "23dbe3db5cc5ad9551a1202ef2215c8db649c092789d44674b5d5b040c068bb1"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/export_candidates.py",
+      "bytes": 6972,
+      "sha256": "281663826346a9ff1b4d4fa458c3266389bfa8fbc78bdf6cebefa376e973f74f"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/measure21.py",
+      "bytes": 6978,
+      "sha256": "73635a0313dc26c1bd252b20af33cc96dd1063eb561c49ac29239090dec7971f"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/prune_head.py",
+      "bytes": 4046,
+      "sha256": "18de7871ee67e49e93f354f033e4b94157f6abdd6bf86cd6b0d27f21c08c0b1d"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/refinement_io_profile.py",
+      "bytes": 5994,
+      "sha256": "fbe45e7f9914aeab489f2c0733e89c7ad107d70d8ce93e0070c9929fffbbf9fa"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/refinement_measure.py",
+      "bytes": 7665,
+      "sha256": "84a66474ba8f1bc6d8156de534a4e7db26259926ac812670e917b2273dc5ee01"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/refinement_mlsd.py",
+      "bytes": 7723,
+      "sha256": "d64d8dfc3e778a1f62db9011046c33d86a60e983a5e4e6f9bae9aa668dfcd0f1"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/runtime21.py",
+      "bytes": 2692,
+      "sha256": "4c572aea1c898788f9ab489b4d7fe3baa0d3fa512d04125489c71de48c62c09e"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/split_heads.py",
+      "bytes": 5041,
+      "sha256": "f5ebadf169bf5345ddf090bd78ae0f4393ab6271dd60f65eea19baebfb1f90fc"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/support21.py",
+      "bytes": 1533,
+      "sha256": "82bf0099bbb0b37f271d1a05cd93593c9445a6dbca22bc910c191a9c6eaf9bf5"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/benchmark.json",
+      "bytes": 10455,
+      "sha256": "4fbde00f8ad18b61fae42c293920c534167e7fd90eabebd1c1c4b16c830904c7"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/continuous_state_test.json",
+      "bytes": 16947,
+      "sha256": "27bdf60dbef56321e05732afdb5bd865dab98752394f09ccbca6fd41a743d6d4"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/encoder_fc_rewrite.json",
+      "bytes": 193582,
+      "sha256": "238ce5911eeaeabba0cf1e03b0cd36b867497573de87444e84fca2424ad07549"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/encoder_profile.json",
+      "bytes": 300228,
+      "sha256": "632a84dcdee4e8e930cfb7ca6df2003bc27f71ab9428ba64084b3dac115a4813"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/evaluation_baseline.json",
+      "bytes": 127486,
+      "sha256": "7c54953d0cec34d56b82b14c722564f62fa9a892f3097dab7d40f7c8006a92fb"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/evaluation_fc.json",
+      "bytes": 127489,
+      "sha256": "6c25775dd3baf8772c47a2d86265966ed4fc750ed39c13d366abd7e6534732bd"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/multispeaker_evaluation.json",
+      "bytes": 475389,
+      "sha256": "3825f47813563d62c5caa2056b1638629506b931d7c5789ce23ccce7d1d8f387"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/multispeaker_manifest.json",
+      "bytes": 43424,
+      "sha256": "559097f1ef6d40da805242eb86e166c601ecd749eef1ecbd766b620631d7878b"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/refinement_benchmark.json",
+      "bytes": 15717,
+      "sha256": "c7942f5af44ffe4ae2bd6c6c30297c7ab707854a0be15fb024c5820480cc8c5f"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/refinement_bias_evaluation.json",
+      "bytes": 416313,
+      "sha256": "64639708ce4d6c27724d9b588c3e0321accfce337c7f83f04228ec10de16eb1e"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/refinement_bias_rewrite.json",
+      "bytes": 209009,
+      "sha256": "de336572f73b8d0fc1b3626f6823d1a18175353af6086cce32b5e396c4045fc1"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/refinement_coldstart_memory.json",
+      "bytes": 17970,
+      "sha256": "175a7ffb7d164642e5d2862d3f85731c4cd3113d44dc76c81c61b82d5fde959b"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/src/asr21.py",
+      "bytes": 1756,
+      "sha256": "418eb3dde4026d1fb27c9f0f78da86deefed01b324f250d98bd58394269b116e"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/src/benchmark21.py",
+      "bytes": 3498,
+      "sha256": "9597beafce14108e43e3608902adc3b7ea052a2ebfddd741f6be8abbe3288257"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/src/coldstart_zipformer.py",
+      "bytes": 5869,
+      "sha256": "ef46f1d17a50809131319c1ce31a3242766b0ab6fbab72f62f2dda0c01b0d0c4"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/src/evaluate21.py",
+      "bytes": 4411,
+      "sha256": "b39d033639b15c5e56e8265edd674a3114f7511851de9c64d238df0cffba86e9"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/src/evaluate_multispeaker.py",
+      "bytes": 2438,
+      "sha256": "7eba5d3d5b3726cc847fb1c1e5c4336ba2dbec4904f298a62d62b1cafc4fd232"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/src/fuse_bias.py",
+      "bytes": 6779,
+      "sha256": "160bb373a2c86c18fd0715b67fb8dde4ecf832b9ee669a937dba3edc7a8015b5"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/src/prepare_multispeaker.py",
+      "bytes": 5466,
+      "sha256": "c908b4c2b30eede5d5ad8515555905741a2a7a600ff3762c96d2f23f981e096b"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/src/profile_encoder.py",
+      "bytes": 3354,
+      "sha256": "d062a1341e23b2808a0904cc8908e724cdc79db1df5839b31558ad17953a2a1b"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/src/refinement_asr.py",
+      "bytes": 7711,
+      "sha256": "a4620f9fe71858a33c5ed74dd0a1499aa1fa92acbfdebddd3baf1d362c2a8905"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/src/rewrite_fc.py",
+      "bytes": 5911,
+      "sha256": "30051617705015f7d38ae90f16cf148dfe62e6ca2a5f9840da841e34c8b7ed79"
+    },
+    {
+      "path": "daily/2026-10-21/PROTOCOL.md",
+      "bytes": 4041,
+      "sha256": "a770cd01ca980d351d381aa30e102a4b4e7370dc812bc16c9f79eb035304ed67"
+    },
+    {
+      "path": "daily/2026-10-21/PROTOCOL_REFINEMENT.md",
+      "bytes": 4411,
+      "sha256": "72b6d7e429b6381496e209fef88989a829e41fea4bb7dff4f9ad1ba89744e458"
+    },
+    {
+      "path": "daily/2026-10-21/REFINEMENT_ANALYSIS.json",
+      "bytes": 6734,
+      "sha256": "4888b672f04fb54cfd54c56e282b8f38871510f989ba16c1277753ef43b98a01"
+    },
+    {
+      "path": "daily/2026-10-21/REFINEMENT_VERIFICATION.json",
+      "bytes": 1925,
+      "sha256": "2d84b9aee456c88356fbe735bc22bf2dd983f8d88fd44be26d8a83e112020653"
+    },
+    {
+      "path": "daily/2026-10-21/REPORT.md",
+      "bytes": 11924,
+      "sha256": "19cf8b8097035996071f8dc77ce12a06ac163e3715660f784250df864c38dd81"
+    },
+    {
+      "path": "daily/2026-10-21/RESEARCH.md",
+      "bytes": 15351,
+      "sha256": "947a590c1263cf02e79d5646e53ee1ccfbc6cd5fd4762fc985c04afed56713f5"
+    },
+    {
+      "path": "daily/2026-10-21/RUNNING.md",
+      "bytes": 9796,
+      "sha256": "0bc8cbde110b725a34d1247a9fa4619b20b8bf147a94dd2a37b1805df2e09bf1"
+    },
+    {
+      "path": "daily/2026-10-21/SNAPSHOT.initial.json",
+      "bytes": 8787,
+      "sha256": "4783e4769156625f515621dcf15ebaed24f7dfc0527439c99b4960b93712ca09"
+    },
+    {
+      "path": "daily/2026-10-21/tools/analyze_refinement.py",
+      "bytes": 3382,
+      "sha256": "30eabbc2c329256dcce2c43a6a64deecf56dfb4b35c04f3702f779e85924f474"
+    },
+    {
+      "path": "daily/2026-10-21/tools/freeze_refinement.py",
+      "bytes": 6754,
+      "sha256": "9c013b95523f224b90b17403c331e8dceb187ff7e6f5484c4528171dea836ce2"
+    },
+    {
+      "path": "daily/2026-10-21/tools/probe_runtime.py",
+      "bytes": 1701,
+      "sha256": "05b211c6179fe3cd4bd38227216c7d8d8593a1411349815a85751c6513203dca"
+    },
+    {
+      "path": "daily/2026-10-21/tools/verify.py",
+      "bytes": 13910,
+      "sha256": "65bfd4302b0b00912db147b58b9d3f154a22850ed256b36adcdf7f791fbb46b0"
+    },
+    {
+      "path": "daily/2026-10-21/tools/verify_refinement.py",
+      "bytes": 11527,
+      "sha256": "8af442e4acd5c44ae5ed482964c9f7f0831641bea8a732ccf4f1bdfb1458e1a3"
+    },
+    {
+      "path": "daily/2026-10-21/VERIFICATION.json",
+      "bytes": 1136,
+      "sha256": "0d5ba98a9ea8f70650bbb68bedfe3cead51569a5bcebfe7d68808002d50201af"
+    }
+  ],
+  "file_count": 79,
+  "total_bytes": 2783369
+}

@@ -1,0 +1,19 @@
+{
+  "locked_at_utc": "2026-10-21T07:12:52.132037+00:00",
+  "selected": "head_float",
+  "eligible": [
+    "head_float"
+  ],
+  "regression_used": false,
+  "criterion": "Fastest declared INT8 alternative within0.5pp of float development AP and faster than matched float4threads,otherwise keep float. No selection by regression.",
+  "development": {
+    "path": "daily/2026-10-21/experiments/mlsd/results/development.json",
+    "sha256": "677788cf14272477bd23184684c3587531e621ec1e6295dc61b202f0fdddad69",
+    "bytes": 13732
+  },
+  "benchmark": {
+    "path": "daily/2026-10-21/experiments/mlsd/results/benchmark.json",
+    "sha256": "f7b4347c2c3bdbf131a23c6835a721f182eaaf7498bfb9d00b94a8a030386d9a",
+    "bytes": 11344
+  }
+}

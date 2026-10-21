@@ -1,0 +1,98 @@
+{
+  "started_at_utc": "2026-10-21T08:38:52.896265+00:00",
+  "finished_at_utc": "2026-10-21T08:38:59.164929+00:00",
+  "models": {
+    "C1": {
+      "model": {
+        "path": "daily/2026-10-21/experiments/mlsd/artifacts/refinement/C1.tflite",
+        "sha256": "b7ecbf764228e74152801daec13ba3022c37c8677ab20a979392574864043aa9",
+        "bytes": 1905424
+      },
+      "output": {
+        "path": "daily/2026-10-21/experiments/mlsd/artifacts/refinement/C1_regression.npz",
+        "sha256": "2d437d14f3914b92438565d251eaa035f8dbc274b64826dfdca454c2657f82af",
+        "bytes": 66106324
+      },
+      "sAP10": {
+        "sAP10_subset_percent": 13.112140548143847,
+        "precision_at_0_1": 0.26084044868575257,
+        "recall_at_0_1": 0.22898295120517342,
+        "ground_truth_lines": 6804,
+        "predicted_line_counts": [
+          121,
+          131,
+          111,
+          131,
+          115,
+          152,
+          107,
+          155,
+          136,
+          130,
+          122,
+          156,
+          76,
+          98,
+          121,
+          103,
+          84,
+          135,
+          150,
+          101,
+          116,
+          142,
+          118,
+          106,
+          146,
+          112,
+          124,
+          150,
+          136,
+          111,
+          109,
+          72,
+          107,
+          96,
+          102,
+          129,
+          134,
+          103,
+          150,
+          62,
+          133,
+          62,
+          102,
+          130,
+          103,
+          82,
+          104,
+          107,
+          106,
+          117,
+          84,
+          101,
+          77,
+          137
+        ],
+        "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+      }
+    }
+  },
+  "images": 54,
+  "manifest": {
+    "path": "daily/2026-10-16/experiments/finalize/results/mlsd_manifest.json",
+    "sha256": "7b26ee9db44f945ae0db373f801b629716e5565a39a0ceaca3c7dd6838f8d0c1",
+    "bytes": 17222
+  },
+  "selection": {
+    "path": "daily/2026-10-21/experiments/mlsd/results/refinement_speed_selection.json",
+    "sha256": "5c7135cb866643b1b792ac62e5d02e55bb9477f0c094cb69b6759bf9322a4f2f",
+    "bytes": 1543
+  },
+  "scope": "Only development-quality-eligible candidates;54 reused images,not a fresh test. Original float/A references remain in regression.json. No reselection after regression.",
+  "source_code": {
+    "path": "daily/2026-10-21/experiments/mlsd/src/refinement_measure.py",
+    "sha256": "8f80b043d815a32976f9a555b134607fab5e9682eda94ab1e202bb1bdb7d7288",
+    "bytes": 7244
+  }
+}

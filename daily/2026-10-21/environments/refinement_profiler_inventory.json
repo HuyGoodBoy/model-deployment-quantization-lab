@@ -1,0 +1,56 @@
+{
+  "recorded_at_utc": "2026-10-21T08:43:30.916981+00:00",
+  "versions": {
+    "ai-edge-litert": "2.2.0",
+    "ai-edge-quantizer": "0.9.0"
+  },
+  "interpreter_signature": "(model_path=None, model_content=None, experimental_delegates=None, num_threads=None, experimental_op_resolver_type=<OpResolverType.AUTO: 0>, experimental_preserve_all_tensors=False, experimental_disable_delegate_clustering=False, experimental_default_delegate_latest_features=False, experimental_compress_quantization_zero_points=False, experimental_disable_delegate_node_fusion=False, experimental_force_delegate_node_profiling=False)",
+  "litert_files": [
+    "_pywrap_string_util.so",
+    "_pywrap_litert_environment_wrapper.so",
+    "libLiteRt.so",
+    "_pywrap_tensorflow_lite_calibration_wrapper.so",
+    "_pywrap_analyzer_wrapper.so",
+    "_pywrap_litert_compiled_model_wrapper.so",
+    "_pywrap_litert_tensor_buffer_wrapper.so",
+    "_pywrap_tfl_calibration.so",
+    "_pywrap_modify_model_interface.so",
+    "profiling_info_pb2.py",
+    "format_converter_wrapper_pybind11.so",
+    "_pywrap_litert_interpreter_wrapper.so",
+    "_pywrap_litert_converter.so",
+    "libLiteRtWebGpuAccelerator.so",
+    "_pywrap_tensorflow_lite_metrics_wrapper.so",
+    "pywrap_genai_ops.so",
+    "libpywrap_litert_common.so",
+    "__pycache__/profiling_info_pb2.cpython-311.pyc",
+    "tools/benchmark_litert_model.py",
+    "tools/__pycache__/benchmark_litert_model.cpython-311.pyc",
+    "vendors/qualcomm/compiler/libLiteRtCompilerPlugin_Qualcomm.so",
+    "vendors/intel_openvino/dispatch/libLiteRtDispatch_IntelOpenvino.so",
+    "vendors/intel_openvino/compiler/libLiteRtCompilerPlugin_IntelOpenvino.so",
+    "vendors/google_tensor/compiler/libLiteRtCompilerPlugin_google_tensor.so",
+    "vendors/samsung/compiler/libLiteRtCompilerPlugin_Samsung.so",
+    "vendors/mediatek/compiler/libLiteRtCompilerPlugin_MediaTek.so"
+  ],
+  "quantizer_profile_files": [
+    "calibrator.py",
+    "calibrator_test.py",
+    "utils/calibration_utils_test.py",
+    "utils/calibration_utils.py",
+    "utils/__pycache__/calibration_utils.cpython-311.pyc",
+    "utils/__pycache__/calibration_utils_test.cpython-311.pyc",
+    "__pycache__/calibrator.cpython-311.pyc",
+    "__pycache__/calibrator_test.cpython-311.pyc"
+  ],
+  "tools": {
+    "nm": null,
+    "c++": null,
+    "cmake": null,
+    "bazel": null,
+    "perf": null,
+    "taskset": "/usr/bin/taskset"
+  },
+  "python_profiler_methods": [],
+  "scope": "Read-only pinned-image inventory;no supported per-op result API exposed by Interpreter. No custom runtime build or private pointer hook used;application-stage diagnostic is not native per-node profiling."
+}

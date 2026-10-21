@@ -1,0 +1,4128 @@
+{
+  "finished_at_utc": "2026-10-21T07:01:57.548764+00:00",
+  "models": {
+    "float": {
+      "path": "daily/2026-10-20/experiments/mlsd/artifacts/float_conversion/qat_weights_fp32_float32.tflite",
+      "sha256": "cafe7a915c77d90f07ff7b2094d1b8868c7e5855a168d0694aea429b8e584eda",
+      "bytes": 2483636
+    },
+    "static": {
+      "path": "daily/2026-10-20/experiments/mlsd/artifacts/aeq_static.tflite",
+      "sha256": "3c646cedeed7ba8237a65f102f3fb3ffad180e05559b67377ee0a5fdf65a4a73",
+      "bytes": 792192
+    }
+  },
+  "diagnostic_image_indices": [
+    0,
+    1,
+    8,
+    15
+  ],
+  "operators": 41,
+  "records": [
+    {
+      "image_index": 0,
+      "order": 0,
+      "scope": "wa/model/model/backbone/features.1/conv/conv.0/conv.0.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.0/features.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        256,
+        256,
+        32
+      ],
+      "relative_l2": 0.0070312716704218885,
+      "max_abs": 0.12590932846069336,
+      "rmse": 0.01752013052144175,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 1,
+      "scope": "wa/model/model/backbone/features.1/conv/conv.1/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.1/conv/conv.0/conv.0.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        256,
+        256,
+        32
+      ],
+      "relative_l2": 0.12685013349888838,
+      "max_abs": 3.1790270805358887,
+      "rmse": 0.28034737794321074,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 2,
+      "scope": "wa/model/model/backbone/features.1/conv/conv.1/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.1/conv/conv.1/Conv_conv_filter",
+      "shape": [
+        1,
+        256,
+        256,
+        16
+      ],
+      "relative_l2": 0.5902960691943703,
+      "max_abs": 9.610760688781738,
+      "rmse": 1.5303061936928015,
+      "quantization_scale": 0.21810618042945862,
+      "representable_min": -28.35380345582962,
+      "representable_max": 27.263272553682327,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 3,
+      "scope": "wa/model/model/backbone/features.2/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.2/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        256,
+        256,
+        96
+      ],
+      "relative_l2": 0.24471923493101544,
+      "max_abs": 6.0,
+      "rmse": 0.529277778400697,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 4,
+      "scope": "wa/model/model/backbone/features.2/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.2/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        96
+      ],
+      "relative_l2": 0.18717021128957262,
+      "max_abs": 3.247058868408203,
+      "rmse": 0.35209597976924517,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 5,
+      "scope": "wa/model/model/backbone/features.2/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.2/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        24
+      ],
+      "relative_l2": 0.34311161275243734,
+      "max_abs": 5.773294925689697,
+      "rmse": 0.8887082653997354,
+      "quantization_scale": 0.19078777730464935,
+      "representable_min": -29.57210548222065,
+      "representable_max": 19.078777730464935,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 6,
+      "scope": "wa/model/model/backbone/features.3/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.3/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        144
+      ],
+      "relative_l2": 0.19059976999115713,
+      "max_abs": 4.339272499084473,
+      "rmse": 0.4311501638212744,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 7,
+      "scope": "wa/model/model/backbone/features.3/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.3/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        144
+      ],
+      "relative_l2": 0.12704084639330002,
+      "max_abs": 5.176470577716827,
+      "rmse": 0.22442159423808586,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 8,
+      "scope": "wa/model/model/backbone/features.3/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.3/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        24
+      ],
+      "relative_l2": 0.3684749343146402,
+      "max_abs": 12.075963258743286,
+      "rmse": 1.5142490374262807,
+      "quantization_scale": 0.3414009213447571,
+      "representable_min": -41.30951148271561,
+      "representable_max": 45.74772346019745,
+      "float_outside_quantized_range_fraction": 2.5431315104166665e-06
+    },
+    {
+      "image_index": 0,
+      "order": 9,
+      "scope": "wa/model/model/backbone/features.4/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.4/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        144
+      ],
+      "relative_l2": 0.21013591376445995,
+      "max_abs": 5.529411762952805,
+      "rmse": 0.39500172364243724,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 10,
+      "scope": "wa/model/model/block14/conv2/conv2.2/Relu_output_0",
+      "weight": "wa/model/model/block14/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        32
+      ],
+      "relative_l2": 0.2613417860610334,
+      "max_abs": 2.267289161682129,
+      "rmse": 0.08642526735519555,
+      "quantization_scale": 0.025703979656100273,
+      "representable_min": 0.0,
+      "representable_max": 6.55451481230557,
+      "float_outside_quantized_range_fraction": 1.9073486328125e-06
+    },
+    {
+      "image_index": 0,
+      "order": 11,
+      "scope": "wa/model/model/backbone/features.4/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.4/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        144
+      ],
+      "relative_l2": 0.19116526651008378,
+      "max_abs": 4.310627818107605,
+      "rmse": 0.3680831387659282,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 12,
+      "scope": "wa/model/model/backbone/features.4/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.4/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        32
+      ],
+      "relative_l2": 0.3498973471473607,
+      "max_abs": 8.00814437866211,
+      "rmse": 1.1823497409388333,
+      "quantization_scale": 0.17788481712341309,
+      "representable_min": -22.057717323303223,
+      "representable_max": 23.302911043167114,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 13,
+      "scope": "wa/model/model/backbone/features.5/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.5/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.14993792354599123,
+      "max_abs": 3.3303709030151367,
+      "rmse": 0.3234209313197107,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 14,
+      "scope": "wa/model/model/backbone/features.5/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.5/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.18905589133023187,
+      "max_abs": 3.436776727437973,
+      "rmse": 0.27061280899495116,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 15,
+      "scope": "wa/model/model/backbone/features.5/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.5/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        32
+      ],
+      "relative_l2": 0.3494954521642196,
+      "max_abs": 8.372137427330017,
+      "rmse": 1.0975282090034435,
+      "quantization_scale": 0.22907932102680206,
+      "representable_min": -29.093073770403862,
+      "representable_max": 29.322153091430664,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 16,
+      "scope": "wa/model/model/backbone/features.6/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.6/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.13650651791323307,
+      "max_abs": 3.097886323928833,
+      "rmse": 0.27683474549334935,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 17,
+      "scope": "wa/model/model/backbone/features.6/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.6/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.19928041748409625,
+      "max_abs": 4.8470587730407715,
+      "rmse": 0.2607423834964607,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 18,
+      "scope": "wa/model/model/backbone/features.6/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.6/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        32
+      ],
+      "relative_l2": 0.4057824783107893,
+      "max_abs": 14.31518268585205,
+      "rmse": 1.5785317561196142,
+      "quantization_scale": 0.21549895405769348,
+      "representable_min": -29.09235879778862,
+      "representable_max": 25.859874486923218,
+      "float_outside_quantized_range_fraction": 7.62939453125e-06
+    },
+    {
+      "image_index": 0,
+      "order": 19,
+      "scope": "wa/model/model/backbone/features.7/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.7/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.21229248035873158,
+      "max_abs": 4.811976492404938,
+      "rmse": 0.3179611694858395,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 20,
+      "scope": "wa/model/model/block12/conv2/conv2.2/Relu_output_0",
+      "weight": "wa/model/model/block12/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        64
+      ],
+      "relative_l2": 0.2516534287205973,
+      "max_abs": 1.6049467325210571,
+      "rmse": 0.14298993451050618,
+      "quantization_scale": 0.02736824005842209,
+      "representable_min": 0.0,
+      "representable_max": 6.978901214897633,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 21,
+      "scope": "wa/model/model/backbone/features.7/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.7/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        192
+      ],
+      "relative_l2": 0.13264704001569053,
+      "max_abs": 4.399650752544403,
+      "rmse": 0.34314236713825513,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 22,
+      "scope": "wa/model/model/backbone/features.7/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.7/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.33976078469426185,
+      "max_abs": 7.170027732849121,
+      "rmse": 0.7023917816803266,
+      "quantization_scale": 0.10654657334089279,
+      "representable_min": -13.637961387634277,
+      "representable_max": 13.531414814293385,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 23,
+      "scope": "wa/model/model/backbone/features.8/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.8/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.17378767632919206,
+      "max_abs": 3.850904941558838,
+      "rmse": 0.3451087596488727,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 24,
+      "scope": "wa/model/model/backbone/features.8/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.8/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.23991204275950287,
+      "max_abs": 4.562362015247345,
+      "rmse": 0.29617976723700146,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 25,
+      "scope": "wa/model/model/backbone/features.8/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.8/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.3454343578447875,
+      "max_abs": 5.958034992218018,
+      "rmse": 0.8173592766519101,
+      "quantization_scale": 0.12918204069137573,
+      "representable_min": -14.726752638816833,
+      "representable_max": 18.21466773748398,
+      "float_outside_quantized_range_fraction": 0.0008697509765625
+    },
+    {
+      "image_index": 0,
+      "order": 26,
+      "scope": "wa/model/model/backbone/features.9/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.9/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.19317869091101514,
+      "max_abs": 3.5665602684020996,
+      "rmse": 0.35162749424255757,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 27,
+      "scope": "wa/model/model/backbone/features.9/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.9/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.23904072160015424,
+      "max_abs": 6.0,
+      "rmse": 0.3189369694579632,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 28,
+      "scope": "wa/model/model/backbone/features.9/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.9/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.4513808441806042,
+      "max_abs": 13.518411219120026,
+      "rmse": 1.4882513988811616,
+      "quantization_scale": 0.14487455785274506,
+      "representable_min": -18.399068847298622,
+      "representable_max": 18.543943405151367,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 29,
+      "scope": "wa/model/model/backbone/features.10/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.10/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.22682367316798296,
+      "max_abs": 4.105332374572754,
+      "rmse": 0.36846178488686276,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 30,
+      "scope": "wa/model/model/backbone/features.10/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.10/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.21994604376380125,
+      "max_abs": 5.741176456212997,
+      "rmse": 0.29526710326787525,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 31,
+      "scope": "wa/model/model/backbone/features.10/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.10/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.48635084974964177,
+      "max_abs": 39.737003326416016,
+      "rmse": 3.27946202832456,
+      "quantization_scale": 0.34143778681755066,
+      "representable_min": -43.704036712646484,
+      "representable_max": 43.362598925828934,
+      "float_outside_quantized_range_fraction": 9.1552734375e-05
+    },
+    {
+      "image_index": 0,
+      "order": 32,
+      "scope": "wa/model/model/block12/Resize_input_nhwc",
+      "weight": "wa/model/model/block12/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.3772390524049239,
+      "max_abs": 6.697388172149658,
+      "rmse": 0.27632732429308926,
+      "quantization_scale": 0.02962108887732029,
+      "representable_min": 0.0,
+      "representable_max": 7.553377663716674,
+      "float_outside_quantized_range_fraction": 0.0001373291015625
+    },
+    {
+      "image_index": 0,
+      "order": 33,
+      "scope": "wa/model/model/block13/conv1/conv1.2/Relu_output_0",
+      "weight": "wa/model/model/block13/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        128
+      ],
+      "relative_l2": 0.4287513297210163,
+      "max_abs": 8.465635776519775,
+      "rmse": 0.47193329255316085,
+      "quantization_scale": 0.07977063953876495,
+      "representable_min": 0.0,
+      "representable_max": 20.341513082385063,
+      "float_outside_quantized_range_fraction": 3.814697265625e-06
+    },
+    {
+      "image_index": 0,
+      "order": 34,
+      "scope": "wa/model/model/block14/conv1/conv1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/block13/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        64
+      ],
+      "relative_l2": 0.2643065673844334,
+      "max_abs": 6.142052412033081,
+      "rmse": 0.421601317255794,
+      "quantization_scale": 0.057898737490177155,
+      "representable_min": 0.0,
+      "representable_max": 14.764178059995174,
+      "float_outside_quantized_range_fraction": 3.814697265625e-06
+    },
+    {
+      "image_index": 0,
+      "order": 35,
+      "scope": "wa/model/model/block14/Resize_input_nhwc",
+      "weight": "wa/model/model/block14/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        32
+      ],
+      "relative_l2": 0.225338481893161,
+      "max_abs": 4.166883945465088,
+      "rmse": 0.25118188753571274,
+      "quantization_scale": 0.025475818663835526,
+      "representable_min": 0.0,
+      "representable_max": 6.496333759278059,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 36,
+      "scope": "wa/model/model/block15/conv1/conv1.2/Relu_output_0",
+      "weight": "wa/model/model/block15/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        64
+      ],
+      "relative_l2": 0.41663513128410573,
+      "max_abs": 9.666463613510132,
+      "rmse": 0.4351713271033992,
+      "quantization_scale": 0.07632218301296234,
+      "representable_min": 0.0,
+      "representable_max": 19.462156668305397,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 0,
+      "order": 37,
+      "scope": "wa/model/model/block16/conv1/conv1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/block15/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        64
+      ],
+      "relative_l2": 0.3775655278502234,
+      "max_abs": 9.943367004394531,
+      "rmse": 0.3844989527956917,
+      "quantization_scale": 0.05937671661376953,
+      "representable_min": 0.0,
+      "representable_max": 15.14106273651123,
+      "float_outside_quantized_range_fraction": 1.811981201171875e-05
+    },
+    {
+      "image_index": 0,
+      "order": 38,
+      "scope": "wa/model/model/block16/conv2/conv2.0/Conv_input_nhwc",
+      "weight": "wa/model/model/block16/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        64
+      ],
+      "relative_l2": 0.37701040409147546,
+      "max_abs": 23.154644012451172,
+      "rmse": 0.38012366451113544,
+      "quantization_scale": 0.08992565423250198,
+      "representable_min": 0.0,
+      "representable_max": 22.931041829288006,
+      "float_outside_quantized_range_fraction": 8.106231689453125e-05
+    },
+    {
+      "image_index": 0,
+      "order": 39,
+      "scope": "wa/model/model/block16/conv3/Conv_input_nhwc",
+      "weight": "wa/model/model/block16/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        64
+      ],
+      "relative_l2": 0.47650193021293813,
+      "max_abs": 37.522335052490234,
+      "rmse": 0.6437344119467356,
+      "quantization_scale": 0.08803093433380127,
+      "representable_min": 0.0,
+      "representable_max": 22.447888255119324,
+      "float_outside_quantized_range_fraction": 0.0004901885986328125
+    },
+    {
+      "image_index": 0,
+      "order": 40,
+      "scope": "wa/model/model/block16/conv3/Conv_output_nhwc",
+      "weight": "wa/model/model/block16/conv3/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        16
+      ],
+      "relative_l2": 0.5173099392518399,
+      "max_abs": 462.4254455566406,
+      "rmse": 12.955167968271605,
+      "quantization_scale": 2.358301877975464,
+      "representable_min": -301.8626403808594,
+      "representable_max": 299.5043385028839,
+      "float_outside_quantized_range_fraction": 0.00127410888671875
+    },
+    {
+      "image_index": 1,
+      "order": 0,
+      "scope": "wa/model/model/backbone/features.1/conv/conv.0/conv.0.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.0/features.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        256,
+        256,
+        32
+      ],
+      "relative_l2": 0.007269650688980703,
+      "max_abs": 0.1443166732788086,
+      "rmse": 0.018303937301517224,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 1,
+      "scope": "wa/model/model/backbone/features.1/conv/conv.1/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.1/conv/conv.0/conv.0.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        256,
+        256,
+        32
+      ],
+      "relative_l2": 0.10917161612864044,
+      "max_abs": 3.2849183082580566,
+      "rmse": 0.2504307912882629,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 2,
+      "scope": "wa/model/model/backbone/features.1/conv/conv.1/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.1/conv/conv.1/Conv_conv_filter",
+      "shape": [
+        1,
+        256,
+        256,
+        16
+      ],
+      "relative_l2": 0.3363728499960375,
+      "max_abs": 10.151453018188477,
+      "rmse": 1.3694767897750555,
+      "quantization_scale": 0.21810618042945862,
+      "representable_min": -28.35380345582962,
+      "representable_max": 27.263272553682327,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 3,
+      "scope": "wa/model/model/backbone/features.2/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.2/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        256,
+        256,
+        96
+      ],
+      "relative_l2": 0.20829050311271155,
+      "max_abs": 6.0,
+      "rmse": 0.492541566138404,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 4,
+      "scope": "wa/model/model/backbone/features.2/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.2/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        96
+      ],
+      "relative_l2": 0.16240366523291286,
+      "max_abs": 3.247058868408203,
+      "rmse": 0.30632170231982925,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 5,
+      "scope": "wa/model/model/backbone/features.2/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.2/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        24
+      ],
+      "relative_l2": 0.24075722082011194,
+      "max_abs": 6.81980037689209,
+      "rmse": 0.7232446367762032,
+      "quantization_scale": 0.19078777730464935,
+      "representable_min": -29.57210548222065,
+      "representable_max": 19.078777730464935,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 6,
+      "scope": "wa/model/model/backbone/features.3/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.3/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        144
+      ],
+      "relative_l2": 0.16178447029179732,
+      "max_abs": 4.249721050262451,
+      "rmse": 0.36060722484264507,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 7,
+      "scope": "wa/model/model/backbone/features.3/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.3/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        144
+      ],
+      "relative_l2": 0.1109494923784705,
+      "max_abs": 3.8536526560783386,
+      "rmse": 0.2045936269073597,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 8,
+      "scope": "wa/model/model/backbone/features.3/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.3/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        24
+      ],
+      "relative_l2": 0.2390327738135181,
+      "max_abs": 10.527292251586914,
+      "rmse": 1.2819704201331121,
+      "quantization_scale": 0.3414009213447571,
+      "representable_min": -41.30951148271561,
+      "representable_max": 45.74772346019745,
+      "float_outside_quantized_range_fraction": 2.5431315104166665e-06
+    },
+    {
+      "image_index": 1,
+      "order": 9,
+      "scope": "wa/model/model/backbone/features.4/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.4/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        144
+      ],
+      "relative_l2": 0.16253376160523583,
+      "max_abs": 5.3729452937841415,
+      "rmse": 0.3255764121443217,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 10,
+      "scope": "wa/model/model/block14/conv2/conv2.2/Relu_output_0",
+      "weight": "wa/model/model/block14/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        32
+      ],
+      "relative_l2": 0.18969238860727847,
+      "max_abs": 1.627209186553955,
+      "rmse": 0.06798427027144019,
+      "quantization_scale": 0.025703979656100273,
+      "representable_min": 0.0,
+      "representable_max": 6.55451481230557,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 11,
+      "scope": "wa/model/model/backbone/features.4/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.4/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        144
+      ],
+      "relative_l2": 0.14875713637396737,
+      "max_abs": 3.707462787628174,
+      "rmse": 0.28951577448618754,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 12,
+      "scope": "wa/model/model/backbone/features.4/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.4/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        32
+      ],
+      "relative_l2": 0.23525895242583275,
+      "max_abs": 6.8762407302856445,
+      "rmse": 0.8818834124126578,
+      "quantization_scale": 0.17788481712341309,
+      "representable_min": -22.057717323303223,
+      "representable_max": 23.302911043167114,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 13,
+      "scope": "wa/model/model/backbone/features.5/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.5/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.11157379625658952,
+      "max_abs": 3.060113772749901,
+      "rmse": 0.24555327483971903,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 14,
+      "scope": "wa/model/model/backbone/features.5/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.5/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.14070514231442854,
+      "max_abs": 4.463631629943848,
+      "rmse": 0.20471160954385023,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 15,
+      "scope": "wa/model/model/backbone/features.5/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.5/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        32
+      ],
+      "relative_l2": 0.2636877719461446,
+      "max_abs": 6.598560035228729,
+      "rmse": 0.8884470546105242,
+      "quantization_scale": 0.22907932102680206,
+      "representable_min": -29.093073770403862,
+      "representable_max": 29.322153091430664,
+      "float_outside_quantized_range_fraction": 7.62939453125e-06
+    },
+    {
+      "image_index": 1,
+      "order": 16,
+      "scope": "wa/model/model/backbone/features.6/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.6/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.10913240082818615,
+      "max_abs": 3.0520989894866943,
+      "rmse": 0.22598951763781722,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 17,
+      "scope": "wa/model/model/backbone/features.6/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.6/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.16938193575543203,
+      "max_abs": 4.0825411062687635,
+      "rmse": 0.22120131734426488,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 18,
+      "scope": "wa/model/model/backbone/features.6/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.6/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        32
+      ],
+      "relative_l2": 0.333850043092349,
+      "max_abs": 14.776082515716553,
+      "rmse": 1.357816018663061,
+      "quantization_scale": 0.21549895405769348,
+      "representable_min": -29.09235879778862,
+      "representable_max": 25.859874486923218,
+      "float_outside_quantized_range_fraction": 1.52587890625e-05
+    },
+    {
+      "image_index": 1,
+      "order": 19,
+      "scope": "wa/model/model/backbone/features.7/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.7/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.16963550377210673,
+      "max_abs": 5.461160883307457,
+      "rmse": 0.2626729045627359,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 20,
+      "scope": "wa/model/model/block12/conv2/conv2.2/Relu_output_0",
+      "weight": "wa/model/model/block12/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        64
+      ],
+      "relative_l2": 0.198718902999547,
+      "max_abs": 1.928403377532959,
+      "rmse": 0.11422477727818482,
+      "quantization_scale": 0.02736824005842209,
+      "representable_min": 0.0,
+      "representable_max": 6.978901214897633,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 21,
+      "scope": "wa/model/model/backbone/features.7/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.7/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        192
+      ],
+      "relative_l2": 0.09934332313013335,
+      "max_abs": 3.6000001430511475,
+      "rmse": 0.2583819798511943,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 22,
+      "scope": "wa/model/model/backbone/features.7/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.7/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.24409934552980325,
+      "max_abs": 4.139883041381836,
+      "rmse": 0.5213102520288234,
+      "quantization_scale": 0.10654657334089279,
+      "representable_min": -13.637961387634277,
+      "representable_max": 13.531414814293385,
+      "float_outside_quantized_range_fraction": 1.52587890625e-05
+    },
+    {
+      "image_index": 1,
+      "order": 23,
+      "scope": "wa/model/model/backbone/features.8/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.8/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.13321968990354494,
+      "max_abs": 3.2106177769601345,
+      "rmse": 0.2662404234394375,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 24,
+      "scope": "wa/model/model/backbone/features.8/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.8/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.19293470230995918,
+      "max_abs": 5.03731706738472,
+      "rmse": 0.23270853052265397,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 25,
+      "scope": "wa/model/model/backbone/features.8/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.8/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.2835607400309243,
+      "max_abs": 4.6765666007995605,
+      "rmse": 0.645595706865729,
+      "quantization_scale": 0.12918204069137573,
+      "representable_min": -14.726752638816833,
+      "representable_max": 18.21466773748398,
+      "float_outside_quantized_range_fraction": 0.0003662109375
+    },
+    {
+      "image_index": 1,
+      "order": 26,
+      "scope": "wa/model/model/backbone/features.9/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.9/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.14892891145280626,
+      "max_abs": 2.841028794646263,
+      "rmse": 0.2700334929209953,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 27,
+      "scope": "wa/model/model/backbone/features.9/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.9/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.17767298563007866,
+      "max_abs": 5.623529434204102,
+      "rmse": 0.2384116989011789,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 28,
+      "scope": "wa/model/model/backbone/features.9/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.9/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.3426624957035359,
+      "max_abs": 12.030968427658081,
+      "rmse": 1.1445590235420415,
+      "quantization_scale": 0.14487455785274506,
+      "representable_min": -18.399068847298622,
+      "representable_max": 18.543943405151367,
+      "float_outside_quantized_range_fraction": 0.0001068115234375
+    },
+    {
+      "image_index": 1,
+      "order": 29,
+      "scope": "wa/model/model/backbone/features.10/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.10/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.17557923824785435,
+      "max_abs": 3.8197584748268127,
+      "rmse": 0.2893461902445863,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 30,
+      "scope": "wa/model/model/backbone/features.10/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.10/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.17686203083452856,
+      "max_abs": 6.0,
+      "rmse": 0.23657460412337658,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 31,
+      "scope": "wa/model/model/backbone/features.10/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.10/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.3858834917457565,
+      "max_abs": 27.259475708007812,
+      "rmse": 2.690782822641091,
+      "quantization_scale": 0.34143778681755066,
+      "representable_min": -43.704036712646484,
+      "representable_max": 43.362598925828934,
+      "float_outside_quantized_range_fraction": 0.0002288818359375
+    },
+    {
+      "image_index": 1,
+      "order": 32,
+      "scope": "wa/model/model/block12/Resize_input_nhwc",
+      "weight": "wa/model/model/block12/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.3231269210661765,
+      "max_abs": 6.4573974609375,
+      "rmse": 0.23785579617544786,
+      "quantization_scale": 0.02962108887732029,
+      "representable_min": 0.0,
+      "representable_max": 7.553377663716674,
+      "float_outside_quantized_range_fraction": 1.52587890625e-05
+    },
+    {
+      "image_index": 1,
+      "order": 33,
+      "scope": "wa/model/model/block13/conv1/conv1.2/Relu_output_0",
+      "weight": "wa/model/model/block13/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        128
+      ],
+      "relative_l2": 0.3720506803172833,
+      "max_abs": 14.018861293792725,
+      "rmse": 0.41999121439335735,
+      "quantization_scale": 0.07977063953876495,
+      "representable_min": 0.0,
+      "representable_max": 20.341513082385063,
+      "float_outside_quantized_range_fraction": 1.1444091796875e-05
+    },
+    {
+      "image_index": 1,
+      "order": 34,
+      "scope": "wa/model/model/block14/conv1/conv1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/block13/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        64
+      ],
+      "relative_l2": 0.23894857275285236,
+      "max_abs": 6.728323340415955,
+      "rmse": 0.37887720237023603,
+      "quantization_scale": 0.057898737490177155,
+      "representable_min": 0.0,
+      "representable_max": 14.764178059995174,
+      "float_outside_quantized_range_fraction": 3.814697265625e-06
+    },
+    {
+      "image_index": 1,
+      "order": 35,
+      "scope": "wa/model/model/block14/Resize_input_nhwc",
+      "weight": "wa/model/model/block14/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        32
+      ],
+      "relative_l2": 0.20293518949901276,
+      "max_abs": 4.900704860687256,
+      "rmse": 0.22792353134890678,
+      "quantization_scale": 0.025475818663835526,
+      "representable_min": 0.0,
+      "representable_max": 6.496333759278059,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 36,
+      "scope": "wa/model/model/block15/conv1/conv1.2/Relu_output_0",
+      "weight": "wa/model/model/block15/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        64
+      ],
+      "relative_l2": 0.3944336720712335,
+      "max_abs": 10.349366664886475,
+      "rmse": 0.4170159338148663,
+      "quantization_scale": 0.07632218301296234,
+      "representable_min": 0.0,
+      "representable_max": 19.462156668305397,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 1,
+      "order": 37,
+      "scope": "wa/model/model/block16/conv1/conv1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/block15/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        64
+      ],
+      "relative_l2": 0.3515854975966705,
+      "max_abs": 11.578459739685059,
+      "rmse": 0.35812743382581647,
+      "quantization_scale": 0.05937671661376953,
+      "representable_min": 0.0,
+      "representable_max": 15.14106273651123,
+      "float_outside_quantized_range_fraction": 3.814697265625e-06
+    },
+    {
+      "image_index": 1,
+      "order": 38,
+      "scope": "wa/model/model/block16/conv2/conv2.0/Conv_input_nhwc",
+      "weight": "wa/model/model/block16/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        64
+      ],
+      "relative_l2": 0.344608868706925,
+      "max_abs": 22.931041717529297,
+      "rmse": 0.33989159171674754,
+      "quantization_scale": 0.08992565423250198,
+      "representable_min": 0.0,
+      "representable_max": 22.931041829288006,
+      "float_outside_quantized_range_fraction": 2.956390380859375e-05
+    },
+    {
+      "image_index": 1,
+      "order": 39,
+      "scope": "wa/model/model/block16/conv3/Conv_input_nhwc",
+      "weight": "wa/model/model/block16/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        64
+      ],
+      "relative_l2": 0.5125112029152804,
+      "max_abs": 25.56875991821289,
+      "rmse": 0.4734432552467705,
+      "quantization_scale": 0.08803093433380127,
+      "representable_min": 0.0,
+      "representable_max": 22.447888255119324,
+      "float_outside_quantized_range_fraction": 0.00017070770263671875
+    },
+    {
+      "image_index": 1,
+      "order": 40,
+      "scope": "wa/model/model/block16/conv3/Conv_output_nhwc",
+      "weight": "wa/model/model/block16/conv3/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        16
+      ],
+      "relative_l2": 0.5233246330642803,
+      "max_abs": 318.1405334472656,
+      "rmse": 10.031506794470326,
+      "quantization_scale": 2.358301877975464,
+      "representable_min": -301.8626403808594,
+      "representable_max": 299.5043385028839,
+      "float_outside_quantized_range_fraction": 0.00041961669921875
+    },
+    {
+      "image_index": 8,
+      "order": 0,
+      "scope": "wa/model/model/backbone/features.1/conv/conv.0/conv.0.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.0/features.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        256,
+        256,
+        32
+      ],
+      "relative_l2": 0.007282546371619989,
+      "max_abs": 0.17972993850708008,
+      "rmse": 0.018913928186520764,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 1,
+      "scope": "wa/model/model/backbone/features.1/conv/conv.1/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.1/conv/conv.0/conv.0.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        256,
+        256,
+        32
+      ],
+      "relative_l2": 0.09431417412402404,
+      "max_abs": 3.29292631149292,
+      "rmse": 0.21819680099427205,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 2,
+      "scope": "wa/model/model/backbone/features.1/conv/conv.1/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.1/conv/conv.1/Conv_conv_filter",
+      "shape": [
+        1,
+        256,
+        256,
+        16
+      ],
+      "relative_l2": 0.2719426792260688,
+      "max_abs": 9.854645133018494,
+      "rmse": 1.1817806632193273,
+      "quantization_scale": 0.21810618042945862,
+      "representable_min": -28.35380345582962,
+      "representable_max": 27.263272553682327,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 3,
+      "scope": "wa/model/model/backbone/features.2/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.2/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        256,
+        256,
+        96
+      ],
+      "relative_l2": 0.1865857634234231,
+      "max_abs": 6.0,
+      "rmse": 0.44545185331671383,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 4,
+      "scope": "wa/model/model/backbone/features.2/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.2/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        96
+      ],
+      "relative_l2": 0.15478557437726098,
+      "max_abs": 3.495912730693817,
+      "rmse": 0.29348491856195097,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 5,
+      "scope": "wa/model/model/backbone/features.2/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.2/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        24
+      ],
+      "relative_l2": 0.21202381886021335,
+      "max_abs": 5.744876861572266,
+      "rmse": 0.6991753479494169,
+      "quantization_scale": 0.19078777730464935,
+      "representable_min": -29.57210548222065,
+      "representable_max": 19.078777730464935,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 6,
+      "scope": "wa/model/model/backbone/features.3/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.3/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        144
+      ],
+      "relative_l2": 0.15171146659366394,
+      "max_abs": 4.253215730190277,
+      "rmse": 0.34218599123264615,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 7,
+      "scope": "wa/model/model/backbone/features.3/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.3/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        144
+      ],
+      "relative_l2": 0.1138570864904336,
+      "max_abs": 5.38823527097702,
+      "rmse": 0.2090512346725818,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 8,
+      "scope": "wa/model/model/backbone/features.3/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.3/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        24
+      ],
+      "relative_l2": 0.24729813611607743,
+      "max_abs": 11.495561122894287,
+      "rmse": 1.2911963720920019,
+      "quantization_scale": 0.3414009213447571,
+      "representable_min": -41.30951148271561,
+      "representable_max": 45.74772346019745,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 9,
+      "scope": "wa/model/model/backbone/features.4/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.4/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        144
+      ],
+      "relative_l2": 0.16447939867566444,
+      "max_abs": 5.647058814764023,
+      "rmse": 0.32789559736275653,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 10,
+      "scope": "wa/model/model/block14/conv2/conv2.2/Relu_output_0",
+      "weight": "wa/model/model/block14/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        32
+      ],
+      "relative_l2": 0.21203899688590655,
+      "max_abs": 2.361794948577881,
+      "rmse": 0.07364033269566908,
+      "quantization_scale": 0.025703979656100273,
+      "representable_min": 0.0,
+      "representable_max": 6.55451481230557,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 11,
+      "scope": "wa/model/model/backbone/features.4/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.4/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        144
+      ],
+      "relative_l2": 0.1577143149468544,
+      "max_abs": 4.659824699163437,
+      "rmse": 0.3106868881319312,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 12,
+      "scope": "wa/model/model/backbone/features.4/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.4/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        32
+      ],
+      "relative_l2": 0.25512225294967045,
+      "max_abs": 8.117229223251343,
+      "rmse": 0.9684294073883779,
+      "quantization_scale": 0.17788481712341309,
+      "representable_min": -22.057717323303223,
+      "representable_max": 23.302911043167114,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 13,
+      "scope": "wa/model/model/backbone/features.5/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.5/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.12149077086878195,
+      "max_abs": 3.1050542294979095,
+      "rmse": 0.26802234870932845,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 14,
+      "scope": "wa/model/model/backbone/features.5/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.5/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.1610002040486662,
+      "max_abs": 5.487249009311199,
+      "rmse": 0.2390896007682025,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 15,
+      "scope": "wa/model/model/backbone/features.5/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.5/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        32
+      ],
+      "relative_l2": 0.2968739192994027,
+      "max_abs": 9.802937030792236,
+      "rmse": 1.0485523646425738,
+      "quantization_scale": 0.22907932102680206,
+      "representable_min": -29.093073770403862,
+      "representable_max": 29.322153091430664,
+      "float_outside_quantized_range_fraction": 1.52587890625e-05
+    },
+    {
+      "image_index": 8,
+      "order": 16,
+      "scope": "wa/model/model/backbone/features.6/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.6/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.12628952738198848,
+      "max_abs": 3.7785701751708984,
+      "rmse": 0.26402949086015715,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 17,
+      "scope": "wa/model/model/backbone/features.6/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.6/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.1875087849059889,
+      "max_abs": 5.015000760555267,
+      "rmse": 0.2497648726126913,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 18,
+      "scope": "wa/model/model/backbone/features.6/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.6/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        32
+      ],
+      "relative_l2": 0.35614870214606353,
+      "max_abs": 18.26805543899536,
+      "rmse": 1.5139184083693078,
+      "quantization_scale": 0.21549895405769348,
+      "representable_min": -29.09235879778862,
+      "representable_max": 25.859874486923218,
+      "float_outside_quantized_range_fraction": 1.52587890625e-05
+    },
+    {
+      "image_index": 8,
+      "order": 19,
+      "scope": "wa/model/model/backbone/features.7/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.7/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.18698376788100313,
+      "max_abs": 5.905882351100445,
+      "rmse": 0.2910970980953172,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 20,
+      "scope": "wa/model/model/block12/conv2/conv2.2/Relu_output_0",
+      "weight": "wa/model/model/block12/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        64
+      ],
+      "relative_l2": 0.2211921605849564,
+      "max_abs": 2.1073544025421143,
+      "rmse": 0.12922187640580965,
+      "quantization_scale": 0.02736824005842209,
+      "representable_min": 0.0,
+      "representable_max": 6.978901214897633,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 21,
+      "scope": "wa/model/model/backbone/features.7/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.7/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        192
+      ],
+      "relative_l2": 0.10948706006847012,
+      "max_abs": 4.339451909065247,
+      "rmse": 0.28391135698133474,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 22,
+      "scope": "wa/model/model/backbone/features.7/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.7/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.2758596167765504,
+      "max_abs": 6.425056457519531,
+      "rmse": 0.5900200808273711,
+      "quantization_scale": 0.10654657334089279,
+      "representable_min": -13.637961387634277,
+      "representable_max": 13.531414814293385,
+      "float_outside_quantized_range_fraction": 1.52587890625e-05
+    },
+    {
+      "image_index": 8,
+      "order": 23,
+      "scope": "wa/model/model/backbone/features.8/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.8/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.14712844578897694,
+      "max_abs": 4.523583523929119,
+      "rmse": 0.29576856842893623,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 24,
+      "scope": "wa/model/model/backbone/features.8/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.8/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.21485566102483547,
+      "max_abs": 4.498073577880859,
+      "rmse": 0.263070908306515,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 25,
+      "scope": "wa/model/model/backbone/features.8/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.8/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.3307431726441695,
+      "max_abs": 9.887304782867432,
+      "rmse": 0.7586595426595208,
+      "quantization_scale": 0.12918204069137573,
+      "representable_min": -14.726752638816833,
+      "representable_max": 18.21466773748398,
+      "float_outside_quantized_range_fraction": 3.0517578125e-05
+    },
+    {
+      "image_index": 8,
+      "order": 26,
+      "scope": "wa/model/model/backbone/features.9/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.9/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.17003126775372898,
+      "max_abs": 3.9058823585510254,
+      "rmse": 0.30540555403115494,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 27,
+      "scope": "wa/model/model/backbone/features.9/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.9/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.1933960872294776,
+      "max_abs": 5.835294246673584,
+      "rmse": 0.2578703351638842,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 28,
+      "scope": "wa/model/model/backbone/features.9/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.9/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.3831050534701628,
+      "max_abs": 11.46174955368042,
+      "rmse": 1.228811750830847,
+      "quantization_scale": 0.14487455785274506,
+      "representable_min": -18.399068847298622,
+      "representable_max": 18.543943405151367,
+      "float_outside_quantized_range_fraction": 4.57763671875e-05
+    },
+    {
+      "image_index": 8,
+      "order": 29,
+      "scope": "wa/model/model/backbone/features.10/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.10/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.20062965052477352,
+      "max_abs": 5.629244446754456,
+      "rmse": 0.318704555632945,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 30,
+      "scope": "wa/model/model/backbone/features.10/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.10/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.18521667920576135,
+      "max_abs": 5.363600552082062,
+      "rmse": 0.2402856850145402,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 31,
+      "scope": "wa/model/model/backbone/features.10/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.10/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.4359703088876791,
+      "max_abs": 23.927064418792725,
+      "rmse": 2.6813323021048334,
+      "quantization_scale": 0.34143778681755066,
+      "representable_min": -43.704036712646484,
+      "representable_max": 43.362598925828934,
+      "float_outside_quantized_range_fraction": 3.0517578125e-05
+    },
+    {
+      "image_index": 8,
+      "order": 32,
+      "scope": "wa/model/model/block12/Resize_input_nhwc",
+      "weight": "wa/model/model/block12/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.3390804926732468,
+      "max_abs": 5.939527750015259,
+      "rmse": 0.2362348476437929,
+      "quantization_scale": 0.02962108887732029,
+      "representable_min": 0.0,
+      "representable_max": 7.553377663716674,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 33,
+      "scope": "wa/model/model/block13/conv1/conv1.2/Relu_output_0",
+      "weight": "wa/model/model/block13/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        128
+      ],
+      "relative_l2": 0.3927859568709119,
+      "max_abs": 11.646512985229492,
+      "rmse": 0.3935313412003081,
+      "quantization_scale": 0.07977063953876495,
+      "representable_min": 0.0,
+      "representable_max": 20.341513082385063,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 34,
+      "scope": "wa/model/model/block14/conv1/conv1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/block13/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        64
+      ],
+      "relative_l2": 0.24042684221534322,
+      "max_abs": 8.511114120483398,
+      "rmse": 0.36248628670694727,
+      "quantization_scale": 0.057898737490177155,
+      "representable_min": 0.0,
+      "representable_max": 14.764178059995174,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 35,
+      "scope": "wa/model/model/block14/Resize_input_nhwc",
+      "weight": "wa/model/model/block14/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        32
+      ],
+      "relative_l2": 0.19430593198937615,
+      "max_abs": 4.228985786437988,
+      "rmse": 0.218311773278061,
+      "quantization_scale": 0.025475818663835526,
+      "representable_min": 0.0,
+      "representable_max": 6.496333759278059,
+      "float_outside_quantized_range_fraction": 7.62939453125e-06
+    },
+    {
+      "image_index": 8,
+      "order": 36,
+      "scope": "wa/model/model/block15/conv1/conv1.2/Relu_output_0",
+      "weight": "wa/model/model/block15/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        64
+      ],
+      "relative_l2": 0.3904150353843009,
+      "max_abs": 12.632115364074707,
+      "rmse": 0.37716625671545,
+      "quantization_scale": 0.07632218301296234,
+      "representable_min": 0.0,
+      "representable_max": 19.462156668305397,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 37,
+      "scope": "wa/model/model/block16/conv1/conv1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/block15/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        64
+      ],
+      "relative_l2": 0.3426715103322222,
+      "max_abs": 10.628432273864746,
+      "rmse": 0.31355990056912286,
+      "quantization_scale": 0.05937671661376953,
+      "representable_min": 0.0,
+      "representable_max": 15.14106273651123,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 38,
+      "scope": "wa/model/model/block16/conv2/conv2.0/Conv_input_nhwc",
+      "weight": "wa/model/model/block16/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        64
+      ],
+      "relative_l2": 0.32173708911173987,
+      "max_abs": 22.211637496948242,
+      "rmse": 0.3035248725228836,
+      "quantization_scale": 0.08992565423250198,
+      "representable_min": 0.0,
+      "representable_max": 22.931041829288006,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 8,
+      "order": 39,
+      "scope": "wa/model/model/block16/conv3/Conv_input_nhwc",
+      "weight": "wa/model/model/block16/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        64
+      ],
+      "relative_l2": 0.6487256815675715,
+      "max_abs": 22.447887420654297,
+      "rmse": 0.444478553128676,
+      "quantization_scale": 0.08803093433380127,
+      "representable_min": 0.0,
+      "representable_max": 22.447888255119324,
+      "float_outside_quantized_range_fraction": 9.5367431640625e-07
+    },
+    {
+      "image_index": 8,
+      "order": 40,
+      "scope": "wa/model/model/block16/conv3/Conv_output_nhwc",
+      "weight": "wa/model/model/block16/conv3/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        16
+      ],
+      "relative_l2": 0.6014655576798827,
+      "max_abs": 292.77680253982544,
+      "rmse": 9.589200430680377,
+      "quantization_scale": 2.358301877975464,
+      "representable_min": -301.8626403808594,
+      "representable_max": 299.5043385028839,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 0,
+      "scope": "wa/model/model/backbone/features.1/conv/conv.0/conv.0.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.0/features.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        256,
+        256,
+        32
+      ],
+      "relative_l2": 0.007353645091282023,
+      "max_abs": 0.1711139678955078,
+      "rmse": 0.01858412682387192,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 1,
+      "scope": "wa/model/model/backbone/features.1/conv/conv.1/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.1/conv/conv.0/conv.0.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        256,
+        256,
+        32
+      ],
+      "relative_l2": 0.0909263187916873,
+      "max_abs": 3.217257022857666,
+      "rmse": 0.21452205667353963,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 2,
+      "scope": "wa/model/model/backbone/features.1/conv/conv.1/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.1/conv/conv.1/Conv_conv_filter",
+      "shape": [
+        1,
+        256,
+        256,
+        16
+      ],
+      "relative_l2": 0.2362834986381507,
+      "max_abs": 9.841130495071411,
+      "rmse": 1.1662677733482665,
+      "quantization_scale": 0.21810618042945862,
+      "representable_min": -28.35380345582962,
+      "representable_max": 27.263272553682327,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 3,
+      "scope": "wa/model/model/backbone/features.2/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.2/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        256,
+        256,
+        96
+      ],
+      "relative_l2": 0.1637555921544339,
+      "max_abs": 6.0,
+      "rmse": 0.4117092583239898,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 4,
+      "scope": "wa/model/model/backbone/features.2/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.2/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        96
+      ],
+      "relative_l2": 0.13124548867472036,
+      "max_abs": 3.247058868408203,
+      "rmse": 0.2489389267825931,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 5,
+      "scope": "wa/model/model/backbone/features.2/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.2/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        24
+      ],
+      "relative_l2": 0.1658214971768861,
+      "max_abs": 5.708557188510895,
+      "rmse": 0.5909179207245494,
+      "quantization_scale": 0.19078777730464935,
+      "representable_min": -29.57210548222065,
+      "representable_max": 19.078777730464935,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 6,
+      "scope": "wa/model/model/backbone/features.3/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.3/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        144
+      ],
+      "relative_l2": 0.116635940326655,
+      "max_abs": 3.8930362462997437,
+      "rmse": 0.2635902207021153,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 7,
+      "scope": "wa/model/model/backbone/features.3/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.3/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        144
+      ],
+      "relative_l2": 0.09391866867481145,
+      "max_abs": 5.051472365856171,
+      "rmse": 0.17665984492771292,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 8,
+      "scope": "wa/model/model/backbone/features.3/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.3/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        24
+      ],
+      "relative_l2": 0.1922688000475094,
+      "max_abs": 10.215842962265015,
+      "rmse": 1.0544891674248758,
+      "quantization_scale": 0.3414009213447571,
+      "representable_min": -41.30951148271561,
+      "representable_max": 45.74772346019745,
+      "float_outside_quantized_range_fraction": 2.5431315104166665e-06
+    },
+    {
+      "image_index": 15,
+      "order": 9,
+      "scope": "wa/model/model/backbone/features.4/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.4/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        144
+      ],
+      "relative_l2": 0.12517595901424214,
+      "max_abs": 5.045280754566193,
+      "rmse": 0.259058202355837,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 10,
+      "scope": "wa/model/model/block14/conv2/conv2.2/Relu_output_0",
+      "weight": "wa/model/model/block14/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        32
+      ],
+      "relative_l2": 0.15654062475149727,
+      "max_abs": 2.169264554977417,
+      "rmse": 0.057058055277783154,
+      "quantization_scale": 0.025703979656100273,
+      "representable_min": 0.0,
+      "representable_max": 6.55451481230557,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 11,
+      "scope": "wa/model/model/backbone/features.4/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.4/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        144
+      ],
+      "relative_l2": 0.10867556272936076,
+      "max_abs": 3.5764706134796143,
+      "rmse": 0.21511916703971845,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 12,
+      "scope": "wa/model/model/backbone/features.4/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.4/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        32
+      ],
+      "relative_l2": 0.16841460515229909,
+      "max_abs": 7.171469449996948,
+      "rmse": 0.6991961646503158,
+      "quantization_scale": 0.17788481712341309,
+      "representable_min": -22.057717323303223,
+      "representable_max": 23.302911043167114,
+      "float_outside_quantized_range_fraction": 2.288818359375e-05
+    },
+    {
+      "image_index": 15,
+      "order": 13,
+      "scope": "wa/model/model/backbone/features.5/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.5/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.08145540234360002,
+      "max_abs": 2.9957168102264404,
+      "rmse": 0.18491037291458873,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 14,
+      "scope": "wa/model/model/backbone/features.5/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.5/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.11039549527150125,
+      "max_abs": 5.116753101348877,
+      "rmse": 0.1670861723697049,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 15,
+      "scope": "wa/model/model/backbone/features.5/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.5/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        32
+      ],
+      "relative_l2": 0.20223744102961466,
+      "max_abs": 8.564994096755981,
+      "rmse": 0.7391974879794548,
+      "quantization_scale": 0.22907932102680206,
+      "representable_min": -29.093073770403862,
+      "representable_max": 29.322153091430664,
+      "float_outside_quantized_range_fraction": 1.52587890625e-05
+    },
+    {
+      "image_index": 15,
+      "order": 16,
+      "scope": "wa/model/model/backbone/features.6/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.6/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.08657645633582271,
+      "max_abs": 3.7138524055480957,
+      "rmse": 0.18267747065875953,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 17,
+      "scope": "wa/model/model/backbone/features.6/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.6/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.12926845876711232,
+      "max_abs": 4.34473118185997,
+      "rmse": 0.1708864286885824,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 18,
+      "scope": "wa/model/model/backbone/features.6/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.6/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        32
+      ],
+      "relative_l2": 0.24727897303517332,
+      "max_abs": 14.672529220581055,
+      "rmse": 1.0305730763261276,
+      "quantization_scale": 0.21549895405769348,
+      "representable_min": -29.09235879778862,
+      "representable_max": 25.859874486923218,
+      "float_outside_quantized_range_fraction": 7.62939453125e-06
+    },
+    {
+      "image_index": 15,
+      "order": 19,
+      "scope": "wa/model/model/backbone/features.7/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.7/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        192
+      ],
+      "relative_l2": 0.12139476086127092,
+      "max_abs": 5.717647045850754,
+      "rmse": 0.20255207956507662,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 20,
+      "scope": "wa/model/model/block12/conv2/conv2.2/Relu_output_0",
+      "weight": "wa/model/model/block12/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        64
+      ],
+      "relative_l2": 0.14875933354162976,
+      "max_abs": 2.238738365471363,
+      "rmse": 0.09135061852375687,
+      "quantization_scale": 0.02736824005842209,
+      "representable_min": 0.0,
+      "representable_max": 6.978901214897633,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 21,
+      "scope": "wa/model/model/backbone/features.7/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.7/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        192
+      ],
+      "relative_l2": 0.06772517225924354,
+      "max_abs": 3.7553374767303467,
+      "rmse": 0.17199912937457837,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 22,
+      "scope": "wa/model/model/backbone/features.7/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.7/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.17020702334687554,
+      "max_abs": 4.69450306892395,
+      "rmse": 0.3746674666149386,
+      "quantization_scale": 0.10654657334089279,
+      "representable_min": -13.637961387634277,
+      "representable_max": 13.531414814293385,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 23,
+      "scope": "wa/model/model/backbone/features.8/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.8/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.09087985949796092,
+      "max_abs": 3.681443437933922,
+      "rmse": 0.1899487520207435,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 24,
+      "scope": "wa/model/model/backbone/features.8/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.8/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.138461904037145,
+      "max_abs": 4.25882351398468,
+      "rmse": 0.1699508033689314,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 25,
+      "scope": "wa/model/model/backbone/features.8/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.8/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.20899560516567936,
+      "max_abs": 6.0475664138793945,
+      "rmse": 0.4825601905750675,
+      "quantization_scale": 0.12918204069137573,
+      "representable_min": -14.726752638816833,
+      "representable_max": 18.21466773748398,
+      "float_outside_quantized_range_fraction": 3.0517578125e-05
+    },
+    {
+      "image_index": 15,
+      "order": 26,
+      "scope": "wa/model/model/backbone/features.9/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.9/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.10520321558352351,
+      "max_abs": 3.2001134157180786,
+      "rmse": 0.18909303359144347,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 27,
+      "scope": "wa/model/model/backbone/features.9/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.9/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.11788234807031374,
+      "max_abs": 5.81631338596344,
+      "rmse": 0.15651702672573073,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 28,
+      "scope": "wa/model/model/backbone/features.9/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.9/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.2389238731141138,
+      "max_abs": 10.375746011734009,
+      "rmse": 0.758467699185829,
+      "quantization_scale": 0.14487455785274506,
+      "representable_min": -18.399068847298622,
+      "representable_max": 18.543943405151367,
+      "float_outside_quantized_range_fraction": 3.0517578125e-05
+    },
+    {
+      "image_index": 15,
+      "order": 29,
+      "scope": "wa/model/model/backbone/features.10/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.10/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.11666081401671574,
+      "max_abs": 3.8038158416748047,
+      "rmse": 0.18805854870214594,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 30,
+      "scope": "wa/model/model/backbone/features.10/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.10/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        384
+      ],
+      "relative_l2": 0.10895578381438295,
+      "max_abs": 5.234737813472748,
+      "rmse": 0.1414987339395148,
+      "quantization_scale": 0.0235294122248888,
+      "representable_min": 0.0,
+      "representable_max": 6.000000117346644,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 31,
+      "scope": "wa/model/model/backbone/features.10/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.10/conv/conv.2/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.2603816318884324,
+      "max_abs": 23.266758680343628,
+      "rmse": 1.5881949669709083,
+      "quantization_scale": 0.34143778681755066,
+      "representable_min": -43.704036712646484,
+      "representable_max": 43.362598925828934,
+      "float_outside_quantized_range_fraction": 1.52587890625e-05
+    },
+    {
+      "image_index": 15,
+      "order": 32,
+      "scope": "wa/model/model/block12/Resize_input_nhwc",
+      "weight": "wa/model/model/block12/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        32,
+        32,
+        64
+      ],
+      "relative_l2": 0.19805321466008777,
+      "max_abs": 4.00707221031189,
+      "rmse": 0.1381495056278669,
+      "quantization_scale": 0.02962108887732029,
+      "representable_min": 0.0,
+      "representable_max": 7.553377663716674,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 33,
+      "scope": "wa/model/model/block13/conv1/conv1.2/Relu_output_0",
+      "weight": "wa/model/model/block13/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        128
+      ],
+      "relative_l2": 0.21913224427333777,
+      "max_abs": 6.860274791717529,
+      "rmse": 0.22694173108836604,
+      "quantization_scale": 0.07977063953876495,
+      "representable_min": 0.0,
+      "representable_max": 20.341513082385063,
+      "float_outside_quantized_range_fraction": 1.9073486328125e-06
+    },
+    {
+      "image_index": 15,
+      "order": 34,
+      "scope": "wa/model/model/block14/conv1/conv1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/block13/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        64
+      ],
+      "relative_l2": 0.1399723152117838,
+      "max_abs": 5.210886478424072,
+      "rmse": 0.20699690948569444,
+      "quantization_scale": 0.057898737490177155,
+      "representable_min": 0.0,
+      "representable_max": 14.764178059995174,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 35,
+      "scope": "wa/model/model/block14/Resize_input_nhwc",
+      "weight": "wa/model/model/block14/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        64,
+        64,
+        32
+      ],
+      "relative_l2": 0.11335976513615029,
+      "max_abs": 2.643881678581238,
+      "rmse": 0.1286518311988947,
+      "quantization_scale": 0.025475818663835526,
+      "representable_min": 0.0,
+      "representable_max": 6.496333759278059,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 36,
+      "scope": "wa/model/model/block15/conv1/conv1.2/Relu_output_0",
+      "weight": "wa/model/model/block15/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        64
+      ],
+      "relative_l2": 0.22237010012554967,
+      "max_abs": 7.326929569244385,
+      "rmse": 0.21457746138581885,
+      "quantization_scale": 0.07632218301296234,
+      "representable_min": 0.0,
+      "representable_max": 19.462156668305397,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 37,
+      "scope": "wa/model/model/block16/conv1/conv1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/block15/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        64
+      ],
+      "relative_l2": 0.1935601490515578,
+      "max_abs": 7.363583087921143,
+      "rmse": 0.18653241074280885,
+      "quantization_scale": 0.05937671661376953,
+      "representable_min": 0.0,
+      "representable_max": 15.14106273651123,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 38,
+      "scope": "wa/model/model/block16/conv2/conv2.0/Conv_input_nhwc",
+      "weight": "wa/model/model/block16/conv1/conv1.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        64
+      ],
+      "relative_l2": 0.19538334503450006,
+      "max_abs": 16.35053539276123,
+      "rmse": 0.1886061045774422,
+      "quantization_scale": 0.08992565423250198,
+      "representable_min": 0.0,
+      "representable_max": 22.931041829288006,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 39,
+      "scope": "wa/model/model/block16/conv3/Conv_input_nhwc",
+      "weight": "wa/model/model/block16/conv2/conv2.0/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        64
+      ],
+      "relative_l2": 0.3853322231112238,
+      "max_abs": 18.270766496658325,
+      "rmse": 0.24825662806840332,
+      "quantization_scale": 0.08803093433380127,
+      "representable_min": 0.0,
+      "representable_max": 22.447888255119324,
+      "float_outside_quantized_range_fraction": 0.0
+    },
+    {
+      "image_index": 15,
+      "order": 40,
+      "scope": "wa/model/model/block16/conv3/Conv_output_nhwc",
+      "weight": "wa/model/model/block16/conv3/Conv_conv_filter",
+      "shape": [
+        1,
+        128,
+        128,
+        16
+      ],
+      "relative_l2": 0.35335353048727963,
+      "max_abs": 234.0997085571289,
+      "rmse": 5.331914871983232,
+      "quantization_scale": 2.358301877975464,
+      "representable_min": -301.8626403808594,
+      "representable_max": 299.5043385028839,
+      "float_outside_quantized_range_fraction": 0.0
+    }
+  ],
+  "summary": [
+    {
+      "order": 0,
+      "scope": "wa/model/model/backbone/features.1/conv/conv.0/conv.0.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.0/features.0.0/Conv_conv_filter",
+      "mean_relative_l2": 0.007234278455576151,
+      "max_relative_l2": 0.007353645091282023,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 1,
+      "scope": "wa/model/model/backbone/features.1/conv/conv.1/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.1/conv/conv.0/conv.0.0/Conv_depthwise_filter",
+      "mean_relative_l2": 0.10531556063581005,
+      "max_relative_l2": 0.12685013349888838,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 2,
+      "scope": "wa/model/model/backbone/features.1/conv/conv.1/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.1/conv/conv.1/Conv_conv_filter",
+      "mean_relative_l2": 0.35872377426365687,
+      "max_relative_l2": 0.5902960691943703,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.21810618042945862
+    },
+    {
+      "order": 3,
+      "scope": "wa/model/model/backbone/features.2/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.2/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "mean_relative_l2": 0.20083777340539602,
+      "max_relative_l2": 0.24471923493101544,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 4,
+      "scope": "wa/model/model/backbone/features.2/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.2/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "mean_relative_l2": 0.15890123489361668,
+      "max_relative_l2": 0.18717021128957262,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 5,
+      "scope": "wa/model/model/backbone/features.2/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.2/conv/conv.2/Conv_conv_filter",
+      "mean_relative_l2": 0.24042853740241218,
+      "max_relative_l2": 0.34311161275243734,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.19078777730464935
+    },
+    {
+      "order": 6,
+      "scope": "wa/model/model/backbone/features.3/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.3/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "mean_relative_l2": 0.15518291180081836,
+      "max_relative_l2": 0.19059976999115713,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 7,
+      "scope": "wa/model/model/backbone/features.3/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.3/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "mean_relative_l2": 0.1114415234842539,
+      "max_relative_l2": 0.12704084639330002,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 8,
+      "scope": "wa/model/model/backbone/features.3/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.3/conv/conv.2/Conv_conv_filter",
+      "mean_relative_l2": 0.2617686610729363,
+      "max_relative_l2": 0.3684749343146402,
+      "mean_reference_outside_range_fraction": 1.9073486328125e-06,
+      "quantization_scale": 0.3414009213447571
+    },
+    {
+      "order": 9,
+      "scope": "wa/model/model/backbone/features.4/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.4/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "mean_relative_l2": 0.16558125826490058,
+      "max_relative_l2": 0.21013591376445995,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 10,
+      "scope": "wa/model/model/block14/conv2/conv2.2/Relu_output_0",
+      "weight": "wa/model/model/block14/conv2/conv2.0/Conv_conv_filter",
+      "mean_relative_l2": 0.20490344907642893,
+      "max_relative_l2": 0.2613417860610334,
+      "mean_reference_outside_range_fraction": 4.76837158203125e-07,
+      "quantization_scale": 0.025703979656100273
+    },
+    {
+      "order": 11,
+      "scope": "wa/model/model/backbone/features.4/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.4/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "mean_relative_l2": 0.15157807014006658,
+      "max_relative_l2": 0.19116526651008378,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 12,
+      "scope": "wa/model/model/backbone/features.4/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.4/conv/conv.2/Conv_conv_filter",
+      "mean_relative_l2": 0.25217328941879075,
+      "max_relative_l2": 0.3498973471473607,
+      "mean_reference_outside_range_fraction": 5.7220458984375e-06,
+      "quantization_scale": 0.17788481712341309
+    },
+    {
+      "order": 13,
+      "scope": "wa/model/model/backbone/features.5/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.5/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "mean_relative_l2": 0.11611447325374069,
+      "max_relative_l2": 0.14993792354599123,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 14,
+      "scope": "wa/model/model/backbone/features.5/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.5/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "mean_relative_l2": 0.15028918324120696,
+      "max_relative_l2": 0.18905589133023187,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 15,
+      "scope": "wa/model/model/backbone/features.5/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.5/conv/conv.2/Conv_conv_filter",
+      "mean_relative_l2": 0.2780736461098454,
+      "max_relative_l2": 0.3494954521642196,
+      "mean_reference_outside_range_fraction": 9.5367431640625e-06,
+      "quantization_scale": 0.22907932102680206
+    },
+    {
+      "order": 16,
+      "scope": "wa/model/model/backbone/features.6/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.6/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "mean_relative_l2": 0.1146262256148076,
+      "max_relative_l2": 0.13650651791323307,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 17,
+      "scope": "wa/model/model/backbone/features.6/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.6/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "mean_relative_l2": 0.1713598992281574,
+      "max_relative_l2": 0.19928041748409625,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 18,
+      "scope": "wa/model/model/backbone/features.6/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.6/conv/conv.2/Conv_conv_filter",
+      "mean_relative_l2": 0.33576504914609384,
+      "max_relative_l2": 0.4057824783107893,
+      "mean_reference_outside_range_fraction": 1.1444091796875e-05,
+      "quantization_scale": 0.21549895405769348
+    },
+    {
+      "order": 19,
+      "scope": "wa/model/model/backbone/features.7/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.7/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "mean_relative_l2": 0.17257662821827807,
+      "max_relative_l2": 0.21229248035873158,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 20,
+      "scope": "wa/model/model/block12/conv2/conv2.2/Relu_output_0",
+      "weight": "wa/model/model/block12/conv2/conv2.0/Conv_conv_filter",
+      "mean_relative_l2": 0.20508095646168262,
+      "max_relative_l2": 0.2516534287205973,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.02736824005842209
+    },
+    {
+      "order": 21,
+      "scope": "wa/model/model/backbone/features.7/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.7/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "mean_relative_l2": 0.10230064886838439,
+      "max_relative_l2": 0.13264704001569053,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 22,
+      "scope": "wa/model/model/backbone/features.7/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.7/conv/conv.2/Conv_conv_filter",
+      "mean_relative_l2": 0.25748169258687276,
+      "max_relative_l2": 0.33976078469426185,
+      "mean_reference_outside_range_fraction": 7.62939453125e-06,
+      "quantization_scale": 0.10654657334089279
+    },
+    {
+      "order": 23,
+      "scope": "wa/model/model/backbone/features.8/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.8/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "mean_relative_l2": 0.13625391787991872,
+      "max_relative_l2": 0.17378767632919206,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 24,
+      "scope": "wa/model/model/backbone/features.8/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.8/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "mean_relative_l2": 0.19654107753286063,
+      "max_relative_l2": 0.23991204275950287,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 25,
+      "scope": "wa/model/model/backbone/features.8/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.8/conv/conv.2/Conv_conv_filter",
+      "mean_relative_l2": 0.29218346892139013,
+      "max_relative_l2": 0.3454343578447875,
+      "mean_reference_outside_range_fraction": 0.000324249267578125,
+      "quantization_scale": 0.12918204069137573
+    },
+    {
+      "order": 26,
+      "scope": "wa/model/model/backbone/features.9/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.9/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "mean_relative_l2": 0.1543355214252685,
+      "max_relative_l2": 0.19317869091101514,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 27,
+      "scope": "wa/model/model/backbone/features.9/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.9/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "mean_relative_l2": 0.18199803563250605,
+      "max_relative_l2": 0.23904072160015424,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 28,
+      "scope": "wa/model/model/backbone/features.9/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.9/conv/conv.2/Conv_conv_filter",
+      "mean_relative_l2": 0.3540180666171042,
+      "max_relative_l2": 0.4513808441806042,
+      "mean_reference_outside_range_fraction": 4.57763671875e-05,
+      "quantization_scale": 0.14487455785274506
+    },
+    {
+      "order": 29,
+      "scope": "wa/model/model/backbone/features.10/conv/conv.1/conv.1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.10/conv/conv.0/conv.0.0/Conv_conv_filter",
+      "mean_relative_l2": 0.17992334398933163,
+      "max_relative_l2": 0.22682367316798296,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 30,
+      "scope": "wa/model/model/backbone/features.10/conv/conv.2/Conv_input_nhwc",
+      "weight": "wa/model/model/backbone/features.10/conv/conv.1/conv.1.0/Conv_depthwise_filter",
+      "mean_relative_l2": 0.17274513440461853,
+      "max_relative_l2": 0.21994604376380125,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.0235294122248888
+    },
+    {
+      "order": 31,
+      "scope": "wa/model/model/backbone/features.10/conv/conv.2/Conv_output_nhwc",
+      "weight": "wa/model/model/backbone/features.10/conv/conv.2/Conv_conv_filter",
+      "mean_relative_l2": 0.39214657056787744,
+      "max_relative_l2": 0.48635084974964177,
+      "mean_reference_outside_range_fraction": 9.1552734375e-05,
+      "quantization_scale": 0.34143778681755066
+    },
+    {
+      "order": 32,
+      "scope": "wa/model/model/block12/Resize_input_nhwc",
+      "weight": "wa/model/model/block12/conv1/conv1.0/Conv_conv_filter",
+      "mean_relative_l2": 0.30937492020110874,
+      "max_relative_l2": 0.3772390524049239,
+      "mean_reference_outside_range_fraction": 3.814697265625e-05,
+      "quantization_scale": 0.02962108887732029
+    },
+    {
+      "order": 33,
+      "scope": "wa/model/model/block13/conv1/conv1.2/Relu_output_0",
+      "weight": "wa/model/model/block13/conv1/conv1.0/Conv_conv_filter",
+      "mean_relative_l2": 0.35318005279563724,
+      "max_relative_l2": 0.4287513297210163,
+      "mean_reference_outside_range_fraction": 4.291534423828125e-06,
+      "quantization_scale": 0.07977063953876495
+    },
+    {
+      "order": 34,
+      "scope": "wa/model/model/block14/conv1/conv1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/block13/conv2/conv2.0/Conv_conv_filter",
+      "mean_relative_l2": 0.2209135743911032,
+      "max_relative_l2": 0.2643065673844334,
+      "mean_reference_outside_range_fraction": 1.9073486328125e-06,
+      "quantization_scale": 0.057898737490177155
+    },
+    {
+      "order": 35,
+      "scope": "wa/model/model/block14/Resize_input_nhwc",
+      "weight": "wa/model/model/block14/conv1/conv1.0/Conv_conv_filter",
+      "mean_relative_l2": 0.18398484212942506,
+      "max_relative_l2": 0.225338481893161,
+      "mean_reference_outside_range_fraction": 1.9073486328125e-06,
+      "quantization_scale": 0.025475818663835526
+    },
+    {
+      "order": 36,
+      "scope": "wa/model/model/block15/conv1/conv1.2/Relu_output_0",
+      "weight": "wa/model/model/block15/conv1/conv1.0/Conv_conv_filter",
+      "mean_relative_l2": 0.3559634847162974,
+      "max_relative_l2": 0.41663513128410573,
+      "mean_reference_outside_range_fraction": 0.0,
+      "quantization_scale": 0.07632218301296234
+    },
+    {
+      "order": 37,
+      "scope": "wa/model/model/block16/conv1/conv1.0/Conv_input_nhwc",
+      "weight": "wa/model/model/block15/conv2/conv2.0/Conv_conv_filter",
+      "mean_relative_l2": 0.3163456712076685,
+      "max_relative_l2": 0.3775655278502234,
+      "mean_reference_outside_range_fraction": 5.4836273193359375e-06,
+      "quantization_scale": 0.05937671661376953
+    },
+    {
+      "order": 38,
+      "scope": "wa/model/model/block16/conv2/conv2.0/Conv_input_nhwc",
+      "weight": "wa/model/model/block16/conv1/conv1.0/Conv_conv_filter",
+      "mean_relative_l2": 0.3096849267361601,
+      "max_relative_l2": 0.37701040409147546,
+      "mean_reference_outside_range_fraction": 2.765655517578125e-05,
+      "quantization_scale": 0.08992565423250198
+    },
+    {
+      "order": 39,
+      "scope": "wa/model/model/block16/conv3/Conv_input_nhwc",
+      "weight": "wa/model/model/block16/conv2/conv2.0/Conv_conv_filter",
+      "mean_relative_l2": 0.5057677594517535,
+      "max_relative_l2": 0.6487256815675715,
+      "mean_reference_outside_range_fraction": 0.00016546249389648438,
+      "quantization_scale": 0.08803093433380127
+    },
+    {
+      "order": 40,
+      "scope": "wa/model/model/block16/conv3/Conv_output_nhwc",
+      "weight": "wa/model/model/block16/conv3/Conv_conv_filter",
+      "mean_relative_l2": 0.49886341512082066,
+      "max_relative_l2": 0.6014655576798827,
+      "mean_reference_outside_range_fraction": 0.000423431396484375,
+      "quantization_scale": 2.358301877975464
+    }
+  ],
+  "active_final_channels": [
+    {
+      "image_index": 0,
+      "center_channel7": {
+        "relative_l2": 0.16280537627349992,
+        "max_abs": 15.82974624633789,
+        "rmse": 1.525950449172652
+      },
+      "displacement_channels8_11": {
+        "relative_l2": 0.5253535179470772,
+        "max_abs": 462.4254455566406,
+        "rmse": 24.700004123156372
+      },
+      "float_center_range": [
+        -33.1156005859375,
+        4.53530740737915
+      ],
+      "float_displacement_range": [
+        -764.2880859375,
+        754.0562133789062
+      ],
+      "float_unused_range": [
+        -46.46100616455078,
+        43.66619110107422
+      ],
+      "conv_output_quantization_scale": 2.358301877975464
+    },
+    {
+      "image_index": 1,
+      "center_channel7": {
+        "relative_l2": 0.17822335448845136,
+        "max_abs": 12.054370880126953,
+        "rmse": 1.3383056393589876
+      },
+      "displacement_channels8_11": {
+        "relative_l2": 0.5373363035935501,
+        "max_abs": 318.1405334472656,
+        "rmse": 18.65706802761773
+      },
+      "float_center_range": [
+        -33.01775360107422,
+        3.3948216438293457
+      ],
+      "float_displacement_range": [
+        -620.003173828125,
+        612.3534545898438
+      ],
+      "float_unused_range": [
+        -43.751827239990234,
+        37.87948226928711
+      ],
+      "conv_output_quantization_scale": 2.358301877975464
+    },
+    {
+      "image_index": 8,
+      "center_channel7": {
+        "relative_l2": 0.16168037930539644,
+        "max_abs": 11.536195755004883,
+        "rmse": 1.1819275377230194
+      },
+      "displacement_channels8_11": {
+        "relative_l2": 0.6407274269149064,
+        "max_abs": 292.77680253982544,
+        "rmse": 17.780755832132456
+      },
+      "float_center_range": [
+        -17.35430145263672,
+        3.446594715118408
+      ],
+      "float_displacement_range": [
+        -287.486328125,
+        284.6093444824219
+      ],
+      "float_unused_range": [
+        -33.38710403442383,
+        34.55012130737305
+      ],
+      "conv_output_quantization_scale": 2.358301877975464
+    },
+    {
+      "image_index": 15,
+      "center_channel7": {
+        "relative_l2": 0.15275982266164956,
+        "max_abs": 10.991048812866211,
+        "rmse": 0.8845874101961609
+      },
+      "displacement_channels8_11": {
+        "relative_l2": 0.36961895345929174,
+        "max_abs": 234.0997085571289,
+        "rmse": 9.68432372709351
+      },
+      "float_center_range": [
+        -18.989530563354492,
+        3.0650768280029297
+      ],
+      "float_displacement_range": [
+        -198.33470153808594,
+        196.64825439453125
+      ],
+      "float_unused_range": [
+        -30.14320945739746,
+        30.976293563842773
+      ],
+      "conv_output_quantization_scale": 2.358301877975464
+    }
+  ],
+  "protocol": "1thread no default delegates,preserve all tensors,4 fixed development images; match Conv output scope/shape; quantize native input and dequantize each tensor with actual scale. Different execution mode from timing. Errors include accumulation from upstream, not isolated causality. Float outside range is distinct from endpoint occupancy.",
+  "data_manifest": {
+    "seed": 20261013,
+    "preprocess": "Pillow RGB bilinear 512x512 + alpha=1; raw [0,255] RGBA",
+    "splits": {
+      "calibration": {
+        "dataset": "lh9171338/Wireframe",
+        "source_split": "train",
+        "revision": "81c53616b0a63cad5183f00345b640d346932653",
+        "metadata_sha256": "2d08abcd824cfbe43b0de9b72ab395f599d1c447610f963f32ca9fee1d5a8c46",
+        "records": [
+          {
+            "image_file": "00363947.png",
+            "image_sha256": "e0b5cf2f0f5a46925085539a11c5ecaf3e22cbdcd37790339c476c613de1eaf5",
+            "image_size": [
+              500,
+              415
+            ],
+            "line_count": 60,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00363947.png"
+          },
+          {
+            "image_file": "00037175.png",
+            "image_sha256": "323a0a52968f0ba962970e6d677df629925cd2819537e30a7e476b89f88194bb",
+            "image_size": [
+              500,
+              272
+            ],
+            "line_count": 131,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00037175.png"
+          },
+          {
+            "image_file": "00517054.png",
+            "image_sha256": "6915251867b74d9897f967503893978c0a2d38c4f833c89f2be787b05d6994d7",
+            "image_size": [
+              500,
+              500
+            ],
+            "line_count": 69,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00517054.png"
+          },
+          {
+            "image_file": "00036988.png",
+            "image_sha256": "f8f7c4cf803a8df73c3e8e26d4544ba13b1cceece28e74d00e1ff67db7ffab14",
+            "image_size": [
+              333,
+              500
+            ],
+            "line_count": 63,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00036988.png"
+          },
+          {
+            "image_file": "00079658.png",
+            "image_sha256": "5f3844375098a18f9a744a366eaa5c6c43d84fef40a71c9ccf5806e717b9896d",
+            "image_size": [
+              500,
+              375
+            ],
+            "line_count": 20,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00079658.png"
+          },
+          {
+            "image_file": "00490293.png",
+            "image_sha256": "44a12c0c723f9289960c019aaabe5aa7494ace0da3550e3cfbaf556aa6bcddf9",
+            "image_size": [
+              500,
+              375
+            ],
+            "line_count": 81,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00490293.png"
+          },
+          {
+            "image_file": "00428953.png",
+            "image_sha256": "abaf69c9ad4dbfe40a4550042461eed8b4242fe47a497d07e44f1dac4bfc97a0",
+            "image_size": [
+              500,
+              500
+            ],
+            "line_count": 43,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00428953.png"
+          },
+          {
+            "image_file": "00037064.png",
+            "image_sha256": "4dd024e5ca8f1b498dbfbfe5ac80713d3d5d878176441d441380c9677a6151e3",
+            "image_size": [
+              333,
+              500
+            ],
+            "line_count": 60,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00037064.png"
+          },
+          {
+            "image_file": "00066088.png",
+            "image_sha256": "cfe3f7291a2fc2820d86ca5a12393a2d170ad7b534a4489743bbc0e404108f7d",
+            "image_size": [
+              500,
+              334
+            ],
+            "line_count": 156,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00066088.png"
+          },
+          {
+            "image_file": "00075057.png",
+            "image_sha256": "155226ba628763bb726f3576954bf010352136bb929bb7ece1ba3b35141bc841",
+            "image_size": [
+              452,
+              500
+            ],
+            "line_count": 49,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00075057.png"
+          },
+          {
+            "image_file": "00072261.png",
+            "image_sha256": "4936aa7c53763fed38fe625ac38c9ef1cf0407dbe60fdde319d3bb645792297a",
+            "image_size": [
+              500,
+              281
+            ],
+            "line_count": 41,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00072261.png"
+          },
+          {
+            "image_file": "00436123.png",
+            "image_sha256": "e81a279569046c2f3919acd5270851ec0f2bb3e03de27ab751f0830103bc8e9e",
+            "image_size": [
+              500,
+              500
+            ],
+            "line_count": 40,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00436123.png"
+          },
+          {
+            "image_file": "00037396.png",
+            "image_sha256": "92285532522b6e7c14b0ac2d206a319a001c0b9fd80b92f1af2f381705174666",
+            "image_size": [
+              500,
+              375
+            ],
+            "line_count": 85,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00037396.png"
+          },
+          {
+            "image_file": "00036897.png",
+            "image_sha256": "06f9eb40aad424b0cae93eb8ff327a041c42ff5e756b3797244366e4723ef5ba",
+            "image_size": [
+              333,
+              500
+            ],
+            "line_count": 65,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00036897.png"
+          },
+          {
+            "image_file": "00193371.png",
+            "image_sha256": "bf0171f32776a73b428a3e8aca60bc6edf2a78a243f05506b56debaadc2c66e9",
+            "image_size": [
+              362,
+              500
+            ],
+            "line_count": 81,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00193371.png"
+          },
+          {
+            "image_file": "00076929.png",
+            "image_sha256": "7b0c319d2cc15d16d57d52ba7ae379941f5f7e630ba6361567952a11d5b7639e",
+            "image_size": [
+              500,
+              370
+            ],
+            "line_count": 96,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00076929.png"
+          },
+          {
+            "image_file": "00386252.png",
+            "image_sha256": "70486286a7da811908bfd2cd43f9e9551a91d20fbf6620eaf8aeef624fff805b",
+            "image_size": [
+              500,
+              450
+            ],
+            "line_count": 81,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00386252.png"
+          },
+          {
+            "image_file": "00035750.png",
+            "image_sha256": "0b3016428aca55e279c74f839f1c0510fda6144c44d407dff615a1001f6a718e",
+            "image_size": [
+              500,
+              331
+            ],
+            "line_count": 74,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00035750.png"
+          },
+          {
+            "image_file": "00236152.png",
+            "image_sha256": "b36e6ad510a25154dab1c04598509aafc7d157e1552882dd7027b59558e73472",
+            "image_size": [
+              500,
+              500
+            ],
+            "line_count": 64,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00236152.png"
+          },
+          {
+            "image_file": "00059371.png",
+            "image_sha256": "b980da3f8ab85956864dfd962fe1aea85402e9061560091e089d1a3fefbe70d9",
+            "image_size": [
+              500,
+              375
+            ],
+            "line_count": 49,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00059371.png"
+          },
+          {
+            "image_file": "00400430.png",
+            "image_sha256": "78b36e418231544e5d4f59d1897df1ac7a76f60651aadd72b5ca3d3f1543fcae",
+            "image_size": [
+              500,
+              500
+            ],
+            "line_count": 79,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00400430.png"
+          },
+          {
+            "image_file": "00037071.png",
+            "image_sha256": "66489acf6e9dce38539560df54608950b0707392e9a771fecf0cfd2cac130938",
+            "image_size": [
+              375,
+              500
+            ],
+            "line_count": 48,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00037071.png"
+          },
+          {
+            "image_file": "00063701.png",
+            "image_sha256": "93536a51b51bbe1d9159ffcc35806a7fc8e30296c038e69d8a1df2ff4aed3284",
+            "image_size": [
+              500,
+              333
+            ],
+            "line_count": 59,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00063701.png"
+          },
+          {
+            "image_file": "00059214.png",
+            "image_sha256": "7ac8ea671728e907406d252ced0297096cdb8899cde3e2620f42c89dd77da907",
+            "image_size": [
+              500,
+              375
+            ],
+            "line_count": 119,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00059214.png"
+          },
+          {
+            "image_file": "00491030.png",
+            "image_sha256": "ab171e25392c7ed361ed2c39ac0ebfaade3840b98a7d414d4c53279e01f28eb0",
+            "image_size": [
+              500,
+              375
+            ],
+            "line_count": 115,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00491030.png"
+          },
+          {
+            "image_file": "00490642.png",
+            "image_sha256": "d6e6ebb433b971396c0ee6c1d5895c97a692ee437a219c9f7f6d4abb08c457f3",
+            "image_size": [
+              500,
+              374
+            ],
+            "line_count": 110,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00490642.png"
+          },
+          {
+            "image_file": "00036602.png",
+            "image_sha256": "b9120f303a5ed6ba265348f2799007ae090346a1747aa0195ede40366f2ed2d8",
+            "image_size": [
+              500,
+              375
+            ],
+            "line_count": 44,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00036602.png"
+          },
+          {
+            "image_file": "00074924.png",
+            "image_sha256": "b6cb67d0d61dd73cb0a23c1552da89300dd9e7d9135e602e6f5478f683099fdb",
+            "image_size": [
+              500,
+              378
+            ],
+            "line_count": 84,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00074924.png"
+          },
+          {
+            "image_file": "00075621.png",
+            "image_sha256": "18989abe8a2920c429426bfc38394d21013a4ae7b3cd2aa6c5ce59140a275355",
+            "image_size": [
+              500,
+              375
+            ],
+            "line_count": 104,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00075621.png"
+          },
+          {
+            "image_file": "00103257.png",
+            "image_sha256": "036efb943b83d732e0722642b4d4616efb91006acb2ab17b7c61f027d4be0d96",
+            "image_size": [
+              500,
+              370
+            ],
+            "line_count": 57,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00103257.png"
+          },
+          {
+            "image_file": "00490021.png",
+            "image_sha256": "c263788739f5c5be2edfd0a60a0a904dd6d943f9ffe31752d3bf9e6b6eb9266e",
+            "image_size": [
+              500,
+              375
+            ],
+            "line_count": 31,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00490021.png"
+          },
+          {
+            "image_file": "00366481.png",
+            "image_sha256": "9962b3853f5770e6985ece5dc2f532337beb82c2f1c1c25e600a1baab775992d",
+            "image_size": [
+              500,
+              449
+            ],
+            "line_count": 98,
+            "url": "https://huggingface.co/datasets/lh9171338/Wireframe/resolve/81c53616b0a63cad5183f00345b640d346932653/train/images/00366481.png"
+          }
+        ]
+      },
+      "evaluation": {
+        "dataset": "lh9171338/YorkUrban",
+        "source_split": "test",
+        "revision": "ce62ae487aac928c5df3e82f697478b8c6c44d8d",
+        "metadata_sha256": "b3aff09ae0a56b3032874d151d109e50c636c28c21f5172ee29ded4892daabc3",
+        "records": [
+          {
+            "image_file": "P1020825.png",
+            "image_sha256": "263bdb43f1780de609632f5395d30e8ebdb41d57feaaea3de8a459ad8498a501",
+            "image_size": [
+              640,
+              480
+            ],
+            "line_count": 41,
+            "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1020825.png"
+          },
+          {
+            "image_file": "P1040823.png",
+            "image_sha256": "e0be2ed0e896a11f64c139234e7b87bd4263cf000cec016ceab1f8979271924d",
+            "image_size": [
+              640,
+              480
+            ],
+            "line_count": 77,
+            "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1040823.png"
+          },
+          {
+            "image_file": "P1020822.png",
+            "image_sha256": "6a1724b9f8c86c472cf396fe4bcae7153742bddfc38a788aa6d4d74c2dd5b434",
+            "image_size": [
+              640,
+              480
+            ],
+            "line_count": 77,
+            "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1020822.png"
+          },
+          {
+            "image_file": "P1020856.png",
+            "image_sha256": "e098fc1a855e0ca0fb01ad3d9f79e418f799951cf56b2bfac052e88edf4f0eef",
+            "image_size": [
+              640,
+              480
+            ],
+            "line_count": 95,
+            "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1020856.png"
+          },
+          {
+            "image_file": "P1080032.png",
+            "image_sha256": "b659b950361bedc79333a672f1689a08a8cbc925c265fe0c9d695afca65bf69e",
+            "image_size": [
+              640,
+              480
+            ],
+            "line_count": 96,
+            "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1080032.png"
+          },
+          {
+            "image_file": "P1080036.png",
+            "image_sha256": "4709e5270081406903568544896aed9b6764301a4371757d69b8ca2c224d9174",
+            "image_size": [
+              640,
+              480
+            ],
+            "line_count": 92,
+            "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1080036.png"
+          },
+          {
+            "image_file": "P1040863.png",
+            "image_sha256": "32c576e2afa710e9b528331022d628261edd2b1a3e0fadc402c703704e6be256",
+            "image_size": [
+              640,
+              480
+            ],
+            "line_count": 44,
+            "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1040863.png"
+          },
+          {
+            "image_file": "P1020829.png",
+            "image_sha256": "003de39d546be2b89c783ad84198b0a3d0f724e2981a2aa81a4589e37a2cebac",
+            "image_size": [
+              640,
+              480
+            ],
+            "line_count": 69,
+            "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1020829.png"
+          },
+          {
+            "image_file": "P1080106.png",
+            "image_sha256": "c5b24812462c37bfc19f1f04231e7133c604269eda7d3548e22337c92dce7c15",
+            "image_size": [
+              640,
+              480
+            ],
+            "line_count": 108,
+            "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1080106.png"
+          },
+          {
+            "image_file": "P1020887.png",
+            "image_sha256": "4229a8b69f4c3958204afe6de0ec85ce04915ec9c2f9bf11a14be3b133a609a9",
+            "image_size": [
+              640,
+              480
+            ],
+            "line_count": 65,
+            "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1020887.png"
+          },
+          {
+            "image_file": "P1020826.png",
+            "image_sha256": "4393a2b43893f135d2459605b5a7420074b0761b2b30f2ef3736983c0a4a4a97",
+            "image_size": [
+              640,
+              480
+            ],
+            "line_count": 76,
+            "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1020826.png"
+          },
+          {
+            "image_file": "P1080033.png",
+            "image_sha256": "1036d0aff3d75be272e2d85bad8ad1e89ae33e8da5c51293fc1e7e236af047b9",
+            "image_size": [
+              640,
+              480
+            ],
+            "line_count": 130,
+            "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1080033.png"
+          },
+          {
+            "image_file": "P1080056.png",
+            "image_sha256": "d7704e16fca72b6d8a4fcb84f4211ab82455be6a5313a656faf09fb987cd50af",
+            "image_size": [
+              640,
+              480
+            ],
+            "line_count": 129,
+            "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1080056.png"
+          },
+          {
+            "image_file": "P1040801.png",
+            "image_sha256": "487b21e21d95a17f21729ea1b86f61c6356e4f92c2397637e65e01c8f8fca188",
+            "image_size": [
+              640,
+              480
+            ],
+            "line_count": 32,
+            "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1040801.png"
+          },
+          {
+            "image_file": "P1030004.png",
+            "image_sha256": "36a1786f641916012d0812409b1fdbf37ebcb044646e052ff873de1f5cdcd039",
+            "image_size": [
+              640,
+              480
+            ],
+            "line_count": 305,
+            "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1030004.png"
+          },
+          {
+            "image_file": "P1080113.png",
+            "image_sha256": "8b1803fe7d00d8455d3751dfd8d2bea21f7e96a598926aea51cabc8b2600c34c",
+            "image_size": [
+              640,
+              480
+            ],
+            "line_count": 337,
+            "url": "https://huggingface.co/datasets/lh9171338/YorkUrban/resolve/ce62ae487aac928c5df3e82f697478b8c6c44d8d/test/images/P1080113.png"
+          }
+        ]
+      }
+    },
+    "inputs_sha256": "7dc8203fd77d9fee2dde64057336a6abe4fcff50353d77ddbb7c231c3514c947",
+    "ground_truth_sha256": "4d1ca1acaad563f724d33f058dfe552ee42689e1244c5e4f9f6a69961ce11c0d",
+    "note": "YorkUrban test subset is evaluation only; never calibration/training. Mirrors retain original dataset provenance."
+  },
+  "source_code": {
+    "path": "daily/2026-10-21/experiments/mlsd/src/diagnose_activations.py",
+    "sha256": "7a13d44cdfe24044f2e787fd0b5cea9c683abb639cee6b79941eb8365ac78569",
+    "bytes": 5509
+  }
+}

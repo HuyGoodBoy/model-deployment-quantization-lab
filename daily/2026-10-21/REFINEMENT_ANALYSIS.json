@@ -1,0 +1,180 @@
+{
+  "finished_at_utc": "2026-10-21T08:37:57.493482+00:00",
+  "mlsd": {
+    "threads4_session1": {
+      "head_float_vs_float": {
+        "median_latency_reduction_percent": 0.5830311111062136,
+        "paired_round_bootstrap95_percent": [
+          -2.80535563597033,
+          2.3176193138835677
+        ],
+        "rounds_candidate_faster": 3,
+        "rounds": 5,
+        "block_size": 16,
+        "resamples": 2000,
+        "seed": 20261062,
+        "scope": "Approximate within-session uncertainty from only5paired round clusters,not80/160independent samples or cross-device proof."
+      },
+      "C1_vs_float": {
+        "median_latency_reduction_percent": 2.920210207345486,
+        "paired_round_bootstrap95_percent": [
+          0.8534877665100304,
+          4.130225324835035
+        ],
+        "rounds_candidate_faster": 4,
+        "rounds": 5,
+        "block_size": 16,
+        "resamples": 2000,
+        "seed": 20261062,
+        "scope": "Approximate within-session uncertainty from only5paired round clusters,not80/160independent samples or cross-device proof."
+      }
+    },
+    "threads4_session2": {
+      "head_float_vs_float": {
+        "median_latency_reduction_percent": 4.363841847332628,
+        "paired_round_bootstrap95_percent": [
+          2.899144055615008,
+          6.244967498728338
+        ],
+        "rounds_candidate_faster": 5,
+        "rounds": 5,
+        "block_size": 16,
+        "resamples": 2000,
+        "seed": 20261063,
+        "scope": "Approximate within-session uncertainty from only5paired round clusters,not80/160independent samples or cross-device proof."
+      },
+      "C1_vs_float": {
+        "median_latency_reduction_percent": 4.802642532954726,
+        "paired_round_bootstrap95_percent": [
+          3.2648992226709805,
+          6.181405551192157
+        ],
+        "rounds_candidate_faster": 5,
+        "rounds": 5,
+        "block_size": 16,
+        "resamples": 2000,
+        "seed": 20261063,
+        "scope": "Approximate within-session uncertainty from only5paired round clusters,not80/160independent samples or cross-device proof."
+      }
+    },
+    "threads8_session1": {
+      "head_float_vs_float": {
+        "median_latency_reduction_percent": -0.447205498334724,
+        "paired_round_bootstrap95_percent": [
+          -1.3774293417865513,
+          3.678986256315331
+        ],
+        "rounds_candidate_faster": 2,
+        "rounds": 5,
+        "block_size": 16,
+        "resamples": 2000,
+        "seed": 20261102,
+        "scope": "Approximate within-session uncertainty from only5paired round clusters,not80/160independent samples or cross-device proof."
+      },
+      "C1_vs_float": {
+        "median_latency_reduction_percent": 0.9799897608466668,
+        "paired_round_bootstrap95_percent": [
+          -0.15002164905322246,
+          5.383860638087556
+        ],
+        "rounds_candidate_faster": 4,
+        "rounds": 5,
+        "block_size": 16,
+        "resamples": 2000,
+        "seed": 20261102,
+        "scope": "Approximate within-session uncertainty from only5paired round clusters,not80/160independent samples or cross-device proof."
+      }
+    },
+    "threads8_session2": {
+      "head_float_vs_float": {
+        "median_latency_reduction_percent": -1.1213596825731642,
+        "paired_round_bootstrap95_percent": [
+          -2.9758074470038087,
+          5.085041833023352
+        ],
+        "rounds_candidate_faster": 2,
+        "rounds": 5,
+        "block_size": 16,
+        "resamples": 2000,
+        "seed": 20261103,
+        "scope": "Approximate within-session uncertainty from only5paired round clusters,not80/160independent samples or cross-device proof."
+      },
+      "C1_vs_float": {
+        "median_latency_reduction_percent": 1.6616387102367458,
+        "paired_round_bootstrap95_percent": [
+          -0.06303054849383649,
+          7.934154000423954
+        ],
+        "rounds_candidate_faster": 4,
+        "rounds": 5,
+        "block_size": 16,
+        "resamples": 2000,
+        "seed": 20261103,
+        "scope": "Approximate within-session uncertainty from only5paired round clusters,not80/160independent samples or cross-device proof."
+      }
+    }
+  },
+  "zipformer": {
+    "fc_vs_baseline_encoder": {
+      "median_latency_reduction_percent": 28.849378849448314,
+      "paired_round_bootstrap95_percent": [
+        25.789933675796796,
+        31.221757917373182
+      ],
+      "rounds_candidate_faster": 5,
+      "rounds": 5,
+      "block_size": 32,
+      "resamples": 2000,
+      "seed": 20261021,
+      "scope": "Approximate within-session uncertainty from only5paired round clusters,not80/160independent samples or cross-device proof."
+    },
+    "fc_bias_vs_fc_encoder": {
+      "median_latency_reduction_percent": 2.5381771632559724,
+      "paired_round_bootstrap95_percent": [
+        -1.0259048911544166,
+        6.197416475367001
+      ],
+      "rounds_candidate_faster": 3,
+      "rounds": 5,
+      "block_size": 32,
+      "resamples": 2000,
+      "seed": 20261022,
+      "scope": "Approximate within-session uncertainty from only5paired round clusters,not80/160independent samples or cross-device proof."
+    },
+    "fc_vs_baseline_pipeline_reduction_percent": 24.575906808681825,
+    "fc_bias_vs_fc_pipeline_reduction_percent": -0.7988410562223214,
+    "decision": "Retain FC as default;bias-fused encoder has no demonstrated end-to-end advantage in this measured session;retain patch as experimental evidence."
+  },
+  "sources": [
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_contiguous_benchmark_t4_s1.json",
+      "sha256": "dba75f614a3515e9e3803ccbb4bb23f31c8686feef05462a7c6b38c8351b479c",
+      "bytes": 9671
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_contiguous_benchmark_t4_s2.json",
+      "sha256": "1992ec6f999c0aa3a4561bf3195afeef56a18ccac315acf5dca9fd554aef47e8",
+      "bytes": 9722
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_contiguous_benchmark_t8_s1.json",
+      "sha256": "4ea97af2bd7b2d67bb8c72126d8bfd67acde84716987e4d686b5fad8a10aefd3",
+      "bytes": 9685
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/refinement_contiguous_benchmark_t8_s2.json",
+      "sha256": "ca88cf2931be11a546c888cd6f078b742f24d7755790b63decbe6f82553a57c4",
+      "bytes": 9700
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/refinement_benchmark.json",
+      "sha256": "c7942f5af44ffe4ae2bd6c6c30297c7ab707854a0be15fb024c5820480cc8c5f",
+      "bytes": 15717
+    }
+  ],
+  "source_code": {
+    "path": "daily/2026-10-21/tools/analyze_refinement.py",
+    "sha256": "def512d9bfadc5d2732030c3f92531cc62fab96ad69703f2c5a5a89830fbd062",
+    "bytes": 3045
+  }
+}

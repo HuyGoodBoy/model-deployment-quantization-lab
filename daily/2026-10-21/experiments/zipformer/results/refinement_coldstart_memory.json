@@ -1,0 +1,606 @@
+{
+  "started_at_utc": "2026-10-21T08:34:24.683278+00:00",
+  "finished_at_utc": "2026-10-21T08:35:00.063381+00:00",
+  "models": {
+    "baseline": {
+      "samples": [
+        {
+          "variant": "baseline",
+          "pid": 10,
+          "timings": {
+            "constructor_ms": 340.001552,
+            "allocation_ms": 1688.655006,
+            "signature_metadata_ms": 0.777729,
+            "first_signature_invoke_ms": 28.04804,
+            "init_ms": 2029.4342869999998,
+            "init_plus_first_ms": 2057.4823269999997
+          },
+          "rss_bytes": {
+            "before_interpreter": {
+              "VmHWM": 38047744,
+              "VmRSS": 38047744
+            },
+            "after_constructor": {
+              "VmHWM": 50163712,
+              "VmRSS": 50163712
+            },
+            "after_allocation": {
+              "VmHWM": 208474112,
+              "VmRSS": 208474112
+            },
+            "after_first_invoke": {
+              "VmHWM": 213622784,
+              "VmRSS": 213622784
+            },
+            "after8_warm_invokes": {
+              "VmHWM": 214749184,
+              "VmRSS": 214749184
+            }
+          },
+          "peak_RSS_bytes": 214749184
+        },
+        {
+          "variant": "baseline",
+          "pid": 31,
+          "timings": {
+            "constructor_ms": 133.343898,
+            "allocation_ms": 1121.768802,
+            "signature_metadata_ms": 0.426113,
+            "first_signature_invoke_ms": 21.614417,
+            "init_ms": 1255.5388130000001,
+            "init_plus_first_ms": 1277.1532300000001
+          },
+          "rss_bytes": {
+            "before_interpreter": {
+              "VmHWM": 38191104,
+              "VmRSS": 38191104
+            },
+            "after_constructor": {
+              "VmHWM": 50302976,
+              "VmRSS": 50302976
+            },
+            "after_allocation": {
+              "VmHWM": 208613376,
+              "VmRSS": 208613376
+            },
+            "after_first_invoke": {
+              "VmHWM": 213762048,
+              "VmRSS": 213762048
+            },
+            "after8_warm_invokes": {
+              "VmHWM": 214888448,
+              "VmRSS": 214888448
+            }
+          },
+          "peak_RSS_bytes": 214888448
+        },
+        {
+          "variant": "baseline",
+          "pid": 59,
+          "timings": {
+            "constructor_ms": 152.771782,
+            "allocation_ms": 896.054384,
+            "signature_metadata_ms": 0.520315,
+            "first_signature_invoke_ms": 26.725836,
+            "init_ms": 1049.346481,
+            "init_plus_first_ms": 1076.072317
+          },
+          "rss_bytes": {
+            "before_interpreter": {
+              "VmHWM": 38248448,
+              "VmRSS": 38248448
+            },
+            "after_constructor": {
+              "VmHWM": 50364416,
+              "VmRSS": 50364416
+            },
+            "after_allocation": {
+              "VmHWM": 208670720,
+              "VmRSS": 208670720
+            },
+            "after_first_invoke": {
+              "VmHWM": 213889024,
+              "VmRSS": 213889024
+            },
+            "after8_warm_invokes": {
+              "VmHWM": 215011328,
+              "VmRSS": 215011328
+            }
+          },
+          "peak_RSS_bytes": 215011328
+        },
+        {
+          "variant": "baseline",
+          "pid": 87,
+          "timings": {
+            "constructor_ms": 107.207055,
+            "allocation_ms": 810.677574,
+            "signature_metadata_ms": 0.394586,
+            "first_signature_invoke_ms": 13.039563,
+            "init_ms": 918.279215,
+            "init_plus_first_ms": 931.3187780000001
+          },
+          "rss_bytes": {
+            "before_interpreter": {
+              "VmHWM": 38350848,
+              "VmRSS": 38350848
+            },
+            "after_constructor": {
+              "VmHWM": 50458624,
+              "VmRSS": 50458624
+            },
+            "after_allocation": {
+              "VmHWM": 208773120,
+              "VmRSS": 208773120
+            },
+            "after_first_invoke": {
+              "VmHWM": 213925888,
+              "VmRSS": 213925888
+            },
+            "after8_warm_invokes": {
+              "VmHWM": 215052288,
+              "VmRSS": 215052288
+            }
+          },
+          "peak_RSS_bytes": 215052288
+        },
+        {
+          "variant": "baseline",
+          "pid": 108,
+          "timings": {
+            "constructor_ms": 128.911739,
+            "allocation_ms": 963.23912,
+            "signature_metadata_ms": 0.416674,
+            "first_signature_invoke_ms": 14.621345,
+            "init_ms": 1092.567533,
+            "init_plus_first_ms": 1107.188878
+          },
+          "rss_bytes": {
+            "before_interpreter": {
+              "VmHWM": 38182912,
+              "VmRSS": 38182912
+            },
+            "after_constructor": {
+              "VmHWM": 50294784,
+              "VmRSS": 50294784
+            },
+            "after_allocation": {
+              "VmHWM": 208605184,
+              "VmRSS": 208605184
+            },
+            "after_first_invoke": {
+              "VmHWM": 213753856,
+              "VmRSS": 213753856
+            },
+            "after8_warm_invokes": {
+              "VmHWM": 214880256,
+              "VmRSS": 214880256
+            }
+          },
+          "peak_RSS_bytes": 214880256
+        }
+      ],
+      "timing_medians_ms": {
+        "constructor_ms": 133.343898,
+        "allocation_ms": 963.23912,
+        "signature_metadata_ms": 0.426113,
+        "first_signature_invoke_ms": 21.614417,
+        "init_ms": 1092.567533,
+        "init_plus_first_ms": 1107.188878
+      },
+      "median_peak_RSS_MiB": 204.93359375,
+      "max_peak_RSS_MiB": 205.08984375
+    },
+    "fc": {
+      "samples": [
+        {
+          "variant": "fc",
+          "pid": 17,
+          "timings": {
+            "constructor_ms": 300.409427,
+            "allocation_ms": 1795.047424,
+            "signature_metadata_ms": 0.388282,
+            "first_signature_invoke_ms": 10.62098,
+            "init_ms": 2095.845133,
+            "init_plus_first_ms": 2106.466113
+          },
+          "rss_bytes": {
+            "before_interpreter": {
+              "VmHWM": 38035456,
+              "VmRSS": 38035456
+            },
+            "after_constructor": {
+              "VmHWM": 50294784,
+              "VmRSS": 50294784
+            },
+            "after_allocation": {
+              "VmHWM": 208650240,
+              "VmRSS": 208650240
+            },
+            "after_first_invoke": {
+              "VmHWM": 213798912,
+              "VmRSS": 213798912
+            },
+            "after8_warm_invokes": {
+              "VmHWM": 214921216,
+              "VmRSS": 214921216
+            }
+          },
+          "peak_RSS_bytes": 214921216
+        },
+        {
+          "variant": "fc",
+          "pid": 45,
+          "timings": {
+            "constructor_ms": 156.504114,
+            "allocation_ms": 920.03591,
+            "signature_metadata_ms": 0.792478,
+            "first_signature_invoke_ms": 17.847558,
+            "init_ms": 1077.332502,
+            "init_plus_first_ms": 1095.18006
+          },
+          "rss_bytes": {
+            "before_interpreter": {
+              "VmHWM": 37945344,
+              "VmRSS": 37945344
+            },
+            "after_constructor": {
+              "VmHWM": 50204672,
+              "VmRSS": 50204672
+            },
+            "after_allocation": {
+              "VmHWM": 208560128,
+              "VmRSS": 208560128
+            },
+            "after_first_invoke": {
+              "VmHWM": 213708800,
+              "VmRSS": 213708800
+            },
+            "after8_warm_invokes": {
+              "VmHWM": 214831104,
+              "VmRSS": 214831104
+            }
+          },
+          "peak_RSS_bytes": 214831104
+        },
+        {
+          "variant": "fc",
+          "pid": 66,
+          "timings": {
+            "constructor_ms": 144.848321,
+            "allocation_ms": 920.621173,
+            "signature_metadata_ms": 0.570743,
+            "first_signature_invoke_ms": 16.86911,
+            "init_ms": 1066.040237,
+            "init_plus_first_ms": 1082.909347
+          },
+          "rss_bytes": {
+            "before_interpreter": {
+              "VmHWM": 37773312,
+              "VmRSS": 37773312
+            },
+            "after_constructor": {
+              "VmHWM": 49971200,
+              "VmRSS": 49967104
+            },
+            "after_allocation": {
+              "VmHWM": 208322560,
+              "VmRSS": 208322560
+            },
+            "after_first_invoke": {
+              "VmHWM": 213471232,
+              "VmRSS": 213471232
+            },
+            "after8_warm_invokes": {
+              "VmHWM": 214593536,
+              "VmRSS": 214593536
+            }
+          },
+          "peak_RSS_bytes": 214593536
+        },
+        {
+          "variant": "fc",
+          "pid": 80,
+          "timings": {
+            "constructor_ms": 184.79316,
+            "allocation_ms": 939.002086,
+            "signature_metadata_ms": 1.070387,
+            "first_signature_invoke_ms": 20.512439,
+            "init_ms": 1124.865633,
+            "init_plus_first_ms": 1145.378072
+          },
+          "rss_bytes": {
+            "before_interpreter": {
+              "VmHWM": 38084608,
+              "VmRSS": 38084608
+            },
+            "after_constructor": {
+              "VmHWM": 50343936,
+              "VmRSS": 50343936
+            },
+            "after_allocation": {
+              "VmHWM": 208695296,
+              "VmRSS": 208695296
+            },
+            "after_first_invoke": {
+              "VmHWM": 213913600,
+              "VmRSS": 213913600
+            },
+            "after8_warm_invokes": {
+              "VmHWM": 215031808,
+              "VmRSS": 215031808
+            }
+          },
+          "peak_RSS_bytes": 215031808
+        },
+        {
+          "variant": "fc",
+          "pid": 94,
+          "timings": {
+            "constructor_ms": 158.233956,
+            "allocation_ms": 873.189996,
+            "signature_metadata_ms": 0.608606,
+            "first_signature_invoke_ms": 31.123433,
+            "init_ms": 1032.0325579999999,
+            "init_plus_first_ms": 1063.1559909999999
+          },
+          "rss_bytes": {
+            "before_interpreter": {
+              "VmHWM": 37888000,
+              "VmRSS": 37888000
+            },
+            "after_constructor": {
+              "VmHWM": 50143232,
+              "VmRSS": 50143232
+            },
+            "after_allocation": {
+              "VmHWM": 208498688,
+              "VmRSS": 208498688
+            },
+            "after_first_invoke": {
+              "VmHWM": 213647360,
+              "VmRSS": 213647360
+            },
+            "after8_warm_invokes": {
+              "VmHWM": 214769664,
+              "VmRSS": 214769664
+            }
+          },
+          "peak_RSS_bytes": 214769664
+        }
+      ],
+      "timing_medians_ms": {
+        "constructor_ms": 158.233956,
+        "allocation_ms": 920.621173,
+        "signature_metadata_ms": 0.608606,
+        "first_signature_invoke_ms": 17.847558,
+        "init_ms": 1077.332502,
+        "init_plus_first_ms": 1095.18006
+      },
+      "median_peak_RSS_MiB": 204.87890625,
+      "max_peak_RSS_MiB": 205.0703125
+    },
+    "fc_bias": {
+      "samples": [
+        {
+          "variant": "fc_bias",
+          "pid": 24,
+          "timings": {
+            "constructor_ms": 312.277375,
+            "allocation_ms": 1526.23027,
+            "signature_metadata_ms": 0.935068,
+            "first_signature_invoke_ms": 25.401537,
+            "init_ms": 1839.4427130000001,
+            "init_plus_first_ms": 1864.84425
+          },
+          "rss_bytes": {
+            "before_interpreter": {
+              "VmHWM": 38342656,
+              "VmRSS": 38342656
+            },
+            "after_constructor": {
+              "VmHWM": 50597888,
+              "VmRSS": 50597888
+            },
+            "after_allocation": {
+              "VmHWM": 208633856,
+              "VmRSS": 208633856
+            },
+            "after_first_invoke": {
+              "VmHWM": 213786624,
+              "VmRSS": 213786624
+            },
+            "after8_warm_invokes": {
+              "VmHWM": 214904832,
+              "VmRSS": 214904832
+            }
+          },
+          "peak_RSS_bytes": 214904832
+        },
+        {
+          "variant": "fc_bias",
+          "pid": 38,
+          "timings": {
+            "constructor_ms": 200.383244,
+            "allocation_ms": 1159.885333,
+            "signature_metadata_ms": 0.524263,
+            "first_signature_invoke_ms": 19.598537,
+            "init_ms": 1360.7928399999998,
+            "init_plus_first_ms": 1380.391377
+          },
+          "rss_bytes": {
+            "before_interpreter": {
+              "VmHWM": 38068224,
+              "VmRSS": 38068224
+            },
+            "after_constructor": {
+              "VmHWM": 50327552,
+              "VmRSS": 50327552
+            },
+            "after_allocation": {
+              "VmHWM": 208359424,
+              "VmRSS": 208359424
+            },
+            "after_first_invoke": {
+              "VmHWM": 213581824,
+              "VmRSS": 213581824
+            },
+            "after8_warm_invokes": {
+              "VmHWM": 214695936,
+              "VmRSS": 214695936
+            }
+          },
+          "peak_RSS_bytes": 214695936
+        },
+        {
+          "variant": "fc_bias",
+          "pid": 52,
+          "timings": {
+            "constructor_ms": 175.750123,
+            "allocation_ms": 881.227249,
+            "signature_metadata_ms": 0.527983,
+            "first_signature_invoke_ms": 15.530332,
+            "init_ms": 1057.505355,
+            "init_plus_first_ms": 1073.035687
+          },
+          "rss_bytes": {
+            "before_interpreter": {
+              "VmHWM": 38166528,
+              "VmRSS": 38166528
+            },
+            "after_constructor": {
+              "VmHWM": 50360320,
+              "VmRSS": 50360320
+            },
+            "after_allocation": {
+              "VmHWM": 208392192,
+              "VmRSS": 208392192
+            },
+            "after_first_invoke": {
+              "VmHWM": 213549056,
+              "VmRSS": 213549056
+            },
+            "after8_warm_invokes": {
+              "VmHWM": 214667264,
+              "VmRSS": 214667264
+            }
+          },
+          "peak_RSS_bytes": 214667264
+        },
+        {
+          "variant": "fc_bias",
+          "pid": 73,
+          "timings": {
+            "constructor_ms": 190.37435,
+            "allocation_ms": 945.912496,
+            "signature_metadata_ms": 0.566982,
+            "first_signature_invoke_ms": 10.641443,
+            "init_ms": 1136.853828,
+            "init_plus_first_ms": 1147.495271
+          },
+          "rss_bytes": {
+            "before_interpreter": {
+              "VmHWM": 38068224,
+              "VmRSS": 38068224
+            },
+            "after_constructor": {
+              "VmHWM": 50327552,
+              "VmRSS": 50327552
+            },
+            "after_allocation": {
+              "VmHWM": 208363520,
+              "VmRSS": 208363520
+            },
+            "after_first_invoke": {
+              "VmHWM": 213581824,
+              "VmRSS": 213581824
+            },
+            "after8_warm_invokes": {
+              "VmHWM": 214700032,
+              "VmRSS": 214700032
+            }
+          },
+          "peak_RSS_bytes": 214700032
+        },
+        {
+          "variant": "fc_bias",
+          "pid": 101,
+          "timings": {
+            "constructor_ms": 173.839708,
+            "allocation_ms": 924.35486,
+            "signature_metadata_ms": 0.452704,
+            "first_signature_invoke_ms": 18.865449,
+            "init_ms": 1098.6472720000002,
+            "init_plus_first_ms": 1117.512721
+          },
+          "rss_bytes": {
+            "before_interpreter": {
+              "VmHWM": 38141952,
+              "VmRSS": 38141952
+            },
+            "after_constructor": {
+              "VmHWM": 50397184,
+              "VmRSS": 50397184
+            },
+            "after_allocation": {
+              "VmHWM": 208437248,
+              "VmRSS": 208437248
+            },
+            "after_first_invoke": {
+              "VmHWM": 213655552,
+              "VmRSS": 213655552
+            },
+            "after8_warm_invokes": {
+              "VmHWM": 214773760,
+              "VmRSS": 214773760
+            }
+          },
+          "peak_RSS_bytes": 214773760
+        }
+      ],
+      "timing_medians_ms": {
+        "constructor_ms": 190.37435,
+        "allocation_ms": 945.912496,
+        "signature_metadata_ms": 0.527983,
+        "first_signature_invoke_ms": 18.865449,
+        "init_ms": 1136.853828,
+        "init_plus_first_ms": 1147.495271
+      },
+      "median_peak_RSS_MiB": 204.75390625,
+      "max_peak_RSS_MiB": 204.94921875
+    }
+  },
+  "orders": [
+    [
+      "baseline",
+      "fc",
+      "fc_bias"
+    ],
+    [
+      "baseline",
+      "fc_bias",
+      "fc"
+    ],
+    [
+      "fc_bias",
+      "baseline",
+      "fc"
+    ],
+    [
+      "fc_bias",
+      "fc",
+      "baseline"
+    ],
+    [
+      "fc",
+      "fc_bias",
+      "baseline"
+    ]
+  ],
+  "protocol": "Linux LiteRT2.1.2 CPU4threads encoder only;5new child processes per variant,one model per process. RSS includes Python/NumPy/runtime/model/state/output,not model-only RAM;read /proc/self/status VmRSS/VmHWM. Timing excludes imports,feed loading,process launch and RSS reads;includes model constructor,allocation,signature metadata,and first signature call separately. Filesystem page cache not flushed;fresh-process start,not guaranteed cold-disk startup. Eight warm invokes after first for observed peak;not long-session/Android memory.",
+  "source_code": {
+    "path": "daily/2026-10-21/experiments/zipformer/src/coldstart_zipformer.py",
+    "sha256": "76ca741139af63d40e9800361ba548979c2b8590c1973948234cde794e227785",
+    "bytes": 5540
+  }
+}

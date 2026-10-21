@@ -1,0 +1,46 @@
+{
+  "verified_at_utc": "2026-10-21T08:44:08.482086+00:00",
+  "passed": true,
+  "previous_day_files_unchanged": 76,
+  "initial_checks_passed": {
+    "mlsd": {
+      "development5_and_regression3_AP_recomputed": true,
+      "split_float_output_exact": true,
+      "head_float30INT8_11FP32_verified": true,
+      "split42INT8_independent_output_scales_verified": true,
+      "same32calibration16development_input_hashes": true,
+      "selection_precedes_regression": true,
+      "timing8threads_and_uncertainty_recomputed": true
+    },
+    "zipformer": {
+      "112weights_transposed_exactly_other_operator_types_unchanged": true,
+      "public_inputs_outputs_preserved": true,
+      "15state_fixtures36outputs_passed": true,
+      "73utterance_WER_recomputed": true,
+      "100utterance20speaker_WER_recomputed": true,
+      "continuous79_5seconds_tokens_and_counters_match": true,
+      "matched_encoder_and_RTF_samples_recomputed": true
+    }
+  },
+  "mlsd": {
+    "all3_AP_precision_data_hashes_recomputed": true,
+    "prune_float_output_exact": true,
+    "C2_C3_failed_gate_not_relaxed": true,
+    "four_contiguous_benchmarks_and_uncertainty_recomputed": true,
+    "selection_precedes54image_regression": true,
+    "staged_profile_output_parity_and_per_sample_total_checked": true
+  },
+  "zipformer": {
+    "92FC_ADD_fusions_only_all_buffer_tensor_signature_bytes_preserved": true,
+    "173utterance_WER_tokens_and_counters_recomputed": true,
+    "15fixture_and79_5second_state_gates_checked": true,
+    "matched_timing_and15fresh_process_memory_recomputed": true,
+    "936byte_delta_is_non_payload": true
+  },
+  "source_code": {
+    "path": "daily/2026-10-21/tools/verify_refinement.py",
+    "sha256": "8af442e4acd5c44ae5ed482964c9f7f0831641bea8a732ccf4f1bdfb1458e1a3",
+    "bytes": 11527
+  },
+  "scope": "Evidence/metric/graph integrity,not deployment certification;native per-op LiteRT attribution remains unmeasured."
+}

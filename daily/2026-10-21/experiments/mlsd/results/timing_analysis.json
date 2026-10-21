@@ -1,0 +1,32 @@
+{
+  "finished_at_utc": "2026-10-21T07:16:04.117571+00:00",
+  "head_float_vs_float_threads4": {
+    "median_latency_reduction_percent": 3.8002101224191676,
+    "paired_round_block_bootstrap_95_interval_percent": [
+      -1.7514687712445243,
+      10.29204628129612
+    ],
+    "rounds_candidate_faster_by_round_median": 4,
+    "rounds": 5,
+    "resamples": 2000,
+    "seed": 20261021,
+    "scope": "Approximate uncertainty from5paired round clusters;not independent80samples or proof across devices/sessions."
+  },
+  "head_float_vs_float_threads8": {
+    "median_latency_reduction_percent": -2.663064269929971,
+    "paired_round_block_bootstrap_95_interval_percent": [
+      -3.9008253706897866,
+      -1.0143064482484032
+    ],
+    "rounds_candidate_faster_by_round_median": 0,
+    "rounds": 5,
+    "resamples": 2000,
+    "seed": 20261022,
+    "scope": "Approximate uncertainty from5paired round clusters;not independent80samples or proof across devices/sessions."
+  },
+  "source_code": {
+    "path": "daily/2026-10-21/experiments/mlsd/src/analyze_timing.py",
+    "sha256": "1c6bc1aab172aa04276e3484366727be772ed82b4785ae3eeb7d0f88b2765a5e",
+    "bytes": 1443
+  }
+}

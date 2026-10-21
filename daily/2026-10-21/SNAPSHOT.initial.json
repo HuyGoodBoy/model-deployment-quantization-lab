@@ -1,0 +1,231 @@
+{
+  "frozen_at_utc": "2026-10-21T07:37:34.665057+00:00",
+  "scope": "Day21 final source/report/results snapshot; excludes itself. Experimental execution source hashes may precede formatting; this records final source. No day20 reports/history modified.",
+  "document_checks": {
+    "tables_and_percentages_match_results": true,
+    "local_links_resolve": true,
+    "project_groups_start_with_Evidence": true
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 6359,
+      "sha256": "5ee0bceb6a6e5dd38e896ec61029c59f8eccc73e23ef8e0f138ccd63f1a75494"
+    },
+    {
+      "path": "daily/2026-10-21/PROTOCOL.md",
+      "bytes": 4041,
+      "sha256": "a770cd01ca980d351d381aa30e102a4b4e7370dc812bc16c9f79eb035304ed67"
+    },
+    {
+      "path": "daily/2026-10-21/REPORT.md",
+      "bytes": 11909,
+      "sha256": "1dca4bfc9abd397779b720d7cda2c4169bed86c317f7d9f29f1a7344500dc8b2"
+    },
+    {
+      "path": "daily/2026-10-21/RESEARCH.md",
+      "bytes": 9557,
+      "sha256": "c0aecef5c45f99c842b0b60287cb3e3ce0b8b3e370b9bf7fea5fa375aeedf922"
+    },
+    {
+      "path": "daily/2026-10-21/RUNNING.md",
+      "bytes": 5868,
+      "sha256": "5150d3c70a3966e89113c5fe9315183820aa99d60196d827ab8bd996c0722ff0"
+    },
+    {
+      "path": "daily/2026-10-21/VERIFICATION.json",
+      "bytes": 1136,
+      "sha256": "0d5ba98a9ea8f70650bbb68bedfe3cead51569a5bcebfe7d68808002d50201af"
+    },
+    {
+      "path": "daily/2026-10-21/environments/mlsd-requirements-lock.txt",
+      "bytes": 1236,
+      "sha256": "c882bbb7ff3e67b950f41961ec0c30af45e36d74454d7620472adbc71663b34e"
+    },
+    {
+      "path": "daily/2026-10-21/environments/runtime.json",
+      "bytes": 1492,
+      "sha256": "78bb51761333458c1ff7ca11dd0d9074adb9808b7a8de36724ac7ab7fa11aaff"
+    },
+    {
+      "path": "daily/2026-10-21/environments/zipformer-requirements-lock.txt",
+      "bytes": 661,
+      "sha256": "aeda13f554640f2bb0b5fd807722bf2c87c46b23901042872abf991d3325451a"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/activation_diagnosis.json",
+      "bytes": 138755,
+      "sha256": "068c4138b4f1e2734e8a52b374b89f8f54c6c110e9335f82049de4df2538fae3"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/activation_summary.csv",
+      "bytes": 8336,
+      "sha256": "002b77f053805540da3fb61f49d9dd37f598a6987b42bf2ba5c978fff991e1a7"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/benchmark.json",
+      "bytes": 11344,
+      "sha256": "f7b4347c2c3bdbf131a23c6835a721f182eaaf7498bfb9d00b94a8a030386d9a"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/benchmark8.json",
+      "bytes": 6612,
+      "sha256": "d7f833a82d35043075ef560222677e906d05adb08d6f78603f2ded2a69080ad2"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/development.json",
+      "bytes": 13732,
+      "sha256": "677788cf14272477bd23184684c3587531e621ec1e6295dc61b202f0fdddad69"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/exports.json",
+      "bytes": 66160,
+      "sha256": "64a5542b3154e9d21d4feae64f829ad936b77f3bdbc23f52f37cd843377dc663"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/regression.json",
+      "bytes": 6171,
+      "sha256": "8ded478b02f760b63382f0c429cef5c179f76f63940a0cf6a4fc955a62196c6e"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/selection.json",
+      "bytes": 722,
+      "sha256": "8a9366d63d716f1b1f6f16c6e9b2a658deb0994994e83e75e30bafb0a5b16998"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/split_conversion.json",
+      "bytes": 2100,
+      "sha256": "c1d1ae0f55f701e97db8bf55123c258003a3a2e6c446a37f3e82e8def1a7ca52"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/split_float_parity.json",
+      "bytes": 2953,
+      "sha256": "72e8c154667b1e7f58ccbfb56dfd7b049b3876627df9bde6189f6cf700d966b7"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/results/timing_analysis.json",
+      "bytes": 1165,
+      "sha256": "c957928716f639d1adef1643c619b3f1d3f656d8764eca40b82a89722d7fd30f"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/analyze_timing.py",
+      "bytes": 1668,
+      "sha256": "a1181373b90709f9c8651a140710f2a19e45b24c8d9e5237c24de8e25ad656b1"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/benchmark8.py",
+      "bytes": 3100,
+      "sha256": "5218e3d40e547d706c88bfe96fddcc9b9b35bedf23273abcecade6683658d5ca"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/diagnose_activations.py",
+      "bytes": 6337,
+      "sha256": "23dbe3db5cc5ad9551a1202ef2215c8db649c092789d44674b5d5b040c068bb1"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/export_candidates.py",
+      "bytes": 6972,
+      "sha256": "281663826346a9ff1b4d4fa458c3266389bfa8fbc78bdf6cebefa376e973f74f"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/measure21.py",
+      "bytes": 6978,
+      "sha256": "73635a0313dc26c1bd252b20af33cc96dd1063eb561c49ac29239090dec7971f"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/runtime21.py",
+      "bytes": 2692,
+      "sha256": "4c572aea1c898788f9ab489b4d7fe3baa0d3fa512d04125489c71de48c62c09e"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/split_heads.py",
+      "bytes": 5041,
+      "sha256": "f5ebadf169bf5345ddf090bd78ae0f4393ab6271dd60f65eea19baebfb1f90fc"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/mlsd/src/support21.py",
+      "bytes": 1533,
+      "sha256": "82bf0099bbb0b37f271d1a05cd93593c9445a6dbca22bc910c191a9c6eaf9bf5"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/benchmark.json",
+      "bytes": 10455,
+      "sha256": "4fbde00f8ad18b61fae42c293920c534167e7fd90eabebd1c1c4b16c830904c7"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/continuous_state_test.json",
+      "bytes": 16947,
+      "sha256": "27bdf60dbef56321e05732afdb5bd865dab98752394f09ccbca6fd41a743d6d4"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/encoder_fc_rewrite.json",
+      "bytes": 193582,
+      "sha256": "238ce5911eeaeabba0cf1e03b0cd36b867497573de87444e84fca2424ad07549"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/encoder_profile.json",
+      "bytes": 300228,
+      "sha256": "632a84dcdee4e8e930cfb7ca6df2003bc27f71ab9428ba64084b3dac115a4813"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/evaluation_baseline.json",
+      "bytes": 127486,
+      "sha256": "7c54953d0cec34d56b82b14c722564f62fa9a892f3097dab7d40f7c8006a92fb"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/evaluation_fc.json",
+      "bytes": 127489,
+      "sha256": "6c25775dd3baf8772c47a2d86265966ed4fc750ed39c13d366abd7e6534732bd"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/multispeaker_evaluation.json",
+      "bytes": 475389,
+      "sha256": "3825f47813563d62c5caa2056b1638629506b931d7c5789ce23ccce7d1d8f387"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/results/multispeaker_manifest.json",
+      "bytes": 43424,
+      "sha256": "559097f1ef6d40da805242eb86e166c601ecd749eef1ecbd766b620631d7878b"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/src/asr21.py",
+      "bytes": 1756,
+      "sha256": "418eb3dde4026d1fb27c9f0f78da86deefed01b324f250d98bd58394269b116e"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/src/benchmark21.py",
+      "bytes": 3498,
+      "sha256": "9597beafce14108e43e3608902adc3b7ea052a2ebfddd741f6be8abbe3288257"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/src/evaluate21.py",
+      "bytes": 4411,
+      "sha256": "b39d033639b15c5e56e8265edd674a3114f7511851de9c64d238df0cffba86e9"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/src/evaluate_multispeaker.py",
+      "bytes": 2438,
+      "sha256": "7eba5d3d5b3726cc847fb1c1e5c4336ba2dbec4904f298a62d62b1cafc4fd232"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/src/prepare_multispeaker.py",
+      "bytes": 5466,
+      "sha256": "c908b4c2b30eede5d5ad8515555905741a2a7a600ff3762c96d2f23f981e096b"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/src/profile_encoder.py",
+      "bytes": 3354,
+      "sha256": "d062a1341e23b2808a0904cc8908e724cdc79db1df5839b31558ad17953a2a1b"
+    },
+    {
+      "path": "daily/2026-10-21/experiments/zipformer/src/rewrite_fc.py",
+      "bytes": 5911,
+      "sha256": "30051617705015f7d38ae90f16cf148dfe62e6ca2a5f9840da841e34c8b7ed79"
+    },
+    {
+      "path": "daily/2026-10-21/tools/verify.py",
+      "bytes": 13910,
+      "sha256": "65bfd4302b0b00912db147b58b9d3f154a22850ed256b36adcdf7f791fbb46b0"
+    }
+  ]
+}
