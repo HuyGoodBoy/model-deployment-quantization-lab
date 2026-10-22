@@ -1,0 +1,33 @@
+{
+  "finished_at_utc": "2026-10-22T08:51:11.585632+00:00",
+  "name": "M1",
+  "model": {
+    "path": "daily/2026-10-22/experiments/mlsd/artifacts/models/M1.tflite",
+    "sha256": "00e002d48e359ae58d00b20a4ea8bbebbb917f92b8221f057d024e456b77008e",
+    "bytes": 1905168
+  },
+  "source_model": {
+    "path": "daily/2026-10-21/experiments/mlsd/artifacts/refinement/C1.tflite",
+    "sha256": "b7ecbf764228e74152801daec13ba3022c37c8677ab20a979392574864043aa9",
+    "bytes": 1905424
+  },
+  "change": {
+    "old_INT8_input_tensor": 0,
+    "new_float_input_tensor": 154,
+    "scale": 0.007836945354938507,
+    "zero_point": 0,
+    "added": "One float input tensor and QUANTIZEv2;original internal tensors/weights/scales unchanged"
+  },
+  "materialization": {
+    "external_buffers": 44,
+    "payload_bytes_materialized": 1749472
+  },
+  "original_buffer_payloads_exact": true,
+  "source_code": {
+    "path": "daily/2026-10-22/experiments/mlsd/src/io_models.py",
+    "sha256": "5ecfbbd4ccc966ca57a4cd552c27ef067e33ff26ae2d69e8cd4c7dacd9ab3e7c",
+    "bytes": 7691
+  },
+  "recalibrated": false,
+  "precision_changed": false
+}

@@ -1,0 +1,240 @@
+{
+  "started_at_utc": "2026-10-22T09:04:33.806617+00:00",
+  "finished_at_utc": "2026-10-22T09:04:46.862112+00:00",
+  "threads": 8,
+  "images": 16,
+  "models": {
+    "float": {
+      "model": {
+        "path": "daily/2026-10-20/experiments/mlsd/artifacts/float_conversion/qat_weights_fp32_float32.tflite",
+        "sha256": "cafe7a915c77d90f07ff7b2094d1b8868c7e5855a168d0694aea429b8e584eda",
+        "bytes": 2483636
+      },
+      "reference_output": {
+        "path": "daily/2026-10-21/experiments/mlsd/artifacts/float_development.npz",
+        "sha256": "0db342caf74b08ce257afefc5c21c354a33c429339c9d347b4f2d1a9fe01aa06",
+        "bytes": 19579887
+      },
+      "output": {
+        "path": "daily/2026-10-22/experiments/mlsd/artifacts/float_development_t8.npz",
+        "sha256": "0db342caf74b08ce257afefc5c21c354a33c429339c9d347b4f2d1a9fe01aa06",
+        "bytes": 19579887
+      },
+      "exact_vs_four_threads": true,
+      "sAP10": {
+        "sAP10_subset_percent": 15.323017406007905,
+        "precision_at_0_1": 0.2732362821948488,
+        "recall_at_0_1": 0.27523970671178793,
+        "ground_truth_lines": 1773,
+        "predicted_line_counts": [
+          130,
+          146,
+          98,
+          128,
+          127,
+          98,
+          102,
+          136,
+          98,
+          142,
+          108,
+          120,
+          99,
+          118,
+          79,
+          120
+        ],
+        "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+      },
+      "loss_vs_FP32_pp": 0.0,
+      "passed": true
+    },
+    "C1": {
+      "model": {
+        "path": "daily/2026-10-21/experiments/mlsd/artifacts/refinement/C1.tflite",
+        "sha256": "b7ecbf764228e74152801daec13ba3022c37c8677ab20a979392574864043aa9",
+        "bytes": 1905424
+      },
+      "reference_output": {
+        "path": "daily/2026-10-21/experiments/mlsd/artifacts/refinement/C1_development.npz",
+        "sha256": "6ef3e0f9c0e201f28f36964841a33371e586e2075e003039f22a15015014973e",
+        "bytes": 19576706
+      },
+      "output": {
+        "path": "daily/2026-10-22/experiments/mlsd/artifacts/C1_development_t8.npz",
+        "sha256": "6ef3e0f9c0e201f28f36964841a33371e586e2075e003039f22a15015014973e",
+        "bytes": 19576706
+      },
+      "exact_vs_four_threads": true,
+      "sAP10": {
+        "sAP10_subset_percent": 14.876466478745265,
+        "precision_at_0_1": 0.2705749718151071,
+        "recall_at_0_1": 0.2707275803722504,
+        "ground_truth_lines": 1773,
+        "predicted_line_counts": [
+          126,
+          141,
+          96,
+          128,
+          132,
+          97,
+          98,
+          133,
+          94,
+          142,
+          110,
+          122,
+          100,
+          120,
+          74,
+          126
+        ],
+        "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+      },
+      "loss_vs_FP32_pp": 0.44655092726264023,
+      "passed": true
+    },
+    "C1_roundtrip": {
+      "model": {
+        "path": "daily/2026-10-22/experiments/mlsd/artifacts/models/C1_roundtrip.tflite",
+        "sha256": "55fd9e0819d85e83106b2f101e84ec356ae676963ad8a33d545c4ee947f3c986",
+        "bytes": 1904976
+      },
+      "reference_output": {
+        "path": "daily/2026-10-22/experiments/mlsd/artifacts/roundtrip_development.npz",
+        "sha256": "6ef3e0f9c0e201f28f36964841a33371e586e2075e003039f22a15015014973e",
+        "bytes": 19576706
+      },
+      "output": {
+        "path": "daily/2026-10-22/experiments/mlsd/artifacts/C1_roundtrip_development_t8.npz",
+        "sha256": "6ef3e0f9c0e201f28f36964841a33371e586e2075e003039f22a15015014973e",
+        "bytes": 19576706
+      },
+      "exact_vs_four_threads": true,
+      "sAP10": {
+        "sAP10_subset_percent": 14.876466478745265,
+        "precision_at_0_1": 0.2705749718151071,
+        "recall_at_0_1": 0.2707275803722504,
+        "ground_truth_lines": 1773,
+        "predicted_line_counts": [
+          126,
+          141,
+          96,
+          128,
+          132,
+          97,
+          98,
+          133,
+          94,
+          142,
+          110,
+          122,
+          100,
+          120,
+          74,
+          126
+        ],
+        "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+      },
+      "loss_vs_FP32_pp": 0.44655092726264023,
+      "passed": true
+    },
+    "M1": {
+      "model": {
+        "path": "daily/2026-10-22/experiments/mlsd/artifacts/models/M1.tflite",
+        "sha256": "00e002d48e359ae58d00b20a4ea8bbebbb917f92b8221f057d024e456b77008e",
+        "bytes": 1905168
+      },
+      "reference_output": {
+        "path": "daily/2026-10-22/experiments/mlsd/artifacts/M1_development.npz",
+        "sha256": "6ef3e0f9c0e201f28f36964841a33371e586e2075e003039f22a15015014973e",
+        "bytes": 19576706
+      },
+      "output": {
+        "path": "daily/2026-10-22/experiments/mlsd/artifacts/M1_development_t8.npz",
+        "sha256": "6ef3e0f9c0e201f28f36964841a33371e586e2075e003039f22a15015014973e",
+        "bytes": 19576706
+      },
+      "exact_vs_four_threads": true,
+      "sAP10": {
+        "sAP10_subset_percent": 14.876466478745265,
+        "precision_at_0_1": 0.2705749718151071,
+        "recall_at_0_1": 0.2707275803722504,
+        "ground_truth_lines": 1773,
+        "predicted_line_counts": [
+          126,
+          141,
+          96,
+          128,
+          132,
+          97,
+          98,
+          133,
+          94,
+          142,
+          110,
+          122,
+          100,
+          120,
+          74,
+          126
+        ],
+        "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+      },
+      "loss_vs_FP32_pp": 0.44655092726264023,
+      "passed": true
+    },
+    "M2": {
+      "model": {
+        "path": "daily/2026-10-22/experiments/mlsd/artifacts/models/M2.tflite",
+        "sha256": "f7f82615d351aa364d32fca9f8aa7c0f0ac2b32660532d54eae74ae55629b5b8",
+        "bytes": 1905448
+      },
+      "reference_output": {
+        "path": "daily/2026-10-22/experiments/mlsd/artifacts/M2_development.npz",
+        "sha256": "6ef3e0f9c0e201f28f36964841a33371e586e2075e003039f22a15015014973e",
+        "bytes": 19576706
+      },
+      "output": {
+        "path": "daily/2026-10-22/experiments/mlsd/artifacts/M2_development_t8.npz",
+        "sha256": "6ef3e0f9c0e201f28f36964841a33371e586e2075e003039f22a15015014973e",
+        "bytes": 19576706
+      },
+      "exact_vs_four_threads": true,
+      "sAP10": {
+        "sAP10_subset_percent": 14.876466478745265,
+        "precision_at_0_1": 0.2705749718151071,
+        "recall_at_0_1": 0.2707275803722504,
+        "ground_truth_lines": 1773,
+        "predicted_line_counts": [
+          126,
+          141,
+          96,
+          128,
+          132,
+          97,
+          98,
+          133,
+          94,
+          142,
+          110,
+          122,
+          100,
+          120,
+          74,
+          126
+        ],
+        "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+      },
+      "loss_vs_FP32_pp": 0.44655092726264023,
+      "passed": true
+    }
+  },
+  "passed": true,
+  "scope": "Executed after serial timing and before speed selection; no graph, scale or gate changes.",
+  "source_code": {
+    "path": "daily/2026-10-22/experiments/mlsd/src/quality22.py",
+    "sha256": "41464bc1bc72c1294c27ea2f369fba617dcabbc77fce1b244dbf8d350fe802a4",
+    "bytes": 6703
+  }
+}

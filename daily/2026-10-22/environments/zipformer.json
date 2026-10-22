@@ -1,0 +1,22 @@
+{
+  "captured_at_utc": "2026-10-22T09:08:26.995258+00:00",
+  "python": "3.12.15",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.36",
+  "logical_cpus": 20,
+  "cpu_model": [
+    "12th Gen Intel(R) Core(TM) i7-12700H"
+  ],
+  "litert": "2.1.2",
+  "packages_match_day21": true,
+  "interpreter_signature": "(model_path=None, model_content=None, experimental_delegates=None, num_threads=None, experimental_op_resolver_type=<OpResolverType.AUTO: 0>, experimental_preserve_all_tensors=False, experimental_disable_delegate_clustering=False, experimental_default_delegate_latest_features=False)",
+  "public_profiler_methods": [],
+  "build_tools": {
+    "c++": null,
+    "cmake": null,
+    "bazel": null,
+    "nm": null,
+    "perf": null,
+    "benchmark_model": null
+  },
+  "scope": "Read-only environment inventory; no native profiler build or kernel measurement performed."
+}

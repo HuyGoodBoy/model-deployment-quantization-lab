@@ -1,0 +1,46 @@
+{
+  "locked_at_utc": "2026-10-22T09:00:09.312622+00:00",
+  "models": {
+    "float": {
+      "path": "daily/2026-10-20/experiments/mlsd/artifacts/float_conversion/qat_weights_fp32_float32.tflite",
+      "sha256": "cafe7a915c77d90f07ff7b2094d1b8868c7e5855a168d0694aea429b8e584eda",
+      "bytes": 2483636
+    },
+    "C1": {
+      "path": "daily/2026-10-21/experiments/mlsd/artifacts/refinement/C1.tflite",
+      "sha256": "b7ecbf764228e74152801daec13ba3022c37c8677ab20a979392574864043aa9",
+      "bytes": 1905424
+    },
+    "C1_roundtrip": {
+      "path": "daily/2026-10-22/experiments/mlsd/artifacts/models/C1_roundtrip.tflite",
+      "sha256": "55fd9e0819d85e83106b2f101e84ec356ae676963ad8a33d545c4ee947f3c986",
+      "bytes": 1904976
+    },
+    "M1": {
+      "path": "daily/2026-10-22/experiments/mlsd/artifacts/models/M1.tflite",
+      "sha256": "00e002d48e359ae58d00b20a4ea8bbebbb917f92b8221f057d024e456b77008e",
+      "bytes": 1905168
+    },
+    "M2": {
+      "path": "daily/2026-10-22/experiments/mlsd/artifacts/models/M2.tflite",
+      "sha256": "f7f82615d351aa364d32fca9f8aa7c0f0ac2b32660532d54eae74ae55629b5b8",
+      "bytes": 1905448
+    }
+  },
+  "quality_eligible": [
+    "M1",
+    "M2"
+  ],
+  "tested": [
+    "M1",
+    "M2"
+  ],
+  "failed_skip_full_benchmark_regression": [],
+  "M2_skipped_if_M1_failed": false,
+  "rule": "FP32 development loss<=0.5pp before timing;only eligible candidate runs54image reused regression;no scale/precision tuning.",
+  "source_code": {
+    "path": "daily/2026-10-22/experiments/mlsd/src/quality22.py",
+    "sha256": "eaf02bdb4fad64caa8c6ea21b77bf14e7ffb2e6b4820dfa9043686c965fa70fe",
+    "bytes": 4193
+  }
+}

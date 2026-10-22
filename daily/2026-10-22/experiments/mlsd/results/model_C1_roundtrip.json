@@ -1,0 +1,29 @@
+{
+  "finished_at_utc": "2026-10-22T08:51:09.676451+00:00",
+  "name": "C1_roundtrip",
+  "model": {
+    "path": "daily/2026-10-22/experiments/mlsd/artifacts/models/C1_roundtrip.tflite",
+    "sha256": "55fd9e0819d85e83106b2f101e84ec356ae676963ad8a33d545c4ee947f3c986",
+    "bytes": 1904976
+  },
+  "source_model": {
+    "path": "daily/2026-10-21/experiments/mlsd/artifacts/refinement/C1.tflite",
+    "sha256": "b7ecbf764228e74152801daec13ba3022c37c8677ab20a979392574864043aa9",
+    "bytes": 1905424
+  },
+  "change": {
+    "added": "Identity control:materialize external buffers and serialize,without adding operators or changing I/O"
+  },
+  "materialization": {
+    "external_buffers": 44,
+    "payload_bytes_materialized": 1749472
+  },
+  "original_buffer_payloads_exact": true,
+  "source_code": {
+    "path": "daily/2026-10-22/experiments/mlsd/src/io_models.py",
+    "sha256": "5ecfbbd4ccc966ca57a4cd552c27ef067e33ff26ae2d69e8cd4c7dacd9ab3e7c",
+    "bytes": 7691
+  },
+  "recalibrated": false,
+  "precision_changed": false
+}

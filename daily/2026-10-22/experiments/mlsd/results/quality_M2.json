@@ -1,0 +1,83 @@
+{
+  "finished_at_utc": "2026-10-22T08:57:23.252530+00:00",
+  "name": "M2",
+  "model": {
+    "path": "daily/2026-10-22/experiments/mlsd/artifacts/models/M2.tflite",
+    "sha256": "f7f82615d351aa364d32fca9f8aa7c0f0ac2b32660532d54eae74ae55629b5b8",
+    "bytes": 1905448
+  },
+  "output": {
+    "path": "daily/2026-10-22/experiments/mlsd/artifacts/M2_development.npz",
+    "sha256": "6ef3e0f9c0e201f28f36964841a33371e586e2075e003039f22a15015014973e",
+    "bytes": 19576706
+  },
+  "sAP10": {
+    "sAP10_subset_percent": 14.876466478745265,
+    "precision_at_0_1": 0.2705749718151071,
+    "recall_at_0_1": 0.2707275803722504,
+    "ground_truth_lines": 1773,
+    "predicted_line_counts": [
+      126,
+      141,
+      96,
+      128,
+      132,
+      97,
+      98,
+      133,
+      94,
+      142,
+      110,
+      122,
+      100,
+      120,
+      74,
+      126
+    ],
+    "protocol": "NMS 3x3, top200, score>=0.01, map length>20; endpoint-swap invariant squared distance sum<10 on 128x128 coordinates; one-to-one greedy matches; continuous AP. Small York subset, not paper protocol."
+  },
+  "loss_vs_FP32_pp": 0.44655092726264023,
+  "quality_passed": true,
+  "vs_C1": {
+    "snr_db": null,
+    "exact_match": true,
+    "rmse": 0.0,
+    "mae": 0.0,
+    "max_abs": 0.0,
+    "relative_l2": 0.0
+  },
+  "native_IO": {
+    "inputs": {
+      "input": {
+        "dtype": "<class 'numpy.float32'>",
+        "shape": [
+          1,
+          4,
+          512,
+          512
+        ],
+        "scale": 0.0,
+        "zero_point": 0
+      }
+    },
+    "outputs": {
+      "output": {
+        "dtype": "<class 'numpy.float32'>",
+        "shape": [
+          1,
+          5,
+          256,
+          256
+        ],
+        "scale": 0.0,
+        "zero_point": 0
+      }
+    }
+  },
+  "images": 16,
+  "source_code": {
+    "path": "daily/2026-10-22/experiments/mlsd/src/quality22.py",
+    "sha256": "eaf02bdb4fad64caa8c6ea21b77bf14e7ffb2e6b4820dfa9043686c965fa70fe",
+    "bytes": 4193
+  }
+}

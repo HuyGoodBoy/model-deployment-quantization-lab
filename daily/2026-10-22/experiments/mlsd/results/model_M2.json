@@ -1,0 +1,37 @@
+{
+  "finished_at_utc": "2026-10-22T08:57:09.934807+00:00",
+  "name": "M2",
+  "model": {
+    "path": "daily/2026-10-22/experiments/mlsd/artifacts/models/M2.tflite",
+    "sha256": "f7f82615d351aa364d32fca9f8aa7c0f0ac2b32660532d54eae74ae55629b5b8",
+    "bytes": 1905448
+  },
+  "source_model": {
+    "path": "daily/2026-10-22/experiments/mlsd/artifacts/models/M1.tflite",
+    "sha256": "00e002d48e359ae58d00b20a4ea8bbebbb917f92b8221f057d024e456b77008e",
+    "bytes": 1905168
+  },
+  "change": {
+    "old_NHWC_output_tensor": 146,
+    "new_NCHW_output_tensor": 156,
+    "permutation": [
+      0,
+      3,
+      1,
+      2
+    ],
+    "added": "One TRANSPOSEv1 with16byte permutation;original graph tensors/weight buffers unchanged"
+  },
+  "materialization": {
+    "external_buffers": 0,
+    "payload_bytes_materialized": 0
+  },
+  "original_buffer_payloads_exact": true,
+  "source_code": {
+    "path": "daily/2026-10-22/experiments/mlsd/src/io_models.py",
+    "sha256": "6a7391b1197ed498bad8f5811aa0f3dc31db16223f3f169b7177684313422d15",
+    "bytes": 7861
+  },
+  "recalibrated": false,
+  "precision_changed": false
+}

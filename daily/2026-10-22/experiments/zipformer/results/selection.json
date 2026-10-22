@@ -1,0 +1,60 @@
+{
+  "locked_at_utc": "2026-10-22T09:07:47.282560+00:00",
+  "selected": "Z0",
+  "comparisons": {
+    "session1": {
+      "encoder": {
+        "median_reduction_percent": -1.8288803230835704,
+        "paired_round_bootstrap95_percent": [
+          -4.497331172604513,
+          2.1988350900893683
+        ],
+        "faster_rounds": 1,
+        "rounds": 5,
+        "resamples": 2000,
+        "seed": 20261023
+      },
+      "pipeline": {
+        "median_reduction_percent": 1.3046012380639849,
+        "paired_round_bootstrap95_percent": [
+          -10.272512114937559,
+          10.032958554608696
+        ],
+        "faster_rounds": 2,
+        "rounds": 5,
+        "resamples": 2000,
+        "seed": 20261033
+      }
+    },
+    "session2": {
+      "encoder": {
+        "median_reduction_percent": -0.1518674791386676,
+        "paired_round_bootstrap95_percent": [
+          -4.508241059788931,
+          4.145855111137231
+        ],
+        "faster_rounds": 3,
+        "rounds": 5,
+        "resamples": 2000,
+        "seed": 20261024
+      },
+      "pipeline": {
+        "median_reduction_percent": 2.0519232473157234,
+        "paired_round_bootstrap95_percent": [
+          -10.346863106377091,
+          12.288285296008695
+        ],
+        "faster_rounds": 3,
+        "rounds": 5,
+        "resamples": 2000,
+        "seed": 20261034
+      }
+    }
+  },
+  "rule": "Exact fixtures/173tokens/state/600second parity;pipeline median lower with positive within-session paired5round95lower bound in both sessions. Samehost/day only;not deployment certification.",
+  "source_code": {
+    "path": "daily/2026-10-22/experiments/zipformer/src/benchmark22.py",
+    "sha256": "ffcfe0ba3f0692121b9bd6d082ceed6ef593d517c16654e67f7b7ceb09bdaa8f",
+    "bytes": 7462
+  }
+}

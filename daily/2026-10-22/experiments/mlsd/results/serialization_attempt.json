@@ -1,0 +1,31 @@
+{
+  "finished_at_utc": "2026-10-22T08:49:32.133796+00:00",
+  "name": "M1",
+  "model": {
+    "path": "daily/2026-10-22/experiments/mlsd/artifacts/attempts/M1_unmaterialized.tflite",
+    "sha256": "a5c04cc3cc03e4cc43dd83be89199b7c8644e851fdf40c370f82d3ab188b274d",
+    "bytes": 156136
+  },
+  "source_model": {
+    "path": "daily/2026-10-21/experiments/mlsd/artifacts/refinement/C1.tflite",
+    "sha256": "b7ecbf764228e74152801daec13ba3022c37c8677ab20a979392574864043aa9",
+    "bytes": 1905424
+  },
+  "change": {
+    "old_INT8_input_tensor": 0,
+    "new_float_input_tensor": 154,
+    "scale": 0.007836945354938507,
+    "zero_point": 0,
+    "added": "Incomplete serialization attempt;not a valid candidate"
+  },
+  "source_code": {
+    "path": "daily/2026-10-22/experiments/mlsd/src/io_models.py",
+    "sha256": "105d7a9d0d86f857224c55ba061ae7228f8e4f6af444011aff0f050e222aff7e",
+    "bytes": 6185
+  },
+  "recalibrated": false,
+  "precision_changed": false,
+  "valid_model": false,
+  "inference_run": false,
+  "failure": "External Buffer.offset/size payloads were not copied by direct ModelT.Pack;detected by size/payload check before allocation/inference"
+}

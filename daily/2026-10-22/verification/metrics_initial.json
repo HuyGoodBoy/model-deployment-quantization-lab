@@ -1,0 +1,30 @@
+{
+  "verified_at_utc": "2026-10-22T09:11:40.138950+00:00",
+  "passed": true,
+  "old_day_git_diff_empty": true,
+  "day21_python_files": 29,
+  "mlsd": {
+    "development_and_regression_AP_recomputed": true,
+    "t8_outputs_exact_vs_t4": true,
+    "four_matched_benchmarks_recomputed": true,
+    "selection_before_regression": true,
+    "staged_profile_totals_recomputed": true
+  },
+  "zipformer": {
+    "WER_from_transcripts_recomputed": true,
+    "tokens_and_final_counters_173_checked": true,
+    "fixtures_and_continuous_encoder_token_finalcounter_checked": true,
+    "two_session_component_pipeline_statistics_recomputed": true,
+    "limitation": "Continuous test does not compare all cached-state tensors at every chunk."
+  },
+  "documents": {
+    "relative_links_resolve": 32,
+    "evidence_first_per_project": true,
+    "mentor_report_content_checked": true
+  },
+  "source_code": {
+    "path": "daily/2026-10-22/tools/verify22.py",
+    "sha256": "3bfd429d89bc106272009e9a5bcca58e0bc8c7111edb194f7c3f3867af5bc051",
+    "bytes": 8428
+  }
+}
